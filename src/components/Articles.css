@@ -1,0 +1,16 @@
+/* Articles.css */
+.articles {
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.articles .article {
+    display: inline-block;
+    width: 30%;
+    margin: 1%;
+    text-align: center;
+}
+
+.articles .article img {
+    width: 100%;
+}

@@ -1,0 +1,155 @@
+/* Technology.css */
+.technology {
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.technology img {
+  max-width: 100%;
+  margin-top: 1rem;
+}
+
+.overlap-9 {
+  position: relative;
+}
+
+.rectangle-9 {
+  width: 100%;
+  height: 1108px;
+  top: 28px;
+  left: 0;
+  background-color: #303767;
+}
+
+.livello-6 {
+  position: absolute;
+  width: 776px;
+  height: 791px;
+  top: 283px;
+  left: 340px;
+}
+
+.content-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.content-4,
+.content-5 {
+  position: absolute;
+  left: 815px;
+  display: flex;
+  flex-direction: column;
+  width: 492px;
+  align-items: flex-start;
+  gap: 32px;
+}
+
+.content-4 {
+  top: 335px;
+}
+
+.content-5 {
+  top: 335px;
+  left: 198px;
+}
+
+.paragraf {
+  position: relative;
+}
+
+.at-the-core-of-our,
+.p {
+  position: relative;
+  align-self: stretch;
+  font-family: "Roboto", Helvetica;
+  font-weight: 400;
+  font-size: 18px;
+  letter-spacing: 0;
+  line-height: 30.6px;
+}
+
+.at-the-core-of-our .text-wrapper-19,
+.p .text-wrapper-3 {
+  font-weight: 900;
+  color: #ffffff;
+}
+
+.at-the-core-of-our .text-wrapper-20,
+.p .text-wrapper-4 {
+  font-weight: 400;
+  color: #ffffff;
+}
+
+.at-the-core-of-our .text-wrapper-21 {
+  font-weight: 700;
+  color: #fe900f;
+}
+
+.section-text-8 {
+  width: 100%;
+  height: 85px;
+  align-items: flex-start;
+  gap: 48px;
+  position: absolute;
+  top: 182px;
+  display: flex;
+  flex-direction: column;
+}
+
+.top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.text-wrapper-5 {
+  position: relative;
+  align-self: stretch;
+  margin-top: -1px;
+  font-family: "Roboto", Helvetica;
+  font-weight: 700;
+  color: #fe900f;
+  font-size: 20px;
+  text-align: center;
+  letter-spacing: 1px;
+  line-height: 20px;
+}
+
+.secondary-headline {
+  position: relative;
+  align-self: stretch;
+  font-family: "Roboto", Helvetica;
+  font-weight: 700;
+  color: var(--defaultwhite);
+  font-size: 42px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: 46.2px;
+}
+
+.separator-9 {
+  position: absolute;
+  width: 100%;
+  height: 109px;
+  top: -21px;
+  left: 0;
+}
+
+.livello-7 {
+  position: absolute;
+  width: 68px;
+  height: 71px;
+  top: 965px;
+  left: 694px;
+}

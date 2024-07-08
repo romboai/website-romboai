@@ -1,0 +1,33 @@
+.footer {
+    width: 100%;
+    background-color: #fff;
+    border-top: 1px solid #e6e6e6;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-content {
+    width: 100%;
+    /*max-width: 1200px;*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.footer-logo {
+    max-height: 50px;
+}
+
+.footer-text {
+    font-size: 14px;
+    color: #333;
+    text-align: center;
+    flex: 1;
+}
+
+.footer-icon {
+    max-height: 30px;
+}
