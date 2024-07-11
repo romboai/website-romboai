@@ -1,0 +1,50 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,700,var(--body-s-font-weight),var(--button-l-font-weight),var(--body-l-font-weight),var(--other-menu-m-font-weight),var(--other-caption-font-weight),var(--heading-2-font-weight)|Inter:var(--label-01-font-weight)");
+
+* {
+    -webkit-font-smoothing: antialiased;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0px;
+    height: 100%;
+}
+
+button:focus-visible {
+    outline: 2px solid #4a90e2 !important;
+    outline: -webkit-focus-ring-color auto 5px !important;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    html {
+        font-size: 14px;
+    }
+    body {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    html {
+        font-size: 16px;
+    }
+    body {
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 1025px) {
+    html {
+        font-size: 18px;
+    }
+    body {
+        font-size: 18px;
+    }
+}

@@ -1,0 +1,47 @@
+/* ScrollableItem.css */
+.scrollable-item {
+    display: flex;
+    flex-direction: column;
+    width: 300px; /* Adjust width as needed */
+    margin-right: 20px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    flex-shrink: 0;
+}
+
+.post-image {
+    width: 100%;
+    height: auto;
+}
+
+.post-content {
+    padding: 20px;
+    text-align: left;
+}
+
+.date {
+    color: #ff8c00;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.title {
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.description {
+    font-size: 14px;
+    color: #333;
+    word-wrap: break-word; /* Ensure text wraps within the container */
+    overflow-wrap: break-word; /* Ensure text wraps within the container */
+    max-width: 100%; /* Ensure the description doesn't exceed the width of the container */
+    white-space: normal; /* Ensure the text wraps to fit within the container */
+    /*max-height: 100px; !* Adjust based on design *!*/
+    /*overflow: hidden;*/
+    /*text-overflow: ellipsis;*/
+    /*display: -webkit-box;*/
+    /*-webkit-line-clamp: 3; !* Number of lines to show *!*/
+    /*-webkit-box-orient: vertical;*/
+}

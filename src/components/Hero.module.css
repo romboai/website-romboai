@@ -1,0 +1,147 @@
+.hero {
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+    height: 640px;
+    top: 0;
+    left: 0;
+}
+
+.heroContent, .heroContent * {
+    box-sizing: border-box;
+}
+
+.heroContent {
+    color: #ffffff;
+    text-align: left;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    gap: 5px;
+    height: 100%; /* Make sure it takes the full height */
+    /*padding: 3rem; !* Added padding for spacing *!*/
+}
+
+.heroContentMessage {
+    padding-left: 40px;
+    font-family: "Roboto", Helvetica;
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 3.5rem;
+    letter-spacing: 0;
+    line-height: 1.1;
+}
+
+.mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 620px;
+    mix-blend-mode: screen;
+    /*z-index: 1;*/
+    background: linear-gradient(198deg, #3a4278 30.85%, #000024 93.79%);
+}
+
+.hero .text {
+    position: relative;
+    align-self: stretch;
+    text-shadow: 0px 4px 4.5px #00000073;
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 3.5rem;
+    letter-spacing: 0;
+    line-height: 1.1;
+}
+
+.hero h1 {
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 3.5rem;
+    letter-spacing: 0;
+    line-height: 1.1;
+}
+
+.heroVideo {
+    position: absolute;
+    top: 0;
+    left: 15%;
+    width: 100%;
+    height: 620px;
+    object-fit: cover;
+    z-index: -1;
+    transform: rotate(0deg) scale(-1, 1);
+}
+
+.separator {
+    height: 109px;
+    top: 165px;
+    width: 100%;
+    left: 0;
+}
+
+.header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 2; /* Ensure header is above other elements */
+}
+.topSeparator {
+    align-self: flex-end
+}
+/* Mobile styles */
+@media (max-width: 768px) {
+    .heroContent {
+        /*padding: 2rem 1rem;*/
+    }
+
+    .heroContentMessage {
+        font-size: 1.5rem;
+        padding-left: 20px;
+        padding-bottom: 150px;
+    }
+
+    .separator {
+        height: 50px;
+        top: 80px;
+    }
+}
+
+/* Tablet styles */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .heroContent {
+        /*padding: 3rem 2rem;*/
+    }
+
+    .heroContentMessage {
+        font-size: 2.5rem;
+        padding-left: 30px;
+        padding-bottom: 150px;
+    }
+
+    .separator {
+        height: 75px;
+        top: 120px;
+    }
+}
+
+/* Desktop styles */
+@media (min-width: 1025px) {
+    .heroContent {
+        /*padding: 4rem 3rem;*/
+    }
+
+    .heroContentMessage {
+        font-size: 3.5rem;
+        padding-left: 40px;
+        padding-bottom: 150px;
+    }
+
+    .separator {
+        height: 109px;
+        top: 165px;
+    }
+}

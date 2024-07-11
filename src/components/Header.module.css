@@ -1,0 +1,202 @@
+.header {
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 4px #00000040;
+    backdrop-filter: blur(5px) brightness(100%);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 8px 20px;
+    position: relative; /* To allow absolute positioning of the toggle button */
+}
+
+.logo img {
+    max-width: 150px;
+    /*margin-bottom: 10px;*/
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background: #0D1F3F;
+    margin: 0;
+    /*padding: 0.5rem 0;*/
+    position: absolute;
+    top: 100%;
+    left: 0;
+}
+
+.navList {
+    display: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.visible {
+    display: flex;
+}
+
+.navList li {
+    width: 100%;
+    position: relative; /* Added to position dropdown relative to the parent */
+    padding: 0.5rem 0; /* Added padding for better spacing */
+}
+
+.navList li a {
+    font-family: var(--other-menu-m-font-family);
+    font-weight: var(--other-menu-m-font-weight);
+    color: #ffffff;
+    font-size: var(--other-menu-m-font-size);
+    letter-spacing: var(--other-menu-m-letter-spacing);
+    line-height: var(--other-menu-m-line-height);
+    white-space: nowrap;
+    font-style: var(--other-menu-m-font-style);
+    padding: 0.5rem 1rem; /* Adjusted padding for mobile view */
+}
+
+.hasDropdown > a {
+    display: flex;
+    align-items: center;
+}
+
+.arrowDown {
+    margin-left: 0.5rem;
+    width: 10px;
+    height: 10px;
+}
+
+.dropdown {
+    display: none;
+    position: static;
+    background: #1A2F4F;
+    list-style: none;
+    padding: 0.5rem 0; /* Added padding for better spacing */
+    margin: 0;
+    width: 100%;
+    top: 100%;
+    left: 0;
+}
+
+.dropdown li {
+    margin: 0;
+    padding: 0.5rem 1rem; /* Added padding for better spacing */
+}
+
+.dropdown li a {
+    padding: 0.5rem 1rem;
+    display: block;
+    white-space: nowrap;
+}
+
+.dropdown::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 10px;
+    border-width: 0 10px 10px 10px;
+    border-style: solid;
+    border-color: transparent transparent #1A2F4F transparent;
+}
+
+.menuToggle {
+    display: block;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+/* Desktop Styles */
+@media (min-width: 769px) {
+    .header {
+        flex-direction: row;
+        justify-content: space-between;
+        position: relative;
+    }
+
+    .container {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 8px 40px;
+    }
+
+    .logo {
+        margin-bottom: 0;
+    }
+
+    nav {
+        width: auto;
+        position: relative;
+        background: transparent;
+        flex-direction: row;
+        align-items: center;
+        top: auto;
+        left: auto;
+    }
+
+    .navList {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        background: none;
+        position: static;
+        padding: 0;
+        margin: 0;
+    }
+
+    .navList li {
+        margin: 0 1rem;
+        width: auto;
+        padding: 0; /* Remove padding for desktop view */
+    }
+
+    .navList li a {
+        padding: 0;
+    }
+
+    .dropdown {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0; /* Align dropdown to the left of the parent */
+        min-width: 150px;
+        max-width: 300px;
+        overflow: hidden;
+    }
+
+    .dropdown li {
+        padding: 0.5rem; /* Added padding for better spacing */
+    }
+
+    .dropdown li a {
+        padding: 0.5rem;
+    }
+
+    .menuToggle {
+        display: none;
+    }
+}
+
+.navList li:hover > .dropdown {
+    display: block;
+    left: 0; /* Ensure the submenu is aligned to the left of the parent menu item */
+}
