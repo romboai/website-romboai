@@ -1,6 +1,8 @@
 import React from 'react';
 import styles from './SupportedBy.module.css';
 import supportImage from '../img/image-1-2.png';
+import supportImage1 from '../img/image-2-1.png';
+import supportImage2 from '../img/image-1.png';
 import Separator from "./Separator";
 import separatorImage from "../img/separator-10.png";
 
@@ -15,6 +17,8 @@ const SupportedBy = () => {
           </div>
         </div>
         <img className={styles.image15} src={supportImage} alt="Support"/>
+        <img className={styles.image1} src={supportImage1} alt="Support"/>
+        <img className={styles.image2} src={supportImage2} alt="Support"/>
       </div>
     </section>
   );

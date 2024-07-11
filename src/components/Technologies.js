@@ -15,6 +15,18 @@ function Technologies() {
             <img className={styles.separator9} src={separator9} alt="Separator 9"/>
             <img className={styles.livello7} src={livello7} alt="Level 7"/>
             <img className={styles.livello6} src={livello6} alt="Level 6"/>
+            <img className={styles.analyzer2} src={analyzer}/>
+            <div className={styles.containerItemLeft}>
+              <div className={styles.paragraf}>
+                <p className={styles.p}>
+                  <span className={styles.textWrapper3}>Data-Driven Decision Making:<br/></span>
+                  <span className={styles.textWrapper4}>
+                    Empowers operators with precise, comprehensive data for better decision-making in processing and
+                    refining operations. (Patent pending)
+                  </span>
+                </p>
+              </div>
+            </div>
             <div className={styles.sectionText8}>
               <div className={styles.top}>
                 <div className={styles.textWrapper5}>INCIPIT</div>
@@ -22,21 +34,6 @@ function Technologies() {
               </div>
             </div>
             <div className={styles.contentContainer}>
-              <div className={styles.containerItem}>
-                <div className={styles.paragraf}>
-                  <p className={styles.p}>
-                    <span className={styles.textWrapper3}>Data-Driven Decision Making:<br/></span>
-                    <span className={styles.textWrapper4}>
-                    Empowers operators with precise, comprehensive data for better decision-making in processing and
-                    refining operations. (Patent pending)
-                  </span>
-                  </p>
-                </div>
-                {/*<div className={styles.livello5}>*/}
-                  <img className={styles.analyzer2} src={analyzer}/>
-                {/*</div>*/}
-              </div>
-
               <div className={styles.containerItem}>
                 <div className={styles.paragraf}>
                   <p className={styles.atTheCoreOfOur}>
@@ -65,7 +62,6 @@ function Technologies() {
                 </div>
               </div>
             </div>
-
           </div>
 
         </div>

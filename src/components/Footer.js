@@ -7,11 +7,16 @@ const Footer = () => {
   return (
     <footer className={styles.footer}>
       <div className={styles.footerContent}>
-        <img src={logo} alt="ROMBO.AI Logo" className={styles.footerLogo} />
-        <p className={styles.footerText}>ROMBO.AI© 2024 - Open Campus, 09123 Cagliari</p>
-        <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
-          <img src={linkedinIcon} alt="LinkedIn" className={styles.footerIcon} />
-        </a>
+        <div className={styles.footerLogo}>
+          <img src={logo} alt="ROMBO.AI Logo" className={styles.footerLogo} />
+        </div>
+        <div className={styles.copyWrite}>
+          <p className={styles.footerText}>ROMBO.AI© 2024 - Open Campus, 09123 Cagliari</p>
+          <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
+            <img src={linkedinIcon} alt="LinkedIn" className={styles.footerIcon} />
+          </a>
+        </div>
+
       </div>
     </footer>
   );

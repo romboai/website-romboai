@@ -1,6 +1,11 @@
 .engage {
-    /*padding: 20px;*/
-    width: var(--max-content-width);
+    text-align: center;
+    height: 527px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3,1fr);
+    background-color: #303767;
 }
 
 .overlap10 {
@@ -12,7 +17,11 @@
 }
 .overlapGroup {
     position: relative;
-    height: 76px;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    width: 151px;
+    justify-content: space-between;
 }
 
 .group9 {
@@ -28,11 +37,22 @@
     align-items: flex-start;
     gap: 10px;
     padding: 10px 0px;
-    position: absolute;
+    position: relative;
     top: 0;
     left: 0;
+    margin-right: -8px;
 }
-.buttonsGroup {
+.buttonsGroupLeft {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    position: relative;
+    flex: 0 0 auto;
+    border-radius: 50px;
+}
+
+.buttonsGroupRight {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -83,9 +103,9 @@
     align-items: flex-start;
     gap: 10px;
     padding: 10px 0px;
-    position: absolute;
+    position: relative;
     top: 0;
-    left: 132px;
+    /*left: 132px;*/
 }
 .button2 {
     all: unset;
@@ -102,19 +122,22 @@
     border: 2px solid;
 }
 .group10 {
-    position: absolute;
-    width: 24px;
-    height: 37px;
-    top: 20px;
-    left: 115px;
+    position: relative;
+    width: 35px;
+    height: 41px;
+    top: 18px;
+    display: flex;
+    flex-direction: column;
+    margin-left: -103px;
+    /* left: 115px;
 }
 .sectionText9 {
-    width: 1280px;
+    width: 100%;
     align-items: flex-start;
     gap: 37px;
     position: absolute;
     top: 149px;
-    left: 80px;
+    /* left: 80px; */
     display: flex;
     flex-direction: column;
 }
@@ -124,9 +147,9 @@
     align-items: center;
     gap: 8px;
     position: relative;
-    align-self: stretch;
     width: 100%;
     flex: 0 0 auto;
+    align-self: center;
 }
 .caption {
     position: relative;
@@ -155,12 +178,13 @@
 }
 .paragraph {
     position: relative;
-    align-self: stretch;
+    align-self: center;
     font-family: var(--body-l-font-family);
     font-weight: var(--body-l-font-weight);
     color: #ffffff;
     font-size: var(--body-l-font-size);
     text-align: center;
+    padding: 20px;
     letter-spacing: var(--body-l-letter-spacing);
     line-height: var(--body-l-line-height);
     font-style: var(--body-l-font-style);
@@ -186,6 +210,27 @@
 @media (max-width: 768px) {
     .heading {
         font-size: 24px;
+    }
+    .sectionText9{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: flex-start;
+        gap: 37px;
+        position: absolute;
+        top: 89px;
+        left: 44px;
+    }
+    .top{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+        padding: 20px;
+        position: relative;
+        align-self: center;
+        width: 100%;
+        flex: 0 0 auto;
     }
 }
 

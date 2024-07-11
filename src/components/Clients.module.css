@@ -360,7 +360,7 @@
         position: relative;
         text-align: center;
         overflow: hidden;
-        height: 520px;
+        height: 730px;
         top: 0;
         left: 0;
     }
@@ -368,7 +368,7 @@
     .clientVideo {
         position: absolute;
         top: 0;
-        height: 500px;
+        height: 730px;
         object-fit: none;
         z-index: -1;
         /*transform: rotate(0deg) scale(-1, 1);*/
@@ -379,15 +379,27 @@
         top: 0;
         left: 0;
         width: 100%;
-        height: 500px;
+        height: 730px;
         mix-blend-mode: screen;
         /*z-index: 1;*/
         background: #FEF0E4;
     }
     .separator{
         position: relative;
-        top:100px;
-        height: 93px;
+        top: 139px;
+        height: 50px;
+    }
+    .top3 {
+        justify-content: flex-end;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+        position: relative;
+        align-self: stretch;
+        width: 100%;
+        padding: 40px 40px 0 40px;
+        flex: 0 0 auto;
     }
 
 }

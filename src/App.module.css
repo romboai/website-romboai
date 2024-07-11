@@ -5,7 +5,7 @@
   justify-content: center;
   top: 0;
   width: 100%;
-  max-width: var(--max-content-width); /* Use the CSS variable for max width */
+  /*max-width: var(--max-content-width); !* Use the CSS variable for max width *!*/
   margin: 0 auto; /* Center the container */
 }
 

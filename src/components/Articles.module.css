@@ -193,6 +193,16 @@
     .heading {
         font-size: 24px;
     }
+    .manipolo {
+        position: relative;
+        height: 41px;
+        width: 221px;
+        left: 20px;
+        padding-left: 50px;
+        padding-right: 50px;
+        top: -35px;
+        object-fit: cover;
+    }
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
