@@ -211,12 +211,14 @@
     .intro {
         position: relative;
         text-align: center;
-        height: auto;
+        height: 2000px;
         width: 100%;
         top: 0;
         left: 0;
     }
-
+    .top{
+        margin-top: -140px
+    }
     .introLeft {
         display: none;
         grid-area: l;
@@ -229,6 +231,7 @@
         grid-area: r;
     }
     .paragrafo5 {
+        margin-top: -116px;
         display: grid;
         width: 100%;
         gap: 16px;
@@ -239,6 +242,27 @@
 
     .livello8 {
         display: none;
+    }
+
+    .modalitIsolamento {
+        margin-top: -60px;
+        position: relative;
+        height: 100px;
+    }
+    .modalitIsolamento2 {
+        margin-top: -70px;
+        position: relative;
+        height: 100px;
+    }
+    .modalitIsolamento3 {
+        margin-top: 20px;
+        position: relative;
+        height: 100px;
+    }
+    .modalitIsolamento4 {
+        margin-top: 50px;
+        position: relative;
+        height: 100px;
     }
 
 }
