@@ -21,7 +21,7 @@ function Hero() {
           Spectral Analysis <br />
           with Artificial Intelligence
         </div>
-        <Separator src={separatorImage} alt="Separator"/> {/* Add class for positioning */}
+        <Separator src={separatorImage} className={styles.separator} alt="Separator"/> {/* Add class for positioning */}
       </div>
     </div>
   );

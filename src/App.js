@@ -13,12 +13,18 @@ import Intro from "./components/Intro";
 import Technologies from "./components/Technologies";
 import Separator from "./components/Separator";
 import separatorImage from "./img/separator-10.png";
+import Contactus from "./components/Contactus";
+import DesktopContact from "./components/DesktopContact";
+import RightColumn from "./components/reusable-components/RightColumn";
 
 const App = () => {
   return (
     <div className={styles.container}>
       {/*<Header />*/}
       <Hero />
+      {/*<Contactus/>*/}
+      {/*<DesktopContact/>*/}
+      {/*<RightColumn/>*/}
       <Intro/>
       <Technologies />
       <Clients />

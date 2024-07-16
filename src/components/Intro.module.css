@@ -5,6 +5,7 @@
     width: 100%;
     top: 0;
     left: 0;
+    background: white;
 }
 
 .introContainer {
@@ -18,7 +19,6 @@
             "l h h h h h h h h h h r "
             "l b b b b b b b b b b r "
             "l b b b b b b b b b b r ";
-    color: white;
 }
 
 .introHeader {
