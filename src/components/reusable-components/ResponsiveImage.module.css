@@ -1,0 +1,69 @@
+.responsiveImageContainer {
+    position: absolute;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%; /* Default for 16:9 ratio, can be overridden inline */
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.backgroundImage {
+    position: absolute;
+    top: 150px;
+    left: 0;
+    width: 100%;
+    height: 80%;
+    object-fit: fill;
+}
+
+.topImage {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+    .topImage {
+        width: 130px;
+        top: 86%;
+        height: 140px;
+    }
+}
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .responsiveImageContainer {
+        height: 100%;
+
+    }
+    .topImage {
+        width: 130px;
+        top: 82%;
+        height: 140px;
+    }
+
+    .backgroundImage {
+        object-fit: cover;
+    }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+    .responsiveImageContainer {
+        height: 100%;
+
+    }
+    .topImage {
+        width: 130px;
+        top: 81%;
+        height: 140px;
+    }
+
+    .backgroundImage {
+        object-fit: cover;
+    }
+}
