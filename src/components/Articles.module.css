@@ -190,6 +190,21 @@
 }
 
 @media (max-width: 768px) {
+    .textWrapper27 {
+        position: relative;
+        /* width: 300px; */
+        /* top: 20px; */
+        /* bottom: 20px; */
+        /* left: 566px; */
+        font-family: "Roboto", Helvetica;
+        font-weight: 700;
+        color: #232536;
+        font-size: 35px;
+        text-align: center;
+        letter-spacing: -2px;
+        line-height: 48px;
+        white-space: nowrap;
+    }
     .heading {
         font-size: 24px;
     }

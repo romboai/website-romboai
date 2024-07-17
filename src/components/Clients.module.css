@@ -364,7 +364,7 @@
         position: relative;
         text-align: center;
         overflow: hidden;
-        height: 730px;
+        height: 789px;
         top: 0;
         left: 0;
     }
@@ -372,7 +372,7 @@
     .clientVideo {
         position: absolute;
         top: 0;
-        height: 730px;
+        height: 789px;
         object-fit: none;
         z-index: -1;
         /*transform: rotate(0deg) scale(-1, 1);*/
@@ -383,7 +383,7 @@
         top: 0;
         left: 0;
         width: 100%;
-        height: 730px;
+        height: 789px;
         mix-blend-mode: screen;
         z-index: 1;
         background: #FEF0E4;

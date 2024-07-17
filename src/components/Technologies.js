@@ -16,12 +16,8 @@ function Technologies() {
             <img className={styles.separator9} src={separator9} alt="Separator 9"/>
             {/*<img className={styles.livello7} src={livello7} alt="Level 7"/>*/}
             {/*<img className={styles.livello6} src={livello6} alt="Level 6"/>*/}
-            <ResponsiveImage
-              backgroundSrc={livello6}
-              topSrc={livello7}
-              alt="Dynamic Image"
-              ratioWidth={16}
-              ratioHeight={9}
+            <ResponsiveImage backgroundSrc={livello6} topSrc={livello7} alt="Dynamic Image" ratioWidth={16}
+                             ratioHeight={9}
             />
             <img className={styles.analyzer2} src={analyzer}/>
             <div className={styles.containerItemLeft}>

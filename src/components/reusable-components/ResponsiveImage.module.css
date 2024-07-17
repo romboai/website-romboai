@@ -1,7 +1,7 @@
 .responsiveImageContainer {
     position: absolute;
     width: 100%;
-    height: 0;
+    height: 100%;
     padding-bottom: 56.25%; /* Default for 16:9 ratio, can be overridden inline */
     overflow: hidden;
     display: flex;

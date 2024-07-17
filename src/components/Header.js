@@ -10,6 +10,11 @@ const Header = ({ onMenuClick, className }) => {
     setMenuVisible(!menuVisible);
   };
 
+  const handleMenuClick = (content) => {
+    onMenuClick(content);
+    setMenuVisible(false); // Hide menu after click
+  };
+
   return (
     <header className={`${styles.header} ${className}`}>
       <div className={styles.container}>
@@ -18,23 +23,30 @@ const Header = ({ onMenuClick, className }) => {
         </div>
         <button className={styles.menuToggle} onClick={toggleMenu}>☰</button>
         <nav>
+          {/*onClick={() => handleMenuClick('aboutus')}
+          onClick={() => handleMenuClick('solutions')}
+          onClick={() => handleMenuClick('product1')}
+          onClick={() => handleMenuClick('product2')}
+          onClick={() => handleMenuClick('resource1')}
+          onClick={() => handleMenuClick('resource2')}
+          */}
           <ul className={`${styles.navList} ${menuVisible ? styles.visible : ''}`}>
-            <li><a href="#" onClick={() => onMenuClick('home')}>Home</a></li>
-            <li><a href="#" onClick={() => onMenuClick('aboutus')}>About Us</a></li>
-            <li><a href="#" onClick={() => onMenuClick('contactus')}>Contact Us</a></li>
-            <li><a href="#" onClick={() => onMenuClick('solutions')}>Solutions</a></li>
+            <li><a href="#" onClick={() => handleMenuClick('home')}>Home</a></li>
+            <li><a href="#" >About Us</a></li>
+            <li><a href="#" onClick={() => handleMenuClick('contactus')}>Contact Us</a></li>
+            <li><a href="#" >Solutions</a></li>
             <li className={styles.hasDropdown}>
               <a href="#">Products <img src={arrowDown} alt="Dropdown Arrow" className={styles.arrowDown} /></a>
               <ul className={styles.dropdown}>
-                <li><a href="#">Product 1</a></li>
-                <li><a href="#">Product 2</a></li>
+                <li><a href="#" >Product 1</a></li>
+                <li><a href="#" >Product 2</a></li>
               </ul>
             </li>
             <li className={styles.hasDropdown}>
               <a href="#">Resources <img src={arrowDown} alt="Dropdown Arrow" className={styles.arrowDown} /></a>
               <ul className={styles.dropdown}>
-                <li><a href="#">Resource 1</a></li>
-                <li><a href="#">Resource 2</a></li>
+                <li><a href="#" >Resource 1</a></li>
+                <li><a href="#" >Resource 2</a></li>
               </ul>
             </li>
           </ul>
