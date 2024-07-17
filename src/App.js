@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './globals.module.css';
 import './styleguide.module.css';
 import Header from './components/Header';
@@ -11,26 +11,41 @@ import SupportedBy from './components/SupportedBy';
 import styles from './App.module.css';
 import Intro from "./components/Intro";
 import Technologies from "./components/Technologies";
-import Separator from "./components/Separator";
-import separatorImage from "./img/separator-10.png";
-import Contactus from "./components/Contactus";
-import DesktopContact from "./components/DesktopContact";
-import RightColumn from "./components/reusable-components/RightColumn";
+import Contact from "./components/Contact";
+// import Contact from "./components/Contact";
 
 const App = () => {
+  const [activeContent, setActiveContent] = useState('home');
+
+  const handleMenuClick = (content) => {
+    setActiveContent(content);
+  };
+
   return (
     <div className={styles.container}>
-      {/*<Header />*/}
-      <Hero />
-      {/*<Contactus/>*/}
-      {/*<DesktopContact/>*/}
-      {/*<RightColumn/>*/}
-      <Intro/>
-      <Technologies />
-      <Clients />
-      <Articles />
-      <SupportedBy />
-      <Engage />
+      <Header onMenuClick={handleMenuClick} className={styles.header} />
+        {activeContent === 'home' && (
+          <>
+            <Hero additionalProp="Home"/>
+            <Intro />
+            <Technologies />
+            <Clients />
+            <Articles />
+            <SupportedBy />
+            <Engage />
+          </>
+        )}
+        {activeContent === 'aboutus' && (
+          <>
+            <Contact />
+          </>
+        )}
+        {/* {activeContent === 'contactus' && <Contact />} */}
+        {/*{activeContent === 'technologies' && <Technologies />}*/}
+        {/*{activeContent === 'clients' && <Clients />}*/}
+        {/*{activeContent === 'articles' && <Articles />}*/}
+        {/*{activeContent === 'supportedby' && <SupportedBy />}*/}
+        {/*{activeContent === 'engage' && <Engage />}*/}
       <Footer />
     </div>
   );

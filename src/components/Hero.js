@@ -14,7 +14,6 @@ function Hero() {
         Your browser does not support the video tag.
       </video>
       <div className={styles.mask}></div>
-      <Header className={styles.header} />
       <div className={styles.heroContent}>
         <div className={styles.heroContentMessage}>
           Revolutionizing <br />

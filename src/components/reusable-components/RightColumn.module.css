@@ -1,0 +1,180 @@
+.rightColumn {
+    position: relative;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    background-color: #fff;
+    border: 1px solid #c1c7cd;
+    box-sizing: border-box;
+    width: 80%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 30px;
+    gap: 48px;
+    text-align: left;
+    font-size: 42px;
+    color: #21272a;
+    font-family: "Roboto", Helvetica;;
+}
+
+.form5FieldsCheckboxB {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 16px;
+    font-size: 14px;
+}
+
+
+.fieldsGroup {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 16px;
+}
+
+.textField, .textField2 {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.field, .field4 {
+    align-self: stretch;
+    background-color: #f2f4f8;
+    border-bottom: 1px solid #c1c7cd;
+    box-sizing: border-box;
+    height: 48px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    /*padding: 12px 16px;*/
+    font-size: 16px;
+    color: #697077;
+    width: 100%;
+}
+
+.input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    background: none;
+    box-sizing: border-box;
+    padding: 12px 16px;
+    margin: 0;
+}
+
+.iconJamIconsOutlineL {
+    width: 24px;
+    position: relative;
+    height: 24px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.controlsWithLabel {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px;
+}
+
+.labelName {
+    width: auto;
+    position: relative;
+    line-height: 140%;
+    display: inline-block;
+/* height: 20px; */
+/* flex-shrink: 0;*/
+}
+
+.buttonsGroup {
+align-self: stretch;
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: flex-end;
+font-size: 16px;
+color: #fff;
+}
+
+.button {
+border-radius: 50px;
+background-color: #f29206;
+border: 2px solid #f29206;
+box-sizing: border-box;
+height: 48px;
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: center;
+padding: 16px 12px;
+}
+
+.textContainer {
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: center;
+padding: 0px 16px;
+}
+
+.buttonText {
+position: relative;
+letter-spacing: 0.5px;
+line-height: 100%;
+font-weight: 500;
+}
+
+.secondaryHeadline {
+align-self: stretch;
+position: relative;
+line-height: 110%;
+}
+
+.top {
+align-self: stretch;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: flex-start;
+}
+
+.paragraph {
+align-self: stretch;
+position: relative;
+font-size: 18px;
+line-height: 140%;
+}
+
+.sectionText {
+align-self: stretch;
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+justify-content: flex-start;
+gap: 8px;
+}
+
+.label {
+align-self: stretch;
+position: relative;
+line-height: 140%;
+}
+
+.text {
+flex: 1;
+position: relative;
+line-height: 140%;
+}
