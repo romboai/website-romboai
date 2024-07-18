@@ -274,7 +274,7 @@
     }
     .contactContentMessage {
         position: relative;
-        font-size: 3.5rem;
+        font-size: 2.7rem;
         /* padding-left: 0px; */
         /* left: -20px; */
         /* padding-bottom: 150px; */
@@ -297,6 +297,18 @@
         justify-content: space-between;
         padding: 20px;
         flex-direction: column-reverse;
+    }
+    .atRomboAiContainer{
+        color: #fff;
+        display: inline-block;
+        font-family: Roboto, Helvetica;
+        font-size: 17px;
+        font-weight: 400;
+        height: 260px;
+        line-height: 120%;
+        position: relative;
+        text-align: left;
+        width: 298px;
     }
 }
 
