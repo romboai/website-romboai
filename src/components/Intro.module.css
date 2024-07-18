@@ -215,6 +215,7 @@
         width: 100%;
         top: 0;
         left: 0;
+        background: white;
     }
     .top{
         margin-top: -140px
