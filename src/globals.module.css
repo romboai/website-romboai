@@ -19,6 +19,7 @@ button:focus-visible {
 
 a {
     text-decoration: none;
+    padding-left: 10px;
 }
 
 /* Media Queries for Responsive Design */
