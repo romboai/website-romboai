@@ -9,7 +9,7 @@ import separatorImage from "../img/separator-11.png";
 function Hero() {
   return (
     <div className={styles.hero}>
-      <video autoPlay muted loop className={styles.heroVideo}>
+      <video autoPlay muted loop playsInline className={styles.heroVideo}>
         <source src={heroVideo} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
