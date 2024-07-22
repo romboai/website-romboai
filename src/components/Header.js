@@ -32,8 +32,8 @@ const Header = ({ onMenuClick, className }) => {
           */}
           <ul className={`${styles.navList} ${menuVisible ? styles.visible : ''}`}>
             <li><a href="#" onClick={() => handleMenuClick('home')}>Home</a></li>
-            <li><a href="#" >About Us</a></li>
             <li><a href="#" onClick={() => handleMenuClick('contactus')}>Contact Us</a></li>
+            <li><a href="#" onClick={() => handleMenuClick('aboutus')}>About Us</a></li>
             <li><a href="#" >Solutions</a></li>
             <li className={styles.hasDropdown}>
               <a href="#">Products <img src={arrowDown} alt="Dropdown Arrow" className={styles.arrowDown} /></a>

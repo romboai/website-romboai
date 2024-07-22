@@ -12,6 +12,7 @@ import styles from './App.module.css';
 import Intro from "./components/Intro";
 import Technologies from "./components/Technologies";
 import Contact from "./components/Contact";
+import About from "./components/About";
 // import Contact from "./components/Contact";
 
 const App = () => {
@@ -40,7 +41,13 @@ const App = () => {
             <Contact />
           </>
         )}
-        {/* {activeContent === 'contactus' && <Contact />} */}
+         {activeContent === 'aboutus' && (
+           <>
+             <About />
+             <SupportedBy />
+             <Engage />
+           </>
+         )}
         {/*{activeContent === 'technologies' && <Technologies />}*/}
         {/*{activeContent === 'clients' && <Clients />}*/}
         {/*{activeContent === 'articles' && <Articles />}*/}
