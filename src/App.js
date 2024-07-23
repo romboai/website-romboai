@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import './globals.module.css';
 import './styleguide.module.css';
 import Header from './components/Header';
@@ -13,6 +13,8 @@ import Intro from "./components/Intro";
 import Technologies from "./components/Technologies";
 import Contact from "./components/Contact";
 import About from "./components/About";
+import Product from "./components/Product";
+import HeroSolution from "./components/HeroSolution";
 // import Contact from "./components/Contact";
 
 const App = () => {
@@ -24,36 +26,50 @@ const App = () => {
 
   return (
     <div className={styles.container}>
-      <Header onMenuClick={handleMenuClick} className={styles.header} />
-        {activeContent === 'home' && (
-          <>
-            <Hero additionalProp="Home"/>
-            <Intro />
-            <Technologies />
-            <Clients />
-            <Articles />
-            <SupportedBy />
-            <Engage />
-          </>
-        )}
-        {activeContent === 'contactus' && (
-          <>
-            <Contact />
-          </>
-        )}
-         {activeContent === 'aboutus' && (
-           <>
-             <About />
-             <SupportedBy />
-             <Engage />
-           </>
-         )}
-        {/*{activeContent === 'technologies' && <Technologies />}*/}
-        {/*{activeContent === 'clients' && <Clients />}*/}
-        {/*{activeContent === 'articles' && <Articles />}*/}
-        {/*{activeContent === 'supportedby' && <SupportedBy />}*/}
-        {/*{activeContent === 'engage' && <Engage />}*/}
-      <Footer />
+      <Header onMenuClick={handleMenuClick} className={styles.header}/>
+      {activeContent === 'home' && (
+        <>
+          <Hero additionalProp="Home"/>
+          <Intro/>
+          <Technologies/>
+          <Clients/>
+          <Articles/>
+          <SupportedBy/>
+          <Engage/>
+        </>
+      )}
+      {activeContent === 'contactus' && (
+        <>
+          <Contact/>
+        </>
+      )}
+      {activeContent === 'aboutus' && (
+        <>
+          <About/>
+          <SupportedBy/>
+          <Engage/>
+        </>
+      )}
+      {activeContent === 'solutions' && (
+        <>
+          <HeroSolution/>
+          <SupportedBy/>
+          <Engage/>
+        </>
+      )}
+      {activeContent === 'product1' && (
+        <>
+          <Product/>
+          <SupportedBy/>
+          <Engage/>
+        </>
+      )}
+      {/*{activeContent === 'technologies' && <Technologies />}*/}
+      {/*{activeContent === 'clients' && <Clients />}*/}
+      {/*{activeContent === 'articles' && <Articles />}*/}
+      {/*{activeContent === 'supportedby' && <SupportedBy />}*/}
+      {/*{activeContent === 'engage' && <Engage />}*/}
+      <Footer/>
     </div>
   );
 };
