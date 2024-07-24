@@ -8,13 +8,14 @@ import pexelsPhoto1 from "../img/https-www-pexels-com-photo-two-women-in-front-o
 import pexelsPhoto2 from "../img/https-www-pexels-com-photo-photo-of-people-doing-handshakes-31-2.png";
 import pexelsPhoto3 from "../img/https-www-pexels-com-photo-photo-of-woman-looking-at-man-31831-2.png";
 import subdivide from "../img/Subdivide_line.svg";
-import vector2 from "../img/Vector3.svg";
+import vector3 from "../img/Vector3.svg";
+import vector1 from "../img/Vector1.svg";
 
 function SolutionSection2() {
   return (
     <div className={styles.section}>
       <img className={styles.subdivideLine} alt="" src={subdivide}/>
-      <img className={styles.vector2} alt="" src={vector2}/>
+      <img className={styles.vector2} alt="" src={vector3}/>
       <div className={styles.topSection}>
         <div className={styles.sectionText}>
           <div className={styles.top}>
@@ -86,7 +87,8 @@ function SolutionSection2() {
           </p>
         </div>
       </div>
-
+      <img className={styles.subdivideLine1} alt="" src={subdivide}/>
+      <img className={styles.vector1} alt="" src={vector1}/>
     </div>
 
   );

@@ -138,6 +138,20 @@
     overflow: visible;
 }
 
+.subdivideLine1,
+.subdivideLine1 * {
+    box-sizing: border-box;
+}
+.subdivideLine1 {
+    height: 86px;
+    position: absolute;
+    object-fit: cover;
+    width: 100%;
+    bottom: 0;
+    z-index: 1;
+    overflow: visible;
+}
+
 .vector2,
 .vector2 * {
     box-sizing: border-box;
@@ -149,6 +163,19 @@
     object-fit: cover;
     width: 100%;
     top: 0;
+}
+
+.vector1,
+.vector1 * {
+    box-sizing: border-box;
+}
+.vector1 {
+    height: 76px;
+    position: absolute;
+    overflow: visible;
+    object-fit: cover;
+    width: 100%;
+    bottom: 0;
 }
 
 .image7,
