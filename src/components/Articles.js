@@ -47,45 +47,6 @@ function Articles() {
       <img className={styles.divider3} src={divider} alt="Divider"/>
       <img className={styles.manipolo} src={manipolo} alt="Manipolo"/>
       <Separator src={separatorImage} alt="Separator" className={styles.separator}/> {/* Add class for positioning */}
-      {/*<div className={styles.overlap11}>*/}
-      {/*  <div className={styles.item6}>*/}
-      {/*    <div className={styles.post4}>*/}
-      {/*      <p className={styles.textWrapper22}>*/}
-      {/*        Consolidates multiple testing apparatuses into a single, efficient unit, significantly cutting down on*/}
-      {/*        equipment expenses and maintenance needs.*/}
-      {/*      </p>*/}
-      {/*      <div className={styles.textWrapper23}>All-In-One Analysis Suite</div>*/}
-      {/*      <div className={styles.textWrapper24}>Aug 23, 2023</div>*/}
-      {/*    </div>*/}
-      {/*    <img className={styles.pexelsPhoto} src={pexelsPhoto1} alt="Article 1"/>*/}
-      {/*  </div>*/}
-      {/*  <div className={styles.item7}>*/}
-      {/*    <div className={styles.post5}>*/}
-      {/*      <div className={styles.textWrapper23}>Fully Automatic Measurement</div>*/}
-      {/*      <div className={styles.textWrapper25}>Sep 2, 2023</div>*/}
-      {/*      <p className={styles.textWrapper22}>*/}
-      {/*        Reduce the manual intervention of specialised personnel. Daily laboratory tasks reduced by 90%.*/}
-      {/*      </p>*/}
-      {/*    </div>*/}
-      {/*    <img className={styles.pexelsPhoto} src={pexelsPhoto2} alt="Article 2"/>*/}
-      {/*  </div>*/}
-      {/*  <div className={styles.item8}>*/}
-      {/*    <div className={styles.post4}>*/}
-      {/*      <div className={styles.textWrapper23}>Express Quality Analysis</div>*/}
-      {/*      <div className={styles.textWrapper26}>Feb 12, 2024</div>*/}
-      {/*      <p className={styles.textWrapper22}>*/}
-      {/*        Perform analysis/get full report in minutes. Streamline crude oil management by compressing idle times*/}
-      {/*        and removing bottlenecks.*/}
-      {/*      </p>*/}
-      {/*    </div>*/}
-      {/*    <img className={styles.pexelsPhoto} src={pexelsPhoto3} alt="Article 3"/>*/}
-      {/*  </div>*/}
-      {/*  <div className={styles.textWrapper27}>What to read next</div>*/}
-      {/*  <div className={styles.group13}>*/}
-      {/*    <img className={styles.divider3} src={divider} alt="Divider"/>*/}
-      {/*  </div>*/}
-      {/*  <img className={styles.manipolo} src={manipolo} alt="Manipolo"/>*/}
-      {/*</div>*/}
     </section>
   );
 }

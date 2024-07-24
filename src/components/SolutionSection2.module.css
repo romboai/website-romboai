@@ -1,0 +1,209 @@
+.section,
+.section * {
+    box-sizing: border-box;
+}
+.section {
+    background: #ffffff;
+    height: 1917px;
+    position: relative;
+    padding: 44px 80px 44px 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    width: 100%;
+    align-items: center;
+    justify-content: start;
+    flex-wrap: nowrap;
+}
+
+
+.topSection,
+.topSection * {
+    box-sizing: border-box;
+}
+.topSection {
+    /*padding: 80px;*/
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    top: 100px;
+}
+
+.bottomSection,
+.bottomSection * {
+    box-sizing: border-box;
+}
+.bottomSection {
+    /*padding: 80px;*/
+    padding-top: 80px;
+    display: flex;
+    width: 100%;
+    flex-direction: row-reverse;
+    gap: 64px;
+    align-items: center;
+    justify-content: space-evenly;
+    position: relative;
+}
+
+.bottomSection1,
+.bottomSection1 * {
+    box-sizing: border-box;
+}
+.bottomSection1 {
+    /*padding: 80px;*/
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    gap: 64px;
+    align-items: center;
+    justify-content: space-evenly;
+    position: relative;
+}
+.sectionText {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    width: 1280px;
+    position: relative;
+}
+.top {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+    justify-content: flex-start;
+    align-self: stretch;
+    flex-shrink: 0;
+    position: relative;
+}
+.caption {
+    color: #fe900f;
+    text-align: center;
+    font-family: "Roboto-Bold", sans-serif;
+    font-size: var(--other-caption-font-size, 20px);
+    line-height: var(--other-caption-line-height, 100%);
+    letter-spacing: var(--other-caption-letter-spacing, 1px);
+    font-weight: var(--other-caption-font-weight, 700);
+    text-transform: uppercase;
+    position: relative;
+    align-self: stretch;
+}
+.secondaryHeadline {
+    color: #21272A;
+    text-align: center;
+    font-family: "Roboto-Bold", sans-serif;
+    font-size: var(--heading-2-font-size, 42px);
+    line-height: var(--heading-2-line-height, 110%);
+    font-weight: var(--heading-2-font-weight, 700);
+    position: relative;
+    align-self: stretch;
+}
+
+.secondaryHeadline1{
+    color: #21272A;
+    text-align: center;
+    font-family: "Roboto-Bold", sans-serif;
+    font-size: var(--heading-2-font-size, 42px);
+    line-height: var(--heading-2-line-height, 110%);
+    font-weight: var(--heading-2-font-weight, 700);
+    position: relative;
+    align-self: stretch;
+    padding-bottom: 20px;
+}
+
+
+.rectangle128,
+.rectangle128 * {
+    box-sizing: border-box;
+}
+
+
+.subdivideLine,
+.subdivideLine * {
+    box-sizing: border-box;
+}
+.subdivideLine {
+    height: 86px;
+    position: absolute;
+    object-fit: cover;
+    width: 100%;
+    top: 0;
+    z-index: 1;
+    overflow: visible;
+}
+
+.vector2,
+.vector2 * {
+    box-sizing: border-box;
+}
+.vector2 {
+    height: 76px;
+    position: absolute;
+    overflow: visible;
+    object-fit: cover;
+    width: 100%;
+    top: 0;
+}
+
+.image7,
+.image7 * {
+    box-sizing: border-box;
+}
+.image7 {
+    border-radius: 10px;
+    height: 614px;
+    left: -80px;
+    bottom: 130px;
+    position: absolute;
+    object-fit: cover;
+}
+
+.vision{
+    font-weight: 800;
+    font-family: "Roboto", Helvetica;
+}
+.paragraph {
+    color:  var(--coolgray-90, #21272a);;
+    text-align: left;
+    font-family: "Roboto", Helvetica;
+    font-size: 18px;
+    line-height: 140%;
+    font-weight: 400;
+    position: relative;
+    align-self: stretch;
+    height: 161px;
+}
+
+.paragraphTitle,
+.paragraphTitle * {
+    box-sizing: border-box;
+}
+.paragraphTitle {
+    text-wrap: wrap;
+    color: var(--coolgray-90, #21272a);
+    text-align: center;
+    font-family: "Roboto-Regular", sans-serif;
+    font-size: var(--body-l-font-size, 18px);
+    line-height: var(--body-l-line-height, 140%);
+    font-weight: var(--body-l-font-weight, 400);
+    position: relative;
+}
+
+
+.forma1,
+.forma1 * {
+    box-sizing: border-box;
+}
+.forma1 {
+    border-radius: 10px;
+    height: 614px;
+    position: relative;
+    transform: rotate(176deg) scale(-1, -1);
+    object-fit: cover;
+}

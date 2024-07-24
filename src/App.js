@@ -15,6 +15,9 @@ import Contact from "./components/Contact";
 import About from "./components/About";
 import Product from "./components/Product";
 import HeroSolution from "./components/HeroSolution";
+import SolutionSection from "./components/SolutionSection";
+import SolutionSection1 from "./components/SolutionSection1";
+import SolutionSection2 from "./components/SolutionSection2";
 // import Contact from "./components/Contact";
 
 const App = () => {
@@ -53,6 +56,9 @@ const App = () => {
       {activeContent === 'solutions' && (
         <>
           <HeroSolution/>
+          <SolutionSection/>
+          <SolutionSection1/>
+          <SolutionSection2/>
           <SupportedBy/>
           <Engage/>
         </>
