@@ -310,6 +310,10 @@
     align-self: flex-end
 }
 
+.divider{
+    padding: 100px;
+}
+
 /* Mobile styles */
 @media (max-width: 768px) {
     .contactContent{
@@ -365,7 +369,7 @@
         font-family: Roboto, Helvetica;
         font-size: 17px;
         font-weight: 400;
-        height: 260px;
+        /*height: 260px;*/
         line-height: 120%;
         position: relative;
         text-align: left;
@@ -384,7 +388,7 @@
         height: 100%;
         position: relative;
         width: 100%;
-        top: 135px;
+        /*top: 135px;*/
         display: flex;
         padding: 0;
         justify-content: space-between;
@@ -402,6 +406,8 @@
         height: 1000px;
         width: 100%;
     }
+
+
 
     .form{
         width: 80%;

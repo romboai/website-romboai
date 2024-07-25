@@ -43,6 +43,7 @@ const Contact = () => {
         <Separator src={separatorImage} className={styles.separator}
                    alt="Separator"/> {/* Add class for positioning */}
       </div>
+      <div className={styles.divider}></div>
       <div className={styles.contactMapSection}>
         <div className={styles.mapView}>
           {/*<GoogleMapComponent /> /!* Include the Google Map *!/*/}
