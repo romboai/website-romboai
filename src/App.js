@@ -18,6 +18,7 @@ import HeroSolution from "./components/HeroSolution";
 import SolutionSection from "./components/SolutionSection";
 import SolutionSection1 from "./components/SolutionSection1";
 import SolutionSection2 from "./components/SolutionSection2";
+import ContactInfoMap from "./components/ContactInfoMap";
 // import Contact from "./components/Contact";
 
 const App = () => {
@@ -59,6 +60,7 @@ const App = () => {
           <SolutionSection/>
           <SolutionSection1/>
           <SolutionSection2/>
+          <ContactInfoMap/>
           <SupportedBy/>
           <Engage/>
         </>

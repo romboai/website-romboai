@@ -64,7 +64,7 @@ function SolutionSection2() {
           </div>
           <p>
             <span>Leverages the combined power of Nuclear Magnetic Resonance (NMR) and Artificial Intelligence (AI) to accurately estimate</span>
-            <span className={styles.vision}>over 40 different properties of crude oil,</span>
+            <span className={styles.vision}> over 40 different properties of crude oil,</span>
             <span>including but not limited to density, viscosity, sulfur content, and more.</span>
             <br/>
             <br/>
