@@ -1,0 +1,13 @@
+.productContainer{
+    position: relative;
+    height: 500px;
+    width: 100%;
+}
+.subdivideLine {
+
+}
+
+.vector {
+    /* Custom styles for the vector2 image */
+    width: 50px;
+}

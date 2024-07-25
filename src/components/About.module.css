@@ -389,11 +389,15 @@
 }
 
 .separator {
-    position: relative;
-    bottom: 0;
+    position: absolute;
+    bottom: -15px;
     width: 100%;
-    /* margin-bottom: -5px; */
-    top: 60px;
+    z-index: 2;
+}
+.separator1 {
+    position: relative;
+    bottom: -4px;
+    width: 100%;
     z-index: 2;
 }
 
@@ -410,11 +414,23 @@
 
 /* Mobile styles */
 @media (max-width: 768px) {
-
+    .contactMainContainer {
+        height: 1200px;
+        width: 100%;
+    }
+    .mask {
+        height: 43%;
+    }
+    .contactVideo {
+        height: 1200px;
+    }
     .logo {
         width: 100%;
-        height: 127px;
+        height: 80px;
         align-self: center;
+    }
+    .groupIcon{
+        height: 100px;
     }
     .videoContainer {
         position: relative;
@@ -423,13 +439,13 @@
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
         border-radius: 14px;
         background-color: #202648;
-        height: 500px;
+        height: 300px;
         margin: 25px;
         justify-content: center;
         max-width: 100%;
     }
     .contactMapSection {
-        height: 598px;
+        height: 100%;
         width: 100%;
         display: flex;
         justify-content: space-between;
@@ -440,7 +456,7 @@
     {
         width: 100%;
         position: relative;
-        height: 207px;
+        height: 100%;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
@@ -448,8 +464,9 @@
         text-align: left;
         font-size: 18px;
         color: #fff;
-        padding-left: 100px;
-        padding-right: 100px;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 41px;
         font-family: "Roboto", Helvetica;
 
     }
@@ -470,6 +487,25 @@
         flex-shrink: 0;
         text-wrap: wrap;
     }
+    .contactContainer{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 2fr 1fr 2fr;
+        width: 100%;
+        height: 100%;
+    }
+    .contactContentMessage{
+        font-size: 2.6rem;
+        text-align: center;
+    }
+
+    .separator {
+        position: absolute;
+        bottom: -2px;
+        width: 100%;
+        z-index: 2;
+    }
+
 }
 
 /* Tablet styles */
@@ -492,7 +528,7 @@
         max-width: 100%;
     }
     .contactMapSection {
-        height: 598px;
+        height: 100%;
         width: 100%;
         display: flex;
         justify-content: space-between;
@@ -533,12 +569,15 @@
         flex-shrink: 0;
         text-wrap: wrap;
     }
+    .contactContentMessage{
+        font-size:3.5rem;
+    }
+
+
 }
 
 /* Desktop styles */
 @media (min-width: 1025px) {
-    .contactContent {
-        /*padding: 4rem 3rem;*/
-    }
+
 
 }

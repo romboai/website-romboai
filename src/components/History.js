@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './History.module.css';
 
-import heroVideo from "../img/hero_back_play.mp4";
+import heroVideo from "../img/heroVideo.mp4";
 
 function History() {
   return (

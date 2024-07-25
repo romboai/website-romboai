@@ -147,7 +147,7 @@
     position: absolute;
     object-fit: cover;
     width: 100%;
-    bottom: 0;
+    bottom: -1px;
     z-index: 1;
     overflow: visible;
 }
@@ -175,7 +175,7 @@
     overflow: visible;
     object-fit: cover;
     width: 100%;
-    bottom: 0;
+    bottom: -1px;
 }
 
 .image7,

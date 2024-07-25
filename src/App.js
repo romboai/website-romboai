@@ -19,6 +19,11 @@ import SolutionSection from "./components/SolutionSection";
 import SolutionSection1 from "./components/SolutionSection1";
 import SolutionSection2 from "./components/SolutionSection2";
 import ContactInfoMap from "./components/ContactInfoMap";
+import DynamicSeparator from "./components/reusable-components/DynamicSeparator";
+import subdivide from "./img/Subdivide_line.svg";
+import vector2 from './img/Vector2.svg';
+import vector3 from './img/Vector3.svg'
+import Solution from "./components/Solution";
 // import Contact from "./components/Contact";
 
 const App = () => {
@@ -56,19 +61,15 @@ const App = () => {
       )}
       {activeContent === 'solutions' && (
         <>
-          <HeroSolution/>
-          <SolutionSection/>
-          <SolutionSection1/>
-          <SolutionSection2/>
-          <ContactInfoMap/>
+          <Solution/>
           <SupportedBy/>
           <Engage/>
         </>
       )}
       {activeContent === 'product1' && (
         <>
-          <Product/>
           <SupportedBy/>
+          <Product/>
           <Engage/>
         </>
       )}

@@ -1,0 +1,101 @@
+.googleMapsWidget,
+.googleMapsWidget * {
+    box-sizing: border-box;
+}
+.googleMapsWidget {
+    height: 422px;
+    position: relative;
+    overflow: hidden;
+}
+.mapImage {
+    width: 122%;
+    height: 123.33%;
+    position: absolute;
+    right: -11%;
+    left: -11%;
+    bottom: -11.67%;
+    top: -11.67%;
+    object-fit: cover;
+}
+.zoomControls {
+    border-radius:  4px;
+    width: 40px;
+    height: 81px;
+    position: absolute;
+    right: 12px;
+    bottom: 12px;
+    overflow: visible;
+}
+.satellite {
+    border-radius: 4px;
+    border-style: solid;
+    border-color: #ffffff;
+    border-width: 1px;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    left: 12px;
+    bottom: 12px;
+    overflow: hidden;
+}
+.image {
+    width: 124px;
+    height: 49px;
+    position: absolute;
+    left: calc(50% - 62px);
+    top: calc(50% - 24px);
+    object-fit: cover;
+}
+.button {
+    background: #ffffff;
+    border-radius:  4px;
+    padding:  4px  12px 4px 12px;
+    display: flex;
+    flex-direction: row;
+    gap: 0;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 12px;
+    top: 12px;
+}
+.view-larger-map {
+    color: #0369f0;
+    text-align: left;
+    font-family: "Inter-Regular", sans-serif;
+    font-size:  12px;
+    line-height: 145%;
+    font-weight:  400;
+    position: relative;
+}
+.pin {
+    width: 21px;
+    height: 30px;
+    position: absolute;
+    left: calc(50% - 10px);
+    top: calc(50% - 15px);
+    overflow: visible;
+}
+.union {
+    width: 330px;
+    height: 239px;
+    position: absolute;
+    left: 223px;
+    top: 72px;
+    overflow: visible;
+}
+.livello1 {
+    width: 214px;
+    height: 63px;
+    position: absolute;
+    left: 272px;
+    top: 151px;
+    overflow: hidden;
+}
+.clipPathGroup {
+    height: auto;
+    position: absolute;
+    left: 0;
+    top: 0;
+    overflow: visible;
+}

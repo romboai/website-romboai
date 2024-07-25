@@ -8,6 +8,10 @@ import GoogleMapComponent from "./reusable-components/GoogleMap";
 import ResponsiveImage from "./reusable-components/ResponsiveImage";
 import livello6 from "../img/livello-1-4.svg";
 import livello7 from "../img/livello-1-8.svg";
+import StaticMap from "./reusable-components/StaticMap";
+import subdivide from "../img/Subdivide_line.svg";
+import vector1 from "../img/Vector1.svg";
+import DynamicSeparator from "./reusable-components/DynamicSeparator";
 
 const Contact = () => {
   return (
@@ -36,12 +40,13 @@ const Contact = () => {
 
           </div>
         </div>
+        <Separator src={separatorImage} className={styles.separator}
+                   alt="Separator"/> {/* Add class for positioning */}
       </div>
-      <Separator src={separatorImage} className={styles.separator}
-                 alt="Separator"/> {/* Add class for positioning */}
       <div className={styles.contactMapSection}>
         <div className={styles.mapView}>
-          <GoogleMapComponent /> {/* Include the Google Map */}
+          {/*<GoogleMapComponent /> /!* Include the Google Map *!/*/}
+          <StaticMap/>
         </div>
         <div className={styles.contactInfo}>
           <div className={styles.frameParent}>
@@ -66,7 +71,7 @@ const Contact = () => {
               <div className={styles.div}>+39 348 23 53 703</div>
             </div>
           </div>
-          <img src={livello6} alt="sdfsd" className={styles.backgroundImage} />
+          <img src={livello6} alt="sdfsd" className={styles.backgroundImage}/>
         </div>
       </div>
     </div>

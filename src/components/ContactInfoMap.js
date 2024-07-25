@@ -1,11 +1,13 @@
 import React from 'react';
 import styles from './ContactInfoMap.module.css';
 import GoogleMapComponent from "./reusable-components/GoogleMap";
+import StaticMap from "./reusable-components/StaticMap";
 function ContactInfoMap() {
   return (
     <div className={styles.contactMapSection}>
     <div className={styles.mapView}>
-      <GoogleMapComponent/> {/* Include the Google Map */}
+      {/*<GoogleMapComponent/> /!* Include the Google Map *!/*/}
+      <StaticMap/>
     </div>
     <div className={styles.contactInfo}>
       <div className={styles.frameParent}>

@@ -3,7 +3,7 @@
     position: relative;
     text-align: center;
     overflow: hidden;
-    height: 1134px;
+    height: 1120px;
     width: 100%;
     left: 0;
     bottom: -10px;
@@ -38,8 +38,8 @@
 .historyVideo {
     position: absolute;
     top: 0;
-    height: 1134px;
-    object-fit: none;
+    height: 100%;
+    object-fit: cover;
     z-index: -1;
     /*transform: rotate(0deg) scale(-1, 1);*/
 }
@@ -374,6 +374,7 @@
     height: 374px;
     position: relative;
     transform-origin: 0 0;
+    z-index: 1;
     transform: rotate(0deg) scale(1, 1);
 }
 .caption {
@@ -442,19 +443,14 @@
         position: relative;
         text-align: center;
         overflow: hidden;
-        height: 789px;
+        height: 1810px;
         top: 0;
         left: 0;
         background: white;
     }
-
-    .historyVideo {
-        position: absolute;
-        top: 0;
-        height: 789px;
-        object-fit: none;
-        z-index: -1;
-        /*transform: rotate(0deg) scale(-1, 1);*/
+    .section{
+        height: 100%;
+        padding: 20px;
     }
 
     .mask {
@@ -462,7 +458,7 @@
         top: 0;
         left: 0;
         width: 100%;
-        height: 789px;
+        height: 100%;
         mix-blend-mode: screen;
         z-index: 1;
         background: #FEF0E4;
@@ -483,6 +479,9 @@
         width: 100%;
         padding: 40px 40px 0 40px;
         flex: 0 0 auto;
+    }
+    .historyVideo{
+        height: 100%;
     }
 
 }
