@@ -412,6 +412,38 @@
     align-self: flex-end
 }
 
+
+
+.subdivideLine,
+.subdivideLine * {
+    box-sizing: border-box;
+}
+.subdivideLine {
+    height: 86px;
+    /*position: absolute;*/
+    object-fit: cover;
+    width: 100%;
+    top: 0;
+    z-index: 1;
+    overflow: visible;
+}
+
+
+.vector2,
+.vector2 * {
+    box-sizing: border-box;
+}
+.vector2 {
+    height: 76px;
+    /*position: absolute;*/
+    overflow: visible;
+    object-fit: cover;
+    width: 100%;
+    top: 0;
+}
+
+
+
 /* Mobile styles */
 @media (max-width: 768px) {
     .contactMainContainer {
