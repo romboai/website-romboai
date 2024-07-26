@@ -420,10 +420,10 @@
 }
 .subdivideLine {
     height: 86px;
-    /*position: absolute;*/
+    position: relative;
     object-fit: cover;
     width: 100%;
-    top: 0;
+    top: 52px;
     z-index: 1;
     overflow: visible;
 }
@@ -435,7 +435,7 @@
 }
 .vector2 {
     height: 76px;
-    /*position: absolute;*/
+    position: relative;
     overflow: visible;
     object-fit: cover;
     width: 100%;
