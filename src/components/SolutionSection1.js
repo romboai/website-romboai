@@ -5,6 +5,7 @@ import HorizontalListView from "./reusable-components/HorizontalListView";
 import pexelsPhoto1 from "../img/https-www-pexels-com-photo-two-women-in-front-of-dry-erase-boa-2.png";
 import pexelsPhoto2 from "../img/https-www-pexels-com-photo-photo-of-people-doing-handshakes-31-2.png";
 import pexelsPhoto3 from "../img/https-www-pexels-com-photo-photo-of-woman-looking-at-man-31831-2.png";
+import VerticalListView from "./reusable-components/VerticalListView";
 
 const items = [
   {
@@ -36,14 +37,12 @@ function SolutionSection1() {
           <div className={styles.top}>
             <div className={styles.caption}>Use Cases</div>
             <div className={styles.secondaryHeadline}>
-              Situations where your product can be used
-              <br/>
-              to solve the challenge
+              Situations where your product can be used to solve the challenge
             </div>
           </div>
         </div>
       </div>
-      <HorizontalListView items={items} backgroundColor="#2f3666"/>
+      <VerticalListView items={items} backgroundColor="#2f3666"/>
       <div className={styles.sectionText}>
         <div className={styles.top}>
           <div className={styles.caption}>Related roles</div>

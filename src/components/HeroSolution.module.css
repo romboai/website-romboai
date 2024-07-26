@@ -28,6 +28,7 @@
 }
 
 .heroContentMessage1 {
+    position: relative;
     padding-left: 40px;
     padding-right: 40px;
     font-family: "Roboto", Helvetica;
@@ -40,7 +41,8 @@
 }
 
 .heroContentMessage2 {
-    padding-left: 40px;
+    position: relative;
+    padding-left: 10px;
     padding-right: 40px;
     font-family: "Roboto", Helvetica;
     font-weight: 700;
@@ -133,12 +135,32 @@
         z-index: -1;
         transform: rotate(0deg) scale(-1, 1);
     }
+
+    .heroContentMessage1 {
+        width: 100%;
+    }
+    .heroContentMessage2 {
+        display: none;
+        width: 0;
+    }
+
 }
 
 /* Tablet styles */
 @media (min-width: 769px) and (max-width: 1024px) {
     .heroContent {
         /*padding: 3rem 2rem;*/
+    }
+    .heroContentMessage1 {
+        width: 50%;
+    }
+    .heroContentMessage2 {
+        width: 50%;
+    }
+
+    .forma20{
+        height: 500px;
+        width: 400px;
     }
 }
 

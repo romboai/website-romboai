@@ -123,7 +123,7 @@
 /* Mobile styles */
 @media (max-width: 768px) {
     .contactMapSection {
-        height: 598px;
+        height: 100%;
         width: 100%;
         display: flex;
         justify-content: space-between;
@@ -136,7 +136,7 @@
 /* Tablet styles */
 @media (min-width: 769px) and (max-width: 1024px) {
     .contactMapSection {
-        height: 598px;
+        height: 100%;
         width: 100%;
         display: flex;
         justify-content: space-between;

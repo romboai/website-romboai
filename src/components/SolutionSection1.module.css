@@ -4,7 +4,7 @@
 }
 .section {
     background: #2f3666;
-    height: 1617px;
+    height: 100%;
     position: relative;
     padding: 44px 80px 44px 80px;
     display: flex;
@@ -52,7 +52,7 @@
     align-items: flex-start;
     justify-content: flex-start;
     flex-shrink: 0;
-    width: 1280px;
+    width: 100%;
     position: relative;
 }
 .top {
@@ -81,9 +81,10 @@
     color: #ffffff;
     text-align: center;
     font-family: "Roboto-Bold", sans-serif;
-    font-size: var(--heading-2-font-size, 42px);
-    line-height: var(--heading-2-line-height, 110%);
-    font-weight: var(--heading-2-font-weight, 700);
+    font-size: 42px;
+    line-height: 110%;
+    font-weight:  700;
+    /*height: 150px;*/
     position: relative;
     align-self: stretch;
 }
@@ -128,9 +129,10 @@
 }
 .image7 {
     border-radius: 10px;
-    height: 509px;
+    height: 100%;
     position: relative;
     object-fit: cover;
+    width: 50%;
 }
 
 .vision{
@@ -146,5 +148,56 @@
     font-weight: 400;
     position: relative;
     align-self: stretch;
-    height: 161px;
+    height: 100%;
+    width: 50%;
+}
+
+@media (max-width: 768px) {
+    .bottomSection {
+        padding: 20px;
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        gap: 64px;
+        align-items: center;
+        justify-content: space-evenly;
+        position: relative;
+    }
+    .section{
+        padding: 20px;
+    }
+    .image7 {
+        height: 350px;
+        width: 100%;
+    }
+    .paragraph{
+        width: 100%;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .section{
+        padding: 20px;
+    }
+    .bottomSection {
+        padding: 20px;
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        gap: 64px;
+        align-items: center;
+        justify-content: space-evenly;
+        position: relative;
+    }
+    .image7 {
+        height: 450px;
+        width: 100%;
+    }
+    .paragraph{
+        width: 100%;
+    }
+}
+
+@media (min-width: 1025px) {
+
 }
