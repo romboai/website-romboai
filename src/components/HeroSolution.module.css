@@ -67,7 +67,7 @@
     width: 100%;
     height: 620px;
     mix-blend-mode: screen;
-    z-index: 1;
+    z-index: -1;
     background: linear-gradient(198deg, #3a4278 30.85%, #000024 93.79%);
 }
 
