@@ -1,13 +1,9 @@
-.productContainer{
+.container {
     position: relative;
-    height: 500px;
+    text-align: center;
+    overflow: hidden;
+    height: 100%;
     width: 100%;
-}
-.subdivideLine {
-
-}
-
-.vector {
-    /* Custom styles for the vector2 image */
-    width: 50px;
+    top: 0;
+    left: 0;
 }

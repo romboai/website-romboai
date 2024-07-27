@@ -68,8 +68,9 @@ const App = () => {
       )}
       {activeContent === 'product1' && (
         <>
-          <SupportedBy/>
           <Product/>
+          <Articles/>
+          <SupportedBy/>
           <Engage/>
         </>
       )}
