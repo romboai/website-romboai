@@ -24,6 +24,7 @@ import subdivide from "./img/Subdivide_line.svg";
 import vector2 from './img/Vector2.svg';
 import vector3 from './img/Vector3.svg'
 import Solution from "./components/Solution";
+import Blog from "./components/Blog";
 // import Contact from "./components/Contact";
 
 const App = () => {
@@ -70,6 +71,13 @@ const App = () => {
         <>
           <Product/>
           <Articles/>
+          <SupportedBy/>
+          <Engage/>
+        </>
+      )}
+      {activeContent === 'resource1' && (
+        <>
+          <Blog/>
           <SupportedBy/>
           <Engage/>
         </>
