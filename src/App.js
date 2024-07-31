@@ -97,6 +97,7 @@ const App = () => {
       {activeContent === 'resource2' && (
         <>
           <Article/>
+          <Articles/>
           <SupportedBy/>
           <Engage/>
         </>

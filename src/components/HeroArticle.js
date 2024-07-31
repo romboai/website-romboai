@@ -1,9 +1,10 @@
 import React from 'react';
 import styles from './HeroArticle.module.css';
-import Separator from "./Separator";
-import separatorImage from "../img/separator-11.png";
 import heroImage from "../img/imageHero.png";
-
+import Separator from "./Separator";
+import separatorImage from "../img/Subdivide_line.svg";
+import subdivide from "../img/Subdivide_line.svg";
+import vector1 from "../img/Vector4.svg";
 
 function HeroArticle() {
   return (
@@ -18,78 +19,58 @@ function HeroArticle() {
         <img className={styles.imageVideo} alt="" src={heroImage}/>
       </div>
       <div className={styles.containerThree}>
-        <div className={styles.blogBodyContent}>
-          <div className={styles.eiusmod}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.
-          </div>
-          <div className={styles.eiusmod2}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.
-          </div>
-          <div className={styles.eiusmod3}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.
-          </div>
-          <div className={styles.quisqueNon}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Non blandit massa enim
-            nec. Scelerisque viverra mauris in aliquam sem. At risus viverra adipiscing
-            at in tellus. Sociis natoque penatibus et magnis dis parturient montes.
-            Ridiculus mus mauris vitae ultricies leo. Neque egestas congue quisque
-            egestas diam. Risus in hendrerit gravida rutrum quisque non.
-          </div>
-          <div className={styles.quisqueNon2}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Non blandit massa enim
-            nec. Scelerisque viverra mauris in aliquam sem. At risus viverra adipiscing
-            at in tellus. Sociis natoque penatibus et magnis dis parturient montes.
-            Ridiculus mus mauris vitae ultricies leo. Neque egestas congue quisque
-            egestas diam. Risus in hendrerit gravida rutrum quisque non.
-          </div>
-          <div className={styles.quisqueNon3}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Non blandit massa enim
-            nec. Scelerisque viverra mauris in aliquam sem. At risus viverra adipiscing
-            at in tellus. Sociis natoque penatibus et magnis dis parturient montes.
-            Ridiculus mus mauris vitae ultricies leo. Neque egestas congue quisque
-            egestas diam. Risus in hendrerit gravida rutrum quisque non.
-          </div>
-          <div className={styles.list}>
-            <div className={styles.sitAmet}>Lorem ipsum dolor sit amet</div>
-            <div className={styles.pointer}></div>
-          </div>
-          <div className={styles.list2}>
-            <div className={styles.scelerisque}>
-              Non blandit massa enim nec scelerisque
-            </div>
-            <div className={styles.pointer2}></div>
-          </div>
-          <div className={styles.list}>
-            <div className={styles.egestas}>
-              Neque egestas congue quisque egestas
-            </div>
-            <div className={styles.pointer3}></div>
-          </div>
-          <div className={styles.quisqueNon4}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Non blandit massa enim
-            nec. Scelerisque viverra mauris in aliquam sem. At risus viverra adipiscing
-            at in tellus. Sociis natoque penatibus et magnis dis parturient montes.
-            Ridiculus mus mauris vitae ultricies leo. Neque egestas congue quisque
-            egestas diam. Risus in hendrerit gravida rutrum quisque non.
-          </div>
-          <div
-            className={styles.quisqueNon5}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Non blandit massa enim
-            nec. Scelerisque viverra mauris in aliquam sem. At risus viverra adipiscing
-            at in tellus. Sociis natoque penatibus et magnis dis parturient montes.
-            Ridiculus mus mauris vitae ultricies leo. Neque egestas congue quisque
-            egestas diam. Risus in hendrerit gravida rutrum quisque non.
-          </div>
-
-          <div className={styles.andrewJonson}>Andrew Jonson</div>
+        <div className={styles.posted1}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</div>
+        <div className={styles.step1}>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua. Non blandit massa enim nec. Scelerisque viverra mauris in aliquam sem. At risus viverra
+          adipiscing at in tellus. Sociis natoque penatibus et magnis dis parturient montes. Ridiculus mus mauris vitae
+          ultricies leo. Neque egestas congue quisque egestas diam. Risus in hendrerit gravida rutrum quisque non.
         </div>
       </div>
-      <Separator src={separatorImage} className={styles.separator} alt="Separator"/> {/* Add class for positioning */}
+
+      <div className={styles.containerThree}>
+        <div className={styles.posted1}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</div>
+        <div className={styles.step1}>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua. Non blandit massa enim nec. Scelerisque viverra mauris in aliquam sem. At risus viverra
+          adipiscing at in tellus. Sociis natoque penatibus et magnis dis parturient montes. Ridiculus mus mauris vitae
+          ultricies leo. Neque egestas congue quisque egestas diam. Risus in hendrerit gravida rutrum quisque non.
+        </div>
+        <div className={styles.step1}>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua. Non blandit massa enim nec. Scelerisque viverra mauris in aliquam sem. At risus viverra
+          adipiscing at in tellus. Sociis natoque penatibus et magnis dis parturient montes. Ridiculus mus mauris vitae
+          ultricies leo. Neque egestas congue quisque egestas diam. Risus in hendrerit gravida rutrum quisque non.
+        </div>
+        <div className={styles.paragraph1}>
+          <ul className={styles.list}>
+            <li>Lorem ipsum dolor sit amet</li>
+            <li>Non blandit massa enim nec scelerisque</li>
+            <li>Neque egestas congue quisque egestas</li>
+          </ul>
+        </div>
+        <div className={styles.step1}>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua. Non blandit massa enim nec. Scelerisque viverra mauris in aliquam sem. At risus viverra
+          adipiscing at in tellus. Sociis natoque penatibus et magnis dis parturient montes. Ridiculus mus mauris vitae
+          ultricies leo. Neque egestas congue quisque egestas diam. Risus in hendrerit gravida rutrum quisque non.
+        </div>
+      </div>
+      <div className={styles.containerThree}>
+        <div className={styles.posted1}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</div>
+        <div className={styles.step1}>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua. Non blandit massa enim nec. Scelerisque viverra mauris in aliquam sem. At risus viverra
+          adipiscing at in tellus. Sociis natoque penatibus et magnis dis parturient montes. Ridiculus mus mauris vitae
+          ultricies leo. Neque egestas congue quisque egestas diam. Risus in hendrerit gravida rutrum quisque non.
+        </div>
+      </div>
+      <div className={styles.andrewJonson}>Andrew Jonson</div>
+      <div className={styles.divider}>
+      </div>
+      <img className={styles.subdivideLine1} alt="" src={subdivide}/>
+      <img className={styles.vector1} alt="" src={vector1}/>
+      {/*<Separator src={separatorImage} className={styles.separator} alt="Separator"/> /!* Add class for positioning *!/*/}
     </div>
   );
 }

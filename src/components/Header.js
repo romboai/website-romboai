@@ -40,8 +40,8 @@ const Header = ({onMenuClick, className}) => {
             <li className={styles.hasDropdown}>
               <a href="#" onClick={() => handleMenuClick('resource1')}>Resources <img src={arrowDown} alt="Dropdown Arrow" className={styles.arrowDown}/></a>
               <ul className={styles.dropdown}>
-                <li><a href="#" onClick={() => handleMenuClick('resource1')}>Resource 1</a></li>
-                <li><a href="#" onClick={() => handleMenuClick('resource2')}>Resource 2</a></li>
+                <li><a href="#" onClick={() => handleMenuClick('resource1')}>Blogs</a></li>
+                <li><a href="#" onClick={() => handleMenuClick('resource2')}>Articles</a></li>
               </ul>
             </li>
           </ul>

@@ -4,6 +4,7 @@ import HeroBlog from "./HeroBlog";
 import BlogArticleOne from "./BlogArticleOne";
 import BlogArticleTwo from "./BlogArticleTwo";
 import HeroArticle from "./HeroArticle";
+import Articles from "./Articles";
 
 
 const Article = () => {
