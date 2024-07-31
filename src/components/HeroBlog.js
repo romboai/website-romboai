@@ -9,10 +9,6 @@ import forma20 from "../img/forma1.png";
 function HeroBlog() {
   return (
     <div className={styles.hero}>
-      {/*<video autoPlay muted loop playsInline className={styles.heroVideo}>*/}
-      {/*  <source src={heroVideo} type="video/mp4"/>*/}
-      {/*  Your browser does not support the video tag.*/}
-      {/*</video>*/}
       <div className={styles.mask1}></div>
       <div className={styles.mask}></div>
       <div className={styles.frame76}>

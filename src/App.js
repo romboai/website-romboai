@@ -25,18 +25,30 @@ import vector2 from './img/Vector2.svg';
 import vector3 from './img/Vector3.svg'
 import Solution from "./components/Solution";
 import Blog from "./components/Blog";
+import Article from "./components/Article";
 // import Contact from "./components/Contact";
 
 const App = () => {
+
+  const [isResource1Selected, setIsResource1Selected] = useState(false);
+
   const [activeContent, setActiveContent] = useState('home');
 
   const handleMenuClick = (content) => {
     setActiveContent(content);
+    if (content === 'resource2') {
+      setIsResource1Selected(true);
+    } else {
+      setIsResource1Selected(false);
+    }
   };
 
   return (
     <div className={styles.container}>
-      <Header onMenuClick={handleMenuClick} className={styles.header}/>
+      <Header
+        onMenuClick={handleMenuClick}
+        className={`${styles.header} ${isResource1Selected ? styles.resource1Background : ''}`}
+      />
       {activeContent === 'home' && (
         <>
           <Hero additionalProp="Home"/>
@@ -82,11 +94,13 @@ const App = () => {
           <Engage/>
         </>
       )}
-      {/*{activeContent === 'technologies' && <Technologies />}*/}
-      {/*{activeContent === 'clients' && <Clients />}*/}
-      {/*{activeContent === 'articles' && <Articles />}*/}
-      {/*{activeContent === 'supportedby' && <SupportedBy />}*/}
-      {/*{activeContent === 'engage' && <Engage />}*/}
+      {activeContent === 'resource2' && (
+        <>
+          <Article/>
+          <SupportedBy/>
+          <Engage/>
+        </>
+      )}
       <Footer/>
     </div>
   );

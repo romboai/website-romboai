@@ -25,13 +25,6 @@ const Header = ({onMenuClick, className}) => {
         </div>
         <button className={styles.menuToggle} onClick={toggleMenu}>☰</button>
         <nav>
-          {/*onClick={() => handleMenuClick('aboutus')}
-          onClick={() => handleMenuClick('solutions')}
-          onClick={() => handleMenuClick('product1')}
-          onClick={() => handleMenuClick('product2')}
-          onClick={() => handleMenuClick('resource1')}
-          onClick={() => handleMenuClick('resource2')}
-          */}
           <ul className={`${styles.navList} ${menuVisible ? styles.visible : ''}`}>
             <li><a href="#" onClick={() => handleMenuClick('home')}>Home</a></li>
             <li><a href="#" onClick={() => handleMenuClick('contactus')}>Contact Us</a></li>
@@ -48,7 +41,7 @@ const Header = ({onMenuClick, className}) => {
               <a href="#" onClick={() => handleMenuClick('resource1')}>Resources <img src={arrowDown} alt="Dropdown Arrow" className={styles.arrowDown}/></a>
               <ul className={styles.dropdown}>
                 <li><a href="#" onClick={() => handleMenuClick('resource1')}>Resource 1</a></li>
-                <li><a href="#">Resource 2</a></li>
+                <li><a href="#" onClick={() => handleMenuClick('resource2')}>Resource 2</a></li>
               </ul>
             </li>
           </ul>
