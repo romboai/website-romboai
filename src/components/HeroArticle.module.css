@@ -240,7 +240,18 @@
 
 /* Tablet styles */
 @media (min-width: 769px) and (max-width: 1024px) {
+    .containerOne{
+        padding-left: 25px;
+        padding-right: 25px;
+    }
 
+    .containerThree{
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+    .paragraph1{
+        margin-bottom: 50px;
+    }
 }
 
 /* Desktop styles */
