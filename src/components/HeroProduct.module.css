@@ -134,14 +134,14 @@
 .titolo1span {
     color: #ffffff;
     font-family: "Roboto-Bold", sans-serif;
-    font-size: 54px;
+    font-size: 42px;
     line-height: 110%;
     font-weight: 700;
 }
 .titolo1span2 {
     color: #ffffff;
     font-family: "Roboto-Regular", sans-serif;
-    font-size: 32px;
+    font-size: 30px;
     line-height: 110%;
     font-weight: 400;
 }
@@ -150,6 +150,18 @@
 @media (max-width: 768px) {
     .heroContent {
         /*padding: 2rem 1rem;*/
+    }
+    .titolo1{
+        color: #ffffff;
+        text-align: left;
+        position: relative;
+        padding-left: 40px;
+    }
+
+    .titolo1span{
+        color: #ffffff;
+        text-align: left;
+        position: relative;
     }
 
     .heroVideo {

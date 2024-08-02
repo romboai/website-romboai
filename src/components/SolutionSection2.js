@@ -52,7 +52,7 @@ function SolutionSection2() {
         </div>
       </div>
       <div className={styles.bottomSection1}>
-        <img className={styles.forma1} alt="" src={forma3}/>
+        <img className={styles.forma2} alt="" src={forma3}/>
         <img className={styles.image7} alt="" src={backlogo}/>
         <div className={styles.paragraph}>
           <div className={styles.secondaryHeadline1}>

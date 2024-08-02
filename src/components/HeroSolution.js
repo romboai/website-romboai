@@ -18,7 +18,6 @@ function HeroSolution() {
       <div className={styles.heroContent}>
         <div className={styles.heroContentMessage1}>
           Solutions:
-          <br />
           Can be specific to an industry, application, or a topic.
         </div>
         <div className={styles.heroContentMessage2}>

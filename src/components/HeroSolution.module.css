@@ -135,9 +135,14 @@
         z-index: -1;
         transform: rotate(0deg) scale(-1, 1);
     }
+    .separator{
+        height: 75px;
+    }
 
     .heroContentMessage1 {
         width: 100%;
+        font-size: 42px;
+        padding: 40px;
     }
     .heroContentMessage2 {
         display: none;

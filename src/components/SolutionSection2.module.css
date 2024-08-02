@@ -94,10 +94,10 @@
     color: #fe900f;
     text-align: center;
     font-family: "Roboto-Bold", sans-serif;
-    font-size: var(--other-caption-font-size, 20px);
-    line-height: var(--other-caption-line-height, 100%);
-    letter-spacing: var(--other-caption-letter-spacing, 1px);
-    font-weight: var(--other-caption-font-weight, 700);
+    font-size:  20px;
+    line-height:  100%;
+    letter-spacing:  1px;
+    font-weight:  700;
     text-transform: uppercase;
     position: relative;
     align-self: stretch;
@@ -107,20 +107,20 @@
     color: #21272A;
     text-align: center;
     font-family: "Roboto-Bold", sans-serif;
-    font-size: var(--heading-2-font-size, 42px);
-    line-height: var(--heading-2-line-height, 110%);
-    font-weight: var(--heading-2-font-weight, 700);
+    font-size: 42px;
+    line-height: 110%;
+    font-weight:  700;
     position: relative;
     align-self: stretch;
 }
 
 .secondaryHeadline1 {
     color: #21272A;
-    text-align: center;
+    text-align: left;
     font-family: "Roboto-Bold", sans-serif;
-    font-size: var(--heading-2-font-size, 42px);
-    line-height: var(--heading-2-line-height, 110%);
-    font-weight: var(--heading-2-font-weight, 700);
+    font-size: 33px;
+    line-height: 110%;
+    font-weight: 700;
     position: relative;
     align-self: stretch;
     padding-bottom: 20px;
@@ -231,12 +231,12 @@
 
 .paragraphTitle {
     text-wrap: wrap;
-    color: var(--coolgray-90, #21272a);
+    color:  #21272a;
     text-align: center;
     font-family: "Roboto-Regular", sans-serif;
-    font-size: var(--body-l-font-size, 18px);
-    line-height: var(--body-l-line-height, 140%);
-    font-weight: var(--body-l-font-weight, 400);
+    font-size:  18px;
+    line-height: 140%;
+    font-weight:  700;
     position: relative;
 }
 
@@ -247,6 +247,20 @@
 }
 
 .forma1 {
+    border-radius: 10px;
+    height: 100%;
+    position: relative;
+    width: 50%;
+    transform: rotate(176deg) scale(-1, -1);
+    object-fit: cover;
+}
+
+.forma2,
+.forma2 * {
+    box-sizing: border-box;
+}
+
+.forma2 {
     border-radius: 10px;
     height: 100%;
     position: relative;
@@ -281,11 +295,22 @@
 
     .section {
         padding: 20px;
+        gap:10px;
     }
 
     .forma1 {
-        height: 100%;
-        width: 100%;
+        height: 365px;
+        top: 95px;
+        width: 455px;
+        right: 13px;
+    }
+
+    .forma2 {
+        height: 344px;
+        top: 20px;
+        left: 20px;
+        width: 455px;
+        right: 13px;
     }
     .image7  {
         height: 60%;
