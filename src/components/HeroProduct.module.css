@@ -182,6 +182,14 @@
         display: none;
         width: 0;
     }
+    .separator{
+        bottom: 0;
+        height: 38px;
+        left: 0;
+        margin-bottom: 10px;
+        position: absolute;
+        width: 100%;
+    }
 
 }
 
