@@ -398,6 +398,10 @@
     .backgroundImage{
         top:16%
     }
+    .contactInfo{
+        padding-top: 40px;
+    }
+
 
 }
 
@@ -408,7 +412,9 @@
         width: 100%;
     }
 
-
+    .divider{
+        padding: 10px;
+    }
 
     .form{
         width: 80%;

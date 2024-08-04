@@ -252,6 +252,40 @@
     /*left: 694px;*/
 }
 
+
+
+.subdivideLine1,
+.subdivideLine1 * {
+    box-sizing: border-box;
+}
+
+.subdivideLine1 {
+    height: 86px;
+    position: absolute;
+    object-fit: cover;
+    width: 100%;
+    top: -60px;
+    z-index: 2;
+    left: 0;
+    overflow: visible;
+}
+
+.vector1,
+.vector1 * {
+    box-sizing: border-box;
+}
+
+.vector1 {
+    height: 76px;
+    position: absolute;
+    overflow: visible;
+    object-fit: cover;
+    width: 100%;
+    left: 0;
+    z-index: 1;
+    top: -39px;
+}
+
 /* Mobile styles */
 @media (max-width: 768px) {
     .sectionText8{

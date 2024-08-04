@@ -5,6 +5,8 @@ import separator9 from '../img/separator-8.png';
 import livello7 from '../img/livello-1-8.svg';
 import analyzer from '../img/analyzer-1.png';
 import ResponsiveImage from "./reusable-components/ResponsiveImage";
+import subdivide from "../img/Subdivide_line.svg";
+import vector1 from "../img/Vector2.svg";
 
 function Technologies() {
   return (
@@ -13,9 +15,11 @@ function Technologies() {
         <div className={styles.technologyContainer}>
           <div className={styles.rectangle9}></div>
           <div className={styles.content}>
-            <img className={styles.separator9} src={separator9} alt="Separator 9"/>
+            {/*<img className={styles.separator9} src={separator9} alt="Separator 9"/>*/}
             {/*<img className={styles.livello7} src={livello7} alt="Level 7"/>*/}
             {/*<img className={styles.livello6} src={livello6} alt="Level 6"/>*/}
+            <img className={styles.subdivideLine1} alt="" src={subdivide}/>
+            <img className={styles.vector1} alt="" src={vector1}/>
             <ResponsiveImage backgroundSrc={livello6} topSrc={livello7} alt="Dynamic Image" ratioWidth={16}
                              ratioHeight={9}
             />
@@ -67,7 +71,6 @@ function Technologies() {
               </div>
             </div>
           </div>
-
         </div>
       </div>
     </section>

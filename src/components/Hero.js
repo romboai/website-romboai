@@ -4,7 +4,9 @@ import heroVideo from '../img/hero_back_play.mp4';
 import Separator from './Separator';
 import separatorImage from '../img/separator-11.png';
 import mask_group from '../img/mask-group-flipped.png';
-import {useVideo} from '../VideoContext'; // Import the useVideo hook
+import {useVideo} from '../VideoContext';
+import subdivide from "../img/Subdivide_line.svg";
+import vector1 from "../img/Vector0.svg"; // Import the useVideo hook
 
 
 function Hero() {
@@ -43,8 +45,10 @@ function Hero() {
           Spectral Analysis <br/>
           with Artificial Intelligence
         </div>
-        <Separator src={separatorImage} className={styles.separator} alt="Separator"/>
+        {/*<Separator src={separatorImage} className={styles.separator} alt="Separator"/>*/}
       </div>
+      <img className={styles.subdivideLine1} alt="" src={subdivide}/>
+      <img className={styles.vector1} alt="" src={vector1}/>
     </div>
   );
 }
