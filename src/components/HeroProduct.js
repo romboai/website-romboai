@@ -4,6 +4,8 @@ import heroVideo from '../img/hero_back_play.mp4';
 import Separator from "./Separator";
 import separatorImage from "../img/separator-11.png";
 import forma20 from "../img/forma-5-10.png";
+import subdivide from "../img/Subdivide_line.svg";
+import vector1 from "../img/Vector0.svg";
 
 
 function HeroProduct() {
@@ -32,7 +34,9 @@ function HeroProduct() {
           <img className={styles.forma20} alt="" src={forma20}/>
         </div>
       </div>
-      <Separator src={separatorImage} className={styles.separator} alt="Separator"/> {/* Add class for positioning */}
+      <img className={styles.subdivideLine1} alt="" src={subdivide}/>
+      <img className={styles.vector1} alt="" src={vector1}/>
+      {/*<Separator src={separatorImage} className={styles.separator} alt="Separator"/> /!* Add class for positioning *!/*/}
     </div>
   );
 }

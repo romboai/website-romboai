@@ -146,6 +146,50 @@
     font-weight: 400;
 }
 
+.subdivideLine1,
+.subdivideLine1 * {
+    box-sizing: border-box;
+}
+.subdivideLine1 {
+    height: 86px;
+    position: absolute;
+    object-fit: cover;
+    width: 100%;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    overflow: visible;
+}
+
+.vector2,
+.vector2 * {
+    box-sizing: border-box;
+}
+.vector2 {
+    height: 76px;
+    position: absolute;
+    overflow: visible;
+    object-fit: cover;
+    width: 100%;
+    top: 0;
+}
+
+.vector1,
+.vector1 * {
+    box-sizing: border-box;
+}
+.vector1 {
+    height: 76px;
+    position: absolute;
+    overflow: visible;
+    object-fit: cover;
+    left: 0;
+    right: 0;
+    width: 100%;
+    bottom: -3px;
+}
+
 /* Mobile styles */
 @media (max-width: 768px) {
     .heroContent {

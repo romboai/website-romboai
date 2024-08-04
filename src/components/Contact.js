@@ -1,13 +1,13 @@
 import React, {useEffect} from 'react';
 import styles from "./Contact.module.css";
 import contactVideo from "../img/hero_back_play.mp4";
-import Separator from "./Separator";
-import separatorImage from "../img/separator-11.png";
 import RightColumn from "./reusable-components/RightColumn";
 import livello6 from "../img/livello-1-4.svg";
 import StaticMap from "./reusable-components/StaticMap";
 import {useVideo} from "../VideoContext";
 import mask_group from "../img/mask-group-flipped.png";
+import subdivide from "../img/Subdivide_line.svg";
+import vector1 from "../img/Vector0.svg";
 
 const Contact = () => {
   const {videoRef, isVideoPlaying, playVideo, pauseVideo} = useVideo();
@@ -58,8 +58,12 @@ const Contact = () => {
 
           </div>
         </div>
-        <Separator src={separatorImage} className={styles.separator}
-                   alt="Separator"/> {/* Add class for positioning */}
+        {/*<Separator src={separatorImage} className={styles.separator}*/}
+        {/*           alt="Separator"/> /!* Add class for positioning *!/*/}
+        <div className={styles.separator}>
+          <img className={styles.subdivideLine1} alt="" src={subdivide}/>
+          <img className={styles.vector1} alt="" src={vector1}/>
+        </div>
       </div>
       <div className={styles.divider}></div>
       <div className={styles.contactMapSection}>

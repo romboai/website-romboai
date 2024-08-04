@@ -293,8 +293,8 @@
 
 .separator {
     position: relative;
-    height: 109px;
-    top: -100px;
+    top:-64px;
+    height: 93px;
     /* margin-bottom: -5px; */
     z-index: 1;
 }
@@ -311,7 +311,40 @@
 }
 
 .divider{
-    padding: 150px;
+    padding: 40px;
+}
+
+
+.subdivideLine1,
+.subdivideLine1 * {
+    box-sizing: border-box;
+}
+
+.subdivideLine1 {
+    height: 86px;
+    position: absolute;
+    object-fit: cover;
+    width: 100%;
+    bottom: 20px;
+    z-index: 2;
+    left: 0;
+    overflow: visible;
+}
+
+.vector1,
+.vector1 * {
+    box-sizing: border-box;
+}
+
+.vector1 {
+    height: 76px;
+    position: absolute;
+    overflow: visible;
+    object-fit: cover;
+    width: 100%;
+    left: 0;
+    z-index: 1;
+    bottom: -5px;
 }
 
 /* Mobile styles */
@@ -401,6 +434,9 @@
     .contactInfo{
         padding-top: 40px;
     }
+    .divider{
+        padding: 150px;
+    }
 
 
 }
@@ -465,6 +501,9 @@
     }
     .backgroundImage{
         top:68%
+    }
+    .divider{
+        padding: 40px;
     }
 
 }

@@ -8,6 +8,7 @@ import History from "./History";
 import StaticMap from "./reusable-components/StaticMap";
 import subdivide from "../img/Subdivide_line.svg";
 import vector2 from "../img/Vector2.svg";
+import vector1 from "../img/Vector0.svg";
 
 const About = () => {
   return (
@@ -52,15 +53,12 @@ const About = () => {
             </div>
           </div>
           {/*<div className={styles.divider}></div>*/}
-          <img src={separatorImage} className={styles.separator}
-               alt="Separator"/> {/* Add class for positioning */}
+          {/*<img src={separatorImage} className={styles.separator}*/}
+          {/*     alt="Separator"/> /!* Add class for positioning *!/*/}
         </div>
       </div>
       <History/>
-      <div className={styles.separator1}>
-        <img className={styles.subdivideLine} alt="" src={subdivide}/>
-        <img className={styles.vector2} alt="" src={vector2}/>
-      </div>
+
       <div className={styles.contactMapSection}>
         <div className={styles.mapView}>
           {/*<GoogleMapComponent/> /!* Include the Google Map *!/*/}

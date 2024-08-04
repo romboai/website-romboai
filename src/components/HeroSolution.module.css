@@ -2,7 +2,7 @@
     position: relative;
     text-align: center;
     overflow: hidden;
-    height: 640px;
+    height: 100%;
     width: 100%;
     top: 0;
     left: 0;
@@ -54,7 +54,7 @@
 }
 .forma20{
     position: relative;
-    top:50px;
+    top:0px;
     width: 473px;
     height: 587px;
 
@@ -102,12 +102,11 @@
 }
 
 .separator {
-    position: absolute;
-    height: 109px;
-    margin-bottom: -5px;
-    width: 100%;
-    bottom: 0;
-    left: 0;
+    position: relative;
+    top:-64px;
+    height: 93px;
+    /* margin-bottom: -5px; */
+    z-index: 1;
 }
 
 .header {
@@ -119,10 +118,56 @@
 .topSeparator {
     align-self: flex-end
 }
+
+
+
+.subdivideLine1,
+.subdivideLine1 * {
+    box-sizing: border-box;
+}
+.subdivideLine1 {
+    height: 86px;
+    position: absolute;
+    object-fit: cover;
+    width: 100%;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    overflow: visible;
+}
+
+.vector2,
+.vector2 * {
+    box-sizing: border-box;
+}
+.vector2 {
+    height: 76px;
+    position: absolute;
+    overflow: visible;
+    object-fit: cover;
+    width: 100%;
+    top: 0;
+}
+
+.vector1,
+.vector1 * {
+    box-sizing: border-box;
+}
+.vector1 {
+    height: 76px;
+    position: absolute;
+    overflow: visible;
+    object-fit: cover;
+    left: 0;
+    right: 0;
+    width: 100%;
+    bottom: -3px;
+}
 /* Mobile styles */
 @media (max-width: 768px) {
     .heroContent {
-        /*padding: 2rem 1rem;*/
+        padding: 6rem 1rem;
     }
 
     .heroVideo {
@@ -135,9 +180,7 @@
         z-index: -1;
         transform: rotate(0deg) scale(-1, 1);
     }
-    .separator{
-        height: 75px;
-    }
+
 
     .heroContentMessage1 {
         width: 100%;
@@ -166,6 +209,7 @@
     .forma20{
         height: 500px;
         width: 400px;
+        top:0px;
     }
 }
 

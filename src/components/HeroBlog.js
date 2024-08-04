@@ -4,6 +4,8 @@ import heroImage from '../img/imageHero.png';
 import Separator from "./Separator";
 import separatorImage from "../img/separator-11.png";
 import forma20 from "../img/forma1.png";
+import subdivide from "../img/Subdivide_line.svg";
+import vector1 from "../img/Vector0.svg";
 
 
 function HeroBlog() {
@@ -43,7 +45,9 @@ function HeroBlog() {
           <img className={styles.forma20} alt="" src={forma20}/>
         </div>
       </div>
-      <Separator src={separatorImage} className={styles.separator} alt="Separator"/> {/* Add class for positioning */}
+      {/*<Separator src={separatorImage} className={styles.separator} alt="Separator"/> /!* Add class for positioning *!/*/}
+      <img className={styles.subdivideLine1} alt="" src={subdivide}/>
+      <img className={styles.vector1} alt="" src={vector1}/>
     </div>
   );
 }
