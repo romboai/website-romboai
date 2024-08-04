@@ -51,6 +51,7 @@ const About = () => {
               </div>
             </div>
           </div>
+          {/*<div className={styles.divider}></div>*/}
           <img src={separatorImage} className={styles.separator}
                alt="Separator"/> {/* Add class for positioning */}
         </div>
