@@ -199,7 +199,7 @@
         color: #ffffff;
         text-align: left;
         position: relative;
-        padding-left: 40px;
+        padding: 40px;
     }
 
     .titolo1span{
@@ -254,6 +254,7 @@
         width: 500px;
         height: 463px;
     }
+
 }
 
 /* Desktop styles */
