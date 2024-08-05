@@ -185,12 +185,13 @@
     .heroContentMessage1 {
         width: 100%;
         font-size: 42px;
-        padding: 40px;
+        padding: 20px;
     }
     .heroContentMessage2 {
         display: none;
         width: 0;
     }
+
 
 }
 

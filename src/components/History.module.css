@@ -480,7 +480,7 @@
     object-fit: cover;
     width: 100%;
     z-index: 1;
-    bottom: -1px;
+    bottom: -2px;
 }
 
 .vector1,
@@ -500,7 +500,7 @@
 /* Mobile styles */
 @media (max-width: 768px) {
     .paragraph{
-        height: 210px;
+        height: 289px;
     }
     /* history.css */
     .history {
