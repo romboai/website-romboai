@@ -35,6 +35,7 @@ const Contact = () => {
           playsInline
           className={styles.contactVideo}
           poster={mask_group}
+          controlsList="nodownload"
         >
           <source src={contactVideo} type="video/mp4"/>
           Your browser does not support the video tag.

@@ -14,7 +14,7 @@ const About = () => {
   return (
     <div className={styles.contact}>
       <div className={styles.contactMainContainer}>
-        <video autoPlay muted loop className={styles.contactVideo}>
+        <video autoPlay muted loop className={styles.contactVideo} controlsList="nodownload">
           <source src={contactVideo} type="video/mp4"/>
           Your browser does not support the video tag.
         </video>

@@ -11,7 +11,7 @@ import vector1 from "../img/Vector0.svg";
 function HeroProduct() {
   return (
     <div className={styles.hero}>
-      <video autoPlay muted loop playsInline className={styles.heroVideo}>
+      <video autoPlay muted loop playsInline className={styles.heroVideo} controlsList="nodownload">
         <source src={heroVideo} type="video/mp4"/>
         Your browser does not support the video tag.
       </video>

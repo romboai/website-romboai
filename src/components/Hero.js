@@ -34,6 +34,7 @@ function Hero() {
         playsInline
         className={styles.heroVideo}
         poster={mask_group} // Optional poster image
+        controlsList="nodownload"
       >
         <source src={heroVideo} type="video/mp4"/>
         Your browser does not support the video tag.
