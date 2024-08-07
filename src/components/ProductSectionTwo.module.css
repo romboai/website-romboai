@@ -119,7 +119,7 @@
 .frame88 {
     display: flex;
     flex-direction: row;
-    gap: 24px;
+    gap: 16px;
     width: 100%;
     padding-top: 20px;
     row-gap: 0px;
@@ -291,11 +291,11 @@
 
 .bottomSection {
     /*padding: 80px;*/
-    padding-top: 128px;
+    padding-top: 100px;
     display: flex;
     width: 100%;
     flex-direction: row-reverse;
-    gap: 64px;
+    gap: 10px;
     align-items: center;
     justify-content: space-evenly;
     position: relative;
@@ -310,9 +310,27 @@
     /*padding: 80px;*/
     display: flex;
     width: 100%;
-    height: 900px;
+    height: 700px;
     flex-direction: row;
-    gap: 64px;
+    gap: 10px;
+    align-items: center;
+    justify-content: space-evenly;
+    position: relative;
+}
+
+
+.bottomSection2,
+.bottomSection2 * {
+    box-sizing: border-box;
+}
+
+.bottomSection2 {
+    /*padding: 80px;*/
+    padding-top: 40px;
+    display: flex;
+    width: 100%;
+    flex-direction: row-reverse;
+    gap: 10px;
     align-items: center;
     justify-content: space-evenly;
     position: relative;
@@ -357,15 +375,28 @@
 }
 
 .forma1 {
-    border-radius: 10px;
-    height: 100%;
+    /*border-radius: 10px;*/
+    height: 614px;
     position: relative;
-    width: 50%;
+    /*width: 50%;*/
     transform: rotate(176deg) scale(-1, -1);
     object-fit: cover;
 }
 
 
+.forma2,
+.forma2 * {
+    box-sizing: border-box;
+}
+
+.forma2 {
+    /*border-radius: 10px;*/
+    height: 614px;
+    position: relative;
+    /*width: 50%;*/
+    transform: rotate(176deg) scale(-1, -1);
+    object-fit: cover;
+}
 .forma4,
 .forma4 * {
     box-sizing: border-box;
@@ -373,13 +404,27 @@
 
 .forma4 {
     border-radius: 10px;
-    height: 70%;
+    height: 614px;;
     position: relative;
-    width: 50%;
+    /*width: 50%;*/
     transform: rotate(176deg) scale(-1, -1);
     object-fit: fill;
 }
 
+
+.forma5,
+.forma5 * {
+    box-sizing: border-box;
+}
+
+.forma5 {
+    border-radius: 10px;
+    height: 614px;
+    position: relative;
+    /*width: 50%;*/
+    transform: rotate(176deg) scale(-1, -1);
+    object-fit: fill;
+}
 
 .image7,
 .image7 * {
@@ -500,36 +545,47 @@
         position: relative;
     }
 
+    .bottomSection2 {
+        padding: 20px;
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        height: 100%;
+        gap: 64px;
+        align-items: center;
+        justify-content: space-evenly;
+        position: relative;
+    }
     .section {
         padding: 20px;
     }
 
     .forma1 {
-        height: 100%;
-        width: 100%;
+        height: 397px;
+        /*width: 100%;*/
     }
 
     .forma4 {
         position: relative;
-        height: 285px;
+        height: 397px;
         top: 9px;
-        width: 334px;
+        /*width: 334px;*/
         right: 8px;
     }
 
     .forma2 {
         position: relative;
-        height: 375px;
+        height: 397px;
         top: 63px;
-        width: 389px;
+        /*width: 389px;*/
         right: 8px;
     }
 
     .forma5 {
         position: relative;
-        height: 309px;
+        height: 397px;
         top: 30px;
-        width: 399px;
+        /*width: 399px;*/
         left: 28px;
     }
 

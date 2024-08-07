@@ -94,7 +94,7 @@ function ProductSectionTwo() {
           </p>
         </div>
       </div>
-      <div className={styles.bottomSection}>
+      <div className={styles.bottomSection2}>
         <img className={styles.forma2} alt="" src={forma1}/>
         <img className={styles.image8} alt="" src={backlogo}/>
         <div className={styles.paragraph}>

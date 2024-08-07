@@ -7,7 +7,7 @@
     position: relative;
     text-align: center;
     overflow: hidden;
-    height: 100%;
+    height: 640px;
     width: 100%;
     top: 0;
     left: 0;
@@ -84,12 +84,12 @@
 /*    transform: rotate(0deg) scale(-1, 1);*/
 
 
-.hero {
-    position: relative;
-    width: 100%;
-    height: 100vh; /* Full viewport height */
-    overflow: hidden;
-}
+/*.hero {*/
+/*    position: relative;*/
+/*    width: 100%;*/
+/*    height: 100vh; !* Full viewport height *!*/
+/*    overflow: hidden;*/
+/*}*/
 
 .heroVideo {
     position: absolute;
@@ -208,22 +208,22 @@
 
 /* Desktop styles */
 @media (min-width: 1025px) {
-    .heroContent {
-        /*padding: 4rem 3rem;*/
-    }
+    /*.heroContent {*/
+    /*    !*padding: 4rem 3rem;*!*/
+    /*}*/
 
-    .mask {
-        z-index: -1;
-    }
+    /*.mask {*/
+    /*    z-index: -1;*/
+    /*}*/
 
-    .heroContentMessage {
-        font-size: 69px;
-        padding-left: 40px;
-    }
+    /*.heroContentMessage {*/
+    /*    font-size: 69px;*/
+    /*    padding-left: 40px;*/
+    /*}*/
 
-    .separator {
-        height: 109px;
-        top: 165px;
-        margin-bottom: -5px;
-    }
+    /*.separator {*/
+    /*    height: 109px;*/
+    /*    top: 165px;*/
+    /*    margin-bottom: -5px;*/
+    /*}*/
 }

@@ -2,7 +2,7 @@
     position: relative;
     text-align: center;
     overflow: hidden;
-    height: 640px;
+    height: 740px;
     width: 100%;
     top: 0;
     left: 0;
@@ -34,7 +34,7 @@
     font-family: "Roboto", Helvetica;
     font-weight: 700;
     color: #ffffff;
-    width: 60%;
+    width: 50%;
     font-size: 3rem;
     letter-spacing: 0;
     line-height: 1.1;
@@ -42,21 +42,12 @@
 
 .heroContentMessage2 {
     position: relative;
-    padding-left: 10px;
-    padding-right: 40px;
-    font-family: "Roboto", Helvetica;
-    font-weight: 700;
-    color: #ffffff;
-    width: 40%;
-    font-size: 3rem;
-    letter-spacing: 0;
-    line-height: 1.1;
+    width: 50%;
 }
 .forma20{
     position: relative;
-    top:10px;
-    width: 500px;
     height: 463px;
+    object-fit: cover;
 
 }
 
@@ -65,7 +56,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 620px;
+    height: 100%;
     mix-blend-mode: screen;
     z-index: -1;
     background: linear-gradient(198deg, #3a4278 30.85%, #000024 93.79%);
@@ -95,7 +86,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 620px;
+    height: 100%;
     object-fit: cover;
     z-index: -1;
     transform: rotate(0deg) scale(-1, 1);
