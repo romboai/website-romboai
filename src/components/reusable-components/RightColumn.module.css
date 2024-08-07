@@ -95,6 +95,7 @@
     position: relative;
     line-height: 140%;
     display: inline-block;
+    font-weight: 700;
 /* height: 20px; */
 /* flex-shrink: 0;*/
 }

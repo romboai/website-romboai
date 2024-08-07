@@ -125,7 +125,7 @@ const RightColumn = () => {
               checked={formData.terms}
               onChange={handleChange}
             />
-            I agree to the Terms and conditions. By registering, you confirm that you agree to the processing of your personal data by Rombo AI as described in the Privacy Statement.
+            {" "}I agree to the Terms and conditions. By registering, you confirm that you agree to the processing of your personal data by Rombo AI as described in the Privacy Statement.
           </div>
         </div>
         <div className={styles.buttonsGroup}>

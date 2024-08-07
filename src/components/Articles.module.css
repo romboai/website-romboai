@@ -196,14 +196,14 @@
 }
 
 .subdivideLine1 {
-    height: 86px;
+    height: 100px;
     position: absolute;
     object-fit: cover;
     width: 100%;
     bottom: 20px;
     z-index: 2;
     left: 0;
-    overflow: visible;
+    overflow: hidden;
 }
 
 .vector1,
@@ -212,9 +212,9 @@
 }
 
 .vector1 {
-    height: 76px;
+    height: 100px;
     position: absolute;
-    overflow: visible;
+    overflow: hidden;
     object-fit: cover;
     width: 100%;
     left: 0;
