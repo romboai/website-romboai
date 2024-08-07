@@ -20,7 +20,8 @@
     margin: auto;
     display: flex;
     flex-direction: row;
-    width: 151px;
+    width: 147px;
+    right: 20px;
     justify-content: space-between;
 }
 
@@ -40,7 +41,7 @@
     position: relative;
     top: 0;
     left: 0;
-    margin-right: -8px;
+    margin-right: -12px;
 }
 .buttonsGroupLeft {
     display: inline-flex;
@@ -73,7 +74,7 @@
     flex: 0 0 auto;
     background-color: #fe900f;
     border-radius: 50px;
-    border: 2px solid;
+    border: 0px solid;
 }
 .textContainer {
     display: inline-flex;
@@ -119,7 +120,7 @@
     flex: 0 0 auto;
     background-color: #fe900f;
     border-radius: 50px;
-    border: 2px solid;
+    border: 0px solid;
 }
 .group10 {
     position: relative;
@@ -128,7 +129,7 @@
     top: 18px;
     display: flex;
     flex-direction: column;
-    margin-left: -103px;
+    margin-left: -113px;
     /* left: 115px;
 }
 .sectionText9 {

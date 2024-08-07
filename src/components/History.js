@@ -1,7 +1,10 @@
 import React from 'react';
 import styles from './History.module.css';
 
-import heroVideo from "../img/hero_back_play.mp4";
+import heroVideo from "../img/heroVideo.mp4";
+import subdivide from "../img/Subdivide_line.svg";
+import vector1 from "../img/Vector6.svg";
+import vector2 from "../img/Vector2.svg";
 
 function History() {
   return (
@@ -37,9 +40,10 @@ function History() {
           <div className={styles.caption}>The Team</div>
           <div className={styles.sectionText}>
             <div className={styles.top}>
-              <div className={styles.secondaryHeadline}>  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                <br />
-                Bibendum amet at molestie mattis.</div>
+              <div className={styles.secondaryHeadline}> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                <br/>
+                Bibendum amet at molestie mattis.
+              </div>
             </div>
             <div className={styles.paragraph}>
               <p>
@@ -71,6 +75,12 @@ function History() {
             </div>
           </div>
         </div>
+        <img className={styles.subdivideLine1} alt="" src={subdivide}/>
+        <img className={styles.vector1} alt="" src={vector1}/>
+
+        <img className={styles.subdivideLine} alt="" src={subdivide}/>
+        <img className={styles.vector} alt="" src={vector2}/>
+
       </div>
     </section>
   );

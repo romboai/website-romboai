@@ -17,9 +17,11 @@ import image11 from '../img/image-4-2.png';
 import image12 from '../img/image-5-2.png';
 import image13 from '../img/image-6-2.png';
 import image14 from '../img/image-3-2.png';
-import heroVideo from "../img/hero_back_play.mp4";
+import heroVideo from "../img/heroVideo.mp4";
 import Separator from "./Separator";
 import separatorImage from "../img/separator-9.png";
+import subdivide from "../img/Subdivide_line.svg";
+import vector1 from "../img/Vector4.svg";
 
 function Clients() {
   return (
@@ -32,7 +34,7 @@ function Clients() {
 
       <div className={styles.containerClient}>
         <video autoPlay muted loop className={styles.clientVideo}>
-          <source src={heroVideo} type="video/mp4" />
+          <source src={heroVideo} type="video/mp4"/>
           Your browser does not support the video tag.
         </video>
         <div className={styles.mask}></div>
@@ -42,28 +44,19 @@ function Clients() {
         </div>
         <div className={styles.group14}>
 
-            <img className={styles.image13} src={image13} alt="Image 13" />
-            <img className={styles.image11} src={image11} alt="Image 11" />
-            <img className={styles.image10} src={image10} alt="Image 10" />
-            <img className={styles.image12} src={image12} alt="Image 12" />
-            <img className={styles.image14} src={image14} alt="Image 14" />
-
-
-          {/*<div className={styles.overlap12}>*/}
-          {/*  <img className={styles.image10} src={image10} alt="Image 10" />*/}
-          {/*  <img className={styles.image11} src={image11} alt="Image 11" />*/}
-          {/*</div>*/}
-          {/*<div>*/}
-          {/*  <img className={styles.image12} src={image12} alt="Image 12" />*/}
-          {/*  <img className={styles.image13} src={image13} alt="Image 13" />*/}
-          {/*  <img className={styles.image14} src={image14} alt="Image 14" />*/}
-          {/*</div>*/}
+          <img className={styles.image13} src={image13} alt="Image 13"/>
+          <img className={styles.image11} src={image11} alt="Image 11"/>
+          <img className={styles.image10} src={image10} alt="Image 10"/>
+          <img className={styles.image12} src={image12} alt="Image 12"/>
+          <img className={styles.image14} src={image14} alt="Image 14"/>
         </div>
-        {/*<img className={styles.separator} src={separator9}/>*/}
-        {/*<img className={styles.separator} src={separator9} alt="Separator 9"/>*/}
-        {/*<Separator src={separatorImage} alt="Separator"/> /!* Add class for positioning *!/*/}
       </div>
-      <Separator src={separatorImage} alt="Separator" className={styles.separator}/> {/* Add class for positioning */}
+      {/*<Separator src={separatorImage} alt="Separator" className={styles.separator}/> /!* Add class for positioning *!/*/}
+
+        <img className={styles.subdivideLine1} alt="" src={subdivide}/>
+        <img className={styles.vector1} alt="" src={vector1}/>
+
+
     </section>
   );
 }

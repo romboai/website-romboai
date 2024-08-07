@@ -1,9 +1,9 @@
 .intro {
     position: relative;
     text-align: center;
-    height: 600px;
+    height: 700px;
     width: 100%;
-    top: 0;
+    top: -1px;
     left: 0;
     background: white;
 }

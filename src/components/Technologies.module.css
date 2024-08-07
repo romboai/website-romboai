@@ -3,6 +3,7 @@
     text-align: center;
     height: 1108px;
     width: 100%;
+    max-width: var(--max-content-width);
     top: 0;
     left: 0;
 }
@@ -250,6 +251,40 @@
     top: 948px;
     grid-column: -8 / -8;
     /*left: 694px;*/
+}
+
+
+
+.subdivideLine1,
+.subdivideLine1 * {
+    box-sizing: border-box;
+}
+
+.subdivideLine1 {
+    height: 100px;
+    position: absolute;
+    object-fit: cover;
+    width: 100%;
+    top: -60px;
+    z-index: 2;
+    left: 0;
+    overflow: hidden;
+}
+
+.vector1,
+.vector1 * {
+    box-sizing: border-box;
+}
+
+.vector1 {
+    height: 100px;
+    position: absolute;
+    overflow: hidden;
+    object-fit: cover;
+    width: 100%;
+    left: 0;
+    z-index: 1;
+    top: -52px;
 }
 
 /* Mobile styles */

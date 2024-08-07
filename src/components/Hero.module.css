@@ -1,3 +1,8 @@
+/* Global Box-Sizing */
+* {
+    box-sizing: border-box;
+}
+
 .hero {
     position: relative;
     text-align: center;
@@ -8,7 +13,8 @@
     left: 0;
 }
 
-.heroContent, .heroContent * {
+.heroContent,
+.heroContent * {
     box-sizing: border-box;
 }
 
@@ -19,9 +25,10 @@
     z-index: 1;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: flex-start;
     gap: 5px;
+    width: 100%;
     height: 100%; /* Make sure it takes the full height */
     /*padding: 3rem; !* Added padding for spacing *!*/
 }
@@ -31,7 +38,7 @@
     font-family: "Roboto", Helvetica;
     font-weight: 700;
     color: #ffffff;
-    font-size: 3.5rem;
+    font-size: 69px;
     letter-spacing: 0;
     line-height: 1.1;
 }
@@ -41,7 +48,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 620px;
+    height: 100%;
     mix-blend-mode: screen;
     z-index: 1;
     background: linear-gradient(198deg, #3a4278 30.85%, #000024 93.79%);
@@ -66,16 +73,40 @@
     line-height: 1.1;
 }
 
+/*.heroVideo {*/
+/*    position: absolute;*/
+/*    top: 0;*/
+/*    left: 0;*/
+/*    width: 100%;*/
+/*    height: 620px;*/
+/*    object-fit: cover;*/
+/*    z-index: -1;*/
+/*    transform: rotate(0deg) scale(-1, 1);*/
+
+
+/*.hero {*/
+/*    position: relative;*/
+/*    width: 100%;*/
+/*    height: 100vh; !* Full viewport height *!*/
+/*    overflow: hidden;*/
+/*}*/
+
 .heroVideo {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 620px;
-    object-fit: cover;
-    z-index: -1;
+    height: 100%; /* Ensure the video covers the entire hero section */
+    object-fit: cover; /* Maintain aspect ratio and cover the area */
+    z-index: -1; /* Ensure the video stays in the background */
+    display: block; /* Remove any potential inline-block spacing */
+    transition: opacity 0.3s ease-in-out; /* Smooth transition for any appearance changes */
     transform: rotate(0deg) scale(-1, 1);
 }
+
+
+/* Apply transformations only when the video is not playing */
+
 
 .separator {
     height: 109px;
@@ -90,19 +121,56 @@
     width: 100%;
     z-index: 2; /* Ensure header is above other elements */
 }
+
 .topSeparator {
     align-self: flex-end
 }
+
+
+.subdivideLine1,
+.subdivideLine1 * {
+    box-sizing: border-box;
+}
+
+.subdivideLine1 {
+    height: 100px;
+    position: absolute;
+    object-fit: cover;
+    width: 100%;
+    bottom: 20px;
+    z-index: 2;
+    left: 0;
+    overflow: visible;
+}
+
+.vector1,
+.vector1 * {
+    box-sizing: border-box;
+}
+
+.vector1 {
+    height: 100px;
+    position: absolute;
+    overflow: visible;
+    object-fit: cover;
+    width: 100%;
+    left: 0;
+    z-index: 1;
+    bottom: -5px;
+}
 /* Mobile styles */
 @media (max-width: 768px) {
+    .hero{
+        height: 500px;
+    }
     .heroContent {
         /*padding: 2rem 1rem;*/
     }
 
     .heroContentMessage {
-        font-size: 2.7rem;
-        padding-left: 20px;
-        padding-bottom: 150px;
+        font-size: 40px;
+        padding: 20px;
+
     }
 
     .separator {
@@ -110,15 +178,9 @@
         top: 80px;
         margin-bottom: -5px;
     }
+
     .heroVideo {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
         height: 620px;
-        object-fit: cover;
-        z-index: 1;
-        transform: rotate(0deg) scale(-1, 1);
     }
 }
 
@@ -127,11 +189,14 @@
     .heroContent {
         /*padding: 3rem 2rem;*/
     }
+    .hero{
+        height: 600px;
+    }
 
     .heroContentMessage {
-        font-size: 2.5rem;
-        padding-left: 30px;
-        padding-bottom: 150px;
+        position: absolute;
+        font-size: 69px;
+        padding: 40px;
     }
 
     .separator {
@@ -143,19 +208,22 @@
 
 /* Desktop styles */
 @media (min-width: 1025px) {
-    .heroContent {
-        /*padding: 4rem 3rem;*/
-    }
+    /*.heroContent {*/
+    /*    !*padding: 4rem 3rem;*!*/
+    /*}*/
 
-    .heroContentMessage {
-        font-size: 3.5rem;
-        padding-left: 40px;
-        padding-bottom: 150px;
-    }
+    /*.mask {*/
+    /*    z-index: -1;*/
+    /*}*/
 
-    .separator {
-        height: 109px;
-        top: 165px;
-        margin-bottom: -5px;
-    }
+    /*.heroContentMessage {*/
+    /*    font-size: 69px;*/
+    /*    padding-left: 40px;*/
+    /*}*/
+
+    /*.separator {*/
+    /*    height: 109px;*/
+    /*    top: 165px;*/
+    /*    margin-bottom: -5px;*/
+    /*}*/
 }

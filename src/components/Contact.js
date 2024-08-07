@@ -1,19 +1,42 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import styles from "./Contact.module.css";
 import contactVideo from "../img/hero_back_play.mp4";
-import Separator from "./Separator";
-import separatorImage from "../img/separator-11.png";
 import RightColumn from "./reusable-components/RightColumn";
-import GoogleMapComponent from "./reusable-components/GoogleMap";
-import ResponsiveImage from "./reusable-components/ResponsiveImage";
 import livello6 from "../img/livello-1-4.svg";
-import livello7 from "../img/livello-1-8.svg";
+import StaticMap from "./reusable-components/StaticMap";
+import {useVideo} from "../VideoContext";
+import mask_group from "../img/mask-group-flipped.png";
+import subdivide from "../img/Subdivide_line.svg";
+import vector1 from "../img/Vector0.svg";
 
 const Contact = () => {
+  const {videoRef, isVideoPlaying, playVideo, pauseVideo} = useVideo();
+
+  useEffect(() => {
+    // Play video on initial render if not playing
+    if (!isVideoPlaying) {
+      playVideo();
+    }
+
+    return () => {
+      // Pause video when component unmounts
+      pauseVideo();
+    };
+  }, [isVideoPlaying, playVideo, pauseVideo]);
+
   return (
     <div className={styles.contact}>
       <div className={styles.contactMainContainer}>
-        <video autoPlay muted loop className={styles.contactVideo}>
+        <video
+          ref={videoRef}
+          autoPlay
+          muted
+          loop
+          playsInline
+          className={styles.contactVideo}
+          poster={mask_group}
+          controlsList="nodownload"
+        >
           <source src={contactVideo} type="video/mp4"/>
           Your browser does not support the video tag.
         </video>
@@ -36,12 +59,18 @@ const Contact = () => {
 
           </div>
         </div>
+        {/*<Separator src={separatorImage} className={styles.separator}*/}
+        {/*           alt="Separator"/> /!* Add class for positioning *!/*/}
+        <div className={styles.separator}>
+          <img className={styles.subdivideLine1} alt="" src={subdivide}/>
+          <img className={styles.vector1} alt="" src={vector1}/>
+        </div>
       </div>
-      <Separator src={separatorImage} className={styles.separator}
-                 alt="Separator"/> {/* Add class for positioning */}
+      <div className={styles.divider}></div>
       <div className={styles.contactMapSection}>
         <div className={styles.mapView}>
-          <GoogleMapComponent /> {/* Include the Google Map */}
+          {/*<GoogleMapComponent /> /!* Include the Google Map *!/*/}
+          <StaticMap/>
         </div>
         <div className={styles.contactInfo}>
           <div className={styles.frameParent}>
@@ -66,7 +95,7 @@ const Contact = () => {
               <div className={styles.div}>+39 348 23 53 703</div>
             </div>
           </div>
-          <img src={livello6} alt="sdfsd" className={styles.backgroundImage} />
+          <img src={livello6} alt="sdfsd" className={styles.backgroundImage}/>
         </div>
       </div>
     </div>

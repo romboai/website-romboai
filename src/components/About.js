@@ -1,18 +1,20 @@
 import React from 'react';
 import styles from "./About.module.css";
 import contactVideo from "../img/hero_back_play.mp4";
-import separatorImage from "../img/Subdivide_line.svg";
-import GoogleMapComponent from "./reusable-components/GoogleMap";
+import separatorImage from "../img/separator-11.png";
 import logo from "../img/logo-1.svg";
 import groupIcon from "../img/Group-56.svg";
 import History from "./History";
-import separator9 from '../img/separator-8.png';
+import StaticMap from "./reusable-components/StaticMap";
+import subdivide from "../img/Subdivide_line.svg";
+import vector2 from "../img/Vector2.svg";
+import vector1 from "../img/Vector0.svg";
 
 const About = () => {
   return (
     <div className={styles.contact}>
       <div className={styles.contactMainContainer}>
-        <video autoPlay muted loop className={styles.contactVideo}>
+        <video autoPlay muted loop className={styles.contactVideo} controlsList="nodownload">
           <source src={contactVideo} type="video/mp4"/>
           Your browser does not support the video tag.
         </video>
@@ -34,11 +36,6 @@ const About = () => {
                 <b className={styles.mainHeadline}>Purus sagittis fringilla arcu neque.</b>
                 <b className={styles.secondaryHeadline}>Welcome to ROMBO AI</b>
               </div>
-              <div className={styles.paragraph}>Rhoncus morbi et augue nec, in id ullamcorper at sit. Condimentum sit
-                nunc in eros scelerisque sed. Commodo in viverra nunc, ullamcorper ut. Non, amet, aliquet scelerisque
-                nullam sagittis, pulvinar. Fermentum scelerisque sit consectetur hac mi. Mollis leo eleifend ultricies
-                purus iaculis.
-              </div>
             </div>
             <div className={styles.visionUtilizingThePrinciplParent}>
               <div className={styles.visionUtilizingTheContainer}>
@@ -55,15 +52,17 @@ const About = () => {
               </div>
             </div>
           </div>
+          {/*<div className={styles.divider}></div>*/}
+          {/*<img src={separatorImage} className={styles.separator}*/}
+          {/*     alt="Separator"/> /!* Add class for positioning *!/*/}
         </div>
       </div>
-      <img src={separatorImage} className={styles.separator}
-           alt="Separator"/> {/* Add class for positioning */}
       <History/>
-      <img className={styles.separator9} src={separator9} alt="Separator 9"/>
+
       <div className={styles.contactMapSection}>
         <div className={styles.mapView}>
-          <GoogleMapComponent/> {/* Include the Google Map */}
+          {/*<GoogleMapComponent/> /!* Include the Google Map *!/*/}
+          <StaticMap/>
         </div>
         <div className={styles.contactInfo}>
           <div className={styles.frameParent}>
