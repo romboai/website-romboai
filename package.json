@@ -1,8 +1,8 @@
 {
-  "name": "website-romboai",
+  "name": "website-nillkabbo",
   "version": "1.0.0",
   "private": true,
-  "homepage": "https://romboai.github.io/website-romboai",
+  "homepage": "https://Nillkabbo.github.io/testwebsite",
   "dependencies": {
     "@react-google-maps/api": "^2.19.3",
     "@testing-library/jest-dom": "^5.17.0",
@@ -42,6 +42,7 @@
     ]
   },
   "devDependencies": {
+    "eslint": "^8.0.0",
     "gh-pages": "^6.1.1"
   }
 }

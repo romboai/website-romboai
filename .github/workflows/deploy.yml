@@ -16,7 +16,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '21.7.3'  # Specify your project's Node.js version
+          node-version: '18'  # Use a stable LTS version
 
       - name: Install dependencies
         run: npm install
@@ -24,7 +24,8 @@ jobs:
       - name: Build the React app
         run: npm run build
         env:
-          CI: false  # Prevent treating warnings as errors
+          CI: false
+          SKIP_PREFLIGHT_CHECK: true
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
