@@ -462,6 +462,7 @@
     position: absolute;
     z-index: -1;
     object-fit: fill;
+    transform: scaleX(-1);
 }
 
 .subdivideLine,
@@ -629,6 +630,7 @@
     .bottomSection1 {
         gap: 10px;
     }
+
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
