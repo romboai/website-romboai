@@ -224,16 +224,25 @@
 /* Mobile styles */
 @media (max-width: 768px) {
     .containerOne{
-        padding-left: 25px;
-        padding-right: 25px;
+        padding-left: 40px;
+        padding-right: 40px;
     }
 
     .containerThree{
-        padding-left: 25px;
-        padding-right: 25px;
+        padding-left: 40px;
+        padding-right: 40px;
     }
     .paragraph1{
         margin-bottom: 50px;
+    }
+    .imageVideo{
+        height: auto;
+    }
+    .containerTwo{
+        padding-left: 40px;
+    }
+    .andrewJonson {
+        padding-left: 40px;
     }
 
 }
@@ -241,17 +250,27 @@
 /* Tablet styles */
 @media (min-width: 769px) and (max-width: 1024px) {
     .containerOne{
-        padding-left: 25px;
-        padding-right: 25px;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+    .containerTwo{
+        padding: 40px;
     }
 
     .containerThree{
-        padding-left: 25px;
-        padding-right: 25px;
+        padding-left: 40px;
+        padding-right: 40px;
     }
     .paragraph1{
         margin-bottom: 50px;
     }
+    .imageVideo{
+        height: auto;
+    }
+    .andrewJonson {
+        padding-left: 40px;
+    }
+
 }
 
 /* Desktop styles */
