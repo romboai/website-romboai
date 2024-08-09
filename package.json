@@ -2,7 +2,7 @@
   "name": "romboai",
   "version": "1.0.0",
   "private": true,
-  "homepage": "https://romboai.github.io/website-romboai",
+  "homepage": "https://romboai.github.io/romboai",
   "dependencies": {
     "@react-google-maps/api": "^2.19.3",
     "@testing-library/jest-dom": "^5.17.0",
