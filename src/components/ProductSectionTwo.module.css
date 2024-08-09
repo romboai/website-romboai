@@ -51,6 +51,7 @@
     text-transform: uppercase;
     position: relative;
     align-self: stretch;
+    padding: 10px;
 }
 
 .secondaryHeadline {
@@ -621,6 +622,7 @@
 
     .section {
         gap: 10px;
+        padding-top: 80px;
     }
 
     .bottomSection {
