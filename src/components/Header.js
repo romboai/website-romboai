@@ -29,12 +29,12 @@ const Header = ({onMenuClick, className}) => {
             <li><a href="#" onClick={() => handleMenuClick('home')}>Home</a></li>
             <li><a href="#" onClick={() => handleMenuClick('contactus')}>Contact Us</a></li>
             <li><a href="#" onClick={() => handleMenuClick('aboutus')}>About Us</a></li>
-            <li><a href="#" onClick={() => handleMenuClick('solutions')}>Solutions</a></li>
+            {/*<li><a href="#" onClick={() => handleMenuClick('solutions')}>Solutions</a></li>*/}
             <li className={styles.hasDropdown}>
               <a href="#" onClick={() => handleMenuClick('product1')}>Products <img src={arrowDown} alt="Dropdown Arrow" className={styles.arrowDown}/></a>
               <ul className={styles.dropdown}>
-                <li><a href="#" onClick={() => handleMenuClick('product1')}>Product 1</a></li>
-                <li><a href="#">Product 2</a></li>
+                <li><a href="#" onClick={() => handleMenuClick('product1')}>NMR AI ANALYZER</a></li>
+                {/*<li><a href="#">Product 2</a></li>*/}
               </ul>
             </li>
             <li className={styles.hasDropdown}>

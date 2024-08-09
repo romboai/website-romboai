@@ -75,7 +75,7 @@ const App = () => {
           <Product/>
           <Articles/>
           <SupportedBy/>
-          <Engage/>
+          <Engage onMenuClick={handleMenuClick}/>
         </>
       )}
       {activeContent === 'resource1' && (

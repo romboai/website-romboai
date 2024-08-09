@@ -48,6 +48,7 @@
     text-transform: uppercase;
     position: relative;
     align-self: stretch;
+    padding: 10px;
 }
 .secondaryHeadline {
     color: var(--coolgray-90, #21272a);
@@ -58,17 +59,20 @@
     font-weight: var(--heading-2-font-weight, 700);
     position: relative;
     align-self: stretch;
+    padding: 10px 10px 40px;
 }
 
 .paragraph {
     color: var(--coolgray-90, #21272a);
-    text-align: center;
+    text-align: justify;
+    text-align-last: center;
     font-family: "Roboto-Regular", sans-serif;
     font-size: var(--body-l-font-size, 18px);
     line-height: var(--body-l-line-height, 140%);
     font-weight: var(--body-l-font-weight, 400);
     position: relative;
     align-self: stretch;
+    padding: 10px 10px 40px;
 }
 .frame12 {
     display: flex;
