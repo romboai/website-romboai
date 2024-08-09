@@ -48,7 +48,7 @@ const App = () => {
           <Clients/>
           <Articles/>
           <SupportedBy/>
-          <Engage/>
+          <Engage onMenuClick={handleMenuClick}/>
         </>
       )}
       {activeContent === 'contactus' && (
@@ -60,14 +60,14 @@ const App = () => {
         <>
           <About/>
           <SupportedBy/>
-          <Engage/>
+          <Engage onMenuClick={handleMenuClick}/>
         </>
       )}
       {activeContent === 'solutions' && (
         <>
           <Solution/>
           <SupportedBy/>
-          <Engage/>
+          <Engage onMenuClick={handleMenuClick}/>
         </>
       )}
       {activeContent === 'product1' && (
@@ -82,7 +82,7 @@ const App = () => {
         <>
           <Blog/>
           <SupportedBy/>
-          <Engage/>
+          <Engage onMenuClick={handleMenuClick}/>
         </>
       )}
       {activeContent === 'resource2' && (
@@ -90,7 +90,7 @@ const App = () => {
           <Article/>
           <Articles/>
           <SupportedBy/>
-          <Engage/>
+          <Engage onMenuClick={handleMenuClick}/>
         </>
       )}
       <Footer/>
