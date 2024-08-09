@@ -99,3 +99,21 @@
     top: 0;
     overflow: visible;
 }
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .union{
+        left: 55px;
+    }
+    .livello1{
+        left:110px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+
+}
+
+@media (min-width: 1025px) {
+
+}

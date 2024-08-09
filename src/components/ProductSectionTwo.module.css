@@ -122,13 +122,14 @@
 .frame88 {
     display: flex;
     flex-direction: row;
-    gap: 16px;
+    gap: 15px;
     width: 100%;
     padding-top: 20px;
-    row-gap: 0px;
+    row-gap: 15px;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
     position: relative;
+    flex-wrap: wrap;
 }
 
 .frame99 {
@@ -294,6 +295,7 @@
 
 .bottomSection {
     /*padding: 80px;*/
+    padding-left: 20px;
     padding-top: 100px;
     display: flex;
     width: 100%;
@@ -311,6 +313,7 @@
 
 .bottomSection1 {
     /*padding: 80px;*/
+    padding-right: 20px;
     display: flex;
     width: 100%;
     height: 700px;
