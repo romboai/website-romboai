@@ -13,6 +13,7 @@
     height: 100%;
     position: relative;
     background: #ffffff;
+    top: -1px;
 }
 
 .sectionText {
