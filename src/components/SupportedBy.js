@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './SupportedBy.module.css';
-import supportImage from '../img/image-1-2.png';
+import supportImage from '../img/image-1-2.svg';
 import supportImage1 from '../img/image-2-1.png';
 import supportImage2 from '../img/image-1.png';
 import Separator from "./Separator";
