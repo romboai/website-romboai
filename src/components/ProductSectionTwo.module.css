@@ -533,7 +533,7 @@
         padding: 20px;
         display: flex;
         width: 100%;
-        flex-direction: column;
+        flex-direction: column-reverse;
         gap: 64px;
         align-items: center;
         justify-content: space-evenly;
@@ -544,7 +544,7 @@
         padding: 20px;
         display: flex;
         width: 100%;
-        flex-direction: column;
+        flex-direction: column-reverse;
         height: 100%;
         gap: 64px;
         align-items: center;
@@ -640,10 +640,10 @@
     }
 
     .bottomSection {
-        padding: 20px;
+        padding: 80px;
         display: flex;
         width: 100%;
-        flex-direction: column;
+        flex-direction: column-reverse;
         gap: 64px;
         align-items: center;
         justify-content: space-evenly;
@@ -651,10 +651,10 @@
     }
 
     .bottomSection1 {
-        padding: 20px;
+        padding: 80px;
         display: flex;
         width: 100%;
-        flex-direction: column;
+        flex-direction: column-reverse;
         gap: 64px;
         height: 100%;
         align-items: center;
