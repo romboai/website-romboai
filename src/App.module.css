@@ -11,8 +11,9 @@
   margin: 0 auto; /* Center the container */
 }
 .header{
-  position: absolute;
   top: 0;
+  position: fixed;
+  transition: background-color 0.3s ease;
 }
 
 .resource1Background {
