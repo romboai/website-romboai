@@ -357,7 +357,7 @@ li {
     right: 40px;
     font-family: var(--homebold);
     color: #fff;
-    background-color: #0B243B;
+    background-color: rgba(254, 144, 15, 0.85);
     transition: .3s;
     z-index: 15;
     opacity: 0.5;
