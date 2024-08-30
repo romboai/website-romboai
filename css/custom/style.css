@@ -862,7 +862,7 @@ label.ckb input:checked ~ span.checkmark::after {
     top: 0;
     left: 0;
     object-fit: cover;
-    z-index: -1;
+    z-index: 1;
     height: 100%;
     width: 100%;
     transform: rotate(0deg) scale(-1, 1);
