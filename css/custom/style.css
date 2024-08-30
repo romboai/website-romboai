@@ -355,9 +355,9 @@ li {
     position: fixed;
     bottom: 40px;
     right: 40px;
-    font-family: var(--homebold);
+    font-family: 'Roboto', sans-serif;
     color: #fff;
-    background-color: #0B243B;
+    background-color: #FE900FCB;
     transition: .3s;
     z-index: 15;
     opacity: 0.5;
