@@ -355,7 +355,7 @@ li {
     position: fixed;
     bottom: 40px;
     right: 40px;
-    font-family: var(--homebold);
+    font-family: 'Roboto', sans-serif;
     color: #fff;
     background-color: rgba(254, 144, 15, 0.85);
     transition: .3s;
@@ -414,7 +414,7 @@ li {
     font-size: 28px;
     text-transform: uppercase;
     position: relative;
-    font-family: var(--homebold);
+    font-family: 'Roboto', sans-serif;
     color: #fff;
     background-color: transparent;
     transition: .3s;
