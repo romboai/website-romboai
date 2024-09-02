@@ -788,7 +788,10 @@ label.ckb input:checked ~ span.checkmark::after {
 
 
 /* Contact-area css END and Footer-area START*/
-
+.footer-logo{
+    text-align: left;
+    padding-left: 50px;
+}
 
 .footer-area {
     position: relative;
@@ -1154,6 +1157,17 @@ label.ckb input:checked ~ span.checkmark::after {
 }
 
 /*Hero Contact*/
+/* Custom placeholder color */
+.form-control::placeholder {
+    color: #999999; /* Your custom color */
+    opacity: 1;
+}
+
+/* Optional: Different color on focus */
+.form-control:focus::placeholder {
+    color: #cccccc; /* Lighter color when focused */
+    opacity: 1;
+}
 .hero-contact-section {
     position: relative;
     text-align: center;
