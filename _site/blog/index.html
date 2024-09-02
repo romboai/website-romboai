@@ -197,11 +197,11 @@
     </div>
     <div class="d-flex justify-content-center">
         <!-- Horizontal List View Container -->
-        <div class="horizontal-list-view-container bg-white text-center px-3">
+        <div class="horizontal-list-view-container text-center px-3 overflow-auto bg-white" id="scrollContainer">
             <!-- Horizontal List View -->
             <div class="horizontal-list-view d-inline-flex">
                 <!-- Scrollable Item 1 -->
-                <div class="scrollable-item">
+                <div class="scrollable-item" style="min-width: 300px; margin-right: 20px;">
                     <img class="post-image"
                          src="/img/https-www-pexels-com-photo-two-women-in-front-of-dry-erase-boa-2.png"
                          alt="All-In-One Analysis Suite">
@@ -214,7 +214,7 @@
                 </div>
 
                 <!-- Scrollable Item 2 -->
-                <div class="scrollable-item">
+                <div class="scrollable-item" style="min-width: 300px; margin-right: 20px;">
                     <img class="post-image"
                          src="/img/https-www-pexels-com-photo-photo-of-people-doing-handshakes-31-2.png"
                          alt="Fully Automatic Measure">
@@ -227,7 +227,7 @@
                 </div>
 
                 <!-- Scrollable Item 3 -->
-                <div class="scrollable-item">
+                <div class="scrollable-item" style="min-width: 300px; margin-right: 20px;">
                     <img class="post-image"
                          src="/img/https-www-pexels-com-photo-photo-of-woman-looking-at-man-31831-2.png"
                          alt="Fully Automatic Measure">
@@ -244,18 +244,9 @@
     </div>
     <!-- Divider Image -->
     <div class="row py-4"></div>
-    <div class="row  py-5 px-2 px-md-5">
-        <div class="col position-relative">
-            <div class="position-absolute" style="top:-58px;">
-                <img src="/img/divider-2.svg" alt="Divider" class="img-fluid"
-                     style="height: 5px; width: 100%; object-fit: cover;">
-            </div>
-
-            <!-- Manipolo Image -->
-            <div class="position-absolute " style="top: -60px;">
-                <img src="/img/manipolo.svg" alt="Manipolo" class="img-fluid"
-                     style="height: 41px; width: 221px;">
-            </div>
+    <div class="row py-5 px-2 px-md-5">
+        <div class="d-flex justify-content-center">
+            <input type="range" class="progress-bar" id="scrollProgressBar" value="0" min="0" max="100" step="1" style="width: 90%; margin-top: 20px;">
         </div>
     </div>
 </section>
@@ -267,11 +258,11 @@
     </div>
     <div class="d-flex justify-content-center">
         <!-- Horizontal List View Container -->
-        <div class="horizontal-list-view-container bg-white text-center px-3">
+        <div class="horizontal-list-view-container text-center px-3 overflow-auto bg-white" id="scrollContainer">
             <!-- Horizontal List View -->
             <div class="horizontal-list-view d-inline-flex">
                 <!-- Scrollable Item 1 -->
-                <div class="scrollable-item">
+                <div class="scrollable-item" style="min-width: 300px; margin-right: 20px;">
                     <img class="post-image"
                          src="/img/https-www-pexels-com-photo-two-women-in-front-of-dry-erase-boa-2.png"
                          alt="All-In-One Analysis Suite">
@@ -284,7 +275,7 @@
                 </div>
 
                 <!-- Scrollable Item 2 -->
-                <div class="scrollable-item">
+                <div class="scrollable-item" style="min-width: 300px; margin-right: 20px;">
                     <img class="post-image"
                          src="/img/https-www-pexels-com-photo-photo-of-people-doing-handshakes-31-2.png"
                          alt="Fully Automatic Measure">
@@ -297,7 +288,7 @@
                 </div>
 
                 <!-- Scrollable Item 3 -->
-                <div class="scrollable-item">
+                <div class="scrollable-item" style="min-width: 300px; margin-right: 20px;">
                     <img class="post-image"
                          src="/img/https-www-pexels-com-photo-photo-of-woman-looking-at-man-31831-2.png"
                          alt="Fully Automatic Measure">
@@ -314,18 +305,9 @@
     </div>
     <!-- Divider Image -->
     <div class="row py-4"></div>
-    <div class="row  py-5 px-2 px-md-5">
-        <div class="col position-relative">
-            <div class="position-absolute" style="top:-58px;">
-                <img src="/img/divider-2.svg" alt="Divider" class="img-fluid"
-                     style="height: 5px; width: 100%; object-fit: cover;">
-            </div>
-
-            <!-- Manipolo Image -->
-            <div class="position-absolute " style="top: -60px;">
-                <img src="/img/manipolo.svg" alt="Manipolo" class="img-fluid"
-                     style="height: 41px; width: 221px;">
-            </div>
+    <div class="row py-5 px-2 px-md-5">
+        <div class="d-flex justify-content-center">
+            <input type="range" class="progress-bar" id="scrollProgressBar" value="0" min="0" max="100" step="1" style="width: 90%; margin-top: 20px;">
         </div>
     </div>
 </section>
@@ -429,6 +411,31 @@
 
 <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
 <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const scrollContainer = document.getElementById('scrollContainer');
+    const progressBar = document.getElementById('scrollProgressBar');
+
+    // Update progress bar as the list is scrolled
+    scrollContainer.addEventListener('scroll', function () {
+      const maxScrollLeft = scrollContainer.scrollWidth - scrollContainer.clientWidth;
+      if (maxScrollLeft > 0) {
+        const scrollLeft = scrollContainer.scrollLeft;
+        const scrollPercentage = (scrollLeft / maxScrollLeft) * 100;
+        progressBar.value = scrollPercentage;
+      }
+    });
+
+    // Scroll the list when the progress bar is dragged
+    progressBar.addEventListener('input', function () {
+      const maxScrollLeft = scrollContainer.scrollWidth - scrollContainer.clientWidth;
+      if (maxScrollLeft > 0) {
+        const scrollLeft = (progressBar.value / 100) * maxScrollLeft;
+        scrollContainer.scrollLeft = scrollLeft;
+      }
+    });
+  });
+
+
   window.cookieconsent.initialise({
     "palette": {
       "popup": {

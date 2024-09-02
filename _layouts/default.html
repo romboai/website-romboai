@@ -50,6 +50,31 @@
 
 <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
 <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const scrollContainer = document.getElementById('scrollContainer');
+    const progressBar = document.getElementById('scrollProgressBar');
+
+    // Update progress bar as the list is scrolled
+    scrollContainer.addEventListener('scroll', function () {
+      const maxScrollLeft = scrollContainer.scrollWidth - scrollContainer.clientWidth;
+      if (maxScrollLeft > 0) {
+        const scrollLeft = scrollContainer.scrollLeft;
+        const scrollPercentage = (scrollLeft / maxScrollLeft) * 100;
+        progressBar.value = scrollPercentage;
+      }
+    });
+
+    // Scroll the list when the progress bar is dragged
+    progressBar.addEventListener('input', function () {
+      const maxScrollLeft = scrollContainer.scrollWidth - scrollContainer.clientWidth;
+      if (maxScrollLeft > 0) {
+        const scrollLeft = (progressBar.value / 100) * maxScrollLeft;
+        scrollContainer.scrollLeft = scrollLeft;
+      }
+    });
+  });
+
+
   window.cookieconsent.initialise({
     "palette": {
       "popup": {

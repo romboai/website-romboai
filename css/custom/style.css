@@ -1591,8 +1591,107 @@ label.ckb input:checked ~ span.checkmark::after {
     width: 214.01px;
 }
 
+/* Customize the range input */
+#scrollProgressBar {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 60px; /* Set a sufficient height to accommodate the custom thumb */
+    background: transparent; /* Hide the default background */
+    position: relative;
+}
 
-/* PARTNERS*/
+/* Track styling */
+#scrollProgressBar::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 5px; /* Set the height of the track */
+    background: url('/img/divider-2.svg') no-repeat center center;
+    background-size: cover;
+    border: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#scrollProgressBar::-moz-range-track {
+    width: 100%;
+    height: 5px; /* Set the height of the track */
+    background: url('/img/divider-2.svg') no-repeat center center;
+    background-size: cover;
+    border: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#scrollProgressBar::-ms-track {
+    width: 100%;
+    height: 5px; /* Set the height of the track */
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
+    border-width: 5px 0;
+    background: url('/img/divider-2.svg') no-repeat center center;
+    background-size: cover;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Thumb styling */
+#scrollProgressBar::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 221px; /* Width of the manipolo image */
+    height: 41px; /* Height of the manipolo image */
+    background: url('/img/manipolo.svg') no-repeat center center;
+    background-size: contain;
+    cursor: pointer;
+    margin-top: -18px; /* Adjust to center the thumb over the track */
+    position: relative;
+    z-index: 2; /* Ensure thumb is above the track */
+}
+
+#scrollProgressBar::-moz-range-thumb {
+    width: 221px; /* Width of the manipolo image */
+    height: 41px; /* Height of the manipolo image */
+    background: url('/img/manipolo.svg') no-repeat center center;
+    background-size: contain;
+    cursor: pointer;
+    position: relative;
+    z-index: 2; /* Ensure thumb is above the track */
+}
+
+#scrollProgressBar::-ms-thumb {
+    width: 221px; /* Width of the manipolo image */
+    height: 41px; /* Height of the manipolo image */
+    background: url('/img/manipolo.svg') no-repeat center center;
+    background-size: contain;
+    cursor: pointer;
+    position: relative;
+    z-index: 2; /* Ensure thumb is above the track */
+}
+
+/* Hide the default tick marks (for IE) */
+#scrollProgressBar::-ms-fill-lower {
+    background: none;
+}
+
+#scrollProgressBar::-ms-fill-upper {
+    background: none;
+}
+
+/* Hide scrollbar for Webkit browsers (e.g., Chrome, Safari) */
+.horizontal-list-view-container::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for Internet Explorer, Edge, and Firefox */
+.horizontal-list-view-container {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
 
 .partners {
 
