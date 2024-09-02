@@ -1605,7 +1605,7 @@ label.ckb input:checked ~ span.checkmark::after {
 #scrollProgressBar::-webkit-slider-runnable-track {
     width: 100%;
     height: 5px; /* Set the height of the track */
-    background: url('/img/divider-2.svg') no-repeat center center;
+    background: url('/website-romboai/img/divider-2.svg') no-repeat center center;
     background-size: cover;
     border: none;
     position: absolute;
@@ -1616,7 +1616,7 @@ label.ckb input:checked ~ span.checkmark::after {
 #scrollProgressBar::-moz-range-track {
     width: 100%;
     height: 5px; /* Set the height of the track */
-    background: url('/img/divider-2.svg') no-repeat center center;
+    background: url('/website-romboai/img/divider-2.svg') no-repeat center center;
     background-size: cover;
     border: none;
     position: absolute;
@@ -1631,7 +1631,53 @@ label.ckb input:checked ~ span.checkmark::after {
     border-color: transparent;
     color: transparent;
     border-width: 5px 0;
-    background: url('/img/divider-2.svg') no-repeat center center;
+    background: url('/website-romboai/img/divider-2.svg') no-repeat center center;
+    background-size: cover;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Thumb styling */
+#scrollProgressBar {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 60px; /* Set a sufficient height to accommodate the custom thumb */
+    background: transparent; /* Hide the default background */
+    position: relative;
+}
+
+#scrollProgressBar::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 5px;
+    background: url('{{ site.baseurl }}/img/divider-2.svg') no-repeat center center;
+    background-size: cover;
+    border: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#scrollProgressBar::-moz-range-track {
+    width: 100%;
+    height: 5px;
+    background: url('{{ site.baseurl }}/img/divider-2.svg') no-repeat center center;
+    background-size: cover;
+    border: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#scrollProgressBar::-ms-track {
+    width: 100%;
+    height: 5px;
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
+    border-width: 5px 0;
+    background: url('{{ site.baseurl }}/img/divider-2.svg') no-repeat center center;
     background-size: cover;
     position: absolute;
     top: 50%;
@@ -1642,43 +1688,34 @@ label.ckb input:checked ~ span.checkmark::after {
 #scrollProgressBar::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
-    width: 221px; /* Width of the manipolo image */
-    height: 41px; /* Height of the manipolo image */
-    background: url('/img/manipolo.svg') no-repeat center center;
+    width: 221px;
+    height: 41px;
+    background: url('{{ site.baseurl }}/img/manipolo.svg') no-repeat center center;
     background-size: contain;
     cursor: pointer;
-    margin-top: -18px; /* Adjust to center the thumb over the track */
+    margin-top: -18px;
     position: relative;
-    z-index: 2; /* Ensure thumb is above the track */
+    z-index: 2;
 }
 
 #scrollProgressBar::-moz-range-thumb {
-    width: 221px; /* Width of the manipolo image */
-    height: 41px; /* Height of the manipolo image */
-    background: url('/img/manipolo.svg') no-repeat center center;
+    width: 221px;
+    height: 41px;
+    background: url('{{ site.baseurl }}/img/manipolo.svg') no-repeat center center;
     background-size: contain;
     cursor: pointer;
     position: relative;
-    z-index: 2; /* Ensure thumb is above the track */
+    z-index: 2;
 }
 
 #scrollProgressBar::-ms-thumb {
-    width: 221px; /* Width of the manipolo image */
-    height: 41px; /* Height of the manipolo image */
-    background: url('/img/manipolo.svg') no-repeat center center;
+    width: 221px;
+    height: 41px;
+    background: url('{{ site.baseurl }}/img/manipolo.svg') no-repeat center center;
     background-size: contain;
     cursor: pointer;
     position: relative;
-    z-index: 2; /* Ensure thumb is above the track */
-}
-
-/* Hide the default tick marks (for IE) */
-#scrollProgressBar::-ms-fill-lower {
-    background: none;
-}
-
-#scrollProgressBar::-ms-fill-upper {
-    background: none;
+    z-index: 2;
 }
 
 /* Hide scrollbar for Webkit browsers (e.g., Chrome, Safari) */
@@ -1688,8 +1725,8 @@ label.ckb input:checked ~ span.checkmark::after {
 
 /* Hide scrollbar for Internet Explorer, Edge, and Firefox */
 .horizontal-list-view-container {
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 
 
