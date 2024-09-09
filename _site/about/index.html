@@ -165,7 +165,7 @@
 
     <!-- Mask Overlay -->
     <div class="mask"></div>
-    <div class="container pt-5">
+    <div class="container custom-container pt-5">
         <div class="row m-0 py-5 hero-content-message">
             <p class="z-1 col-12 align-self-center text-white text-responsive" style="text-align: left">
                 We are Company AI
@@ -230,7 +230,7 @@
         Your browser does not support the video tag.
     </video>
     <div class="z-1 position-absolute top-0 start-0 w-100 h-100" style="mix-blend-mode: screen; background: #fcd8b8;"></div>
-    <div class="container p-3 p-md-5">
+    <div class="container custom-container p-3 p-md-5">
         <div class="row">
             <div class="z-1 col-12 pt-5">
                 <div class="z-1 text-wrapper5 text-uppercase" style="color: #001d6c">History
@@ -311,74 +311,97 @@
   <img class="img-fluid w-100 m-0 p-0 hero-divider-container bg-white" style="bottom:-10px; object-fit: cover; z-index: 2;" src="/img/Separator_about.svg" alt="Vector"/>
 </div>-->
 <div class="container-fluid my-0 position-relative pt-5" style="background: #2F3666;">
-    <div class="row">
-        <!-- Static Map Section -->
-        <div class="col-md-6 p-4 position-relative order-md-1 order-2">
-            <!--            <div class="position-relative overflow-hidden" style="height: 422px;">-->
-            <!--                &lt;!&ndash; Map Image &ndash;&gt;-->
-            <!--                <img src="/img/map-image0.png" alt="Map Image" class="img-fluid position-absolute w-100 h-100" style="object-fit: cover;">-->
-
-            <!--                &lt;!&ndash; Zoom Controls &ndash;&gt;-->
-            <!--                <img src="/img/zoom-controls0.svg" alt="Zoom Controls" class="position-absolute" style="width: 40px; height: 81px; border-radius: 4px; right: 12px; bottom: 12px;">-->
-
-            <!--                &lt;!&ndash; Satellite Image Container &ndash;&gt;-->
-            <!--                <div class="position-absolute border bg-white" style="width: 80px; height: 49px; border-radius: 4px; left: 12px; bottom: 12px;">-->
-            <!--                    <img src="/img/image0.png" alt="Satellite" class="position-absolute" style="width: 124px; height: 49px;">-->
-            <!--                </div>-->
-
-            <!--                &lt;!&ndash; View Larger Map Button &ndash;&gt;-->
-            <!--                <div class="position-absolute d-flex align-items-center justify-content-center" style="background: #ffffff; border-radius: 4px; padding: 4px 12px; left: 12px; top: 12px;">-->
-            <!--                    <span class="text-primary" style="font-family: 'Inter-Regular', sans-serif; font-size: 12px; line-height: 145%; font-weight: 400;">View larger map</span>-->
-            <!--                </div>-->
-
-            <!--                &lt;!&ndash; Pin Image &ndash;&gt;-->
-            <!--                <img src="/img/pin0.svg" alt="Pin" class="position-absolute" style="width: 21px; height: 30px; left: 50%; top: 50%; transform: translate(-50%, -50%);">-->
-
-            <!--                &lt;!&ndash; Union Image &ndash;&gt;-->
-            <!--                <img src="/img/union0.svg" alt="Union" class="position-absolute union-centered">-->
-
-            <!--                &lt;!&ndash; Livello1 with Clip Path Group &ndash;&gt;-->
-            <!--                <div class="position-absolute livello-centered">-->
-            <!--                    <img src="/img/clip-path-group0.svg" alt="Clip Path Group" class="position-absolute" style="height: auto; left: 0; top: 0;">-->
-            <!--                </div>-->
-            <!--            </div>-->
-            <div id="map" class="position-relative overflow-hidden" style="height: 422px; width: 100%;"></div>
-        </div>
-        <!-- Contact Information Section -->
-        <div class="col-md-6 py-4 position-relative text-start text-dark order-md-2 order-1">
-            <div class="frame-90">
-                <div class="frame-66">
-                    <div class="frame-63">
-                        <div class="our-location">Our Location</div>
-                    </div>
-                    <div class="frame-62">
-                        <div class="contact-information text-white">Contact information</div>
-                    </div>
-                    <div class="frame-65">
-                        <div class="headquarters text-white">Headquarters</div>
-                    </div>
-                    <div class="frame-662">
-                        <div class="rombo-ai-srl-cagliari-sardinia-italy-open-campus-09123-cagliari text-white">
-                            Rombo.ai srl
-                            <br/>
-                            Cagliari, Sardinia - Italy
-                            <br/>
-                            Open Campus,
-                            <br/>
-                            09123 Cagliari
+    <div class="container custom_container">
+        <div class="row">
+            <!-- Static Map Section -->
+            <div class="col-md-6 p-4 position-relative order-md-1 order-2">
+                <div id="map" class="position-relative overflow-hidden" style="height: 422px; width: 100%;"></div>
+            </div>
+            <!-- Contact Information Section -->
+            <div class="col-md-6 py-4 position-relative text-start text-dark order-md-2 order-1">
+                <div class="frame-90">
+                    <div class="frame-66">
+                        <div class="frame-63">
+                            <div class="our-location">Our Location</div>
+                        </div>
+                        <div class="frame-62">
+                            <div class="contact-information text-white">Contact information</div>
+                        </div>
+                        <div class="frame-65">
+                            <div class="headquarters text-white">Headquarters</div>
+                        </div>
+                        <div class="frame-662">
+                            <div class="rombo-ai-srl-cagliari-sardinia-italy-open-campus-09123-cagliari text-white">
+                                Rombo.ai srl
+                                <br/>
+                                Cagliari, Sardinia - Italy
+                                <br/>
+                                Open Campus,
+                                <br/>
+                                09123 Cagliari
+                            </div>
+                        </div>
+                        <div class="frame-64">
+                            <div class="_39-348-23-53-703 text-white">+39 348 23 53 703</div>
                         </div>
                     </div>
-                    <div class="frame-64">
-                        <div class="_39-348-23-53-703 text-white">+39 348 23 53 703</div>
-                    </div>
                 </div>
+                <img src="/img/livello6.svg" alt="Background" class="position-absolute z-1"
+                     style="top: 40px; right: 0; width: 234px; height: 238px; gap: 0px;">
             </div>
-            <img src="/img/livello6.svg" alt="Background" class="position-absolute z-1"
-                 style="top: 40px; right: 0; width: 234px; height: 238px; gap: 0px;">
-        </div>
 
+        </div>
     </div>
 </div>
+<!-- Supported By Section -->
+<div
+        class="container-fluid position-relative w-100 justify-content-around align-items-center text-center bg-white">
+    <div class="row py-4 "></div>
+    <div class="container custom_container w-100">
+        <div class="row px-2 py-4">
+            <div class="col-md-4 p-3 p-lg-0">
+                <div class="fw-bold" style="font-size: 20px; letter-spacing: 1px; color: #FE900F;"><a href="/support"> ROMBO.AI</a></div>
+                <div class="text-dark fw-bold" style="font-size: 42px; letter-spacing: 0;"><a href="/support"> It supported by</a></div>
+            </div>
+            <div class="col-md-8 p-3 p-lg-0 align-self-center">
+                <img src="/img/image-1-2.svg" alt="Support" class="img-fluid d-none d-sm-block"
+                     style="object-fit: cover;">
+                <img src="/img/image-1-2-1.svg" alt="Image 13"
+                     class="col-12 img-fluid d-block d-sm-none"
+                     style="object-fit: cover;">
+                <img src="/img/image-1-2-2.svg" alt="Image 13"
+                     class="col-12 img-fluid d-block d-sm-none"
+                     style="object-fit: cover; margin-left: 18px;">
+            </div>
+        </div>
+    </div>
+    <div class="row py-4 w-100"></div>
+</div>
+<!-- Supported By Section -->
+<section class="container-fluid  justify-content-center text-center text-white py-5 h-100"
+         style=" background: #303767">
+    <div class="container custom-container d-flex flex-column  justify-content-center align-items-center text-center">
+        <p class="fw-bold pt-5 text-uppercase" style="font-size: 20px; color:#FE900F">DISCOVER WHAT AI-DRIVEN SPECTRAL ANALYSIS CAN DO FOR YOU</p>
+        <h2 class="fw-bold py-5 text-white secondary-headline" style="font-size: 42px;">Engage with Rombo AI</h2>
+
+        <p class="px-3" style="font-size: 16px;">
+            Ready to transform your analytical processes? Connect with our experts to explore tailored solutions for your business challenges. Reach out to our sales team, schedule a demo, or sign up for our newsletter for the latest insights and updates.
+        </p>
+        <a href="/contact" class="text-decoration-none pt-5">
+            <div class="d-flex justify-content-center align-items-center  gap-0">
+                <button class="btn rounded-pill"
+                        style="background:#FE900F; color: white; padding:15px 25px 15px 25px; margin-right:-8px;">
+                    Contact
+                </button>
+                <img class="d-inline-block" src="/img/group-2-2.png" alt="Group" style="width: 35px; height: 41px;">
+                <button class="btn rounded-pill"
+                        style="background:#FE900F; color: white; padding:15px;margin-left:-8px;">
+                    now
+                </button>
+            </div>
+        </a>
+    </div>
+</section>
 <!--Footer-->
 <!-- Footer -->
 <footer>

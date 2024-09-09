@@ -120,10 +120,16 @@ li {
     padding-right: 0;
 }
 
-.container {
-    max-width: 1187px;
-}
+/*.container {*/
+/*    max-width: 1187px;*/
+/*}*/
 
+.custom-container {
+    max-width: 1440px; /* Set a maximum width of 1440px */
+    padding-left: 2px;  /* Add 2px padding to the left */
+    padding-right: 2px; /* Add 2px padding to the right */
+    margin: 0 auto;     /* Center the content horizontally */
+}
 
 /* default-css END 
 ================================== */
