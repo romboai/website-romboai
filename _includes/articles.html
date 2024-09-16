@@ -12,7 +12,7 @@
                     <!-- Scrollable Item 1 -->
                     {% for post in site.posts limit:3 %}
                     <div class="scrollable-item" style="min-width: 300px; margin-right: 20px;">
-                        <a href="{{ post.url }}">
+                        <a href="{{ site.baseurl }}{{ post.url }}">
                             <img class="post-image"
                                  src="{{ site.baseurl }}/img/{{ post.image }}"
                                  alt="{{ post.title }}">
