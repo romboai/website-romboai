@@ -15,7 +15,8 @@
     {% if page.image %}
     <div class="container custom_container">
         <div class="row m-0 p-4 p-md-5">
-            <img src="{{ site.baseurl }}/img/{{ page.image }}" alt="" class="m-0 p-0 img-fluid border rounded" style="object-fit: cover">
+            <img src="{{ site.baseurl }}/img/{{ page.image }}" alt="" class="m-0 p-0 img-fluid border rounded"
+                 style="object-fit: cover">
         </div>
     </div>
     {% endif %}
@@ -23,13 +24,15 @@
         <div class="row m-0 w-100 h-100 justify-content-center">
             <div class="col-12 px-4 px-md-5 align-content-center titolo-1" style="max-width: 895px">
                 {% for section in page.contents %}
+                <p>
                 <span class="post_header" style="font-size: 36px;">
                         {{ section.subtitle }}
                         <br/>
                     </span>
-                <span class="posted_label">
+                    <span class="posted_label">
                         {{ section.text }}
                     </span>
+                </p>
                 {% if section.list %}
                 <div class="px-5 py-3">
                     <ul>
@@ -38,6 +41,7 @@
                         {% endfor %}
                     </ul>
                 </div>
+                <br/>
                 {% endif %}
                 {% endfor %}
             </div>
