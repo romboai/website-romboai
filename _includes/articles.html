@@ -25,21 +25,32 @@
                     </div>
                     {% endfor %}
 
-<!--                    {% for post in site.data.posts %}-->
-<!--                    <div class="scrollable-item" style="min-width: 300px; margin-right: 20px;">-->
-<!--                        <img class="post-image"-->
-<!--                             src= "{{ post.image }}"-->
-<!--                             alt="All-In-One Analysis Suite">-->
-<!--                        <div class="post-content">-->
-<!--                            <div class="date">{{post.date | date: "%b %d, %Y" }}</div>-->
-<!--                            <div class="title">{{post.title}}</div>-->
-<!--                            <p class="description">{{post.body}}</p>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                    {% endfor %}-->
+                    <!--                    {% for post in site.data.posts %}-->
+                    <!--                    <div class="scrollable-item" style="min-width: 300px; margin-right: 20px;">-->
+                    <!--                        <img class="post-image"-->
+                    <!--                             src= "{{ post.image }}"-->
+                    <!--                             alt="All-In-One Analysis Suite">-->
+                    <!--                        <div class="post-content">-->
+                    <!--                            <div class="date">{{post.date | date: "%b %d, %Y" }}</div>-->
+                    <!--                            <div class="title">{{post.title}}</div>-->
+                    <!--                            <p class="description">{{post.body}}</p>-->
+                    <!--                        </div>-->
+                    <!--                    </div>-->
+                    <!--                    {% endfor %}-->
                     <!-- Add more items as needed -->
                 </div>
+                <div class="w-100 d-flex justify-content-end  p-3">
+                    <a href="{{ site.baseurl }}/blog">
+                        <div class="button">
+                            <div class="text-container">
+                                <div class="button-text">See more..</div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
             </div>
+
         </div>
         <!-- Divider Image -->
         <div class="row py-4"></div>
