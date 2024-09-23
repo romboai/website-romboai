@@ -17,13 +17,161 @@
 </span>
 
 {% include menu.html %}
-<!--Hero-->
-{% include hero.html %}
+
+<!--Hero Section-->
+<div class="container-fluid  hero-section">
+  <!-- Video -->
+  <video class="hero-video" autoplay muted loop playsinline controlslist="nodownload">
+      <source src="{{ site.baseurl }}/img/hero_back_play.mp4" type="video/mp4"/>
+      Your browser does not support the video tag.
+  </video>
+
+  <!-- Mask Overlay -->
+  <div class="mask"></div>
+  <div class="container custom-container w-100  h-100">
+      <div class="row m-0 w-100  h-100  hero-content-message">
+          <p class="z-1 col-md-6 align-self-center fw-bold text-white text-responsive" style="text-align: left">
+              {{ page.hero_home_title }}
+          </p>
+      </div>
+  </div>
+</div>
+<!--Hero Section-->
+
+
 {% include hero_divider.html %}
-<!--Intro-->
-{% include intro.html %}
-<!--Technology-->
-{% include technology.html %}
+
+<!--Intro Section-->
+<div class="container-fluid py-4">
+  <div class="row justify-content-center intro-header">
+      <div class="col-12">
+          <div class="top text-center">
+              <p class="text-wrapper5">{{ page.intro_main_title }}</p>
+              <p class="text-wrapper6">{{ page.intro_sub_title }}</p>
+          </div>
+      </div>
+  </div>
+  <div class="row align-items-center">
+      <!-- Left Image (Hidden on Mobile) -->
+      <div class="col-md-1 d-none d-md-block text-start px-0">
+          <img class="img-fluid intro-left" style="padding-right: 21px;" src="{{ site.baseurl }}/img/livello-1-7.svg"
+               alt="Left Level">
+      </div>
+
+      <!-- Main Content with Background Image -->
+      <div class="col-md-10 px-0 intro-body">
+<!--            <img class="img-fluid d-none d-sm-block background-image" src="{{ site.baseurl }}/img/livello-1-5.svg"-->
+<!--                 alt="Background Level">-->
+          <div class="row text-center w-100">
+              <div class="col-lg-3 col-sm-6 p-5 p-md-2">
+                  <img src="{{ site.baseurl }}/img/modalit-isolamento-8.svg" alt="Precision Icon">
+                  <p style=" padding-top: 20px">
+                      <span class="text-wrapper28">{{page.intro_message_part_one}}</span><br>
+                      <span class="text-wrapper29">{{page.intro_message_part_two}} </span>
+                      <span class="text-wrapper30">{{page.intro_message_part_three}}</span>
+                      <span class="text-wrapper29"> {{page.intro_message_part_four}}</span>
+                  </p>
+              </div>
+              <div class="col-lg-3 col-sm-6 p-5 p-md-2">
+                  <img src="{{ site.baseurl }}/img/modalit-isolamento-9.svg" alt="Efficiency Icon">
+                  <p style=" padding-top: 20px">
+                      <span class="text-wrapper28">{{page.intro_message_part_five}}</span><br>
+                      <span class="text-wrapper29">{{page.intro_message_part_six}}</span>
+                      <span class="text-wrapper21"> {{page.intro_message_part_seven}}</span>
+                      <span class="text-wrapper29"> {{page.intro_message_part_eight}}</span>
+                  </p>
+              </div>
+              <div class="col-lg-3 col-sm-6 p-5 p-md-2">
+                  <img src="{{ site.baseurl }}/img/modalit-isolamento-10.svg"
+                       alt="Understanding Icon">
+                  <p style=" padding-top: 20px">
+                      <span class="text-wrapper28">{{page.intro_message_part_nine}}</span><br>
+                      <span class="text-wrapper29">{{page.intro_message_part_ten}}</span>
+                  </p>
+              </div>
+              <div class="col-lg-3 col-sm-6 p-5 p-md-2">
+                  <img src="{{ site.baseurl }}/img/modalit-isolamento-11.svg" alt="Cost Effective Icon">
+                  <p style=" padding-top: 20px">
+                      <span class="text-wrapper28">{{page.intro_message_part_eleven}}</span><br>
+                      <span class="text-wrapper29">{{page.intro_message_part_twelve}}</span>
+                  </p>
+              </div>
+          </div>
+      </div>
+
+      <!-- Right Image (Hidden on Mobile) -->
+      <div class="col-md-1 d-none d-md-block text-end px-0">
+          <img class="img-fluid intro-right" style="padding-left: 21px;" src="{{ site.baseurl }}/img/livello-1-6.svg"
+               alt="Right Level">
+      </div>
+  </div>
+</div>
+
+<!--Intro Section-->
+
+
+<!--Technology Section-->
+<section class="container-fluid" style="background: #303767;">
+  <div class="row">
+      <div class="col-12 px-0">
+          <img class="w-100 m-0 p-0 technology-divider-container" style="bottom:-10px; object-fit: cover"
+               src="{{ site.baseurl }}/img/Separator_Technology.svg" alt="Vector"/>
+      </div>
+      `
+  </div>
+  <div class="container custom_container">
+      <div class="row">
+          <div class="col-12 py-4">
+              <div class="text-wrapper5 text-uppercase">{{page.technology_main_title}}</div>
+              <div class="secondary-headline">{{page.technology_sub_title}}</div>
+          </div>
+      </div>
+      <div class="row py-4">
+          <div class="col-12  technology-body">
+              <div class="col-12 position-absolute text-center" style="top:0; left: 0; right: 0;bottom: 0">
+                  <img class="img-fluid h-100 w-100" src="{{ site.baseurl }}/img/livello-1-4.svg"
+                       alt="Background Level">
+                  <img class="img-fluid mx-0 d-none d-md-block position-absolute" style="left: 47%;bottom: 4%;"
+                       src="{{ site.baseurl }}/img/livello-1-8.svg"
+                       alt="Foreground Level">
+              </div>
+              <div class="row d-flex flex-wrap flex-md-nowrap text-left  justify-content-center"
+              >
+                  <div class="z-1 col-md-6">
+                      <img class="img-fluid mx-0" src="{{ site.baseurl }}/img/forma-5-10.png"
+                           alt="Foreground Level">
+                  </div>
+                  <div class="z-1 col-md-6">
+                      <div class="paragraf">
+                          <p class="px-5 at-the-core-of-our">
+                              <span class="text-wrapper19">{{page.technology_message_part_three}}</span>
+                              <span class="text-wrapper20">
+                                          {{page.technology_message_part_four}}&nbsp;<br><br>
+                                      </span>
+                              <span class="text-wrapper19">{{page.technology_message_part_five}}<br></span>
+                              <span class="text-wrapper20">
+                                          {{page.technology_message_part_six}}&nbsp;<br><br>
+                                      </span>
+                              <span class="text-wrapper19">{{page.technology_message_part_seven}}<br></span>
+                              <span class="text-wrapper20">
+                                          {{page.technology_message_part_eight}}
+                                      </span>
+                              <span class="text-wrapper21">{{page.technology_message_part_nine}}</span>
+                              <span class="text-wrapper20">
+                                          {{page.technology_message_part_ten}}&nbsp;
+                                      </span>
+                          </p>
+                      </div>
+                  </div>
+
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+<!--Technology Section-->
+
+
 <!--Client-->
 {% include client.html %}
 <!--Articles-->
@@ -50,29 +198,6 @@
 
 <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
 <script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const scrollContainer = document.getElementById('scrollContainer');
-    const progressBar = document.getElementById('scrollProgressBar');
-
-    // Update progress bar as the list is scrolled
-    scrollContainer.addEventListener('scroll', function () {
-      const maxScrollLeft = scrollContainer.scrollWidth - scrollContainer.clientWidth;
-      if (maxScrollLeft > 0) {
-        const scrollLeft = scrollContainer.scrollLeft;
-        const scrollPercentage = (scrollLeft / maxScrollLeft) * 100;
-        progressBar.value = scrollPercentage;
-      }
-    });
-
-    // Scroll the list when the progress bar is dragged
-    progressBar.addEventListener('input', function () {
-      const maxScrollLeft = scrollContainer.scrollWidth - scrollContainer.clientWidth;
-      if (maxScrollLeft > 0) {
-        const scrollLeft = (progressBar.value / 100) * maxScrollLeft;
-        scrollContainer.scrollLeft = scrollLeft;
-      }
-    });
-  });
 
 
   window.cookieconsent.initialise({
