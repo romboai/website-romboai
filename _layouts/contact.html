@@ -37,6 +37,54 @@
         crossorigin="anonymous"></script>
 <script src="{{ site.baseurl }}/js/main.js"></script>
 
+<script>
+
+  function initMap() {
+    const markerPosition = {lat: 39.2293491, lng: 9.073249};
+
+    const map = new google.maps.Map(document.getElementById("map"), {
+      center: markerPosition,
+      zoom: 10,
+    });
+
+    const marker = new google.maps.Marker({
+      position: markerPosition,
+      map: map,
+      title: "Marker Title",
+    });
+
+    const contentString = `
+            <div id="content" class="px-3">
+<!--                    <h4>Info Window Title</h4>-->
+                <img src="{{ site.baseurl }}/img/clip-path-group0.svg" alt="Rombo AI">
+                <p></p>
+            </div>
+        `;
+
+    const infoWindow = new google.maps.InfoWindow({
+      content: contentString,
+      position: markerPosition, // Set the position of the info window to the marker's position
+    });
+
+    // By default, open the info window and hide the marker
+    infoWindow.open(map);
+    marker.setVisible(false);
+
+    // Show marker when info window is closed
+    infoWindow.addListener("closeclick", () => {
+      marker.setVisible(true);
+    });
+
+    // Hide marker and show info window when marker is clicked
+    marker.addListener("click", () => {
+      marker.setVisible(false);
+      infoWindow.open(map); // Reopen the info window at the marker's position
+    });
+  }
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyChHpq27GKGXwfjc_SxuYnpUHl9PjA2MUw&callback=initMap"
+        async defer></script>
+
 
 <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
 <script>
