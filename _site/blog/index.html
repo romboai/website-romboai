@@ -34,65 +34,7 @@
     <link rel="stylesheet" type="text/css"
           href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css"/>
 
-    <script>
-      // function initMap() {
-      //   var mapOptions = {
-      //     center: { lat: 39.2280, lng: 9.0708 }, // San Francisco
-      //     zoom: 12
-      //   };
-      //
-      //   var map = new google.maps.Map(document.getElementById('map'), mapOptions);
-      //   var marker = new google.maps.Marker({
-      //     position: { lat: 39.2280, lng: 9.0708 }, // San Francisco
-      //     map: map,
-      //     title: 'Rombo.ai srl'
-      //   });
-      // }
-      function initMap() {
-        const markerPosition = {lat: 39.2293491, lng: 9.073249};
-
-        const map = new google.maps.Map(document.getElementById("map"), {
-          center: markerPosition,
-          zoom: 10,
-        });
-
-        const marker = new google.maps.Marker({
-          position: markerPosition,
-          map: map,
-          title: "Marker Title",
-        });
-
-        const contentString = `
-                <div id="content" class="px-3">
-<!--                    <h4>Info Window Title</h4>-->
-                    <img src="/img/clip-path-group0.svg" alt="Rombo AI">
-                    <p></p>
-                </div>
-            `;
-
-        const infoWindow = new google.maps.InfoWindow({
-          content: contentString,
-          position: markerPosition, // Set the position of the info window to the marker's position
-        });
-
-        // By default, open the info window and hide the marker
-        infoWindow.open(map);
-        marker.setVisible(false);
-
-        // Show marker when info window is closed
-        infoWindow.addListener("closeclick", () => {
-          marker.setVisible(true);
-        });
-
-        // Hide marker and show info window when marker is clicked
-        marker.addListener("click", () => {
-          marker.setVisible(false);
-          infoWindow.open(map); // Reopen the info window at the marker's position
-        });
-      }
-    </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyChHpq27GKGXwfjc_SxuYnpUHl9PjA2MUw&callback=initMap"
-            async defer></script>
+  
 </head>
 
 
@@ -126,9 +68,6 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto nev-mobile">
                 <li class="nav-item">
-                    <a class="nav-link menu-item text-white" href="/contact">Contact Us</a>
-                </li>
-                <li class="nav-item">
                     <a class="nav-link menu-item text-white" href="/about">About Us</a>
                 </li>
                 <li class="nav-item dropdown">
@@ -143,14 +82,10 @@
                 <li class="nav-item">
                     <a class="nav-link menu-item text-white" href="/blog">Blog</a>
                 </li>
-<!--                <li class="nav-item dropdown">-->
-<!--                    <a class="nav-link dropdown-toggle menu-item text-white" href="/blog" id="navbarDropdownResources" role="button" data-bs-toggle="dropdown" aria-expanded="false">-->
-<!--                        Blog-->
-<!--                    </a>-->
-<!--                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownResources" data-bs-theme="light">-->
-<!--                        <li><a class="dropdown-item menu-item text-white" href="/article">Articles</a></li>-->
-<!--                    </ul>-->
-<!--                </li>-->
+                <li class="nav-item">
+                    <a class="nav-link menu-item text-white" href="/contact">Contact Us</a>
+                </li>
+             
             </ul>
         </div>
     </div>
@@ -158,120 +93,33 @@
 <!-- Menu -->
 
 
-<!--Hero-->
+
+
 <!--Hero Section-->
 <div class="container-fluid hero-blog-section px-0">
-    <div class="hero_contact_mask1" style="z-index: 1;"></div>
-    <div class="hero_contact_mask" style="z-index: 1;"></div>
-    <img src="/img/imageHero.png" alt="" class="img-fluid position-absolute"
-         style=" height: 100%; width: 100%; object-fit: cover; left: 0;right:0; z-index: 1; mix-blend-mode: soft-light;">
+  <div class="hero_contact_mask1" style="z-index: 1;"></div>
+  <div class="hero_contact_mask" style="z-index: 1;"></div>
+  <img src="/img/imageHero.png" alt="" class="img-fluid position-absolute"
+       style=" height: 100%; width: 100%; object-fit: cover; left: 0;right:0; z-index: 1; mix-blend-mode: soft-light;">
 
 
-    <div class="container h-100 custom-container">
-        <div class="row mx-0 w-100 h-100 justify-content-center align-content-center text-center">
-            <div class="z-1 col-12 h-100 px-md-4 align-content-center align-items-center titolo-1">
-                <div class="titolo-1-span">
-                    Welcome to RomboAI Blog
-                </div>
-                <div class="span2 py-4">
-                    Nec massa viverra eget feugiat pellentesque. Feugiat adipiscing massa vitae
-                    auctor mi massa. Sodales libero viverra cursus sed duis luctus nulla. In
-                    malesuada vulputate pharetra ipsum orci.
-                </div>
-            </div>
-        </div>
-        <!--    <div id="carouselExampleDark"-->
-        <!--         class="carousel carousel-light slide">-->
-        <!--        <div class="hero_contact_mask1" style="z-index: 1;"></div>-->
-        <!--        <div class="hero_contact_mask" style="z-index: 1;"></div>-->
-        <!--        <img src="/img/imageHero.png" alt="" class="img-fluid position-absolute"-->
-        <!--             style=" height: 100%; width: 100%; object-fit: cover; left: 0;right:0; z-index: 1; mix-blend-mode: soft-light;">-->
-        <!--        <div class="carousel-indicators pb-5 mb-5">-->
-        <!--            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0"-->
-        <!--                    class="slide-button active ellipse"-->
-        <!--                    aria-current="true" aria-label="Slide 1"></button>-->
-        <!--            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"-->
-        <!--                    class="slide-button ellipse"-->
-        <!--                    aria-label="Slide 2"></button>-->
-        <!--            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"-->
-        <!--                    class="slide-button ellipse"-->
-        <!--                    aria-label="Slide 3"></button>-->
-        <!--            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3"-->
-        <!--                    class="slide-button ellipse"-->
-        <!--                    aria-label="Slide 4"></button>-->
-        <!--            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="4"-->
-        <!--                    class="slide-button ellipse"-->
-        <!--                    aria-label="Slide 5"></button>-->
-        <!--        </div>-->
-        <!--        <div class="container custom-container carousel-inner">-->
-        <!--            <div class="carousel-item active" data-bs-interval="10000" style="z-index: 1;">-->
-        <!--                &lt;!&ndash; Replace the SVG with an Image or Custom Content &ndash;&gt;-->
-        <!--                <div class="row mx-0 px-5 custom-slide-content d-block"-->
-        <!--                     style="height: 740px; background-color: rgba(255,255,255,0); display: flex; align-items: center; justify-content: center;">-->
-
-        <!--                    <div class="row mx-0 w-100 h-100 justify-content-center align-content-center text-center">-->
-        <!--                        <div class="col-md-6 px-md-4 align-content-center titolo-1">-->
-        <!--                            <div class="titolo-1-span">-->
-        <!--                                Article_01-->
-        <!--                            </div>-->
-        <!--                            <div class="span2 py-4">-->
-        <!--                                Nec massa viverra eget feugiat pellentesque. Feugiat adipiscing massa vitae-->
-        <!--                                auctor mi massa. Sodales libero viverra cursus sed duis luctus nulla. In-->
-        <!--                                malesuada vulputate pharetra ipsum orci.-->
-        <!--                            </div>-->
-        <!--                            <div class="button">-->
-        <!--                                <div class="text-container">-->
-        <!--                                    <div class="button-text">Read more</div>-->
-        <!--                                </div>-->
-        <!--                            </div>-->
-        <!--                        </div>-->
-        <!--                        <div class="col-md-6 d-none d-none d-md-block justify-content-center align-content-center z-1">-->
-        <!--                            <img class="img-fluid"-->
-        <!--                                 style="object-fit: cover; transform: rotate(-15.4deg) scale(1, 1); padding-top:150px;"-->
-        <!--                                 alt="forma"-->
-        <!--                                 src="/img/forma1.png"/>-->
-        <!--                        </div>-->
-
-        <!--                    </div>-->
-        <!--                </div>-->
-        <!--            </div>-->
-        <!--            <div class="carousel-item" data-bs-interval="2000" style="z-index: 1;">-->
-        <!--                &lt;!&ndash; Replace the SVG with an Image or Custom Content &ndash;&gt;-->
-        <!--                <div class="row custom-slide-content d-block w-100 justify-content-center align-content-center text-center"-->
-        <!--                     style="height: 740px; background-color: rgba(255,255,255,0); display: flex; align-items: center; justify-content: center;">-->
-        <!--                    <div class="col-12">-->
-        <!--                        <h2>Second Slide Title</h2>-->
-        <!--                        <p>Some custom content for the first slide.</p>-->
-        <!--                        <a href="#" class="btn btn-primary">Learn More</a>-->
-        <!--                    </div>-->
-        <!--                </div>-->
-        <!--            </div>-->
-        <!--            <div class="carousel-item" style="z-index: 1;">-->
-        <!--                &lt;!&ndash; Replace the SVG with an Image or Custom Content &ndash;&gt;-->
-        <!--                <div class="row custom-slide-content d-block w-100 justify-content-center align-content-center text-center"-->
-        <!--                     style="height: 740px; background-color: rgba(255,255,255,0); display: flex; align-items: center; justify-content: center;">-->
-        <!--                    <div class="col-12">-->
-        <!--                        <h2>Third Slide Title</h2>-->
-        <!--                        <p>Some custom content for the first slide.</p>-->
-        <!--                        <a href="#" class="btn btn-primary">Learn More</a>-->
-        <!--                    </div>-->
-        <!--                </div>-->
-        <!--            </div>-->
-        <!--        </div>-->
-        <!--        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark"-->
-        <!--                data-bs-slide="prev">-->
-        <!--            <span class="carousel-control-prev-icon" aria-hidden="true"></span>-->
-        <!--            <span class="visually-hidden">Previous</span>-->
-        <!--        </button>-->
-        <!--        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark"-->
-        <!--                data-bs-slide="next">-->
-        <!--            <span class="carousel-control-next-icon" aria-hidden="true"></span>-->
-        <!--            <span class="visually-hidden">Next</span>-->
-        <!--        </button>-->
-        <!--    </div>-->
-    </div>
+  <div class="container h-100 custom-container">
+      <div class="row mx-0 w-100 h-100 justify-content-center align-content-center text-center">
+          <div class="z-1 col-12 h-100 px-md-4 align-content-center align-items-center titolo-1">
+              <div class="titolo-1-span">
+                  Welcome to RomboAI Blog
+              </div>
+              <div class="span2 py-4">
+                Welcome to Rombo AI Insights: Explore Cutting-Edge AI for Spectral Analysis, 
+                Innovation Trends, and How We're Revolutionizing Laboratory Analysis with 
+                Speed, Precision, and Efficiency.
+              </div>
+          </div>
+      </div>
+  </div>
 </div>
 <!--Hero Section-->
+
 <div class="container-fluid align-self-end mx-0" style="position: relative;">
   <img class="img-fluid w-100 hero-divider-container" style="bottom:-10px; object-fit: cover; z-index: 1;" src="/img/Separator_Hero.svg" alt="Vector"/>
 </div>
@@ -347,51 +195,6 @@
     </div>
 </section>
 <!-- Articles Section -->
-<!-- Supported By Section -->
-<div
-        class="container-fluid position-relative w-100 justify-content-around align-items-center text-center bg-white">
-    <img class="supportby-divider-container" style="top:-40px; object-fit: cover"
-         src="/img/Separator_blog_support_by.svg" alt="Vector"/>
-
-    <div class="row py-5 "></div>
-    <div class="container custom_container w-100">
-        <div class="row px-2 py-4">
-
-            <div class="col-md-4 p-3 p-lg-0">
-                <div class="fw-bold" style="font-size: 20px; letter-spacing: 1px; color: #FE900F;"><a href="/support">
-                    ROMBO.AI</a></div>
-                <div class="text-dark fw-bold" style="font-size: 42px; letter-spacing: 0;"><a href="/support">It supported
-                    by</a></div>
-            </div>
-            <div class="col-md-8 p-3 p-lg-0 align-self-center">
-                <div class="row justify-content-center align-items-center">
-                    <div class="col-12 col-sm-6 col-md-2 mb-3 mb-md-0">
-                        <img src="/img/coesione.png" alt="Coesione" class="img-fluid"
-                             style="max-width: 100%; height: auto; object-fit: contain;">
-                    </div>
-                    <div class="col-12 col-sm-6 col-md-2 mb-3 mb-md-0">
-                        <img src="/img/ue.png" alt="UE" class="img-fluid"
-                             style="max-width: 100%; height: auto; object-fit: contain;">
-                    </div>
-                    <div class="col-12 col-sm-6 col-md-2 mb-3 mb-md-0">
-                        <img src="/img/repubblica.png" alt="Repubblica" class="img-fluid"
-                             style="max-width: 100%; height: auto; object-fit: contain;">
-                    </div>
-                    <div class="col-12 col-sm-6 col-md-2 mb-3 mb-md-0">
-                        <img src="/img/regione.png" alt="Regione" class="img-fluid"
-                             style="max-width: 100%; height: auto; object-fit: contain;">
-                    </div>
-                    <div class="col-12 col-sm-6 col-md-2 mb-3 mb-md-0">
-                        <img src="/img/Logo SR quadrato.png" alt="Logo SR" class="img-fluid"
-                             style="max-width: 100%; height: auto; object-fit: contain;">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="row py-4 w-100"></div>
-</div>
-<!-- Supported By Section -->
 <section class="container-fluid  justify-content-center text-center text-white py-5 h-100"
          style=" background: #303767">
     <div class="container custom-container d-flex flex-column  justify-content-center align-items-center text-center">
@@ -399,7 +202,7 @@
         <h2 class="fw-bold py-5 text-white secondary-headline" style="font-size: 42px;">Engage with Rombo AI</h2>
 
         <p class="px-3" style="font-size: 16px;">
-            Ready to transform your analytical processes? Connect with our experts to explore tailored solutions for your business challenges. Reach out to our sales team, schedule a demo, or sign up for our newsletter for the latest insights and updates.
+            Ready to transform your analytical processes? Connect with our experts to explore tailored solutions for your business challenges. Reach out to our sales team or schedule a demo for the latest insights and updates.
         </p>
         <a href="/contact" class="text-decoration-none pt-5">
             <div class="d-flex justify-content-center align-items-center  gap-0">
@@ -434,7 +237,7 @@
                 <div class="col-12 col-md-8">
                     <div class="row m-0 d-flex align-items-center h-100">
                         <p class="footer-text col-10 col-md-10 m-0 text-md-left text-lg-left">
-                            ROMBO.AI© 2024 - Open Campus, 09123 Cagliari |
+                            ROMBO AI © 2024 |
                             <a href="/privacy" style="color:#007bff;">Privacy Policy</a>
                         </p>
                         <!-- Remove col-* classes from the anchor tag to avoid issues with layout -->
@@ -467,29 +270,6 @@
 
 <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
 <script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const scrollContainer = document.getElementById('scrollContainer');
-    const progressBar = document.getElementById('scrollProgressBar');
-
-    // Update progress bar as the list is scrolled
-    scrollContainer.addEventListener('scroll', function () {
-      const maxScrollLeft = scrollContainer.scrollWidth - scrollContainer.clientWidth;
-      if (maxScrollLeft > 0) {
-        const scrollLeft = scrollContainer.scrollLeft;
-        const scrollPercentage = (scrollLeft / maxScrollLeft) * 100;
-        progressBar.value = scrollPercentage;
-      }
-    });
-
-    // Scroll the list when the progress bar is dragged
-    progressBar.addEventListener('input', function () {
-      const maxScrollLeft = scrollContainer.scrollWidth - scrollContainer.clientWidth;
-      if (maxScrollLeft > 0) {
-        const scrollLeft = (progressBar.value / 100) * maxScrollLeft;
-        scrollContainer.scrollLeft = scrollLeft;
-      }
-    });
-  });
 
 
   window.cookieconsent.initialise({

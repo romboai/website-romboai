@@ -24,20 +24,6 @@
                         </a>
                     </div>
                     {% endfor %}
-
-                    <!--                    {% for post in site.data.posts %}-->
-                    <!--                    <div class="scrollable-item" style="min-width: 300px; margin-right: 20px;">-->
-                    <!--                        <img class="post-image"-->
-                    <!--                             src= "{{ post.image }}"-->
-                    <!--                             alt="All-In-One Analysis Suite">-->
-                    <!--                        <div class="post-content">-->
-                    <!--                            <div class="date">{{post.date | date: "%b %d, %Y" }}</div>-->
-                    <!--                            <div class="title">{{post.title}}</div>-->
-                    <!--                            <p class="description">{{post.body}}</p>-->
-                    <!--                        </div>-->
-                    <!--                    </div>-->
-                    <!--                    {% endfor %}-->
-                    <!-- Add more items as needed -->
                 </div>
                 <div class="w-100 d-flex justify-content-end  p-3">
                     <a href="{{ site.baseurl }}/blog">
@@ -53,13 +39,6 @@
 
         </div>
         <!-- Divider Image -->
-        <div class="row py-4"></div>
-        <div class="row py-5 px-2 px-md-5">
-            <div class="d-flex justify-content-center">
-                <input type="range" class="progress-bar" id="scrollProgressBar" value="0" min="0" max="100" step="1"
-                       style="width: 90%; margin-top: 20px;">
-            </div>
-        </div>
     </div>
 </section>
 <!--Articles Section-->

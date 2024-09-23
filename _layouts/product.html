@@ -17,17 +17,376 @@
 </span>
 
 {% include menu.html %}
-<!--Hero-->
-{% include hero_product.html %}
+
+<!--Hero Section-->
+<div class="container-fluid  hero-section">
+    <!-- Video -->
+    <video class="hero-video" autoplay muted loop playsinline controlslist="nodownload">
+        <source src="{{ site.baseurl }}/img/hero_back_play.mp4" type="video/mp4"/>
+        Your browser does not support the video tag.
+    </video>
+
+    <!-- Mask Overlay -->
+    <div class="mask"></div>
+    <div class="container custom-container w-100  h-100">
+        <div class="row m-0 w-100  h-100">
+            <div class="z-1 col-md-7 px-5 px-md-4 align-content-center titolo-1">
+            <span class="titolo-1-span">
+              {{page.hero_product_title}}
+                <br/>
+            </span>
+                <span class="titolo-1-span2">
+              {{page.hero_product_sub_title}}
+            </span>
+            </div>
+            <div class="col-md-5 d-none d-none d-md-block justify-content-center align-content-center z-1">
+                <img class="img-fluid forma-5-1" style="object-fit: cover " alt="forma"
+                     src="{{ site.baseurl }}/img/forma-5-10.png"/>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!--Hero Section-->
+
 {% include hero_divider.html %}
-{% include product_section_one.html %}
-{% include product_section_two.html %}
-{% include product_section_three.html %}
+
+
+<!--Hero Section 1-->
+
+<section
+        class="container-fluid justify-content-center text-center text-white py-5 px-5 h-100 w-100"
+        style=" ">
+    <div class="container custom_container">
+        <div class="row d-flex flex-column py-5 justify-content-center align-items-center text-center">
+            <p class="fw-bold m-0 h-100 text-uppercase" style="font-size: 20px; color:#001d6c">
+                {{page.product_section_one_main_title}}</p>
+            <h2 class="fw-bold secondary-headline text-dark" style="font-size: 42px;">
+                {{page.product_section_one_sub_title}}</h2>
+
+            <p class="col-12  text-dark p-5 text-center" style="font-size: 16px;">
+                {{page.product_section_one_message}}
+                <br/>
+            </p>
+        </div>
+    </div>
+</section>
+
+<!--Hero Section  2 -->
+
+
+<section class="container-fluid justify-content-center text-center text-white px-5 h-100 w-100"
+         style="background: #303767">
+    <div class="container custom_container">
+    <div class="row d-flex flex-column py-5 justify-content-center align-items-center text-center">
+        <p class="fw-bold m-0 h-100 text-uppercase" style="font-size: 20px; color:#fe900f;">{{page.product_section_two_main_title}}</p>
+        <h2 class="col-12 fw-bold secondary-headline text-white pb-5" style="font-size: 42px;">
+            {{page.product_section_two_sub_title}}</h2>
+
+        <p class="col-12 px-3  text-white  text-center " style="font-size: 16px; max-width: 900px">
+            {{page.product_section_two_message}}
+            <br />
+        </p>
+    </div>
+    </div>
+</section>
+
+<div class="container-fluid " style="overflow: hidden">
+    <div class="container custom_container  position-relative w-100 h-100" >
+        <div class="row">
+            <img class="img-fluid"
+                 style="position: absolute; top: -10%; left: 50%; width: 100%; z-index: -1; transform: scale(-1)"
+                 src="{{ site.baseurl }}/img/back-logo.png" alt="forma">
+
+            <img class="img-fluid"
+                 style="position: absolute; top: 50%; right: 50%; bottom: 0; width: 100%; z-index: -1; transform: scale(-1)"
+                 src="{{ site.baseurl }}/img/livello-1-2.svg" alt="forma">
+            <img class="img-fluid"
+                 style="position: absolute; bottom: -10%; left: 50%; width: 100%; z-index: -1; transform: scale(-1)"
+                 src="{{ site.baseurl }}/img/back-logo.png" alt="forma">
+
+            <div class="row d-flex flex-row py-5 justify-content-center align-items-center text-center">
+                <p class="fw-bold  text-uppercase" style="font-size: 20px; color:#fe900f;">PRODUCT FEATURES</p>
+                <h2 class="fw-bold secondary-headline text-dark" style="font-size: 42px;">
+                    NMR AI Analyzer
+                </h2>
+
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="row">
+                    <div class="z-1  py-5 px-5">
+                        <div class="z-1 secondary-headline pt-2" style="color: #21272a; text-align: left">All-In-One
+                            Crude
+                            Oil Analysis Suite
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="z-1  py-2 px-5">
+                        <div class="hero-label">
+                            <p style="text-align: left;">
+                        <span class="span" style="color: #21272a; z-index: 1">
+                            Reduced Hardware and Maintenance Costs:
+                        </span>
+                                <span class="span2" style="color: #21272a; z-index: 1">Consolidates multiple testing apparatuses into a single, efficient unit, significantly cutting down on equipment expenses and maintenance needs.</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="z-1  py-2 px-5">
+                        <div class="hero-label">
+                            <p style="text-align: left;">
+                        <span class="span" style="color: #21272a; z-index: 1">
+                            Data-Driven Insights:
+                        </span>
+                                <span class="span2" style="color: #21272a; z-index: 1">AI integration provides deeper analytical capabilities, enhancing predictive maintenance and operational strategy.</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="z-1  py-2 px-5">
+                        <div class="hero-label">
+                            <p style="text-align: left;">
+                        <span class="span" style="color: #21272a; z-index: 1">
+                            Enhanced Operational Efficiency:
+                        </span>
+                                <span class="span2" style="color: #21272a; z-index: 1">Streamlines the analysis process, allowing for quicker decision-making and improved workflow. One single device for all quality and property estimation needs.</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6  justify-content-center align-content-center z-1">
+                <img class="img-fluid forma-5-1" style="object-fit: cover " alt="forma"
+                     src="{{ site.baseurl }}/img/forma-5-10.png"/>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6  justify-content-center align-content-center z-1 order-md-1 order-2">
+                <img class="img-fluid forma-5-1" style="object-fit: cover " alt="forma"
+                     src="{{ site.baseurl }}/img/forma4.png"/>
+            </div>
+            <div class="col-md-6 order-md-2 order-1">
+                <div class="row">
+                    <div class="z-1  py-5 px-5">
+                        <div class="z-1 secondary-headline pt-2" style="color: #21272a; text-align: left">Full Crude Oil
+                            Assay Analysis
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="z-1  py-2 px-5">
+                        <div class="hero-label">
+                            <p style="text-align: left;">
+                            <span class="span2" style="color: #21272a; z-index: 1">Leverages the combined power of Nuclear Magnetic Resonance (NMR) and Artificial Intelligence (AI) to accurately estimate                         <span
+                                    class="span" style="color: #21272a; z-index: 1">
+                            over 40 different properties of crude oil
+                        </span>, including but not limited to density, viscosity, sulfur content, and more.</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="z-1  py-2 px-5">
+                        <div class="hero-label">
+                            <p style="text-align: left;">
+                        <span class="span" style="color: #21272a; z-index: 1">
+                            ASTM/ISO Accuracy:<br/>
+                        </span>
+                                <span class="span2" style="color: #21272a; z-index: 1">Adheres to stringent American Society for Testing and Materials (ASTM) and International Organization for Standardization (ISO) accuracy standards, ensuring high-quality, reliable results.</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="z-1  py-2 px-5">
+                        <div class="hero-label">
+                            <p style="text-align: left;">
+                        <span class="span" style="color: #21272a; z-index: 1">
+                            Reliability and Accuracy of Conventional Analyzers:reamlined customer service:<br/>
+                        </span>
+                                <span class="span2" style="color: #21272a; z-index: 1">Matches or exceeds the performance of traditional crude oil analysis equipment in terms of reliability and accuracy, providing confidence in the results.</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="z-1  py-2 px-5">
+                        <div class="hero-label">
+                            <p style="text-align: left;">
+                        <span class="span" style="color: #21272a; z-index: 1">
+                            Streamlined Analysis Process:<br/>
+                        </span>
+                                <span class="span2" style="color: #21272a; z-index: 1">Reduces the need for multiple tests and equipment, leading to a more efficient workflow.</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="z-1  py-2 px-5">
+                        <div class="hero-label">
+                            <p style="text-align: left;">
+                        <span class="span" style="color: #21272a; z-index: 1">
+                            Data-Driven Decision Making:<br/>
+                        </span>
+                                <span class="span2" style="color: #21272a; z-index: 1">Empowers operators with precise, comprehensive data for better decision-making in processing and refining operations.</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="row">
+                    <div class="z-1  py-5 px-5">
+                        <div class="z-1 secondary-headline pt-2" style="color: #21272a; text-align: left">Fully
+                            Automatic
+                            Measurement
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="z-1  py-2 px-5">
+                        <div class="hero-label">
+                            <p style="text-align: left;">
+                        <span class="span" style="color: #21272a; z-index: 1">
+                            Feature explanation: reduce the manual intervention of specialised personnel Benefit explanation:
+                        </span>
+                            </p>
+                            <ul class="span2" style="padding-left: 20px;">
+                                <li style="color: #21272a; z-index: 1; text-align: left">Daily laboratory tasks reduced
+                                    (90%
+                                    of reduction on components analysis)
+                                </li>
+                                <li style="color: #21272a; z-index: 1; text-align: left">ASTM is standard has 2%
+                                    accuracy,
+                                    but exposing analysis to humans is error-prone
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="z-1  py-2 px-5">
+                        <div class="hero-label">
+                            <p style="text-align: left;">
+                        <span class="span" style="color: #21272a; z-index: 1">
+                            The process:
+                        </span>
+                            </p>
+                            <ol class="span2" style="padding-left: 30px;">
+                                <li style="color: #21272a; z-index: 1; text-align: left"> An operator compose the sample
+                                    by
+                                    mixing the crude oil with a reference chemical.
+                                </li>
+                                <li style="color: #21272a; z-index: 1; text-align: left">The acquisition is started via
+                                    the
+                                    GUI.
+                                </li>
+                                <li style="color: #21272a; z-index: 1; text-align: left">The Acquisition is elaborated
+                                    via
+                                    AI Algorithms.
+                                </li>
+                                <li style="color: #21272a; z-index: 1; text-align: left">The crude oil Assay is
+                                    generated.
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6  justify-content-center align-content-center z-1">
+                <img class="img-fluid forma-5-1" style="object-fit: cover " alt="forma"
+                     src="{{ site.baseurl }}/img/forma1.png"/>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6  justify-content-center align-content-center z-1 order-md-1 order-2">
+                <img class="img-fluid forma-5-1" style="object-fit: cover " alt="forma"
+                     src="{{ site.baseurl }}/img/forma3.png"/>
+            </div>
+            <div class="col-md-6 order-md-2 order-1">
+                <div class="row">
+                    <div class="z-1  py-5 px-5">
+                        <div class="z-1 secondary-headline pt-2" style="color: #21272a; text-align: left">Express
+                            Quality
+                            Analysis
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="z-1  py-2 px-5">
+                        <div class="hero-label">
+                            <p style="text-align: left;">
+                        <span class="span" style="color: #21272a; z-index: 1">
+                            Feature:
+                        </span>
+
+                                <span class="span2" style="color: #21272a; z-index: 1">Perform crude oil analysis/ get full report in minutes
+                        </span>
+                            </p>
+                            <p style="text-align: left;">
+                        <span class="span" style="color: #21272a; z-index: 1">
+                            Benefit:
+                        </span>
+
+                                <span class="span2" style="color: #21272a; z-index: 1">Streamline crude oil management by compressing idle times and removing bottlenecks
+                        </span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="z-1  py-2 px-5">
+                        <div class="hero-label">
+                            <p style="text-align: left;">
+                        <span class="span" style="color: #21272a; z-index: 1">
+                            Explanation:<br/>
+                        </span>
+                                <span class="span" style="color: #21272a; z-index: 1">
+                            2 months <img style="width: 55px;height: 33px;" src="{{ site.baseurl }}/img/Union.svg"
+                                          alt="Union"/> 15 minutes<br/>
+                        </span>
+                            </p>
+                            <ol class="span2" style="padding-left: 30px;">
+                                <li style="color: #21272a; z-index: 1; text-align: left"> An operator compose the sample
+                                    by
+                                    mixing the crude oil with a reference chemical.
+                                </li>
+                                <li style="color: #21272a; z-index: 1; text-align: left">The acquisition is started via
+                                    the
+                                    GUI.
+                                </li>
+                                <li style="color: #21272a; z-index: 1; text-align: left">The Acquisition is elaborated
+                                    via
+                                    AI Algorithms.
+                                </li>
+                                <li style="color: #21272a; z-index: 1; text-align: left">The crude oil Assay is
+                                    generated.
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--Hero Section-->
+
 
 <!--Articles-->
 {% include articles.html %}
-<!--SupportBy-->
-{% include supportby.html %}
 <!--Engage-->
 {% include engage.html %}
 <!--Footer-->
@@ -48,29 +407,6 @@
 
 <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
 <script>
-	document.addEventListener('DOMContentLoaded', function () {
-		const scrollContainer = document.getElementById('scrollContainer');
-		const progressBar = document.getElementById('scrollProgressBar');
-
-		// Update progress bar as the list is scrolled
-		scrollContainer.addEventListener('scroll', function () {
-			const maxScrollLeft = scrollContainer.scrollWidth - scrollContainer.clientWidth;
-			if (maxScrollLeft > 0) {
-				const scrollLeft = scrollContainer.scrollLeft;
-				const scrollPercentage = (scrollLeft / maxScrollLeft) * 100;
-				progressBar.value = scrollPercentage;
-			}
-		});
-
-		// Scroll the list when the progress bar is dragged
-		progressBar.addEventListener('input', function () {
-			const maxScrollLeft = scrollContainer.scrollWidth - scrollContainer.clientWidth;
-			if (maxScrollLeft > 0) {
-				const scrollLeft = (progressBar.value / 100) * maxScrollLeft;
-				scrollContainer.scrollLeft = scrollLeft;
-			}
-		});
-	});
 
   window.cookieconsent.initialise({
     "palette": {

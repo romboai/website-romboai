@@ -34,65 +34,7 @@
     <link rel="stylesheet" type="text/css"
           href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css"/>
 
-    <script>
-      // function initMap() {
-      //   var mapOptions = {
-      //     center: { lat: 39.2280, lng: 9.0708 }, // San Francisco
-      //     zoom: 12
-      //   };
-      //
-      //   var map = new google.maps.Map(document.getElementById('map'), mapOptions);
-      //   var marker = new google.maps.Marker({
-      //     position: { lat: 39.2280, lng: 9.0708 }, // San Francisco
-      //     map: map,
-      //     title: 'Rombo.ai srl'
-      //   });
-      // }
-      function initMap() {
-        const markerPosition = {lat: 39.2293491, lng: 9.073249};
-
-        const map = new google.maps.Map(document.getElementById("map"), {
-          center: markerPosition,
-          zoom: 10,
-        });
-
-        const marker = new google.maps.Marker({
-          position: markerPosition,
-          map: map,
-          title: "Marker Title",
-        });
-
-        const contentString = `
-                <div id="content" class="px-3">
-<!--                    <h4>Info Window Title</h4>-->
-                    <img src="/img/clip-path-group0.svg" alt="Rombo AI">
-                    <p></p>
-                </div>
-            `;
-
-        const infoWindow = new google.maps.InfoWindow({
-          content: contentString,
-          position: markerPosition, // Set the position of the info window to the marker's position
-        });
-
-        // By default, open the info window and hide the marker
-        infoWindow.open(map);
-        marker.setVisible(false);
-
-        // Show marker when info window is closed
-        infoWindow.addListener("closeclick", () => {
-          marker.setVisible(true);
-        });
-
-        // Hide marker and show info window when marker is clicked
-        marker.addListener("click", () => {
-          marker.setVisible(false);
-          infoWindow.open(map); // Reopen the info window at the marker's position
-        });
-      }
-    </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyChHpq27GKGXwfjc_SxuYnpUHl9PjA2MUw&callback=initMap"
-            async defer></script>
+  
 </head>
 
 
@@ -127,9 +69,6 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto nev-mobile">
                 <li class="nav-item">
-                    <a class="nav-link menu-item text-white" href="/contact">Contact Us</a>
-                </li>
-                <li class="nav-item">
                     <a class="nav-link menu-item text-white" href="/about">About Us</a>
                 </li>
                 <li class="nav-item dropdown">
@@ -144,14 +83,10 @@
                 <li class="nav-item">
                     <a class="nav-link menu-item text-white" href="/blog">Blog</a>
                 </li>
-<!--                <li class="nav-item dropdown">-->
-<!--                    <a class="nav-link dropdown-toggle menu-item text-white" href="/blog" id="navbarDropdownResources" role="button" data-bs-toggle="dropdown" aria-expanded="false">-->
-<!--                        Blog-->
-<!--                    </a>-->
-<!--                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownResources" data-bs-theme="light">-->
-<!--                        <li><a class="dropdown-item menu-item text-white" href="/article">Articles</a></li>-->
-<!--                    </ul>-->
-<!--                </li>-->
+                <li class="nav-item">
+                    <a class="nav-link menu-item text-white" href="/contact">Contact Us</a>
+                </li>
+             
             </ul>
         </div>
     </div>
@@ -159,166 +94,163 @@
 <!-- Menu -->
 
 
-<!--Hero-->
+
 <!--Hero Section-->
 <div class="container-fluid  hero-section">
-    <!-- Video -->
-    <video class="hero-video" autoplay muted loop playsinline controlslist="nodownload">
-        <source src="/img/hero_back_play.mp4" type="video/mp4"/>
-        Your browser does not support the video tag.
-    </video>
+  <!-- Video -->
+  <video class="hero-video" autoplay muted loop playsinline controlslist="nodownload">
+      <source src="/img/hero_back_play.mp4" type="video/mp4"/>
+      Your browser does not support the video tag.
+  </video>
 
-    <!-- Mask Overlay -->
-    <div class="mask"></div>
-    <div class="container custom-container w-100  h-100">
-        <div class="row m-0 w-100  h-100  hero-content-message">
-            <p class="z-1 col-md-6 align-self-center fw-bold text-white text-responsive" style="text-align: left">
-                Revolutionizing Spectral Analysis with Artificial Intelligence
-            </p>
-        </div>
-    </div>
+  <!-- Mask Overlay -->
+  <div class="mask"></div>
+  <div class="container custom-container w-100  h-100">
+      <div class="row m-0 w-100  h-100  hero-content-message">
+          <p class="z-1 col-md-6 align-self-center fw-bold text-white text-responsive" style="text-align: left">
+              Automating Chemical Analysis with Artificial Intelligence
+          </p>
+      </div>
+  </div>
 </div>
 <!--Hero Section-->
+
+
 <div class="container-fluid align-self-end mx-0" style="position: relative;">
   <img class="img-fluid w-100 hero-divider-container" style="bottom:-10px; object-fit: cover; z-index: 1;" src="/img/Separator_Hero.svg" alt="Vector"/>
 </div>
-<!--Intro-->
+
 <!--Intro Section-->
 <div class="container-fluid py-4">
-    <div class="row justify-content-center intro-header">
-        <div class="col-12">
-            <div class="top text-center">
-                <p class="text-wrapper5">WELCOME TO A WORLD OF PRECISION, EFFICIENCY, AND INNOVATION.</p>
-                <p class="text-wrapper6">Unlocking a New Era in Chemical Analysis</p>
-            </div>
-        </div>
-    </div>
-    <div class="row align-items-center">
-        <!-- Left Image (Hidden on Mobile) -->
-        <div class="col-md-1 d-none d-md-block text-start px-0">
-            <img class="img-fluid intro-left" style="padding-right: 21px;" src="/img/livello-1-7.svg"
-                 alt="Left Level">
-        </div>
+  <div class="row justify-content-center intro-header">
+      <div class="col-12">
+          <div class="top text-center">
+              <p class="text-wrapper5">WELCOME TO A WORLD OF PRECISION, EFFICIENCY, AND INNOVATION.</p>
+              <p class="text-wrapper6">Unlocking a New Era in Chemical Analysis</p>
+          </div>
+      </div>
+  </div>
+  <div class="row align-items-center">
+      <!-- Left Image (Hidden on Mobile) -->
+      <div class="col-md-1 d-none d-md-block text-start px-0">
+          <img class="img-fluid intro-left" style="padding-right: 21px;" src="/img/livello-1-7.svg"
+               alt="Left Level">
+      </div>
 
-        <!-- Main Content with Background Image -->
-        <div class="col-md-10 px-0 intro-body">
+      <!-- Main Content with Background Image -->
+      <div class="col-md-10 px-0 intro-body">
 <!--            <img class="img-fluid d-none d-sm-block background-image" src="/img/livello-1-5.svg"-->
 <!--                 alt="Background Level">-->
-            <div class="row text-center w-100">
-                <div class="col-lg-3 col-sm-6 p-5 p-md-2">
-                    <img src="/img/modalit-isolamento-8.svg" alt="Precision Icon">
-                    <p style=" padding-top: 20px">
-                        <span class="text-wrapper28">Precision Redefined</span><br>
-                        <span class="text-wrapper29">Our fusion of </span>
-                        <span class="text-wrapper30">Low Field NMR</span>
-                        <span class="text-wrapper29"> and AI delivers unparalleled accuracy, offering insights beyond traditional methods.</span>
-                    </p>
-                </div>
-                <div class="col-lg-3 col-sm-6 p-5 p-md-2">
-                    <img src="/img/modalit-isolamento-9.svg" alt="Efficiency Icon">
-                    <p style=" padding-top: 20px">
-                        <span class="text-wrapper28">Efficiency and Speed</span><br>
-                        <span class="text-wrapper29">Say goodbye to time-consuming analysis processes. Our solution ensures quicker decision-making and faster time-to-market for your products.</span>
-                        <span class="text-wrapper21"> 115 minutes</span>
-                        <span class="text-wrapper29"> compared to weeks of traditional laboratory analysis.</span>
-                    </p>
-                </div>
-                <div class="col-lg-3 col-sm-6 p-5 p-md-2">
-                    <img src="/img/modalit-isolamento-10.svg"
-                         alt="Understanding Icon">
-                    <p style=" padding-top: 20px">
-                        <span class="text-wrapper28">In-depth Understanding</span><br>
-                        <span class="text-wrapper29">Gain a comprehensive understanding of your product's composition and behavior, empowering data-driven decisions that fuel innovation and enhance quality.</span>
-                    </p>
-                </div>
-                <div class="col-lg-3 col-sm-6 p-5 p-md-2">
-                    <img src="/img/modalit-isolamento-11.svg" alt="Cost Effective Icon">
-                    <p style=" padding-top: 20px">
-                        <span class="text-wrapper28">Cost-Effective Solutions</span><br>
-                        <span class="text-wrapper29">Optimize costs by streamlining analysis processes, reducing manual labor, and eliminating potential errors associated with conventional methods.</span>
-                    </p>
-                </div>
-            </div>
-        </div>
+          <div class="row text-center w-100">
+              <div class="col-lg-3 col-sm-6 p-5 p-md-2">
+                  <img src="/img/modalit-isolamento-8.svg" alt="Precision Icon">
+                  <p style=" padding-top: 20px">
+                      <span class="text-wrapper28">Precision Redefined</span><br>
+                      <span class="text-wrapper29">Our fusion of </span>
+                      <span class="text-wrapper30">Low Field NMR</span>
+                      <span class="text-wrapper29"> and AI delivers unparalleled accuracy, offering insights beyond traditional methods.</span>
+                  </p>
+              </div>
+              <div class="col-lg-3 col-sm-6 p-5 p-md-2">
+                  <img src="/img/modalit-isolamento-9.svg" alt="Efficiency Icon">
+                  <p style=" padding-top: 20px">
+                      <span class="text-wrapper28">Efficiency and Speed</span><br>
+                      <span class="text-wrapper29">Say goodbye to time-consuming analysis processes. Our solution ensures quicker decision-making and faster time-to-market for your products.</span>
+                      <span class="text-wrapper21"> 15 minutes</span>
+                      <span class="text-wrapper29"> compared to weeks of traditional laboratory analysis.</span>
+                  </p>
+              </div>
+              <div class="col-lg-3 col-sm-6 p-5 p-md-2">
+                  <img src="/img/modalit-isolamento-10.svg"
+                       alt="Understanding Icon">
+                  <p style=" padding-top: 20px">
+                      <span class="text-wrapper28">In-depth Understanding</span><br>
+                      <span class="text-wrapper29">Gain a comprehensive understanding of your product's composition and behavior, empowering data-driven decisions that fuel innovation and enhance quality.</span>
+                  </p>
+              </div>
+              <div class="col-lg-3 col-sm-6 p-5 p-md-2">
+                  <img src="/img/modalit-isolamento-11.svg" alt="Cost Effective Icon">
+                  <p style=" padding-top: 20px">
+                      <span class="text-wrapper28">Cost-Effective Solutions</span><br>
+                      <span class="text-wrapper29">Optimize costs by streamlining analysis processes, reducing manual labor, and eliminating potential errors associated with conventional methods.</span>
+                  </p>
+              </div>
+          </div>
+      </div>
 
-        <!-- Right Image (Hidden on Mobile) -->
-        <div class="col-md-1 d-none d-md-block text-end px-0">
-            <img class="img-fluid intro-right" style="padding-left: 21px;" src="/img/livello-1-6.svg"
-                 alt="Right Level">
-        </div>
-    </div>
+      <!-- Right Image (Hidden on Mobile) -->
+      <div class="col-md-1 d-none d-md-block text-end px-0">
+          <img class="img-fluid intro-right" style="padding-left: 21px;" src="/img/livello-1-6.svg"
+               alt="Right Level">
+      </div>
+  </div>
 </div>
 
 <!--Intro Section-->
-<!--Technology-->
+
+
 <!--Technology Section-->
 <section class="container-fluid" style="background: #303767;">
-    <div class="row">
-        <div class="col-12 px-0">
-            <img class="w-100 m-0 p-0 technology-divider-container" style="bottom:-10px; object-fit: cover"
-                 src="/img/Separator_Technology.svg" alt="Vector"/>
-        </div>
-        `
-    </div>
-    <div class="container custom_container">
-        <div class="row">
-            <div class="col-12 py-4">
-                <div class="text-wrapper5 text-uppercase">INCIPIT</div>
-                <div class="secondary-headline">Revolutionary Technology</div>
-            </div>
-        </div>
-        <div class="row py-4">
-            <div class="col-12  technology-body">
-                <div class="col-12 position-absolute text-center" style="top:0; left: 0; right: 0;bottom: 0">
-                    <img class="img-fluid h-100 w-100" src="/img/livello-1-4.svg"
-                         alt="Background Level">
-                    <img class="img-fluid mx-0 d-none d-md-block position-absolute" style="left: 47%;bottom: 4%;"
-                         src="/img/livello-1-8.svg"
-                         alt="Foreground Level">
-                </div>
-                <div class="row d-flex flex-wrap flex-md-nowrap text-left  justify-content-center"
-                >
-                    <div class="z-1 col-md-6">
-                        <div class="paragraf">
-                            <p class="px-5 at-the-core-of-our">
-                                <span class="text-wrapper3">Data-Driven Decision Making:<br></span>
-                                <span class="text-wrapper4">
-                            Empowers operators with precise, comprehensive data for better decision-making in processing and refining operations. (Patent pending)
-                        </span>
-                            </p>
-                        </div>
-                        <img class="img-fluid mx-0" src="/img/forma-5-10.png"
-                             alt="Foreground Level">
-                    </div>
-                    <div class="z-1 col-md-6">
-                        <div class="paragraf">
-                            <p class="px-5 at-the-core-of-our">
-                                <span class="text-wrapper19">At the core of our solutions</span>
-                                <span class="text-wrapper20">
-                                            lies an amalgamation of cutting-edge Low Field NMR (Nuclear Magnetic Resonance) and Artificial Intelligence (AI). This synergy brings a new dimension to product analysis, redefining precision, speed, and depth of insights.&nbsp;<br><br>
-                                        </span>
-                                <span class="text-wrapper19">Low Field NMR:<br></span>
-                                <span class="text-wrapper20">
-                                            Utilising the principles of nuclear-magnetic resonance at lower magnetic field strengths, our technology offers a non-invasive, highly sensitive approach to understand the molecular composition and properties of materials.&nbsp;<br><br>
-                                        </span>
-                                <span class="text-wrapper19">Artificial Intelligence:<br></span>
-                                <span class="text-wrapper20">
-                                            Our proprietary AI algorithms are engineered to interpret and extrapolate vast amounts of data obtained
-                                        </span>
-                                <span class="text-wrapper21">through NMR</span>
-                                <span class="text-wrapper20">
-                                            , enabling quick, accurate, and comprehensive analysis. The AI's learning capabilities continuously enhance the accuracy and depth of our insights.&nbsp;
-                                        </span>
-                            </p>
-                        </div>
-                    </div>
+  <div class="row">
+      <div class="col-12 px-0">
+          <img class="w-100 m-0 p-0 technology-divider-container" style="bottom:-10px; object-fit: cover"
+               src="/img/Separator_Technology.svg" alt="Vector"/>
+      </div>
+      `
+  </div>
+  <div class="container custom_container">
+      <div class="row">
+          <div class="col-12 py-4">
+              <div class="text-wrapper5 text-uppercase">PATENTED</div>
+              <div class="secondary-headline">Revolutionary Technology</div>
+          </div>
+      </div>
+      <div class="row py-4">
+          <div class="col-12  technology-body">
+              <div class="col-12 position-absolute text-center" style="top:0; left: 0; right: 0;bottom: 0">
+                  <img class="img-fluid h-100 w-100" src="/img/livello-1-4.svg"
+                       alt="Background Level">
+                  <img class="img-fluid mx-0 d-none d-md-block position-absolute" style="left: 47%;bottom: 4%;"
+                       src="/img/livello-1-8.svg"
+                       alt="Foreground Level">
+              </div>
+              <div class="row d-flex flex-wrap flex-md-nowrap text-left  justify-content-center"
+              >
+                  <div class="z-1 col-md-6">
+                      <img class="img-fluid mx-0" src="/img/forma-5-10.png"
+                           alt="Foreground Level">
+                  </div>
+                  <div class="z-1 col-md-6">
+                      <div class="paragraf">
+                          <p class="px-5 at-the-core-of-our">
+                              <span class="text-wrapper19">At the core of our solutions</span>
+                              <span class="text-wrapper20">
+                                          lies a mix of cutting-edge Low Field NMR (Nuclear Magnetic Resonance) and Artificial Intelligence (AI). This synergy brings a new dimension to product analysis, redefining precision, speed, and depth of insights.&nbsp;<br><br>
+                                      </span>
+                              <span class="text-wrapper19">Low Field NMR<br></span>
+                              <span class="text-wrapper20">
+                                          Utilising the principles of nuclear-magnetic resonance at lower magnetic field strengths, our technology offers a non-invasive, highly sensitive approach to understand the molecular composition and properties of materials.&nbsp;<br><br>
+                                      </span>
+                              <span class="text-wrapper19">Artificial Intelligence<br></span>
+                              <span class="text-wrapper20">
+                                          Our proprietary AI algorithms are engineered to interpret and extrapolate information from spectral data obtained
+                                      </span>
+                              <span class="text-wrapper21">through NMR</span>
+                              <span class="text-wrapper20">
+                                          - enabling quick, accurate, and comprehensive analysis.&nbsp;
+                                      </span>
+                          </p>
+                      </div>
+                  </div>
 
-                </div>
-            </div>
-        </div>
-    </div>
+              </div>
+          </div>
+      </div>
+  </div>
 </section>
 <!--Technology Section-->
+
+
 <!--Client-->
 <div class="container-fluid  h-100 py-5 my-0" style="position: relative; ">
     <video class="z-n1 position-absolute top-0 start-0 w-100 h-100"
@@ -329,23 +261,31 @@
     <div class="z-1 position-absolute top-0 start-0 w-100 h-100"
          style="mix-blend-mode: screen; background: #fcd8b8;"></div>
     <div class="container custom_container">
-        <div class="d-flex flex-column justify-content-center align-items-center h-100 text-center py-5">
-            <p class="z-1  fw-bold text-wrapper5" style="font-size: 20px; letter-spacing: 1px; line-height: 20px;">
-                PROVEN
-                IMPACT,
-                TRUSTED BY INDUSTRY LEADERS</p>
-            <h2 class="z-1  fw-bold text-dark" style="font-size: 42px; line-height: 46.2px;">Clients and Partners</h2>
-
-            <!-- Image for Medium (md) and up -->
-            <img src="/img/Clients.svg" alt="Image 13" class="z-1 py-2 img-fluid d-none d-md-block">
-
-            <!-- Image for Small (sm) devices only -->
-            <img src="/img/Client2.svg" alt="Image 13"
-                 class="z-1 py-2 img-fluid d-none d-sm-block d-md-none">
-
-            <!-- Image for Extra Small (xs) devices (less than sm) -->
-            <img src="/img/Client3.svg" alt="Image 13" class="z-1 py-2 img-fluid d-block d-sm-none">
-
+        <div class="row">
+            <div class="z-1 col-12  text-center">
+                <p class="z-1  fw-bold text-wrapper5" style="font-size: 20px; letter-spacing: 1px; line-height: 20px;">
+                    PROVEN
+                    IMPACT,
+                    TRUSTED BY INDUSTRY LEADERS</p>
+                <h2 class="z-1  fw-bold text-dark" style="font-size: 42px; line-height: 46.2px;">Clients and Partners</h2>
+            </div>
+        </div>
+        <div class="row justify-content-center align-items-center text-center py-5">
+            <div class="z-1 col-6 col-md-4 col-lg-2 mb-3">
+                <img src="/img/clients/image1.png" alt="Image 1" class="py-2 img-fluid">
+            </div>
+            <div class="z-1 col-6 col-md-4 col-lg-2 mb-3">
+                <img src="/img/clients/image2.png" alt="Image 2" class="py-2 img-fluid">
+            </div>
+            <div class="z-1 col-6 col-md-4 col-lg-2 mb-3">
+                <img src="/img/clients/image3.png" alt="Image 3" class="py-2 img-fluid">
+            </div>
+            <div class="z-1 col-6 col-md-6 col-lg-2 mb-3">
+                <img src="/img/clients/image4.png" alt="Image 4" class="py-2 img-fluid">
+            </div>
+            <div class="z-1 col-8 col-md-6 col-lg-2 mb-3">
+                <img src="/img/clients/image5.png" alt="Image 5" class="py-2 img-fluid">
+            </div>
         </div>
     </div>
 
@@ -407,31 +347,6 @@
                         </a>
                     </div>
                     
-
-                    <!--                    -->
-                    <!--                    <div class="scrollable-item" style="min-width: 300px; margin-right: 20px;">-->
-                    <!--                        <img class="post-image"-->
-                    <!--                             src= "/img/https-www-pexels-com-photo-photo-of-people-doing-handshakes-31-2.png"-->
-                    <!--                             alt="All-In-One Analysis Suite">-->
-                    <!--                        <div class="post-content">-->
-                    <!--                            <div class="date">Sep 02, 2023</div>-->
-                    <!--                            <div class="title">Fully Automated Measure</div>-->
-                    <!--                            <p class="description">Reduce the manual intervention of specialized personnel. Daily laboratory tasks reduced. </p>-->
-                    <!--                        </div>-->
-                    <!--                    </div>-->
-                    <!--                    -->
-                    <!--                    <div class="scrollable-item" style="min-width: 300px; margin-right: 20px;">-->
-                    <!--                        <img class="post-image"-->
-                    <!--                             src= "/img/https-www-pexels-com-photo-two-women-in-front-of-dry-erase-boa-2.png"-->
-                    <!--                             alt="All-In-One Analysis Suite">-->
-                    <!--                        <div class="post-content">-->
-                    <!--                            <div class="date">Aug 23, 2023</div>-->
-                    <!--                            <div class="title">All-In-One Analysis Suite</div>-->
-                    <!--                            <p class="description">Consolidates multiple testing apparatuses into a single, efficient unit, significantly cutting down on equipment expenses and maintenance needs.</p>-->
-                    <!--                        </div>-->
-                    <!--                    </div>-->
-                    <!--                    -->
-                    <!-- Add more items as needed -->
                 </div>
                 <div class="w-100 d-flex justify-content-end  p-3">
                     <a href="/blog">
@@ -447,13 +362,6 @@
 
         </div>
         <!-- Divider Image -->
-        <div class="row py-4"></div>
-        <div class="row py-5 px-2 px-md-5">
-            <div class="d-flex justify-content-center">
-                <input type="range" class="progress-bar" id="scrollProgressBar" value="0" min="0" max="100" step="1"
-                       style="width: 90%; margin-top: 20px;">
-            </div>
-        </div>
     </div>
 </section>
 <!--Articles Section-->
@@ -469,31 +377,36 @@
         <div class="row px-2 py-4 w-100">
             <div class="col-md-4 p-3 p-lg-0">
                 <div class="fw-bold" style="font-size: 20px; letter-spacing: 1px; color: #FE900F;"><a
-                        href="/support"> ROMBO.AI</a></div>
+                        href="/voucher"> ROMBO.AI</a></div>
                 <div class="text-dark fw-bold" style="font-size: 42px; letter-spacing: 0;"><a
-                        href="/support">It supported by</a></div>
+                        href="/voucher">It supported by</a></div>
             </div>
             <div class="z-1 col-md-8 p-3 p-lg-0 text-center">
                 <div class="row justify-content-center align-items-center">
                     <div class="col-12 col-sm-6 col-md-2 mb-3 mb-md-0">
-                        <img src="/img/coesione.png" alt="Coesione" class="img-fluid"
-                             style="max-width: 100%; height: auto; object-fit: contain;">
+                        <a
+                        href="/voucher"><img src="/img/coesione.png" alt="Coesione" class="img-fluid"
+                             style="max-width: 100%; height: auto; object-fit: contain;"></a>
                     </div>
                     <div class="col-12 col-sm-6 col-md-2 mb-3 mb-md-0">
-                        <img src="/img/ue.png" alt="UE" class="img-fluid"
-                             style="max-width: 100%; height: auto; object-fit: contain;">
+                        <a
+                        href="/voucher"><img src="/img/ue.png" alt="UE" class="img-fluid"
+                             style="max-width: 100%; height: auto; object-fit: contain;"></a>
                     </div>
                     <div class="col-12 col-sm-6 col-md-2 mb-3 mb-md-0">
-                        <img src="/img/repubblica.png" alt="Repubblica" class="img-fluid"
-                             style="max-width: 100%; height: auto; object-fit: contain;">
+                        <a
+                        href="/voucher"><img src="/img/repubblica.png" alt="Repubblica" class="img-fluid"
+                             style="max-width: 100%; height: auto; object-fit: contain;"></a>
                     </div>
                     <div class="col-12 col-sm-6 col-md-2 mb-3 mb-md-0">
-                        <img src="/img/regione.png" alt="Regione" class="img-fluid"
-                             style="max-width: 100%; height: auto; object-fit: contain;">
+                        <a
+                        href="/voucher"><img src="/img/regione.png" alt="Regione" class="img-fluid"
+                             style="max-width: 100%; height: auto; object-fit: contain;"></a>
                     </div>
                     <div class="col-12 col-sm-6 col-md-2 mb-3 mb-md-0">
-                        <img src="/img/Logo SR quadrato.png" alt="Logo SR" class="img-fluid"
-                             style="max-width: 100%; height: auto; object-fit: contain;">
+                        <a
+                        href="/voucher"><img src="/img/Logo SR quadrato.png" alt="Logo SR" class="img-fluid"
+                             style="max-width: 100%; height: auto; object-fit: contain;"></a>
                     </div>
                 </div>
             </div>
@@ -510,7 +423,7 @@
         <h2 class="fw-bold py-5 text-white secondary-headline" style="font-size: 42px;">Engage with Rombo AI</h2>
 
         <p class="px-3" style="font-size: 16px;">
-            Ready to transform your analytical processes? Connect with our experts to explore tailored solutions for your business challenges. Reach out to our sales team, schedule a demo, or sign up for our newsletter for the latest insights and updates.
+            Ready to transform your analytical processes? Connect with our experts to explore tailored solutions for your business challenges. Reach out to our sales team or schedule a demo for the latest insights and updates.
         </p>
         <a href="/contact" class="text-decoration-none pt-5">
             <div class="d-flex justify-content-center align-items-center  gap-0">
@@ -544,7 +457,7 @@
                 <div class="col-12 col-md-8">
                     <div class="row m-0 d-flex align-items-center h-100">
                         <p class="footer-text col-10 col-md-10 m-0 text-md-left text-lg-left">
-                            ROMBO.AI© 2024 - Open Campus, 09123 Cagliari |
+                            ROMBO AI © 2024 |
                             <a href="/privacy" style="color:#007bff;">Privacy Policy</a>
                         </p>
                         <!-- Remove col-* classes from the anchor tag to avoid issues with layout -->
@@ -577,29 +490,6 @@
 
 <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
 <script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const scrollContainer = document.getElementById('scrollContainer');
-    const progressBar = document.getElementById('scrollProgressBar');
-
-    // Update progress bar as the list is scrolled
-    scrollContainer.addEventListener('scroll', function () {
-      const maxScrollLeft = scrollContainer.scrollWidth - scrollContainer.clientWidth;
-      if (maxScrollLeft > 0) {
-        const scrollLeft = scrollContainer.scrollLeft;
-        const scrollPercentage = (scrollLeft / maxScrollLeft) * 100;
-        progressBar.value = scrollPercentage;
-      }
-    });
-
-    // Scroll the list when the progress bar is dragged
-    progressBar.addEventListener('input', function () {
-      const maxScrollLeft = scrollContainer.scrollWidth - scrollContainer.clientWidth;
-      if (maxScrollLeft > 0) {
-        const scrollLeft = (progressBar.value / 100) * maxScrollLeft;
-        scrollContainer.scrollLeft = scrollLeft;
-      }
-    });
-  });
 
 
   window.cookieconsent.initialise({
