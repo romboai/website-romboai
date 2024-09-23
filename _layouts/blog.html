@@ -16,11 +16,35 @@
 		</span></span>
 
 {% include menu.html %}
-<!--Hero-->
-{% include hero_blog.html %}
+
+
+<!--Hero Section-->
+<div class="container-fluid hero-blog-section px-0">
+  <div class="hero_contact_mask1" style="z-index: 1;"></div>
+  <div class="hero_contact_mask" style="z-index: 1;"></div>
+  <img src="{{ site.baseurl }}/img/imageHero.png" alt="" class="img-fluid position-absolute"
+       style=" height: 100%; width: 100%; object-fit: cover; left: 0;right:0; z-index: 1; mix-blend-mode: soft-light;">
+
+
+  <div class="container h-100 custom-container">
+      <div class="row mx-0 w-100 h-100 justify-content-center align-content-center text-center">
+          <div class="z-1 col-12 h-100 px-md-4 align-content-center align-items-center titolo-1">
+              <div class="titolo-1-span">
+                  Welcome to RomboAI Blog
+              </div>
+              <div class="span2 py-4">
+                Welcome to Rombo AI Insights: Explore Cutting-Edge AI for Spectral Analysis, 
+                Innovation Trends, and How We're Revolutionizing Laboratory Analysis with 
+                Speed, Precision, and Efficiency.
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+<!--Hero Section-->
+
 {% include hero_divider.html %}
 {% include blog_articles.html %}
-{% include blog_supportby.html %}
 {% include engage.html %}
 
 <!--Footer-->
@@ -41,29 +65,6 @@
 
 <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
 <script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const scrollContainer = document.getElementById('scrollContainer');
-    const progressBar = document.getElementById('scrollProgressBar');
-
-    // Update progress bar as the list is scrolled
-    scrollContainer.addEventListener('scroll', function () {
-      const maxScrollLeft = scrollContainer.scrollWidth - scrollContainer.clientWidth;
-      if (maxScrollLeft > 0) {
-        const scrollLeft = scrollContainer.scrollLeft;
-        const scrollPercentage = (scrollLeft / maxScrollLeft) * 100;
-        progressBar.value = scrollPercentage;
-      }
-    });
-
-    // Scroll the list when the progress bar is dragged
-    progressBar.addEventListener('input', function () {
-      const maxScrollLeft = scrollContainer.scrollWidth - scrollContainer.clientWidth;
-      if (maxScrollLeft > 0) {
-        const scrollLeft = (progressBar.value / 100) * maxScrollLeft;
-        scrollContainer.scrollLeft = scrollLeft;
-      }
-    });
-  });
 
 
   window.cookieconsent.initialise({
