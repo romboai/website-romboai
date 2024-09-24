@@ -1,5 +1,6 @@
 url: rombo-ai.github.io
 title: "Rombo.ai" # the name of your site, e.g. ACME Corp.
+markdown: kramdown
 
 # Engage Section
 engage_main_title: "DISCOVER WHAT AI-DRIVEN SPECTRAL ANALYSIS CAN DO FOR YOU"

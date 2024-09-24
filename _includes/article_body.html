@@ -23,27 +23,9 @@
     <div class="container custom-container">
         <div class="row m-0 w-100 h-100 justify-content-center">
             <div class="col-12 px-4 px-md-5 align-content-center titolo-1" style="max-width: 895px">
-                {% for section in page.contents %}
-                <p>
-                <span class="post_header" style="font-size: 36px;">
-                        {{ section.subtitle }}
-                        <br/>
-                    </span>
-                    <span class="posted_label">
-                        {{ section.text }}
-                    </span>
-                </p>
-                {% if section.list %}
-                <div class="px-5 py-3">
-                    <ul>
-                        {% for item in section.list %}
-                        <li class="fw-bold posted_label text-dark">{{ item }}</li>
-                        {% endfor %}
-                    </ul>
+                <div class="markdown-content">
+                    {{ page.markdown_content | markdownify }}
                 </div>
-                <br/>
-                {% endif %}
-                {% endfor %}
             </div>
         </div>
     </div>
