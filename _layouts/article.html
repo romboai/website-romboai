@@ -16,10 +16,58 @@
 		</span></span>
 
 {% include menu_article.html %}
-{% include article_body.html %}
+
+<div class="container-fluid hero-article-section px-0">
+  <div class="container custom-container">
+      <div class="row m-0 pt-5 w-100 h-100 justify-content-center">
+          <div class="col-12 px-4 px-md-5 py-5 align-content-center titolo-1" style="max-width: 895px">
+              <span class="posted_label">
+                  Posted on {{ page.date | date: "%d %B %Y" }}
+                  <br/>
+              </span>
+              <span class="post_header">
+                  {{ page.title }}
+              </span>
+          </div>
+      </div>
+  </div>
+  {% if page.image %}
+  <div class="container custom_container">
+      <div class="row m-0 p-4 p-md-5">
+          <img src="{{ site.baseurl }}/{{ page.image }}" alt="" class="m-0 p-0 img-fluid border rounded"
+               style="object-fit: cover">
+      </div>
+  </div>
+  {% endif %}
+  <div class="container custom-container">
+      <div class="row m-0 w-100 h-100 justify-content-center">
+          <div class="col-12 px-4 px-md-5 align-content-center titolo-1" style="max-width: 895px">
+              <div class="markdown-content">
+                  {{ page.markdown_content | markdownify }}
+              </div>
+          </div>
+      </div>
+  </div>
+  <div class="container custom-container pt-4">
+      <div class="row m-0 w-100 h-100 justify-content-center">
+          <div class="col-12 px-4 px-md-5 align-content-center titolo-1" style="max-width: 895px">
+
+              <p>
+                  <span class="posted_label" style="font-style: italic">
+                  Posted By:
+                  </span>
+                  <span class="andrew-jonson pt-3">{{ page.author }}</span>
+              </p>
+
+          </div>
+      </div>
+  </div>
+  <div class="container custom-container my-5 py-5"></div>
+</div>
+
+
 {% include hero_article_divider.html %}
 {% include articles.html %}
-{% include blog_supportby.html %}
 {% include engage.html %}
 
 <!--Footer-->
