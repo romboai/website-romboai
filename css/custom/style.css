@@ -1141,6 +1141,7 @@ label.ckb input:checked ~ span.checkmark::after {
     font-weight: bold;
     font-size: 18px;
     margin-bottom: 10px;
+    text-wrap: wrap;
 }
 
 .description {
@@ -1151,6 +1152,55 @@ label.ckb input:checked ~ span.checkmark::after {
     max-width: 100%;
     white-space: normal;
 }
+
+.markdown-content,
+.markdown-content * {
+    box-sizing: border-box;
+}
+.markdown-content {
+    color:  #232536;
+    text-align: left;
+    font-family: "Inter-Regular", sans-serif;
+    font-size:  16px;
+    line-height:  28px;
+    font-weight:  400;
+    position: relative;
+}
+
+.markdown-content h1{
+    color:  #232536;
+    text-align: left;
+    font-family:  "Sen-Bold", sans-serif;
+    font-size:  48px;
+    line-height:  64px;
+    letter-spacing:  -2px;
+    font-weight:  700;
+    position: relative;
+}
+
+.markdown-content p{
+    color:  #6d6e76;
+    text-align: left;
+    font-family: "Inter-Regular", sans-serif;
+    font-size:  16px;
+    line-height:  28px;
+    font-weight:  400;
+    position: relative;
+}
+
+.markdown-content ul , ol{
+    padding: 20px;
+}
+
+.markdown-content li{
+    color:  #232536;
+    text-align: left;
+    font-size:  16px;
+    line-height:  28px;
+    font-weight:  400;
+    position: relative;
+}
+
 
 /*Support By */
 .supportby-divider-container {
