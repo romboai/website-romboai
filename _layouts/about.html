@@ -16,14 +16,97 @@
 		</span></span>
 
 {% include menu.html %}
-<!--Hero-->
-{% include hero_about.html %}
-{% include hero_about_divider.html %}
-{% include about_history.html %}
-{% include about_history_divider1.html %}
-<!--{% include hero_about_divider.html %}-->
+
+
+<!--Hero Section-->
+<div class="container-fluid hero-about-section">
+  <!-- Video -->
+  <video class="hero-video" autoplay muted loop playsinline controlslist="nodownload">
+      <source src="{{ site.baseurl }}/img/hero_back_play.mp4" type="video/mp4"/>
+      Your browser does not support the video tag.
+  </video>
+
+  <!-- Mask Overlay -->
+  <div class="mask"></div>
+  <div class="container custom-container pt-5">
+      <div class="row m-0 py-5 hero-content-message">
+          <p class="z-1 col-12 align-self-center text-white text-responsive" style="text-align: left">
+              We are Rombo
+          </p>
+      </div>
+      <div class="row p-5 "></div>
+  </div>
+</div>
+
+
+<div class="container-fluid align-self-end" style="position: relative;">
+  <img class="img-fluid w-100 hero-divider-container" style="bottom:-3px; object-fit: cover; z-index: 1;" src="{{ site.baseurl }}/img/Separator_Hero.svg" alt="Vector"/>
+</div>
+
+<!--Values Section-->
+
+<div class="container-fluid h-100 py-5 my-0" style="position: relative;">
+  <video class="z-n1 position-absolute top-0 start-0 w-100 h-100"
+         style="object-fit: cover;" autoPlay muted loop playsinline controlslist="nodownload">
+      <source src="{{ site.baseurl }}/img/hero_white_play.mp4" type="video/mp4"/>
+      Your browser does not support the video tag.
+  </video>
+  <div class="z-1 position-absolute top-0 start-0 w-100 h-100" style="mix-blend-mode: screen; background: #fcd8b8;"></div>
+  <div class="container custom-container p-3 p-md-5">
+      <div class="row">
+          <div class="z-1 col-12 py-5 px-4">
+              <div class="z-1 text-wrapper5 text-uppercase" style="color: #001d6c">The Team
+              </div>
+              <div class="z-1 secondary-headline pt-2" style="color: #21272a"> Committed to Excellence</div>
+          </div>
+      </div>
+      <div class="row">
+          <div class="z-1 col-md-12 px-3 px-sm-5">
+              <div class="hero-label">
+                  <p style="text-align: left;">
+                      <span class="span2" style="color: #21272a; z-index: 1"> 
+                        At Rombo AI, we are committed to excellence in everything we do. Our culture thrives on innovation, creativity, and pushing boundaries, guided by one core principle: there are no rules. We believe that fostering an open and flexible environment enables our team to think outside the box, challenge the status quo, and deliver groundbreaking solutions. </span>
+                  </p>
+              </div>
+          </div>
+      </div>
+      <div class="row">
+          <div class="z-1 col-md-12 px-3 px-sm-5">
+              <div class="hero-label">
+                  <p style="text-align: left;">
+                      <span class="span2" style="color: #21272a; z-index: 1">
+                        Our "no rules rule" approach empowers every individual to take ownership, experiment, and grow. We prioritize trust, collaboration, and autonomy, allowing our team the freedom to innovate without unnecessary bureaucracy. This culture of freedom and responsibility drives us to consistently achieve outstanding results, while maintaining agility in a rapidly changing industry.
+                      </span>
+                      </p>
+              </div>
+          </div>
+      </div>
+      <div class="row">
+          <div class="z-1 col-md-12 px-3 px-sm-5">
+              <div class="hero-label">
+                  <p style="text-align: left;">
+
+                      <span class="span2" style="color: #21272a; z-index: 1">At Rombo AI, we value bold ideas, diverse perspectives, and a relentless pursuit of excellence. By embracing a mindset of continuous learning and improvement, we are creating an environment where creativity flourishes and where everyone is encouraged to contribute to the company’s success.
+
+                      </span>
+                  </p>
+              </div>
+          </div>
+      </div>
+      <div class="row">
+          <div class="z-1 col-md-12 px-3 px-sm-5 pb-5">
+              <div class="hero-label">
+                  <p style="text-align: left;">
+                      <span class="span2" style="color: #21272a; z-index: 1">We’re not just building technology—we’re building a culture of innovation that drives the future of Chemical Analysis analysis.</span>
+                  </p>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
 {% include about_map.html %}
-{% include about_supportby.html %}
+{% include client.html %}
 {% include engage.html %}
 <!--Footer-->
 {% include footer.html %}
