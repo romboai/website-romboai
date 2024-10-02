@@ -198,7 +198,7 @@
 /* small screen :320px. */
 @media (max-width: 767px) {
     .text-responsive {
-        font-size: 54px; /* Medium screens (tablets) */
+        font-size: 45px; /* Medium screens (tablets) */
     }
 
     .hero-area {
