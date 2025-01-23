@@ -1225,6 +1225,12 @@ label.ckb input:checked ~ span.checkmark::after {
     color: #cccccc; /* Lighter color when focused */
     opacity: 1;
 }
+
+.text-highlight{
+    /*background: linear-gradient(40deg, #242b5e 29.85%, #050533 93.79%);*/
+    background: linear-gradient(79deg, #242b5e 29.85%, #050533 93.79%);
+}
+
 .hero-contact-section {
     position: relative;
     text-align: center;
