@@ -903,7 +903,7 @@ label.ckb input:checked ~ span.checkmark::after {
 
 .hero-content-message {
     font-size: 69px;
-    line-height: 1.1;
+    line-height: initial;
     font-weight: 600;
 
 }
