@@ -903,7 +903,7 @@ label.ckb input:checked ~ span.checkmark::after {
 
 .hero-content-message {
     font-size: 69px;
-    line-height: initial;
+    line-height: inherit;
     font-weight: 600;
 
 }
@@ -1228,7 +1228,9 @@ label.ckb input:checked ~ span.checkmark::after {
 
 .text-highlight{
     /*background: linear-gradient(40deg, #242b5e 29.85%, #050533 93.79%);*/
-    background: linear-gradient(79deg, #242b5e 29.85%, #050533 93.79%);
+    /*background: linear-gradient(79deg, #242b5e 29.85%, #050533 93.79%);*/
+    background: #2F3666;
+    padding: 5px;
 }
 
 .hero-contact-section {
