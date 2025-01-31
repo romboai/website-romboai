@@ -344,55 +344,27 @@
         integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
         crossorigin="anonymous"></script>
 <script src="/js/main.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 
 <script>
+  const markerPosition = [39.2293491,  9.073249];
+  var osmUrl = 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
+    osmAttrib = '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+    osm = L.tileLayer(osmUrl, {maxZoom: 11, attribution: osmAttrib});
 
-  function initMap() {
-    const markerPosition = {lat: 39.2293491, lng: 9.073249};
-
-    const map = new google.maps.Map(document.getElementById("map"), {
-      center: markerPosition,
-      zoom: 10,
-    });
-
-    const marker = new google.maps.Marker({
-      position: markerPosition,
-      map: map,
-      title: "Marker Title",
-    });
-
-    const contentString = `
-            <div id="content" class="px-3">
-<!--                    <h4>Info Window Title</h4>-->
-                <img src="/img/clip-path-group0.svg" alt="Rombo AI">
-                <p></p>
-            </div>
-        `;
-
-    const infoWindow = new google.maps.InfoWindow({
-      content: contentString,
-      position: markerPosition, // Set the position of the info window to the marker's position
-    });
-
-    // By default, open the info window and hide the marker
-    infoWindow.open(map);
-    marker.setVisible(false);
-
-    // Show marker when info window is closed
-    infoWindow.addListener("closeclick", () => {
-      marker.setVisible(true);
-    });
-
-    // Hide marker and show info window when marker is clicked
-    marker.addListener("click", () => {
-      marker.setVisible(false);
-      infoWindow.open(map); // Reopen the info window at the marker's position
-    });
-  }
+  var map = L.map('map').setView(markerPosition, 15).addLayer(osm);
+  const contentString = `
+              <div id="content" style="width: 200px;">
+                  <img src="/img/clip-path-group0.svg" alt="Rombo AI">
+                  <p></p>
+             </div>
+         `;
+  L.marker(markerPosition)
+    .addTo(map)
+    .bindPopup(contentString)
+    .openPopup();
 </script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyChHpq27GKGXwfjc_SxuYnpUHl9PjA2MUw&callback=initMap"
-        async defer></script>
-
 
 <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
 <script>
