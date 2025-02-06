@@ -1156,11 +1156,11 @@ label.ckb input:checked ~ span.checkmark::after {
 .markdown-content,
 .markdown-content * {
     box-sizing: border-box;
+    font-family: "Roboto", Helvetica;
 }
 .markdown-content {
     color:  #232536;
     text-align: left;
-    font-family: "Inter-Regular", sans-serif;
     font-size:  16px;
     line-height:  28px;
     font-weight:  400;
