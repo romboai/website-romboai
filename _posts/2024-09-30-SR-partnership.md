@@ -3,7 +3,7 @@ layout: article
 permalink: /blog/sardegna-ricerche-partnership/
 title: "Esplorazione delle Potenzialità della Spettroscopia NMR nel Settore delle Energie Rinnovabili"
 date: "2024-09-30"
-image: "img/blog/partnership.jp2"
+image: "img/blog/partnership.jpg"
 markdown_content: |
   ### Esplorazione delle Potenzialità della Spettroscopia NMR nel Settore delle Energie Rinnovabili
 
