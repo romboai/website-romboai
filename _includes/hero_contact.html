@@ -139,30 +139,57 @@ document.addEventListener('DOMContentLoaded', function() {
     msgDiv.style.position = 'relative';
     msgDiv.style.zIndex = '10';
     msgDiv.innerHTML = `
-      <div class="bg-white border border-secondary rounded-3 shadow p-4 text-center text-dark" style="max-width: 420px; width: 100%;">
-        <div class="mb-4">
-          <svg width="64" height="64" viewBox="0 0 24 24" fill="none" aria-hidden="true" class="mx-auto mb-3">
-            <path d="M9 12L11 14L15 10M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="#28a745" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </div>
-        <h2 class="h3 mb-3 text-success fw-bold">Thank you for contacting us!</h2>
-        <p class="mb-3 text-muted">Your message has been received successfully.</p>
-        <p class="mb-4 text-muted">You will be redirected to our booking page shortly.</p>
-        <div class="border-top pt-3">
-          <p class="small text-muted mb-2">If you are not redirected automatically:</p>
-          <a id="calendly-link" href="${calendlyUrl}" target="_blank" rel="noopener" class="btn btn-outline-primary btn-sm">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true" class="me-2">
-              <path d="M8 12H16M12 8V16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <div class="card-body text-center">
+            <div class="mb-4">
+            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" aria-hidden="true" class="mx-auto mb-3">
+                <path d="M9 12L11 14L15 10M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="#28a745" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
-            Book a Meeting
-          </a>
+            </div>
+            <h2 class="h3 mb-3 fw-bold text-success">
+            Thank you for contacting us!<br>
+            <span style="display: block; font-weight: normal; margin-top: 0.75rem; color: black; font-size: 1.2rem;">
+                Your message has been received successfully.
+            </span>
+            <span style="display: block; font-weight: normal; margin-top: 0.3rem; color: black; font-size: 1rem; font-style: italic;">
+                You will be redirected to our booking page shortly.
+            </span>
+            <span id="countdown-timer" style="display: block; font-weight: normal; margin-top: 0.3rem; color: #FE900F; font-size: 1rem; font-style: italic;">
+                Redirecting in 3 seconds...
+            </span>
+            <span style="display: block; font-weight: normal; margin-top: 0.3rem; color: black; font-size: 1rem; font-style: italic;">
+                If not, please click the <strong>Book a Meeting</strong> button below.
+            </span>
+            </h2>
+
+
+            <div class="border-top pt-3">
+            <p class="small text-muted mb-2">If you are not redirected automatically:</p>
+            <a id="calendly-link" href="${calendlyUrl}" target="_blank" rel="noopener" class="btn btn-outline-primary btn-sm d-inline-flex align-items-center">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true" class="me-2">
+                <path d="M8 12H16M12 8V16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                Book a Meeting
+            </a>
+            </div>
         </div>
-      </div>
     `;
     parent.insertBefore(msgDiv, form.nextSibling);
     setTimeout(function() {
       window.location.href = calendlyUrl;
     }, redirectDelay);
+
+    // Countdown logic
+    var countdown = 3;
+    var countdownSpan = msgDiv.querySelector('#countdown-timer');
+    var countdownInterval = setInterval(function() {
+      countdown--;
+      if (countdownSpan) {
+        countdownSpan.textContent = `Redirecting in ${countdown} second${countdown !== 1 ? 's' : ''}...`;
+      }
+      if (countdown <= 0) {
+        clearInterval(countdownInterval);
+      }
+    }, 1000);
   }
 });
 </script>
