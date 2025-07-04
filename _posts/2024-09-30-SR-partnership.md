@@ -26,5 +26,5 @@ markdown_content: |
   In sintesi, l’iniziativa congiunta tra **Rombo AI** e **Sardegna Ricerche** rappresenta un passo importante verso l’applicazione pratica della spettroscopia NMR per la transizione energetica, con l’obiettivo di migliorare la sostenibilità e l’efficienza nei processi legati alle energie rinnovabili."
 
 author: "Andrea"
-excerpt: "Partnerhip con il cluster delle energie rinnovabili per l'esplorazione delle Potenzialità della Spettroscopia NMR..."
+excerpt: "Partnership con il cluster delle energie rinnovabili per l'esplorazione delle Potenzialità della Spettroscopia NMR..."
 ---
