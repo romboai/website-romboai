@@ -17,7 +17,7 @@ markdown_content: |
 
   - Data Collection and Preparation: A simple and intuitive interface allows users to import and organize spectroscopic data, making the preparation process fast and hassle-free. 
   - Custom Configuration: Users can customize every aspect of the model, from preprocessing to selecting predictive variables and parameter optimization, to create tailored solutions. 
-  - NMR Integration: SpectraML is designed to integrate seamlessly with NMR data, providing reliable and high-precision results directly from Nuclear Magnetic Resonance analyses. 
+  - NMR Integration: SpectraML is designed to integrate seamlessly with NMR data, providing reliable and high-precision results directly from Nuclear Magnetic Resonance analysis. 
 
   #### An Integrated Workflow to Accelerate Innovation 
 
@@ -28,7 +28,7 @@ markdown_content: |
   - Evaluation and Comparison: Comparative analysis between models to identify the most effective configuration. 
   - Deployment: Fast and secure deployment, with results immediately usable.
 
-  SpectraML also integrates well-established chemometric techniques such as PCA (Principal Component Analysis) and PLS (Partial Least Squares). This integration allows the combination of the strengths of traditional methodologies with the advanced capabilities of Machine Learning, offering a more comprehensive and effective approach to data analysis. However, machine learning has made great strides, as evidenced by the impact of Large Language Models and GPT. There is an ongoing technological revolution that makes classical chemometrics obsolete. Neural networks, deep learning, transformers, and Large Language Models (LLMs) applied to chemistry today ensure unprecedented performance. SpectraML enables the integration of these new algorithms and models to ensure maximum accuracy in the characterization of complex substances. 
+  SpectraML also integrates well-established chemometric techniques such as PCA (Principal Component Analysis) and PLS (Partial Least Squares). This integration allows the combination of the strengths of traditional methodologies with the advanced capabilities of Machine Learning, offering a more comprehensive and effective approach to data analysis. However, Machine Learning has made great strides, as evidenced by the impact of Large Language Models and GPT. There is an ongoing technological revolution that makes classical chemometrics obsolete. Neural networks, deep learning, transformers, and Large Language Models (LLMs) applied to chemistry today ensure unprecedented performance. SpectraML enables the integration of these new algorithms and models to ensure maximum accuracy in the characterization of complex substances. 
 
   #### The Democratization of Machine Learning 
 
@@ -41,8 +41,8 @@ markdown_content: |
   #### Process Optimization: 
   Rapid identification of key parameters to improve operational efficiency and reduce waste. 
   #### Predictive Analysis: 
-  Accurate prediction of chemical properties from spectroscopic data, thereby improving data-driven decision making. 
+  Accurate prediction of chemical properties from spectroscopic data, thereby improving data-driven decision-making. 
 
 author: "Raffaele Taglialatela"
-excerpt: "SpectraML breaks down barriers to Machine Learning adoption with its low-code/no-code approach. Designed for R&D teams, it simplifies data preparation, model training, and deployment—enabling faster innovation and the creation of custom solutions tailored to your needs...."
+excerpt: "SpectraML breaks down barriers to Machine Learning adoption with its low-code/no-code approach. Designed for R&D teams, it simplifies data preparation, model training, and deployment—enabling faster innovation and the creation of custom solutions tailored to your needs."
 ---

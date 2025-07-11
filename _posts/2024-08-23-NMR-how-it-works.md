@@ -15,17 +15,17 @@ markdown_content: |
     - **Efficient:** The technique is fast, providing results within minutes, making it ideal for real-time monitoring of processes like crude oil refinement.
 
   # Machine Learning and Sample Characterization
-  Incorporating machine learning into low-field NMR significantly enhances its capabilities, especially for complex sample characterization. Machine learning algorithms are designed to analyze large datasets and detect patterns that are often too complex for traditional methods.
+  Incorporating Machine Learning into low-field NMR significantly enhances its capabilities, especially for complex sample characterization. Machine Learning algorithms are designed to analyze large datasets and detect patterns that are often too complex for traditional methods.
   ##### Data Processing:
-  Machine learning models, such as Partial Least Squares (PLS) and convolutional neural networks (CNN), can be trained on NMR spectral data to recognize patterns and make predictions. For example, in the case of crude oil, these models can infer physical and chemical properties like density, viscosity, sulfur content, and the presence of heavy metal. 
+  Machine Learning models, such as Partial Least Squares (PLS) and convolutional neural networks (CNN), can be trained on NMR spectral data to recognize patterns and make predictions. For example, in the case of crude oil, these models can infer physical and chemical properties like density, viscosity, sulfur content, and the presence of heavy metal. 
   ##### Real-Time Monitoring:
-  Machine learning enables real-time analysis of samples, allowing industries to monitor production processes efficiently. For example, in refining, AI can detect deviations in product quality or process efficiency based on the continuous NMR data, enabling operators to make timely adjustments​.
+  Machine Learning enables real-time analysis of samples, allowing industries to monitor production processes efficiently. For example, in refining, AI can detect deviations in product quality or process efficiency based on the continuous NMR data, enabling operators to make timely adjustments​.
   ##### Automation and Precision:
-  By automating the interpretation of NMR spectra, machine learning reduces the need for specialized personnel, decreases the risk of human error, and improves the precision of the analysis. Models can provide detailed reports in as little as 10-15 minutes, compared to traditional lab analysis, which could take weeks​. 
+  By automating the interpretation of NMR spectra, Machine Learning reduces the need for specialized personnel, decreases the risk of human error, and improves the precision of the analysis. Models can provide detailed reports in as little as 10-15 minutes, compared to traditional lab analysis, which could take weeks​. 
   ##### Predictive Maintenance and Cost Reduction:
   AI models can predict equipment failures or process inefficiencies before they escalate, reducing downtime and operational costs​."
 
 
 author: "Andrea Zanda"  
-excerpt: "Nuclear Magnetic Resonance (NMR) is a powerful analytical technique used to determine the molecular structure and composition of various substances. By combining with Machine Learning techniques, you can transform in a Super NMR with additional capabilities."
+excerpt: "Nuclear Magnetic Resonance (NMR) is a powerful analytical technique used to determine the molecular structure and composition of various substances. By combining with Machine Learning techniques, you can transform it into a Super NMR with additional capabilities."
 ---
