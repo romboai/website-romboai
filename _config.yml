@@ -1,7 +1,7 @@
 url: rombo-ai.github.io
 
-#baseurl: www.rombo.ai
-baseurl: ""
+baseurl: www.rombo.ai
+#baseurl: ""
 title: "Rombo AI" # the name of your site, e.g. ACME Corp.
 markdown: kramdown
 # Engage Section
