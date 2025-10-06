@@ -6,11 +6,15 @@ date: "2024-09-20"
 image: "img/blog/ml-for-crude.webp"
 markdown_content: |
 
-    In the oil industry, understanding the properties of crude oil is essential for refining, quality control, and maximizing production efficiency. Traditionally, this has involved complex and time-consuming laboratory methods. However, recent advancements in low-field Nuclear Magnetic Resonance (NMR) spectroscopy, combined with Machine Learning, offer a fast, non-destructive, and cost-effective alternative for analyzing crude oil. At our company, we leverage this innovative approach to predict a wide range of physical and chemical properties, including the critical distillation yields, transforming how crude oil characterization is performed.
+    In the oil industry, understanding the properties of crude oil is essential for refining, quality control, and maximizing production efficiency. Traditionally, this has involved complex and time-consuming laboratory methods.
+
+    However, recent advancements in low-field Nuclear Magnetic Resonance (NMR) spectroscopy, combined with Machine Learning, offer a fast, non-destructive, and cost-effective alternative for analyzing crude oil. At our company, we leverage this innovative approach to predict a wide range of physical and chemical properties, including the critical distillation yields, transforming how crude oil characterization is performed.
 
     ## The Role of Low-Field NMR in Crude Oil Analysis
 
-    Low-field NMR spectroscopy measures the magnetic properties of atomic nuclei, providing information about the molecular environment in crude oil. Unlike high-field NMR instruments, which are used for detailed molecular structure analysis, low-field NMR is simpler, more affordable, and ideal for routine analysis. It provides a rich dataset that reflects the chemical composition and physical characteristics of crude oil.
+    Low-field NMR spectroscopy measures the magnetic properties of atomic nuclei, providing information about the molecular environment in crude oil. Unlike high-field NMR instruments, which are used for detailed molecular structure analysis, low-field NMR is simpler, more affordable, and ideal for routine analysis.
+
+    It provides a rich dataset that reflects the chemical composition and physical characteristics of crude oil.
 
     ### Why We Use Low-Field NMR
 
@@ -20,7 +24,9 @@ markdown_content: |
 
     ## How We Predict Crude Oil Properties Using NMR and Machine Learning
 
-    Low-field NMR spectra contain complex information about the molecular dynamics of crude oil. By applying our expertise in Machine Learning, we correlate these spectral patterns with various key properties relevant to refining and processing. Our models, trained on extensive NMR datasets, allow us to make accurate predictions about new crude oil samples.
+    Low-field NMR spectra contain complex information about the molecular dynamics of crude oil. By applying our expertise in Machine Learning, we correlate these spectral patterns with various key properties relevant to refining and processing.
+
+    Our models, trained on extensive NMR datasets, allow us to make accurate predictions about new crude oil samples.
 
     ### Key Properties We Predict Using Low-Field NMR and Machine Learning
 
@@ -34,13 +40,15 @@ markdown_content: |
 
     5. **Asphaltene Content**: Asphaltenes pose operational challenges during refining, such as clogging and residue formation. By utilizing low-field NMR and Machine Learning, we estimate the asphaltene content in crude oils, helping us anticipate potential processing issues and take early action to mitigate them.
 
-    6. **Distillation Yields**: One of the most valuable applications of our technology is predicting distillation yields—the proportions of gasoline, diesel, kerosene, and other products obtained from refining. Traditional methods like True Boiling Point (TBP) analysis are labor-intensive and require large sample volumes. In contrast, our low-field NMR systems, combined with advanced Machine Learning models, enable us to predict the distillation behavior of crude oils rapidly. This allows us to optimize processing conditions and blend stocks efficiently, maximizing product yields and refining profitability.
+    6. **Distillation Yields**: One of the most valuable applications of our technology is predicting distillation yields—the proportions of gasoline, diesel, kerosene, and other products obtained from refining. Traditional methods like True Boiling Point (TBP) analysis are labor-intensive and require large sample volumes.
+
+    In contrast, our low-field NMR systems, combined with advanced Machine Learning models, enable us to predict the distillation behavior of crude oils rapidly. This allows us to optimize processing conditions and blend stocks efficiently, maximizing product yields and refining profitability.
 
     7. **And Many More**: The versatility of low-field NMR combined with Machine Learning allows us to predict numerous other properties, such as sulfur content, pour point, flash point, and cetane number. By developing specialized models, we continue to expand the range of properties we can predict, providing comprehensive crude oil characterization.
 
     ### How Our Technology is Making an Impact
 
-    Through our expertise in low-field NMR and Machine Learning, we have successfully deployed predictive models that offer rapid and accurate analysis of crude oil properties. Here’s how our technology is making a difference:
+    Through our expertise in low-field NMR and Machine Learning, we have successfully deployed predictive models that offer rapid and accurate analysis of crude oil properties. Here's how our technology is making a difference:
 
     - **Viscosity and Density Prediction**: In our work with a major refinery, we utilized low-field NMR measurements to predict the viscosity and density of various crude oil samples. By training our Machine Learning models on a diverse dataset of NMR spectra, we provided fast and reliable property predictions. This allowed the refinery to adjust processing conditions in real-time, avoiding lengthy laboratory testing and enhancing operational efficiency.
 
@@ -48,13 +56,15 @@ markdown_content: |
 
     - **Asphaltene Content Estimation**: To address refining challenges posed by asphaltenes, we have developed a robust NMR-based model for estimating asphaltene content in crude oils. This early prediction allows us to identify crude oils that might present refining issues, enabling preemptive measures to ensure smoother processing and reduce downtime.
 
-    - **Predicting Distillation Yields**: One of our most significant achievements is using low-field NMR to predict the distillation yields of crude oil. By analyzing the spectral data, our Machine Learning models estimate the yields of various fractions, such as gasoline, diesel, and jet fuel. This prediction informs our blending decisions and process adjustments, ensuring that we optimize the refining process for maximum profitability. By integrating this technology into our workflow, we have streamlined crude oil evaluation and increased the efficiency of our operations.
+    - **Predicting Distillation Yields**: One of our most significant achievements is using low-field NMR to predict the distillation yields of crude oil. By analyzing the spectral data, our Machine Learning models estimate the yields of various fractions, such as gasoline, diesel, and jet fuel.
+
+    This prediction informs our blending decisions and process adjustments, ensuring that we optimize the refining process for maximum profitability. By integrating this technology into our workflow, we have streamlined crude oil evaluation and increased the efficiency of our operations.
 
     ## The Future of Low-Field NMR and Machine Learning in Crude Oil Analysis
 
-    The combination of low-field NMR and Machine Learning is transforming crude oil analysis. Our rapid, non-destructive approach allows for a broad range of property predictions that streamline refining operations and enhance resource management. As we continue to advance this technology, we expect even greater precision and utility in predicting crude oil characteristics, from viscosity to distillation yields.
+    The combination of low-field NMR and Machine Learning is transforming crude oil analysis. Our rapid, non-destructive approach allows for a broad range of property predictions that streamline refining operations and enhance resource management.
 
-    By embracing low-field NMR and Machine Learning, we are not only improving our operational efficiency but also setting new standards for crude oil analysis in the industry."
+    As we continue to advance this technology, we expect even greater precision and utility in predicting crude oil characteristics, from viscosity to distillation yields. By embracing low-field NMR and Machine Learning, we are not only improving our operational efficiency but also setting new standards for crude oil analysis in the industry.
 
 author: "Carmine Mattia, CTO"  
 excerpt: "In the oil industry, understanding the properties of crude oil is essential for refining, quality control, and maximizing production efficiency. Traditionally, this has involved complex and time-consuming laboratory methods. However, recent advancements in low-field Nuclear Magnetic Resonance (NMR) spectroscopy, combined with machine "
