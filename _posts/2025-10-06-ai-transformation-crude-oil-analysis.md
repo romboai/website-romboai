@@ -60,6 +60,6 @@ markdown_content: |
 
   **Discover more about our solutions and how we can help you innovate by [contacting us](/contact/){: .button}**
 
-author: "Silvia Bonfiglio"
+author: "Silvia Bongiovanni"
 excerpt: "The Oil & Gas industry is embracing AI for crude oil analysis. Discover how Rombo AI combines NMR spectroscopy with machine learning to deliver real-time, precise analysis that transforms traditional laboratory bottlenecks into competitive advantages."
 ---
