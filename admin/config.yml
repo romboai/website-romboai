@@ -1,0 +1,30 @@
+backend:
+  name: github
+  repo: romboai/website-romboai # Your GitHub repository (owner/repo-name)
+  branch: main # Branch to update
+  # Note: For authentication to work, you need to set up Netlify auth proxy
+  # See CMS_SETUP.md for instructions
+  # For now, authentication won't work locally until Netlify is configured
+  base_url: https://api.netlify.com
+  auth_endpoint: auth
+
+# Uncomment below to enable drafts
+# publish_mode: editorial_workflow
+
+media_folder: "img/blog" # Media files will be stored in the repo under img/blog
+public_folder: "/img/blog" # The src attribute for uploaded media will begin with /img/blog
+
+collections:
+  - name: "blog" # Used in routes, e.g., /admin/collections/blog
+    label: "Blog Posts"
+    folder: "_posts" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - {label: "Layout", name: "layout", widget: "hidden", default: "article"}
+      - {label: "Permalink", name: "permalink", widget: "string", required: false, hint: "e.g., /blog/my-article-title/"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DD", required: false}
+      - {label: "Featured Image", name: "image", widget: "image", required: false, media_library: {config: {multiple: false}}}
+      - {label: "Body", name: "markdown_content", widget: "markdown"}
+

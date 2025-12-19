@@ -1,7 +1,7 @@
 url: rombo-ai.github.io
 
-baseurl: rombo.ai
-#baseurl: ""
+#baseurl: rombo.ai
+baseurl: ""  # Empty for local development, set to "rombo.ai" for production
 title: "Rombo AI" # the name of your site, e.g. ACME Corp.
 markdown: kramdown
 # Engage Section
@@ -14,3 +14,7 @@ permalink: :title/
 sass:
   sass_dir: _sass
   style:    compressed
+
+# Include admin folder for CMS
+include:
+  - admin
