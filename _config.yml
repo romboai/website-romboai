@@ -1,7 +1,7 @@
 url: rombo-ai.github.io
 
-#baseurl: rombo.ai
-baseurl: ""  # Empty for local development, set to "rombo.ai" for production
+baseurl: rombo.ai
+#baseurl: ""  # Empty for local development, set to "rombo.ai" for production
 title: "Rombo AI" # the name of your site, e.g. ACME Corp.
 markdown: kramdown
 # Engage Section
