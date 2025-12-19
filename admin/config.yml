@@ -6,7 +6,7 @@ backend:
   # See CMS_SETUP.md for instructions
   # For now, authentication won't work locally until Netlify is configured
   base_url: https://api.netlify.com
-  auth_endpoint: auth
+  auth_type: implicit
 
 # Uncomment below to enable drafts
 # publish_mode: editorial_workflow
