@@ -1,6 +1,12 @@
 backend:
-  name: git-gateway
-  branch: main # Branch to update (optional; defaults to master)
+  name: github
+  repo: romboai/website-romboai # Your GitHub repository (owner/repo-name)
+  branch: main # Branch to update
+  # Note: For authentication to work, you need to set up Netlify auth proxy
+  # See CMS_SETUP.md for instructions
+  # For now, authentication won't work locally until Netlify is configured
+  base_url: https://api.netlify.com
+  auth_endpoint: auth
 
 # Uncomment below to enable drafts
 # publish_mode: editorial_workflow
