@@ -12,7 +12,10 @@ backend:
 # publish_mode: editorial_workflow
 
 media_folder: "img/blog" # Media files will be stored in the repo under img/blog
-public_folder: "/img/blog" # The src attribute for uploaded media will begin with /img/blog
+# public_folder will be relative to baseurl - adjust if needed for your setup
+# For custom domain (rombo.ai) at root, use "/img/blog"
+# For GitHub Pages subdirectory, use "/rombo.ai/img/blog" 
+public_folder: "/img/blog"
 
 collections:
   - name: "blog" # Used in routes, e.g., /admin/collections/blog
