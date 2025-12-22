@@ -1,6 +1,6 @@
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17223867024"></script>
+    <!-- Google tag (gtag.js) - GA4 + Google Ads -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HNBF12R3GQ"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
 
@@ -10,6 +10,9 @@
 
       gtag('js', new Date());
 
+      // Google Analytics 4
+      gtag('config', 'G-HNBF12R3GQ');
+      // Google Ads
       gtag('config', 'AW-17223867024');
     </script>
 
@@ -31,12 +34,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
 
-
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="{{ site.baseurl }}/css/custom/style.css">
 
-    <title>{{ page.title }} - {{ site.title }}</title>
+    {%- assign seo_title = page.seo_title | default: page.title | default: site.title -%}
+    {%- assign meta_description = page.description | default: page.excerpt | default: site.description -%}
+    {%- assign meta_description = meta_description | strip_html | strip_newlines | replace: '  ', ' ' | truncate: 160 -%}
+    {%- assign canonical_url = page.url | absolute_url -%}
+    {%- assign og_image = page.og_image | default: page.image | default: site.og_image -%}
+    {%- assign og_image = og_image | absolute_url -%}
+    {%- assign robots = page.robots | default: "index,follow" -%}
+
+    <title>{{ seo_title }}{% unless seo_title contains site.title %} | {{ site.title }}{% endunless %}</title>
+    <meta name="description" content="{{ meta_description }}">
+    <meta name="robots" content="{{ robots }}">
+    <link rel="canonical" href="{{ canonical_url }}">
+
+    <!-- Open Graph -->
+    <meta property="og:site_name" content="{{ site.title }}">
+    <meta property="og:locale" content="{{ site.locale | default: 'en_US' }}">
+    <meta property="og:type" content="{% if page.layout == 'article' %}article{% else %}website{% endif %}">
+    <meta property="og:title" content="{{ seo_title }}">
+    <meta property="og:description" content="{{ meta_description }}">
+    <meta property="og:url" content="{{ canonical_url }}">
+    <meta property="og:image" content="{{ og_image }}">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ seo_title }}">
+    <meta name="twitter:description" content="{{ meta_description }}">
+    <meta name="twitter:image" content="{{ og_image }}">
 
     <link rel="apple-touch-icon" sizes="180x180" href="{{ site.baseurl }}/img/apple-touch-icon.png">
     <link rel="icon" type="image/svg" sizes="32x32" href="{{ site.baseurl }}/img/favicon-16x16.png">
@@ -45,5 +73,6 @@
     <link rel="stylesheet" type="text/css"
           href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css"/>
 
+    {% include jsonld.html %}
 </head>
 

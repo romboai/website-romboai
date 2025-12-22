@@ -2,6 +2,9 @@
 layout: default
 title: "Rombo AI"
 permalink: /
+seo_title: "Rombo AI | AI for Spectral & Chemical Analysis (NMR)"
+description: "Automate spectral and chemical analysis with AI and Low Field NMR: faster insights, proprietary models, and end-to-end workflows for R&D and industry."
+lang: en
 
 hero_home_title: "Automating Chemical Analysis with Artificial Intelligence"
 hero_cta_label_left: "Contact"

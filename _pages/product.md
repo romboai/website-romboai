@@ -2,6 +2,9 @@
 layout: products
 title: "Products"
 permalink: /product/
+seo_title: "Products | Rombo Client & Rombo AutoML"
+description: "Explore Rombo AI products for AI-driven spectral analysis: Rombo Client for delivery and governance, and Rombo AutoML for building models on spectral data."
+lang: en
 
 hero_product_title: "Products"
 hero_product_sub_title: "Explore Rombo AI products designed to bring AI-driven spectral analysis into real workflows."

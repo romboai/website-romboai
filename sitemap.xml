@@ -1,0 +1,61 @@
+---
+layout: null
+permalink: /sitemap.xml
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>{{ "/" | absolute_url }}</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  {%- comment -%} Collection pages in _pages/ {%- endcomment -%}
+  {%- assign pages_collection = site.collections["pages"] -%}
+  {%- if pages_collection and pages_collection.docs -%}
+  {%- for p in pages_collection.docs -%}
+    {%- assign robots = p.robots | default: "index,follow" -%}
+    {%- if p.sitemap == false -%}{%- continue -%}{%- endif -%}
+    {%- if robots contains "noindex" -%}{%- continue -%}{%- endif -%}
+    {%- if p.url == "/" -%}{%- continue -%}{%- endif -%}
+    {%- if p.url contains "/admin" -%}{%- continue -%}{%- endif -%}
+    {%- if p.url contains "/e2e/" -%}{%- continue -%}{%- endif -%}
+    <url>
+      <loc>{{ p.url | absolute_url }}</loc>
+      <changefreq>monthly</changefreq>
+      <priority>0.7</priority>
+    </url>
+  {%- endfor -%}
+  {%- endif -%}
+
+  {%- comment -%} Any other pages (non-collection) {%- endcomment -%}
+  {%- for p in site.pages -%}
+    {%- assign robots = p.robots | default: "index,follow" -%}
+    {%- if p.sitemap == false -%}{%- continue -%}{%- endif -%}
+    {%- if robots contains "noindex" -%}{%- continue -%}{%- endif -%}
+    {%- if p.url == "/" -%}{%- continue -%}{%- endif -%}
+    {%- if p.url contains "/admin" -%}{%- continue -%}{%- endif -%}
+    {%- if p.url contains "/e2e/" -%}{%- continue -%}{%- endif -%}
+    {%- if p.url == "/sitemap.xml" -%}{%- continue -%}{%- endif -%}
+    <url>
+      <loc>{{ p.url | absolute_url }}</loc>
+      <changefreq>monthly</changefreq>
+      <priority>0.5</priority>
+    </url>
+  {%- endfor -%}
+
+  {%- comment -%} Blog posts {%- endcomment -%}
+  {%- for post in site.posts -%}
+    {%- assign robots = post.robots | default: "index,follow" -%}
+    {%- if post.sitemap == false -%}{%- continue -%}{%- endif -%}
+    {%- if robots contains "noindex" -%}{%- continue -%}{%- endif -%}
+    <url>
+      <loc>{{ post.url | absolute_url }}</loc>
+      <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
+      <changefreq>yearly</changefreq>
+      <priority>0.6</priority>
+    </url>
+  {%- endfor -%}
+</urlset>
+
+

@@ -2,6 +2,9 @@
 layout: product_detail
 title: "Rombo AutoML"
 permalink: /product/rombo-automl/
+seo_title: "Rombo AutoML | AutoML for Spectral Data (NMR, IR, GC-MS)"
+description: "AutoML built for spectral data: connect instruments, build and validate ML models faster, and deploy AI into real-world R&D workflows."
+lang: en
 
 hero_product_title: "Rombo AutoML"
 hero_product_sub_title: "From spectral data collection to real-world AI applications—faster, smarter, and fully automated."
