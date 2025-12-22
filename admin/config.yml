@@ -2,10 +2,17 @@ backend:
   name: github
   repo: romboai/website-romboai # Your GitHub repository (owner/repo-name)
   branch: main # Branch to update
-  # GitHub OAuth Configuration
-  # Using public OAuth proxy service for authentication
-  app_id: Ov23liHrviouRAF4Tf2K
-  proxy_url: https://oauth-proxy.netlify.app/auth
+  # GitHub Personal Access Token Authentication
+  # Users will be prompted to enter their GitHub Personal Access Token when logging in
+  # To create a token:
+  # 1. Go to: https://github.com/settings/tokens
+  # 2. Click "Generate new token" -> "Generate new token (classic)"
+  # 3. Give it a name (e.g., "Rombo AI CMS")
+  # 4. Select scope: repo (full control of private repositories)
+  #    - For public repos, you can use a token with just "public_repo" scope
+  # 5. Click "Generate token" and copy it immediately
+  # 6. Paste the token when prompted in the CMS login screen
+  # Note: The token is stored in your browser's local storage
 
 # Uncomment below to enable drafts
 # publish_mode: editorial_workflow
