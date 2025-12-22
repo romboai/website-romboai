@@ -1,0 +1,71 @@
+{%- comment -%}
+  JSON-LD structured data:
+  - Organization + WebSite site-wide
+  - Product on product_detail pages
+  - BlogPosting on article pages
+{%- endcomment -%}
+
+{%- assign canonical_url = page.url | absolute_url -%}
+{%- assign org_logo = "/img/romboai-04-1-2.png" | absolute_url -%}
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "{{ site.url }}/#organization",
+      "name": "{{ site.title }}",
+      "url": "{{ site.url }}/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "{{ org_logo }}"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/rombo-ai/"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "{{ site.url }}/#website",
+      "name": "{{ site.title }}",
+      "url": "{{ site.url }}/",
+      "publisher": { "@id": "{{ site.url }}/#organization" }
+    }
+    {%- if page.layout == "product_detail" -%}
+    ,
+    {
+      "@type": "Product",
+      "@id": "{{ canonical_url }}#product",
+      "name": "{{ page.title }}",
+      "brand": { "@type": "Brand", "name": "{{ site.title }}" },
+      "url": "{{ canonical_url }}",
+      "description": "{{ page.description | default: page.hero_product_sub_title | default: site.description | strip_html | strip_newlines | replace: '\"','\\\"' | truncate: 240 }}"
+    }
+    {%- endif -%}
+    {%- if page.layout == "article" -%}
+    ,
+    {
+      "@type": "BlogPosting",
+      "@id": "{{ canonical_url }}#blogposting",
+      "headline": "{{ page.title | replace: '\"','\\\"' }}",
+      "datePublished": "{{ page.date | date_to_xmlschema }}",
+      "author": {
+        "@type": "Person",
+        "name": "{{ page.author | default: site.title | replace: '\"','\\\"' }}"
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "{{ canonical_url }}"
+      }
+      {%- if page.image -%}
+      ,
+      "image": [ "{{ page.image | absolute_url }}" ]
+      {%- endif -%}
+    }
+    {%- endif -%}
+  ]
+}
+</script>
+
+

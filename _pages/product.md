@@ -1,34 +1,23 @@
 ---
-layout: product
-title: "SpectraAI | Products"
+layout: products
+title: "Products"
 permalink: /product/
+seo_title: "Products | Rombo Client & Rombo AutoML"
+description: "Explore Rombo AI products for AI-driven spectral analysis: Rombo Client for delivery and governance, and Rombo AutoML for building models on spectral data."
+lang: en
 
-hero_product_title: "Unlock the Power of AI-Driven Spectral Analysis"
-hero_product_sub_title: "From spectral data collection to real-world AI applications—faster, smarter, and fully automated."
+hero_product_title: "Products"
+hero_product_sub_title: "Explore Rombo AI products designed to bring AI-driven spectral analysis into real workflows."
 
-product_section_one_main_title: "PRODUCT OVERVIEW"
-product_section_one_sub_title: "The AI Framework for Spectral Data"
-product_section_one_message: "SpectraAI is the first AutoML framework built specifically for spectral data. Designed for R&D teams across pharma, medical, food & beverage, mining, and beyond, it enables you to develop proprietary AI models and generate valuable IP—without requiring deep AI expertise."
+products_section_title: "PRODUCTS"
+products_section_subtitle: "Choose the right product for your team"
+products_section_message: "From delivery to model development: pick the product that best fits your workflow."
 
-markdown_content_section_one: |
-    ## **AutoML for Spectral Data**
-    AI without the complexity. SpectraAI is designed to build high-performance Machine Learning models that go beyond standard chemometrics. Our AutoML framework integrates cutting-edge algorithms—from chemio-informed ML to Generative AI—automating everything from data acquisition to model deployment. Accelerate industrial applications with faster, more precise insights.
-
-markdown_content_section_two: |
-    ## **Seamless Integration with Lab Instruments**
-    Connect effortlessly to your lab environment. SpectraAI supports NMR, IR, GC-MS, and other spectroscopy techniques, ensuring smooth data acquisition and analysis. With built-in compatibility for standard data formats, integration is frictionless—eliminating complex conversions. Enable real-time AI-powered predictions directly from lab instruments, enhancing efficiency and decision-making.
-
-markdown_content_section_three: |
-    ## **No-Code to Low-Code Flexibility**
-    Empower every user, from domain experts to data scientists. SpectraAI offers a no-code interface for effortless AI model creation, while a low-code framework provides deep customization. For advanced users, our Python library grants full control over data processing, model tuning, and deployment—bridging the gap between accessibility and power.
-
-markdown_content_section_four: |
-    ## **Accelerate R&D & IP Creation**
-    Turn AI into a competitive advantage. SpectraAI enables rapid prototyping, reducing time-to-production and accelerating research breakthroughs. Build proprietary AI models tailored to your specific needs, strengthening internal IP while enhancing precision and automation in spectral analysis.
-
-product_section_two_main_title: "Clients & Partners"
-product_section_two_sub_title: "Trusted by Leading Enterprises around the world"
-product_section_two_message: "We partner with top-tier companies under strict Non-Disclosure Agreements (NDAs), ensuring absolute confidentiality and professionalism. Our AI solutions are trusted by industry leaders globally to drive innovation while protecting proprietary data."
+products:
+  - title: "Rombo AutoML"
+    badge: "Modeling"
+    description: "AutoML framework built for spectral data: build, validate, and iterate faster."
+    link: "/product/rombo-automl/"
 ---
 
 

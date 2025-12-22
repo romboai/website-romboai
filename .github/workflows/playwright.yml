@@ -1,0 +1,67 @@
+name: E2E (Playwright)
+
+on:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  playwright:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      # Persist Playwright browsers in a cacheable location
+      PLAYWRIGHT_BROWSERS_PATH: /home/runner/.cache/ms-playwright
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.1"
+          bundler-cache: true
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: Cache Playwright browsers
+        uses: actions/cache@v4
+        with:
+          path: /home/runner/.cache/ms-playwright
+          key: ${{ runner.os }}-playwright-1.57.0-${{ hashFiles('package-lock.json') }}
+
+      - name: Tune npm network retries
+        run: |
+          npm config set fetch-retries 5
+          npm config set fetch-retry-factor 2
+          npm config set fetch-retry-mintimeout 20000
+          npm config set fetch-retry-maxtimeout 120000
+
+      - name: Install npm deps
+        run: npm ci --no-audit --no-fund
+
+      - name: Install Playwright browsers
+        run: |
+          # `socket hang up` can happen when the CDN flakes. Retry.
+          npx playwright install-deps chromium
+          for i in 1 2 3; do
+            npx playwright install chromium && break
+            echo "Playwright browser download failed (attempt $i). Retrying in 10s..."
+            sleep 10
+          done
+
+      - name: Run E2E tests
+        run: npm run test:e2e
+
+      - name: Upload Playwright report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-report
+          path: playwright-report
+          if-no-files-found: ignore
+
+

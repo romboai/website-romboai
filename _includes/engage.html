@@ -1,5 +1,14 @@
 <section class="container-fluid  justify-content-center text-center text-white py-5 h-100"
          style=" background: #303767">
+    {%- assign pages_collection = site.collections["pages"] -%}
+    {%- assign home_doc = nil -%}
+    {%- if pages_collection and pages_collection.docs -%}
+      {%- assign home_doc = pages_collection.docs | where: "permalink", "/" | first -%}
+    {%- endif -%}
+    {%- assign cta_link = home_doc.hero_cta_link | default: site.cta_link | default: "/contact" -%}
+    {%- assign cta_left = home_doc.hero_cta_label_left | default: site.cta_label_left | default: "Contact" -%}
+    {%- assign cta_right = home_doc.hero_cta_label_right | default: site.cta_label_right | default: "now" -%}
+
     <div class="container custom-container d-flex flex-column  justify-content-center align-items-center text-center">
         <p class="fw-bold pt-5 text-uppercase" style="font-size: 20px; color:#FE900F">{{ site.engage_main_title }}</p>
         <h2 class="fw-bold py-5 text-white secondary-headline" style="font-size: 42px;">{{ site.engage_sub_title }}</h2>
@@ -7,16 +16,16 @@
         <p class="px-3" style="font-size: 16px;">
             {{ site.engage_message_part_one }}
         </p>
-        <a href="{{ site.baseurl }}/contact" class="text-decoration-none pt-5">
+        <a href="{{ site.baseurl }}{{ cta_link }}" class="text-decoration-none pt-5" aria-label="{{ cta_left }} {{ cta_right }}">
             <div class="d-flex justify-content-center align-items-center  gap-0">
                 <button class="btn rounded-pill"
                         style="background:#FE900F; color: white; padding:15px 25px 15px 25px; margin-right:-8px;">
-                    Contact
+                    {{ cta_left }}
                 </button>
                 <img class="d-inline-block" src="{{ site.baseurl }}/img/group-2-2.png" alt="Group" style="width: 35px; height: 41px;">
                 <button class="btn rounded-pill"
                         style="background:#FE900F; color: white; padding:15px;margin-left:-8px;">
-                    now
+                    {{ cta_right }}
                 </button>
             </div>
         </a>
