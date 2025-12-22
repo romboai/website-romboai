@@ -278,10 +278,6 @@ export default defineConfig({
             required: false,
             ui: { component: MarkdownStringEditor },
           },
-
-          { type: "string", name: "product_section_two_main_title", label: "Product section 2 main title", required: false },
-          { type: "string", name: "product_section_two_sub_title", label: "Product section 2 sub title", required: false },
-          { type: "string", name: "product_section_two_message", label: "Product section 2 message", required: false, ui: { component: "textarea" } },
         ],
       },
     ],
