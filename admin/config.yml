@@ -9,7 +9,7 @@ backend:
   # 4. IMPORTANT: You need to set up an OAuth proxy server for this to work
   #    The Client Secret must be stored server-side, not in this file
   #    See: https://decapcms.org/docs/authentication-backends/#github-backend
-  app_id: YOUR_GITHUB_CLIENT_ID  # Replace with your GitHub OAuth App Client ID
+  #app_id: Ov23liHrviouRAF4Tf2K  # Replace with your GitHub OAuth App Client ID
 
 # Uncomment below to enable drafts
 # publish_mode: editorial_workflow
