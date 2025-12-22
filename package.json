@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "tinacms dev -c \"bundle exec jekyll serve\"",
+    "build": "tinacms build && bundle exec jekyll build",
+    "tina-dev": "tinacms dev",
+    "tina-build": "tinacms build"
   },
   "repository": {
     "type": "git",
@@ -19,6 +22,8 @@
   },
   "homepage": "https://github.com/romboai/website-romboai#readme",
   "dependencies": {
+    "@uiw/react-md-editor": "^4.0.11",
+    "is-hotkey": "^0.2.0",
     "tinacms": "^3.1.2"
   },
   "devDependencies": {

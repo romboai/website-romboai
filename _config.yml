@@ -11,6 +11,9 @@ engage_message_part_one: "Ready to transform your analytical processes? Connect 
 
 # Build settings
 permalink: :title/
+collections:
+  pages:
+    output: true
 sass:
   sass_dir: _sass
   style:    compressed
