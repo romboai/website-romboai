@@ -47,9 +47,6 @@
     <link rel="stylesheet" type="text/css"
           href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css"/>
 
-    <!-- Netlify Identity Widget for CMS -->
-    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-
 </head>
 
 
@@ -535,17 +532,5 @@
 
 </script>
 
-<!-- Netlify Identity Widget initialization -->
-<script>
-  if (window.netlifyIdentity) {
-    window.netlifyIdentity.on("init", user => {
-      if (!user) {
-        window.netlifyIdentity.on("login", () => {
-          document.location.href = "/admin/";
-        });
-      }
-    });
-  }
-</script>
 </body>
 </html>
