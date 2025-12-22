@@ -3,13 +3,9 @@ backend:
   repo: romboai/website-romboai # Your GitHub repository (owner/repo-name)
   branch: main # Branch to update
   # GitHub OAuth Configuration
-  # 1. Create a GitHub OAuth App at: https://github.com/settings/developers
-  # 2. Set Authorization callback URL to: https://rombo.ai/admin/index.html
-  # 3. Copy the Client ID and paste it below (replace YOUR_GITHUB_CLIENT_ID)
-  # 4. IMPORTANT: You need to set up an OAuth proxy server for this to work
-  #    The Client Secret must be stored server-side, not in this file
-  #    See: https://decapcms.org/docs/authentication-backends/#github-backend
-  #app_id: Ov23liHrviouRAF4Tf2K  # Replace with your GitHub OAuth App Client ID
+  # Using public OAuth proxy service for authentication
+  app_id: Ov23liHrviouRAF4Tf2K
+  proxy_url: https://oauth-proxy.netlify.app/auth
 
 # Uncomment below to enable drafts
 # publish_mode: editorial_workflow
