@@ -63,6 +63,21 @@ jobs:
         run: bundle exec jekyll build
         env:
           JEKYLL_ENV: production
+      - name: Minify CSS (production)
+        run: |
+          # Minify rendered CSS in the output folder to satisfy performance audits.
+          # We do this post-build so we don't need to commit minified assets.
+          for f in _site/css/custom/style.css _site/css/custom/responsive.css _site/css/custom/scrollbar.css; do
+            if [ -f "$f" ]; then
+              npx --yes csso-cli "$f" -o "$f"
+            fi
+          done
+      - name: Minify JS (production)
+        run: |
+          # Minify rendered JS in the output folder (main.js is currently unminified).
+          if [ -f "_site/js/main.js" ]; then
+            npx --yes terser _site/js/main.js -c -m -o _site/js/main.js
+          fi
       - name: Upload artifact
         # Automatically uploads an artifact from the './_site' directory by default
         uses: actions/upload-pages-artifact@v3
