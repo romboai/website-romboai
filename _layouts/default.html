@@ -18,6 +18,7 @@
 
 {% include menu.html %}
 
+<main id="main-content" tabindex="-1">
 {{ content }}
 
 <!--Hero Section-->
@@ -37,9 +38,27 @@
   <div class="mask"></div>
   <div class="container custom-container w-100  h-100">
       <div class="row m-0 w-100  h-100  hero-content-message">
-          <p class="z-1 col-md-6 align-self-center text-white text-responsive" style="text-align: left">
-              <span class="text-highlight">{{ page.hero_home_title }}</span>
-          </p>
+          <div class="z-1 col-md-6 align-self-center" style="text-align: left">
+              <div class="text-white text-responsive">
+                  <span class="text-highlight">{{ page.hero_home_title }}</span>
+              </div>
+
+              {% if page.hero_cta_link %}
+              <a href="{{ site.baseurl }}{{ page.hero_cta_link }}" class="text-decoration-none d-inline-block mt-4">
+                  <div class="d-flex justify-content-start align-items-center gap-0">
+                      <button class="btn rounded-pill"
+                              style="background:#FE900F; color: white; padding:15px 25px 15px 25px; margin-right:-8px;">
+                          {{ page.hero_cta_label_left | default: "Contact" }}
+                      </button>
+                      <img class="d-inline-block" src="{{ site.baseurl }}/img/group-2-2.png" alt="Group" style="width: 35px; height: 41px;">
+                      <button class="btn rounded-pill"
+                              style="background:#FE900F; color: white; padding:15px;margin-left:-8px;">
+                          {{ page.hero_cta_label_right | default: "now" }}
+                      </button>
+                  </div>
+              </a>
+              {% endif %}
+          </div>
       </div>
   </div>
 </div>
@@ -189,6 +208,7 @@
 {% include engage.html %}
 <!--Footer-->
 {% include footer.html %}
+ </main>
 
 
 <!-- CSS here -->

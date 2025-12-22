@@ -4,6 +4,9 @@ title: "Rombo AI"
 permalink: /
 
 hero_home_title: "Automating Chemical Analysis with Artificial Intelligence"
+hero_cta_label_left: "Contact"
+hero_cta_label_right: "now"
+hero_cta_link: "/contact"
 
 intro_main_title: "WELCOME TO A WORLD OF PRECISION, EFFICIENCY, AND INNOVATION."
 intro_sub_title: "Unlocking a New Era in Chemical Analysis"

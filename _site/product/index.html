@@ -38,7 +38,7 @@
           integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/custom/style.css">
 
-    <title>SpectraAI | Products - Rombo AI</title>
+    <title>Products - Rombo AI</title>
 
     <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
     <link rel="icon" type="image/svg" sizes="32x32" href="/img/favicon-16x16.png">
@@ -67,6 +67,8 @@
 
 <!-- Menu -->
 
+<a class="skip-link" href="#main-content">Skip to content</a>
+
 <nav class="container-fluid navbar fixed-top navbar-expand-md navbar-light custom-shadow" style="max-height: 58px; background:#090C2333;">
     <div class="container custom-container">
         <!-- Logo -->
@@ -83,8 +85,27 @@
                 <li class="nav-item">
                     <a class="nav-link menu-item text-white" href="/about">About Us</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link menu-item text-white" href="/product">SpectraAI</a>
+                <li class="nav-item dropdown">
+                    <a class="nav-link menu-item text-white dropdown-toggle"
+                       href="#"
+                       id="productsDropdown"
+                       role="button"
+                       data-bs-toggle="dropdown"
+                       aria-expanded="false">
+                        Products
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="productsDropdown">
+                        <li>
+                            <a class="dropdown-item" href="/product/rombo-client/">
+                                Rombo Client
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="/product/rombo-automl/">
+                                Rombo AutoML
+                            </a>
+                        </li>
+                    </ul>
                 </li>
 
                 <li class="nav-item">
@@ -105,169 +126,124 @@
 
 
 
-<!--Hero Section-->
-<div class="container-fluid  hero-section">
-    <!-- Video -->
-    <video class="hero-video" autoplay muted loop playsinline controlslist="nodownload">
-        <source src="/img/hero_back_play.mp4" type="video/mp4"/>
-        Your browser does not support the video tag.
-    </video>
+<!-- Hero Section -->
+<div class="container-fluid hero-section">
+  <video class="hero-video" autoplay muted loop playsinline controlslist="nodownload">
+    <source src="/img/hero_back_play.mp4" type="video/mp4"/>
+    Your browser does not support the video tag.
+  </video>
 
-    <!-- Mask Overlay -->
-    <div class="mask"></div>
-    <div class="container custom-container w-100  h-100">
-        <div class="row m-0 w-100  h-100">
-            <div class="z-1 col-md-7 px-5 px-md-4 align-content-center titolo-1">
-            <span class="titolo-1-span text-highlight">
-              Unlock the Power of AI-Driven Spectral Analysis
-                <br/>
-            </span>
-                <span class="titolo-1-span2 text-highlight">
-              From spectral data collection to real-world AI applications—faster, smarter, and fully automated.
-            </span>
-            </div>
-            <div class="col-md-5 d-none d-none d-md-block justify-content-center align-content-center z-1">
-                <img class="img-fluid forma-5-1" style="object-fit: cover " alt="forma"
-                     src="/img/forma-5-10.png"/>
-            </div>
-
-        </div>
+  <div class="mask"></div>
+  <div class="container custom-container w-100 h-100">
+    <div class="row m-0 w-100 h-100">
+      <div class="z-1 col-md-7 px-5 px-md-4 align-content-center titolo-1">
+        <span class="titolo-1-span text-highlight">
+          Products
+          <br/>
+        </span>
+        <span class="titolo-1-span2 text-highlight">
+          Explore Rombo AI products designed to bring AI-driven spectral analysis into real workflows.
+        </span>
+      </div>
+      <div class="col-md-5 d-none d-md-block justify-content-center align-content-center z-1">
+        <img class="img-fluid forma-5-1" style="object-fit: cover" alt="forma" src="/img/forma-5-10.png"/>
+      </div>
     </div>
+  </div>
 </div>
-<!--Hero Section-->
+<!-- Hero Section -->
 
 <div class="container-fluid align-self-end mx-0" style="position: relative;">
   <img class="img-fluid w-100 hero-divider-container" style="bottom:-10px; object-fit: cover; z-index: 1;" src="/img/Separator_Hero.svg" alt="Vector"/>
 </div>
 
-
-<!--Hero Section 1-->
-
-<section
-        class="container-fluid justify-content-center text-center text-white py-5 px-5 h-100 w-100">
-    <div class="container custom_container">
-        <div class="row d-flex flex-column py-5 justify-content-center align-items-center text-center">
-            <p class="fw-bold m-0 h-100 text-uppercase" style="font-size: 20px; color:#001d6c">
-                PRODUCT OVERVIEW</p>
-            <h2 class="fw-bold secondary-headline text-dark" style="font-size: 42px;">
-                The AI Framework for Spectral Data</h2>
-
-            <p class="col-12  text-dark px-2 px-md-5 py-5  text-center" style="font-size: 16px;">
-                SpectraAI is the first AutoML framework built specifically for spectral data. Designed for R&D teams across pharma, medical, food & beverage, mining, and beyond, it enables you to develop proprietary AI models and generate valuable IP—without requiring deep AI expertise.
-                <br/>
-            </p>
-        </div>
+<section class="container-fluid py-5">
+  <div class="container custom_container">
+    <div class="row justify-content-center text-center">
+      <div class="col-12 col-lg-9">
+        
+          <p class="fw-bold m-0 text-uppercase" style="font-size: 20px; color:#001d6c">
+            PRODUCTS
+          </p>
+        
+        
+          <h2 class="fw-bold secondary-headline text-dark" style="font-size: 42px;">
+            Choose the right product for your team
+          </h2>
+        
+        
+          <p class="text-dark px-2 px-md-5 py-4" style="font-size: 16px;">
+            From delivery to model development: pick the product that best fits your workflow.
+          </p>
+        
+      </div>
     </div>
+
+    <div class="row g-4 justify-content-center pt-3">
+      
+      
+
+      
+        <div class="col-12 col-md-6 col-lg-5">
+          <div class="card h-100 border-0 shadow-sm" style="border-radius: 18px;">
+            
+            <div class="card-body p-4 text-start">
+              
+                <div class="text-uppercase fw-bold" style="color:#fe900f; font-size: 13px; letter-spacing: .06em;">
+                  Delivery
+                </div>
+              
+              <div class="fw-bold" style="font-size: 26px; line-height: 1.2; color:#0B243B;">
+                Rombo Client
+              </div>
+              
+                <p class="mt-3 mb-4" style="color:#6d6e76; font-size: 16px; line-height: 1.7;">
+                  The delivery layer for deploying models and insights to business and operations teams.
+                </p>
+              
+              
+                <a class="button text-decoration-none" href="/product/rombo-client/" style="width:auto; display:inline-flex;">
+                  <span class="text-container"><span class="button-text">Learn more</span></span>
+                </a>
+              
+            </div>
+          </div>
+        </div>
+      
+        <div class="col-12 col-md-6 col-lg-5">
+          <div class="card h-100 border-0 shadow-sm" style="border-radius: 18px;">
+            
+            <div class="card-body p-4 text-start">
+              
+                <div class="text-uppercase fw-bold" style="color:#fe900f; font-size: 13px; letter-spacing: .06em;">
+                  Modeling
+                </div>
+              
+              <div class="fw-bold" style="font-size: 26px; line-height: 1.2; color:#0B243B;">
+                Rombo AutoML
+              </div>
+              
+                <p class="mt-3 mb-4" style="color:#6d6e76; font-size: 16px; line-height: 1.7;">
+                  AutoML framework built for spectral data: build, validate, and iterate faster.
+                </p>
+              
+              
+                <a class="button text-decoration-none" href="/product/rombo-automl/" style="width:auto; display:inline-flex;">
+                  <span class="text-container"><span class="button-text">Learn more</span></span>
+                </a>
+              
+            </div>
+          </div>
+        </div>
+      
+
+      
+
+    </div>
+  </div>
 </section>
 
-<!--Hero Section  2 -->
-
-
-<section class="container-fluid justify-content-center text-center text-white px-5 h-100 w-100"
-         style="background: #303767">
-    <div class="container custom_container">
-    <div class="row d-flex flex-column py-5 justify-content-center align-items-center text-center">
-        <p class="fw-bold m-0 h-100 text-uppercase" style="font-size: 20px; color:#fe900f;">Clients & Partners</p>
-        <h2 class="col-12 fw-bold secondary-headline text-white pb-5" style="font-size: 42px;">
-            Trusted by Leading Enterprises around the world</h2>
-
-        <p class="col-12 px-3  text-white  text-center " style="font-size: 16px; max-width: 900px">
-            We partner with top-tier companies under strict Non-Disclosure Agreements (NDAs), ensuring absolute confidentiality and professionalism. Our AI solutions are trusted by industry leaders globally to drive innovation while protecting proprietary data.
-            <br />
-        </p>
-    </div>
-    </div>
-</section>
-
-<div class="container-fluid " style="overflow: hidden">
-    <div class="container custom_container  position-relative w-100 h-100" >
-        <div class="row">
-            <img class="img-fluid"
-                 style="position: absolute; top: -10%; left: 50%; width: 100%; z-index: -1; transform: scale(-1)"
-                 src="/img/back-logo.png" alt="forma">
-
-            <img class="img-fluid"
-                 style="position: absolute; top: 50%; right: 50%; bottom: 0; width: 100%; z-index: -1; transform: scale(-1)"
-                 src="/img/livello-1-2.svg" alt="forma">
-            <img class="img-fluid"
-                 style="position: absolute; bottom: -10%; left: 50%; width: 100%; z-index: -1; transform: scale(-1)"
-                 src="/img/back-logo.png" alt="forma">
-
-            <div class="row d-flex flex-row py-5 justify-content-center align-items-center text-center">
-                <p class="fw-bold  text-uppercase" style="font-size: 20px; color:#fe900f;">PRODUCT FEATURES</p>
-                <h2 class="fw-bold secondary-headline text-dark" style="font-size: 42px;">
-                    SpectraAI
-                </h2>
-
-            </div>
-
-        </div>
-
-        <div class="row">
-            <div class="col-md-6 d-flex align-items-center">
-                <div class="markdown-content">
-                    <h2 id="automl-for-spectral-data"><strong>AutoML for Spectral Data</strong></h2>
-<p>AI without the complexity. SpectraAI is designed to build high-performance Machine Learning models that go beyond standard chemometrics. Our AutoML framework integrates cutting-edge algorithms—from chemio-informed ML to Generative AI—automating everything from data acquisition to model deployment. Accelerate industrial applications with faster, more precise insights.</p>
-
-                </div>
-            </div>
-            <div class="col-md-6 d-flex justify-content-center align-items-center z-1">
-                <img class="img-fluid forma-5-1" style="object-fit: cover;" alt="forma"
-                     src="/img/forma-5-10.png"/>
-            </div>
-        </div>
-
-
-        <div class="row">
-            <div class="col-md-6 d-flex justify-content-center align-items-center z-1 order-md-1 order-2">
-                <img class="img-fluid forma-5-1" style="object-fit: cover;" alt="forma"
-                     src="/img/forma4.png"/>
-            </div>
-            <div class="col-md-6 d-flex align-items-center order-md-2 order-1">
-                <div class="markdown-content">
-                    <h2 id="seamless-integration-with-lab-instruments"><strong>Seamless Integration with Lab Instruments</strong></h2>
-<p>Connect effortlessly to your lab environment. SpectraAI supports NMR, IR, GC-MS, and other spectroscopy techniques, ensuring smooth data acquisition and analysis. With built-in compatibility for standard data formats, integration is frictionless—eliminating complex conversions. Enable real-time AI-powered predictions directly from lab instruments, enhancing efficiency and decision-making.</p>
-
-                </div>
-            </div>
-        </div>
-
-
-        <div class="row">
-            <div class="col-md-6 d-flex align-items-center">
-                <div class="markdown-content">
-                    <h2 id="no-code-to-low-code-flexibility"><strong>No-Code to Low-Code Flexibility</strong></h2>
-<p>Empower every user, from domain experts to data scientists. SpectraAI offers a no-code interface for effortless AI model creation, while a low-code framework provides deep customization. For advanced users, our Python library grants full control over data processing, model tuning, and deployment—bridging the gap between accessibility and power.</p>
-
-                </div>
-            </div>
-            <div class="col-md-6 d-flex justify-content-center align-items-center z-1">
-                <img class="img-fluid forma-5-1" style="object-fit: cover;" alt="forma"
-                     src="/img/forma1.png"/>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-md-6 d-flex justify-content-center align-items-center z-1 order-md-1 order-2">
-                <img class="img-fluid forma-5-1" style="object-fit: cover;" alt="forma"
-                     src="/img/forma3.png"/>
-            </div>
-            <div class="col-md-6 d-flex align-items-center order-md-2 order-1">
-                <div class="markdown-content">
-                    <h2 id="accelerate-rd--ip-creation"><strong>Accelerate R&amp;D &amp; IP Creation</strong></h2>
-<p>Turn AI into a competitive advantage. SpectraAI enables rapid prototyping, reducing time-to-production and accelerating research breakthroughs. Build proprietary AI models tailored to your specific needs, strengthening internal IP while enhancing precision and automation in spectral analysis.</p>
-
-                </div>
-            </div>
-        </div>
-
-    </div>
-</div>
-
-<!--Hero Section-->
-
-
-<!--Articles-->
+<!-- Articles -->
 <!--Articles Section-->
 <section class="container-fluid my-0" style="background:#F7F7F7;">
     <div class="container custom_container">
@@ -341,7 +317,7 @@
     </div>
 </section>
 <!--Articles Section-->
-<!--Engage-->
+<!-- Engage -->
 <section class="container-fluid  justify-content-center text-center text-white py-5 h-100"
          style=" background: #303767">
     <div class="container custom-container d-flex flex-column  justify-content-center align-items-center text-center">
@@ -351,22 +327,14 @@
         <p class="px-3" style="font-size: 16px;">
             Ready to transform your analytical processes? Connect with our experts to explore tailored solutions for your business challenges. Reach out to our sales team or schedule a demo for the latest insights and updates.
         </p>
-        <a href="/contact" class="text-decoration-none pt-5">
-            <div class="d-flex justify-content-center align-items-center  gap-0">
-                <button class="btn rounded-pill"
-                        style="background:#FE900F; color: white; padding:15px 25px 15px 25px; margin-right:-8px;">
-                    Contact
-                </button>
-                <img class="d-inline-block" src="/img/group-2-2.png" alt="Group" style="width: 35px; height: 41px;">
-                <button class="btn rounded-pill"
-                        style="background:#FE900F; color: white; padding:15px;margin-left:-8px;">
-                    now
-                </button>
-            </div>
+        <a href="/contact" class="cta-pill text-decoration-none mt-4" aria-label="Contact us now">
+            <span class="cta-pill__text">Contact</span>
+            <img class="cta-pill__icon" src="/img/group-2-2.png" alt="" aria-hidden="true">
+            <span class="cta-pill__text">now</span>
         </a>
     </div>
 </section>
-<!--Footer-->
+<!-- Footer -->
 <!-- Footer -->
 <footer>
     <div class="container-fluid border-bottom">
@@ -406,11 +374,9 @@
 <!-- End of HubSpot Embed Code -->
 
 
-
 <!-- CSS here -->
 <link rel="stylesheet" href="/css/custom/responsive.css">
 <link rel="stylesheet" href="/css/custom/scrollbar.css">
-<!--<link rel="stylesheet" href="/css/main.css">-->
 <!-- JS here -->
 <script src="/js/vendor/jquery-3.5.1.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
@@ -418,28 +384,17 @@
         crossorigin="anonymous"></script>
 <script src="/js/main.js"></script>
 
-
 <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
 <script>
-
-
   window.cookieconsent.initialise({
     "palette": {
-      "popup": {
-        "background": "#FFFFFF",
-        "text": "#fe900f"
-      },
-      "button": {
-        "background": "#fe900f",
-        "text": "#FFFFFF"
-      }
+      "popup": { "background": "#FFFFFF", "text": "#fe900f" },
+      "button": { "background": "#fe900f", "text": "#FFFFFF" }
     },
-    "content": {
-      "href": "/privacy"
-    }
+    "content": { "href": "/privacy" }
   });
-
-
 </script>
 </body>
 </html>
+
+

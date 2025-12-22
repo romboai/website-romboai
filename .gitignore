@@ -3,3 +3,8 @@ _site/
 
 node_modules
 .env
+
+# Playwright artifacts
+playwright-report/
+test-results/
+blob-report/

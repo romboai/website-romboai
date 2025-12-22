@@ -1,7 +1,9 @@
 /* Big screen :1200px. */
 @media (min-width: 1300px) and (max-width: 1500px) {
     .text-responsive {
-        font-size: 69px; /* Medium screens (tablets) */
+        /* Keep hero titles balanced on large screens */
+        font-size: clamp(34px, 3.6vw, 56px);
+        line-height: 1.08;
     }
 
     .hero-area {
@@ -14,7 +16,8 @@
 /* Big screen :1200px. */
 @media (min-width: 1200px) and (max-width: 1300px) {
     .text-responsive {
-        font-size: 69px; /* Medium screens (tablets) */
+        font-size: clamp(34px, 3.8vw, 56px);
+        line-height: 1.08;
     }
 
     .contact-area .snape-img {
@@ -36,7 +39,8 @@
 /* Normal screen :992px. */
 @media (min-width: 992px) and (max-width: 1200px) {
     .text-responsive {
-        font-size: 69px; /* Medium screens (tablets) */
+        font-size: clamp(32px, 4.0vw, 54px);
+        line-height: 1.08;
     }
 
     .hero-area {
@@ -124,7 +128,8 @@
 /* Tablet screen :768px. */
 @media (min-width: 768px) and (max-width: 991px) {
     .text-responsive {
-        font-size: 69px; /* Medium screens (tablets) */
+        font-size: clamp(30px, 5.2vw, 46px);
+        line-height: 1.08;
     }
 
     .hero-area {
@@ -198,7 +203,8 @@
 /* small screen :320px. */
 @media (max-width: 767px) {
     .text-responsive {
-        font-size: 45px; /* Medium screens (tablets) */
+        font-size: clamp(28px, 8.5vw, 40px);
+        line-height: 1.1;
     }
 
     .hero-area {

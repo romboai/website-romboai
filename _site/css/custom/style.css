@@ -26,7 +26,19 @@ font-family: homebook;
 body {
     font-family: "Roboto", Helvetica, sans-serif;
     color: #0B243B;
-    font-size: 0px;
+    /* Base typography (readability) */
+    font-size: 16px;
+    line-height: 1.65;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Hero headline: fluid sizing instead of hard-coded breakpoints */
+.text-responsive {
+    font-size: clamp(32px, 4.2vw, 64px);
+    line-height: 1.08;
+    letter-spacing: -0.02em;
 }
 
 
@@ -36,8 +48,7 @@ button {
 
 a:focus,
 .button:focus {
-    text-decoration: none;
-    outline: none;
+    /* keep focus styles handled via :focus-visible */
 }
 
 a:focus,
@@ -53,8 +64,102 @@ button {
     text-decoration: none;
 }
 
+/* Navbar dropdown (Products) - show on hover on desktop, click on mobile */
+@media (min-width: 992px) {
+    .navbar .dropdown:hover > .dropdown-menu {
+        display: block;
+    }
+    .navbar .dropdown > .dropdown-menu {
+        margin-top: 0;
+    }
+}
+
+.navbar .dropdown-menu {
+    border-radius: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    background: rgba(9, 12, 35, 0.92);
+    backdrop-filter: blur(10px);
+    padding: 10px;
+}
+
+.navbar .dropdown-item {
+    color: #ffffff;
+    border-radius: 10px;
+    padding: 10px 12px;
+    /* Match main nav items (.menu-item) */
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1;
+}
+
+.navbar .dropdown-item:hover,
+.navbar .dropdown-item:focus {
+    background: rgba(254, 144, 15, 0.18);
+    color: #ffffff;
+}
+
 button:focus, input:focus, input:focus, textarea, textarea:focus {
-    outline: 0;
+    /* keep focus styles handled via :focus-visible */
+}
+
+/* WCAG: Visible focus for keyboard users */
+:focus { outline: none; }
+:focus-visible {
+    outline: 3px solid #FE900F;
+    outline-offset: 3px;
+}
+
+/* Skip link (keyboard) */
+.skip-link{
+    position: absolute;
+    left: 12px;
+    top: 8px;
+    z-index: 10000;
+    background: #FE900F;
+    color: #fff;
+    padding: 10px 14px;
+    border-radius: 12px;
+    transform: translateY(-200%);
+    transition: transform .15s ease;
+}
+.skip-link:focus,
+.skip-link:focus-visible{
+    transform: translateY(0);
+}
+
+/* Dropdown should be usable via keyboard focus too */
+@media (min-width: 992px) {
+    .navbar .dropdown:focus-within > .dropdown-menu {
+        display: block;
+    }
+}
+
+/* CTA pill used in Engage and Hero */
+.cta-pill{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background:#FE900F;
+    color:#fff;
+    border-radius:999px;
+    padding: 14px 18px;
+    gap: 10px;
+}
+.cta-pill__icon{
+    width: 35px;
+    height: 41px;
+}
+.cta-pill__text{
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1;
+}
+
+/* Reduce motion: avoid autoplay background videos for users who request it */
+@media (prefers-reduced-motion: reduce) {
+    .hero-video { display: none; }
 }
 
 img {
@@ -711,6 +816,7 @@ li {
     padding-left: 10px !important;
     color: black;
     -webkit-appearance: none;
+    appearance: none;
 }
 
 .select select::marker {
@@ -729,6 +835,7 @@ label.ckb input#ckb {
     position: absolute;
     left: 0;
     -webkit-appearance: none;
+    appearance: none;
 }
 
 label.ckb span.checkmark {
@@ -1162,20 +1269,42 @@ label.ckb input:checked ~ span.checkmark::after {
     text-align: left;
     font-family: "Inter-Regular", sans-serif;
     font-size:  18px;
-    line-height:  32px;
+    line-height:  1.75;
     font-weight:  400;
     position: relative;
+    /* Better reading measure */
+    max-width: 70ch;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .markdown-content h1{
     color:  #232536;
     text-align: left;
     font-family:  "Sen-Bold", sans-serif;
-    font-size:  48px;
-    line-height:  64px;
+    font-size:  clamp(32px, 3.2vw, 44px);
+    line-height:  1.15;
     letter-spacing:  -2px;
     font-weight:  700;
     position: relative;
+    margin: 0 0 0.6em;
+}
+
+.markdown-content h2{
+    font-family: "Sen-Bold", sans-serif;
+    font-size: clamp(24px, 2.2vw, 32px);
+    line-height: 1.25;
+    letter-spacing: -0.5px;
+    margin: 1.4em 0 0.6em;
+    color: #232536;
+}
+
+.markdown-content h3{
+    font-family: "Sen-Bold", sans-serif;
+    font-size: clamp(20px, 1.8vw, 26px);
+    line-height: 1.3;
+    margin: 1.2em 0 0.5em;
+    color: #232536;
 }
 
 .markdown-content p{
@@ -1183,22 +1312,60 @@ label.ckb input:checked ~ span.checkmark::after {
     text-align: left;
     font-family: "Inter-Regular", sans-serif;
     font-size:  18px;
-    line-height:  32px;
+    line-height:  1.75;
     font-weight:  400;
     position: relative;
+    margin: 0 0 1em;
 }
 
-.markdown-content ul , ol{
-    padding: 20px;
+.markdown-content ul, 
+.markdown-content ol{
+    padding-left: 1.25em;
+    margin: 0 0 1em;
 }
 
 .markdown-content li{
     color:  #232536;
     text-align: left;
     font-size:  18px;
-    line-height:  32px;
+    line-height:  1.75;
     font-weight:  400;
     position: relative;
+    margin: 0.35em 0;
+}
+
+.markdown-content blockquote{
+    margin: 1.25em 0;
+    padding: 0.75em 1em;
+    border-left: 4px solid rgba(221, 103, 49, 0.6);
+    background: rgba(11, 36, 59, 0.04);
+    color: #232536;
+}
+
+.markdown-content code{
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    font-size: 0.92em;
+    background: rgba(11, 36, 59, 0.06);
+    padding: 0.1em 0.3em;
+    border-radius: 6px;
+}
+
+.markdown-content a:not(.button){
+    color: #0B243B;
+    text-decoration: underline;
+    text-underline-offset: 0.18em;
+    text-decoration-thickness: 1px;
+}
+.markdown-content a:not(.button):hover{
+    color: #DD6731;
+    text-decoration-thickness: 2px;
+}
+
+/* Mobile typography tweaks */
+@media (max-width: 767px) {
+    body { font-size: 16px; }
+    .markdown-content { font-size: 16px; }
+    .markdown-content p, .markdown-content li { font-size: 16px; }
 }
 
 
@@ -1665,8 +1832,9 @@ label.ckb input:checked ~ span.checkmark::after {
     color:  #232536;
     text-align: left;
     font-family:  "Sen-Bold", sans-serif;
-    font-size:  48px;
-    line-height:  64px;
+    /* Slightly smaller + responsive for better proportions */
+    font-size: clamp(28px, 3.0vw, 44px);
+    line-height:  1.15;
     letter-spacing:  -2px;
     font-weight:  700;
     position: relative;
@@ -1676,13 +1844,13 @@ label.ckb input:checked ~ span.checkmark::after {
     color: #fe900f;
     text-align: left;
     font-family: "Sen-Bold", sans-serif;
-    font-size: 28px;
-    line-height:  40px;
+    font-size: clamp(18px, 2.0vw, 24px);
+    line-height:  1.35;
     letter-spacing:  -1px;
     font-weight:  600;
     opacity: 0.87;
     position: relative;
-    width: 214.01px;
+    width: auto;
 }
 
 /* Customize the range input */

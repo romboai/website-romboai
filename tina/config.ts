@@ -185,6 +185,9 @@ export default defineConfig({
 
           // Home / Landing common fields
           { type: "string", name: "hero_home_title", label: "Hero title", required: false },
+          { type: "string", name: "hero_cta_label_left", label: "Hero CTA left label", required: false },
+          { type: "string", name: "hero_cta_label_right", label: "Hero CTA right label", required: false },
+          { type: "string", name: "hero_cta_link", label: "Hero CTA link (path)", required: false },
           { type: "string", name: "intro_main_title", label: "Intro main title", required: false },
           { type: "string", name: "intro_sub_title", label: "Intro sub title", required: false },
 
@@ -218,6 +221,34 @@ export default defineConfig({
           { type: "string", name: "product_section_one_main_title", label: "Product section 1 main title", required: false },
           { type: "string", name: "product_section_one_sub_title", label: "Product section 1 sub title", required: false },
           { type: "string", name: "product_section_one_message", label: "Product section 1 message", required: false, ui: { component: "textarea" } },
+          { type: "string", name: "product_section_two_main_title", label: "Product section 2 main title", required: false },
+          { type: "string", name: "product_section_two_sub_title", label: "Product section 2 sub title", required: false },
+          { type: "string", name: "product_section_two_message", label: "Product section 2 message", required: false, ui: { component: "textarea" } },
+          { type: "string", name: "product_features_title", label: "Product features title", required: false },
+          { type: "string", name: "product_features_subtitle", label: "Product features subtitle", required: false },
+
+          // Products landing page fields
+          { type: "string", name: "products_section_title", label: "Products section title", required: false },
+          { type: "string", name: "products_section_subtitle", label: "Products section subtitle", required: false },
+          { type: "string", name: "products_section_message", label: "Products section message", required: false, ui: { component: "textarea" } },
+          {
+            type: "object",
+            name: "products",
+            label: "Products (cards)",
+            list: true,
+            ui: {
+              itemProps: (item: any) => ({
+                label: item?.title || "Product",
+              }),
+            },
+            fields: [
+              { type: "string", name: "title", label: "Title", required: true },
+              { type: "string", name: "badge", label: "Badge", required: false },
+              { type: "string", name: "description", label: "Description", required: false, ui: { component: "textarea" } },
+              { type: "string", name: "link", label: "Link (path)", required: true },
+              { type: "image", name: "image", label: "Image", required: false },
+            ],
+          },
 
           {
             type: "string",

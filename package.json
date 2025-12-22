@@ -7,7 +7,8 @@
     "dev": "tinacms dev -c \"bundle exec jekyll serve\"",
     "build": "tinacms build && bundle exec jekyll build",
     "tina-dev": "tinacms dev",
-    "tina-build": "tinacms build"
+    "tina-build": "tinacms build",
+    "test:e2e": "playwright test"
   },
   "repository": {
     "type": "git",
@@ -27,6 +28,7 @@
     "tinacms": "^3.1.2"
   },
   "devDependencies": {
+    "@playwright/test": "^1.57.0",
     "@tinacms/cli": "^2.0.5",
     "@types/node": "^25.0.3"
   }

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="it">
+{% include header.html %}
+<body>
+
+<span id="UpBtn" class="up-btn d-none" title="Go to top"><span>
+		<svg xmlns="http://www.w3.org/2000/svg" width="23.721" height="28.513" viewBox="0 0 28.513 23.721">
+			<g id="right-arrow" transform="translate(0 0)">
+			<g id="Group_22" data-name="Group 22" transform="translate(0 0) rotate(-90)">
+				<path id="Path_1869" data-name="Path 1869"
+                      d="M28.057,52.1,17.76,41.8a1.565,1.565,0,0,0-2.207,0l-.935.935a1.549,1.549,0,0,0-.456,1.1,1.58,1.58,0,0,0,.456,1.116l6.007,6.02H1.54A1.523,1.523,0,0,0,0,52.511v1.322a1.581,1.581,0,0,0,1.54,1.6H20.694l-6.075,6.054a1.545,1.545,0,0,0,0,2.191l.935.932a1.565,1.565,0,0,0,2.207,0l10.3-10.3a1.574,1.574,0,0,0,0-2.215Z"
+                      transform="translate(-29 -40.346)" fill="#fff"/>
+			</g>
+			</g>
+		</svg>
+		</span>
+</span>
+
+{% include menu.html %}
+
+<!-- Hero Section -->
+<div class="container-fluid hero-section">
+  <video class="hero-video" autoplay muted loop playsinline controlslist="nodownload">
+    <source src="{{ site.baseurl }}/img/hero_back_play.mp4" type="video/mp4"/>
+    Your browser does not support the video tag.
+  </video>
+
+  <div class="mask"></div>
+  <div class="container custom-container w-100 h-100">
+    <div class="row m-0 w-100 h-100">
+      <div class="z-1 col-md-7 px-5 px-md-4 align-content-center titolo-1">
+        <span class="titolo-1-span text-highlight">
+          {{ page.hero_product_title }}
+          <br/>
+        </span>
+        <span class="titolo-1-span2 text-highlight">
+          {{ page.hero_product_sub_title }}
+        </span>
+      </div>
+      <div class="col-md-5 d-none d-md-block justify-content-center align-content-center z-1">
+        <img class="img-fluid forma-5-1" style="object-fit: cover" alt="forma" src="{{ site.baseurl }}/img/forma-5-10.png"/>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Hero Section -->
+
+{% include hero_divider.html %}
+
+<section class="container-fluid py-5">
+  <div class="container custom_container">
+    <div class="row justify-content-center text-center">
+      <div class="col-12 col-lg-9">
+        {% if page.products_section_title %}
+          <p class="fw-bold m-0 text-uppercase" style="font-size: 20px; color:#001d6c">
+            {{ page.products_section_title }}
+          </p>
+        {% endif %}
+        {% if page.products_section_subtitle %}
+          <h2 class="fw-bold secondary-headline text-dark" style="font-size: 42px;">
+            {{ page.products_section_subtitle }}
+          </h2>
+        {% endif %}
+        {% if page.products_section_message %}
+          <p class="text-dark px-2 px-md-5 py-4" style="font-size: 16px;">
+            {{ page.products_section_message }}
+          </p>
+        {% endif %}
+      </div>
+    </div>
+
+    <div class="row g-4 justify-content-center pt-3">
+      {% assign products_list = page.products %}
+      {% if products_list == nil %}
+        {% assign products_list = "" | split: "," %}
+      {% endif %}
+
+      {% for p in products_list %}
+        <div class="col-12 col-md-6 col-lg-5">
+          <div class="card h-100 border-0 shadow-sm" style="border-radius: 18px;">
+            {% if p.image %}
+              <img src="{{ site.baseurl }}/{{ p.image }}" class="card-img-top" alt="{{ p.title }}" style="border-top-left-radius: 18px; border-top-right-radius: 18px; object-fit: cover; max-height: 220px;">
+            {% endif %}
+            <div class="card-body p-4 text-start">
+              {% if p.badge %}
+                <div class="text-uppercase fw-bold" style="color:#fe900f; font-size: 13px; letter-spacing: .06em;">
+                  {{ p.badge }}
+                </div>
+              {% endif %}
+              <div class="fw-bold" style="font-size: 26px; line-height: 1.2; color:#0B243B;">
+                {{ p.title }}
+              </div>
+              {% if p.description %}
+                <p class="mt-3 mb-4" style="color:#6d6e76; font-size: 16px; line-height: 1.7;">
+                  {{ p.description }}
+                </p>
+              {% endif %}
+              {% if p.link %}
+                <a class="button text-decoration-none" href="{{ site.baseurl }}{{ p.link }}" style="width:auto; display:inline-flex;">
+                  <span class="text-container"><span class="button-text">Learn more</span></span>
+                </a>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+
+      {% if page.products == nil %}
+        <!-- Fallback if products list is not configured yet -->
+        <div class="col-12 col-md-6 col-lg-5">
+          <div class="card h-100 border-0 shadow-sm" style="border-radius: 18px;">
+            <div class="card-body p-4 text-start">
+              <div class="text-uppercase fw-bold" style="color:#fe900f; font-size: 13px; letter-spacing: .06em;">Product</div>
+              <div class="fw-bold" style="font-size: 26px; line-height: 1.2; color:#0B243B;">Rombo Client</div>
+              <p class="mt-3 mb-4" style="color:#6d6e76; font-size: 16px; line-height: 1.7;">
+                Client portal and delivery layer for deploying models and insights to teams.
+              </p>
+              <a class="button text-decoration-none" href="{{ site.baseurl }}/product/rombo-client/" style="width:auto; display:inline-flex;">
+                <span class="text-container"><span class="button-text">Learn more</span></span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-5">
+          <div class="card h-100 border-0 shadow-sm" style="border-radius: 18px;">
+            <div class="card-body p-4 text-start">
+              <div class="text-uppercase fw-bold" style="color:#fe900f; font-size: 13px; letter-spacing: .06em;">Product</div>
+              <div class="fw-bold" style="font-size: 26px; line-height: 1.2; color:#0B243B;">Rombo AutoML</div>
+              <p class="mt-3 mb-4" style="color:#6d6e76; font-size: 16px; line-height: 1.7;">
+                AutoML framework for spectral data: build, validate, and deploy models faster.
+              </p>
+              <a class="button text-decoration-none" href="{{ site.baseurl }}/product/rombo-automl/" style="width:auto; display:inline-flex;">
+                <span class="text-container"><span class="button-text">Learn more</span></span>
+              </a>
+            </div>
+          </div>
+        </div>
+      {% endif %}
+
+    </div>
+  </div>
+</section>
+
+<!-- Articles -->
+{% include articles.html %}
+<!-- Engage -->
+{% include engage.html %}
+<!-- Footer -->
+{% include footer.html %}
+
+<!-- CSS here -->
+<link rel="stylesheet" href="{{ site.baseurl }}/css/custom/responsive.css">
+<link rel="stylesheet" href="{{ site.baseurl }}/css/custom/scrollbar.css">
+<!-- JS here -->
+<script src="{{ site.baseurl }}/js/vendor/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+<script src="{{ site.baseurl }}/js/main.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+<script>
+  window.cookieconsent.initialise({
+    "palette": {
+      "popup": { "background": "#FFFFFF", "text": "#fe900f" },
+      "button": { "background": "#fe900f", "text": "#FFFFFF" }
+    },
+    "content": { "href": "{{ site.baseurl }}/privacy" }
+  });
+</script>
+</body>
+</html>
+
+

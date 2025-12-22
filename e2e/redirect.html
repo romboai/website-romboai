@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="robots" content="noindex" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>E2E Redirect</title>
+  </head>
+  <body>
+    <p>Redirecting…</p>
+    <script>
+      // This file exists only for Playwright E2E tests.
+      // It simulates an external form handler redirecting back to /contact/?status=ok
+      // so the contact page displays the existing confirmation UI.
+      window.location.replace("/contact/?status=ok");
+    </script>
+  </body>
+</html>
+
+

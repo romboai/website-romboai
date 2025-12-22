@@ -7,18 +7,10 @@
         <p class="px-3" style="font-size: 16px;">
             {{ site.engage_message_part_one }}
         </p>
-        <a href="{{ site.baseurl }}/contact" class="text-decoration-none pt-5">
-            <div class="d-flex justify-content-center align-items-center  gap-0">
-                <button class="btn rounded-pill"
-                        style="background:#FE900F; color: white; padding:15px 25px 15px 25px; margin-right:-8px;">
-                    Contact
-                </button>
-                <img class="d-inline-block" src="{{ site.baseurl }}/img/group-2-2.png" alt="Group" style="width: 35px; height: 41px;">
-                <button class="btn rounded-pill"
-                        style="background:#FE900F; color: white; padding:15px;margin-left:-8px;">
-                    now
-                </button>
-            </div>
+        <a href="{{ site.baseurl }}/contact" class="cta-pill text-decoration-none mt-4" aria-label="Contact us now">
+            <span class="cta-pill__text">Contact</span>
+            <img class="cta-pill__icon" src="{{ site.baseurl }}/img/group-2-2.png" alt="" aria-hidden="true">
+            <span class="cta-pill__text">now</span>
         </a>
     </div>
 </section>

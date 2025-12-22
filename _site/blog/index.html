@@ -66,6 +66,8 @@
 
 <!-- Menu -->
 
+<a class="skip-link" href="#main-content">Skip to content</a>
+
 <nav class="container-fluid navbar fixed-top navbar-expand-md navbar-light custom-shadow" style="max-height: 58px; background:#090C2333;">
     <div class="container custom-container">
         <!-- Logo -->
@@ -82,8 +84,27 @@
                 <li class="nav-item">
                     <a class="nav-link menu-item text-white" href="/about">About Us</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link menu-item text-white" href="/product">SpectraAI</a>
+                <li class="nav-item dropdown">
+                    <a class="nav-link menu-item text-white dropdown-toggle"
+                       href="#"
+                       id="productsDropdown"
+                       role="button"
+                       data-bs-toggle="dropdown"
+                       aria-expanded="false">
+                        Products
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="productsDropdown">
+                        <li>
+                            <a class="dropdown-item" href="/product/rombo-client/">
+                                Rombo Client
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="/product/rombo-automl/">
+                                Rombo AutoML
+                            </a>
+                        </li>
+                    </ul>
                 </li>
 
                 <li class="nav-item">
@@ -104,12 +125,13 @@
 
 
 
+<main id="main-content" tabindex="-1">
 
 <!--Hero Section-->
 <div class="container-fluid hero-blog-section px-0">
   <div class="hero_contact_mask1" style="z-index: 1;"></div>
   <div class="hero_contact_mask" style="z-index: 1;"></div>
-  <img src="/img/imageHero.png" alt="" class="img-fluid position-absolute"
+  <img src="/img/imageHero.png" alt="" aria-hidden="true" class="img-fluid position-absolute"
        style=" height: 100%; width: 100%; object-fit: cover; left: 0;right:0; z-index: 1; mix-blend-mode: soft-light;">
 
 
@@ -244,18 +266,10 @@
         <p class="px-3" style="font-size: 16px;">
             Ready to transform your analytical processes? Connect with our experts to explore tailored solutions for your business challenges. Reach out to our sales team or schedule a demo for the latest insights and updates.
         </p>
-        <a href="/contact" class="text-decoration-none pt-5">
-            <div class="d-flex justify-content-center align-items-center  gap-0">
-                <button class="btn rounded-pill"
-                        style="background:#FE900F; color: white; padding:15px 25px 15px 25px; margin-right:-8px;">
-                    Contact
-                </button>
-                <img class="d-inline-block" src="/img/group-2-2.png" alt="Group" style="width: 35px; height: 41px;">
-                <button class="btn rounded-pill"
-                        style="background:#FE900F; color: white; padding:15px;margin-left:-8px;">
-                    now
-                </button>
-            </div>
+        <a href="/contact" class="cta-pill text-decoration-none mt-4" aria-label="Contact us now">
+            <span class="cta-pill__text">Contact</span>
+            <img class="cta-pill__icon" src="/img/group-2-2.png" alt="" aria-hidden="true">
+            <span class="cta-pill__text">now</span>
         </a>
     </div>
 </section>
@@ -299,6 +313,7 @@
 <script type="text/javascript" id="hs-script-loader" async defer src="//js-eu1.hs-scripts.com/143648348.js"></script>
 <!-- End of HubSpot Embed Code -->
 
+ </main>
 
 
 <!-- CSS here -->
