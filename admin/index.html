@@ -8,6 +8,17 @@
 <body>
   <!-- Include the script that builds the page and powers Decap CMS -->
   <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+  <script>
+    // Clear any cached Netlify Identity data
+    if (typeof localStorage !== 'undefined') {
+      // Clear Decap CMS authentication cache
+      Object.keys(localStorage).forEach(key => {
+        if (key.startsWith('netlify-cms') || key.startsWith('decap-cms')) {
+          localStorage.removeItem(key);
+        }
+      });
+    }
+  </script>
 </body>
 </html>
 
