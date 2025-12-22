@@ -7,6 +7,10 @@ description: "AI-driven spectral and chemical analysis with Low Field NMR and ma
 lang: en
 locale: en_US
 og_image: /img/og/rombo-ai.png
+# Default CTA (fallback). Engage CTAs will reuse the Home hero CTA when available.
+cta_label_left: "Contact"
+cta_label_right: "now"
+cta_link: "/contact"
 markdown: kramdown
 # Engage Section
 engage_main_title: "DISCOVER WHAT AI-DRIVEN SPECTRAL ANALYSIS CAN DO FOR YOU"

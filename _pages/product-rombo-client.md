@@ -5,6 +5,8 @@ permalink: /product/rombo-client/
 seo_title: "Rombo Client | Delivery of AI insights and models"
 description: "Deliver AI-powered insights to business and operations teams with governance, access control, monitoring, and integration-ready workflows."
 lang: en
+published: false
+sitemap: false
 
 hero_product_title: "Rombo Client"
 hero_product_sub_title: "Deliver AI-powered insights to your teams with a clean, production-ready client experience."
