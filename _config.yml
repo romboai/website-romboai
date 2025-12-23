@@ -12,6 +12,10 @@ cta_label_left: "Contact"
 cta_label_right: "now"
 cta_link: "/contact"
 markdown: kramdown
+
+# Kramdown (2.x) needs the GFM parser gem for GitHub-flavored markdown features.
+kramdown:
+  input: GFM
 # Engage Section
 engage_main_title: "DISCOVER WHAT AI-DRIVEN SPECTRAL ANALYSIS CAN DO FOR YOU"
 engage_sub_title: "Engage with Rombo AI"
