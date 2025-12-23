@@ -8,6 +8,7 @@
     "build": "tinacms build && bundle exec jekyll build",
     "tina-dev": "tinacms dev",
     "tina-build": "tinacms build",
+    "postinstall": "node scripts/patch-tinacms-cli.js",
     "test:e2e": "playwright test"
   },
   "repository": {

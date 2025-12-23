@@ -1,85 +1,86 @@
-const HEADER_AREA = $('.header-area');
-const SITEBAR_BTN = $('.siteBar-btn');
-const SLIDING_LINK = $('.sliding-link');
-const UP_BTN = $('#UpBtn');
-
-function showUpButton() {
-  var view = $(window),
-      timeoutKey = -1;
-  
-  $(document).on('scroll', function(e) {
-    e.preventDefault();
-    if (timeoutKey) {
-      window.clearTimeout(timeoutKey);
-    }
-    timeoutKey = window.setTimeout(function(){
-	  // HEADER AREA
-      if (view.scrollTop() < 100) {
-		HEADER_AREA.removeClass('scrolled');
-      }
-      else {
-		HEADER_AREA.addClass('scrolled');
-	  }
-
-	  // UP BTN
-      if (view.scrollTop() < 300) {
-        UP_BTN.fadeOut({
-            duration: 100,
-        });
-        UP_BTN.addClass('d-none');
-      }
-      else {
-        UP_BTN.fadeIn({
-            duration: 100,
-        });
-        UP_BTN.removeClass('d-none');
-      }
-    }, 0);
-  });
-}
-
-(function($) {
+(() => {
   "use strict";
-  
- // menu 
- SITEBAR_BTN.click( function (){ 
-  $('.mobile-menu').toggleClass('siteBar');   
-}); 
 
-SLIDING_LINK.click(function(e) {
-  // smooth scroll to the anchor id
-  // after link click
-  const aid = $(this).attr('href');
-  if (aid) {
-	const anchor = aid.split('#').pop();
-	console.log(anchor);
-	const el = $(`#${ anchor }`);
-	if (el && el.length) {
-		// e.preventDefault();
-		$('html,body').animate({scrollTop: el.offset().top - 80}, 'slow');
-	}
+  const headerArea = document.querySelector(".header-area");
+  const sitebarBtn = document.querySelector(".siteBar-btn");
+  const upBtn = document.getElementById("UpBtn");
+
+  const getScrollTop = () =>
+    window.pageYOffset || document.documentElement.scrollTop || 0;
+
+  const toggleUpBtn = (shouldShow) => {
+    if (!upBtn) return;
+    if (shouldShow) {
+      upBtn.classList.remove("d-none");
+      upBtn.style.opacity = "1";
+      upBtn.style.pointerEvents = "auto";
+    } else {
+      upBtn.classList.add("d-none");
+      upBtn.style.opacity = "0";
+      upBtn.style.pointerEvents = "none";
+    }
+  };
+
+  // Header + Up button visibility on scroll
+  const onScroll = () => {
+    const y = getScrollTop();
+
+    if (headerArea) {
+      if (y < 100) headerArea.classList.remove("scrolled");
+      else headerArea.classList.add("scrolled");
+    }
+
+    toggleUpBtn(y >= 300);
+  };
+
+  document.addEventListener("scroll", onScroll, { passive: true });
+  window.addEventListener("load", onScroll, { once: true });
+
+  // Mobile menu toggle
+  sitebarBtn?.addEventListener("click", () => {
+    document.querySelector(".mobile-menu")?.classList.toggle("siteBar");
+  });
+
+  // Smooth scroll for anchor links
+  document.querySelectorAll(".sliding-link").forEach((link) => {
+    link.addEventListener("click", (e) => {
+      const href = link.getAttribute("href") || "";
+      if (!href.includes("#")) return;
+
+      const anchor = href.split("#").pop();
+      if (!anchor) return;
+
+      const el = document.getElementById(anchor);
+      if (!el) return;
+
+      // Keep default behavior if you want, but smooth-scroll instead.
+      e.preventDefault();
+      el.scrollIntoView({ behavior: "smooth", block: "start" });
+      // Apply the previous offset (~80px) by nudging after scroll.
+      window.setTimeout(() => window.scrollBy({ top: -80, left: 0, behavior: "instant" }), 0);
+    });
+  });
+
+  // Smooth scroll on initial hash (after load)
+  if (window.location.hash) {
+    window.addEventListener(
+      "load",
+      () => {
+        const el = document.querySelector(window.location.hash);
+        if (!el) return;
+        el.scrollIntoView({ behavior: "smooth", block: "start" });
+        window.setTimeout(() => window.scrollBy({ top: -180, left: 0, behavior: "instant" }), 0);
+      },
+      { once: true }
+    );
   }
-})
 
-if(window.location.hash) {
-  // smooth scroll to the anchor id
-  // after page reload 
-  $('html, body').animate({
-  	scrollTop: ($(window.location.hash).offset().top - 180) + 'px',
-  }, 1000, 'swing');
-}
-
-showUpButton();
-
-UP_BTN.click(function(e) {
-  e.preventDefault();
-  $('html, body').stop().animate({
-      scrollTop: 0
-  }, 300, 'linear');
-  return false;
-});
- 
-})(jQuery);
+  // Up button scroll-to-top
+  upBtn?.addEventListener("click", (e) => {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+})();
 
 
 
