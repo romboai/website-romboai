@@ -13,9 +13,18 @@
       gtag('js', new Date());
 
       // Google Analytics 4
-      gtag('config', 'G-HNBF12R3GQ');
-      // Google Ads
-      gtag('config', 'AW-17223867024');
+      gtag('config', 'G-HNBF12R3GQ', {
+        'anonymize_ip': true,
+        'cookie_flags': 'SameSite=None;Secure'
+      });
+      
+      // Google Ads conversion tracking
+      // Note: Browser CORS warnings may appear but are harmless - Google Ads uses
+      // cross-origin iframes for conversion tracking which triggers browser security checks
+      gtag('config', 'AW-17223867024', {
+        'anonymize_ip': true,
+        'cookie_flags': 'SameSite=None;Secure'
+      });
     </script>
 
     <script type="text/javascript">
@@ -263,7 +272,7 @@
                         <div class="card h-100">
                             <a href="/blog/sardegna-ricerche-partnership/">
                                 <img class="post-image"
-                                     src="//imgimg/blog/partnership.jpg"
+                                     src="//img/blog/partnership.jpg"
                                      alt="Esplorazione delle Potenzialità della Spettroscopia NMR nel Settore delle Energie Rinnovabili">
                                 <div class="post-content">
                                     <div class="date">Sep 30, 2024</div>
@@ -394,23 +403,30 @@
 
 <script defer src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
 <script>
-
-
-  window.cookieconsent.initialise({
-    "palette": {
-      "popup": {
-        "background": "#FFFFFF",
-        "text": "#fe900f"
-      },
-      "button": {
-        "background": "#fe900f",
-        "text": "#FFFFFF"
+  (function() {
+    function initCookieConsent() {
+      if (window.cookieconsent) {
+        window.cookieconsent.initialise({
+          "palette": {
+            "popup": {
+              "background": "#FFFFFF",
+              "text": "#fe900f"
+            },
+            "button": {
+              "background": "#fe900f",
+              "text": "#FFFFFF"
+            }
+          },
+          "content": {
+            "href": "/privacy/"
+          }
+        });
+      } else {
+        setTimeout(initCookieConsent, 100);
       }
-    },
-    "content": {
-      "href": "/privacy/"
     }
-  });
+    initCookieConsent();
+  })();
 
 
 </script>

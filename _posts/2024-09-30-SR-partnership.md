@@ -5,7 +5,7 @@ title: >-
 date: 2024-09-30T00:00:00.000Z
 permalink: /blog/sardegna-ricerche-partnership/
 layout: article
-image: /imgimg/blog/partnership.jpg
+image: /img/blog/partnership.jpg
 author: Andrea
 excerpt: >-
   Partnerhip con il cluster delle energie rinnovabili per l'esplorazione delle

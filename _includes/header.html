@@ -11,9 +11,18 @@
       gtag('js', new Date());
 
       // Google Analytics 4
-      gtag('config', 'G-HNBF12R3GQ');
-      // Google Ads
-      gtag('config', 'AW-17223867024');
+      gtag('config', 'G-HNBF12R3GQ', {
+        'anonymize_ip': true,
+        'cookie_flags': 'SameSite=None;Secure'
+      });
+      
+      // Google Ads conversion tracking
+      // Note: Browser CORS warnings may appear but are harmless - Google Ads uses
+      // cross-origin iframes for conversion tracking which triggers browser security checks
+      gtag('config', 'AW-17223867024', {
+        'anonymize_ip': true,
+        'cookie_flags': 'SameSite=None;Secure'
+      });
     </script>
 
     <script type="text/javascript">

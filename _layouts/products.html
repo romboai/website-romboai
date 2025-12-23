@@ -163,13 +163,22 @@
 
 <script defer src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
 <script>
-  window.cookieconsent.initialise({
-    "palette": {
-      "popup": { "background": "#FFFFFF", "text": "#fe900f" },
-      "button": { "background": "#fe900f", "text": "#FFFFFF" }
-    },
-    "content": { "href": "{{ site.baseurl }}/privacy/" }
-  });
+  (function() {
+    function initCookieConsent() {
+      if (window.cookieconsent) {
+        window.cookieconsent.initialise({
+          "palette": {
+            "popup": { "background": "#FFFFFF", "text": "#fe900f" },
+            "button": { "background": "#fe900f", "text": "#FFFFFF" }
+          },
+          "content": { "href": "{{ site.baseurl }}/privacy/" }
+        });
+      } else {
+        setTimeout(initCookieConsent, 100);
+      }
+    }
+    initCookieConsent();
+  })();
 </script>
 </body>
 </html>
