@@ -16,8 +16,11 @@
 		</span></span>
 
 {% include menu_article.html %}
+<main id="main-content" tabindex="-1">
+  <h1 class="visually-hidden">{{ page.h1 | default: page.title | default: site.title }}</h1>
 {% include voucher_info.html %}
 {% include footer.html %}
+</main>
 
 
 <!-- CSS here -->
@@ -44,7 +47,7 @@
       }
     },
     "content": {
-      "href": "{{ site.baseurl }}/privacy"
+      "href": "{{ site.baseurl }}/privacy/"
     }
   });
 

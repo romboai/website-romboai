@@ -3,7 +3,8 @@ layout: article
 permalink: /blog/SpectraML-a-framework-designerd-for-rd-teams/
 title: "SpectraML: A framework designed for R&D teams"
 date: "2024-12-09"
-image: "img/blog/machine learning for r&d teams.jpeg"
+image: "img/blog/spectraml-rd-teams.jpg"
+image_alt: "SpectraML: a framework designed for R&D teams"
 markdown_content: |
   ## SpectraML: A framework designed for R&D teams 
 

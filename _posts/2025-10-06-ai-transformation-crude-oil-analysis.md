@@ -3,7 +3,8 @@ layout: article
 permalink: /blog/ai-transformation-crude-oil-analysis/
 title: "The AI Transformation of Crude Oil Analysis: From Laboratory Bottlenecks to Real-Time Intelligence"
 date: "2025-10-06"
-image: "img/blog/ai-transformation-crude-oil-analysis.png"
+image: "img/blog/ai-transformation-crude-oil-analysis.jpg"
+image_alt: "Crude oil analysis: AI transformation"
 markdown_content: |
   The Oil & Gas industry is undergoing a pivotal shift toward Artificial Intelligence applications. Automated analytics and machine learning have become essential for Smart Oilfields to staying competitive, compliant, and efficient.
 

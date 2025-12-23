@@ -18,6 +18,9 @@
 
 {% include menu.html %}
 
+<main id="main-content" tabindex="-1">
+  <h1 class="visually-hidden">{{ page.h1 | default: page.title | default: site.title }}</h1>
+
 <!-- Hero Section -->
 <div class="container-fluid hero-section">
   <video class="hero-video" autoplay muted loop playsinline controlslist="nodownload">
@@ -169,6 +172,8 @@
 {% include engage.html %}
 <!-- Footer -->
 {% include footer.html %}
+
+</main>
 
 <!-- CSS here -->
 <!-- JS here -->

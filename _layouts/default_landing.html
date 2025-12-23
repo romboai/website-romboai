@@ -18,6 +18,9 @@
 
 {% include menu_landing.html %}
 
+<main id="main-content" tabindex="-1">
+  <h1 class="visually-hidden">{{ page.h1 | default: page.title | default: site.title }}</h1>
+
 {{ content }}
 
 <!--Hero Section-->
@@ -67,8 +70,7 @@
 
       <!-- Main Content with Background Image -->
       <div class="col-md-10 px-0 intro-body">
-<!--            <img class="img-fluid d-none d-sm-block background-image" src="{{ site.baseurl }}/img/livello-1-5.svg"-->
-<!--                 alt="Background Level">-->
+          <!-- <img class="img-fluid d-none d-sm-block background-image" src="{{ site.baseurl }}/img/livello-1-5.svg" alt="Background Level"> -->
           <div class="row text-center w-100">
               <div class="col-lg-3 col-sm-6 p-5 p-md-2">
                   <img src="{{ site.baseurl }}/img/modalit-isolamento-8.svg" alt="Precision Icon">
@@ -187,6 +189,8 @@
 {% include engage.html %}
 <!--Footer-->
 {% include footer.html %}
+
+</main>
 
 
 <!-- CSS here -->

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="{{ page.lang | default: site.lang | default: 'en' }}">
 {% include header.html %}
 <body>
 
@@ -17,6 +17,9 @@
 </span>
 
 {% include menu.html %}
+
+<main id="main-content" tabindex="-1">
+  <h1 class="visually-hidden">{{ page.h1 | default: page.title | default: site.title }}</h1>
 
 <!--Hero Section-->
 <div class="container-fluid  hero-section">
@@ -177,6 +180,8 @@
 <!--Footer-->
 {% include footer.html %}
 
+</main>
+
 
 <!-- CSS here -->
 <!--<link rel="stylesheet" href="/css/main.css">-->
@@ -204,7 +209,7 @@
       }
     },
     "content": {
-      "href": "{{ site.baseurl }}/privacy"
+      "href": "{{ site.baseurl }}/privacy/"
     }
   });
 

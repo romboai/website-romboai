@@ -18,12 +18,13 @@
 {% include menu.html %}
 
 <main id="main-content" tabindex="-1">
+  <h1 class="visually-hidden">{{ page.h1 | default: page.title | default: site.title }}</h1>
 
 <!--Hero Section-->
 <div class="container-fluid hero-blog-section px-0">
   <div class="hero_contact_mask1" style="z-index: 1;"></div>
   <div class="hero_contact_mask" style="z-index: 1;"></div>
-  <img src="{{ site.baseurl }}/img/imageHero.png" alt="" aria-hidden="true" class="img-fluid position-absolute"
+  <img src="{{ site.baseurl }}/img/imageHero.jpg" alt="" aria-hidden="true" class="img-fluid position-absolute"
        style=" height: 100%; width: 100%; object-fit: cover; left: 0;right:0; z-index: 1; mix-blend-mode: soft-light;">
 
 
@@ -79,7 +80,7 @@
       }
     },
     "content": {
-      "href": "{{ site.baseurl }}/privacy"
+      "href": "{{ site.baseurl }}/privacy/"
     }
   });
 
