@@ -1,0 +1,58 @@
+{%- comment -%}
+  Reusable intro block for product detail pages (copied from /_pages/product.md).
+  Optional overrides via:
+    page.solution.real_materials_intro.title
+    page.solution.real_materials_intro.text
+    page.solution.real_materials_intro.bullets (array)
+    page.solution.real_materials_intro.cta_label
+    page.solution.real_materials_intro.cta_link
+    page.solution.real_materials_intro.image
+    page.solution.real_materials_intro.image_alt
+{%- endcomment -%}
+
+{%- assign sol = page.solution -%}
+{%- assign intro = sol.real_materials_intro -%}
+
+{%- assign intro_title = intro.title | default: "Built for real materials, not synthetic demos" -%}
+{%- assign intro_text = intro.text | default: "Industrial materials are not “standard”: they vary by process, supplier, operating conditions, and intrinsic variability. That is why <strong>generic models</strong> often fail when moving from the lab to real workflows." -%}
+{%- assign intro_bullets = intro.bullets | default: nil -%}
+{%- assign intro_cta_label = intro.cta_label | default: "Discuss a pilot" -%}
+{%- assign intro_cta_link = intro.cta_link | default: "/contact/" -%}
+{%- assign intro_image = intro.image | default: "/img/placeholders/product-hero-1200x800.svg" -%}
+{%- assign intro_image_alt = intro.image_alt | default: "Placeholder: products hero visual (recommended 1200×800)" -%}
+
+{%- if intro_bullets == nil -%}
+  {%- assign intro_bullets = "Materials are not standard|Generic models rarely generalize reliably|AI must be built and verified on <strong>real experimental data</strong>|We work closely with customers to define metrics, datasets, and validation criteria" | split: "|" -%}
+{%- endif -%}
+
+<section class="container-fluid py-4 py-lg-5">
+  <div class="container custom_container">
+    <div class="row g-4 align-items-center">
+      <div class="col-12 col-lg-7">
+        <h2 class="fw-bold text-dark" style="font-size: 38px; line-height: 1.15;">
+          {{ intro_title }}
+        </h2>
+        <p class="text-dark mt-3" style="max-width: 60ch;">
+          {{ intro_text }}
+        </p>
+        <ul class="text-dark mt-3" style="max-width: 70ch;">
+          {% for bullet in intro_bullets %}
+            <li>{{ bullet }}</li>
+          {% endfor %}
+        </ul>
+        <div class="mt-4 d-flex flex-wrap gap-3">
+          <a class="button text-decoration-none" href="{{ intro_cta_link | relative_url }}" style="width:auto; display:inline-flex;">
+            <span class="text-container"><span class="button-text">{{ intro_cta_label }}</span></span>
+          </a>
+        </div>
+      </div>
+      <div class="col-12 col-lg-5">
+        <div class="products-visual products-visual--compact">
+          <img src="{{ intro_image | relative_url }}" class="img-fluid" alt="{{ intro_image_alt }}" style="object-fit: cover; width: 100%; height: 100%;">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+

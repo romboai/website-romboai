@@ -1278,6 +1278,89 @@ label.ckb input:checked ~ span.checkmark::after {
     margin-right: auto;
 }
 
+.page-products {
+    /* Readability: constrain line length and improve rhythm */
+    --products-max-text: 92ch;
+}
+
+/* Products page typography (scoped) */
+.page-products .markdown-content {
+    /* Allow wider layout; individual blocks in the page already set max-width where needed */
+    max-width: none;
+    margin: 0;
+    font-family: "Roboto", Helvetica, sans-serif;
+    font-size: 17px;
+    line-height: 1.75;
+    color: #0B243B;
+}
+
+.page-products .markdown-content h2,
+.page-products h2.fw-bold {
+    font-family: var(--nrfont);
+    letter-spacing: -0.01em;
+}
+
+.page-products .markdown-content p,
+.page-products .markdown-content li {
+    font-size: 17px;
+}
+
+.page-products .markdown-content ul {
+    padding-left: 1.15rem;
+}
+
+.page-products .markdown-content li {
+    margin: 0.35rem 0;
+}
+
+/* Products landing: consistent section spacing */
+.page-products section.container-fluid {
+    padding-top: clamp(20px, 4vw, 56px) !important;
+    padding-bottom: clamp(20px, 4vw, 56px) !important;
+}
+
+/* Products landing: use-cases carousel should feel compact and centered */
+.page-products #useCasesCarousel {
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.page-products #useCasesCarousel .carousel-item .row {
+    max-width: 1040px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.page-products #useCasesCarousel .carousel-item ul {
+    margin-bottom: 0;
+}
+
+/* Products landing: image cards */
+.page-products .products-visual {
+    border-radius: 18px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 10px 24px rgba(11, 36, 59, 0.10);
+}
+
+.page-products .products-visual--compact img {
+    /* Keep placeholders from feeling “too big” on page while still using high-res source assets */
+    max-height: 380px;
+    object-fit: cover;
+}
+
+.page-products .products-visual img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Products landing: CTA emphasis */
+.page-products .button .button-text {
+    letter-spacing: 0.01em;
+}
+
 .markdown-content h1{
     color:  #232536;
     text-align: left;
