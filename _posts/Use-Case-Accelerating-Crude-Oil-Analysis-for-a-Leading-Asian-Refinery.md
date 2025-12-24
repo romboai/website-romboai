@@ -118,7 +118,7 @@ markdown_content: >-
 
   ## Results 
 
-  **1. Full assays delivered in 15 minutes **
+  **1. Full assays delivered in 15 minutes** 
 
 
   The NMR AI Analyzer successfully analized over 40 crude oil properties
@@ -135,14 +135,14 @@ markdown_content: >-
   consolidated into one automated system. 
 
 
-  **3. Greater visibility into crude variability **
+  **3. Greater visibility into crude variability**
 
 
   The team can now run more frequent assays, capturing fluctuations that were
   previously invisible due to lengthy and expensive traditional workflows. 
 
 
-  **4. Laboratory-level accuracy **
+  **4. Laboratory-level accuracy**
 
 
   Machine-learning models met the refinery’s internal accuracy benchmarks,
@@ -157,7 +157,7 @@ markdown_content: >-
   without requiring major changes to laboratory infrastructure. 
 
 
-  **If your company is facing similar challenges and want to learn more, contact
-  us for a free demo: contact@rombo.ai **
+  If your company is facing similar challenges and want to learn more, contact
+  us for a free demo: **contact@rombo.ai**
 ---
 
