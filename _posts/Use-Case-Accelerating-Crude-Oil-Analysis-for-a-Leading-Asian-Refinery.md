@@ -1,6 +1,8 @@
 ---
 title: 'Use Case: Accelerating Crude Oil Analysis for a Leading Asian Refinery'
 date: 2025-11-25T23:00:00.000Z
+permalink: /blog/usecase-crudeoil-refinery
+layout: article
 author: Silvia Bongiovanni
 markdown_content: >-
   At one of Asia's largest energy companies owning several refineries, the R&D
