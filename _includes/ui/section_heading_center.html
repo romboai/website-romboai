@@ -1,0 +1,29 @@
+{%- comment -%}
+Reusable centered section heading used on Products pages: kicker + title + optional text.
+
+Usage:
+{% include ui/section_heading_center.html
+  kicker="Use cases"
+  title="Validated on your experimental datasets"
+  text="..."
+  max_width="90ch"
+%}
+{%- endcomment -%}
+
+{%- assign col_class = include.col_class | default: "col-12 col-lg-10" -%}
+{%- assign title_style = include.title_style | default: "font-size: 38px; line-height: 1.15;" -%}
+{%- assign max_width = include.max_width | default: "90ch" -%}
+
+<div class="row justify-content-center text-center">
+  <div class="{{ col_class }}">
+    {% include ui/kicker.html text=include.kicker class="text-center" %}
+    <h2 class="fw-bold text-dark" style="{{ title_style }}">{{ include.title }}</h2>
+    {% if include.text %}
+      <p class="text-dark mt-3" style="max-width: {{ max_width }}; margin: 0 auto;">
+        {{ include.text }}
+      </p>
+    {% endif %}
+  </div>
+</div>
+
+

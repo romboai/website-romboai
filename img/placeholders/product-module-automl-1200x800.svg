@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" role="img" aria-label="Placeholder image: AutoML for materials (recommended 1200×800)">
+  <rect width="1200" height="800" fill="#F7F7F7"/>
+  <rect x="90" y="90" width="1020" height="620" rx="28" fill="#FFFFFF" stroke="rgba(11,36,59,0.12)"/>
+  <text x="140" y="190" fill="#0B243B" font-family="Arial, Helvetica, sans-serif" font-size="44" font-weight="700">
+    AutoML for material analysis
+  </text>
+  <text x="140" y="250" fill="rgba(11,36,59,0.70)" font-family="Arial, Helvetica, sans-serif" font-size="22">
+    Placeholder • Recommended size: 1200×800 • Format: WebP/JPG
+  </text>
+  <g fill="none" stroke="rgba(11,36,59,0.18)" stroke-width="2">
+    <rect x="140" y="310" width="280" height="150" rx="18"/>
+    <rect x="460" y="310" width="280" height="150" rx="18"/>
+    <rect x="780" y="310" width="280" height="150" rx="18"/>
+  </g>
+  <g fill="#0B243B" font-family="Arial, Helvetica, sans-serif" font-size="18">
+    <text x="170" y="355" font-weight="700">Feature selection</text>
+    <text x="490" y="355" font-weight="700">Training</text>
+    <text x="810" y="355" font-weight="700">Validation</text>
+  </g>
+  <g fill="rgba(11,36,59,0.62)" font-family="Arial, Helvetica, sans-serif" font-size="16">
+    <text x="170" y="390">Compare pipelines</text>
+    <text x="490" y="390">Model search</text>
+    <text x="810" y="390">Metrics + robustness</text>
+  </g>
+  <text x="140" y="520" fill="rgba(11,36,59,0.68)" font-family="Arial, Helvetica, sans-serif" font-size="18">
+    Suggested content: technical workflow visuals, not “self-serve SaaS” UI. Highlight pilot/industrialization usage.
+  </text>
+</svg>
+
+
