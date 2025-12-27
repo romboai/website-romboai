@@ -41,9 +41,7 @@ products:
           <li>We work closely with customers to define metrics, datasets, and validation criteria</li>
         </ul>
         <div class="mt-4 d-flex flex-wrap gap-3">
-          <a class="button text-decoration-none" href="{{ '/contact/' | relative_url }}" style="width:auto; display:inline-flex;">
-            <span class="text-container"><span class="button-text">Discuss a pilot</span></span>
-          </a>
+          {% include ui/button.html href="/contact/" label="Discuss a pilot" %}
         </div>
       </div>
       <div class="col-12 col-lg-5">
@@ -59,9 +57,11 @@ products:
   <div class="container custom_container">
     <div class="row g-4 align-items-center">
       <div class="col-12 col-lg-5 pe-lg-5">
-        <div class="products-visual products-visual--compact">
-          <img src="{{ '/img/solution-hardware.jpg' | relative_url }}" class="img-fluid" alt="Material Intelligence Platform" loading="lazy" style="object-fit: cover; width: 100%; height: 100%;">
-        </div>
+        {% include products/visual.html
+          src="/img/solution-hardware.jpg"
+          alt="Material Intelligence Platform"
+          wrapper_class="products-visual--compact"
+        %}
       </div>
       <div class="col-12 col-lg-7 ps-lg-4">
         <h2 class="fw-bold text-dark" style="font-size: 38px; line-height: 1.15;">
@@ -107,16 +107,12 @@ products:
 
 <section class="container-fluid py-4 py-lg-5">
   <div class="container custom_container">
-    <div class="row justify-content-center text-center">
-      <div class="col-12 col-lg-10">
-        <p class="fw-bold m-0 text-uppercase text-center" style="font-size: 14px; color:#fe900f; letter-spacing:.06em;">Overview</p>
-        <h2 class="fw-bold text-dark" style="font-size: 38px; line-height: 1.15;">Two modules, one platform</h2>
-        <p class="text-dark mt-3" style="max-width: 85ch; margin: 0 auto;">
-          Material Intelligence Platform is delivered through pilots and industrialization programs.
-          The modules below are part of one platform—designed to be validated on your experimental data and to remain comparable over time.
-        </p>
-      </div>
-    </div>
+    {% include ui/section_heading_center.html
+      kicker="Overview"
+      title="Two modules, one platform"
+      text="Material Intelligence Platform is delivered through pilots and industrialization programs. The modules below are part of one platform—designed to be validated on your experimental data and to remain comparable over time."
+      max_width="85ch"
+    %}
   </div>
 </section>
 
@@ -125,7 +121,7 @@ products:
   <div class="container custom_container">
     <div class="row g-4 align-items-center">
       <div class="col-12 col-lg-7">
-        <p class="fw-bold m-0 text-uppercase text-center w-100" style="font-size: 14px; color:#fe900f; letter-spacing:.06em;">Module 1</p>
+        {% include ui/kicker.html text="Module 1" class="text-center w-100" %}
         <h2 class="fw-bold text-dark" style="font-size: 38px; line-height: 1.15;">NMR AI Analysis Tool</h2>
         <p class="text-dark mt-3" style="max-width: 75ch;">
           A module focused on benchtop NMR operations and on keeping analysis consistent over time.
@@ -159,9 +155,11 @@ products:
         </div>
       </div>
       <div class="col-12 col-lg-5">
-        <div class="products-visual products-visual--compact">
-          <img src="{{ '/img/client-results.jpg' | relative_url }}" class="img-fluid" alt="Placeholder: NMR module visual (recommended 1200×800)" style="object-fit: cover; width: 100%; height: 100%;">
-        </div>
+        {% include products/visual.html
+          src="/img/client-results.jpg"
+          alt="NMR AI Analysis Tool results"
+          wrapper_class="products-visual--compact"
+        %}
       </div>
     </div>
   </div>
@@ -172,12 +170,14 @@ products:
   <div class="container custom_container">
     <div class="row g-4 align-items-center">
       <div class="col-12 col-lg-5">
-        <div class="products-visual products-visual--compact products-visual--contain">
-          <img src="{{ '/img/framework.png' | relative_url }}" class="img-fluid" alt="AutoML framework" loading="lazy">
-        </div>
+        {% include products/visual.html
+          src="/img/framework.png"
+          alt="AutoML framework"
+          wrapper_class="products-visual--compact products-visual--contain"
+        %}
       </div>
       <div class="col-12 col-lg-7">
-        <p class="fw-bold m-0 text-uppercase text-center w-100" style="font-size: 14px; color:#fe900f; letter-spacing:.06em;">Module 2</p>
+        {% include ui/kicker.html text="Module 2" class="text-center w-100" %}
         <h2 class="fw-bold text-dark" style="font-size: 38px; line-height: 1.15;">AutoML for material analysis</h2>
         <p class="text-dark mt-3" style="max-width: 75ch;">
           An advanced module to build <strong>custom AI models</strong>, designed for technical and R&amp;D teams.
@@ -203,16 +203,12 @@ products:
 
 <section class="container-fluid py-4 py-lg-5">
   <div class="container custom_container">
-    <div class="row justify-content-center text-center">
-      <div class="col-12 col-lg-10">
-        <p class="fw-bold m-0 text-uppercase text-center" style="font-size: 14px; color:#fe900f; letter-spacing:.06em;">Use cases</p>
-        <h2 class="fw-bold text-dark" style="font-size: 38px; line-height: 1.15;">Validated on your experimental datasets</h2>
-        <p class="text-dark mt-3" style="max-width: 90ch; margin: 0 auto;">
-          Two examples of where the platform delivers measurable value. Each deployment starts with a structured pilot: clear objectives, success metrics,
-          and validation on your data—then scales across batches, operating conditions, and sites.
-        </p>
-      </div>
-    </div>
+    {% include ui/section_heading_center.html
+      kicker="Use cases"
+      title="Validated on your experimental datasets"
+      text="Two examples of where the platform delivers measurable value. Each deployment starts with a structured pilot: clear objectives, success metrics, and validation on your data—then scales across batches, operating conditions, and sites."
+      max_width="90ch"
+    %}
 
     <div id="useCasesCarousel" class="carousel slide mt-4" data-bs-ride="carousel" data-bs-interval="8000">
       <div class="carousel-indicators">
@@ -240,9 +236,11 @@ products:
               </div>
             </div>
             <div class="col-12 col-lg-5">
-              <div class="products-visual products-visual--compact products-visual--contain">
-                <img src="{{ '/img/usecase-crude-oil-1200x800.svg' | relative_url }}" class="img-fluid" alt="Crude oil use case" loading="lazy">
-              </div>
+              {% include products/visual.html
+                src="/img/usecase-crude-oil-1200x800.svg"
+                alt="Crude oil use case"
+                wrapper_class="products-visual--compact products-visual--contain"
+              %}
             </div>
           </div>
         </div>
@@ -266,9 +264,11 @@ products:
               </div>
             </div>
             <div class="col-12 col-lg-5">
-              <div class="products-visual products-visual--compact products-visual--contain">
-                <img src="{{ '/img/usecase-mineral-oil-1200x800.svg' | relative_url }}" class="img-fluid" alt="Mineral oil use case" loading="lazy">
-              </div>
+              {% include products/visual.html
+                src="/img/usecase-mineral-oil-1200x800.svg"
+                alt="Mineral oil use case"
+                wrapper_class="products-visual--compact products-visual--contain"
+              %}
             </div>
           </div>
         </div>

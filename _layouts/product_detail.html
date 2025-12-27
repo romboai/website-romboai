@@ -98,9 +98,11 @@
       <div class="row g-4 align-items-center">
         {% if overview_image %}
           <div class="col-12 col-lg-5">
-            <div class="products-visual products-visual--compact">
-              <img src="{{ overview_image | relative_url }}" class="img-fluid" alt="{{ overview_image_alt }}" style="object-fit: cover; width: 100%; height: 100%;">
-            </div>
+            {% include products/visual.html
+              src=overview_image
+              alt=overview_image_alt
+              wrapper_class="products-visual--compact"
+            %}
           </div>
         {% endif %}
         <div class="col-12 {% if overview_image %}col-lg-7{% endif %}">
@@ -155,7 +157,7 @@
     <div class="row justify-content-center text-center">
       <div class="col-12 col-lg-10">
         {% if sol.use_cases.kicker %}
-          <p class="fw-bold m-0 text-uppercase" style="font-size: 14px; color:#fe900f; letter-spacing:.06em;">{{ sol.use_cases.kicker }}</p>
+          {% include ui/kicker.html text=sol.use_cases.kicker %}
         {% endif %}
         {% if sol.use_cases.title %}
           <h2 class="fw-bold text-dark" style="font-size: 38px; line-height: 1.15;">{{ sol.use_cases.title }}</h2>
@@ -201,7 +203,7 @@
     <div class="row justify-content-center text-center">
       <div class="col-12 col-lg-10">
         {% if sol.related_products.kicker %}
-          <p class="fw-bold m-0 text-uppercase" style="font-size: 14px; color:#fe900f; letter-spacing:.06em;">{{ sol.related_products.kicker }}</p>
+          {% include ui/kicker.html text=sol.related_products.kicker %}
         {% endif %}
         {% if sol.related_products.title %}
           <h2 class="fw-bold text-dark" style="font-size: 38px; line-height: 1.15;">{{ sol.related_products.title }}</h2>
@@ -229,9 +231,7 @@
               {% endif %}
               {% if item.link %}
                 <div class="mt-3">
-                  <a class="button text-decoration-none" href="{{ item.link | relative_url }}" style="width:auto; display:inline-flex;">
-                    <span class="text-container"><span class="button-text">{{ item.cta_label | default: "Explore" }}</span></span>
-                  </a>
+                  {% include ui/button.html href=item.link label=item.cta_label %}
                 </div>
               {% endif %}
             </div>
@@ -250,7 +250,7 @@
     <div class="row justify-content-center text-center">
       <div class="col-12 col-lg-10">
         {% if sol.related_roles.kicker %}
-          <p class="fw-bold m-0 text-uppercase" style="font-size: 14px; color:#fe900f; letter-spacing:.06em;">{{ sol.related_roles.kicker }}</p>
+          {% include ui/kicker.html text=sol.related_roles.kicker %}
         {% endif %}
         {% if sol.related_roles.title %}
           <h2 class="fw-bold text-dark" style="font-size: 38px; line-height: 1.15;">{{ sol.related_roles.title }}</h2>
@@ -284,7 +284,7 @@
     <div class="row justify-content-center text-center">
       <div class="col-12 col-lg-10">
         {% if sol.validation.kicker %}
-          <p class="fw-bold m-0 text-uppercase" style="font-size: 14px; color:#fe900f; letter-spacing:.06em;">{{ sol.validation.kicker }}</p>
+          {% include ui/kicker.html text=sol.validation.kicker %}
         {% endif %}
         {% if sol.validation.title %}
           <h2 class="fw-bold text-dark" style="font-size: 38px; line-height: 1.15;">{{ sol.validation.title }}</h2>
@@ -410,14 +410,14 @@
 
     <div class="d-flex flex-wrap justify-content-center gap-3 pt-4">
       {% if sol.cta.primary_link and sol.cta.primary_label %}
-        <a class="button text-decoration-none" href="{{ sol.cta.primary_link | relative_url }}" style="width:auto; display:inline-flex;">
-          <span class="text-container"><span class="button-text">{{ sol.cta.primary_label }}</span></span>
-        </a>
+        {% include ui/button.html href=sol.cta.primary_link label=sol.cta.primary_label %}
       {% endif %}
       {% if sol.cta.secondary_link and sol.cta.secondary_label %}
-        <a class="button text-decoration-none" href="{{ sol.cta.secondary_link | relative_url }}" style="width:auto; display:inline-flex; background: transparent; border: 1px solid rgba(255,255,255,0.35);">
-          <span class="text-container"><span class="button-text" style="color:#fff;">{{ sol.cta.secondary_label }}</span></span>
-        </a>
+        {% include ui/button.html
+          href=sol.cta.secondary_link
+          label=sol.cta.secondary_label
+          style="width:auto; display:inline-flex; background: transparent; border: 1px solid rgba(255,255,255,0.35);"
+        %}
       {% endif %}
     </div>
   </div>

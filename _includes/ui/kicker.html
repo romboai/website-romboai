@@ -1,0 +1,15 @@
+{%- comment -%}
+Reusable small uppercase "kicker" line.
+
+Usage:
+{% include ui/kicker.html text="Use cases" class="text-center" style="" %}
+{%- endcomment -%}
+
+{%- assign extra_class = include.class | default: "" -%}
+{%- assign extra_style = include.style | default: "" -%}
+
+<p class="fw-bold m-0 text-uppercase {{ extra_class }}" style="font-size: 14px; color:#fe900f; letter-spacing:.06em; {{ extra_style }}">
+  {{ include.text }}
+</p>
+
+

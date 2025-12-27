@@ -41,15 +41,15 @@
           {% endfor %}
         </ul>
         <div class="mt-4 d-flex flex-wrap gap-3">
-          <a class="button text-decoration-none" href="{{ intro_cta_link | relative_url }}" style="width:auto; display:inline-flex;">
-            <span class="text-container"><span class="button-text">{{ intro_cta_label }}</span></span>
-          </a>
+          {% include ui/button.html href=intro_cta_link label=intro_cta_label %}
         </div>
       </div>
       <div class="col-12 col-lg-5">
-        <div class="products-visual products-visual--compact">
-          <img src="{{ intro_image | relative_url }}" class="img-fluid" alt="{{ intro_image_alt }}" style="object-fit: cover; width: 100%; height: 100%;">
-        </div>
+        {% include products/visual.html
+          src=intro_image
+          alt=intro_image_alt
+          wrapper_class="products-visual--compact"
+        %}
       </div>
     </div>
   </div>

@@ -1,0 +1,27 @@
+{%- comment -%}
+Reusable visual card for Products pages.
+
+Usage:
+{% include products/visual.html
+  src="/img/your-image.jpg"
+  alt="Descriptive alt text"
+  wrapper_class="products-visual--compact products-visual--contain"
+  img_class="optional-extra-img-class"
+  loading="lazy"
+%}
+{%- endcomment -%}
+
+{%- assign wrapper_class = include.wrapper_class | default: "products-visual--compact" -%}
+{%- assign img_class = include.img_class | default: "" -%}
+{%- assign loading = include.loading | default: "lazy" -%}
+
+<div class="products-visual {{ wrapper_class }}">
+  <img
+    src="{{ include.src | relative_url }}"
+    class="img-fluid {{ img_class }}"
+    alt="{{ include.alt | escape }}"
+    loading="{{ loading }}"
+  >
+</div>
+
+
