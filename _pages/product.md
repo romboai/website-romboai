@@ -15,12 +15,12 @@ products:
     badge: "NMR + AI module"
     description: "End-to-end benchtop NMR workflow, automated signal analysis, and interpretable outputs that remain comparable over time."
     link: "/product/#nmr-ai-analysis-tool"
-    image: "/img/placeholders/product-module-nmr-1200x800.svg"
+    image: "/img/client-results.png"
   - title: "AutoML for material analysis"
     badge: "Advanced module (pilot-driven)"
     description: "Build and validate domain-specific AI models: feature selection, training/validation, performance comparison, and adaptation to new datasets."
     link: "/product/#automl-materials"
-    image: "/img/placeholders/product-module-automl-1200x800.svg"
+    image: "/img/framework.png"
 ---
 
 <section class="container-fluid py-4 py-lg-5">
@@ -47,8 +47,8 @@ products:
         </div>
       </div>
       <div class="col-12 col-lg-5">
-        <div class="products-visual products-visual--compact">
-          <img src="{{ '/img/placeholders/product-hero-1200x800.svg' | relative_url }}" class="img-fluid" alt="Placeholder: products hero visual (recommended 1200×800)" style="object-fit: cover; width: 100%; height: 100%;">
+        <div class="products-visual products-visual--ball">
+          <img src="{{ '/img/forma51.png' | relative_url }}" class="img-fluid products-ball" alt="Rombo.ai shape" loading="lazy">
         </div>
       </div>
     </div>
@@ -58,12 +58,12 @@ products:
 <section class="container-fluid py-4 py-lg-5" style="background:#F7F7F7;">
   <div class="container custom_container">
     <div class="row g-4 align-items-center">
-      <div class="col-12 col-lg-5">
+      <div class="col-12 col-lg-5 pe-lg-5">
         <div class="products-visual products-visual--compact">
-          <img src="{{ '/img/placeholders/product-platform-1200x800.svg' | relative_url }}" class="img-fluid" alt="Placeholder: platform overview visual (recommended 1200×800)" style="object-fit: cover; width: 100%; height: 100%;">
+          <img src="{{ '/img/solution-hardware.jpg' | relative_url }}" class="img-fluid" alt="Material Intelligence Platform" loading="lazy" style="object-fit: cover; width: 100%; height: 100%;">
         </div>
       </div>
-      <div class="col-12 col-lg-7">
+      <div class="col-12 col-lg-7 ps-lg-4">
         <h2 class="fw-bold text-dark" style="font-size: 38px; line-height: 1.15;">
           The platform: Material Intelligence Platform
         </h2>
@@ -157,14 +157,10 @@ products:
             </div>
           </div>
         </div>
-        <div class="mt-4">
-          <div class="fw-bold">Target</div>
-          <div class="text-muted" style="font-size: 14px;">Industrial labs · Quality control · R&amp;D on complex materials</div>
-        </div>
       </div>
       <div class="col-12 col-lg-5">
         <div class="products-visual products-visual--compact">
-          <img src="{{ '/img/placeholders/product-module-nmr-1200x800.svg' | relative_url }}" class="img-fluid" alt="Placeholder: NMR module visual (recommended 1200×800)" style="object-fit: cover; width: 100%; height: 100%;">
+          <img src="{{ '/img/client-results.jpg' | relative_url }}" class="img-fluid" alt="Placeholder: NMR module visual (recommended 1200×800)" style="object-fit: cover; width: 100%; height: 100%;">
         </div>
       </div>
     </div>
@@ -176,8 +172,8 @@ products:
   <div class="container custom_container">
     <div class="row g-4 align-items-center">
       <div class="col-12 col-lg-5">
-        <div class="products-visual products-visual--compact">
-          <img src="{{ '/img/placeholders/product-module-automl-1200x800.svg' | relative_url }}" class="img-fluid" alt="Placeholder: AutoML module visual (recommended 1200×800)" style="object-fit: cover; width: 100%; height: 100%;">
+        <div class="products-visual products-visual--compact products-visual--contain">
+          <img src="{{ '/img/framework.png' | relative_url }}" class="img-fluid" alt="AutoML framework" loading="lazy">
         </div>
       </div>
       <div class="col-12 col-lg-7">
@@ -210,10 +206,10 @@ products:
     <div class="row justify-content-center text-center">
       <div class="col-12 col-lg-10">
         <p class="fw-bold m-0 text-uppercase text-center" style="font-size: 14px; color:#fe900f; letter-spacing:.06em;">Use cases</p>
-        <h2 class="fw-bold text-dark" style="font-size: 38px; line-height: 1.15;">Validated on real experimental datasets</h2>
+        <h2 class="fw-bold text-dark" style="font-size: 38px; line-height: 1.15;">Validated on your experimental datasets</h2>
         <p class="text-dark mt-3" style="max-width: 90ch; margin: 0 auto;">
-          Examples of where the platform delivers value. Each implementation is validated on your experimental data with clear success metrics,
-          and then extended to new materials and conditions as you scale.
+          Two examples of where the platform delivers measurable value. Each deployment starts with a structured pilot: clear objectives, success metrics,
+          and validation on your data—then scales across batches, operating conditions, and sites.
         </p>
       </div>
     </div>
@@ -221,9 +217,7 @@ products:
     <div id="useCasesCarousel" class="carousel slide mt-4" data-bs-ride="carousel" data-bs-interval="8000">
       <div class="carousel-indicators">
         <button type="button" data-bs-target="#useCasesCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Crude oil"></button>
-        <button type="button" data-bs-target="#useCasesCarousel" data-bs-slide-to="1" aria-label="Mineral oil"></button>
-        <button type="button" data-bs-target="#useCasesCarousel" data-bs-slide-to="2" aria-label="Biofuel"></button>
-        <button type="button" data-bs-target="#useCasesCarousel" data-bs-slide-to="3" aria-label="Pyrolysis"></button>
+        <button type="button" data-bs-target="#useCasesCarousel" data-bs-slide-to="1" aria-label="Mineral oil (transformers)"></button>
       </div>
 
       <div class="carousel-inner">
@@ -232,21 +226,22 @@ products:
             <div class="col-12 col-lg-7">
               <h3 class="fw-bold text-dark" style="font-size: 28px; line-height: 1.2;">Crude oil</h3>
               <ul class="text-dark" style="max-width: 85ch;">
-                <li>NMR analysis of crude oils</li>
-                <li>Sample comparison and classification</li>
-                <li>Identification of relevant patterns correlated with properties and process variability</li>
+                <li>Fingerprinting and comparison across blends, batches, and suppliers</li>
+                <li>Classification and similarity search with traceable features</li>
+                <li>Link spectral patterns to properties and process variability</li>
+                <li>Early detection of off-spec / drift with agreed thresholds</li>
               </ul>
               <div class="p-3 border rounded-4 mt-3" style="background:#fff; max-width: 85ch;">
                 <div class="fw-bold">What you can expect</div>
                 <div class="text-muted" style="font-size: 14px;">
-                  We validate the model on your crude family and measurement setup, then expand coverage by incorporating additional datasets and conditions.
-                  The pilot defines the validation protocol and the path to production use.
+                  A validated workflow on your crude family and NMR setup: reproducible preprocessing, model performance on held-out data,
+                  decision criteria, and a path to scaling across new datasets and operating conditions.
                 </div>
               </div>
             </div>
             <div class="col-12 col-lg-5">
-              <div class="products-visual products-visual--compact">
-                <img src="{{ '/img/placeholders/product-usecase-crude-1200x800.svg' | relative_url }}" class="img-fluid" alt="Placeholder: crude oil use case visual (recommended 1200×800)">
+              <div class="products-visual products-visual--compact products-visual--contain">
+                <img src="{{ '/img/usecase-crude-oil-1200x800.svg' | relative_url }}" class="img-fluid" alt="Crude oil use case" loading="lazy">
               </div>
             </div>
           </div>
@@ -257,50 +252,22 @@ products:
             <div class="col-12 col-lg-7">
               <h3 class="fw-bold text-dark" style="font-size: 28px; line-height: 1.2;">Mineral oil (transformers)</h3>
               <ul class="text-dark" style="max-width: 85ch;">
-                <li>Classification and batch comparison</li>
-                <li>Condition indicators designed with technical teams</li>
-                <li>Validation on experimental datasets collected in pilots</li>
+                <li>Batch comparison and classification with reproducible indicators</li>
+                <li>Condition / aging proxies designed with technical teams</li>
+                <li>Trend monitoring over time and across maintenance cycles</li>
+                <li>Reporting outputs that remain comparable across campaigns</li>
               </ul>
-            </div>
-            <div class="col-12 col-lg-5">
-              <div class="products-visual products-visual--compact">
-                <img src="{{ '/img/placeholders/product-usecase-mineral-oil-1200x800.svg' | relative_url }}" class="img-fluid" alt="Placeholder: mineral oil use case visual (recommended 1200×800)">
+              <div class="p-3 border rounded-4 mt-3" style="background:#fff; max-width: 85ch;">
+                <div class="fw-bold">What you can expect</div>
+                <div class="text-muted" style="font-size: 14px;">
+                  A pilot-defined set of indicators and validation metrics, tested on your samples; plus a scalable workflow to extend coverage
+                  to new oils, conditions, and sites without losing comparability.
+                </div>
               </div>
             </div>
-          </div>
-        </div>
-
-        <div class="carousel-item">
-          <div class="row g-4 align-items-center">
-            <div class="col-12 col-lg-7">
-              <h3 class="fw-bold text-dark" style="font-size: 28px; line-height: 1.2;">Biofuel</h3>
-              <ul class="text-dark" style="max-width: 85ch;">
-                <li>Batch comparison and classification</li>
-                <li>Material-family-specific models</li>
-                <li>Extension to new contexts through experimental data</li>
-              </ul>
-            </div>
             <div class="col-12 col-lg-5">
-              <div class="products-visual products-visual--compact">
-                <img src="{{ '/img/placeholders/product-usecase-biofuel-1200x800.svg' | relative_url }}" class="img-fluid" alt="Placeholder: biofuel use case visual (recommended 1200×800)">
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="carousel-item">
-          <div class="row g-4 align-items-center">
-            <div class="col-12 col-lg-7">
-              <h3 class="fw-bold text-dark" style="font-size: 28px; line-height: 1.2;">Pyrolysis</h3>
-              <ul class="text-dark" style="max-width: 85ch;">
-                <li>Feedstock / product characterization</li>
-                <li>Comparison and classification</li>
-                <li>Validation and iteration within pilot programs</li>
-              </ul>
-            </div>
-            <div class="col-12 col-lg-5">
-              <div class="products-visual products-visual--compact">
-                <img src="{{ '/img/placeholders/product-usecase-pyrolysis-1200x800.svg' | relative_url }}" class="img-fluid" alt="Placeholder: pyrolysis use case visual (recommended 1200×800)">
+              <div class="products-visual products-visual--compact products-visual--contain">
+                <img src="{{ '/img/usecase-mineral-oil-1200x800.svg' | relative_url }}" class="img-fluid" alt="Mineral oil use case" loading="lazy">
               </div>
             </div>
           </div>

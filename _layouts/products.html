@@ -23,30 +23,50 @@
 
 <!-- Hero Section -->
 <div class="container-fluid hero-section">
-  <video class="hero-video" autoplay muted loop playsinline controlslist="nodownload">
-    <source src="{{ site.baseurl }}/img/hero_back_play.mp4" type="video/mp4"/>
+  <video class="hero-video" autoplay muted loop playsinline controlslist="nodownload" data-desktop-only="true">
+    <!-- Desktop-only: we set src via JS to prevent mobile from downloading the mp4 -->
+    <source data-src="{{ site.baseurl }}/img/hero_back_play.mp4" type="video/mp4"/>
     Your browser does not support the video tag.
   </video>
 
   <div class="mask"></div>
   <div class="container custom-container w-100 h-100">
     <div class="row m-0 w-100 h-100">
-      <div class="z-1 col-md-7 px-5 px-md-4 align-content-center titolo-1">
-        <span class="titolo-1-span text-highlight">
-          {{ page.hero_product_title }}
-          <br/>
-        </span>
-        <span class="titolo-1-span2 text-highlight">
-          {{ page.hero_product_sub_title }}
-        </span>
-      </div>
-      <div class="col-md-5 d-none d-md-block justify-content-center align-content-center z-1">
-        <img class="img-fluid forma-5-1" style="object-fit: cover" alt="forma" src="{{ site.baseurl }}/img/forma-5-10.png"/>
+      <div class="z-1 col-12 col-lg-6 px-3 px-md-4 d-flex align-items-center titolo-1">
+        <div class="products-hero-copy">
+          <span class="titolo-1-span text-highlight">
+            {{ page.hero_product_title }}
+            <br/>
+          </span>
+          <span class="titolo-1-span2 text-highlight">
+            {{ page.hero_product_sub_title }}
+          </span>
+        </div>
       </div>
     </div>
   </div>
 </div>
 <!-- Hero Section -->
+
+<script>
+  (function () {
+    // Prevent loading the mp4 on mobile/tablet widths
+    var isDesktop = window.matchMedia && window.matchMedia("(min-width: 992px)").matches;
+    if (!isDesktop) {
+      var v = document.querySelector(".page-products .hero-video[data-desktop-only='true']");
+      if (v) v.remove();
+      return;
+    }
+    var video = document.querySelector(".page-products .hero-video[data-desktop-only='true']");
+    if (!video) return;
+    var source = video.querySelector("source[data-src]");
+    if (!source) return;
+    source.src = source.getAttribute("data-src");
+    video.load();
+    var p = video.play();
+    if (p && typeof p.catch === "function") p.catch(function () {});
+  })();
+</script>
 
 {% include hero_divider.html %}
 

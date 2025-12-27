@@ -1007,6 +1007,13 @@ label.ckb input:checked ~ span.checkmark::after {
     transform: rotate(0deg) scale(-1, 1);
 }
 
+/* Products: never show the hero video on mobile (JS also prevents mp4 download) */
+@media (max-width: 991.98px) {
+    .page-products .hero-video {
+        display: none;
+    }
+}
+
 
 .hero-content-message {
     font-size: 69px;
@@ -1339,9 +1346,14 @@ label.ckb input:checked ~ span.checkmark::after {
 /* Products landing: image cards */
 .page-products .products-visual {
     border-radius: 18px;
-    overflow: hidden;
+    /* Allow the box-shadow to render fully (avoid clipping on some browsers) */
+    overflow: visible;
     background: #fff;
     box-shadow: 0 10px 24px rgba(11, 36, 59, 0.10);
+    /* Give the shadow room so it doesn't appear cut by adjacent sections/backgrounds */
+    margin: 14px 0;
+    position: relative;
+    z-index: 1;
 }
 
 .page-products .products-visual--compact img {
@@ -1350,10 +1362,34 @@ label.ckb input:checked ~ span.checkmark::after {
     object-fit: cover;
 }
 
+.page-products .products-visual--contain img {
+    /* For diagrams/screenshots: show full image, no cropping */
+    object-fit: contain;
+    height: auto;
+    background: #fff;
+}
+
+.page-products .products-visual--ball {
+    background: transparent;
+    box-shadow: none;
+    border-radius: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+}
+
+.page-products .products-visual--ball img.products-ball {
+    width: min(360px, 100%);
+    height: auto;
+}
+
 .page-products .products-visual img {
     width: 100%;
     height: auto;
     display: block;
+    /* Keep rounded corners without needing overflow clipping on the parent */
+    border-radius: inherit;
 }
 
 /* Products landing: CTA emphasis */
@@ -1747,6 +1783,31 @@ label.ckb input:checked ~ span.checkmark::after {
     font-size: 32px;
     line-height: 110%;
     font-weight: 400;
+}
+
+/* Products hero: better left rhythm + readable width (scoped) */
+.page-products .products-hero-copy {
+    /* Center the copy block inside the left half (col-lg-6) */
+    width: 100%;
+    /* Wider so the hero title tends to break into ~2 lines instead of 3 */
+    max-width: 70ch;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.page-products .titolo-1-span {
+    font-size: clamp(34px, 4vw, 48px);
+    line-height: 1.08;
+    /* Helps create nicer two-line wraps when supported */
+    text-wrap: balance;
+}
+
+.page-products .titolo-1-span2 {
+    display: block;
+    margin-top: 12px;
+    font-size: clamp(18px, 2vw, 26px);
+    line-height: 1.25;
+    max-width: 60ch;
 }
 
 .forma-5-1,
