@@ -11,7 +11,7 @@ hero_product_sub_title: "Software that integrates benchtop NMR spectroscopy and 
 
 
 products:
-  - title: "NMR AI Analysis Tool"
+  - title: "NMR AI Analyzer"
     badge: "NMR + AI module"
     description: "End-to-end benchtop NMR workflow, automated signal analysis, and interpretable outputs that remain comparable over time."
     link: "/product/#nmr-ai-analysis-tool"
@@ -68,7 +68,7 @@ products:
           The platform: Material Intelligence Platform
         </h2>
         <p class="text-dark mt-3" style="max-width: 75ch;">
-          <strong>Material Intelligence Platform</strong> is a single platform (not a collection of unrelated products) designed to bring
+          <strong>Material Intelligence Platform</strong> is platform designed to bring
           benchtop NMR and domain-specific AI into industrial workflows—with traceability and reproducibility as first-class requirements.
         </p>
         <div class="row g-3 mt-2">
@@ -116,13 +116,13 @@ products:
   </div>
 </section>
 
-<h2 id="nmr-ai-analysis-tool" class="visually-hidden">4. Module 1 — NMR AI Analysis Tool</h2>
+<h2 id="nmr-ai-analysis-tool" class="visually-hidden">4. Module 1 — NMR AI Analyzer</h2>
 <section class="container-fluid py-4 py-lg-5">
   <div class="container custom_container">
     <div class="row g-4 align-items-center">
       <div class="col-12 col-lg-7">
         {% include ui/kicker.html text="Module 1" class="text-center w-100" %}
-        <h2 class="fw-bold text-dark" style="font-size: 38px; line-height: 1.15;">NMR AI Analysis Tool</h2>
+        <h2 class="fw-bold text-dark" style="font-size: 38px; line-height: 1.15;">NMR AI Analyzer</h2>
         <p class="text-dark mt-3" style="max-width: 75ch;">
           A module focused on benchtop NMR operations and on keeping analysis consistent over time.
           Designed for industrial labs where traceability and comparability matter.
@@ -157,7 +157,7 @@ products:
       <div class="col-12 col-lg-5">
         {% include products/visual.html
           src="/img/client-results.jpg"
-          alt="NMR AI Analysis Tool results"
+          alt="NMR AI Analyzer results"
           wrapper_class="products-visual--compact"
         %}
       </div>

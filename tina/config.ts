@@ -80,6 +80,25 @@ export default defineConfig({
         label: "Blog Posts",
         path: "_posts",
         format: "md",
+        ui: {
+          filename: {
+            slugify: (values: any) => {
+              const title = (values?.title ?? "post").toString();
+              const slug = title
+                .toLowerCase()
+                .trim()
+                .replace(/['"]/g, "")
+                .replace(/[^a-z0-9]+/g, "-")
+                .replace(/(^-|-$)/g, "");
+
+              const d = values?.date ? new Date(values.date) : new Date();
+              const yyyy = String(d.getFullYear()).padStart(4, "0");
+              const mm = String(d.getMonth() + 1).padStart(2, "0");
+              const dd = String(d.getDate()).padStart(2, "0");
+              return `${yyyy}-${mm}-${dd}-${slug || "post"}`;
+            },
+          },
+        },
         fields: [
           {
             type: "string",
@@ -98,31 +117,41 @@ export default defineConfig({
             type: "string",
             name: "permalink",
             label: "Permalink",
-            required: false,
+            required: true,
+            description: "Recommended format: /blog/your-post-slug/ (starts with /blog/ and ends with /).",
           },
           {
             type: "string",
             name: "layout",
             label: "Layout",
-            required: false,
+            required: true,
+            options: ["article"],
+            description: "Keep as 'article' for blog posts.",
           },
           {
             type: "image",
             name: "image",
             label: "Featured Image",
-            required: false,
+            required: true,
+          },
+          {
+            type: "string",
+            name: "image_alt",
+            label: "Featured Image Alt Text",
+            required: true,
+            description: "Accessibility + SEO. Describe the image in a short sentence.",
           },
           {
             type: "string",
             name: "author",
             label: "Author",
-            required: false,
+            required: true,
           },
           {
             type: "string",
             name: "excerpt",
             label: "Excerpt",
-            required: false,
+            required: true,
             ui: {
               component: "textarea",
             },
@@ -131,7 +160,7 @@ export default defineConfig({
             type: "string",
             name: "markdown_content",
             label: "Body (Markdown)",
-            required: false,
+            required: true,
             ui: {
               component: MarkdownStringEditor,
             },
