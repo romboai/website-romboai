@@ -113,6 +113,21 @@ products:
       text="Material Intelligence Platform is delivered through pilots and industrialization programs. The modules below are part of one platform—designed to be validated on your experimental data and to remain comparable over time."
       max_width="85ch"
     %}
+
+    <!-- AutoML detail link (required by E2E tests) -->
+    <div class="row justify-content-center mt-4">
+      <div class="col-12 col-lg-10">
+        <div class="p-3 p-md-4 border rounded-4 bg-white d-flex flex-column flex-md-row align-items-start align-items-md-center justify-content-between gap-3">
+          <div>
+            <div class="fw-bold text-dark" style="font-size: 18px;">Rombo AutoML</div>
+            <div class="text-muted" style="font-size: 14px; max-width: 70ch;">
+              AutoML built for spectral data—validated on your experimental datasets.
+            </div>
+          </div>
+          <a href="{{ '/product/rombo-automl/' | relative_url }}" class="text-decoration-none">Learn more</a>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
