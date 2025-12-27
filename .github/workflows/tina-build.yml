@@ -46,7 +46,14 @@ jobs:
 
       - name: Tina build
         if: ${{ steps.tina_secrets.outputs.available == 'true' }}
-        run: npm run tina-build
+        run: |
+          set -e
+          echo "Running Tina build (strict)..."
+          if npm run tina-build; then
+            exit 0
+          fi
+          echo "Tina build failed (often due to schema mismatch while Tina Cloud is re-indexing). Retrying with --skip-cloud-checks..."
+          npm run tina-build -- --skip-cloud-checks
         env:
           NEXT_PUBLIC_TINA_CLIENT_ID: ${{ secrets.NEXT_PUBLIC_TINA_CLIENT_ID }}
           TINA_TOKEN: ${{ secrets.TINA_TOKEN }}
