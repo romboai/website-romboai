@@ -9,8 +9,8 @@ test("products: landing shows AutoML and hides Client; AutoML detail loads", asy
   await expect(page.getByRole("link", { name: /learn more/i })).toHaveCount(1);
 
   await page.getByRole("link", { name: /learn more/i }).click();
-  await expect(page).toHaveURL(/\/product\/rombo-automl\/?$/);
-  await expect(page.getByRole("heading", { name: /rombo automl/i }).first()).toBeVisible();
+  await expect(page).toHaveURL(/\/product\/#automl-materials$/);
+  await expect(page.getByRole("heading", { name: /automl for material analysis/i }).first()).toBeVisible();
 });
 
 

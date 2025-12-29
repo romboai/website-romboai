@@ -12,8 +12,8 @@ test("navigation smoke: main pages load and key headings render", async ({ page 
   // Products dropdown -> Rombo AutoML
   await page.locator("#productsDropdown").click();
   await page.getByRole("link", { name: /rombo automl/i }).click();
-  await expect(page).toHaveURL(/\/product\/rombo-automl\/?$/);
-  await expect(page.getByRole("heading", { name: /rombo automl/i }).first()).toBeVisible();
+  await expect(page).toHaveURL(/\/product\/#automl-materials$/);
+  await expect(page.getByRole("heading", { name: /automl for material analysis/i }).first()).toBeVisible();
 
   // Blog
   await page.getByRole("link", { name: /^blog$/i }).click();

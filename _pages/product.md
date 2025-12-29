@@ -124,7 +124,7 @@ products:
               AutoML built for spectral data—validated on your experimental datasets.
             </div>
           </div>
-          <a href="{{ '/product/rombo-automl/' | relative_url }}" class="text-decoration-none">Learn more</a>
+          <a href="{{ '/product/#automl-materials' | relative_url }}" class="text-decoration-none">Learn more</a>
         </div>
       </div>
     </div>
