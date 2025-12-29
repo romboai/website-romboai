@@ -4,17 +4,12 @@ date: 2025-12-23T23:00:00.000Z
 permalink: /blog/usecase-crudeoil-refinery
 layout: article
 image: /img/1764170441294.jpeg
+image_alt: crude assay refinery
 author: Silvia Bongiovanni
 excerpt: >-
   At one of Asia’s largest integrated energy companies, refinery R&D teams
   evaluate hundreds of crude oil feedstocks every day to support purchasing,
-  blending, and operational decisions. However, traditional crude oil
-  assays—still the industry standard—require weeks or even months to complete,
-  forcing refineries to rely on generic, often inaccurate estimates instead of
-  real measurements. To overcome this bottleneck, the company partnered with
-  Rombo AI to introduce a faster, AI-driven approach to crude evaluation,
-  enabling near–real-time, laboratory-grade insights that significantly improved
-  decision-making across refinery operations.
+  blending, and operational decisions...
 markdown_content: >-
   At one of Asia's largest energy companies owning several refineries, the R&D
   analysis team is responsible for evaluating hundreds of crude oil feedstocks
