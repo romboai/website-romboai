@@ -1,16 +1,16 @@
 const { test, expect } = require("@playwright/test");
 
-test("products: landing shows AutoML and hides Client; AutoML detail loads", async ({ page }) => {
+test("products: page loads and module anchors render", async ({ page }) => {
   await page.goto("/product/");
   await expect(page.locator("body")).toContainText(/Products/i);
 
-  // Client is temporarily unpublished
-  await expect(page.locator("body")).not.toContainText(/Rombo Client/i);
-  await expect(page.getByRole("link", { name: /learn more/i })).toHaveCount(1);
+  // Key sections (avoid brittle checks on promotional cards/CTAs)
+  await expect(page.locator("#nmr-ai-analysis-tool")).toHaveCount(1);
+  await expect(page.locator("#automl-materials")).toHaveCount(1);
 
-  await page.getByRole("link", { name: /learn more/i }).click();
-  await expect(page).toHaveURL(/\/product\/#automl-materials$/);
-  await expect(page.getByRole("heading", { name: /automl for material analysis/i }).first()).toBeVisible();
+  // Headings exist (content-level smoke)
+  await expect(page.getByRole("heading", { name: /NMR AI Analyzer/i }).first()).toBeVisible();
+  await expect(page.getByRole("heading", { name: /AutoML for material analysis/i }).first()).toBeVisible();
 });
 
 

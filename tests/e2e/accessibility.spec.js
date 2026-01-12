@@ -21,7 +21,8 @@ test("a11y smoke: skip link exists and keyboard focus is visible", async ({ page
   expect(hasFocusRing).toBeTruthy();
 
   // Activating skip link should jump to the main content anchor.
-  await skip.click();
+  // Use keyboard activation (more robust than click; skip link can be positioned offscreen).
+  await page.keyboard.press("Enter");
   expect(page.url()).toMatch(/#main-content$/);
   await expect(page.locator("#main-content")).toHaveCount(1);
 });
@@ -31,7 +32,8 @@ test("a11y smoke: Products dropdown is usable and navigates", async ({ page }) =
   await page.locator("#productsDropdown").click();
   await expect(page.getByRole("link", { name: /rombo automl/i })).toBeVisible();
   await page.getByRole("link", { name: /rombo automl/i }).click();
-  await expect(page).toHaveURL(/\/product\/rombo-automl\/?$/);
+  await expect(page).toHaveURL(/\/product\/#automl-materials$/);
+  await expect(page.locator("#automl-materials")).toHaveCount(1);
 });
 
 

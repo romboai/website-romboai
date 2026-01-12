@@ -17,7 +17,8 @@ module.exports = defineConfig({
     command:
       // Note: Jekyll 3.x doesn't accept `--livereload=false` (it errors with OptionParser::NeedlessArgument).
       // We simply omit livereload in CI.
-      "bundle exec jekyll serve --host 127.0.0.1 --port 4000 --trace",
+      // Also disable watch to avoid pulling jekyll-watch/listen in CI and test runs.
+      "bundle exec jekyll serve --no-watch --host 127.0.0.1 --port 4000 --trace",
     url: "http://127.0.0.1:4000",
     reuseExistingServer: !process.env.CI,
     timeout: 120_000,

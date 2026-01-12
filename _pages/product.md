@@ -7,7 +7,7 @@ description: "One platform integrating benchtop NMR and domain-specific AI for i
 lang: en
 
 hero_product_title: "AI solutions for advanced material analysis"
-hero_product_sub_title: "Software that integrates benchtop NMR spectroscopy and Artificial Intelligence to support analysis and characterization of complex industrial materials."
+hero_product_sub_title: "Software that integrates benchtop NMR spectroscopy and Artificial Intelligence to accelerate analysis and characterization of complex industrial materials."
 
 
 products:
@@ -28,7 +28,7 @@ products:
     <div class="row g-4 align-items-center">
       <div class="col-12 col-lg-7">
         <h2 class="fw-bold text-dark" style="font-size: 38px; line-height: 1.15;">
-          Built for real materials, not synthetic demos
+          Built For Real Materials, Not Synthetic Demos
         </h2>
         <p class="text-dark mt-3" style="max-width: 60ch;">
           Industrial materials are not “standard”: they vary by process, supplier, operating conditions, and intrinsic variability.
@@ -41,7 +41,7 @@ products:
           <li>We work closely with customers to define metrics, datasets, and validation criteria</li>
         </ul>
         <div class="mt-4 d-flex flex-wrap gap-3">
-          {% include ui/button.html href="/contact/" label="Discuss a pilot" %}
+          {% include ui/button.html href="/contact/" label="Request a pilot" %}
         </div>
       </div>
       <div class="col-12 col-lg-5">
@@ -68,32 +68,15 @@ products:
           The platform: Material Intelligence Platform
         </h2>
         <p class="text-dark mt-3" style="max-width: 75ch;">
-          <strong>Material Intelligence Platform</strong> is platform designed to bring
-          benchtop NMR and domain-specific AI into industrial workflows—with traceability and reproducibility as first-class requirements.
+          <strong>Material Intelligence Platform</strong> is a platform designed to bring benchtop NMR and domain-specific AI into industrial workflows—with traceability and reproducibility as first-class requirements.
         </p>
-        <div class="row g-3 mt-2">
-          <div class="col-12 col-md-6">
-            <div class="p-3 bg-white border rounded-4 h-100">
-              <div class="fw-bold">NMR instrument workflow</div>
-              <div class="text-muted" style="font-size: 14px;">Acquisition, organization, and preprocessing of spectra.</div>
-            </div>
-          </div>
-          <div class="col-12 col-md-6">
-            <div class="p-3 bg-white border rounded-4 h-100">
-              <div class="fw-bold">Feature extraction</div>
-              <div class="text-muted" style="font-size: 14px;">Reproducible pipelines designed for material families.</div>
-            </div>
-          </div>
-          <div class="col-12 col-md-6">
-            <div class="p-3 bg-white border rounded-4 h-100">
-              <div class="fw-bold">Model training & validation</div>
-              <div class="text-muted" style="font-size: 14px;">Clear metrics and robust evaluation across datasets.</div>
-            </div>
-          </div>
-          <div class="col-12 col-md-6">
-            <div class="p-3 bg-white border rounded-4 h-100">
-              <div class="fw-bold">Interpretability & traceability</div>
-              <div class="text-muted" style="font-size: 14px;">Comparable outputs over time and across campaigns.</div>
+        <div class="row mt-4">
+          <div class="col-12">
+            <div class="d-flex justify-content-center">
+              <img src="{{ site.baseurl }}/img/products-workflow-flow.svg" 
+                   alt="Workflow flow: Sample material (raw spectra) → Processing (Machine learning) → Report (characterization / identification / Insight)" 
+                   class="img-fluid" 
+                   style="max-width: 100%; height: auto;">
             </div>
           </div>
         </div>
@@ -109,25 +92,12 @@ products:
   <div class="container custom_container">
     {% include ui/section_heading_center.html
       kicker="Overview"
-      title="Two modules, one platform"
+      title="Two Modules, One Platform"
       text="Material Intelligence Platform is delivered through pilots and industrialization programs. The modules below are part of one platform—designed to be validated on your experimental data and to remain comparable over time."
       max_width="85ch"
     %}
 
-    <!-- AutoML detail link (required by E2E tests) -->
-    <div class="row justify-content-center mt-4">
-      <div class="col-12 col-lg-10">
-        <div class="p-3 p-md-4 border rounded-4 bg-white d-flex flex-column flex-md-row align-items-start align-items-md-center justify-content-between gap-3">
-          <div>
-            <div class="fw-bold text-dark" style="font-size: 18px;">Rombo AutoML</div>
-            <div class="text-muted" style="font-size: 14px; max-width: 70ch;">
-              AutoML built for spectral data—validated on your experimental datasets.
-            </div>
-          </div>
-          <a href="{{ '/product/#automl-materials' | relative_url }}" class="text-decoration-none">Learn more</a>
-        </div>
-      </div>
-    </div>
+    
   </div>
 </section>
 
@@ -220,7 +190,7 @@ products:
   <div class="container custom_container">
     {% include ui/section_heading_center.html
       kicker="Use cases"
-      title="Validated on your experimental datasets"
+      title="Validated On Your Experimental Datasets"
       text="Two examples of where the platform delivers measurable value. Each deployment starts with a structured pilot: clear objectives, success metrics, and validation on your data—then scales across batches, operating conditions, and sites."
       max_width="90ch"
     %}
@@ -302,8 +272,8 @@ products:
 <section class="container-fluid justify-content-center text-center text-white py-5 h-100" style="background:#303767;">
   <div class="container custom_container d-flex flex-column justify-content-center align-items-center text-center">
     <p class="fw-bold pt-2 text-uppercase" style="font-size: 14px; color:#FE900F; letter-spacing:.06em;">How we work</p>
-    <h2 class="fw-bold py-3 text-white secondary-headline" style="font-size: 42px;">Product-oriented pilots</h2>
-    <p class="px-3" style="font-size: 16px; max-width: 900px;">
+    <h2 class="fw-bold py-3 text-white secondary-headline" style="font-size: 42px;">Run a fast pilot. Prove value on your data.</h2>
+    <p class="px-3 text-white" style="font-size: 16px; max-width: 900px;">
       We start with a structured pilot: clear objectives, agreed success metrics, and validation on your experimental data.
       You get a working solution and a roadmap to scale into operations.
     </p>
@@ -311,38 +281,38 @@ products:
     <div class="row g-3 w-100 mt-4" style="max-width: 1000px;">
       <div class="col-12 col-md-6">
         <div class="p-3 rounded-4 h-100" style="background: rgba(255,255,255,0.10); border: 1px solid rgba(255,255,255,0.16); text-align:left;">
-          <div class="fw-bold text-white">1) Define objectives</div>
-          <div class="text-white-50" style="font-size: 14px;">What we measure and what we predict/classify.</div>
+          <div class="fw-bold text-white">️Define the problem</div>
+          <div class="text-white-50" style="font-size: 14px;">What are you trying to predict, classify or detect?</div>
         </div>
       </div>
       <div class="col-12 col-md-6">
         <div class="p-3 rounded-4 h-100" style="background: rgba(255,255,255,0.10); border: 1px solid rgba(255,255,255,0.16); text-align:left;">
-          <div class="fw-bold text-white">2) Validation metrics</div>
-          <div class="text-white-50" style="font-size: 14px;">Accuracy, robustness, reproducibility, stability over time.</div>
+          <div class="fw-bold text-white"> Validate on your data </div>
+          <div class="text-white-50" style="font-size: 14px;">We work with your experimental datasets to build trustable models.</div>
         </div>
       </div>
       <div class="col-12 col-md-6">
         <div class="p-3 rounded-4 h-100" style="background: rgba(255,255,255,0.10); border: 1px solid rgba(255,255,255,0.16); text-align:left;">
-          <div class="fw-bold text-white">3) Data plan</div>
-          <div class="text-white-50" style="font-size: 14px;">Quality, quantity, and acquisition protocols.</div>
+          <div class="fw-bold text-white"> Get measurable results </div>
+          <div class="text-white-50" style="font-size: 14px;">Accuracy, reproducibility, and insight – documented and reproducible.</div>
         </div>
       </div>
       <div class="col-12 col-md-6">
         <div class="p-3 rounded-4 h-100" style="background: rgba(255,255,255,0.10); border: 1px solid rgba(255,255,255,0.16); text-align:left;">
-          <div class="fw-bold text-white">4) Industrialization roadmap</div>
-          <div class="text-white-50" style="font-size: 14px;">Integration, governance, and model maintenance.</div>
+          <div class="fw-bold text-white"> Plan scale-up</div>
+          <div class="text-white-50" style="font-size: 14px;">If the pilot succeeds, we support integration and production-readiness.</div>
         </div>
       </div>
     </div>
 
     <div class="text-white-50 mt-3" style="font-size: 14px; max-width: 1000px;">
-      <strong class="text-white">What you get:</strong> validated results, clear documentation of metrics and datasets, and an industrialization roadmap.
+      <strong class="text-white">What you get:</strong> Full report with metrics, traceability, and validation results. Clear decision support for go/no-go. Plan for scale-up to other sites or datasets.
     </div>
 
-    <a href="{{ '/contact/' | relative_url }}" class="text-decoration-none pt-4" aria-label="Evaluate a pilot">
+    <a href="{{ '/contact/' | relative_url }}" class="text-decoration-none pt-4" aria-label="Request a pilot">
       <div class="d-flex justify-content-center align-items-center gap-0">
         <button class="btn rounded-pill" style="background:#FE900F; color: white; padding:15px 25px; margin-right:-8px;">
-          Evaluate
+          Request
         </button>
         <img class="d-inline-block" src="{{ '/img/group-2-2.png' | relative_url }}" alt="Group" style="width: 35px; height: 41px;">
         <button class="btn rounded-pill" style="background:#FE900F; color: white; padding:15px; margin-left:-8px;">

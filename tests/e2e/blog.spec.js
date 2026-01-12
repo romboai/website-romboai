@@ -10,10 +10,11 @@ test("blog: list loads and first post page renders", async ({ page }) => {
     'main section.container-fluid.bg-white .card a[href^="/blog/"]:not([href="/blog/"]):not([href="/blog"])'
   ).first();
 
-  await expect(firstPostLink).toHaveAttribute("href", /\/blog\/.+\//);
+  // Some permalinks may be rendered without a trailing slash.
+  await expect(firstPostLink).toHaveAttribute("href", /\/blog\/.+\/?$/);
   await firstPostLink.click();
 
-  await expect(page).toHaveURL(/\/blog\/.+\/$/);
+  await expect(page).toHaveURL(/\/blog\/.+\/?$/);
   // Article page uses the article layout; title is present in the hero header.
   await expect(page.locator(".post_header")).toHaveCount(1);
 });

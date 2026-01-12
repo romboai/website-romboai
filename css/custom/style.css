@@ -1392,6 +1392,19 @@ label.ckb input:checked ~ span.checkmark::after {
     border-radius: inherit;
 }
 
+/* Workflow flow diagram */
+.page-products img[alt*="Workflow flow"] {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+@media (max-width: 768px) {
+    .page-products img[alt*="Workflow flow"] {
+        max-width: 95%;
+    }
+}
+
 /* Products landing: CTA emphasis */
 .page-products .button .button-text {
     letter-spacing: 0.01em;
