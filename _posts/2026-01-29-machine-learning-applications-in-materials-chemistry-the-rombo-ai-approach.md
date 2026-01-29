@@ -36,10 +36,10 @@ markdown_content: |-
 
   The platform supports: 
 
-  - [ ] End-to-end analysis, drastically reducing turnaround time 
-  - [ ] Automated signal analysis, tailored to the target material 
-  - [ ] Material-family models, avoiding unsafe generalization 
-  - [ ] Comparable outputs, suitable for quality control and decision-making  
+  - End-to-end analysis, drastically reducing turnaround time 
+  - Automated signal analysis, tailored to the target material 
+  - Material-family models, avoiding unsafe generalization 
+  - Comparable outputs, suitable for quality control and decision-making  
 
   ## Conclusion 
 
