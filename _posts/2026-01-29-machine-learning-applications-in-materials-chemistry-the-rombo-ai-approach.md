@@ -7,7 +7,7 @@ image: /img/Screenshot 2026-01-29 at 14.42.03.png
 image_alt: crude assay refinery
 author: Silvia Bongiovanni
 excerpt: 'Machine learning is turning NMR into a predictive tool for industrial analytics. By applying AI directly to raw NMR spectra, complex mixtures can be analyzed faster and more reliably, overcoming signal overlap and shift variability. Platforms like Rombo AI enable automated, decision-ready material insights at industrial scale.'
-markdown_content: |-
+markdown_content: |
   It has been proven that NMR can become a central tool in analytical chemistry for industrial use, as advances in data analysis and automation unlock its full potential. While NMR is valued for its reproducibility and rich quantitative and structural information, analyzing mixtures of multiple chemical compounds remains a major challenge, as overlapping signals and chemical shift variations often make traditional analysis slow, dependent on multiple software, and highly dependent on expert interpretation. **Machine learning** and **Neural Networks** (like CNN, convolutional neural networks) can significantly improve compound identification in NMR spectra of mixtures. 
 
   ## From Spectra to Structure: Why Machine Learning Matters in NMR 
@@ -44,9 +44,5 @@ markdown_content: |-
   ## Conclusion 
 
   Machine learning is turning NMR from a descriptive technique into a predictive engine for industrial materials chemistry. As analytical demands become faster and more complex, platforms like Rombo AI bridge spectroscopy and AI to deliver reliable, decision-ready material insights at industrial speed. Explore how Rombo AI enables material intelligence beyond traditional analysis: *contact@rombo.ai *
-
-   
-
-  Article by: Silvia Bongiovanni
 ---
 
