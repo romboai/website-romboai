@@ -12,9 +12,9 @@ markdown_content: |
 
   ## From Spectra to Structure: Why Machine Learning Matters in NMR 
 
-  NMR spectroscopy is a cornerstone of molecular characterization. It is non-destructive, highly reproducible, and rich in structural information. However, **interpreting NMR spectra, especially for complex mixtures, remains challenging.  **
+  NMR spectroscopy is a cornerstone of molecular characterization. It is non-destructive, highly reproducible, and rich in structural information. However, **interpreting NMR spectra, especially for complex mixtures, remains challenging.**
 
-  *Why is that so? *
+  *Why is that so?*
 
   Conventional NMR analysis methods typically rely on peak picking, spectral alignment, or similarity metrics. These approaches work reasonably well for pure compounds but struggle in real-world mixtures, where signals overlap and chemical shifts vary depending on the sample environment. 
 
@@ -24,7 +24,7 @@ markdown_content: |
 
   ML and NNs have shown strong performance in identifying compounds within mixtures directly from raw NMR spectra. Instead of relying on peak picking, alignment, or handcrafted features, these models learn relevant spectral representations end-to-end. This shift—from explicit spectral rules to learned representations—marks a fundamental change: 
 
-  > NMR data becomes a machine-interpretable signal rather than a bottleneck requiring expert intervention. 
+  > NMR data becomes a machine-interpretable signal rather than a bottleneck requiring expert intervention.
 
   In production environments, ML is routinely applied to predict material properties such as viscosity, density, or boiling behavior, to support quality control and classification, to detect anomalies or contamination, and to monitor and optimize processes. Still, what matters most is obtaining reliable, decision-ready information quickly and consistently.  
 
@@ -43,6 +43,6 @@ markdown_content: |
 
   ## Conclusion 
 
-  Machine learning is turning NMR from a descriptive technique into a predictive engine for industrial materials chemistry. As analytical demands become faster and more complex, platforms like Rombo AI bridge spectroscopy and AI to deliver reliable, decision-ready material insights at industrial speed. Explore how Rombo AI enables material intelligence beyond traditional analysis: *contact@rombo.ai *
+  Machine learning is turning NMR from a descriptive technique into a predictive engine for industrial materials chemistry. As analytical demands become faster and more complex, platforms like Rombo AI bridge spectroscopy and AI to deliver reliable, decision-ready material insights at industrial speed. Explore how Rombo AI enables material intelligence beyond traditional analysis: *contact@rombo.ai*
 ---
 
