@@ -18,7 +18,7 @@ test("navigation smoke: main pages load and key headings render", async ({ page 
   // Blog
   await page.getByRole("link", { name: /^blog$/i }).click();
   await expect(page).toHaveURL(/\/blog\/?$/);
-  await expect(page.locator("body")).toContainText(/RomboAI Blog/i);
+  await expect(page.locator("body")).toContainText(/Rombo AI Blog/i);
 
   // Contact
   await page.getByRole("link", { name: /contact us/i }).first().click();
