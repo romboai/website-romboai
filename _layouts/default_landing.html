@@ -3,7 +3,7 @@
 {% include header.html %}
 <body>
 
-<span id="UpBtn" class="up-btn d-none" title="Go to top"><span>
+<button id="UpBtn" class="up-btn d-none" aria-label="Back to top"><span>
 		<svg xmlns="http://www.w3.org/2000/svg" width="23.721" height="28.513" viewBox="0 0 28.513 23.721">
 			<g id="right-arrow" transform="translate(0 0)">
 			<g id="Group_22" data-name="Group 22" transform="translate(0 0) rotate(-90)">
@@ -14,7 +14,7 @@
 			</g>
 		</svg>
 		</span>
-</span>
+</button>
 
 {% include menu_landing.html %}
 
@@ -26,8 +26,9 @@
 <!--Hero Section-->
 <div class="container-fluid  hero-section">
   <!-- Video -->
-  <video class="hero-video" autoplay muted loop playsinline controlslist="nodownload">
+  <video class="hero-video" autoplay muted loop playsinline controlslist="nodownload" preload="none">
       <source src="{{ site.baseurl }}/img/hero_back_play.mp4" type="video/mp4"/>
+      <track kind="captions" label="No dialogue" default>
       Your browser does not support the video tag.
   </video>
     <!-- Background Audio -->
@@ -126,7 +127,6 @@
           <img class="w-100 m-0 p-0 technology-divider-container" style="bottom:-10px; object-fit: cover"
                src="{{ site.baseurl }}/img/Separator_Technology.svg" alt="Vector"/>
       </div>
-      `
   </div>
   <div class="container custom_container">
       <div class="row">
@@ -219,7 +219,7 @@
             }
           },
           "content": {
-            "href": "{{ site.baseurl }}/privacy"
+            "href": "{{ site.baseurl }}/privacy/"
           }
         });
       } else {

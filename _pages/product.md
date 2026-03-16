@@ -15,7 +15,7 @@ products:
     badge: "NMR + AI module"
     description: "End-to-end benchtop NMR workflow, automated signal analysis, and interpretable outputs that remain comparable over time."
     link: "/product/#nmr-ai-analysis-tool"
-    image: "/img/client-results.png"
+    image: "/img/client-results.jpg"
   - title: "AutoML for material analysis"
     badge: "Advanced module (pilot-driven)"
     description: "Build and validate domain-specific AI models: feature selection, training/validation, performance comparison, and adaptation to new datasets."
@@ -118,7 +118,8 @@ products:
               <img src="{{ site.baseurl }}/img/products-workflow-flow-new.png"
                    alt="Workflow flow: Sample Material (raw spectra) → Processing (our patented ML models) → Report (characterization, identification, material insight)"
                    class="img-fluid"
-                   style="max-width: 100%; height: auto;">
+                   width="900" height="200"
+                   loading="lazy">
             </div>
           </div>
         </div>

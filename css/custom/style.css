@@ -459,7 +459,10 @@ li {
 .up-btn {
     display: block;
     width: max-content;
+    min-width: 48px;
+    min-height: 48px;
     padding: 10px 20px;
+    border: none;
     border-radius: 40px;
     font-size: 28px;
     text-transform: uppercase;
