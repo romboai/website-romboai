@@ -18,8 +18,8 @@ kramdown:
   input: GFM
 # Engage Section
 engage_main_title: "DISCOVER WHAT AI-DRIVEN SPECTRAL ANALYSIS CAN DO FOR YOU"
-engage_sub_title: "Engage with Rombo AI"
-engage_message_part_one: "Ready to transform your analytical processes? Connect with our experts to explore tailored solutions for your business challenges. Reach out to our sales team or schedule a demo for the latest insights and updates."
+engage_sub_title: "Contact Us"
+engage_message_part_one: "Connect with our experts to explore tailored solutions for your business challenges. Reach out to our sales team or schedule a demo for the latest insights and updates."
 
 # Build settings
 permalink: :title/
