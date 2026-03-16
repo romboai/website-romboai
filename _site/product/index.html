@@ -12,19 +12,20 @@
     <meta name="referrer" content="strict-origin-when-cross-origin">
     <meta name="theme-color" content="#090C23">
 
-    <!-- Performance: preconnect to critical third-parties -->
-    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-    <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
-
-    
-
-    <!-- Fonts (avoid @import in CSS) -->
+    <!-- Preconnect: only the 2 most critical origins -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap">
+    <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
+    
 
+    <!-- Fonts: load only needed weights, swap for fast render -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bitter:wght@400;500;600;700;800;900&display=swap">
+
+    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="/css/custom/style.css">
     <link rel="stylesheet" href="/css/custom/responsive.css">
     <link rel="stylesheet" href="/css/custom/scrollbar.css"><title>Products | Rombo.ai – Material Intelligence Platform | Rombo AI</title>
@@ -48,11 +49,12 @@
     <meta name="twitter:image" content="http://localhost:4000/img/og/rombo-ai.png">
 
     <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
-    <link rel="icon" type="image/svg" sizes="32x32" href="/img/favicon-16x16.png">
-    <link rel="icon" type="image/svg" sizes="16x16" href="/img/favicon-32x32.png">
+    <link rel="icon" type="image/svg" sizes="32x32" href="/img/favicon-32x32.png">
+    <link rel="icon" type="image/svg" sizes="16x16" href="/img/favicon-16x16.png">
     <link rel="manifest" href="/img/site.webmanifest">
-    <link rel="stylesheet" type="text/css"
-          href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css"
+          media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css"></noscript>
 
     <script type="application/ld+json">
 {
@@ -77,6 +79,14 @@
       "name": "Rombo AI",
       "url": "http://localhost:4000/",
       "publisher": { "@id": "http://localhost:4000/#organization" }
+    },
+    {
+      "@type": "Product",
+      "@id": "http://localhost:4000/product/#product",
+      "name": "Products",
+      "brand": { "@type": "Brand", "name": "Rombo AI" },
+      "url": "http://localhost:4000/product/",
+      "description": "One platform integrating benchtop NMR and domain-specific AI for industrial material analysis, delivered through structured pilots."
     }]
 }
 </script>
@@ -88,7 +98,7 @@
 
 <body>
 
-<span id="UpBtn" class="up-btn d-none" title="Go to top"><span>
+<button id="UpBtn" class="up-btn d-none" aria-label="Back to top"><span>
 		<svg xmlns="http://www.w3.org/2000/svg" width="23.721" height="28.513" viewBox="0 0 28.513 23.721">
 			<g id="right-arrow" transform="translate(0 0)">
 			<g id="Group_22" data-name="Group 22" transform="translate(0 0) rotate(-90)">
@@ -99,7 +109,7 @@
 			</g>
 		</svg>
 		</span>
-</span>
+</button>
 
 <!-- Menu -->
 
@@ -133,7 +143,7 @@
                     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="productsDropdown">
                         <li>
                             <a class="dropdown-item" href="/product/">
-                                Products (Overview)
+                                Material Intelligence Platform
                             </a>
                         </li>
                         <li>
@@ -143,17 +153,20 @@
                         </li>
                         <li>
                             <a class="dropdown-item" href="/product/#automl-materials">
-                                Rombo AutoML
+                                AutoML Framework
                             </a>
                         </li>
                     </ul>
                 </li>
 
                 <li class="nav-item">
+                    <a class="nav-link menu-item text-white" href="/use-cases/">Use Cases</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link menu-item text-white" href="/blog/">Blog</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link menu-item text-white" href="https://rombo-ai.breezy.hr/" target="_blank" >Careers</a>
+                    <a class="nav-link menu-item text-white" href="https://rombo-ai.breezy.hr/" target="_blank" rel="noopener noreferrer">Careers</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link menu-item text-white" href="/contact/">Contact Us</a>
@@ -175,6 +188,7 @@
   <video class="hero-video" autoplay muted loop playsinline controlslist="nodownload" data-desktop-only="true">
     <!-- Desktop-only: we set src via JS to prevent mobile from downloading the mp4 -->
     <source data-src="/img/hero_back_play.mp4" type="video/mp4"/>
+    <track kind="captions" label="No dialogue" default>
     Your browser does not support the video tag.
   </video>
 
@@ -184,11 +198,11 @@
       <div class="z-1 col-12 col-lg-6 px-3 px-md-4 d-flex align-items-center titolo-1">
         <div class="products-hero-copy">
           <span class="titolo-1-span text-highlight">
-            AI solutions for advanced material analysis
+            AI Solutions for Advanced Industrial Material Analysis
             <br/>
           </span>
           <span class="titolo-1-span2 text-highlight">
-            Replace slow laboratory snapshots with continuous, explainable material intelligence for industrial operations - Powered by AI and Low-Field NMR
+            Replace slow laboratory snapshots with continuous, explainable material intelligence for industrial operations — powered by the first foundation model for quantitative NMR, pre-trained on millions of spectra
           </span>
         </div>
       </div>
@@ -229,18 +243,20 @@
     <div class="row g-4 align-items-center">
       <div class="col-12 col-lg-7">
         <h2 class="fw-bold text-dark" style="font-size: 38px; line-height: 1.15;">
-          Built For Real Materials
+          AI-Powered Solution to Analyze Complex Materials
         </h2>
         <p class="text-dark mt-3" style="max-width: 85ch;">
-          For industries operating on complex materials (Oil &amp; Gas, Petrochemical, Manufacturing, Energy), material characterization is central to process control.
-          Yet in most plants, material awareness still arrives late.
+          Industries working with complex materials, such as Oil &amp; Gas, Petrochemical, Chemical, Manufacturing, and Energy, material analysis is the most important aspect to understand how the product will perform. However, accurate material characterization remains challenging:
         </p>
         <ul class="text-dark mt-3" style="max-width: 70ch;">
-          <li>Lab analysis takes weeks or months</li>
-          <li>Specialized personnel required</li>
-          <li>Reports are isolated snapshots</li>
-          <li>Decisions become reactive</li>
+          <li>Lab analysis takes weeks/months to complete</li>
+          <li>Specialized personnel &amp; expensive instruments are required</li>
+          <li>Repetitive and prone to human errors</li>
+          <li>Reports are used as isolated snapshots</li>
         </ul>
+        <p class="text-dark mt-3" style="max-width: 85ch;">
+          In industrial contexts, while process indicators may look stable to QC operators, the chemical change and material shift may already be happening. The problem is not the measurement — it's the lack of early signals, with critical deviations leading to significant production loss.
+        </p>
         <div class="mt-4 d-flex flex-wrap gap-3">
           <a class="button text-decoration-none " href="/contact/" style="width:auto; display:inline-flex;">
   <span class="text-container"><span class="button-text">Request a pilot</span></span>
@@ -259,12 +275,52 @@
   </div>
 </section>
 
+<!-- Industrial Value -->
+<section class="container-fluid py-4 py-lg-5" style="background:#fff;">
+  <div class="container custom_container">
+    <h2 class="fw-bold text-dark text-center" style="font-size: 32px; line-height: 1.15;">Industrial Value</h2>
+    <p class="text-muted text-center mt-2 mx-auto" style="max-width: 70ch;">What you gain from deploying Material Intelligence in your operations.</p>
+    <div class="row g-3 mt-4 justify-content-center" style="max-width: 1000px; margin: 0 auto;">
+      <div class="col-12 col-md-6">
+        <div class="p-3 border rounded-4 h-100 text-center">
+          <div class="fw-bold" style="color: #FE900F;">Faster Characterization</div>
+          <div class="text-dark" style="font-size: 14px;">Early detection of drifts &amp; non-conformities.</div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6">
+        <div class="p-3 border rounded-4 h-100 text-center">
+          <div class="fw-bold" style="color: #FE900F;">Clear, Actionable Data Insights</div>
+          <div class="text-dark" style="font-size: 14px;">Confident industrial decisions based on real material intelligence.</div>
+        </div>
+      </div>
+      <div class="col-12 col-md-4">
+        <div class="p-3 border rounded-4 h-100 text-center">
+          <div class="fw-bold" style="color: #FE900F;">Consistent Material Fingerprint</div>
+          <div class="text-dark" style="font-size: 14px;">Over time, across batches and conditions.</div>
+        </div>
+      </div>
+      <div class="col-12 col-md-4">
+        <div class="p-3 border rounded-4 h-100 text-center">
+          <div class="fw-bold" style="color: #FE900F;">Traceable &amp; Comparable Results</div>
+          <div class="text-dark" style="font-size: 14px;">Standardizable across sites and campaigns.</div>
+        </div>
+      </div>
+      <div class="col-12 col-md-4">
+        <div class="p-3 border rounded-4 h-100 text-center">
+          <div class="fw-bold" style="color: #FE900F;">Laboratory-Grade Accuracy</div>
+          <div class="text-dark" style="font-size: 14px;">ASTM / ISO compliant.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="container-fluid py-4 py-lg-5" style="background:#F7F7F7;">
   <div class="container custom_container">
     <div class="row g-4 align-items-center">
       <div class="col-12 col-lg-5 pe-lg-5">
         <div class="products-visual products-visual--compact">
-  <img src="/img/solution-hardware.jpg" class="img-fluid " alt="Material Intelligence Platform" loading="lazy" />
+  <img src="/img/solution-hardware.png" class="img-fluid " alt="Material Intelligence Platform" loading="lazy" />
 </div>
 
 
@@ -280,7 +336,7 @@
         <div class="row mt-4">
           <div class="col-12">
             <div class="d-flex justify-content-center">
-              <img src="/img/products-workflow-flow.svg" alt="Workflow flow: Sample material (raw spectra) → Processing (Machine learning) → Report (characterization / identification / Insight)" class="img-fluid" style="max-width: 100%; height: auto;" />
+              <img src="/img/products-workflow-flow-new.png" alt="Workflow flow: Sample Material (raw spectra) → Processing (our patented ML models) → Report (characterization, identification, material insight)" class="img-fluid" width="900" height="200" loading="lazy" />
             </div>
           </div>
         </div>
@@ -297,15 +353,15 @@
     <div class="row justify-content-center text-center">
   <div class="col-12 col-lg-10">
     <p class="fw-bold m-0 text-uppercase text-center" style="font-size: 14px; color:#fe900f; letter-spacing:.06em; ">
-  Overview
+  
 </p>
 
 
 
-    <h2 class="fw-bold text-dark" style="font-size: 38px; line-height: 1.15;">Two Modules, One Platform</h2>
+    <h2 class="fw-bold text-dark" style="font-size: 38px; line-height: 1.15;">One Platform, 2 Modules</h2>
     
       <p class="text-dark mt-3" style="max-width: 85ch; margin: 0 auto;">
-        Material Intelligence Platform is delivered through pilots and industrialization programs. The modules below are part of one platform—designed to be validated on your experimental data and to remain comparable over time.
+        The modules below are part of our unique Platform — designed to be validated on your real experimental data and to be consistent over time.
       </p>
     
   </div>
@@ -318,7 +374,7 @@
   </div>
 </section>
 
-<h2 id="nmr-ai-analysis-tool" class="visually-hidden">4. Module 1 — NMR AI Analyzer</h2>
+<h2 id="nmr-ai-analysis-tool" class="visually-hidden">Module 1 — NMR AI Analyzer</h2>
 <section class="container-fluid py-4 py-lg-5">
   <div class="container custom_container">
     <div class="row g-4 align-items-center">
@@ -331,32 +387,32 @@
 
         <h2 class="fw-bold text-dark" style="font-size: 38px; line-height: 1.15;">NMR AI Analyzer</h2>
         <p class="text-dark mt-3" style="max-width: 75ch;">
-          A module focused on benchtop NMR operations and on keeping analysis consistent over time.
-          Designed for industrial labs where traceability and comparability matter.
+          <strong>Discover the unique AI + Spectroscopy power.</strong> NMR AI Analyzer is designed for industrial labs where traceability and comparability matter. The software controls the NMR data acquisition, AI model integration, report generation, and integration with enterprise systems.
         </p>
-        <div class="row g-3 mt-2">
+        <p class="text-dark mt-2 fw-bold" style="max-width: 75ch;">Key Features:</p>
+        <div class="row g-3 mt-1">
           <div class="col-12 col-md-6">
             <div class="p-3 border rounded-4 h-100">
-              <div class="fw-bold">Raw NMR ingestion + deep learning analysis</div>
+              <div class="fw-bold" style="color: #FE900F;">Raw Spectra Ingestion &amp; Deep Learning Analysis</div>
               <div class="text-muted" style="font-size: 14px;">Ingest raw benchtop NMR spectra and analyze spectral patterns consistently across campaigns.</div>
             </div>
           </div>
           <div class="col-12 col-md-6">
             <div class="p-3 border rounded-4 h-100">
-              <div class="fw-bold">Chemical and physical property estimation</div>
-              <div class="text-muted" style="font-size: 14px;">Estimate relevant chemical and physical indicators from NMR signatures.</div>
+              <div class="fw-bold" style="color: #FE900F;">Full Physio-Chemical Property Analysis</div>
+              <div class="text-muted" style="font-size: 14px;">100% customizable physical and chemical properties delivered simultaneously.</div>
             </div>
           </div>
           <div class="col-12 col-md-6">
             <div class="p-3 border rounded-4 h-100">
-              <div class="fw-bold">Regime change + drift detection</div>
-              <div class="text-muted" style="font-size: 14px;">Detect chemical regime changes and gradual drift in material behavior over time.</div>
+              <div class="fw-bold" style="color: #FE900F;">Regime Change &amp; Drift Detection</div>
+              <div class="text-muted" style="font-size: 14px;">Timely detect chemical regime changes and gradual drifts in material behavior over time.</div>
             </div>
           </div>
           <div class="col-12 col-md-6">
             <div class="p-3 border rounded-4 h-100">
-              <div class="fw-bold">15-minute full report generation</div>
-              <div class="text-muted" style="font-size: 14px;">Generate and export a full technical report in approximately 15 minutes.</div>
+              <div class="fw-bold" style="color: #FE900F;">15-Minute Full Report Generation</div>
+              <div class="text-muted" style="font-size: 14px;">Perform full physio-chemical characterization in just 15 minutes, remove bottlenecks, and accelerate industrial decisions.</div>
             </div>
           </div>
         </div>
@@ -373,7 +429,7 @@
   </div>
 </section>
 
-<h2 id="automl-materials" class="visually-hidden">5. Module 2 — AutoML for material analysis</h2>
+<h2 id="automl-materials" class="visually-hidden">Module 2 — AutoML Framework</h2>
 <section class="container-fluid py-4 py-lg-5" style="background:#F7F7F7;">
   <div class="container custom_container">
     <div class="row g-4 align-items-center">
@@ -392,123 +448,30 @@
 
 
 
-        <h2 class="fw-bold text-dark" style="font-size: 38px; line-height: 1.15;">AutoML for material analysis</h2>
+        <h2 class="fw-bold text-dark" style="font-size: 38px; line-height: 1.15;">AutoML Framework</h2>
         <p class="text-dark mt-3" style="max-width: 75ch;">
-          An advanced module to build <strong>custom AI models</strong>, designed for technical and R&amp;D teams.
-          It supports model selection, validation, and comparison—grounded in experimental datasets.
+          <strong>Our AI expertise, at your service.</strong> As an optional module, we enable R&amp;D teams to build their own internal ML modules and custom pipelines, while retaining 100% Intellectual Property and utilizing their own data. It supports model selection, validation, and comparison — grounded in experimental datasets.
         </p>
         <ul class="text-dark mt-3" style="max-width: 75ch;">
           <li>Feature selection and pipeline comparison</li>
           <li>Training and validation with agreed metrics</li>
-          <li>Performance comparison across approaches/models</li>
+          <li>Performance comparison across approaches &amp; models</li>
           <li>Support for adapting to new datasets (data quality + validation criteria)</li>
         </ul>
+        <div class="p-3 border rounded-4 mt-3" style="max-width: 75ch; background: linear-gradient(135deg, #FFF7ED, #FFF);">
+          <div class="fw-bold" style="color: #FE900F;">Built on a Foundation Model for qNMR</div>
+          <div class="text-dark" style="font-size: 14px;">
+            Every AutoML pipeline benefits from our foundation model, pre-trained on millions of quantitative NMR spectra. This means your custom models start from a rich, domain-specific representation of material chemistry — requiring less data, converging faster, and generalizing better across batches, conditions, and sites.
+          </div>
+        </div>
         <div class="p-3 bg-white border rounded-4 mt-3" style="max-width: 75ch;">
-          <div class="fw-bold">How it’s delivered</div>
+          <div class="fw-bold">How it's delivered</div>
           <div class="text-muted" style="font-size: 14px;">
             Best for technical and R&amp;D teams. We typically start with a <strong>structured pilot</strong> to define objectives, validate on your experimental data,
             and agree on success metrics before scaling to industrial workflows.
           </div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
-
-<section class="container-fluid py-4 py-lg-5">
-  <div class="container custom_container">
-    <div class="row justify-content-center text-center">
-  <div class="col-12 col-lg-10">
-    <p class="fw-bold m-0 text-uppercase text-center" style="font-size: 14px; color:#fe900f; letter-spacing:.06em; ">
-  Use cases
-</p>
-
-
-
-    <h2 class="fw-bold text-dark" style="font-size: 38px; line-height: 1.15;">Validated On Your Experimental Datasets</h2>
-    
-      <p class="text-dark mt-3" style="max-width: 90ch; margin: 0 auto;">
-        Two examples of where the platform delivers measurable value. Each deployment starts with a structured pilot: clear objectives, success metrics, and validation on your data—then scales across batches, operating conditions, and sites.
-      </p>
-    
-  </div>
-</div>
-
-
-
-
-    <div id="useCasesCarousel" class="carousel slide mt-4" data-bs-ride="carousel" data-bs-interval="8000">
-      <div class="carousel-indicators">
-        <button type="button" data-bs-target="#useCasesCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Crude oil"></button>
-        <button type="button" data-bs-target="#useCasesCarousel" data-bs-slide-to="1" aria-label="Mineral oil (transformers)"></button>
-      </div>
-
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <div class="row g-4 align-items-center">
-            <div class="col-12 col-lg-7">
-              <h3 class="fw-bold text-dark" style="font-size: 28px; line-height: 1.2;">Crude oil</h3>
-              <ul class="text-dark" style="max-width: 85ch;">
-                <li>Fingerprinting and comparison across blends, batches, and suppliers</li>
-                <li>Classification and similarity search with traceable features</li>
-                <li>Link spectral patterns to properties and process variability</li>
-                <li>Early detection of off-spec / drift with agreed thresholds</li>
-              </ul>
-              <div class="p-3 border rounded-4 mt-3" style="background:#fff; max-width: 85ch;">
-                <div class="fw-bold">What you can expect</div>
-                <div class="text-muted" style="font-size: 14px;">
-                  A validated workflow on your crude family and NMR setup: reproducible preprocessing, model performance on held-out data,
-                  decision criteria, and a path to scaling across new datasets and operating conditions.
-                </div>
-              </div>
-            </div>
-            <div class="col-12 col-lg-5">
-              <div class="products-visual products-visual--compact products-visual--contain">
-  <img src="/img/usecase-crude-oil-1200x800.svg" class="img-fluid " alt="Crude oil use case" loading="lazy" />
-</div>
-
-
-
-            </div>
-          </div>
-        </div>
-
-        <div class="carousel-item">
-          <div class="row g-4 align-items-center">
-            <div class="col-12 col-lg-7">
-              <h3 class="fw-bold text-dark" style="font-size: 28px; line-height: 1.2;">Mineral oil (transformers)</h3>
-              <ul class="text-dark" style="max-width: 85ch;">
-                <li>Batch comparison and classification with reproducible indicators</li>
-                <li>Condition / aging proxies designed with technical teams</li>
-                <li>Trend monitoring over time and across maintenance cycles</li>
-                <li>Reporting outputs that remain comparable across campaigns</li>
-              </ul>
-              <div class="p-3 border rounded-4 mt-3" style="background:#fff; max-width: 85ch;">
-                <div class="fw-bold">What you can expect</div>
-                <div class="text-muted" style="font-size: 14px;">
-                  A pilot-defined set of indicators and validation metrics, tested on your samples; plus a scalable workflow to extend coverage
-                  to new oils, conditions, and sites without losing comparability.
-                </div>
-              </div>
-            </div>
-            <div class="col-12 col-lg-5">
-              <div class="products-visual products-visual--compact products-visual--contain">
-  <img src="/img/usecase-mineral-oil-1200x800.svg" class="img-fluid " alt="Mineral oil use case" loading="lazy" />
-</div>
-
-
-
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <button class="carousel-control-prev" type="button" data-bs-target="#useCasesCarousel" data-bs-slide="prev" aria-label="Previous use case">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#useCasesCarousel" data-bs-slide="next" aria-label="Next use case">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      </button>
     </div>
   </div>
 </section>
@@ -567,7 +530,6 @@
   </div>
 </section>
 
-
 </div>
 
 
@@ -579,24 +541,24 @@
             <div class="row justify-content-md-center">
                 <div class="col-12 col-md-4 footer-logo">
                     <img
-                            alt="RomboAI"
+                            alt="Rombo AI"
                             class="img-fluid"
                             src="/img/romboai-04-1-2.png"
-                            style="max-height: 79px; width: 200px;"
+                            width="200" height="79"
+                            loading="lazy"
                     />
                 </div>
                 <div class="col-12 col-md-8">
                     <div class="row m-0 d-flex align-items-center h-100">
                         <p class="footer-text col-10 col-md-10 m-0 text-md-left text-lg-left">
-                            ROMBO AI © 2025 |
+                            ROMBO AI © 2026 |
                             <a href="/privacy/" style="color:#007bff;">Privacy Policy</a>
                         </p>
-                        <!-- Remove col-* classes from the anchor tag to avoid issues with layout -->
-                        <a class="ml-auto col-2 col-md-2 d-flex justify-content-center" href="https://www.linkedin.com/company/rombo-ai/"
-                           rel="noopener noreferrer" target="_blank">
+                        <a class="col-2 col-md-2 d-flex justify-content-start" href="https://www.linkedin.com/company/rombo-ai/"
+                           rel="noopener noreferrer" target="_blank" aria-label="Rombo AI on LinkedIn">
                             <img alt="LinkedIn" class="img-fluid"
                                  src="/img/icon-jam-icons-outline-logos-linkedin-1.svg"
-                                 style="max-width: 24px;">
+                                 width="24" height="24" loading="lazy">
                         </a>
                     </div>
                 </div>

@@ -3,7 +3,7 @@
 {% include header.html %}
 <body>
 
-<span id="UpBtn" class="up-btn d-none" title="Go to top"><span>
+<button id="UpBtn" class="up-btn d-none" aria-label="Back to top"><span>
 		<svg xmlns="http://www.w3.org/2000/svg" width="23.721" height="28.513" viewBox="0 0 28.513 23.721">
 			<g id="right-arrow" transform="translate(0 0)">
 			<g id="Group_22" data-name="Group 22" transform="translate(0 0) rotate(-90)">
@@ -14,7 +14,7 @@
 			</g>
 		</svg>
 		</span>
-</span>
+</button>
 
 {% include menu.html %}
 
@@ -24,16 +24,11 @@
 
 <!--Hero Section-->
 <div class="container-fluid  hero-section">
-  <!-- Video -->
-  <video class="hero-video" autoplay muted loop playsinline controlslist="nodownload">
-      <source src="{{ site.baseurl }}/img/hero_back_play.mp4" type="video/mp4"/>
+  <video class="hero-video" autoplay muted loop playsinline controlslist="nodownload" data-desktop-only="true" preload="none">
+      <source data-src="{{ site.baseurl }}/img/hero_back_play.mp4" type="video/mp4"/>
+      <track kind="captions" label="No dialogue" default>
       Your browser does not support the video tag.
   </video>
-    <!-- Background Audio -->
-<!--    <audio id="background-audio" autoplay loop style="display: none;">-->
-<!--        <source src="{{ site.baseurl }}/audio/background-audio.mp3" type="audio/mpeg">-->
-<!--        Your browser does not support the audio element.-->
-<!--    </audio>-->
 
   <!-- Mask Overlay -->
   <div class="mask"></div>
@@ -45,7 +40,7 @@
               </div>
 
               {% if page.hero_cta_link %}
-              <a href="{{ site.baseurl }}{{ page.hero_cta_link }}" class="text-decoration-none d-inline-block mt-4">
+              <a href="{{ site.baseurl }}{{ page.hero_cta_link }}" class="text-decoration-none d-inline-block mt-4" aria-label="{{ page.hero_cta_label_left | default: 'Contact' }} {{ page.hero_cta_label_right | default: 'now' }}">
                   <div class="d-flex justify-content-start align-items-center gap-0">
                       <button class="btn rounded-pill"
                               style="background:#FE900F; color: white; padding:15px 25px 15px 25px; margin-right:-8px;">
@@ -65,6 +60,24 @@
 </div>
 <!--Hero Section-->
 
+<script>
+  (function () {
+    var isDesktop = window.matchMedia && window.matchMedia("(min-width: 992px)").matches;
+    if (!isDesktop) {
+      var v = document.querySelector(".hero-section .hero-video[data-desktop-only='true']");
+      if (v) v.remove();
+      return;
+    }
+    var video = document.querySelector(".hero-section .hero-video[data-desktop-only='true']");
+    if (!video) return;
+    var source = video.querySelector("source[data-src]");
+    if (!source) return;
+    source.src = source.getAttribute("data-src");
+    video.load();
+    var p = video.play();
+    if (p && typeof p.catch === "function") p.catch(function () {});
+  })();
+</script>
 
 {% include hero_divider.html %}
 
@@ -143,12 +156,11 @@
           <img class="w-100 m-0 p-0 technology-divider-container" style="bottom:-10px; object-fit: cover"
                src="{{ site.baseurl }}/img/Separator_Technology.svg" alt="Vector"/>
       </div>
-      `
   </div>
   <div class="container custom_container">
       <div class="row">
           <div class="col-12 py-4">
-              <div class="text-wrapper5 text-uppercase">{{page.technology_main_title}}</div>
+              <div class="text-wrapper5">{{page.technology_main_title}}</div>
               <div class="secondary-headline">{{page.technology_sub_title}}</div>
           </div>
       </div>
@@ -163,28 +175,24 @@
               </div>
               <div class="row d-flex flex-wrap flex-md-nowrap text-left  justify-content-center"
               >
-                  <div class="z-1 col-md-6">
-                      <img class="img-fluid mx-0" src="{{ site.baseurl }}/img/forma-5-10.png"
-                           alt="Foreground Level">
+                  <div class="z-1 col-md-6 d-flex align-items-center justify-content-center">
+                      <img class="img-fluid mx-0" src="{{ site.baseurl }}/img/molecule-technology.png"
+                           alt="Molecular structure visualization">
                   </div>
-                  <div class="z-1 col-md-6">
+                    <div class="z-1 col-md-6">
                       <div class="paragraf">
                           <p class="px-2 px-md-5 at-the-core-of-our">
                               <span class="text-wrapper19">{{page.technology_message_part_three}}</span>
                               <span class="text-wrapper20">
                                           {{page.technology_message_part_four}}&nbsp;<br><br>
                                       </span>
-                              <span class="text-wrapper19">{{page.technology_message_part_five}}<br></span>
+                              <span class="text-wrapper19">{{page.technology_message_part_five}}</span>
                               <span class="text-wrapper20">
                                           {{page.technology_message_part_six}}&nbsp;<br><br>
                                       </span>
-                              <span class="text-wrapper19">{{page.technology_message_part_seven}}<br></span>
+                              <span class="text-wrapper19">{{page.technology_message_part_seven}}</span>
                               <span class="text-wrapper20">
                                           {{page.technology_message_part_eight}}
-                                      </span>
-                              <span class="text-wrapper21">{{page.technology_message_part_nine}}</span>
-                              <span class="text-wrapper20">
-                                          {{page.technology_message_part_ten}}&nbsp;
                                       </span>
                           </p>
                       </div>
@@ -200,8 +208,7 @@
 
 <!--Client-->
 {% include client.html %}
-<!--Articles-->
-{% include articles.html %}
+<!--Articles (removed from home page)-->
 <!--SupportBy-->
 {% include supportby.html %}
 <!--Engage-->
@@ -237,7 +244,7 @@
             }
           },
           "content": {
-            "href": "{{ site.baseurl }}/privacy"
+            "href": "{{ site.baseurl }}/privacy/"
           }
         });
       } else {

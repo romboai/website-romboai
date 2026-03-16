@@ -460,4 +460,16 @@
     .post_header{
         font-size: 39px;
     }
+
+    .nav-link.menu-item {
+        min-height: 48px;
+        display: flex;
+        align-items: center;
+    }
+
+    .dropdown-item {
+        min-height: 48px;
+        display: flex;
+        align-items: center;
+    }
 } 

@@ -153,6 +153,6 @@ markdown_content: >-
 
 
   If your company is facing similar challenges and want to learn more, contact
-  us for a free demo: **contact@rombo.ai**
+  us for a free demo: **{{ site.contact_email }}**
 ---
 

@@ -1,6 +1,6 @@
 ---
 layout: article
-permalink: /blog/how-low-fied-NMR-works/
+permalink: /blog/how-low-field-NMR-works/
 title: "How Low-Field NMR Works and How Machine Learning Enhances Sample Characterization"
 date: "2023-08-23"
 image: "img/blog/nmr-how-it-works.webp"

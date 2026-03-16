@@ -43,6 +43,6 @@ markdown_content: |
 
   ## Conclusion 
 
-  Machine learning is turning NMR from a descriptive technique into a predictive engine for industrial materials chemistry. As analytical demands become faster and more complex, platforms like Rombo AI bridge spectroscopy and AI to deliver reliable, decision-ready material insights at industrial speed. Explore how Rombo AI enables material intelligence beyond traditional analysis: *contact@rombo.ai*
+  Machine learning is turning NMR from a descriptive technique into a predictive engine for industrial materials chemistry. As analytical demands become faster and more complex, platforms like Rombo AI bridge spectroscopy and AI to deliver reliable, decision-ready material insights at industrial speed. Explore how Rombo AI enables material intelligence beyond traditional analysis: *{{ site.contact_email }}*
 ---
 

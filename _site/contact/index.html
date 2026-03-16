@@ -12,19 +12,20 @@
     <meta name="referrer" content="strict-origin-when-cross-origin">
     <meta name="theme-color" content="#090C23">
 
-    <!-- Performance: preconnect to critical third-parties -->
-    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-    <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
-
-    
-
-    <!-- Fonts (avoid @import in CSS) -->
+    <!-- Preconnect: only the 2 most critical origins -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap">
+    <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
+    
 
+    <!-- Fonts: load only needed weights, swap for fast render -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bitter:wght@400;500;600;700;800;900&display=swap">
+
+    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="/css/custom/style.css">
     <link rel="stylesheet" href="/css/custom/responsive.css">
     <link rel="stylesheet" href="/css/custom/scrollbar.css"><title>Contact Rombo AI | Book a demo</title>
@@ -48,11 +49,12 @@
     <meta name="twitter:image" content="http://localhost:4000/img/og/rombo-ai.png">
 
     <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
-    <link rel="icon" type="image/svg" sizes="32x32" href="/img/favicon-16x16.png">
-    <link rel="icon" type="image/svg" sizes="16x16" href="/img/favicon-32x32.png">
+    <link rel="icon" type="image/svg" sizes="32x32" href="/img/favicon-32x32.png">
+    <link rel="icon" type="image/svg" sizes="16x16" href="/img/favicon-16x16.png">
     <link rel="manifest" href="/img/site.webmanifest">
-    <link rel="stylesheet" type="text/css"
-          href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css"
+          media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css"></noscript>
 
     <script type="application/ld+json">
 {
@@ -88,7 +90,7 @@
 
 <body>
 
-<span id="UpBtn" class="up-btn d-none" title="Go to top"><span>
+<button id="UpBtn" class="up-btn d-none" aria-label="Back to top"><span>
 		<svg xmlns="http://www.w3.org/2000/svg" width="23.721" height="28.513" viewBox="0 0 28.513 23.721">
 			<g id="right-arrow" transform="translate(0 0)">
 			<g id="Group_22" data-name="Group 22" transform="translate(0 0) rotate(-90)">
@@ -99,7 +101,7 @@
 			</g>
 		</svg>
 		</span>
-</span>
+</button>
 
 <!-- Menu -->
 
@@ -133,7 +135,7 @@
                     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="productsDropdown">
                         <li>
                             <a class="dropdown-item" href="/product/">
-                                Products (Overview)
+                                Material Intelligence Platform
                             </a>
                         </li>
                         <li>
@@ -143,17 +145,20 @@
                         </li>
                         <li>
                             <a class="dropdown-item" href="/product/#automl-materials">
-                                Rombo AutoML
+                                AutoML Framework
                             </a>
                         </li>
                     </ul>
                 </li>
 
                 <li class="nav-item">
+                    <a class="nav-link menu-item text-white" href="/use-cases/">Use Cases</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link menu-item text-white" href="/blog/">Blog</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link menu-item text-white" href="https://rombo-ai.breezy.hr/" target="_blank" >Careers</a>
+                    <a class="nav-link menu-item text-white" href="https://rombo-ai.breezy.hr/" target="_blank" rel="noopener noreferrer">Careers</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link menu-item text-white" href="/contact/">Contact Us</a>
@@ -182,14 +187,9 @@
     <div class="z-1 container custom-container position-relative py-5">
         <div class="row justify-content-center align-items-start py-5">
             <div class="col-md-6 pt-5">
-                <div class="contact-us py-3"><span class="text-highlight">Contact us</span></div>
-                <div class="label text-white" style="font-size: 18px; padding-right: 100px;">
-                   <span class="text-highlight"> At Rombo AI, we&#039;re committed to supporting your journey towards
-                       revolutionizing spectral analysis with AI.</span>
-                    <br/>
-                    <br/>
-                    <span class="text-highlight"> Whether you have questions, need technical support, or want to explore how our
-                        solutions can benefit your organization, our team is ready to assist.</span>
+                <div class="contact-us py-3"><span class="text-highlight">Contact Us</span></div>
+                <div class="label text-white" style="font-size: 20px; padding-right: 100px;">
+                    <span class="text-highlight">Connect with our experts to explore tailored solutions for your business challenges. Reach out to our sales team or schedule a demo for the latest insights and updates.</span>
                 </div>
             </div>
             <div class="col-md-6 my-5 position-relative ">
@@ -272,7 +272,7 @@
                             </div>
                         </div>
                         <!-- Hidden field for spam protection -->
-                        <div style="position: absolute; left: -5000px;">
+                        <div style="position: absolute; left: -5000px;" aria-hidden="true">
                             <input type="checkbox" name="wonderful_forest_green_pinstriped_banana_slug" value="1"
                                    tabindex="-1" autocomplete="no">
                         </div>
@@ -395,7 +395,11 @@ document.addEventListener('DOMContentLoaded', function() {
                                 <br/>
                                 SS 195 KM 2,300
                                 <br/>
-                                09123 Cagliari - Italy 
+                                09123 Cagliari - Italy
+                                <br/><br/>
+                                <a href="mailto:contact@rombo.ai" style="color: #FE900F; text-decoration: none;">contact@rombo.ai</a>
+                                <br/>
+                                <a href="tel:+393520648081" style="color: #FE900F; text-decoration: none;">+39 352 064 8081</a>
                             </div>
                         </div>
                     </div>
@@ -415,24 +419,24 @@ document.addEventListener('DOMContentLoaded', function() {
             <div class="row justify-content-md-center">
                 <div class="col-12 col-md-4 footer-logo">
                     <img
-                            alt="RomboAI"
+                            alt="Rombo AI"
                             class="img-fluid"
                             src="/img/romboai-04-1-2.png"
-                            style="max-height: 79px; width: 200px;"
+                            width="200" height="79"
+                            loading="lazy"
                     />
                 </div>
                 <div class="col-12 col-md-8">
                     <div class="row m-0 d-flex align-items-center h-100">
                         <p class="footer-text col-10 col-md-10 m-0 text-md-left text-lg-left">
-                            ROMBO AI © 2025 |
+                            ROMBO AI © 2026 |
                             <a href="/privacy/" style="color:#007bff;">Privacy Policy</a>
                         </p>
-                        <!-- Remove col-* classes from the anchor tag to avoid issues with layout -->
-                        <a class="ml-auto col-2 col-md-2 d-flex justify-content-center" href="https://www.linkedin.com/company/rombo-ai/"
-                           rel="noopener noreferrer" target="_blank">
+                        <a class="col-2 col-md-2 d-flex justify-content-start" href="https://www.linkedin.com/company/rombo-ai/"
+                           rel="noopener noreferrer" target="_blank" aria-label="Rombo AI on LinkedIn">
                             <img alt="LinkedIn" class="img-fluid"
                                  src="/img/icon-jam-icons-outline-logos-linkedin-1.svg"
-                                 style="max-width: 24px;">
+                                 width="24" height="24" loading="lazy">
                         </a>
                     </div>
                 </div>
@@ -492,7 +496,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
           },
           "content": {
-            "href": "/privacy"
+            "href": "/privacy/"
           }
         });
       } else {

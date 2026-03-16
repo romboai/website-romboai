@@ -114,6 +114,6 @@ markdown_content: >-
   can support you in your daily analysis, we're ready to show you. 
 
 
-  **Get in touch now via contact@rombo.ai. **
+  **Get in touch now via {{ site.contact_email }}. **
 ---
 

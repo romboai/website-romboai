@@ -2,7 +2,7 @@ const { test, expect } = require("@playwright/test");
 
 test("blog: list loads and first post page renders", async ({ page }) => {
   await page.goto("/blog/");
-  await expect(page.locator("body")).toContainText(/Welcome to RomboAI Blog/i);
+  await expect(page.locator("body")).toContainText(/Welcome to Rombo AI Blog/i);
 
   // Click the first blog post link (avoid navbar/footer links like /blog/).
   // Blog list comes from `_includes/blog_articles.html` (cards within the main content).
