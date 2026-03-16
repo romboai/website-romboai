@@ -10,7 +10,7 @@ test("products: page loads and module anchors render", async ({ page }) => {
 
   // Headings exist (content-level smoke)
   await expect(page.getByRole("heading", { name: /NMR AI Analyzer/i }).first()).toBeVisible();
-  await expect(page.getByRole("heading", { name: /AutoML for material analysis/i }).first()).toBeVisible();
+  await expect(page.getByRole("heading", { name: /AutoML Framework/i }).first()).toBeVisible();
 });
 
 
