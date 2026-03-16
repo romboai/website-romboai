@@ -148,7 +148,7 @@
   <div class="container custom_container">
       <div class="row">
           <div class="col-12 py-4">
-              <div class="text-wrapper5 text-uppercase">{{page.technology_main_title}}</div>
+              <div class="text-wrapper5">{{page.technology_main_title}}</div>
               <div class="secondary-headline">{{page.technology_sub_title}}</div>
           </div>
       </div>
@@ -163,28 +163,24 @@
               </div>
               <div class="row d-flex flex-wrap flex-md-nowrap text-left  justify-content-center"
               >
-                  <div class="z-1 col-md-6">
-                      <img class="img-fluid mx-0" src="{{ site.baseurl }}/img/forma-5-10.png"
-                           alt="Foreground Level">
+                  <div class="z-1 col-md-6 d-flex align-items-center justify-content-center">
+                      <img class="img-fluid mx-0" src="{{ site.baseurl }}/img/molecule-technology.png"
+                           alt="Molecular structure visualization">
                   </div>
-                  <div class="z-1 col-md-6">
+                    <div class="z-1 col-md-6">
                       <div class="paragraf">
                           <p class="px-2 px-md-5 at-the-core-of-our">
                               <span class="text-wrapper19">{{page.technology_message_part_three}}</span>
                               <span class="text-wrapper20">
                                           {{page.technology_message_part_four}}&nbsp;<br><br>
                                       </span>
-                              <span class="text-wrapper19">{{page.technology_message_part_five}}<br></span>
+                              <span class="text-wrapper19">{{page.technology_message_part_five}}</span>
                               <span class="text-wrapper20">
                                           {{page.technology_message_part_six}}&nbsp;<br><br>
                                       </span>
-                              <span class="text-wrapper19">{{page.technology_message_part_seven}}<br></span>
+                              <span class="text-wrapper19">{{page.technology_message_part_seven}}</span>
                               <span class="text-wrapper20">
                                           {{page.technology_message_part_eight}}
-                                      </span>
-                              <span class="text-wrapper21">{{page.technology_message_part_nine}}</span>
-                              <span class="text-wrapper20">
-                                          {{page.technology_message_part_ten}}&nbsp;
                                       </span>
                           </p>
                       </div>
@@ -200,8 +196,7 @@
 
 <!--Client-->
 {% include client.html %}
-<!--Articles-->
-{% include articles.html %}
+<!--Articles (removed from home page)-->
 <!--SupportBy-->
 {% include supportby.html %}
 <!--Engage-->

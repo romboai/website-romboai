@@ -6,18 +6,18 @@ seo_title: "Rombo AI | AI for Spectral & Chemical Analysis (NMR)"
 description: "Automate spectral and chemical analysis with AI and Low Field NMR: faster insights, proprietary models, and end-to-end workflows for R&D and industry."
 lang: en
 
-hero_home_title: "Automating Chemical Analysis with Artificial Intelligence"
+hero_home_title: "Building the First AI Foundation Model for Quantitative NMR"
 hero_cta_label_left: "Contact"
 hero_cta_label_right: "now"
 hero_cta_link: "/contact"
 
-intro_main_title: "WELCOME TO A WORLD OF PRECISION, EFFICIENCY, AND INNOVATION."
-intro_sub_title: "Unlocking a New Era in Chemical Analysis"
+intro_main_title: "SOLVING THE CHALLENGE OF COMPLEX MATERIAL ANALYSIS"
+intro_sub_title: "Addressing the \"lab-to-workflow\" gap"
 
 intro_message_part_one: "Precision Redefined"
-intro_message_part_two: "Our fusion of"
-intro_message_part_three: "Low Field NMR"
-intro_message_part_four: "and AI delivers unparalleled accuracy, offering insights beyond traditional methods."
+intro_message_part_two: "We combine patented AI models with"
+intro_message_part_three: "low-field NMR"
+intro_message_part_four: "to provide real industrial materials insights beyond traditional methods."
 
 intro_message_part_five: "Efficiency and Speed"
 intro_message_part_six: "Say goodbye to time-consuming analysis processes. Our solution ensures quicker decision-making and faster time-to-market for your products."
@@ -25,28 +25,24 @@ intro_message_part_seven: "15 minutes"
 intro_message_part_eight: "compared to weeks of traditional laboratory analysis."
 
 intro_message_part_nine: "In-depth Understanding"
-intro_message_part_ten: "Gain a comprehensive understanding of your product's composition and behavior, empowering data-driven decisions that fuel innovation and enhance quality."
+intro_message_part_ten: "Build a consistent material fingerprint over time, empowering data-driven decisions that fuel innovation and enhance QC."
 
 intro_message_part_eleven: "Cost-Effective Solutions"
 intro_message_part_twelve: "Optimize costs by streamlining analysis processes, reducing manual labor, and eliminating potential errors associated with conventional methods."
 
-technology_main_title: "PATENTED"
-technology_sub_title: "Revolutionary Technology"
+technology_main_title: "FOUNDATION MODEL FOR qNMR"
+technology_sub_title: "Pre-trained on Millions of Spectra. Built for Industry."
 
-technology_message_part_three: "At the core of our solutions"
-technology_message_part_four: "lies a mix of cutting-edge Low Field NMR (Nuclear Magnetic Resonance) and Artificial
-Intelligence (AI). This synergy brings a new dimension to product analysis, redefining precision,
-speed, and depth of insights."
+technology_message_part_three: "At the heart of our platform is a proprietary transformer model — the first of its kind for quantitative NMR —"
+technology_message_part_four: "pre-trained on millions of real-world spectra across materials, conditions, and instruments. Unlike traditional chemometric models that start from scratch on every dataset, our foundation model arrives with deep spectral knowledge built in."
 
-technology_message_part_five: "Low Field NMR"
-technology_message_part_six: "Using the principles of nuclear-magnetic resonance at lower magnetic field strengths, our
-technology offers a non-invasive, highly sensitive approach to understand the molecular composition and
-properties of materials."
+technology_message_part_five: "The result: faster calibration, higher accuracy on small datasets, and generalization across instruments and sample types."
+technology_message_part_six: "Our AI automatically interprets complex spectral data, delivering fast, precise, and scalable analysis — from molecular characterization to quantification."
 
-technology_message_part_seven: "Artificial Intelligence"
-technology_message_part_eight: "Our proprietary AI algorithms are engineered to interpret and extrapolate information from spectral data obtained"
-technology_message_part_nine: "through NMR"
-technology_message_part_ten: "- enabling quick, accurate, and comprehensive analysis."
+technology_message_part_seven: "Built for industries such as energy, oil & gas, petrochemicals, biotechnology, and advanced materials,"
+technology_message_part_eight: "our foundation model transforms low-field NMR from a laboratory tool into a continuous source of material intelligence for industrial operations."
+technology_message_part_nine: ""
+technology_message_part_ten: ""
 ---
 
 
