@@ -7,6 +7,11 @@ description: "AI-driven spectral and chemical analysis with Low Field NMR and ma
 lang: en
 locale: en_US
 og_image: /img/og/rombo-ai.png
+# Company contact info (single source of truth)
+contact_email: "contact@rombo.ai"
+contact_phone: "+39 352 064 8081"
+contact_phone_raw: "+393520648081"
+
 # Default CTA (fallback). Engage CTAs will reuse the Home hero CTA when available.
 cta_label_left: "Contact"
 cta_label_right: "now"
