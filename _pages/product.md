@@ -100,6 +100,7 @@ products:
     <div class="row g-4 align-items-center">
       <div class="col-12 col-lg-5 pe-lg-5">
         {% include products/visual.html
+
           src="/img/solution-hardware.png"
           alt="Material Intelligence Platform"
           wrapper_class="products-visual--compact"
