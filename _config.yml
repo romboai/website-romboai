@@ -12,6 +12,42 @@ contact_email: "contact@rombo.ai"
 contact_phone: "+39 352 064 8081"
 contact_phone_raw: "+393520648081"
 
+# Organization (single source of truth for JSON-LD + footer + meta)
+organization:
+  legal_name: "Rombo AI S.r.l."
+  founding_date: "2023"
+  founding_location: "Cagliari, Italy"
+  address:
+    street: ""              # TODO: compile when available
+    locality: "Cagliari"
+    region: "Sardinia"
+    postal_code: ""         # TODO: compile when available
+    country: "IT"
+  geo:
+    latitude: 39.2293491
+    longitude: 9.073249
+  area_served:
+    - "EU"
+    - "Worldwide"
+  knows_about:
+    - "Low-field NMR"
+    - "Quantitative NMR"
+    - "Benchtop NMR"
+    - "Spectral analysis"
+    - "Machine learning"
+    - "Deep learning"
+    - "Foundation models"
+    - "Crude oil analysis"
+    - "Transformer mineral oil analysis"
+    - "Materials chemistry"
+    - "AutoML"
+  same_as:
+    - "https://www.linkedin.com/company/rombo-ai/"
+  industry:
+    - "Artificial Intelligence"
+    - "Spectroscopy"
+    - "Industrial Analytics"
+
 # Default CTA (fallback). Engage CTAs will reuse the Home hero CTA when available.
 cta_label_left: "Contact"
 cta_label_right: "now"
@@ -21,6 +57,8 @@ markdown: kramdown
 # Kramdown (2.x) needs the GFM parser gem for GitHub-flavored markdown features.
 kramdown:
   input: GFM
+  auto_ids: true
+  toc_levels: 2..4
 # Engage Section
 engage_main_title: "DISCOVER WHAT AI-DRIVEN SPECTRAL ANALYSIS CAN DO FOR YOU"
 engage_sub_title: "Contact Us"
@@ -31,6 +69,21 @@ permalink: :title/
 collections:
   pages:
     output: true
+  authors:
+    output: true
+    permalink: /author/:path/
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: article
+  - scope:
+      path: ""
+      type: authors
+    values:
+      layout: author
 sass:
   sass_dir: _sass
   style:    compressed

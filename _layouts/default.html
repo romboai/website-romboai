@@ -19,7 +19,6 @@
 {% include menu.html %}
 
 <main id="main-content" tabindex="-1">
-  <h1 class="visually-hidden">{{ page.h1 | default: page.title | default: site.title }}</h1>
 {{ content }}
 
 <!--Hero Section-->
@@ -35,9 +34,9 @@
   <div class="container custom-container w-100  h-100">
       <div class="row m-0 w-100  h-100  hero-content-message">
           <div class="z-1 col-md-6 align-self-center" style="text-align: left">
-              <div class="text-white text-responsive">
-                  <span class="text-highlight">{{ page.hero_home_title }}</span>
-              </div>
+              <h1 class="text-white text-responsive m-0">
+                  <span class="text-highlight">{{ page.hero_home_title | default: page.title | default: site.title }}</span>
+              </h1>
 
               {% if page.hero_cta_link %}
               <a href="{{ site.baseurl }}{{ page.hero_cta_link }}" class="text-decoration-none d-inline-block mt-4" aria-label="{{ page.hero_cta_label_left | default: 'Contact' }} {{ page.hero_cta_label_right | default: 'now' }}">
@@ -82,11 +81,11 @@
 {% include hero_divider.html %}
 
 <!--Intro Section-->
-<div class="container-fluid py-4">
+<section class="container-fluid py-4" aria-labelledby="intro-heading">
   <div class="row justify-content-center intro-header">
       <div class="col-12">
           <div class="top text-center">
-              <p class="text-wrapper5">{{ page.intro_main_title }}</p>
+              <h2 id="intro-heading" class="text-wrapper5">{{ page.intro_main_title }}</h2>
               <p class="text-wrapper6">{{ page.intro_sub_title }}</p>
           </div>
       </div>
@@ -95,7 +94,7 @@
       <!-- Left Image (Hidden on Mobile) -->
       <div class="col-md-1 d-none d-md-block text-start px-0">
           <img class="img-fluid intro-left" style="padding-right: 21px;" src="{{ site.baseurl }}/img/livello-1-7.svg"
-               alt="Left Level">
+               alt="" aria-hidden="true">
       </div>
 
       <!-- Main Content with Background Image -->
@@ -141,27 +140,27 @@
       <!-- Right Image (Hidden on Mobile) -->
       <div class="col-md-1 d-none d-md-block text-end px-0">
           <img class="img-fluid intro-right" style="padding-left: 21px;" src="{{ site.baseurl }}/img/livello-1-6.svg"
-               alt="Right Level">
+               alt="" aria-hidden="true">
       </div>
   </div>
-</div>
+</section>
 
 <!--Intro Section-->
 
 
 <!--Technology Section-->
-<section class="container-fluid" style="background: #303767;">
+<section class="container-fluid" style="background: #303767;" aria-labelledby="technology-heading">
   <div class="row">
       <div class="col-12 px-0">
           <img class="w-100 m-0 p-0 technology-divider-container" style="bottom:-10px; object-fit: cover"
-               src="{{ site.baseurl }}/img/Separator_Technology.svg" alt="Vector"/>
+               src="{{ site.baseurl }}/img/Separator_Technology.svg" alt="" aria-hidden="true"/>
       </div>
   </div>
   <div class="container custom_container">
       <div class="row">
           <div class="col-12 py-4">
-              <div class="text-wrapper5">{{page.technology_main_title}}</div>
-              <div class="secondary-headline">{{page.technology_sub_title}}</div>
+              <h2 id="technology-heading" class="text-wrapper5">{{page.technology_main_title}}</h2>
+              <p class="secondary-headline">{{page.technology_sub_title}}</p>
           </div>
       </div>
       <div class="row py-4">

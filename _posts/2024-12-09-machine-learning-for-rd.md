@@ -48,6 +48,6 @@ markdown_content: |
   - **Process Optimization**: Rapid identification of key parameters to improve operational efficiency and reduce waste.
   - **Predictive Analysis**: Accurate prediction of chemical properties from spectroscopic data, thereby improving data-driven decision-making. 
 
-author: "Raffaele Taglialatela"
+author: "Silvia Bongiovanni"
 excerpt: "SpectraML breaks down barriers to Machine Learning adoption with its low-code/no-code approach. Designed for R&D teams, it simplifies data preparation, model training, and deployment—enabling faster innovation and the creation of custom solutions tailored to your needs."
 ---

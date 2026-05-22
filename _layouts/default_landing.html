@@ -19,7 +19,6 @@
 {% include menu_landing.html %}
 
 <main id="main-content" tabindex="-1">
-  <h1 class="visually-hidden">{{ page.h1 | default: page.title | default: site.title }}</h1>
 
 {{ content }}
 
@@ -31,19 +30,14 @@
       <track kind="captions" label="No dialogue" default>
       Your browser does not support the video tag.
   </video>
-    <!-- Background Audio -->
-<!--    <audio id="background-audio" autoplay loop style="display: none;">-->
-<!--        <source src="{{ site.baseurl }}/audio/background-audio.mp3" type="audio/mpeg">-->
-<!--        Your browser does not support the audio element.-->
-<!--    </audio>-->
 
   <!-- Mask Overlay -->
   <div class="mask"></div>
   <div class="container custom-container w-100  h-100">
       <div class="row m-0 w-100  h-100  hero-content-message">
-          <p class="z-1 col-md-6 align-self-center text-white text-responsive" style="text-align: left">
+          <h1 class="z-1 col-md-6 align-self-center text-white text-responsive" style="text-align: left">
               <span class="text-highlight">{{ page.hero_home_title }}</span>
-          </p>
+          </h1>
       </div>
   </div>
 </div>
@@ -57,7 +51,7 @@
   <div class="row justify-content-center intro-header">
       <div class="col-12">
           <div class="top text-center">
-              <p class="text-wrapper5">{{ page.intro_main_title }}</p>
+              <h2 class="text-wrapper5">{{ page.intro_main_title }}</h2>
               <p class="text-wrapper6">{{ page.intro_sub_title }}</p>
           </div>
       </div>
@@ -131,8 +125,8 @@
   <div class="container custom_container">
       <div class="row">
           <div class="col-12 py-4">
-              <div class="text-wrapper5 text-uppercase">{{page.technology_main_title}}</div>
-              <div class="secondary-headline">{{page.technology_sub_title}}</div>
+              <h2 class="text-wrapper5 text-uppercase">{{page.technology_main_title}}</h2>
+              <p class="secondary-headline">{{page.technology_sub_title}}</p>
           </div>
       </div>
       <div class="row py-4">
