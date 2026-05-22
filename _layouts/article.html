@@ -19,26 +19,45 @@
 {% include menu_article.html %}
 
 <main id="main-content" tabindex="-1">
-  <h1 class="visually-hidden">{{ page.h1 | default: page.title | default: site.title }}</h1>
+{%- assign author_obj = nil -%}
+{% include author_resolve.html author=page.author %}
+{%- assign _modified = page.last_modified_at | default: page.dateModified | default: page.date -%}
 <div class="container-fluid hero-article-section px-0">
   <div class="container custom-container">
       <div class="row m-0 pt-5 w-100 h-100 justify-content-center">
           <div class="col-12 px-4 px-md-5 py-5 align-content-center titolo-1" style="max-width: 895px">
-              <span class="posted_label">
-                  Posted on {{ page.date | date: "%d %B %Y" }}
-                  <br/>
-              </span>
-              <span class="post_header">
-                  {{ page.title }}
-              </span>
+              <nav aria-label="Breadcrumb" class="mb-3">
+                <ol class="breadcrumb" style="font-size:13px;">
+                  <li class="breadcrumb-item"><a href="{{ '/' | relative_url }}" class="text-white-50">Home</a></li>
+                  <li class="breadcrumb-item"><a href="{{ '/blog/' | relative_url }}" class="text-white-50">Blog</a></li>
+                  <li class="breadcrumb-item active text-white" aria-current="page">{{ page.title | truncate: 60 }}</li>
+                </ol>
+              </nav>
+              <p class="posted_label mb-2">
+                  <time datetime="{{ page.date | date_to_xmlschema }}">Posted on {{ page.date | date: "%d %B %Y" }}</time>
+                  {%- if _modified and _modified != page.date %}
+                  &nbsp;·&nbsp;
+                  <time datetime="{{ _modified | date_to_xmlschema }}">Last updated {{ _modified | date: "%d %B %Y" }}</time>
+                  {%- endif %}
+              </p>
+              <h1 class="post_header">{{ page.title }}</h1>
           </div>
       </div>
   </div>
   {% if page.image %}
   <div class="container custom_container">
       <div class="row m-0 p-4 p-md-5">
-          <img src="{{ page.image | relative_url }}" alt="{{ page.image_alt | default: page.title }}" class="m-0 p-0 img-fluid border rounded"
-               style="object-fit: cover">
+          <figure class="m-0 p-0">
+            <img src="{{ page.image | relative_url }}"
+                 alt="{{ page.image_alt | default: page.title }}"
+                 class="m-0 p-0 img-fluid border rounded"
+                 width="1200" height="630"
+                 style="object-fit: cover"
+                 loading="eager" decoding="async">
+            {%- if page.image_caption %}
+            <figcaption class="text-muted mt-2" style="font-size:13px;">{{ page.image_caption }}</figcaption>
+            {%- endif %}
+          </figure>
       </div>
   </div>
   {% endif %}
@@ -54,14 +73,32 @@
   <div class="container custom-container pt-4">
       <div class="row m-0 w-100 h-100 justify-content-center">
           <div class="col-12 px-4 px-md-5 align-content-center titolo-1" style="max-width: 895px">
-
+              {%- if author_obj %}
+              <div class="d-flex align-items-center gap-3 py-3 border-top border-bottom" style="border-color:#eee !important;">
+                {% if author_obj.image %}
+                <img src="{{ author_obj.image | relative_url }}"
+                     alt="Portrait of {{ author_obj.name }}"
+                     width="56" height="56"
+                     class="rounded-circle"
+                     style="object-fit:cover;"
+                     loading="lazy" decoding="async">
+                {% endif %}
+                <div>
+                  <p class="m-0" style="font-size:14px; color:#666; font-style:italic;">Posted by</p>
+                  <p class="m-0">
+                    <a class="andrew-jonson" href="{{ author_obj.url | relative_url }}" rel="author">{{ author_obj.name }}</a>
+                    {%- if author_obj.job_title %}
+                    <span style="color:#666;"> — {{ author_obj.job_title }}</span>
+                    {%- endif %}
+                  </p>
+                </div>
+              </div>
+              {%- else %}
               <p>
-                  <span class="posted_label" style="font-style: italic">
-                  Posted By:
-                  </span>
+                  <span class="posted_label" style="font-style: italic">Posted by:</span>
                   <span class="andrew-jonson pt-3">{{ page.author }}</span>
               </p>
-
+              {%- endif %}
           </div>
       </div>
   </div>

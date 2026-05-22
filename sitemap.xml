@@ -1,16 +1,23 @@
 ---
 layout: null
 permalink: /sitemap.xml
+sitemap: false
 ---
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/0.9">
+
+  {%- comment -%} Build time as fallback "lastmod" for static pages {%- endcomment -%}
+  {%- assign build_time = site.time | date_to_xmlschema -%}
+
   <url>
     <loc>{{ "/" | absolute_url }}</loc>
-    <changefreq>weekly</changefreq>
+    <lastmod>{{ build_time }}</lastmod>
     <priority>1.0</priority>
   </url>
 
-  {%- comment -%} Collection pages in _pages/ {%- endcomment -%}
+  {%- comment -%} Collection pages (_pages/) {%- endcomment -%}
   {%- assign pages_collection = site.collections["pages"] -%}
   {%- if pages_collection and pages_collection.docs -%}
   {%- for p in pages_collection.docs -%}
@@ -20,15 +27,16 @@ permalink: /sitemap.xml
     {%- if p.url == "/" -%}{%- continue -%}{%- endif -%}
     {%- if p.url contains "/admin" -%}{%- continue -%}{%- endif -%}
     {%- if p.url contains "/e2e/" -%}{%- continue -%}{%- endif -%}
+    {%- assign lastmod = p.last_modified_at | default: p.dateModified | default: build_time -%}
     <url>
       <loc>{{ p.url | absolute_url }}</loc>
-      <changefreq>monthly</changefreq>
-      <priority>0.7</priority>
+      <lastmod>{{ lastmod | date_to_xmlschema }}</lastmod>
+      <priority>0.8</priority>
     </url>
   {%- endfor -%}
   {%- endif -%}
 
-  {%- comment -%} Any other pages (non-collection) {%- endcomment -%}
+  {%- comment -%} Standalone pages (not in collections) {%- endcomment -%}
   {%- for p in site.pages -%}
     {%- assign robots = p.robots | default: "index,follow" -%}
     {%- if p.sitemap == false -%}{%- continue -%}{%- endif -%}
@@ -37,25 +45,51 @@ permalink: /sitemap.xml
     {%- if p.url contains "/admin" -%}{%- continue -%}{%- endif -%}
     {%- if p.url contains "/e2e/" -%}{%- continue -%}{%- endif -%}
     {%- if p.url == "/sitemap.xml" -%}{%- continue -%}{%- endif -%}
+    {%- if p.url == "/robots.txt" -%}{%- continue -%}{%- endif -%}
+    {%- if p.url contains ".xml" -%}{%- continue -%}{%- endif -%}
+    {%- if p.url contains ".txt" -%}{%- continue -%}{%- endif -%}
+    {%- assign lastmod = p.last_modified_at | default: p.dateModified | default: build_time -%}
     <url>
       <loc>{{ p.url | absolute_url }}</loc>
-      <changefreq>monthly</changefreq>
+      <lastmod>{{ lastmod | date_to_xmlschema }}</lastmod>
       <priority>0.5</priority>
     </url>
   {%- endfor -%}
+
+  {%- comment -%} Author profile pages {%- endcomment -%}
+  {%- if site.authors -%}
+  {%- for a in site.authors -%}
+    {%- assign robots = a.robots | default: "index,follow" -%}
+    {%- if a.sitemap == false -%}{%- continue -%}{%- endif -%}
+    {%- if robots contains "noindex" -%}{%- continue -%}{%- endif -%}
+    {%- assign lastmod = a.last_modified_at | default: build_time -%}
+    <url>
+      <loc>{{ a.url | absolute_url }}</loc>
+      <lastmod>{{ lastmod | date_to_xmlschema }}</lastmod>
+      <priority>0.6</priority>
+    </url>
+  {%- endfor -%}
+  {%- endif -%}
 
   {%- comment -%} Blog posts {%- endcomment -%}
   {%- for post in site.posts -%}
     {%- assign robots = post.robots | default: "index,follow" -%}
     {%- if post.sitemap == false -%}{%- continue -%}{%- endif -%}
     {%- if robots contains "noindex" -%}{%- continue -%}{%- endif -%}
+    {%- assign lastmod = post.last_modified_at | default: post.dateModified | default: post.date -%}
     <url>
       <loc>{{ post.url | absolute_url }}</loc>
-      <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
-      <changefreq>yearly</changefreq>
-      <priority>0.6</priority>
+      <lastmod>{{ lastmod | date_to_xmlschema }}</lastmod>
+      <priority>0.7</priority>
+      {%- if post.image %}
+      <image:image>
+        <image:loc>{{ post.image | absolute_url }}</image:loc>
+        <image:title>{{ post.title | xml_escape }}</image:title>
+        {%- if post.image_alt %}
+        <image:caption>{{ post.image_alt | xml_escape }}</image:caption>
+        {%- endif %}
+      </image:image>
+      {%- endif %}
     </url>
   {%- endfor -%}
 </urlset>
-
-

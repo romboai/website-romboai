@@ -1,8 +1,9 @@
 <!--Hero Section-->
 <div class="container-fluid  hero-contact-section">
     <!-- Video -->
-    <video class="hero-video" autoplay muted loop playsinline controlslist="nodownload">
+    <video class="hero-video" autoplay muted loop playsinline controlslist="nodownload" preload="none">
         <source src="{{ site.baseurl }}/img/hero_back_play.mp4" type="video/mp4"/>
+        <track kind="captions" label="No dialogue" default>
         Your browser does not support the video tag.
     </video>
 
@@ -11,15 +12,15 @@
     <div class="z-1 container custom-container position-relative py-5">
         <div class="row justify-content-center align-items-start py-5">
             <div class="col-md-6 pt-5">
-                <div class="contact-us py-3"><span class="text-highlight">Contact Us</span></div>
-                <div class="label text-white" style="font-size: 20px; padding-right: 100px;">
+                <h1 class="contact-us py-3 m-0"><span class="text-highlight">Contact Us</span></h1>
+                <p class="label text-white" style="font-size: 20px; padding-right: 100px;">
                     <span class="text-highlight">Connect with our experts to explore tailored solutions for your business challenges. Reach out to our sales team or schedule a demo for the latest insights and updates.</span>
-                </div>
+                </p>
             </div>
             <div class="col-md-6 my-5 position-relative ">
                 <div class="bg-white border border-secondary rounded-3 shadow p-4 text-start text-dark">
                     <div id="contact-heading" class="mb-4 text-left">
-                        <p class="contact-secondary-headline">Get In Touch</p>
+                        <h2 class="contact-secondary-headline m-0">Get In Touch</h2>
                     </div>
                     <form id="contact-form" data-toggle="validator" action="https://app.99inbound.com/api/e/TfLbh_oL"
                           method="POST">

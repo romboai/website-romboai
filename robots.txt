@@ -1,6 +1,152 @@
+# Rombo AI - robots.txt
+# Last updated: 2026-05
+# Policy: allow indexing for search and AI-search systems; allow LLM training crawlers
+# by default, with named blocks for granular control. Adjust per business decision.
+
+# ─────────────────────────────────────────────────────────────
+# DEFAULT — all user agents
+# ─────────────────────────────────────────────────────────────
 User-agent: *
 Allow: /
+Disallow: /admin/
+Disallow: /tina/
+Disallow: /e2e/
+Disallow: /tests/
+Disallow: /scripts/
+Disallow: /vendor/
+Disallow: /.idea/
+Disallow: /.jekyll-cache/
+Disallow: /.sass-cache/
 
+# ─────────────────────────────────────────────────────────────
+# MAJOR SEARCH ENGINES — explicit allow
+# ─────────────────────────────────────────────────────────────
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+# ─────────────────────────────────────────────────────────────
+# AI SEARCH (answer engines that show citations)
+# These should be ALLOWED to maximize discoverability in LLM answers.
+# ─────────────────────────────────────────────────────────────
+
+# OpenAI ChatGPT Search (required to appear in ChatGPT Search results)
+User-agent: OAI-SearchBot
+Allow: /
+
+# OpenAI ChatGPT user actions (Atlas / Agent / browse on demand)
+User-agent: ChatGPT-User
+Allow: /
+
+# Perplexity answer engine (live retrieval, shows citations)
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+# Microsoft Copilot / Bing AI Chat (uses Bingbot index + dedicated crawlers)
+User-agent: BingPreview
+Allow: /
+
+# You.com search assistant
+User-agent: YouBot
+Allow: /
+
+# Anthropic Claude live search (web fetch on demand)
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+# ─────────────────────────────────────────────────────────────
+# AI TRAINING CRAWLERS — business decision
+# Currently ALLOWED to maximize presence in future model knowledge.
+# To opt-out of any single one, change "Allow: /" to "Disallow: /".
+# ─────────────────────────────────────────────────────────────
+
+# OpenAI training crawler
+User-agent: GPTBot
+Allow: /
+
+# Google Gemini / Vertex AI training (independent from Googlebot index)
+User-agent: Google-Extended
+Allow: /
+
+# Anthropic Claude training
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+# Apple Intelligence training (independent from Applebot)
+User-agent: Applebot-Extended
+Allow: /
+
+# Meta AI training
+User-agent: Meta-ExternalAgent
+Allow: /
+
+User-agent: FacebookBot
+Allow: /
+
+# Common Crawl (used as training source by many LLMs)
+User-agent: CCBot
+Allow: /
+
+# Amazon AI / Alexa
+User-agent: Amazonbot
+Allow: /
+
+# Cohere
+User-agent: cohere-ai
+Allow: /
+
+User-agent: cohere-training-data-crawler
+Allow: /
+
+# Mistral AI
+User-agent: MistralAI-User
+Allow: /
+
+# ─────────────────────────────────────────────────────────────
+# SCRAPERS / LOW-VALUE BOTS — disallow
+# ─────────────────────────────────────────────────────────────
+User-agent: Bytespider
+Disallow: /
+
+User-agent: Diffbot
+Disallow: /
+
+User-agent: omgili
+Disallow: /
+
+User-agent: omgilibot
+Disallow: /
+
+User-agent: ImagesiftBot
+Disallow: /
+
+User-agent: Timpibot
+Disallow: /
+
+User-agent: PetalBot
+Disallow: /
+
+# ─────────────────────────────────────────────────────────────
+# SITEMAP
+# ─────────────────────────────────────────────────────────────
 Sitemap: https://rombo.ai/sitemap.xml
-
-

@@ -19,7 +19,6 @@
 {% include menu.html %}
 
 <main id="main-content" tabindex="-1">
-  <h1 class="visually-hidden">{{ page.h1 | default: page.title | default: site.title }}</h1>
 
 <!--Hero Section-->
 <div class="container-fluid hero-blog-section px-0">
@@ -32,12 +31,12 @@
   <div class="container h-100 custom-container">
       <div class="row mx-0 w-100 h-100 justify-content-center align-content-center text-center">
           <div class="z-1 col-12 h-100 px-md-4 align-content-center align-items-center titolo-1">
-              <div class="titolo-1-span">
+              <h1 class="titolo-1-span m-0">
                   Welcome to Rombo AI Blog
-              </div>
-              <div class="span2 py-4">
+              </h1>
+              <p class="span2 py-4">
                 Perspectives on AI, NMR Spectral Data, and the Future of Materials Analysis.
-              </div>
+              </p>
           </div>
       </div>
   </div>

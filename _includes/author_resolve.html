@@ -1,0 +1,39 @@
+{%- comment -%}
+  Resolves a post author string (e.g. "Andrea Zanda" or "Carmine Mattia, CTO")
+  to the matching entry in the _authors collection.
+
+  Usage:
+    {% assign author_obj = nil %}
+    {% include author_resolve.html author=post.author %}
+    {% if author_obj %} ... {% endif %}
+
+  Sets:
+    - author_obj: matching _authors document (or nil)
+    - author_name_normalized: canonical name (page.name) or stripped input
+{%- endcomment -%}
+
+{%- assign _raw = include.author | default: "" | strip -%}
+{%- assign _first = _raw | split: "," | first | strip -%}
+{%- assign author_name_normalized = _first -%}
+{%- assign author_obj = nil -%}
+
+{%- for a in site.authors -%}
+  {%- if a.name == _first -%}
+    {%- assign author_obj = a -%}
+    {%- assign author_name_normalized = a.name -%}
+    {%- break -%}
+  {%- endif -%}
+{%- endfor -%}
+
+{%- if author_obj == nil -%}
+  {%- comment -%} Fallback: match on first token (e.g. "Andrea") {%- endcomment -%}
+  {%- assign _first_token = _first | split: " " | first -%}
+  {%- for a in site.authors -%}
+    {%- assign a_first = a.name | split: " " | first -%}
+    {%- if a_first == _first_token -%}
+      {%- assign author_obj = a -%}
+      {%- assign author_name_normalized = a.name -%}
+      {%- break -%}
+    {%- endif -%}
+  {%- endfor -%}
+{%- endif -%}

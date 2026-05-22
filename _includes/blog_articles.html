@@ -1,32 +1,32 @@
 <!-- Articles Section -->
-<section class="container-fluid bg-white">
+<section class="container-fluid bg-white" aria-labelledby="blog-list-heading">
     <div class="container custom_container">
         <div class="row py-5 px-5 text-left justify-content-center">
-            <h2 class="z-1 fw-bold text-dark" style="font-size: 42px; line-height: 46.2px;">What to read next</h2>
+            <h2 id="blog-list-heading" class="z-1 fw-bold text-dark" style="font-size: 42px; line-height: 46.2px;">What to read next</h2>
         </div>
 
         <div class="row">
             <div class="col-12">
                 <!-- Grid of Posts -->
-                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                <ul class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 list-unstyled">
                     {% for post in site.posts %}
-                    <div class="col mb-4 " style="min-width: 300px;">
-                        <div class="card h-100">
+                    <li class="col mb-4 " style="min-width: 300px;">
+                        <article class="card h-100">
                             <a href="{{ site.baseurl }}{{ post.url }}">
                                 <img class="post-image"
                                      src="{{ post.image | relative_url }}"
                                      alt="{{ post.image_alt | default: post.title }}"
-                                     width="600" height="400" loading="lazy">
+                                     width="600" height="400" loading="lazy" decoding="async">
                                 <div class="post-content">
-                                    <div class="date">{{ post.date | date: "%b %d, %Y" }}</div>
-                                    <div class="title">{{ post.title }}</div>
-                                    <p class="description">{{ post.excerpt | truncate: 100 }}</p>
+                                    <time class="date" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %d, %Y" }}</time>
+                                    <h3 class="title" style="font-size:18px;">{{ post.title }}</h3>
+                                    <p class="description">{{ post.excerpt | strip_html | truncate: 140 }}</p>
                                 </div>
                             </a>
-                        </div>
-                    </div>
+                        </article>
+                    </li>
                     {% endfor %}
-                </div>
+                </ul>
             </div>
         </div>
 

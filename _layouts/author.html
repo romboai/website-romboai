@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: 'en' }}">
+{% include header.html %}
+<body>
+
+<button id="UpBtn" class="up-btn d-none" aria-label="Back to top">
+  <span>
+    <svg xmlns="http://www.w3.org/2000/svg" width="23.721" height="28.513" viewBox="0 0 28.513 23.721" aria-hidden="true">
+      <g transform="translate(0 0)"><g transform="translate(0 0) rotate(-90)">
+        <path d="M28.057,52.1,17.76,41.8a1.565,1.565,0,0,0-2.207,0l-.935.935a1.549,1.549,0,0,0-.456,1.1,1.58,1.58,0,0,0,.456,1.116l6.007,6.02H1.54A1.523,1.523,0,0,0,0,52.511v1.322a1.581,1.581,0,0,0,1.54,1.6H20.694l-6.075,6.054a1.545,1.545,0,0,0,0,2.191l.935.932a1.565,1.565,0,0,0,2.207,0l10.3-10.3a1.574,1.574,0,0,0,0-2.215Z"
+              transform="translate(-29 -40.346)" fill="#fff"/>
+      </g></g>
+    </svg>
+  </span>
+</button>
+
+{% include menu.html %}
+
+<main id="main-content" tabindex="-1">
+
+<section class="container-fluid py-5" style="background:#FAFAFA; border-bottom:1px solid #E6E6E6;">
+  <div class="container custom_container">
+    <nav aria-label="Breadcrumb" class="mb-3">
+      <ol class="breadcrumb" style="font-size:14px;">
+        <li class="breadcrumb-item"><a href="{{ '/' | relative_url }}">Home</a></li>
+        <li class="breadcrumb-item"><a href="{{ '/about/' | relative_url }}">About</a></li>
+        <li class="breadcrumb-item active" aria-current="page">{{ page.name }}</li>
+      </ol>
+    </nav>
+
+    <div class="row g-4 align-items-center pt-3">
+      {% if page.image %}
+      <div class="col-12 col-md-3 text-center">
+        <img src="{{ page.image | relative_url }}"
+             alt="Portrait of {{ page.name }}"
+             class="img-fluid rounded-circle"
+             style="max-width:180px;"
+             width="180" height="180"
+             loading="lazy" decoding="async">
+      </div>
+      {% endif %}
+      <div class="col-12 col-md-9">
+        <p class="text-uppercase fw-bold mb-1" style="color:#FE900F; letter-spacing:.06em; font-size:13px;">Author</p>
+        <h1 class="fw-bold text-dark" style="font-size:36px;">{{ page.name }}</h1>
+        <p class="text-muted mb-2" style="font-size:18px;">{{ page.job_title }}</p>
+        {% if page.bio %}
+        <p class="text-dark" style="max-width:75ch;">{{ page.bio }}</p>
+        {% endif %}
+
+        {% if page.expertise %}
+        <p class="text-dark mb-1 mt-3 fw-bold">Areas of expertise</p>
+        <ul class="text-dark" style="max-width:75ch;">
+          {% for item in page.expertise %}
+          <li>{{ item }}</li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+
+        {% if page.linkedin and page.linkedin != "" %}
+        <p class="mt-3">
+          <a href="{{ page.linkedin }}" rel="noopener noreferrer" target="_blank" aria-label="{{ page.name }} on LinkedIn">LinkedIn profile</a>
+        </p>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="container-fluid py-5 bg-white">
+  <div class="container custom_container">
+    <h2 class="fw-bold text-dark mb-4" style="font-size:28px;">Articles by {{ page.name }}</h2>
+    {% assign author_posts = site.posts | where_exp: "p", "p.author contains page.name" %}
+    {% if author_posts.size > 0 %}
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+      {% for post in author_posts %}
+      <div class="col mb-4">
+        <div class="card h-100">
+          <a href="{{ site.baseurl }}{{ post.url }}">
+            {% if post.image %}
+            <img class="post-image"
+                 src="{{ post.image | relative_url }}"
+                 alt="{{ post.image_alt | default: post.title }}"
+                 width="600" height="400" loading="lazy" decoding="async">
+            {% endif %}
+            <div class="post-content">
+              <div class="date">{{ post.date | date: "%b %d, %Y" }}</div>
+              <div class="title">{{ post.title }}</div>
+              <p class="description">{{ post.excerpt | strip_html | truncate: 140 }}</p>
+            </div>
+          </a>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    {% else %}
+    <p class="text-muted">No articles yet from {{ page.name }}.</p>
+    {% endif %}
+  </div>
+</section>
+
+{% include engage.html %}
+{% include footer.html %}
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous" defer></script>
+<script defer src="{{ site.baseurl }}/js/main.js"></script>
+
+<script defer src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+<script>
+  (function() {
+    function initCookieConsent() {
+      if (window.cookieconsent) {
+        window.cookieconsent.initialise({
+          "palette": {
+            "popup": { "background": "#FFFFFF", "text": "#fe900f" },
+            "button": { "background": "#fe900f", "text": "#FFFFFF" }
+          },
+          "content": { "href": "{{ site.baseurl }}/privacy/" }
+        });
+      } else {
+        setTimeout(initCookieConsent, 100);
+      }
+    }
+    initCookieConsent();
+  })();
+</script>
+</body>
+</html>
