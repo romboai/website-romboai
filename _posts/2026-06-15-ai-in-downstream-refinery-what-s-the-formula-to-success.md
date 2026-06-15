@@ -5,7 +5,7 @@ permalink: /blog/article-AI-in-downstream-strategy
 layout: article
 image: /img/Screenshot 2026-06-15 at 09.16.36.png
 image_alt: AI-generated Image
-author: Silvia Bongiovanni
+author: 'Silvia Bongiovanni [BD Representative, Rombo AI]'
 excerpt: |-
   Where should refiners start if they want AI to deliver real operational value? If AI isn't the answer to every challenge, where can it create the greatest impact?
   In this month's article, we want to explore these questions and discuss what it takes to successfully adopt AI in downstream refining.
@@ -50,8 +50,6 @@ markdown_content: |
 
   In our next article, we will explore in more detail the concept of AI-as-a-service for refineries, what margins can be expected, and what is needed to successfully plug in AI in downstream. 
 
-
-  [Silvia Bongiovanni, Rombo AI BD Representative]
 
   ---
 
