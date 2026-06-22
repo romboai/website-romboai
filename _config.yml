@@ -49,8 +49,8 @@ organization:
     - "Industrial Analytics"
 
 # Default CTA (fallback). Engage CTAs will reuse the Home hero CTA when available.
-cta_label_left: "Contact"
-cta_label_right: "now"
+cta_label_left: "Free feasibility"
+cta_label_right: "analysis"
 cta_link: "/contact"
 markdown: kramdown
 
@@ -60,9 +60,9 @@ kramdown:
   auto_ids: true
   toc_levels: 2..4
 # Engage Section
-engage_main_title: "DISCOVER WHAT AI-DRIVEN SPECTRAL ANALYSIS CAN DO FOR YOU"
-engage_sub_title: "Contact Us"
-engage_message_part_one: "Connect with our experts to explore tailored solutions for your business challenges. Reach out to our sales team or schedule a demo for the latest insights and updates."
+engage_main_title: "REQUEST A FREE FEASIBILITY ANALYSIS"
+engage_sub_title: "Start with fit, then define the pilot"
+engage_message_part_one: "Share your analytical challenge with our team. We will assess technical fit, data or sample requirements, and the fastest path to a focused pilot."
 
 # Build settings
 permalink: :title/

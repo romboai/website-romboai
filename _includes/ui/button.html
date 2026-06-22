@@ -2,7 +2,7 @@
 Reusable orange button link (matches existing `.button` styles).
 
 Usage:
-{% include ui/button.html href="/contact/" label="Discuss a pilot" style="width:auto; display:inline-flex;" %}
+{% include ui/button.html href="/contact/" label="Request a free feasibility analysis" style="width:auto; display:inline-flex;" %}
 {%- endcomment -%}
 
 {%- assign extra_class = include.class | default: "" -%}
@@ -13,7 +13,12 @@ Usage:
   {%- assign href_is_external = true -%}
 {%- endif -%}
 
-<a class="button text-decoration-none {{ extra_class }}" href="{% if href_is_external %}{{ href }}{% else %}{{ href | relative_url }}{% endif %}" style="{{ extra_style }}">
+{%- assign href_is_contact = false -%}
+{%- if href contains "/contact" -%}
+  {%- assign href_is_contact = true -%}
+{%- endif -%}
+
+<a class="button text-decoration-none {{ extra_class }}" href="{% if href_is_external %}{{ href }}{% else %}{{ href | relative_url }}{% endif %}" style="{{ extra_style }}"{% if href_is_contact %} data-cta-location="{{ include.location | default: 'button' }}"{% endif %}>
   <span class="text-container"><span class="button-text">{{ include.label }}</span></span>
 </a>
 

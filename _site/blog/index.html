@@ -30,8 +30,10 @@
     <link rel="stylesheet" href="/css/custom/responsive.css">
     <link rel="stylesheet" href="/css/custom/scrollbar.css"><title>Blog | AI, Spectroscopy & NMR Insights | Rombo AI</title>
     <meta name="description" content="Insights on AI for spectroscopy and NMR: use cases, partnerships, methods, and best practices to turn spectral data into decisions.">
-    <meta name="robots" content="index,follow">
-    <link rel="canonical" href="http://localhost:4000/blog/">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="bingbot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <link rel="canonical" href="https://rombo.ai/blog/">
 
     <!-- Open Graph -->
     <meta property="og:site_name" content="Rombo AI">
@@ -39,14 +41,18 @@
     <meta property="og:type" content="website">
     <meta property="og:title" content="Blog | AI, Spectroscopy & NMR Insights | Rombo AI">
     <meta property="og:description" content="Insights on AI for spectroscopy and NMR: use cases, partnerships, methods, and best practices to turn spectral data into decisions.">
-    <meta property="og:url" content="http://localhost:4000/blog/">
-    <meta property="og:image" content="http://localhost:4000/img/og/rombo-ai.png">
+    <meta property="og:url" content="https://rombo.ai/blog/">
+    <meta property="og:image" content="https://rombo.ai/img/og/rombo-ai.png">
+    <meta property="og:image:alt" content="Blog | AI, Spectroscopy & NMR Insights | Rombo AI">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Blog | AI, Spectroscopy & NMR Insights | Rombo AI">
     <meta name="twitter:description" content="Insights on AI for spectroscopy and NMR: use cases, partnerships, methods, and best practices to turn spectral data into decisions.">
-    <meta name="twitter:image" content="http://localhost:4000/img/og/rombo-ai.png">
+    <meta name="twitter:image" content="https://rombo.ai/img/og/rombo-ai.png">
+    <meta name="twitter:image:alt" content="Blog | AI, Spectroscopy & NMR Insights | Rombo AI">
 
     <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
     <link rel="icon" type="image/svg" sizes="32x32" href="/img/favicon-32x32.png">
@@ -62,28 +68,166 @@
   "@graph": [
     {
       "@type": "Organization",
-      "@id": "http://localhost:4000/#organization",
+      "@id": "https://rombo.ai/#organization",
       "name": "Rombo AI",
-      "url": "http://localhost:4000/",
+      "legalName": "Rombo AI S.r.l.",
+      "url": "https://rombo.ai/",
       "logo": {
         "@type": "ImageObject",
-        "url": "http://localhost:4000/img/romboai-04-1-2.png"
+        "url": "https://rombo.ai/img/romboai-04-1-2.png",
+        "width": 512,
+        "height": 512
       },
-      "sameAs": [
-        "https://www.linkedin.com/company/rombo-ai/"
-      ]
+      "image": "https://rombo.ai/img/romboai-04-1-2.png",
+      "description": "AI-driven spectral and chemical analysis with Low Field NMR and machine learning.",
+      "foundingDate": "2023",
+      "foundingLocation": {
+        "@type": "Place",
+        "name": "Cagliari, Italy"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Cagliari",
+        "addressRegion": "Sardinia",
+        "addressCountry": "IT"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 39.2293491,
+        "longitude": 9.073249
+      },
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "contactType": "sales",
+          "email": "contact@rombo.ai",
+          "telephone": "+39 352 064 8081",
+          "availableLanguage": ["English", "Italian"],
+          "areaServed": ["EU","Worldwide"]
+        }
+      ],
+      "areaServed": ["EU","Worldwide"],
+      "knowsAbout": ["Low-field NMR","Quantitative NMR","Benchtop NMR","Spectral analysis","Machine learning","Deep learning","Foundation models","Crude oil analysis","Transformer mineral oil analysis","Materials chemistry","AutoML"],
+      "industry": ["Artificial Intelligence","Spectroscopy","Industrial Analytics"],
+      "founder": [{
+          "@type": "Person",
+          "@id": "https://rombo.ai/author/andrea-zanda/#person",
+          "name": "Andrea Zanda",
+          "jobTitle": "CEO & Co-founder",
+          "url": "https://rombo.ai/author/andrea-zanda/","sameAs": ["https://www.linkedin.com/in/andreazanda/"]},{
+          "@type": "Person",
+          "@id": "https://rombo.ai/author/carmine-mattia/#person",
+          "name": "Carmine Mattia",
+          "jobTitle": "CTO & Co-founder",
+          "url": "https://rombo.ai/author/carmine-mattia/"}
+      ],
+      "sameAs": ["https://www.linkedin.com/company/rombo-ai/"]
     },
     {
       "@type": "WebSite",
-      "@id": "http://localhost:4000/#website",
+      "@id": "https://rombo.ai/#website",
       "name": "Rombo AI",
-      "url": "http://localhost:4000/",
-      "publisher": { "@id": "http://localhost:4000/#organization" }
+      "url": "https://rombo.ai/",
+      "inLanguage": "en",
+      "publisher": { "@id": "https://rombo.ai/#organization" },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://rombo.ai/?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://rombo.ai/blog/#webpage",
+      "url": "https://rombo.ai/blog/",
+      "name": "Blog | AI, Spectroscopy & NMR Insights | Rombo AI",
+      "isPartOf": { "@id": "https://rombo.ai/#website" },
+      "inLanguage": "en",
+      "description": "Insights on AI for spectroscopy and NMR: use cases, partnerships, methods, and best practices to turn spectral data into decisions.",
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://rombo.ai/img/og/rombo-ai.png"
+      },
+      "breadcrumb": { "@id": "https://rombo.ai/blog/#breadcrumb" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://rombo.ai/blog/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://rombo.ai/"
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blogs",
+          "item": "https://rombo.ai/blog/"
+        }
+      ]
+    },
+    {
+      "@type": "Blog",
+      "@id": "https://rombo.ai/blog/#blog",
+      "url": "https://rombo.ai/blog/",
+      "name": "Rombo AI Blog",
+      "description": "Perspectives on AI, NMR spectral data, and the future of materials analysis.",
+      "publisher": { "@id": "https://rombo.ai/#organization" },
+      "inLanguage": "en",
+      "blogPost": [{
+          "@type": "BlogPosting",
+          "@id": "https://rombo.ai/blog/usecase-material-intelligence-platform#blogposting",
+          "url": "https://rombo.ai/blog/usecase-material-intelligence-platform",
+          "headline": "Machine Learning Applications in Materials Chemistry: The Rombo AI Approach ",
+          "datePublished": "2026-01-29T02:00:00+01:00"
+        },{
+          "@type": "BlogPosting",
+          "@id": "https://rombo.ai/blog/usecase-crudeoil-refinery#blogposting",
+          "url": "https://rombo.ai/blog/usecase-crudeoil-refinery",
+          "headline": "Use Case: Accelerating Crude Oil Analysis for a Leading Asian Refinery",
+          "datePublished": "2025-12-29T02:00:00+01:00"
+        },{
+          "@type": "BlogPosting",
+          "@id": "https://rombo.ai/blog/the-future-is-agentic/#blogposting",
+          "url": "https://rombo.ai/blog/the-future-is-agentic/",
+          "headline": "The Future Is Agentic: How AI Agents Bring Back Calm Technology",
+          "datePublished": "2025-10-28T02:00:00+01:00"
+        },{
+          "@type": "BlogPosting",
+          "@id": "https://rombo.ai/blog/ai-transformation-crude-oil-analysis/#blogposting",
+          "url": "https://rombo.ai/blog/ai-transformation-crude-oil-analysis/",
+          "headline": "The AI Transformation of Crude Oil Analysis: From Laboratory Bottlenecks to Real-Time Intelligence",
+          "datePublished": "2025-10-06T00:00:00+02:00"
+        },{
+          "@type": "BlogPosting",
+          "@id": "https://rombo.ai/blog/SpectraML-a-framework-designerd-for-rd-teams/#blogposting",
+          "url": "https://rombo.ai/blog/SpectraML-a-framework-designerd-for-rd-teams/",
+          "headline": "SpectraML: A framework designed for R&D teams",
+          "datePublished": "2024-12-09T00:00:00+01:00"
+        },{
+          "@type": "BlogPosting",
+          "@id": "https://rombo.ai/blog/sardegna-ricerche-partnership/#blogposting",
+          "url": "https://rombo.ai/blog/sardegna-ricerche-partnership/",
+          "headline": "Esplorazione delle Potenzialità della Spettroscopia NMR nel Settore delle Energie Rinnovabili",
+          "datePublished": "2024-09-30T02:00:00+02:00"
+        },{
+          "@type": "BlogPosting",
+          "@id": "https://rombo.ai/blog/ml-for-crude-oil/#blogposting",
+          "url": "https://rombo.ai/blog/ml-for-crude-oil/",
+          "headline": "Low-Field NMR for Crude Oil Analysis: Harnessing Machine Learning for Predicting Properties",
+          "datePublished": "2024-09-20T00:00:00+02:00"
+        },{
+          "@type": "BlogPosting",
+          "@id": "https://rombo.ai/blog/how-low-field-NMR-works/#blogposting",
+          "url": "https://rombo.ai/blog/how-low-field-NMR-works/",
+          "headline": "How Low-Field NMR Works and How Machine Learning Enhances Sample Characterization",
+          "datePublished": "2023-08-23T00:00:00+02:00"
+        }
+      ]
     }]
 }
 </script>
-
-
 
 </head>
 
@@ -151,8 +295,37 @@
                     </ul>
                 </li>
 
-                <li class="nav-item">
-                    <a class="nav-link menu-item text-white" href="/use-cases/">Use Cases</a>
+                <li class="nav-item dropdown">
+                    <a class="nav-link menu-item text-white dropdown-toggle"
+                       href="#"
+                       id="useCasesDropdown"
+                       role="button"
+                       data-bs-toggle="dropdown"
+                       aria-expanded="false">
+                        Use Cases
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="useCasesDropdown">
+                        <li>
+                            <a class="dropdown-item" href="/use-cases/">
+                                All use cases
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="/use-cases/crude-oil-monitoring/">
+                                Crude Oil Monitoring
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="/use-cases/transformer-oil-monitoring/">
+                                Transformer Oil Monitoring
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="/use-cases/nmr-compound-identification/">
+                                NMR Compound Identification
+                            </a>
+                        </li>
+                    </ul>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link menu-item text-white" href="/blog/">Blog</a>
@@ -161,7 +334,7 @@
                     <a class="nav-link menu-item text-white" href="https://rombo-ai.breezy.hr/" target="_blank" rel="noopener noreferrer">Careers</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link menu-item text-white" href="/contact/">Contact Us</a>
+                    <a class="nav-link menu-item text-white" href="/contact/" data-cta-location="navigation">Free Feasibility</a>
                 </li>
              
             </ul>
@@ -173,7 +346,6 @@
 
 
 <main id="main-content" tabindex="-1">
-  <h1 class="visually-hidden">Blogs</h1>
 
 <!--Hero Section-->
 <div class="container-fluid hero-blog-section px-0">
@@ -186,12 +358,12 @@
   <div class="container h-100 custom-container">
       <div class="row mx-0 w-100 h-100 justify-content-center align-content-center text-center">
           <div class="z-1 col-12 h-100 px-md-4 align-content-center align-items-center titolo-1">
-              <div class="titolo-1-span">
+              <h1 class="titolo-1-span m-0">
                   Welcome to Rombo AI Blog
-              </div>
-              <div class="span2 py-4">
+              </h1>
+              <p class="span2 py-4">
                 Perspectives on AI, NMR Spectral Data, and the Future of Materials Analysis.
-              </div>
+              </p>
           </div>
       </div>
   </div>
@@ -202,146 +374,146 @@
   <img class="img-fluid w-100 hero-divider-container" style="bottom:-10px; object-fit: cover; z-index: 1;" src="/img/Separator_Hero.svg" alt="Vector"/>
 </div>
 <!-- Articles Section -->
-<section class="container-fluid bg-white">
+<section class="container-fluid bg-white" aria-labelledby="blog-list-heading">
     <div class="container custom_container">
         <div class="row py-5 px-5 text-left justify-content-center">
-            <h2 class="z-1 fw-bold text-dark" style="font-size: 42px; line-height: 46.2px;">What to read next</h2>
+            <h2 id="blog-list-heading" class="z-1 fw-bold text-dark" style="font-size: 42px; line-height: 46.2px;">What to read next</h2>
         </div>
 
         <div class="row">
             <div class="col-12">
                 <!-- Grid of Posts -->
-                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                <ul class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 list-unstyled">
                     
-                    <div class="col mb-4 " style="min-width: 300px;">
-                        <div class="card h-100">
+                    <li class="col mb-4 " style="min-width: 300px;">
+                        <article class="card h-100">
                             <a href="/blog/usecase-material-intelligence-platform">
                                 <img class="post-image"
                                      src="/img/Screenshot%202026-01-29%20at%2014.42.03.png"
                                      alt="crude assay refinery"
-                                     width="600" height="400" loading="lazy">
+                                     width="600" height="400" loading="lazy" decoding="async">
                                 <div class="post-content">
-                                    <div class="date">Jan 29, 2026</div>
-                                    <div class="title">Machine Learning Applications in Materials Chemistry: The Rombo AI Approach </div>
-                                    <p class="description">Machine learning is turning NMR into a predictive tool for industrial analytics. By applying AI d...</p>
+                                    <time class="date" datetime="2026-01-29T02:00:00+01:00">Jan 29, 2026</time>
+                                    <h3 class="title" style="font-size:18px;">Machine Learning Applications in Materials Chemistry: The Rombo AI Approach </h3>
+                                    <p class="description">Machine learning is turning NMR into a predictive tool for industrial analytics. By applying AI directly to raw NMR spectra, complex mixt...</p>
                                 </div>
                             </a>
-                        </div>
-                    </div>
+                        </article>
+                    </li>
                     
-                    <div class="col mb-4 " style="min-width: 300px;">
-                        <div class="card h-100">
+                    <li class="col mb-4 " style="min-width: 300px;">
+                        <article class="card h-100">
                             <a href="/blog/usecase-crudeoil-refinery">
                                 <img class="post-image"
                                      src="/img/1764170441294.jpeg"
                                      alt="crude assay refinery"
-                                     width="600" height="400" loading="lazy">
+                                     width="600" height="400" loading="lazy" decoding="async">
                                 <div class="post-content">
-                                    <div class="date">Dec 29, 2025</div>
-                                    <div class="title">Use Case: Accelerating Crude Oil Analysis for a Leading Asian Refinery</div>
-                                    <p class="description">At one of Asia’s largest integrated energy companies, refinery R&D teams evaluate hundreds of cru...</p>
+                                    <time class="date" datetime="2025-12-29T02:00:00+01:00">Dec 29, 2025</time>
+                                    <h3 class="title" style="font-size:18px;">Use Case: Accelerating Crude Oil Analysis for a Leading Asian Refinery</h3>
+                                    <p class="description">At one of Asia’s largest integrated energy companies, refinery R&D teams evaluate hundreds of crude oil feedstocks every day to support p...</p>
                                 </div>
                             </a>
-                        </div>
-                    </div>
+                        </article>
+                    </li>
                     
-                    <div class="col mb-4 " style="min-width: 300px;">
-                        <div class="card h-100">
+                    <li class="col mb-4 " style="min-width: 300px;">
+                        <article class="card h-100">
                             <a href="/blog/the-future-is-agentic/">
                                 <img class="post-image"
                                      src="/img/1761645962162.jpeg"
                                      alt="Image generated with AI"
-                                     width="600" height="400" loading="lazy">
+                                     width="600" height="400" loading="lazy" decoding="async">
                                 <div class="post-content">
-                                    <div class="date">Oct 28, 2025</div>
-                                    <div class="title">The Future Is Agentic: How AI Agents Bring Back Calm Technology</div>
-                                    <p class="description">Tracing a personal and technological journey from Mark Weiser’s vision of ubiquitous, calm comput...</p>
+                                    <time class="date" datetime="2025-10-28T02:00:00+01:00">Oct 28, 2025</time>
+                                    <h3 class="title" style="font-size:18px;">The Future Is Agentic: How AI Agents Bring Back Calm Technology</h3>
+                                    <p class="description">Tracing a personal and technological journey from Mark Weiser’s vision of ubiquitous, calm computing to today’s emergence of generative A...</p>
                                 </div>
                             </a>
-                        </div>
-                    </div>
+                        </article>
+                    </li>
                     
-                    <div class="col mb-4 " style="min-width: 300px;">
-                        <div class="card h-100">
+                    <li class="col mb-4 " style="min-width: 300px;">
+                        <article class="card h-100">
                             <a href="/blog/ai-transformation-crude-oil-analysis/">
                                 <img class="post-image"
                                      src="/img/blog/ai-transformation-crude-oil-analysis.jpg"
                                      alt="Crude oil analysis: AI transformation"
-                                     width="600" height="400" loading="lazy">
+                                     width="600" height="400" loading="lazy" decoding="async">
                                 <div class="post-content">
-                                    <div class="date">Oct 06, 2025</div>
-                                    <div class="title">The AI Transformation of Crude Oil Analysis: From Laboratory Bottlenecks to Real-Time Intelligence</div>
-                                    <p class="description">The Oil & Gas industry is embracing AI for crude oil analysis. Discover how Rombo AI combines NMR...</p>
+                                    <time class="date" datetime="2025-10-06T00:00:00+02:00">Oct 06, 2025</time>
+                                    <h3 class="title" style="font-size:18px;">The AI Transformation of Crude Oil Analysis: From Laboratory Bottlenecks to Real-Time Intelligence</h3>
+                                    <p class="description">The Oil & Gas industry is embracing AI for crude oil analysis. Discover how Rombo AI combines NMR spectroscopy with machine learning to d...</p>
                                 </div>
                             </a>
-                        </div>
-                    </div>
+                        </article>
+                    </li>
                     
-                    <div class="col mb-4 " style="min-width: 300px;">
-                        <div class="card h-100">
+                    <li class="col mb-4 " style="min-width: 300px;">
+                        <article class="card h-100">
                             <a href="/blog/SpectraML-a-framework-designerd-for-rd-teams/">
                                 <img class="post-image"
                                      src="/img/blog/spectraml-rd-teams.jpg"
                                      alt="SpectraML: a framework designed for R&D teams"
-                                     width="600" height="400" loading="lazy">
+                                     width="600" height="400" loading="lazy" decoding="async">
                                 <div class="post-content">
-                                    <div class="date">Dec 09, 2024</div>
-                                    <div class="title">SpectraML: A framework designed for R&D teams</div>
-                                    <p class="description">SpectraML breaks down barriers to Machine Learning adoption with its low-code/no-code approach. D...</p>
+                                    <time class="date" datetime="2024-12-09T00:00:00+01:00">Dec 09, 2024</time>
+                                    <h3 class="title" style="font-size:18px;">SpectraML: A framework designed for R&D teams</h3>
+                                    <p class="description">SpectraML breaks down barriers to Machine Learning adoption with its low-code/no-code approach. Designed for R&D teams, it simplifies dat...</p>
                                 </div>
                             </a>
-                        </div>
-                    </div>
+                        </article>
+                    </li>
                     
-                    <div class="col mb-4 " style="min-width: 300px;">
-                        <div class="card h-100">
+                    <li class="col mb-4 " style="min-width: 300px;">
+                        <article class="card h-100">
                             <a href="/blog/sardegna-ricerche-partnership/">
                                 <img class="post-image"
                                      src="/img/blog/partnership.jpg"
                                      alt="Esplorazione delle Potenzialità della Spettroscopia NMR nel Settore delle Energie Rinnovabili"
-                                     width="600" height="400" loading="lazy">
+                                     width="600" height="400" loading="lazy" decoding="async">
                                 <div class="post-content">
-                                    <div class="date">Sep 30, 2024</div>
-                                    <div class="title">Esplorazione delle Potenzialità della Spettroscopia NMR nel Settore delle Energie Rinnovabili</div>
-                                    <p class="description">Partnerhip con il cluster delle energie rinnovabili per l'esplorazione delle Potenzialità della S...</p>
+                                    <time class="date" datetime="2024-09-30T02:00:00+02:00">Sep 30, 2024</time>
+                                    <h3 class="title" style="font-size:18px;">Esplorazione delle Potenzialità della Spettroscopia NMR nel Settore delle Energie Rinnovabili</h3>
+                                    <p class="description">Partnerhip con il cluster delle energie rinnovabili per l'esplorazione delle Potenzialità della Spettroscopia...</p>
                                 </div>
                             </a>
-                        </div>
-                    </div>
+                        </article>
+                    </li>
                     
-                    <div class="col mb-4 " style="min-width: 300px;">
-                        <div class="card h-100">
+                    <li class="col mb-4 " style="min-width: 300px;">
+                        <article class="card h-100">
                             <a href="/blog/ml-for-crude-oil/">
                                 <img class="post-image"
                                      src="/img/blog/ml-for-crude.webp"
                                      alt="Low-Field NMR for Crude Oil Analysis: Harnessing Machine Learning for Predicting Properties"
-                                     width="600" height="400" loading="lazy">
+                                     width="600" height="400" loading="lazy" decoding="async">
                                 <div class="post-content">
-                                    <div class="date">Sep 20, 2024</div>
-                                    <div class="title">Low-Field NMR for Crude Oil Analysis: Harnessing Machine Learning for Predicting Properties</div>
-                                    <p class="description">In the oil industry, understanding the properties of crude oil is essential for refining, quality...</p>
+                                    <time class="date" datetime="2024-09-20T00:00:00+02:00">Sep 20, 2024</time>
+                                    <h3 class="title" style="font-size:18px;">Low-Field NMR for Crude Oil Analysis: Harnessing Machine Learning for Predicting Properties</h3>
+                                    <p class="description">In the oil industry, understanding the properties of crude oil is essential for refining, quality control, and maximizing production effi...</p>
                                 </div>
                             </a>
-                        </div>
-                    </div>
+                        </article>
+                    </li>
                     
-                    <div class="col mb-4 " style="min-width: 300px;">
-                        <div class="card h-100">
+                    <li class="col mb-4 " style="min-width: 300px;">
+                        <article class="card h-100">
                             <a href="/blog/how-low-field-NMR-works/">
                                 <img class="post-image"
                                      src="/img/blog/nmr-how-it-works.webp"
                                      alt="How Low-Field NMR Works and How Machine Learning Enhances Sample Characterization"
-                                     width="600" height="400" loading="lazy">
+                                     width="600" height="400" loading="lazy" decoding="async">
                                 <div class="post-content">
-                                    <div class="date">Aug 23, 2023</div>
-                                    <div class="title">How Low-Field NMR Works and How Machine Learning Enhances Sample Characterization</div>
-                                    <p class="description">Nuclear Magnetic Resonance (NMR) is a powerful analytical technique used to determine the molecul...</p>
+                                    <time class="date" datetime="2023-08-23T00:00:00+02:00">Aug 23, 2023</time>
+                                    <h3 class="title" style="font-size:18px;">How Low-Field NMR Works and How Machine Learning Enhances Sample Characterization</h3>
+                                    <p class="description">Nuclear Magnetic Resonance (NMR) is a powerful analytical technique used to determine the molecular structure and composition of various ...</p>
                                 </div>
                             </a>
-                        </div>
-                    </div>
+                        </article>
+                    </li>
                     
-                </div>
+                </ul>
             </div>
         </div>
 
@@ -357,23 +529,23 @@
 </section>
 <!-- Articles Section -->
 <section class="container-fluid  justify-content-center text-center text-white py-5 h-100"
-         style=" background: #303767"><div class="container custom-container d-flex flex-column  justify-content-center align-items-center text-center">
-        <p class="fw-bold pt-5 text-uppercase" style="font-size: 20px; color:#FE900F">DISCOVER WHAT AI-DRIVEN SPECTRAL ANALYSIS CAN DO FOR YOU</p>
-        <h2 class="fw-bold py-5 text-white secondary-headline" style="font-size: 42px;">Contact Us</h2>
+         style=" background: #303767" data-cta-section="engage"><div class="container custom-container d-flex flex-column  justify-content-center align-items-center text-center">
+        <p class="fw-bold pt-5 text-uppercase" style="font-size: 20px; color:#FE900F">REQUEST A FREE FEASIBILITY ANALYSIS</p>
+        <h2 class="fw-bold py-5 text-white secondary-headline" style="font-size: 42px;">Start with fit, then define the pilot</h2>
 
         <p class="px-3" style="font-size: 20px; max-width: 800px;">
-            Connect with our experts to explore tailored solutions for your business challenges. Reach out to our sales team or schedule a demo for the latest insights and updates.
+            Share your analytical challenge with our team. We will assess technical fit, data or sample requirements, and the fastest path to a focused pilot.
         </p>
-        <a href="/contact" class="text-decoration-none pt-5" aria-label="Contact now">
+        <a href="/contact" class="text-decoration-none pt-5" data-cta-location="engage" aria-label="Free feasibility analysis">
             <div class="d-flex justify-content-center align-items-center  gap-0">
                 <button class="btn rounded-pill"
                         style="background:#FE900F; color: white; padding:15px 25px 15px 25px; margin-right:-8px;">
-                    Contact
+                    Free feasibility
                 </button>
                 <img class="d-inline-block" src="/img/group-2-2.png" alt="Group" style="width: 35px; height: 41px;">
                 <button class="btn rounded-pill"
                         style="background:#FE900F; color: white; padding:15px;margin-left:-8px;">
-                    now
+                    analysis
                 </button>
             </div>
         </a>
@@ -413,6 +585,7 @@
         </div>
     </div>
 </footer>
+<script defer src="/js/analytics.js"></script>
 <!-- Footer -->
 
 

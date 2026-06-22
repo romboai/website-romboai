@@ -31,7 +31,9 @@
     <link rel="stylesheet" href="/css/custom/scrollbar.css"><title>Privacy Policy | Rombo AI</title>
     <meta name="description" content="Rombo AI privacy policy: data collected, purposes, retention, user rights, and contact information.">
     <meta name="robots" content="noindex,follow">
-    <link rel="canonical" href="http://localhost:4000/privacy/">
+    <meta name="googlebot" content="noindex,follow">
+    <meta name="bingbot" content="noindex,follow">
+    <link rel="canonical" href="https://rombo.ai/privacy/">
 
     <!-- Open Graph -->
     <meta property="og:site_name" content="Rombo AI">
@@ -39,14 +41,18 @@
     <meta property="og:type" content="website">
     <meta property="og:title" content="Privacy Policy | Rombo AI">
     <meta property="og:description" content="Rombo AI privacy policy: data collected, purposes, retention, user rights, and contact information.">
-    <meta property="og:url" content="http://localhost:4000/privacy/">
-    <meta property="og:image" content="http://localhost:4000/img/og/rombo-ai.png">
+    <meta property="og:url" content="https://rombo.ai/privacy/">
+    <meta property="og:image" content="https://rombo.ai/img/og/rombo-ai.png">
+    <meta property="og:image:alt" content="Privacy Policy | Rombo AI">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Privacy Policy | Rombo AI">
     <meta name="twitter:description" content="Rombo AI privacy policy: data collected, purposes, retention, user rights, and contact information.">
-    <meta name="twitter:image" content="http://localhost:4000/img/og/rombo-ai.png">
+    <meta name="twitter:image" content="https://rombo.ai/img/og/rombo-ai.png">
+    <meta name="twitter:image:alt" content="Privacy Policy | Rombo AI">
 
     <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
     <link rel="icon" type="image/svg" sizes="32x32" href="/img/favicon-32x32.png">
@@ -62,28 +68,107 @@
   "@graph": [
     {
       "@type": "Organization",
-      "@id": "http://localhost:4000/#organization",
+      "@id": "https://rombo.ai/#organization",
       "name": "Rombo AI",
-      "url": "http://localhost:4000/",
+      "legalName": "Rombo AI S.r.l.",
+      "url": "https://rombo.ai/",
       "logo": {
         "@type": "ImageObject",
-        "url": "http://localhost:4000/img/romboai-04-1-2.png"
+        "url": "https://rombo.ai/img/romboai-04-1-2.png",
+        "width": 512,
+        "height": 512
       },
-      "sameAs": [
-        "https://www.linkedin.com/company/rombo-ai/"
-      ]
+      "image": "https://rombo.ai/img/romboai-04-1-2.png",
+      "description": "AI-driven spectral and chemical analysis with Low Field NMR and machine learning.",
+      "foundingDate": "2023",
+      "foundingLocation": {
+        "@type": "Place",
+        "name": "Cagliari, Italy"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Cagliari",
+        "addressRegion": "Sardinia",
+        "addressCountry": "IT"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 39.2293491,
+        "longitude": 9.073249
+      },
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "contactType": "sales",
+          "email": "contact@rombo.ai",
+          "telephone": "+39 352 064 8081",
+          "availableLanguage": ["English", "Italian"],
+          "areaServed": ["EU","Worldwide"]
+        }
+      ],
+      "areaServed": ["EU","Worldwide"],
+      "knowsAbout": ["Low-field NMR","Quantitative NMR","Benchtop NMR","Spectral analysis","Machine learning","Deep learning","Foundation models","Crude oil analysis","Transformer mineral oil analysis","Materials chemistry","AutoML"],
+      "industry": ["Artificial Intelligence","Spectroscopy","Industrial Analytics"],
+      "founder": [{
+          "@type": "Person",
+          "@id": "https://rombo.ai/author/andrea-zanda/#person",
+          "name": "Andrea Zanda",
+          "jobTitle": "CEO & Co-founder",
+          "url": "https://rombo.ai/author/andrea-zanda/","sameAs": ["https://www.linkedin.com/in/andreazanda/"]},{
+          "@type": "Person",
+          "@id": "https://rombo.ai/author/carmine-mattia/#person",
+          "name": "Carmine Mattia",
+          "jobTitle": "CTO & Co-founder",
+          "url": "https://rombo.ai/author/carmine-mattia/"}
+      ],
+      "sameAs": ["https://www.linkedin.com/company/rombo-ai/"]
     },
     {
       "@type": "WebSite",
-      "@id": "http://localhost:4000/#website",
+      "@id": "https://rombo.ai/#website",
       "name": "Rombo AI",
-      "url": "http://localhost:4000/",
-      "publisher": { "@id": "http://localhost:4000/#organization" }
+      "url": "https://rombo.ai/",
+      "inLanguage": "en",
+      "publisher": { "@id": "https://rombo.ai/#organization" },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://rombo.ai/?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://rombo.ai/privacy/#webpage",
+      "url": "https://rombo.ai/privacy/",
+      "name": "Privacy Policy | Rombo AI",
+      "isPartOf": { "@id": "https://rombo.ai/#website" },
+      "inLanguage": "en",
+      "description": "Rombo AI privacy policy: data collected, purposes, retention, user rights, and contact information.",
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://rombo.ai/img/og/rombo-ai.png"
+      },
+      "breadcrumb": { "@id": "https://rombo.ai/privacy/#breadcrumb" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://rombo.ai/privacy/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://rombo.ai/"
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Rombo AI - Privacy Policy",
+          "item": "https://rombo.ai/privacy/"
+        }
+      ]
     }]
 }
 </script>
-
-
 
 </head>
 
@@ -153,8 +238,37 @@
                         </li>
                     </ul>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link menu-item text-white" href="/use-cases/">Use Cases</a>
+                <li class="nav-item dropdown">
+                    <a class="nav-link menu-item text-white dropdown-toggle"
+                       href="#"
+                       id="useCasesDropdown"
+                       role="button"
+                       data-bs-toggle="dropdown"
+                       aria-expanded="false">
+                        Use Cases
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="useCasesDropdown">
+                        <li>
+                            <a class="dropdown-item" href="/use-cases/">
+                                All use cases
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="/use-cases/crude-oil-monitoring/">
+                                Crude Oil Monitoring
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="/use-cases/transformer-oil-monitoring/">
+                                Transformer Oil Monitoring
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="/use-cases/nmr-compound-identification/">
+                                NMR Compound Identification
+                            </a>
+                        </li>
+                    </ul>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link menu-item text-white" href="/blog/">Blog</a>
@@ -163,7 +277,7 @@
                     <a class="nav-link menu-item text-white" href="https://rombo-ai.breezy.hr/" target="_blank" rel="noopener noreferrer">Careers</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link menu-item text-white" href="/contact/">Contact Us</a>
+                    <a class="nav-link menu-item text-white" href="/contact/" data-cta-location="navigation">Free Feasibility</a>
                 </li>
             </ul>
         </div>
@@ -173,10 +287,9 @@
 
       
 <main id="main-content" tabindex="-1">
-  <h1 class="visually-hidden">Rombo AI - Privacy Policy</h1>
 <div class="container-fluid hero-article-section px-0" style="text-align: left">
     <div class="container custom-container py-5">
-        <h2 class="pt-5 post_header">Privacy Policy</h2>
+        <h1 class="pt-5 post_header">Privacy Policy</h1>
         <p class="span text-dark">Informativa ai sensi dell'art. 13 del Codice della Privacy</p>
         <p><b>Ai sensi dell'articolo 13 del codice della D.Lgs. 196/2003, vi rendiamo le seguenti informazioni.</b></p>
         <p class="span2 text-dark">Noi di <span class="span text-dark"  id="sito">www.rombo.ai</span> riteniamo che la privacy dei nostri visitatori
@@ -377,6 +490,7 @@
         </div>
     </div>
 </footer>
+<script defer src="/js/analytics.js"></script>
 <!-- Footer -->
 
 
