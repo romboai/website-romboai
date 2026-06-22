@@ -64,6 +64,14 @@
         'anonymize_ip': true,
         'cookie_flags': 'SameSite=None;Secure'
       });
+
+      // Reusable helper for custom GA4 events (contact funnel, etc.).
+      window.romboTrack = function (eventName, params) {
+        gtag('event', eventName, Object.assign({
+          page_location: location.href,
+          page_path: location.pathname
+        }, params || {}));
+      };
     </script>
     {% endif %}
 

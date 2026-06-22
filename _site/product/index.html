@@ -29,24 +29,30 @@
     <link rel="stylesheet" href="/css/custom/style.css">
     <link rel="stylesheet" href="/css/custom/responsive.css">
     <link rel="stylesheet" href="/css/custom/scrollbar.css"><title>Products | Rombo.ai – Material Intelligence Platform | Rombo AI</title>
-    <meta name="description" content="One platform integrating benchtop NMR and domain-specific AI for industrial material analysis, delivered through structured pilots.">
-    <meta name="robots" content="index,follow">
-    <link rel="canonical" href="http://localhost:4000/product/">
+    <meta name="description" content="One platform integrating benchtop NMR and domain-specific AI for industrial material analysis, starting with a free feasibility analysis and a focused pilot ...">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="bingbot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <link rel="canonical" href="https://rombo.ai/product/">
 
     <!-- Open Graph -->
     <meta property="og:site_name" content="Rombo AI">
     <meta property="og:locale" content="en_US">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Products | Rombo.ai – Material Intelligence Platform">
-    <meta property="og:description" content="One platform integrating benchtop NMR and domain-specific AI for industrial material analysis, delivered through structured pilots.">
-    <meta property="og:url" content="http://localhost:4000/product/">
-    <meta property="og:image" content="http://localhost:4000/img/og/rombo-ai.png">
+    <meta property="og:description" content="One platform integrating benchtop NMR and domain-specific AI for industrial material analysis, starting with a free feasibility analysis and a focused pilot ...">
+    <meta property="og:url" content="https://rombo.ai/product/">
+    <meta property="og:image" content="https://rombo.ai/img/og/rombo-ai.png">
+    <meta property="og:image:alt" content="Products | Rombo.ai – Material Intelligence Platform">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Products | Rombo.ai – Material Intelligence Platform">
-    <meta name="twitter:description" content="One platform integrating benchtop NMR and domain-specific AI for industrial material analysis, delivered through structured pilots.">
-    <meta name="twitter:image" content="http://localhost:4000/img/og/rombo-ai.png">
+    <meta name="twitter:description" content="One platform integrating benchtop NMR and domain-specific AI for industrial material analysis, starting with a free feasibility analysis and a focused pilot ...">
+    <meta name="twitter:image" content="https://rombo.ai/img/og/rombo-ai.png">
+    <meta name="twitter:image:alt" content="Products | Rombo.ai – Material Intelligence Platform">
 
     <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
     <link rel="icon" type="image/svg" sizes="32x32" href="/img/favicon-32x32.png">
@@ -62,36 +68,145 @@
   "@graph": [
     {
       "@type": "Organization",
-      "@id": "http://localhost:4000/#organization",
+      "@id": "https://rombo.ai/#organization",
       "name": "Rombo AI",
-      "url": "http://localhost:4000/",
+      "legalName": "Rombo AI S.r.l.",
+      "url": "https://rombo.ai/",
       "logo": {
         "@type": "ImageObject",
-        "url": "http://localhost:4000/img/romboai-04-1-2.png"
+        "url": "https://rombo.ai/img/romboai-04-1-2.png",
+        "width": 512,
+        "height": 512
       },
-      "sameAs": [
-        "https://www.linkedin.com/company/rombo-ai/"
-      ]
+      "image": "https://rombo.ai/img/romboai-04-1-2.png",
+      "description": "AI-driven spectral and chemical analysis with Low Field NMR and machine learning.",
+      "foundingDate": "2023",
+      "foundingLocation": {
+        "@type": "Place",
+        "name": "Cagliari, Italy"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Cagliari",
+        "addressRegion": "Sardinia",
+        "addressCountry": "IT"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 39.2293491,
+        "longitude": 9.073249
+      },
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "contactType": "sales",
+          "email": "contact@rombo.ai",
+          "telephone": "+39 352 064 8081",
+          "availableLanguage": ["English", "Italian"],
+          "areaServed": ["EU","Worldwide"]
+        }
+      ],
+      "areaServed": ["EU","Worldwide"],
+      "knowsAbout": ["Low-field NMR","Quantitative NMR","Benchtop NMR","Spectral analysis","Machine learning","Deep learning","Foundation models","Crude oil analysis","Transformer mineral oil analysis","Materials chemistry","AutoML"],
+      "industry": ["Artificial Intelligence","Spectroscopy","Industrial Analytics"],
+      "founder": [{
+          "@type": "Person",
+          "@id": "https://rombo.ai/author/andrea-zanda/#person",
+          "name": "Andrea Zanda",
+          "jobTitle": "CEO & Co-founder",
+          "url": "https://rombo.ai/author/andrea-zanda/","sameAs": ["https://www.linkedin.com/in/andreazanda/"]},{
+          "@type": "Person",
+          "@id": "https://rombo.ai/author/carmine-mattia/#person",
+          "name": "Carmine Mattia",
+          "jobTitle": "CTO & Co-founder",
+          "url": "https://rombo.ai/author/carmine-mattia/"}
+      ],
+      "sameAs": ["https://www.linkedin.com/company/rombo-ai/"]
     },
     {
       "@type": "WebSite",
-      "@id": "http://localhost:4000/#website",
+      "@id": "https://rombo.ai/#website",
       "name": "Rombo AI",
-      "url": "http://localhost:4000/",
-      "publisher": { "@id": "http://localhost:4000/#organization" }
+      "url": "https://rombo.ai/",
+      "inLanguage": "en",
+      "publisher": { "@id": "https://rombo.ai/#organization" },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://rombo.ai/?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://rombo.ai/product/#webpage",
+      "url": "https://rombo.ai/product/",
+      "name": "Products | Rombo.ai – Material Intelligence Platform",
+      "isPartOf": { "@id": "https://rombo.ai/#website" },
+      "inLanguage": "en",
+      "description": "One platform integrating benchtop NMR and domain-specific AI for industrial material analysis, starting with a free feasibility analysis and a focused pilot path.",
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://rombo.ai/img/og/rombo-ai.png"
+      },
+      "breadcrumb": { "@id": "https://rombo.ai/product/#breadcrumb" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://rombo.ai/product/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://rombo.ai/"
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Products",
+          "item": "https://rombo.ai/product/"
+        }
+      ]
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://rombo.ai/product/#software",
+      "name": "Material Intelligence Platform",
+      "alternateName": ["NMR AI Analyzer", "Rombo AI Material Intelligence Platform"],
+      "url": "https://rombo.ai/product/",
+      "applicationCategory": "BusinessApplication",
+      "applicationSubCategory": "Industrial AI / Spectroscopy Analytics",
+      "operatingSystem": "Web",
+      "description": "One platform integrating benchtop NMR and domain-specific AI for industrial material analysis, starting with a free feasibility analysis and a focused pilot path.",
+      "brand": { "@id": "https://rombo.ai/#organization" },
+      "manufacturer": { "@id": "https://rombo.ai/#organization" },
+      "publisher": { "@id": "https://rombo.ai/#organization" },
+      "audience": {
+        "@type": "BusinessAudience",
+        "audienceType": "Industrial R&D, QC, Refining, Energy, Petrochemical"
+      },
+      "featureList": [
+        "Benchtop low-field NMR data acquisition and analysis",
+        "AI foundation model pre-trained on millions of quantitative NMR spectra",
+        "Full physio-chemical property estimation in ~15 minutes",
+        "Regime change and drift detection",
+        "AutoML pipeline for custom industrial models",
+        "ASTM / ISO-compliant lab-grade accuracy"
+      ],
+      "keywords": "quantitative NMR, low-field NMR, benchtop NMR, AI, machine learning, crude oil analysis, material intelligence, foundation model"
     },
     {
       "@type": "Product",
-      "@id": "http://localhost:4000/product/#product",
+      "@id": "https://rombo.ai/product/#product",
       "name": "Products",
-      "brand": { "@type": "Brand", "name": "Rombo AI" },
-      "url": "http://localhost:4000/product/",
-      "description": "One platform integrating benchtop NMR and domain-specific AI for industrial material analysis, delivered through structured pilots."
+      "brand": { "@id": "https://rombo.ai/#organization" },
+      "manufacturer": { "@id": "https://rombo.ai/#organization" },
+      "url": "https://rombo.ai/product/",
+      "category": "Industrial AI / NMR Analysis",
+      "description": "One platform integrating benchtop NMR and domain-specific AI for industrial material analysis, starting with a free feasibility analysis and a focused pilot path.",
+      "image": "https://rombo.ai/img/og/rombo-ai.png"
     }]
 }
 </script>
-
-
 
 </head>
 
@@ -159,8 +274,37 @@
                     </ul>
                 </li>
 
-                <li class="nav-item">
-                    <a class="nav-link menu-item text-white" href="/use-cases/">Use Cases</a>
+                <li class="nav-item dropdown">
+                    <a class="nav-link menu-item text-white dropdown-toggle"
+                       href="#"
+                       id="useCasesDropdown"
+                       role="button"
+                       data-bs-toggle="dropdown"
+                       aria-expanded="false">
+                        Use Cases
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="useCasesDropdown">
+                        <li>
+                            <a class="dropdown-item" href="/use-cases/">
+                                All use cases
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="/use-cases/crude-oil-monitoring/">
+                                Crude Oil Monitoring
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="/use-cases/transformer-oil-monitoring/">
+                                Transformer Oil Monitoring
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="/use-cases/nmr-compound-identification/">
+                                NMR Compound Identification
+                            </a>
+                        </li>
+                    </ul>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link menu-item text-white" href="/blog/">Blog</a>
@@ -169,7 +313,7 @@
                     <a class="nav-link menu-item text-white" href="https://rombo-ai.breezy.hr/" target="_blank" rel="noopener noreferrer">Careers</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link menu-item text-white" href="/contact/">Contact Us</a>
+                    <a class="nav-link menu-item text-white" href="/contact/" data-cta-location="navigation">Free Feasibility</a>
                 </li>
              
             </ul>
@@ -181,11 +325,10 @@
 
 
 <main id="main-content" tabindex="-1" class="page-products">
-  <h1 class="visually-hidden">Products</h1>
 
 <!-- Hero Section -->
 <div class="container-fluid hero-section">
-  <video class="hero-video" autoplay muted loop playsinline controlslist="nodownload" data-desktop-only="true">
+  <video class="hero-video" autoplay muted loop playsinline controlslist="nodownload" data-desktop-only="true" preload="none">
     <!-- Desktop-only: we set src via JS to prevent mobile from downloading the mp4 -->
     <source data-src="/img/hero_back_play.mp4" type="video/mp4"/>
     <track kind="captions" label="No dialogue" default>
@@ -197,13 +340,12 @@
     <div class="row m-0 w-100 h-100">
       <div class="z-1 col-12 col-lg-6 px-3 px-md-4 d-flex align-items-center titolo-1">
         <div class="products-hero-copy">
-          <span class="titolo-1-span text-highlight">
+          <h1 class="titolo-1-span text-highlight m-0" style="display:block;">
             AI Solutions for Advanced Industrial Material Analysis
-            <br/>
-          </span>
-          <span class="titolo-1-span2 text-highlight">
+          </h1>
+          <p class="titolo-1-span2 text-highlight">
             Replace slow laboratory snapshots with continuous, explainable material intelligence for industrial operations — powered by the first foundation model for quantitative NMR, pre-trained on millions of spectra
-          </span>
+          </p>
         </div>
       </div>
     </div>
@@ -258,8 +400,8 @@
           In industrial contexts, while process indicators may look stable to QC operators, the chemical change and material shift may already be happening. The problem is not the measurement — it's the lack of early signals, with critical deviations leading to significant production loss.
         </p>
         <div class="mt-4 d-flex flex-wrap gap-3">
-          <a class="button text-decoration-none " href="/contact/" style="width:auto; display:inline-flex;">
-  <span class="text-container"><span class="button-text">Request a pilot</span></span>
+          <a class="button text-decoration-none " href="/contact/" style="width:auto; display:inline-flex;" data-cta-location="product_intro">
+  <span class="text-container"><span class="button-text">Request a free feasibility analysis</span></span>
 </a>
 
 
@@ -321,7 +463,6 @@
       <div class="col-12 col-lg-5 pe-lg-5">
         <div class="products-visual products-visual--compact">
   <img src="/img/nmr-ai-analyzer.png" class="img-fluid " alt="NMR AI Analyzer with Nanalysis-60 benchtop spectrometer" loading="lazy" />
-
 </div>
 
 
@@ -468,8 +609,8 @@
         <div class="p-3 bg-white border rounded-4 mt-3" style="max-width: 75ch;">
           <div class="fw-bold">How it's delivered</div>
           <div class="text-muted" style="font-size: 14px;">
-            Best for technical and R&amp;D teams. We typically start with a <strong>structured pilot</strong> to define objectives, validate on your experimental data,
-            and agree on success metrics before scaling to industrial workflows.
+            Best for technical and R&amp;D teams. We start with a <strong>free feasibility analysis</strong> to assess fit, data or sample requirements,
+            and validation criteria before defining a structured pilot.
           </div>
         </div>
       </div>
@@ -480,51 +621,50 @@
 <section class="container-fluid justify-content-center text-center text-white py-5 h-100" style="background:#303767;">
   <div class="container custom_container d-flex flex-column justify-content-center align-items-center text-center">
     <p class="fw-bold pt-2 text-uppercase" style="font-size: 14px; color:#FE900F; letter-spacing:.06em;">How we work</p>
-    <h2 class="fw-bold py-3 text-white secondary-headline" style="font-size: 42px;">Run a fast pilot. Prove value on your data.</h2>
+    <h2 class="fw-bold py-3 text-white secondary-headline" style="font-size: 42px;">Start with a free feasibility analysis.</h2>
     <p class="px-3 text-white" style="font-size: 16px; max-width: 900px;">
-      We start with a structured pilot: clear objectives, agreed success metrics, and validation on your experimental data.
-      You get a working solution and a roadmap to scale into operations.
+      We first assess the analytical problem, available data or samples, and target decision. If there is a strong fit, we define a focused pilot with clear objectives, success metrics, and a roadmap to scale.
     </p>
 
     <div class="row g-3 w-100 mt-4" style="max-width: 1000px;">
       <div class="col-12 col-md-6">
         <div class="p-3 rounded-4 h-100" style="background: rgba(255,255,255,0.10); border: 1px solid rgba(255,255,255,0.16); text-align:left;">
-          <div class="fw-bold text-white">️Define the problem</div>
-          <div class="text-white-50" style="font-size: 14px;">What are you trying to predict, classify or detect?</div>
+          <div class="fw-bold text-white">Share the challenge</div>
+          <div class="text-white-50" style="font-size: 14px;">What sample type, workflow, and decision do you need to improve?</div>
         </div>
       </div>
       <div class="col-12 col-md-6">
         <div class="p-3 rounded-4 h-100" style="background: rgba(255,255,255,0.10); border: 1px solid rgba(255,255,255,0.16); text-align:left;">
-          <div class="fw-bold text-white"> Validate on your data </div>
-          <div class="text-white-50" style="font-size: 14px;">We work with your experimental datasets to build trustable models.</div>
+          <div class="fw-bold text-white">Assess feasibility</div>
+          <div class="text-white-50" style="font-size: 14px;">We review technical fit, data quality, sample requirements, and validation constraints.</div>
         </div>
       </div>
       <div class="col-12 col-md-6">
         <div class="p-3 rounded-4 h-100" style="background: rgba(255,255,255,0.10); border: 1px solid rgba(255,255,255,0.16); text-align:left;">
-          <div class="fw-bold text-white"> Get measurable results </div>
-          <div class="text-white-50" style="font-size: 14px;">Accuracy, reproducibility, and insight – documented and reproducible.</div>
+          <div class="fw-bold text-white">Define the pilot</div>
+          <div class="text-white-50" style="font-size: 14px;">If the fit is strong, we propose objectives, metrics, timeline, and expected outputs.</div>
         </div>
       </div>
       <div class="col-12 col-md-6">
         <div class="p-3 rounded-4 h-100" style="background: rgba(255,255,255,0.10); border: 1px solid rgba(255,255,255,0.16); text-align:left;">
-          <div class="fw-bold text-white"> Plan scale-up</div>
-          <div class="text-white-50" style="font-size: 14px;">If the pilot succeeds, we support integration and production-readiness.</div>
+          <div class="fw-bold text-white">Plan scale-up</div>
+          <div class="text-white-50" style="font-size: 14px;">After validation, we support integration and production-readiness.</div>
         </div>
       </div>
     </div>
 
     <div class="text-white-50 mt-3" style="font-size: 14px; max-width: 1000px;">
-      <strong class="text-white">What you get:</strong> Full report with metrics, traceability, and validation results. Clear decision support for go/no-go. Plan for scale-up to other sites or datasets.
+      <strong class="text-white">What you get first:</strong> A practical feasibility view: fit, data or sample needs, validation criteria, and a clear recommendation for the next step.
     </div>
 
-    <a href="/contact/" class="text-decoration-none pt-4" aria-label="Request a pilot">
+    <a href="/contact/" class="text-decoration-none pt-4" data-cta-location="product_how_we_work" aria-label="Request a free feasibility analysis">
       <div class="d-flex justify-content-center align-items-center gap-0">
         <button class="btn rounded-pill" style="background:#FE900F; color: white; padding:15px 25px; margin-right:-8px;">
-          Request
+          Free feasibility
         </button>
         <img class="d-inline-block" src="/img/group-2-2.png" alt="Group" style="width: 35px; height: 41px;" />
         <button class="btn rounded-pill" style="background:#FE900F; color: white; padding:15px; margin-left:-8px;">
-          a pilot
+          analysis
         </button>
       </div>
     </a>
@@ -567,6 +707,7 @@
         </div>
     </div>
 </footer>
+<script defer src="/js/analytics.js"></script>
 <!-- Footer -->
 
 

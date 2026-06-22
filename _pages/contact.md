@@ -1,9 +1,9 @@
 ---
 layout: contact
-title: "Contact Us"
+title: "Free Feasibility Analysis"
 permalink: /contact/
-seo_title: "Contact Rombo AI | Book a demo"
-description: "Contact Rombo AI to request a demo or discuss a use case. We’ll reply quickly and schedule the next step with your team."
+seo_title: "Free Feasibility Analysis | Rombo AI"
+description: "Request a free feasibility analysis with Rombo AI. Share your analytical challenge and we will assess technical fit, data or sample requirements, and the path to a focused pilot."
 lang: en
 ---
 

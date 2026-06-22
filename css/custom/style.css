@@ -37,7 +37,7 @@ body {
 /* Hero headline: fluid sizing instead of hard-coded breakpoints */
 .text-responsive {
     font-size: clamp(32px, 4.2vw, 64px);
-    line-height: 1.08;
+    line-height: 1.35;
     letter-spacing: -0.02em;
 }
 
@@ -1532,7 +1532,9 @@ label.ckb input:checked ~ span.checkmark::after {
     /*background: linear-gradient(40deg, #242b5e 29.85%, #050533 93.79%);*/
     /*background: linear-gradient(79deg, #242b5e 29.85%, #050533 93.79%);*/
     background: #2F3666;
-    padding: 5px;
+    padding: 6px 8px;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
 }
 
 .hero-contact-section {

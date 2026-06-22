@@ -59,7 +59,7 @@ markdown_content: |
 
   With our solution, we are bridging this gap — helping refineries turn crude oil analysis from a reactive laboratory analysis procedure into a proactive competitive advantage.
 
-  **Discover more about our solutions and how we can help you innovate by [contacting us](/contact/){: .button}**
+  **Request a free feasibility analysis to understand whether Rombo AI fits your crude oil workflow: [start here](/contact/){: .button}**
 
 author: "Silvia Bongiovanni"
 excerpt: "The Oil & Gas industry is embracing AI for crude oil analysis. Discover how Rombo AI combines NMR spectroscopy with machine learning to deliver real-time, precise analysis that transforms traditional laboratory bottlenecks into competitive advantages."

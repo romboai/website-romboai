@@ -3,7 +3,7 @@ layout: products
 title: "Products"
 permalink: /product/
 seo_title: "Products | Rombo.ai – Material Intelligence Platform"
-description: "One platform integrating benchtop NMR and domain-specific AI for industrial material analysis, delivered through structured pilots."
+description: "One platform integrating benchtop NMR and domain-specific AI for industrial material analysis, starting with a free feasibility analysis and a focused pilot path."
 lang: en
 
 hero_product_title: "AI Solutions for Advanced Industrial Material Analysis"
@@ -17,7 +17,7 @@ products:
     link: "/product/#nmr-ai-analysis-tool"
     image: "/img/client-results.jpg"
   - title: "AutoML for material analysis"
-    badge: "Advanced module (pilot-driven)"
+    badge: "Advanced module (feasibility-led)"
     description: "Build and validate domain-specific AI models: feature selection, training/validation, performance comparison, and adaptation to new datasets."
     link: "/product/#automl-materials"
     image: "/img/framework.png"
@@ -43,7 +43,7 @@ products:
           In industrial contexts, while process indicators may look stable to QC operators, the chemical change and material shift may already be happening. The problem is not the measurement — it's the lack of early signals, with critical deviations leading to significant production loss.
         </p>
         <div class="mt-4 d-flex flex-wrap gap-3">
-          {% include ui/button.html href="/contact/" label="Request a pilot" %}
+          {% include ui/button.html href="/contact/" label="Request a free feasibility analysis" location="product_intro" %}
         </div>
       </div>
       <div class="col-12 col-lg-5">
@@ -225,8 +225,8 @@ products:
         <div class="p-3 bg-white border rounded-4 mt-3" style="max-width: 75ch;">
           <div class="fw-bold">How it's delivered</div>
           <div class="text-muted" style="font-size: 14px;">
-            Best for technical and R&amp;D teams. We typically start with a <strong>structured pilot</strong> to define objectives, validate on your experimental data,
-            and agree on success metrics before scaling to industrial workflows.
+            Best for technical and R&amp;D teams. We start with a <strong>free feasibility analysis</strong> to assess fit, data or sample requirements,
+            and validation criteria before defining a structured pilot.
           </div>
         </div>
       </div>
@@ -237,51 +237,50 @@ products:
 <section class="container-fluid justify-content-center text-center text-white py-5 h-100" style="background:#303767;">
   <div class="container custom_container d-flex flex-column justify-content-center align-items-center text-center">
     <p class="fw-bold pt-2 text-uppercase" style="font-size: 14px; color:#FE900F; letter-spacing:.06em;">How we work</p>
-    <h2 class="fw-bold py-3 text-white secondary-headline" style="font-size: 42px;">Run a fast pilot. Prove value on your data.</h2>
+    <h2 class="fw-bold py-3 text-white secondary-headline" style="font-size: 42px;">Start with a free feasibility analysis.</h2>
     <p class="px-3 text-white" style="font-size: 16px; max-width: 900px;">
-      We start with a structured pilot: clear objectives, agreed success metrics, and validation on your experimental data.
-      You get a working solution and a roadmap to scale into operations.
+      We first assess the analytical problem, available data or samples, and target decision. If there is a strong fit, we define a focused pilot with clear objectives, success metrics, and a roadmap to scale.
     </p>
 
     <div class="row g-3 w-100 mt-4" style="max-width: 1000px;">
       <div class="col-12 col-md-6">
         <div class="p-3 rounded-4 h-100" style="background: rgba(255,255,255,0.10); border: 1px solid rgba(255,255,255,0.16); text-align:left;">
-          <div class="fw-bold text-white">️Define the problem</div>
-          <div class="text-white-50" style="font-size: 14px;">What are you trying to predict, classify or detect?</div>
+          <div class="fw-bold text-white">Share the challenge</div>
+          <div class="text-white-50" style="font-size: 14px;">What sample type, workflow, and decision do you need to improve?</div>
         </div>
       </div>
       <div class="col-12 col-md-6">
         <div class="p-3 rounded-4 h-100" style="background: rgba(255,255,255,0.10); border: 1px solid rgba(255,255,255,0.16); text-align:left;">
-          <div class="fw-bold text-white"> Validate on your data </div>
-          <div class="text-white-50" style="font-size: 14px;">We work with your experimental datasets to build trustable models.</div>
+          <div class="fw-bold text-white">Assess feasibility</div>
+          <div class="text-white-50" style="font-size: 14px;">We review technical fit, data quality, sample requirements, and validation constraints.</div>
         </div>
       </div>
       <div class="col-12 col-md-6">
         <div class="p-3 rounded-4 h-100" style="background: rgba(255,255,255,0.10); border: 1px solid rgba(255,255,255,0.16); text-align:left;">
-          <div class="fw-bold text-white"> Get measurable results </div>
-          <div class="text-white-50" style="font-size: 14px;">Accuracy, reproducibility, and insight – documented and reproducible.</div>
+          <div class="fw-bold text-white">Define the pilot</div>
+          <div class="text-white-50" style="font-size: 14px;">If the fit is strong, we propose objectives, metrics, timeline, and expected outputs.</div>
         </div>
       </div>
       <div class="col-12 col-md-6">
         <div class="p-3 rounded-4 h-100" style="background: rgba(255,255,255,0.10); border: 1px solid rgba(255,255,255,0.16); text-align:left;">
-          <div class="fw-bold text-white"> Plan scale-up</div>
-          <div class="text-white-50" style="font-size: 14px;">If the pilot succeeds, we support integration and production-readiness.</div>
+          <div class="fw-bold text-white">Plan scale-up</div>
+          <div class="text-white-50" style="font-size: 14px;">After validation, we support integration and production-readiness.</div>
         </div>
       </div>
     </div>
 
     <div class="text-white-50 mt-3" style="font-size: 14px; max-width: 1000px;">
-      <strong class="text-white">What you get:</strong> Full report with metrics, traceability, and validation results. Clear decision support for go/no-go. Plan for scale-up to other sites or datasets.
+      <strong class="text-white">What you get first:</strong> A practical feasibility view: fit, data or sample needs, validation criteria, and a clear recommendation for the next step.
     </div>
 
-    <a href="{{ '/contact/' | relative_url }}" class="text-decoration-none pt-4" aria-label="Request a pilot">
+    <a href="{{ '/contact/' | relative_url }}" class="text-decoration-none pt-4" data-cta-location="product_how_we_work" aria-label="Request a free feasibility analysis">
       <div class="d-flex justify-content-center align-items-center gap-0">
         <button class="btn rounded-pill" style="background:#FE900F; color: white; padding:15px 25px; margin-right:-8px;">
-          Request
+          Free feasibility
         </button>
         <img class="d-inline-block" src="{{ '/img/group-2-2.png' | relative_url }}" alt="Group" style="width: 35px; height: 41px;">
         <button class="btn rounded-pill" style="background:#FE900F; color: white; padding:15px; margin-left:-8px;">
-          a pilot
+          analysis
         </button>
       </div>
     </a>

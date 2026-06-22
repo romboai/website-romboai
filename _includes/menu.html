@@ -46,8 +46,37 @@
                     </ul>
                 </li>
 
-                <li class="nav-item">
-                    <a class="nav-link menu-item text-white" href="{{ site.baseurl }}/use-cases/">Use Cases</a>
+                <li class="nav-item dropdown">
+                    <a class="nav-link menu-item text-white dropdown-toggle"
+                       href="#"
+                       id="useCasesDropdown"
+                       role="button"
+                       data-bs-toggle="dropdown"
+                       aria-expanded="false">
+                        Use Cases
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="useCasesDropdown">
+                        <li>
+                            <a class="dropdown-item" href="{{ site.baseurl }}/use-cases/">
+                                All use cases
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="{{ site.baseurl }}/use-cases/crude-oil-monitoring/">
+                                Crude Oil Monitoring
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="{{ site.baseurl }}/use-cases/transformer-oil-monitoring/">
+                                Transformer Oil Monitoring
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="{{ site.baseurl }}/use-cases/nmr-compound-identification/">
+                                NMR Compound Identification
+                            </a>
+                        </li>
+                    </ul>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link menu-item text-white" href="{{ site.baseurl }}/blog/">Blog</a>
@@ -56,7 +85,7 @@
                     <a class="nav-link menu-item text-white" href="https://rombo-ai.breezy.hr/" target="_blank" rel="noopener noreferrer">Careers</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link menu-item text-white" href="{{ site.baseurl }}/contact/">Contact Us</a>
+                    <a class="nav-link menu-item text-white" href="{{ site.baseurl }}/contact/" data-cta-location="navigation">Free Feasibility</a>
                 </li>
              
             </ul>

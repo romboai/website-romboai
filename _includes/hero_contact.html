@@ -12,15 +12,15 @@
     <div class="z-1 container custom-container position-relative py-5">
         <div class="row justify-content-center align-items-start py-5">
             <div class="col-md-6 pt-5">
-                <h1 class="contact-us py-3 m-0"><span class="text-highlight">Contact Us</span></h1>
+                <h1 class="contact-us py-3 m-0"><span class="text-highlight">Free Feasibility Analysis</span></h1>
                 <p class="label text-white" style="font-size: 20px; padding-right: 100px;">
-                    <span class="text-highlight">Connect with our experts to explore tailored solutions for your business challenges. Reach out to our sales team or schedule a demo for the latest insights and updates.</span>
+                    <span class="text-highlight">Share your analytical challenge. We will assess technical fit, data or sample requirements, and the fastest path to a focused pilot.</span>
                 </p>
             </div>
             <div class="col-md-6 my-5 position-relative ">
                 <div class="bg-white border border-secondary rounded-3 shadow p-4 text-start text-dark">
                     <div id="contact-heading" class="mb-4 text-left">
-                        <h2 class="contact-secondary-headline m-0">Get In Touch</h2>
+                        <h2 class="contact-secondary-headline m-0">Request your free analysis</h2>
                     </div>
                     <form id="contact-form" data-toggle="validator" action="https://app.99inbound.com/api/e/TfLbh_oL"
                           method="POST">
@@ -73,10 +73,10 @@
                             </div>
                         </div>
                         <div class="form-group mb-3">
-                            <label for="query" class="label">Message</label>
+                            <label for="query" class="label">Analytical challenge</label>
                             <textarea required name="query" id="query"
                                       class="form-control bg-light border-0 border-secondary rounded-1"
-                                      placeholder="Type your message here..."></textarea>
+                                      placeholder="Tell us about your sample type, current workflow, target decision, and validation needs."></textarea>
                         </div>
                         <div class="row justify-content-center align-items-center">
                             <div class="col-md-8">
@@ -92,7 +92,7 @@
                             </div>
                             <div class="col-md-4 text-md-end text-center">
                                 <button type="submit" class="btn rounded-pill px-4 py-2 label"
-                                        style="background:#FE900F; color: white; padding:16px;">Send email
+                                        style="background:#FE900F; color: white; padding:16px;">Request analysis
                                 </button>
                             </div>
                         </div>
@@ -123,7 +123,6 @@ document.addEventListener('DOMContentLoaded', function() {
   var isFromContact = referrer && referrer.indexOf('/contact') !== -1;
 
   if (isStatusOk && !isFromContact && form && parent) {
-    form.style.display = 'none';
     if (heading) heading.style.display = 'none';
 
     var msgDiv = document.createElement('section');
@@ -142,9 +141,9 @@ document.addEventListener('DOMContentLoaded', function() {
             </svg>
             </div>
             <h2 class="h3 mb-3 fw-bold text-success">
-            Thank you for contacting us!<br>
+            Thank you for requesting a free feasibility analysis!<br>
             <span style="display: block; font-weight: normal; margin-top: 0.75rem; color: black; font-size: 1.2rem;">
-                Your message has been received successfully.
+                Your request has been received successfully.
             </span>
             <span style="display: block; font-weight: normal; margin-top: 0.3rem; color: black; font-size: 1rem; font-style: italic;">
                 You will be redirected to our booking page shortly.
@@ -153,7 +152,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 Redirecting in 3 seconds...
             </span>
             <span style="display: block; font-weight: normal; margin-top: 0.3rem; color: black; font-size: 1rem; font-style: italic;">
-                If not, please click the <strong>Book a Meeting</strong> button below.
+                If not, please click the <strong>Book a feasibility call</strong> button below.
             </span>
             </h2>
 
@@ -164,7 +163,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true" class="me-2">
                 <path d="M8 12H16M12 8V16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
-                Book a Meeting
+                Book a feasibility call
             </a>
             </div>
         </div>
