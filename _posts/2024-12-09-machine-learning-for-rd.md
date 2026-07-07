@@ -50,5 +50,6 @@ markdown_content: |
   - **Predictive Analysis**: Accurate prediction of chemical properties from spectroscopic data, thereby improving data-driven decision-making. 
 
 author: "Silvia Bongiovanni"
+description: "SpectraML helps R&D teams adopt machine learning faster with a low-code framework for spectral data and model deployment."
 excerpt: "SpectraML breaks down barriers to Machine Learning adoption with its low-code/no-code approach. Designed for R&D teams, it simplifies data preparation, model training, and deployment—enabling faster innovation and the creation of custom solutions tailored to your needs."
 ---

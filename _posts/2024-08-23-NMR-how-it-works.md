@@ -46,5 +46,6 @@ markdown_content: |
 
 
 author: "Andrea Zanda"  
+description: "Learn how low-field NMR works and how machine learning enhances sample characterization for industrial teams."
 excerpt: "Nuclear Magnetic Resonance (NMR) is a powerful analytical technique used to determine the molecular structure and composition of various substances. By combining with Machine Learning techniques, you can transform it into a Super NMR with additional capabilities."
 ---

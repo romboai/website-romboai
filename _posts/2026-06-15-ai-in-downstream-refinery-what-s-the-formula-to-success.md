@@ -7,6 +7,7 @@ layout: article
 image: /img/blog/ai-downstream-refinery-2026-06-15.jpg
 image_alt: AI-generated Image
 author: 'Silvia Bongiovanni [BD Representative, Rombo AI]'
+description: "Where should refiners start with AI? Explore how downstream teams can adopt AI with clear operational value and practical impact."
 excerpt: |-
   Where should refiners start if they want AI to deliver real operational value? If AI isn't the answer to every challenge, where can it create the greatest impact?
   In this month's article, we want to explore these questions and discuss what it takes to successfully adopt AI in downstream refining.

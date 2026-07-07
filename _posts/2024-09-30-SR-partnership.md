@@ -2,6 +2,8 @@
 title: >-
   Esplorazione delle Potenzialità della Spettroscopia NMR nel Settore delle
   Energie Rinnovabili
+seo_title: "Sardegna Ricerche NMR Partnership | Rombo AI"
+description: "Partnership con Sardegna Ricerche per esplorare il potenziale della spettroscopia NMR nelle energie rinnovabili."
 date: 2024-09-30T00:00:00.000Z
 permalink: /blog/sardegna-ricerche-partnership/
 layout: article

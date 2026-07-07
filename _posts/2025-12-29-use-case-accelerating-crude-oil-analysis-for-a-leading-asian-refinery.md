@@ -7,6 +7,7 @@ layout: article
 image: /img/1764170441294.jpeg
 image_alt: crude assay refinery
 author: Silvia Bongiovanni
+description: "How Rombo AI helped a leading Asian refinery accelerate crude oil analysis with NMR and AI for faster purchasing and blending decisions."
 excerpt: >-
   At one of Asia’s largest integrated energy companies, refinery R&D teams
   evaluate hundreds of crude oil feedstocks every day to support purchasing,

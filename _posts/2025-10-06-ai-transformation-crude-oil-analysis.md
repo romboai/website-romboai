@@ -63,5 +63,6 @@ markdown_content: |
   **Request a free feasibility analysis to understand whether Rombo AI fits your crude oil workflow: [start here](/contact/){: .button}**
 
 author: "Silvia Bongiovanni"
+description: "How Rombo AI combines NMR and machine learning to turn crude oil analysis from lab bottlenecks into real-time intelligence."
 excerpt: "The Oil & Gas industry is embracing AI for crude oil analysis. Discover how Rombo AI combines NMR spectroscopy with machine learning to deliver real-time, precise analysis that transforms traditional laboratory bottlenecks into competitive advantages."
 ---

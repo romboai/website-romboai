@@ -7,6 +7,7 @@ layout: article
 image: /img/1761645962162.jpeg
 image_alt: Image generated with AI
 author: Andrea Zanda
+description: "From calm technology to agentic AI: how intelligent systems can bring focus back to spectroscopy workflows."
 excerpt: >-
   Tracing a personal and technological journey from Mark Weiser’s vision of
   ubiquitous, calm computing to today’s emergence of generative AI and agentic
