@@ -3,7 +3,7 @@ layout: use-cases
 title: "Crude Oil Monitoring"
 permalink: /use-cases/crude-oil-monitoring/
 seo_title: "Crude Oil Monitoring for Refineries | Rombo AI"
-description: "Rombo AI helps refinery teams gain rapid, reliable insight into incoming crudes and blends, reducing analysis time, operational risk, and decisions based on incomplete data."
+description: "Rombo AI helps refinery teams characterize incoming crudes and blends faster, reducing operational risk and decisions based on incomplete data."
 lang: en
 og_image: /img/usecase-crude-oil.png
 og_image_alt: "Crude oil monitoring for refineries"

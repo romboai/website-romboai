@@ -1,9 +1,10 @@
 ---
 title: 'Machine Learning Applications in Materials Chemistry: The Rombo AI Approach '
+seo_title: "Machine Learning in Materials Chemistry | Rombo AI"
 date: 2026-01-29T01:00:00.000Z
 permalink: /blog/usecase-material-intelligence-platform
 layout: article
-image: /img/Screenshot 2026-01-29 at 14.42.03.png
+image: /img/blog/material-intelligence-platform-2026-01-29.jpg
 image_alt: crude assay refinery
 author: Silvia Bongiovanni
 excerpt: 'Machine learning is turning NMR into a predictive tool for industrial analytics. By applying AI directly to raw NMR spectra, complex mixtures can be analyzed faster and more reliably, overcoming signal overlap and shift variability. Platforms like Rombo AI enable automated, decision-ready material insights at industrial scale.'

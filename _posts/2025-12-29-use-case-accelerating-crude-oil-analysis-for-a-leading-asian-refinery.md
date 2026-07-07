@@ -1,5 +1,6 @@
 ---
 title: 'Use Case: Accelerating Crude Oil Analysis for a Leading Asian Refinery'
+seo_title: "Crude Oil Analysis Use Case | Rombo AI"
 date: 2025-12-29T01:00:00.000Z
 permalink: /blog/usecase-crudeoil-refinery
 layout: article
@@ -40,7 +41,7 @@ markdown_content: >-
   variability. 
 
 
-  ![image](https://media.licdn.com/dms/image/v2/D5612AQGxLd5aE-puyA/article-inline_image-shrink_1000_1488/B56ZrA5w0IJQAU-/0/1764172959928?e=1767830400&v=beta&t=DaZg-0QSyS0U05igz5B3Q73cmgFZETQNBf-c4_IyW3s)
+  ![API gravity fluctuations over time](/img/1764170441294.jpeg)
 
   *Image 1: Example of API Fluctuations over time. Property of Rombo AI.
 

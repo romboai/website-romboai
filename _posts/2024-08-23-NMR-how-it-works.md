@@ -2,6 +2,7 @@
 layout: article
 permalink: /blog/how-low-field-NMR-works/
 title: "How Low-Field NMR Works and How Machine Learning Enhances Sample Characterization"
+seo_title: "How Low-Field NMR Works | Rombo AI"
 date: "2023-08-23"
 image: "img/blog/nmr-how-it-works.webp"
 markdown_content: |

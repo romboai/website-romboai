@@ -2,8 +2,8 @@
 layout: products
 title: "Products"
 permalink: /product/
-seo_title: "Products | Rombo.ai – Material Intelligence Platform"
-description: "One platform integrating benchtop NMR and domain-specific AI for industrial material analysis, starting with a free feasibility analysis and a focused pilot path."
+seo_title: "Material Intelligence Platform | Rombo AI"
+description: "Benchtop NMR and domain-specific AI for industrial material analysis, starting with a free feasibility analysis and a focused pilot path."
 lang: en
 
 hero_product_title: "AI Solutions for Advanced Industrial Material Analysis"

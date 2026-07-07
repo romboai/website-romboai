@@ -4,6 +4,8 @@ title: "NMR Spectroscopy Powered by AI – AI for Chemical Optimization | Rombo 
 description: "Unlocking the power of NMR with AI. Visit Rombo AI today. Revolutionizing Chemical Analysis with AI and NMR."
 permalink: /landing-nmr-ai.html
 seo_title: "NMR Spectroscopy Powered by AI | Rombo AI"
+robots: "noindex,follow"
+sitemap: false
 lang: en
 
 hero_home_title: "NMR Spectroscopy Powered by AI"

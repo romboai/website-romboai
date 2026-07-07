@@ -2,8 +2,8 @@
 layout: use-cases
 title: "Transformer Oil Monitoring"
 permalink: /use-cases/transformer-oil-monitoring/
-seo_title: "Transformer Oil Monitoring for Predictive Maintenance | Rombo AI"
-description: "Rombo AI helps utilities and asset teams turn transformer oil analysis into faster decisions for asset integrity, predictive maintenance, and downtime risk reduction."
+seo_title: "Transformer Oil Monitoring | Rombo AI"
+description: "Turn transformer oil analysis into faster asset integrity, predictive maintenance, and downtime risk reduction with Rombo AI."
 lang: en
 og_image: /img/usecase-transformer-oil.png
 og_image_alt: "Transformer oil monitoring for energy asset integrity"

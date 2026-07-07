@@ -1,5 +1,6 @@
 ---
 title: 'The Future Is Agentic: How AI Agents Bring Back Calm Technology'
+seo_title: "Agentic AI for Spectroscopy | Rombo AI"
 date: 2025-10-28T01:00:00.000Z
 permalink: /blog/the-future-is-agentic/
 layout: article

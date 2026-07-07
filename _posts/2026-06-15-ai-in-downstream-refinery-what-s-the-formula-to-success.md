@@ -1,9 +1,10 @@
 ---
 title: 'AI in Downstream Refinery: What’s the Formula to Success? '
+seo_title: "AI in Downstream Refinery | Rombo AI"
 date: 2026-06-14T22:00:00.000Z
 permalink: /blog/article-AI-in-downstream-strategy
 layout: article
-image: /img/Screenshot 2026-06-15 at 09.16.36.png
+image: /img/blog/ai-downstream-refinery-2026-06-15.jpg
 image_alt: AI-generated Image
 author: 'Silvia Bongiovanni [BD Representative, Rombo AI]'
 excerpt: |-

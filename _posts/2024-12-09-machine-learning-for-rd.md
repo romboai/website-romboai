@@ -2,6 +2,7 @@
 layout: article
 permalink: /blog/SpectraML-a-framework-designerd-for-rd-teams/
 title: "SpectraML: A framework designed for R&D teams"
+seo_title: "SpectraML for R&D Teams | Rombo AI"
 date: "2024-12-09"
 image: "img/blog/spectraml-rd-teams.jpg"
 image_alt: "SpectraML: a framework designed for R&D teams"

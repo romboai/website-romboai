@@ -2,6 +2,7 @@
 layout: article
 permalink: /blog/ml-for-crude-oil/
 title: "Low-Field NMR for Crude Oil Analysis: Harnessing Machine Learning for Predicting Properties"
+seo_title: "Low-Field NMR for Crude Oil Analysis | Rombo AI"
 date: "2024-09-20"
 image: "img/blog/ml-for-crude.webp"
 markdown_content: |

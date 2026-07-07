@@ -2,6 +2,7 @@
 layout: article
 permalink: /blog/ai-transformation-crude-oil-analysis/
 title: "The AI Transformation of Crude Oil Analysis: From Laboratory Bottlenecks to Real-Time Intelligence"
+seo_title: "AI Transformation of Crude Oil Analysis | Rombo AI"
 date: "2025-10-06"
 image: "img/blog/ai-transformation-crude-oil-analysis.jpg"
 image_alt: "Crude oil analysis: AI transformation"

@@ -2,8 +2,8 @@
 layout: use-cases
 title: "AI-Powered NMR Compound Identification"
 permalink: /use-cases/nmr-compound-identification/
-seo_title: "AI-Powered NMR Compound Identification for Pharma R&D | Rombo AI"
-description: "Rombo AI accelerates NMR compound identification for pharma R&D with an expert-assisted workflow for candidate ranking, confidence scoring, and validation."
+seo_title: "NMR Compound Identification | Rombo AI"
+description: "Accelerate NMR compound identification for pharma R&D with expert-assisted candidate ranking, confidence scoring, and validation."
 lang: en
 og_image: /img/molecule-technology.png
 og_image_alt: "AI-assisted NMR compound identification for pharma R&D"

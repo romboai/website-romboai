@@ -4,7 +4,6 @@ name: "Andrea Zanda"
 job_title: "CEO & Co-founder"
 short_role: "CEO"
 bio: "Andrea Zanda is co-founder and CEO of Rombo AI. He works at the intersection of machine learning, software engineering, and spectroscopy, leading the development of AI products that transform industrial material analysis."
-image: "/img/team/andrea-zanda.jpg"
 linkedin: "https://www.linkedin.com/in/andreazanda/"
 expertise:
   - "Machine learning"
