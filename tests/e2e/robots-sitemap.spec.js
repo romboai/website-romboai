@@ -17,6 +17,8 @@ test("sitemap.xml is served and includes key URLs", async ({ page }) => {
   expect(xml).toMatch(/<loc>(https:\/\/rombo\.ai|http:\/\/localhost:4000)\/about\/<\/loc>/);
   expect(xml).toMatch(/<loc>(https:\/\/rombo\.ai|http:\/\/localhost:4000)\/product\/<\/loc>/);
   expect(xml).toMatch(/<loc>(https:\/\/rombo\.ai|http:\/\/localhost:4000)\/contact\/<\/loc>/);
+  expect(xml).toContain('xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"');
+  expect(xml).not.toContain("sitemap-image/0.9");
   // Should not include admin or e2e helper pages
   expect(xml).not.toContain("/admin");
   expect(xml).not.toContain("/e2e/");
