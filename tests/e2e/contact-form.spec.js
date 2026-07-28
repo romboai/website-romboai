@@ -1,8 +1,17 @@
 const { test, expect } = require("@playwright/test");
 
+const MAKE_WEBHOOK = "https://hook.eu2.make.com/**";
+
 test("home -> contact form submit -> confirmation", async ({ page }) => {
   // Prevent the post-confirmation Calendly redirect from navigating away during the test.
   await page.route("https://calendly.com/**", (route) => route.abort());
+
+  // Intercept the Make.com webhook so the test never hits the live scenario.
+  let webhookRequest = null;
+  await page.route(MAKE_WEBHOOK, async (route) => {
+    webhookRequest = route.request();
+    await route.fulfill({ status: 200, contentType: "text/plain", body: "Accepted" });
+  });
 
   await page.goto("/");
   await expect(page).toHaveTitle(/Rombo/i);
@@ -21,34 +30,21 @@ test("home -> contact form submit -> confirmation", async ({ page }) => {
   await page.locator("#query").fill("E2E test submission.");
   await page.locator("#terms").check();
 
-  // Make the submission stay on-site but still trigger the existing success UI:
-  // submit to a local "handler" page that immediately redirects to /contact/?status=ok.
-  // This keeps the referrer off "/contact", matching the production redirect behavior.
-  await page.evaluate(() => {
-    const form = document.querySelector("#contact-form");
-    if (!form) throw new Error("contact-form not found");
-    form.setAttribute("action", "/e2e/redirect.html");
-    form.setAttribute("method", "GET");
-  });
+  // Submit the form; it posts to the Make.com webhook via fetch and renders
+  // the success UI client-side (no redirect back from the endpoint).
+  await page.getByRole("button", { name: /request analysis/i }).click();
 
-  await Promise.all([
-    page.waitForURL(/\/contact\/\?status=ok/),
-    page.getByRole("button", { name: /send email/i }).click(),
-  ]);
-
-  // Assert we landed back on Contact with the expected status.
-  await expect(page).toHaveURL(/\/contact\/\?status=ok/);
-
-  // The success message is injected client-side; in some environments it can be flaky.
-  // If present, validate it; otherwise keep the test as a navigation/submission smoke test.
+  // The success message is injected client-side once the webhook responds OK.
   const status = page.getByRole("status");
-  if (await status.count()) {
-    await expect(status).toBeVisible();
-    await expect(status).toContainText(/thank you for contacting us/i);
-    await expect(status).toContainText(/your message has been received successfully/i);
-  } else {
-    await expect(page.locator("#contact-form")).toHaveCount(1);
-  }
+  await expect(status).toBeVisible();
+  await expect(status).toContainText(/thank you for requesting a free feasibility analysis/i);
+  await expect(status).toContainText(/your request has been received successfully/i);
+
+  // The webhook should have been called and carry the API key header + payload.
+  expect(webhookRequest).not.toBeNull();
+  expect(webhookRequest.method()).toBe("POST");
+  expect(webhookRequest.headers()["x-make-apikey"]).toBeTruthy();
+
+  const postData = webhookRequest.postData() || "";
+  expect(postData).toContain("qa@example.com");
 });
-
-
