@@ -186,6 +186,6 @@ markdown_content: |-
 
   ---
 
-  [Mattia di Iorio, contact@rombo.ai]
+  [contact@rombo.ai]
 ---
 
