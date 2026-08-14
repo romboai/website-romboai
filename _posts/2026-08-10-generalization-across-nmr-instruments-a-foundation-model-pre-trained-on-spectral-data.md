@@ -6,20 +6,8 @@ layout: article
 image: /img/Screenshot 2026-08-14 at 11.30.52.png
 image_alt: AI-generated Image
 author: 'Silvia Bongiovanni [BD Representative, Rombo AI]'
-excerpt: |-
-  TL;DR
-  - ROSE uses a single 9.9-million-parameter Vision Transformer encoder to represent one-dimensional proton NMR spectra on a shared 4096-point chemical-shift grid.
-  - Same-molecule spectra measured at different field strengths reach 0.93 cosine similarity, compared with 0.44 for different molecules. The separation indicates that ROSE preserves chemical identity across instruments.
-  - A frozen ROSE encoder reaches 98.8% balanced accuracy on 60 MHz edible-oil classification, matching the 98.9% PLS-DA baseline.
-  - ROSE reduces structure-to-spectrum Chamfer loss to 0.79, compared with 1.29 for the fingerprint baseline. After short fine-tuning, ROSE reaches 35.9% Top-1 and 67.5% Top-10 retrieval accuracy on NMR-Solver.
-  - Most downstream tasks require no encoder retraining. Large-gallery structure retrieval requires short fine-tuning, while simpler tasks use pretrained heads or lightweight heads attached to the frozen encoder.
+excerpt: 'Most NMR deep learning models train an encoder and task head together for a particular endpoint, field strength, or instrument regime. Performance can decline when spectra come from hardware outside that training distribution.'
 markdown_content: |-
-  ## Abstract
-
-  Most NMR deep learning models train an encoder and task head together for a particular endpoint, field strength, or instrument regime. Performance can decline when spectra come from hardware outside that training distribution.
-
-  Generalization across instruments means that an encoder places spectra of the same molecule near one another despite differences in field strength, or B0, while retaining instrument regime as a separate, learnable property. A useful representation must therefore preserve chemical identity without erasing field-dependent information.
-
   ROSE is a spectrum foundation model pretrained on 3.2 million experimental, simulated, and benchtop proton NMR spectra. Its multi-B0 pairing objective brings representations of the same molecule closer across field strengths. Evaluation uses molecular identities excluded entirely from pretraining, which tests transfer rather than memorization.
 
   The resulting encoder supports low-field classification, structure-to-spectrum prediction, peak detection, denoising, and spectrum-to-structure retrieval through a shared representation. ROSE handles adaptation at three levels. Pretrained task heads require no new training, lightweight heads train against a frozen spectral trunk, and difficult retrieval tasks use short fine-tuning of the full encoder.
