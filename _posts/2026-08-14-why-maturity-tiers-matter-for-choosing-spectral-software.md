@@ -6,9 +6,7 @@ layout: article
 image: /img/Screenshot 2026-08-14 at 10.41.25.png
 image_alt: AI-generated Image
 author: 'Silvia Bongiovanni [BD Representative, Rombo AI]'
-excerpt: |-
-  Choosing software for Nuclear Magnetic Resonance (NMR) and spectroscopy analysis requires evaluating how much manual interpretation the system automates before a chemist steps in.
-  Brand recognition or hardware compatibility alone are unreliable buying metrics: a vendor that excels at high-throughput screening of known compounds may lack the tools needed to resolve complex novel structures. In this article, some indications to guide your evaluation.
+excerpt: 'Choosing software for Nuclear Magnetic Resonance (NMR) and spectroscopy analysis requires evaluating how much manual interpretation the system automates before a chemist steps in. Brand recognition or hardware compatibility alone are unreliable buying metrics: a vendor that excels at high-throughput screening of known compounds may lack the tools needed to resolve complex novel structures. In this article, some indications to guide your evaluation.'
 markdown_content: |
   ## TL;DR
 
