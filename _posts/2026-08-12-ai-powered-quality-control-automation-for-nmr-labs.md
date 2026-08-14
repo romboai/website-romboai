@@ -6,12 +6,7 @@ layout: article
 image: /img/Screenshot 2026-08-14 at 11.22.50.png
 image_alt: AI-generated Image
 author: 'Silvia Bongiovanni [BD Representative, Rombo AI]'
-excerpt: |-
-  TL;DR
-  - Manual NMR interpretation can delay quality control decisions for weeks because trained specialists must review complex spectra.
-  - Rombo AI (https://rombo.ai) uses a foundation model pre-trained on millions of spectra to produce decision-ready results in as little as 15 minutes.
-  - The NMR AI Analyzer works across Bruker, JEOL, Agilent/Varian, and Oxford Instruments fleets without per-instrument recalibration.
-  - Petrochemical, biotech, and energy labs can automate routine QC interpretation and reduce specialist hours per sample.
+excerpt: Manual NMR interpretation can delay quality control decisions for weeks because trained specialists must review complex spectra. Rombo AI uses a foundation model pre-trained on millions of spectra to produce decision-ready results in as little as 15 minutes.
 markdown_content: |-
   ## Why manual spectral interpretation is the QC bottleneck
 
