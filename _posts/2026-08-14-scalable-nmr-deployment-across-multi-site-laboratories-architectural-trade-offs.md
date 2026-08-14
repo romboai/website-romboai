@@ -1,7 +1,7 @@
 ---
 title: 'Scalable NMR Deployment Across Multi-Site Laboratories: Architectural Trade-Offs'
 date: 2026-08-13T22:00:00.000Z
-permalink: /blog/NMR_deployment_multisite
+permalink: /blog/NMR_deployment_multisite_scalability
 layout: article
 image: /img/Screenshot 2026-08-14 at 10.52.20.png
 image_alt: AI-generated Image
