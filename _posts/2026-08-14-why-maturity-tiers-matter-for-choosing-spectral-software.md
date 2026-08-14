@@ -1,6 +1,6 @@
 ---
 title: Why Maturity Tiers Matter for Choosing Spectral Software
-date: 2026-08-13T22:00:00.000Z
+date: 2026-08-12T22:00:00.000Z
 permalink: /blog/article-spectral-software-tiers
 layout: article
 image: /img/Screenshot 2026-08-14 at 10.41.25.png
