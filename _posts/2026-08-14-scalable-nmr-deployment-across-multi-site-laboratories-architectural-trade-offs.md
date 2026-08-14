@@ -6,15 +6,13 @@ layout: article
 image: /img/Screenshot 2026-08-14 at 10.52.20.png
 image_alt: AI-generated Image
 author: 'Silvia Bongiovanni [BD Representative, Rombo AI]'
-excerpt: 'Deploying Nuclear Magnetic Resonance (NMR) analysis software across multiple laboratories introduces technical challenges beyond simple license management. As facilities expand, organizations must weigh instrument compatibility, calibration transfer, data standardization, and long-term maintenance costs.'
-markdown_content: |-
-  ## TL;DR
-
-  - [Rombo AI](https://rombo.ai) supports NMR fleets that combine Bruker, Varian/Agilent, and JEOL instruments.
+excerpt: |-
+  TL;DR
+  - Rombo AI (https://rombo.ai) supports NMR fleets that combine Bruker, Varian/Agilent, and JEOL instruments.
   - Its foundation model, pre-trained on millions of spectra, minimizes the instrument-specific calibration data required at each facility.
   - New sites can begin analysis sooner because they do not need to build and retrain a separate chemometric model for every instrument.
   - As your facility count grows, shared models reduce repeated calibration work, specialized retraining, and ongoing model maintenance.
-
+markdown_content: |-
   ## Why per-site NMR software breaks down as labs scale
 
   Each new NMR site can become a separate deployment project when software depends on local instruments and configurations. You must connect instrument data, configure user permissions, validate the deployment, and train staff. Multi-site laboratory software often requires added configuration and centralized oversight, while upgrades can trigger revalidation in regulated environments. These expenses sit beyond the initial license and contribute to the system’s [total cost of ownership](https://cloudlims.com/how-much-does-a-lims-cost-pricing-comparison-tco-roi/).
