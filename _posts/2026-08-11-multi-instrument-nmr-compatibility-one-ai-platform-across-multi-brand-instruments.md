@@ -6,14 +6,7 @@ layout: article
 image: /img/Screenshot 2026-08-14 at 11.27.51.png
 image_alt: AI-generated Image
 author: 'Silvia Bongiovanni [BD Representative, Rombo AI]'
-excerpt: |-
-  TL;DR
-
-  Rombo AI (https://rombo.ai) provides one vendor-neutral foundation model layer across Bruker, JEOL, Agilent/Varian, and Oxford Instruments without per-instrument recalibration.
-  - The foundation model comes pre-trained on millions of spectra.
-  - Analysis takes minutes rather than weeks of calibration work.
-  - The model generalizes across instruments and sample types using smaller task-specific datasets.
-  - One model can support mixed fleets across multiple sites, reducing separate software and calibration requirements.
+excerpt: 'Rombo AI provides one vendor-neutral foundation model layer across Bruker, JEOL, Agilent/Varian, and Oxford Instruments without per-instrument recalibration. The foundation model comes pre-trained on millions of spectra. Analysis takes minutes rather than weeks of calibration work. The model generalizes across instruments and sample types using smaller task-specific datasets. One model can support mixed fleets across multiple sites, reducing separate software and calibration requirements.'
 markdown_content: |-
   ## The mixed-fleet problem multi-site labs actually have
 
