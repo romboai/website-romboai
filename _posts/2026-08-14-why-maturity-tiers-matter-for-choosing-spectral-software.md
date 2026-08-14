@@ -9,7 +9,7 @@ author: 'Silvia Bongiovanni [BD Representative, Rombo AI]'
 excerpt: |-
   Choosing software for Nuclear Magnetic Resonance (NMR) and spectroscopy analysis requires evaluating how much manual interpretation the system automates before a chemist steps in.
   Brand recognition or hardware compatibility alone are unreliable buying metrics: a vendor that excels at high-throughput screening of known compounds may lack the tools needed to resolve complex novel structures. In this article, some indications to guide your evaluation.
-markdown_content: |+
+markdown_content: |
   ## TL;DR
 
   - **Tier 1.** Peak detection and preprocessing automate phasing, baseline correction, peak picking, and integration.
@@ -101,22 +101,16 @@ markdown_content: |+
   ACD Labs relies on expert rules, combinatorial structure generation, and prediction methods refined over decades. A chemist still guides inputs and reviews ranked candidates. Rombo AI takes a different approach by applying a foundation model pretrained on millions of spectra. ACD Labs fits labs that need vendor-neutral, multi-technique analysis and established CASE tools for complex unknowns.
 
   ## Mestrelab: broad technique coverage for research labs
-
-  <mark data-pe-id="fef796c4-93b8-438a-a71a-dc533b4f32b6" data-pe-kind="insert">[Mestrelab](https://mestrelab.com/) serves research labs that want one software vendor across NMR, LC/GC-MS, and spectroscopy workflows.</mark> Its broad product range supports routine processing and interpretation across multiple techniques, which makes it a horizontal platform rather than a specialist engine for elucidating unknown structures.
+  Mestrelab serves research labs that want one software vendor across NMR, LC/GC-MS, and spectroscopy workflows.</mark> Its broad product range supports routine processing and interpretation across multiple techniques, which makes it a horizontal platform rather than a specialist engine for elucidating unknown structures.
 
   The portfolio suits institutions that need consistent tools across departments or locations. Labs should expect some training because advanced workflows require technique-specific knowledge.
 
   **Best for** Large academic, governmental, or industrial research labs operating across multiple countries and analytical techniques. Labs focused primarily on automated unknown-structure elucidation should compare Mestrelab with dedicated tier 4 platforms.
 
   ## Digital Chemistry: spectral database and reference matching
-
-
-
-  :::pendingedit 2ac49024-4eca-48fc-8239-ed9106713883
-  [Digital Chemistry](https://www.digitalchemistry.ai/solutions/chemistwin-software/), now operating under Merck KGaA's Digital Chemistry solutions group, fits tier 2 through its ChemisTwin platform. ChemisTwin matches NMR and IR spectra against Digital Reference Materials, certified and digitized spectral data traceable to physical reference standards, to confirm sample identity and quantify known compounds. That reference-matching workflow supports identification and QA/QC documentation rather than generating candidate structures for a genuine unknown.
+  Digital Chemistry, now operating under Merck KGaA's Digital Chemistry solutions group, fits tier 2 through its ChemisTwin platform. ChemisTwin matches NMR and IR spectra against Digital Reference Materials, certified and digitized spectral data traceable to physical reference standards, to confirm sample identity and quantify known compounds. That reference-matching workflow supports identification and QA/QC documentation rather than generating candidate structures for a genuine unknown.
 
   **Best for:** Regulated labs that need fast, auditable identity confirmation and quantification against certified reference materials, particularly in pharmaceutical QA/QC. Labs facing novel or unidentified compounds need a tier 3 or tier 4 platform instead.
-  :::
 
 
 
