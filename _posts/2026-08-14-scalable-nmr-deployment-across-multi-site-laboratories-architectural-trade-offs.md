@@ -6,12 +6,7 @@ layout: article
 image: /img/Screenshot 2026-08-14 at 10.52.20.png
 image_alt: AI-generated Image
 author: 'Silvia Bongiovanni [BD Representative, Rombo AI]'
-excerpt: |-
-  TL;DR
-  - Rombo AI (https://rombo.ai) supports NMR fleets that combine Bruker, Varian/Agilent, and JEOL instruments.
-  - Its foundation model, pre-trained on millions of spectra, minimizes the instrument-specific calibration data required at each facility.
-  - New sites can begin analysis sooner because they do not need to build and retrain a separate chemometric model for every instrument.
-  - As your facility count grows, shared models reduce repeated calibration work, specialized retraining, and ongoing model maintenance.
+excerpt: 'Rombo AI supports NMR fleets that combine Bruker, Varian/Agilent, and JEOL instruments. Its foundation model, pre-trained on millions of spectra, minimizes the instrument-specific calibration data required at each facility. New sites can begin analysis sooner because they do not need to build and retrain a separate chemometric model for every instrument. As your facility count grows, shared models reduce repeated calibration work, specialized retraining, and ongoing model maintenance.'
 markdown_content: |-
   ## Why per-site NMR software breaks down as labs scale
 
