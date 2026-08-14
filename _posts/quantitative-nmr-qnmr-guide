@@ -1,0 +1,241 @@
+---
+title: "Quantitative NMR (qNMR): How It Measures Purity, Calibration Methods, and Accuracy"
+description: "A practical guide to quantitative NMR for concentration and purity analysis, including internal and external calibration, T1 relaxation, the qNMR equation, validation, and AI-assisted workflows."
+slug: "/quantitative-nmr-qnmr-guide"
+last_reviewed: "2026-08-14"
+tags:
+  - quantitative NMR
+  - qNMR
+  - NMR spectroscopy
+  - purity analysis
+  - analytical chemistry
+  - low-field NMR
+---
+
+# Quantitative NMR (qNMR): How It Measures Purity, Calibration Methods, and Accuracy
+
+> **Quick answer:** Quantitative nuclear magnetic resonance (qNMR) determines the concentration or purity of a compound from NMR signal areas. Under validated acquisition and processing conditions, an integrated signal is proportional to the number of nuclei that produced it. Comparing the analyte response with a reference of known quantity makes absolute quantification possible without a compound-specific calibration curve.
+
+## TL;DR
+
+- **What qNMR measures:** the amount of NMR-active nuclei contributing to a selected signal.
+- **Why it is quantitative:** under controlled conditions, integrated signal area is proportional to nuclear count.
+- **Why it can avoid a compound-specific calibration curve:** the calibrant does not have to be chemically identical to the analyte, provided its assigned value is known and its signal is suitable.
+- **Internal vs. external calibration:** an internal calibrant is measured in the analyte solution; an external calibrant is measured separately or kept physically separate.
+- **Main accuracy risks:** incomplete relaxation, signal overlap, poor signal-to-noise ratio, inaccurate weighing, and incorrect phase, baseline, or integration boundaries.
+- **Role of AI:** software can accelerate repeatable interpretation and quality checks, but it cannot recover quantitative information lost during an unsuitable acquisition.
+
+## What is quantitative NMR?
+
+Quantitative NMR, abbreviated **qNMR**, is an NMR spectroscopy method used to determine the amount, concentration, content, or purity of a chemical substance. It is most often performed with proton NMR (**¹H qNMR**) because ¹H is abundant and sensitive, but other NMR-active nuclei can also be used.
+
+The quantitative principle is commonly written as:
+
+\[
+I = kN
+\]
+
+where:
+
+- \(I\) is the integrated NMR signal area;
+- \(N\) is the number of nuclei contributing to that signal; and
+- \(k\) represents the response of the instrument and acquisition method.
+
+For example, at the same molecular concentration, a fully resolved signal representing two equivalent protons should have twice the area of a signal representing one proton, provided both signals are measured under quantitative conditions.
+
+The [USP qNMR Stimuli article](https://www.usp.org/sites/default/files/usp/document/workshops/stimuli-article-qnmr.pdf) describes the quantitative nature of NMR as the direct proportionality between observed response and the number of nuclei generating the signal. That proportionality is conditional: pulse excitation, relaxation, acquisition, signal processing, and integration must all be suitable for the intended measurement.
+
+## Why can qNMR avoid a compound-specific calibration curve?
+
+Many chromatography detectors have compound-dependent response factors. An HPLC or GC assay may therefore require multiple solutions of the analyte or a closely matched standard to establish a calibration curve.
+
+In qNMR, corrected signal areas represent nuclear ratios. A reference compound of known purity or concentration can quantify a chemically different analyte when:
+
+1. the analyte and reference signals are correctly assigned;
+2. the selected signals do not contain unresolved interferences;
+3. each integral is corrected for its number of contributing nuclei; and
+4. acquisition and processing meet predefined performance criteria.
+
+This does **not** mean that qNMR needs no calibration or reference. Absolute qNMR still requires a valid route to the quantity being measured, such as an internal calibrant, an external reference, or a validated electronic-reference method. What qNMR often avoids is a **compound-specific, multi-level calibration curve**.
+
+## Internal vs. external qNMR calibration
+
+The choice of calibration method depends on accuracy requirements, sample value, chemical compatibility, traceability, and the validated procedure. [JEOL's practical qNMR guidance](https://www.jeol.com/solutions/applications/details/qNMR-issue8.php) recommends prioritizing internal calibration when accuracy is the main concern and considering external calibration when preserving a precious sample matters more.
+
+| Method | Where is the calibrant? | Main advantage | Main limitation |
+|---|---|---|---|
+| Internal calibration | In the same solution as the analyte | Analyte and calibrant experience the same measurement conditions | The calibrant can contaminate, react with, or complicate recovery of the sample |
+| External calibration | In a separate solution or physically separated insert | Preserves the analyte and avoids direct chemical interaction | Differences between measurements require tighter control and may require correction factors |
+
+### Internal calibration
+
+An internal qNMR calibrant is added directly to the analyte solution.
+
+1. Select a stable, nonreactive calibrant with a documented purity or mass fraction.
+2. Confirm that its quantification signal does not overlap the analyte or other sample signals.
+3. Accurately weigh the analyte and calibrant, or prepare them from validated stock solutions.
+4. Acquire both responses in the same spectrum under quantitative conditions.
+5. Correct the integrals for nuclear count and calculate the analyte result relative to the calibrant.
+
+Because the two signals are acquired together, their ratio cancels many common instrumental effects. The remaining uncertainty still includes sample preparation, reference value, signal selection, integration, and measurement repeatability.
+
+### External calibration
+
+External qNMR keeps the calibrant physically separate from the analyte. The reference can be held in a sealed coaxial insert or measured as a separate solution using a validated transfer procedure.
+
+1. Prepare or obtain a reference with a known concentration or assigned value.
+2. Measure the reference under defined quantitative conditions.
+3. Measure the analyte using the settings required by the validated method.
+4. Apply the relevant calibration or transfer factor.
+5. Include uncertainty from differences between the reference and analyte measurements.
+
+External approaches can reduce sample-handling constraints, but temperature, pulse calibration, probe response, filling height, tube geometry, and other method-specific factors may affect the comparison. A study comparing internal, external, and electronic referencing illustrates why the referencing method must be selected and validated for the intended use ([Analytical Chemistry, 2013](https://pubmed.ncbi.nlm.nih.gov/24002733/)).
+
+## Why T1 relaxation affects qNMR accuracy
+
+After a radiofrequency pulse, longitudinal magnetization needs time to return toward equilibrium. The time constant for this recovery is **T1**. If the next scan starts too soon, signals can remain partially saturated.
+
+This matters because analyte and calibrant signals may have different T1 values. Incomplete and unequal recovery changes their integral ratio and can bias the calculated concentration or purity. A spectrum can look clean while still being quantitatively biased.
+
+A qNMR procedure should therefore establish the longest relevant T1 and define a pulse angle and repetition or relaxation interval that meet its accuracy target. In one published USP lifecycle case study, the control strategy used a calibrated 90° pulse and a relaxation delay of at least five times the longest T1. In that specific study, short delays combined with larger pulse angles produced biased results, while longer delays reduced the observed bias ([American Pharmaceutical Review](https://www.americanpharmaceuticalreview.com/Featured-Articles/596327-Application-of-USP-General-Chapter-1220-in-the-Development-of-a-Procedure-for-Quantitative-NMR/)).
+
+Five T1 periods correspond to approximately 99.3% longitudinal recovery in the ideal single-exponential case. This is a useful reference point, not a universal substitute for method development. Pulse angle, acquisition time, relaxation behavior, accuracy target, and validated control strategy determine the appropriate settings.
+
+> **Important:** collecting more scans improves random noise but does not correct systematic saturation caused by an inadequate repetition interval.
+
+## How to calculate purity by internal-standard qNMR
+
+For a gravimetric internal-calibration assay, the analyte mass fraction can be written as:
+
+\[
+P_a =
+\left(\frac{I_a}{I_{std}}\right)
+\left(\frac{N_{std}}{N_a}\right)
+\left(\frac{M_a}{M_{std}}\right)
+\left(\frac{m_{std}}{m_a}\right)
+P_{std}
+\]
+
+where:
+
+- \(P_a\) is the analyte mass fraction;
+- \(P_{std}\) is the certified or assigned mass fraction of the calibrant;
+- \(I_a\) and \(I_{std}\) are the analyte and calibrant integrals;
+- \(N_a\) and \(N_{std}\) are the numbers of nuclei represented by the integrated signals;
+- \(M_a\) and \(M_{std}\) are the molar masses; and
+- \(m_a\) and \(m_{std}\) are the weighed masses.
+
+The exact measurement equation must match the preparation and calibration design. For example, solution-based or external-reference methods require the relevant concentration, volume, density, transfer, or calibration terms.
+
+### Worked example
+
+Suppose:
+
+- \(I_a/I_{std}=1.20\);
+- \(N_{std}/N_a=2/3\);
+- \(M_a/M_{std}=1.50\);
+- \(m_{std}/m_a=10/12\); and
+- \(P_{std}=0.999\).
+
+The product of the first four ratios is 1.00. Including the calibrant value gives:
+
+\[
+P_a = 1.00 \times 0.999 = 0.999
+\]
+
+The reported analyte mass fraction is therefore 99.9%, before applying the procedure's rules for significant figures and measurement uncertainty.
+
+## Conditions required for defensible qNMR results
+
+A publishable or regulated qNMR result should document the controls that make the integral ratio fit for purpose.
+
+- **Reference material:** identity, assigned value, uncertainty, traceability, stability, and suitability.
+- **Sample preparation:** weighing or volumetric steps, dissolution, homogeneity, tube or insert geometry, and replicate strategy.
+- **Signal selection:** identity, nuclear count, freedom from overlap, and consistent treatment of satellites or nearby signals.
+- **Acquisition:** pulse sequence, pulse calibration, spectral width, receiver settings, acquisition time, number of scans, temperature, and repetition conditions based on relevant T1 values.
+- **Processing:** apodization, zero filling where used, phase correction, baseline correction, and predefined integration boundaries.
+- **Performance:** specificity or selectivity, accuracy, precision, reportable range, robustness, system suitability, and uncertainty appropriate to the intended use.
+
+The official [ICH Q14 guideline](https://database.ich.org/sites/default/files/ICH_Q14_Guideline_2023_1116.pdf) frames analytical procedure development around fitness for intended purpose, predefined performance criteria, risk assessment, robustness, a control strategy, and lifecycle management. USP's proposed revisions to [General Chapter 〈761〉](https://doi.usp.org/USPNF/USPNF_M99550_40101_01.html) specifically expand qNMR coverage for reference materials, acquisition parameters, and post-acquisition analysis.
+
+For metrological traceability, a certified reference material can provide a documented link to SI units. [NIST PS1 benzoic acid](https://www.nist.gov/programs-projects/nist-ps1-primary-standard-quantitative-nmr-benzoic-acid), for example, was developed as a primary standard for qNMR calibration and the value assignment of secondary organic standards.
+
+## How accurate is qNMR compared with HPLC or GC?
+
+There is no single accuracy value that applies to every qNMR, HPLC, or GC method. Accuracy and uncertainty depend on the validated procedure, sample, concentration range, interferences, reference materials, instrument performance, and data processing.
+
+qNMR offers a nearly universal molar response for suitable nuclei and can quantify a different analyte using a non-identical calibrant. HPLC and GC often offer greater sensitivity and chromatographic separation but may require analyte-specific response factors or calibration curves.
+
+As an example rather than a universal benchmark, a USP-authored qNMR lifecycle study reported a butyl *p*-hydroxybenzoate mass fraction of **99.6% ± 0.6%** with coverage factor \(k=2\). The calibrant value and qNMR experimental variability were important contributors to the uncertainty budget ([American Pharmaceutical Review](https://www.americanpharmaceuticalreview.com/Featured-Articles/596327-Application-of-USP-General-Chapter-1220-in-the-Development-of-a-Procedure-for-Quantitative-NMR/)).
+
+## What is qNMR used for?
+
+### Purity assignment and reference materials
+
+qNMR can determine the mass fraction of organic compounds and help assign values to reference materials. Its ratio-based measurement equation and compatibility with non-identical calibrants make it useful for traceable purity evaluation. [NIST describes qNMR purity assessment](https://www.nist.gov/publications/evaluation-chemical-purity-using-quantitative-1h-nuclear-magnetic-resonance) as a ratio measurement involving analyte and standard masses, signal intensities, and a standard of known purity.
+
+### Pharmaceutical analysis
+
+Pharmaceutical applications include active-ingredient assay, impurity quantification, reference-standard characterization, formulation analysis, and reaction monitoring. Procedures used for regulated decisions must be qualified or validated for their intended purpose and supported by appropriate data integrity, uncertainty, and lifecycle controls.
+
+### Foods and natural products
+
+qNMR can measure multiple resolvable components in a single spectrum. Applications include profiling sugars and organic acids, characterizing oils, quantifying natural products, and supporting food-authenticity investigations. Complex mixtures remain challenging when signals overlap or fall below the method's sensitivity.
+
+### Relative composition measurements
+
+When suitable non-overlapping signals represent different components or stereoisomers, their corrected integral ratio can provide relative composition without an external amount reference. This is relative quantification; it should not be described as absolute concentration or purity unless the measurement includes a valid absolute reference.
+
+## Where traditional qNMR workflows slow down
+
+qNMR analysis requires linked decisions across sample preparation, acquisition, signal assignment, processing, integration, calculation, and review. Rework occurs when the chosen signals overlap, relaxation settings are unsuitable, the baseline is distorted, or documentation does not support the result.
+
+Automation can reduce repetitive processing and make review more consistent. It should also expose the spectrum, settings, corrections, calculation inputs, flags, and version history needed for an expert to assess the result. In regulated use, faster processing does not replace method validation, auditability, system suitability, or human accountability.
+
+## How Rombo applies AI to NMR analysis
+
+[Rombo AI](https://rombo.ai/) describes a proprietary transformer model pre-trained on millions of spectra across materials, conditions, and instruments. According to the company, the model interprets spectral data for tasks ranging from molecular characterization to quantification, with a focus on industrial **low-field NMR** applications.
+
+Rombo also reports a turnaround of **15 minutes compared with weeks of traditional laboratory analysis**. This is a vendor-reported performance claim, not a general benchmark for every qNMR assay. The applicable turnaround, accuracy, and generalization should be demonstrated for the specific instrument, sample matrix, analytical target, and deployment environment.
+
+AI-assisted analysis can accelerate spectrum interpretation and flag data that do not meet predefined criteria. It cannot make an unsuitable acquisition quantitative after the fact. If incomplete relaxation, clipping, insufficient signal-to-noise ratio, or unresolved interference has removed or confounded information, the correct action may be review, reprocessing, or reacquisition.
+
+## Frequently asked questions
+
+### Does qNMR require a reference standard identical to the analyte?
+
+No. Absolute qNMR requires a suitable reference with a known value, but the reference generally does not need to be the same chemical as the analyte. Its signal must be distinguishable, its nuclear count known, and its value and uncertainty appropriate to the measurement.
+
+### Does qNMR always avoid calibration curves?
+
+No. qNMR often avoids a compound-specific, multi-level calibration curve, but it still requires calibration or referencing. Some qNMR implementations may use response calibration, external transfer factors, or validation across a reportable range.
+
+### What relaxation delay should be used for qNMR?
+
+The method should be based on the longest T1 among the signals that affect the result and on the selected pulse angle and accuracy target. A delay of at least five times the longest T1 with a 90° pulse is a common conservative strategy and was used in the cited USP lifecycle case study, but the final setting must be justified and validated for the procedure.
+
+### What nuclei besides ¹H can qNMR measure?
+
+qNMR can use nuclei such as ¹³C, ¹⁹F, ³¹P, or others when the sample and instrument support them. Sensitivity, natural abundance, relaxation, nuclear Overhauser effects, decoupling, and signal separation require nucleus-specific method development.
+
+### Can AI repair a qNMR spectrum acquired with an insufficient relaxation delay?
+
+No. AI can detect or flag suspicious conditions, but it cannot reconstruct the equilibrium signal intensity that was never measured. A biased acquisition may need to be repeated.
+
+### How long does a qNMR purity assay take?
+
+The total time includes sample preparation, acquisition, processing, calculation, technical review, and any regulated approval. Acquisition time depends strongly on T1, the required signal-to-noise ratio, and the number of scans. No single turnaround applies to all qNMR assays.
+
+## Key takeaway
+
+qNMR converts validated NMR signal-area ratios into concentration, content, or purity. Its central advantage is a predictable molar response that can support quantification with a non-identical calibrant and without a compound-specific calibration curve. Its accuracy still depends on reference quality, complete or otherwise controlled relaxation, suitable signals, correct processing, and a fit-for-purpose measurement procedure. AI can shorten interpretation and review, but the acquisition, validation, traceability, and acceptance criteria remain decisive.
+
+## Sources and further reading
+
+- [USP: Quantitative NMR (qNMR), a Metrological Method—Proposed Revisions to General Chapters 〈761〉 and 〈1761〉](https://www.usp.org/sites/default/files/usp/document/workshops/stimuli-article-qnmr.pdf)
+- [USP: Proposed revision to General Chapter 〈761〉, Nuclear Magnetic Resonance Spectroscopy](https://doi.usp.org/USPNF/USPNF_M99550_40101_01.html)
+- [ICH Q14: Analytical Procedure Development](https://database.ich.org/sites/default/files/ICH_Q14_Guideline_2023_1116.pdf)
+- [NIST PS1 Primary Standard for quantitative NMR (Benzoic Acid)](https://www.nist.gov/programs-projects/nist-ps1-primary-standard-quantitative-nmr-benzoic-acid)
+- [NIST: Evaluation of chemical purity using quantitative ¹H NMR](https://www.nist.gov/publications/evaluation-chemical-purity-using-quantitative-1h-nuclear-magnetic-resonance)
+- [Application of USP General Chapter 〈1220〉 to a qNMR procedure](https://www.americanpharmaceuticalreview.com/Featured-Articles/596327-Application-of-USP-General-Chapter-1220-in-the-Development-of-a-Procedure-for-Quantitative-NMR/)
+- [JEOL: practical selection of internal and external qNMR methods](https://www.jeol.com/solutions/applications/details/qNMR-issue8.php)
