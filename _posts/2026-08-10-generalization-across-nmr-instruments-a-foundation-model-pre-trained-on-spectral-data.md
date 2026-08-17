@@ -3,6 +3,7 @@ title: 'Generalization Across NMR Instruments: A Foundation Model Pre-Trained on
 date: 2026-08-09T22:00:00.000Z
 permalink: /blog/rose_foundation_model_NMR_spectral_data
 layout: article
+published: false
 image: /img/Screenshot 2026-08-14 at 11.30.52.png
 image_alt: AI-generated Image
 author: 'Silvia Bongiovanni [BD Representative, Rombo AI]'

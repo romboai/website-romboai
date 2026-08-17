@@ -129,6 +129,14 @@ export default defineConfig({
             description: "Keep as 'article' for blog posts.",
           },
           {
+            type: "boolean",
+            name: "published",
+            label: "Published",
+            required: false,
+            description:
+              "Uncheck to keep the post out of the build entirely: no page, no blog listing, no sitemap. Leave empty or checked to publish.",
+          },
+          {
             type: "image",
             name: "image",
             label: "Featured Image",
