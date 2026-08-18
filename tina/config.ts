@@ -151,6 +151,17 @@ export default defineConfig({
           },
           {
             type: "string",
+            name: "image_caption",
+            label: "Featured Image Caption",
+            required: false,
+            ui: {
+              component: "textarea",
+            },
+            description:
+              "Shown under the featured image. Use it to credit the photographer and license when the image requires attribution (e.g. Creative Commons). Inline HTML links are allowed.",
+          },
+          {
+            type: "string",
             name: "author",
             label: "Author",
             required: true,
