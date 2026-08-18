@@ -1,5 +1,5 @@
 ---
-title: 'What Is Quantitative NMR (qNMR)? Purity, Calibration Methods, and Accuracy'
+title: 'What Is Quantitative NMR (qNMR) and How Does It Work?'
 date: 2026-08-18T09:00:00.000Z
 permalink: /blog/what-is-quantitative-nmr-qnmr
 layout: article
@@ -7,130 +7,129 @@ image: /img/blog/qnmr-nmr-tubes-2026-08-18.jpg
 image_alt: Rack of NMR tubes holding coloured solutions of organic compounds prepared for NMR acquisition
 image_caption: 'Solutions of organic substances prepared in NMR tubes for structure and purity analysis. Photo: <a href="https://commons.wikimedia.org/wiki/File:Solutions_of_organic_substances_for_NMR_analysis.jpg" rel="noopener noreferrer" target="_blank">Ryabitskii</a>, via Wikimedia Commons, <a href="https://creativecommons.org/licenses/by/4.0/" rel="license noopener noreferrer" target="_blank">CC BY 4.0</a>.'
 author: 'Silvia Bongiovanni [BD Representative, Rombo AI]'
-excerpt: Quantitative NMR determines concentration or purity from the integrated area of an NMR signal, so a reference of known purity can quantify a chemically different analyte without a compound-specific calibration curve. Accuracy depends on complete relaxation and controlled acquisition rather than on collecting more scans.
+excerpt: Quantitative NMR determines the amount or purity of a compound from integrated NMR signals, so a certified internal standard can quantify an unrelated analyte without a matched calibration curve. Accuracy depends on complete relaxation, accurate weighing, and resolved peaks.
 markdown_content: |-
   ## TL;DR
 
-  - Quantitative NMR, or qNMR, determines concentration or purity by measuring the integrated area of an NMR signal.
-  - The equation [I = kN](https://emerypharma.com/blog/a-guide-to-quantitative-nmr-qnmr/) states that signal integral I scales with the number of contributing nuclei N through a spectrometer constant, k.
-  - qNMR avoids compound-specific calibration curves because nuclei of the same isotope produce a consistent molar response under controlled acquisition conditions.
-  - Internal-standard qNMR mixes a known reference with the analyte, while external-standard qNMR measures separately prepared solutions and applies calibration factors.
-  - A qNMR repetition delay should accommodate the longest T1 relaxation time among the measured signals. Insufficient delay suppresses integrals and biases the result.
+  - Quantitative nuclear magnetic resonance, or qNMR, determines the amount or purity of a compound by comparing integrated NMR signals. It is a [primary ratio method](https://www.bipm.org/en/organic-analysis/qnmr) that does not require a matched calibration standard.
+  - The internal-standard workflow weighs the sample and a certified standard, dissolves both, acquires a spectrum, integrates suitable peaks, and calculates the analyte amount from their signal ratio.
+  - An insufficient relaxation delay prevents some nuclei from returning to equilibrium between scans. Their signals then integrate too low and bias the purity calculation.
+  - qNMR supports organic-compound purity determination, pharmaceutical quality control, reference-standard certification, and natural-product or food analysis, while Rombo AI automates spectral interpretation to shorten analysis time.
 
-  ## What qNMR Measures and Why It Skips a Calibration Curve
+  ## What quantitative NMR measures and why it needs no calibration curve
 
-  Quantitative nuclear magnetic resonance measures how many NMR-active nuclei contribute to a selected signal. Under quantitative acquisition conditions, the integrated peak area follows a direct relationship.
+  Quantitative NMR measures the amount of a compound by relating an NMR signal’s integrated area to the number of nuclei that produced it. Under quantitative acquisition conditions, the relationship follows **I = kN**, where **I** represents integrated signal area, **N** represents the contributing nuclei, and **k** represents a constant set by the instrument and experiment.
 
-  **I = kN**
+  An internal-standard measurement removes the unknown instrument constant. The analyte and standard experience the same experiment, so **k** cancels when their corrected integrals are divided. Correcting each integral for the number of contributing protons gives a molar ratio, which can then produce concentration, mass, or purity from the known amount of standard.
 
-  *I* represents the integrated signal area, and *N* represents the number of resonating nuclei. The instrument and acquisition settings determine the constant *k*. A signal produced by two equivalent protons therefore has twice the area of a signal produced by one proton at the same molecular concentration.
+  Protons from different compounds produce the same molar response when excitation and relaxation are complete. This universal response lets an unrelated certified compound quantify the analyte, provided its signal remains resolved and it does not react with the sample. qNMR therefore needs a traceable internal standard but does not need a matched analyte standard or a calibration curve, which supports its use as a [primary ratio method](https://numegalabs.com/quantnmr.html).
 
-  For a given nucleus, equal numbers of nuclei produce equal integrated responses under quantitative acquisition conditions. After correcting each integral for the number of nuclei represented by its signal, you can compare an analyte with a reference standard and calculate the analyte concentration or purity. The reference does not need to be the same compound as the analyte.
+  By comparison, HPLC-UV and GC-FID generally relate detector response to concentration through calibration curves made with suitable reference standards. qNMR instead derives quantity directly from the [ratio of integrated nuclear signals](https://emerypharma.com/blog/a-guide-to-quantitative-nmr-qnmr/).
 
-  GC and LC detectors often produce different response factors for different compounds. Quantification therefore commonly requires a matched standard and a compound-specific calibration curve. qNMR instead derives quantity from nuclear count, so a standard with known purity and a separate, measurable peak can quantify another compound without such a curve. NMR can also measure several mixture components in one spectrum when their signals remain distinguishable.
+  ## The internal-standard method, step by step
 
-  Most qNMR assays measure ¹H because hydrogen occurs in nearly all organic molecules and provides strong, efficient detection. ¹H has 99.99 percent natural abundance and a high gyromagnetic ratio. Its relaxation times are typically less than a few seconds, according to an [overview of qNMR methodology](https://emerypharma.com/blog/a-guide-to-quantitative-nmr-qnmr/). Those properties reduce the sample amount and acquisition time needed for precise integration. The proportional relationship still depends on suitable acquisition and processing conditions, including complete relaxation, accurate phasing, baseline correction, and non-overlapping integration regions.
+  1. **Weigh the sample accurately.** Record the analyte mass with a microbalance. Milligram-scale work commonly uses a 0.001 mg readout and controls static because any weighing error transfers directly into the [calculated purity result](https://emerypharma.com/blog/a-guide-to-quantitative-nmr-qnmr/).
+  2. **Add a known mass of internal standard.** Choose a stable, nonreactive reference material with certified purity above 99.5 percent and a well-resolved signal. The standard can differ chemically from the analyte because proton signal area depends on the number of contributing nuclei rather than [molecular identity alone](https://numegalabs.com/quantnmr.html).
+  3. **Dissolve both materials completely.** Select a deuterated solvent that dissolves the analyte and standard without causing reaction or signal overlap. Incomplete dissolution changes the effective concentration in the NMR tube and biases the result.
+  4. **Acquire a quantitative spectrum.** Use consistent excitation and enough scans to reach a signal-to-noise ratio near 250, which supports integration precision below 1 percent. Set the relaxation delay according to the slowest relevant T1 value so each signal recovers adequately between scans.
+  5. **Integrate separate analyte and standard peaks.** Correct each integral for the number of protons represented by that signal. A method should aim for an analyte-to-standard integral ratio near 1 to reduce relative integration error, while sufficiently wide integration regions capture the full peak area.
+  6. **Calculate purity or amount.** The internal-standard purity equation is
 
-  ## Internal Standard vs. External Standard Methodology
+  **P<sub>a</sub> = (I<sub>a</sub> / I<sub>std</sub>) × (N<sub>std</sub> / N<sub>a</sub>) × (M<sub>a</sub> / M<sub>std</sub>) × (m<sub>std</sub> / m<sub>a</sub>) × P<sub>std</sub>**
 
-  Choose the calibration method before preparing the sample. Use an internal standard when accuracy takes priority, but choose an external standard for a valuable analyte that you have only once or need to recover. [JEOL recommends the same decision rule](https://www.jeol.com/solutions/applications/details/qNMR-issue8.php).
+  Here, P denotes purity, I denotes integrated peak area, N denotes the number of contributing protons, M denotes molar mass, and m denotes weighed mass. Subscripts a and std identify the analyte and internal standard. The corrected integral ratio gives the analyte-to-standard mole ratio, so you can also use it to calculate analyte amount when the standard amount is known.
 
-  ### Internal standard calibration
+  ## Why relaxation delay determines integration accuracy
 
-  An internal standard places a known quantity of reference material in the same NMR tube as the analyte.
+  Relaxation delay controls whether each resonance has recovered enough longitudinal magnetization before the next scan. After a pulse, nuclei return toward equilibrium at rates described by their T1 relaxation times. A longer T1 requires more time between pulses.
 
-  1. Choose a standard with validated purity that remains stable and does not react with the sample. Its quantification peak must not overlap the analyte peak.
-  2. Weigh the analyte and standard accurately, then dissolve both in the same solvent. When the analyte and standard peaks have similar intensities, error from integrating a weak peak is less likely to dominate the result.
-  3. Acquire both signals in one spectrum under identical acquisition conditions. Keep the pulse settings and temperature constant, and allow the same relaxation time.
-  4. Integrate one suitable signal from each compound. Divide each integral by the number of nuclei represented by its signal.
-  5. Calculate the analyte quantity relative to the known amount and purity of the standard.
+  Different resonances often have different T1 values. When the recycle period is too short, a fast-relaxing proton may recover almost completely while a slow-relaxing proton remains partly saturated. The slow-relaxing peak then produces a smaller integral than its proton count warrants. Additional scans can improve signal-to-noise, but averaging cannot remove this systematic distortion.
 
-  Because both compounds experience the same acquisition conditions, their integral ratio cancels much of the instrument response. The internal method therefore avoids a separate instrument calibration factor, but the added standard may contaminate or react with a valuable sample.
+  For a 90° pulse, the recycle period should be based on the longest relevant T1 in the analyte and internal standard. The recycle period includes the acquisition time and the separate relaxation delay. Common working rules follow the exponential recovery relationship.
 
-  ### External standard calibration
+  - A period of 3 × T1 recovers about 95% of equilibrium signal and can provide [greater than 95% integration accuracy](https://nmr.chem.ucsb.edu/protocols/fast1pulse.html) under suitable conditions.
+  - A period of 5 × T1 recovers about 99.3% and supports more demanding quantitative work.
+  - A period near 7 × T1 recovers about 99.9% when the method requires minimal saturation error.
 
-  An external standard keeps the reference material physically separate from the analyte. A sealed insert can hold the reference solution inside the same tube, allowing both solutions to share the magnetic field without mixing. Separate reference and sample measurements can also support external calibration.
+  Shorter periods reduce acquisition time, but they trade integration accuracy for speed. Smaller pulse angles can lessen saturation when short delays are necessary, though the method then requires validated pulse and delay settings.
 
-  1. Prepare a reference solution with a known concentration and validated purity.
-  2. Measure the reference under controlled acquisition conditions.
-  3. Measure the analyte while keeping the relevant instrument settings consistent.
-  4. Determine a calibration factor that connects the reference response to the analyte response. External calibration may require corrections when pulse width or temperature differs between the reference and sample. Other sample-specific differences may also require correction.
-  5. Apply the calibration factor when converting the analyte integral into concentration or mass.
+  A distorted integral ratio directly biases the purity calculation. If the analyte peak relaxes more slowly than the standard peak, the calculation underestimates the analyte amount. If the standard relaxes more slowly, the calculation can overestimate it. Measuring the longest relevant T1 before setting the acquisition parameters prevents either error.
 
-  External calibration preserves the analyte, but measurement differences between the reference and sample can introduce error. You must control acquisition settings more carefully than you would in a same-tube comparison.
+  ## Worked example: calculating purity from an internal standard
 
-  For either method, replicate preparation helps reveal weighing and sample-handling variation. [A practical protocol uses three samples from the same lot and measures each sample three times](https://emerypharma.com/blog/a-guide-to-quantitative-nmr-qnmr/).
+  The following calculation illustrates the method and does not represent a validated assay result. A 15.00 mg analyte sample falls within the [typical 10 to 20 mg range](https://emerypharma.com/blog/a-guide-to-quantitative-nmr-qnmr/) for small-molecule qNMR.
 
-  ## Why Relaxation Delay Determines Accuracy
+  | Parameter | Analyte | Maleic acid standard |
+  | --- | --- | --- |
+  | Mass | 15.00 mg | 9.50 mg |
+  | Molar mass | 180.16 g/mol | 116.07 g/mol |
+  | Quantified protons | 2 | 2 |
+  | Integral | 1.003 | 1.000 |
+  | Certified purity | Not known | 99.5% |
 
-  Relaxation delay controls whether peak integrals accurately represent the number of nuclei in a sample. After each radiofrequency pulse, nuclear magnetization needs time to return to equilibrium. A subsequent pulse applied too soon measures partially recovered signals. Because analyte and standard peaks can have different T1 relaxation times, incomplete recovery suppresses their integrals by different amounts and biases the purity calculation.
+  Using the internal-standard equation established above, the purity calculation becomes
 
-  A [USP <1220> case study](https://www.americanpharmaceuticalreview.com/Featured-Articles/596327-Application-of-USP-General-Chapter-1220-in-the-Development-of-a-Procedure-for-Quantitative-NMR/) identified tip angle and relaxation delay as the acquisition parameters with the greatest effects on accuracy and precision. Short delays combined with high tip angles produced measured mass fractions of 91 to 98 percent for material with a reference value near 100 percent. Longer delays produced values of 99 to 100 percent across the tested tip angles, with negligible bias.
+  **Purity = (1.003 ÷ 1.000) × (2 ÷ 2) × (180.16 ÷ 116.07) × (9.50 ÷ 15.00) × 0.995**
 
-  Measure T1 for the analyte and reference signals, then base the delay on the longest value. The USP control strategy specifies a delay of at least five times the longest T1 and a calibrated 90-degree tip angle. Some protocols use a more conservative delay of about [seven times T1](https://emerypharma.com/blog/a-guide-to-quantitative-nmr-qnmr/). Five T1 periods allow about 99.3 percent recovery, while seven allow about 99.9 percent.
+  **Purity = 0.9811, or 98.11%**
 
-  A clean spectrum does not confirm complete relaxation. Additional scans can improve signal-to-noise, but they cannot correct systematic saturation caused by an inadequate delay. qNMR purity results therefore depend on validated acquisition settings rather than simply collecting and integrating a spectrum.
+  The proton-count term equals one because both selected signals represent two protons. The near-equal integrals also indicate that the analyte and standard signals have similar intensities, which reduces relative integration error.
 
-  ## Calculating Purity from a qNMR Spectrum
+  The calculation assumes complete dissolution, accurate weighing, adequate relaxation, and non-overlapping peaks. It also assumes that the spectrum met the previously stated signal-to-noise target and used a sufficiently wide integration window. A validated result would document those conditions and include replicate measurements or another suitable precision assessment.
 
-  The purity calculation compares the analyte signal with a known standard while correcting for proton count, molar mass, and weighed mass. When the internal standard is 100 percent pure, use the following equation.
+  ## Where qNMR is used
 
-  **P = (I<sub>a</sub> / I<sub>std</sub>) × (N<sub>std</sub> / N<sub>a</sub>) × (M<sub>a</sub> / M<sub>std</sub>) × (m<sub>std</sub> / m<sub>a</sub>)**
+  qNMR supports purity assignment when the result must connect to SI units through certified standards and mass measurements. The [BIPM describes qNMR](https://www.bipm.org/en/organic-analysis/qnmr) as a potential primary reference measurement procedure and publishes internal-standard reference data for suitable certified materials. Its 2023 IUPAC technical report also sets out methods for assigning SI-traceable purity values to organic compounds.
 
-  I<sub>a</sub> and I<sub>std</sub> are the integrated analyte and standard signals. Both peaks must remain separate from other signals, and phasing and baseline correction must preserve their areas. A signal-to-noise ratio near 250 supports precision below 1 percent, while an integration range equal to about 64 times the peak width at half height captures roughly 99 percent of the signal area [under recommended acquisition conditions](https://emerypharma.com/blog/a-guide-to-quantitative-nmr-qnmr/).
+  | Application | How qNMR is used | Accuracy requirement |
+  | --- | --- | --- |
+  | Purity determination | Laboratories compare an analyte signal with a certified internal standard to assign mass-fraction purity without a matched analyte standard. | Complete relaxation and accurate integration must preserve the molar signal ratio. |
+  | Pharmaceutical QC and reference-standard certification | Analysts assay active ingredients, characterize impurities, and assign values to reference materials used in later tests. | A sufficiently long relaxation delay prevents compounds with different T1 values from producing biased purity results. |
+  | Natural products and food authenticity | Analysts quantify compounds such as carminic acid, quercetin, and other chemical markers in complex extracts. Measured concentrations can support label checks and authenticity assessments. | Resolved peaks, adequate signal strength, and complete relaxation allow reliable comparison with the internal standard. |
 
-  N<sub>a</sub> and N<sub>std</sub> represent the number of equivalent nuclei producing each integrated signal. For example, an analyte peak representing three protons and a standard peak representing two protons require a correction factor of 2/3. M<sub>a</sub> and M<sub>std</sub> are the respective molar masses.
+  Published standards provide a common measurement framework. [ISO 24583](https://www.jeol.com/products/scientific/nmr/qnmr_index.php) specifies general requirements for proton qNMR purity determination of organic compounds used in foods, while Japan’s JIS K 0138 covers quantitative NMR practice. Both standards reinforce the same analytical principle. Reliable applications depend on integrals that accurately represent the number of observed nuclei.
 
-  m<sub>a</sub> and m<sub>std</sub> are the weighed masses. Accurate purity calculation requires recorded masses rather than nominal preparation values. Small-molecule assays commonly use samples weighing 10 to 20 mg weighed on a microbalance with 0.001 mg readability. If the standard is not 100 percent pure, the calculation must also include its certified mass fraction.
+  ## qNMR versus HPLC: a parameter comparison
 
-  For a simple example, suppose I<sub>a</sub>/I<sub>std</sub> = 1.20, N<sub>std</sub>/N<sub>a</sub> = 2/3, M<sub>a</sub>/M<sub>std</sub> = 1.50, and m<sub>std</sub>/m<sub>a</sub> = 10/12. Multiplying the four ratios gives 1.00, or 100 percent purity before any correction for standard purity.
+  qNMR reduces calibration and reference-standard requirements, while HPLC and GC provide chromatographic separation for targeted assays.
 
-  Using ¹H qNMR and an internal calibrant, the study measured butyl p-hydroxybenzoate at [99.6 percent purity with an expanded uncertainty of 0.6 percent](https://www.americanpharmaceuticalreview.com/Featured-Articles/596327-Application-of-USP-General-Chapter-1220-in-the-Development-of-a-Procedure-for-Quantitative-NMR/). The calibrant’s certified purity contributed more uncertainty than weighing or peak integration, so reference-standard quality directly limits the final result.
+  | Parameter | qNMR | HPLC or GC |
+  | --- | --- | --- |
+  | Calibration requirement | Uses integral ratios without a calibration curve | Requires a calibration curve |
+  | Reference standard specificity | Can use an unrelated certified compound | Typically requires a matched analyte standard |
+  | Traceability basis | Supports [SI-traceable purity assignment](https://www.bipm.org/en/organic-analysis/qnmr) through a certified internal standard | Relies on the calibration standard and validated method |
+  | Typical turnaround | Common laboratory service takes [three to five business days](https://numegalabs.com/quantnmr.html) | Varies by method, calibration work, and laboratory capacity |
+  | Typical use case | Absolute purity assignment, reference-standard certification, and natural-product quantification | Targeted assays and separation of mixture components |
 
-  ## What qNMR Is Used For
+  ## Where AI changes the qNMR workflow
 
-  ### Purity and reference materials
+  AI can shorten qNMR turnaround by automating spectral interpretation after sample preparation and acquisition. At [Rombo AI](https://rombo.ai), we can reduce turnaround measured in weeks to about 15 minutes. Our model identifies analyte and internal-standard peaks, checks integrations, and applies the purity calculation faster than manual peak picking.
 
-  qNMR determines the mass fraction of a compound by comparing its corrected peak integral with a known standard. Because nuclei of the same isotope produce a consistent molar response, the standard does not need to be chemically identical to the analyte. Laboratories can use this property to assess small-molecule purity and assign values to reference materials without preparing a compound-specific calibration curve.
+  At Rombo AI, we pre-train our foundation model on millions of spectra. Broad pretraining helps the model interpret new sample types and instrument data with less application-specific calibration than traditional chemometric models. Faster interpretation can improve consistency, but AI cannot correct poor weighing, incomplete relaxation, low signal-to-noise ratio, or unsuitable reference peaks.
 
-  ### Pharmaceutical quality control
+  Regulatory-grade qNMR still requires a certified internal standard and documented acquisition parameters. The calculation must preserve SI-traceable mass ratios, known proton counts, and validated integration rules. You must also retain spectra and processing records for review.
 
-  Pharmaceutical laboratories use qNMR for quality control. They verify active pharmaceutical ingredient purity and dosage, and they monitor reactions or formulations. USP chapters <761> and <1761> cover NMR, while the [USP <1220> lifecycle framework](https://www.americanpharmaceuticalreview.com/Featured-Articles/596327-Application-of-USP-General-Chapter-1220-in-the-Development-of-a-Procedure-for-Quantitative-NMR/) reflects concepts in ICH Q14. USP <1220> begins with procedure design and performance qualification. Ongoing verification then checks whether the method continues to meet its analytical target and measurement uncertainty requirements.
-
-  Regulated qNMR methods also depend on metrological traceability. Certified reference materials provide documented purity and uncertainty traceable to SI mass units. You must support those values with calibrated balances and qualified instruments. You must also document the uncertainty budget. Acquisition controls such as an adequate relaxation delay remain part of that evidence because biased integrals produce biased purity results.
-
-  ### Natural products and food authenticity
-
-  qNMR can measure several mixture components in one spectrum, which suits foods and natural extracts containing many related compounds. Researchers use qNMR to check the authenticity of foods such as honey and wine. They also use it to measure beverage sugars and the fatty acid composition of oils. Spectral patterns can reveal both expected constituents and unexpected additions without requiring a separate assay for each compound.
-
-  Researchers can prepare moisture-sensitive or air-sensitive compounds in a glovebox and analyze them in sealed screw-cap tubes. qNMR can also quantify diastereomer ratios without an internal standard when suitable non-overlapping signals represent each form. These uses sit alongside forensic analysis and broader [natural-product quantification](https://emerypharma.com/blog/a-guide-to-quantitative-nmr-qnmr/).
-
-  ## Where Traditional qNMR Workflows Slow Labs Down
-
-  Traditional qNMR workflows slow down when each spectrum requires several linked judgment calls from an experienced analyst. The analyst first selects a suitable standard and identifies nonoverlapping signals. The analyst then measures the longest relevant T1 and sets a repetition delay that permits adequate relaxation. Errors in signal selection or repetition delay can bias the integrals and force the analyst to repeat the acquisition before calculating purity.
-
-  Spectral processing adds further review. Analysts must correct phase and baseline errors because both can distort integral values, and [JEOL still recommends manual visual inspection](https://www.jeol.com/solutions/applications/details/qNMR-issue8.php). They also review peak overlap and integration boundaries rather than accepting every automated result.
-
-  Analysts lose time when they repeat acquisition or processing and then send the result for quality review. An unsuitable signal or repetition delay can require a new acquisition, while a questionable baseline can send the spectrum back for reprocessing. Quality reviewers add another handoff because they must document each correction and calculation. If your laboratory has limited qNMR expertise or instrument capacity, repeated acquisition and review can extend turnaround to several weeks. Reducing that delay requires fewer manual decisions without weakening the traceability of the final purity result.
-
-  ## How Rombo Applies AI to qNMR Analysis
-
-  [Rombo](https://rombo.ai) says it trained its foundation model on millions of spectra to reduce manual qNMR review. The platform proposes phase corrections and integration boundaries, then evaluates whether acquisition settings such as relaxation delay support quantitative analysis. An experienced spectroscopist often inspects each spectrum and revises its phase corrections or integration boundaries.
-
-  The model speeds up review by applying learned spectral patterns to new measurements. Its training allows it to interpret spectra across different instruments and sample types without requiring a separate model for every configuration. Rombo reports results in as little as 15 minutes for analyses that can otherwise involve weeks of expert review.
-
-  Faster analysis cannot compensate for an inadequate qNMR acquisition. If a short relaxation delay suppresses an analyte signal, software cannot reconstruct the missing quantitative response. Rombo can identify questionable conditions and direct the spectrum toward review or reacquisition instead of treating every output as valid.
-
-  Your laboratory must still apply the accuracy criteria and reference controls required for USP and ICH work. It must also maintain the required validation and audit procedures. Rombo automates repeatable interpretation steps while keeping those acceptance criteria in place. The model reduces analyst time without lowering the standard required for a defensible purity result.
+  Bruker and Mestrelab support qNMR acquisition and processing through instrument and software workflows that often rely on expert parameter selection and manual review. At Rombo AI, we add model-based interpretation to those established measurement principles rather than replacing them.
 
   ## FAQs
 
-  - **How accurate is qNMR compared with HPLC or GC?** qNMR can achieve precision below 1% when the spectrum reaches a [signal-to-noise ratio near 250](https://emerypharma.com/blog/a-guide-to-quantitative-nmr-qnmr/). The method must allow complete relaxation and account for errors in integration and weighing. Rombo automates spectrum analysis while retaining the validation and review needed for pharmaceutical quality control. HPLC and GC can reach comparable precision, but they usually require compound-specific calibration curves.
-  - **Does qNMR require a reference standard identical to the analyte?** qNMR requires a reference with known purity, but the reference does not need to match the analyte chemically. Rombo can calculate concentration from the relative integrals once the method defines the standard, molar masses, proton counts, and sample masses. You can therefore use a suitable certified reference material whose signal does not overlap the analyte.
-  - **What nuclei besides ¹H can qNMR measure?** qNMR can measure ¹³C as well as ¹⁹F and ³¹P. Rombo workflows must apply nucleus-specific acquisition parameters and validation criteria when processing those spectra. Choose the nucleus based on its sensitivity and natural abundance, then confirm that its signals are separate and suitable for the sample’s chemical composition.
-  - **How long does a qNMR purity assay typically take?** Sample preparation and spectral acquisition often set the minimum assay time, while processing and review add to it. Traditional expert-led analysis may extend turnaround to days or weeks, while Rombo processes suitable spectra in minutes. Completion time increases with longer scans and relaxation delays, and complex samples or laboratory approvals add further time.
+  ### Why doesn’t qNMR need a matched reference standard?
 
-  ## Key Takeaway
+  qNMR compares integrated signals according to the number of contributing nuclei. At Rombo AI, we apply this ratio principle without requiring the standard to match the analyte. You can quantify compounds that lack dedicated reference materials.
 
-  qNMR derives quantity directly from NMR signal area and a reference, so analysts can achieve traceable purity measurements without building a compound-specific calibration curve. Accuracy requires complete relaxation and controlled acquisition, plus reference values supported by documented purity and uncertainty. Manual interpretation and review often set turnaround time. AI-assisted analysis can shorten that work by checking spectra and calculations more quickly while preserving the same acceptance criteria.
+  ### What internal standards are commonly used?
+
+  Common standards include maleic acid, dimethyl sulfone, and ethylene carbonate. With Rombo AI, you still need a stable, certified standard with a resolved signal. Proper selection supports traceable purity calculations.
+
+  ### What happens if relaxation delay is too short?
+
+  A short delay suppresses signals from slower-relaxing nuclei. Even with Rombo AI, we cannot correct an integral whose acquisition parameters caused unknown saturation. Adequate delay keeps signal ratios proportional to nucleus counts.
+
+  ### Is qNMR accepted for pharmaceutical regulatory submissions?
+
+  Validated qNMR can support pharmaceutical purity and reference-standard data, subject to the relevant authority’s requirements. Using Rombo AI still requires documented acquisition, calculation, and review controls. This approach can shorten analysis time while maintaining an auditable method.
+
+  ### How does qNMR differ from an HPLC purity assay?
+
+  qNMR measures nucleus-count ratios, while HPLC usually compares detector response against calibration standards. Rombo AI uses our models to interpret spectra rather than chromatographic peak responses. qNMR can determine absolute purity without a matched analyte standard.
 ---
