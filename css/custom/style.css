@@ -1973,6 +1973,33 @@ label.ckb input:checked ~ span.checkmark::after {
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(254, 144, 15, 0.3);
 }
+/* Article hero sits on a light background. `.titolo-1 *` forces white text,
+   which made the breadcrumb invisible. Override that for this trail only. */
+.hero-article-section .article-breadcrumb {
+    background: transparent;
+    padding: 0;
+    margin-bottom: 0;
+    font-size: 13px;
+    text-align: left;
+}
+.hero-article-section .article-breadcrumb .breadcrumb-item,
+.hero-article-section .article-breadcrumb .breadcrumb-item a,
+.hero-article-section .article-breadcrumb .breadcrumb-item.active {
+    color: #6d6e76;
+}
+.hero-article-section .article-breadcrumb .breadcrumb-item a {
+    text-decoration: none;
+}
+.hero-article-section .article-breadcrumb .breadcrumb-item a:hover {
+    color: #fe900f;
+}
+.hero-article-section .article-breadcrumb .breadcrumb-item.active {
+    color: #232536;
+}
+.hero-article-section .article-breadcrumb .breadcrumb-item + .breadcrumb-item::before {
+    color: #c4c4c8;
+}
+
 .posted_label,
 .posted_label * {
     box-sizing: border-box;
