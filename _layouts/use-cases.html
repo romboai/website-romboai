@@ -38,6 +38,11 @@
           <p class="titolo-1-span2 text-highlight">
             {{ page.hero_subtitle }}
           </p>
+          {%- if page.hero_cta_label and page.hero_cta_link %}
+          <div class="mt-4">
+            {% include ui/button.html href=page.hero_cta_link label=page.hero_cta_label class="button-lg" location=page.hero_cta_location %}
+          </div>
+          {%- endif %}
         </div>
       </div>
     </div>

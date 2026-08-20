@@ -18,7 +18,16 @@ Usage:
   {%- assign href_is_contact = true -%}
 {%- endif -%}
 
-<a class="button text-decoration-none {{ extra_class }}" href="{% if href_is_external %}{{ href }}{% else %}{{ href | relative_url }}{% endif %}" style="{{ extra_style }}"{% if href_is_contact %} data-cta-location="{{ include.location | default: 'button' }}"{% endif %}>
+{%- assign link_target = include.target | default: "" -%}
+{%- assign link_rel = include.rel | default: "" -%}
+{%- if href_is_external and link_target == "" -%}
+  {%- assign link_target = "_blank" -%}
+{%- endif -%}
+{%- if href_is_external and link_rel == "" -%}
+  {%- assign link_rel = "noopener noreferrer" -%}
+{%- endif -%}
+
+<a class="button text-decoration-none {{ extra_class }}" href="{% if href_is_external %}{{ href }}{% else %}{{ href | relative_url }}{% endif %}" style="{{ extra_style }}"{% if href_is_contact %} data-cta-location="{{ include.location | default: 'button' }}"{% endif %}{% if link_target != "" %} target="{{ link_target }}"{% endif %}{% if link_rel != "" %} rel="{{ link_rel }}"{% endif %}>
   <span class="text-container"><span class="button-text">{{ include.label }}</span></span>
 </a>
 

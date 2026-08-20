@@ -467,6 +467,12 @@
         align-items: center;
     }
 
+    .nav-cta {
+        margin: 8px 10px 12px;
+        justify-content: center;
+        min-height: 44px;
+    }
+
     .dropdown-item {
         min-height: 48px;
         display: flex;

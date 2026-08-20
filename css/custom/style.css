@@ -947,6 +947,13 @@ label.ckb input:checked ~ span.checkmark::after {
     line-height: 1.4;
     padding-left: 100px;
 }
+.footer-text a {
+    color: #007bff;
+    text-decoration: none;
+}
+.footer-text a:hover {
+    text-decoration: underline;
+}
 
 /* Menu*/
 .menu-item {
@@ -955,6 +962,24 @@ label.ckb input:checked ~ span.checkmark::after {
     font-weight: 500;
     line-height: 1; /* 16px line height / 16px font size = 1 */
     text-align: left;
+}
+
+.nav-cta {
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    color: #ffffff !important;
+    background: #fe900f;
+    border-radius: 50px;
+    padding: 8px 18px !important;
+    margin-left: 8px;
+    line-height: 1;
+}
+.nav-cta:hover,
+.nav-cta:focus {
+    background: #e67e00;
+    color: #ffffff !important;
 }
 
 .custom-shadow {
@@ -1934,6 +1959,17 @@ label.ckb input:checked ~ span.checkmark::after {
     letter-spacing:  0.5px;
     font-weight:  500;
     position: relative;
+}
+
+.button.button-lg {
+    height: auto;
+    min-height: 64px;
+    width: auto;
+    padding: 18px 36px;
+}
+.button.button-lg .button-text {
+    font-size: 18px;
+    letter-spacing: 0.4px;
 }
 
 /*Article*/
