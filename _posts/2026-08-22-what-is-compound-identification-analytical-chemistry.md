@@ -7,7 +7,7 @@ layout: article
 image: /img/blog/compound-identification-nmr-laboratory-2026-08-22.jpg
 image_alt: Nuclear magnetic resonance laboratory with spectrometers used to identify organic compounds
 image_caption: 'An NMR laboratory used to study the arrangement of hydrogen and carbon atoms in organic compounds. Photo: <a href="https://commons.wikimedia.org/wiki/File:Nuclear_Magnetic_Resonance_Laboratory.jpg" rel="noopener noreferrer" target="_blank">Shandchem</a>, via Wikimedia Commons, <a href="https://creativecommons.org/licenses/by/2.0/" rel="license noopener noreferrer" target="_blank">CC BY 2.0</a>.'
-author: 'Silvia Bongiovanni [BD Representative, Rombo AI]'
+author: 'Martina [Marketing Specialist, Rombo AI]'
 excerpt: Compound identification determines which substance produced an analytical signal. Learn how NMR, MS, IR, and GC-MS contribute and how laboratories establish confidence.
 markdown_content: |-
   ## TL;DR
