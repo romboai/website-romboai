@@ -1521,11 +1521,67 @@ label.ckb input:checked ~ span.checkmark::after {
     text-decoration-thickness: 2px;
 }
 
+/* Blog article tables: make dense technical comparisons easier to scan. */
+.hero-article-section .markdown-content table {
+    width: min(960px, calc(100vw - 3rem));
+    margin: 1.5rem 0;
+    border: 1px solid #8a909b;
+    border-collapse: collapse;
+    background: #ffffff;
+    color: #232536;
+    font-size: 16px;
+    line-height: 1.5;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.hero-article-section .markdown-content th,
+.hero-article-section .markdown-content td {
+    padding: 0.75rem 0.875rem;
+    border: 1px solid #8a909b;
+    text-align: left;
+    vertical-align: top;
+    overflow-wrap: break-word;
+    word-break: normal;
+}
+
+.hero-article-section .markdown-content th:first-child,
+.hero-article-section .markdown-content td:first-child {
+    width: 15rem;
+    min-width: 15rem;
+}
+
+.hero-article-section .markdown-content thead th {
+    background: #eef0f3;
+    color: #232536;
+    font-family: "Inter-Bold", "Inter-Regular", sans-serif;
+    font-weight: 700;
+}
+
+.hero-article-section .markdown-content tbody tr:nth-child(even) {
+    background: #f8f9fa;
+}
+
 /* Mobile typography tweaks */
 @media (max-width: 767px) {
     body { font-size: 16px; }
     .markdown-content { font-size: 16px; }
     .markdown-content p, .markdown-content li { font-size: 16px; }
+    .hero-article-section .markdown-content table {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        margin-left: 0;
+        overflow-x: auto;
+        left: auto;
+        transform: none;
+        -webkit-overflow-scrolling: touch;
+    }
+    .hero-article-section .markdown-content th,
+    .hero-article-section .markdown-content td {
+        min-width: 14rem;
+    }
 }
 
 
