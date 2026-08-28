@@ -5,7 +5,7 @@ permalink: /blog/rose_foundation_model_NMR_spectral_data
 layout: article
 image: /img/Screenshot 2026-08-14 at 11.30.52.png
 image_alt: AI-generated Image
-author: 'Silvia Bongiovanni [BD Representative, Rombo AI]'
+author: 'Martina [Marketing Specialist, Rombo AI]'
 excerpt: 'Most NMR deep learning models train an encoder and task head together for a particular endpoint, field strength, or instrument regime. Performance can decline when spectra come from hardware outside that training distribution. Powered by a single 9.9M-parameter Vision Transformer, ROSE instantly captures instrument-agnostic chemical identity, delivering match-grade accuracy across classification and structure retrieval with little-to-no fine-tuning.'
 markdown_content: |-
   ROSE is a spectrum foundation model pretrained on 3.2 million experimental, simulated, and benchtop proton NMR spectra. Its multi-B0 pairing objective brings representations of the same molecule closer across field strengths. Evaluation uses molecular identities excluded entirely from pretraining, which tests transfer rather than memorization.
