@@ -1,9 +1,8 @@
 ---
 title: 'Generalization Across NMR Instruments: A Foundation Model Pre-Trained on Spectral Data'
-date: 2026-08-09T22:00:00.000Z
+date: 2026-08-28T09:00:00.000Z
 permalink: /blog/rose_foundation_model_NMR_spectral_data
 layout: article
-published: false
 image: /img/Screenshot 2026-08-14 at 11.30.52.png
 image_alt: AI-generated Image
 author: 'Silvia Bongiovanni [BD Representative, Rombo AI]'
@@ -12,6 +11,12 @@ markdown_content: |-
   ROSE is a spectrum foundation model pretrained on 3.2 million experimental, simulated, and benchtop proton NMR spectra. Its multi-B0 pairing objective brings representations of the same molecule closer across field strengths. Evaluation uses molecular identities excluded entirely from pretraining, which tests transfer rather than memorization.
 
   The resulting encoder supports low-field classification, structure-to-spectrum prediction, peak detection, denoising, and spectrum-to-structure retrieval through a shared representation. ROSE handles adaptation at three levels. Pretrained task heads require no new training, lightweight heads train against a frozen spectral trunk, and difficult retrieval tasks use short fine-tuning of the full encoder.
+
+  **Paper, code, and weights**
+
+  - Preprint: [ROSE on ChemRxiv](https://chemrxiv.org/doi/full/10.26434/chemrxiv.15007823/v1)
+  - Code: [github.com/romboai/rose-1h-nmr](https://github.com/romboai/rose-1h-nmr)
+  - Model weights: [huggingface.co/romboai/rose-1h-nmr](https://huggingface.co/romboai/rose-1h-nmr)
 
   ## Model architecture and pretraining corpus
 
@@ -129,6 +134,7 @@ markdown_content: |-
   10. Hu, F., et al. “Structure Elucidation via Multitask Machine Learning.” *ACS Central Science*, 2024.
   11. Jin, W., et al. “NMR-Solver.” *arXiv*, 2025.
   12. Yang, et al. “UltraNMR.” *arXiv*, 2026.
+  13. Rombo AI. “ROSE: a Foundation Model for Reusable One-dimensional Spectrum Embeddings in ¹H NMR.” *ChemRxiv*. [doi:10.26434/chemrxiv.15007823](https://chemrxiv.org/doi/full/10.26434/chemrxiv.15007823/v1). Code: [GitHub](https://github.com/romboai/rose-1h-nmr). Weights: [Hugging Face](https://huggingface.co/romboai/rose-1h-nmr).
 
   ## FAQs
 
