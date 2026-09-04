@@ -1,5 +1,5 @@
 ---
-title: 'Ricostruire una molecola dai suoi echi: cosa abbiamo imparato costruendo un agente per la structure elucidation'
+title: Cosa abbiamo imparato costruendo un agente per la structure elucidation
 date: 2026-09-04T00:00:00.000Z
 permalink: /blog/agent_structure_elucidation
 layout: article
@@ -8,7 +8,7 @@ image_alt: Image generated with AI
 author: Carmine Mattia
 excerpt: |
   Cosa abbiamo imparato costruendo un agente AI per la structure elucidation tramite NMR? Una riflessione su autonomia, overthinking e su come l'IA stia trasformando la risoluzione di problemi specialistici e la formulazione delle domande scientifiche.
-markdown_content: |+
+markdown_content: |
   Qualche mese fa abbiamo iniziato a lavorare a un agente AI per la structure elucidation tramite NMR.
 
   Poi Anthropic ha pubblicato Making Claude a chemist. [1]
