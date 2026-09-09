@@ -226,6 +226,7 @@ export default defineConfig({
               "privacy",
               "product",
               "voucher",
+              "smart-start",
               "blog",
               "default_landing",
             ],
