@@ -128,11 +128,11 @@ markdown_content: |-
 
   Learned systems can compare spectra through representations that capture more than hand-selected peaks, rank structures beyond exact library matches, and expose a scored shortlist for expert review. They also introduce familiar confidence problems: training-set overlap, class imbalance, domain shift, out-of-distribution inputs, and overconfident predictions.
 
-  Spectra AI is a distinct Rombo product line for compound identification, separate from the broader NMR AI platform. Its public compound-identification page describes an NMR workflow that highlights discriminating patterns and returns ranked candidate structures with confidence scores, while the chemist retains the final decision ([Rombo AI compound identification](https://rombo.ai/use-cases/nmr-compound-identification/)).
+  Spectra is Rombo AI’s agent for NMR analysis, distinct from Rombo AI Platform. Its public compound-identification page describes an NMR workflow that highlights discriminating patterns and returns ranked candidate structures with confidence scores, while the chemist retains the final decision ([Rombo AI compound identification](https://rombo.ai/use-cases/nmr-compound-identification/)).
 
   The review questions remain the same: What does the score mean? Was it calibrated on independent data? Does calibration hold across the relevant instruments and sample types? How does the system signal that an unknown is outside its experience? Which spectral features support the rank, and what experiment would separate the leading candidates?
 
-  To evaluate a scored NMR shortlist on a compound-identification case, [analyze a spectrum with Spectra AI](https://spectra.rombo.ai). Treat the result as prioritized evidence for chemist review, not as automatic confirmation.
+  To evaluate a scored NMR shortlist on a compound-identification case, [analyze a spectrum with Spectra](https://spectra.rombo.ai). Treat the result as prioritized evidence for chemist review, not as automatic confirmation.
 
   ## FAQs
 

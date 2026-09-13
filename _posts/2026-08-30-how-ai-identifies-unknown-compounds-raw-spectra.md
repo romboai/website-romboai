@@ -111,9 +111,9 @@ markdown_content: |-
 
   The progression from rules to task-specific models to foundation models is a progression in reuse. A foundation model learns a shared spectral representation before a laboratory supplies every downstream label. Rombo AI describes its broader NMR platform as pre-trained on millions of spectra and designed to generalize across instruments and sample types rather than requiring a separate traditional chemometric recalibration for each instrument.
 
-  Spectra AI is a distinct product line for compound identification and full structure elucidation, separate from Rombo AI’s general NMR platform. Rombo reports an analysis workflow of approximately 15 minutes for work that can otherwise take weeks; the claim should be validated against each laboratory’s samples, instruments, file formats, review requirements, and confirmation standard.
+  Spectra is Rombo AI’s AI agent for NMR analysis, distinct from Rombo AI Platform. Rombo reports an analysis workflow of approximately 15 minutes for work that can otherwise take weeks; the claim should be validated against each laboratory’s samples, instruments, file formats, review requirements, and confirmation standard.
 
-  For an evaluation, ask to see the path from original files to ranked candidates, the alternatives and evidence behind the result, and performance on held-out spectra from the laboratory’s own operating conditions. [Explore Spectra AI for compound identification](https://spectra.rombo.ai/).
+  For an evaluation, ask to see the path from original files to ranked candidates, the alternatives and evidence behind the result, and performance on held-out spectra from the laboratory’s own operating conditions. [Explore Spectra for compound identification](https://spectra.rombo.ai/).
 
   ## FAQs
 

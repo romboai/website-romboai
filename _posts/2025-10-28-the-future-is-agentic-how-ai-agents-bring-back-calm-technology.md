@@ -5,7 +5,7 @@ date: 2025-10-28T01:00:00.000Z
 permalink: /blog/the-future-is-agentic/
 layout: article
 image: /img/1761645962162.jpeg
-image_alt: Image generated with AI
+image_alt: "AI agent coordinating background tasks through a calm, human-centered interface"
 author: Andrea Zanda
 description: "From calm technology to agentic AI: how intelligent systems can bring focus back to spectroscopy workflows."
 excerpt: >-

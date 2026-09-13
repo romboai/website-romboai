@@ -3,8 +3,11 @@ title: Why Maturity Tiers Matter for Choosing Spectral Software
 date: 2026-08-12T22:00:00.000Z
 permalink: /blog/article-spectral-software-tiers
 layout: article
-image: /img/Screenshot 2026-08-14 at 10.41.25.png
-image_alt: AI-generated Image
+image: /img/blog/spectral-software-maturity-784.webp
+image_srcset: "/img/blog/spectral-software-maturity-600.webp 600w, /img/blog/spectral-software-maturity-784.webp 784w"
+image_width: 784
+image_height: 530
+image_alt: "Progression from basic spectral processing to AI-assisted analytical decisions"
 author: 'Silvia Bongiovanni [BD Representative, Rombo AI]'
 excerpt: 'Choosing software for Nuclear Magnetic Resonance (NMR) and spectroscopy analysis requires evaluating how much manual interpretation the system automates before a chemist steps in. Brand recognition or hardware compatibility alone are unreliable buying metrics: a vendor that excels at high-throughput screening of known compounds may lack the tools needed to resolve complex novel structures. In this article, some indications to guide your evaluation.'
 markdown_content: |

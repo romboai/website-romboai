@@ -1,6 +1,6 @@
 ---
-title: 'Integrating Spectra API into Laboratory Data Pipelines'
-seo_title: 'Integrating Spectra API into Laboratory Data Pipelines | Rombo AI'
+title: 'Integrating Spectra into Laboratory Data Pipelines'
+seo_title: 'Integrating Spectra into Laboratory Data Pipelines | Rombo AI'
 date: 2026-09-08T01:10:00.000Z
 permalink: /blog/spectra-api-laboratory-data-pipeline-integration
 layout: article
@@ -8,7 +8,7 @@ image: /img/blog/spectra-api-laboratory-data-pipeline-integration.jpg
 image_alt: Robotic arms transferring samples in an autonomous chemistry laboratory
 image_caption: 'Robotic equipment for sample preparation, furnace handling, retrieval, and characterization. Image: <a href="https://commons.wikimedia.org/wiki/File:Robotic_installations_for_sample_transfer_in_the_A-Lab_(inorganic_chemistry_autonomous_laboratory).webp" rel="noopener noreferrer" target="_blank">Nathan J. Szymanski et al., via Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by/4.0/" rel="license noopener noreferrer" target="_blank">CC BY 4.0</a>. Cropped by Rombo AI.'
 author: 'Martina [Marketing Specialist, Rombo AI]'
-excerpt: A practical architecture for connecting Spectra API to instrument exports, batch queues, LIMS records, review steps, and traceable compound-identification results.
+excerpt: A practical architecture for connecting Spectra to instrument exports, batch queues, LIMS records, review steps, and traceable compound-identification results.
 markdown_content: |-
   ## TL;DR
 
@@ -17,11 +17,11 @@ markdown_content: |-
   - **Use stable identifiers across every system.** A LIMS sample ID, acquisition ID, analysis-job ID, result ID, and product version should remain linked without relying on filenames.
   - **Treat ranked candidates and confidence as structured evidence.** Store the complete returned result, not only the top candidate, and route low-confidence or technically invalid cases to a chemist.
   - **Design retries to be safe.** Network timeouts must not create duplicate analyses. Idempotency, explicit states, bounded retries, and a dead-letter path are operational requirements.
-  - **Do not infer undocumented Spectra API behavior.** Confirm authentication, endpoints, supported formats, payload limits, batch semantics, result schema, retention, and service limits against the current product documentation before implementation.
+  - **Do not infer undocumented Spectra API behavior.** API access is an interface to Spectra, not a separate product. Confirm authentication, endpoints, supported formats, payload limits, batch semantics, result schema, retention, and service limits against the current documentation before implementation.
 
   A laboratory integration succeeds when a result can be traced to the exact sample, acquisition, original data, transformation, software version, and reviewer decision. An API response is only one step.
 
-  Spectra API is Rombo’s distinct product line for programmatic compound identification and structure-elucidation workflows. It is separate from Rombo AI’s broader NMR platform for material and mixture analysis. This article presents an integration architecture for technical teams; it does not claim that a particular endpoint, connector, file format, webhook, or LIMS integration is currently available. Those details must be mapped to the current Spectra API contract.
+  Spectra is Rombo AI’s AI agent for NMR analysis. API access is an interface to Spectra, not a separate product, and Spectra remains distinct from Rombo AI Platform. This article presents an integration architecture for technical teams; it does not claim that a particular endpoint, connector, file format, webhook, or LIMS integration is currently available. Those details must be mapped to the current Spectra contract.
 
   ## Start with the laboratory record, not the API call
 
@@ -56,7 +56,7 @@ markdown_content: |-
 
   This design deliberately separates instrument acquisition from cloud communication. Instrument-control computers are often long-lived, change-controlled, or isolated. NIST’s roadmap notes both proprietary instrument formats and the need to protect instrument-control systems; it describes extraction and transformation services as part of the data “plumbing,” rather than assuming every instrument communicates directly with every analysis service.
 
-  Standard formats can reduce adapter work, but they do not make records self-explanatory. IUPAC describes [JCAMP-DX](https://iupac.org/what-we-do/digital-standards/jcamp-dx/) as a standard family for exchanging spectral data, including an NMR specification. A converted spectrum still needs acquisition metadata, units, nucleus, referencing, processing history, and links to the original vendor data. Confirm whether the current Spectra API accepts a vendor export, JCAMP-DX, another normalized representation, or a combination; do not rename or flatten files until that contract is known.
+  Standard formats can reduce adapter work, but they do not make records self-explanatory. IUPAC describes [JCAMP-DX](https://iupac.org/what-we-do/digital-standards/jcamp-dx/) as a standard family for exchanging spectral data, including an NMR specification. A converted spectrum still needs acquisition metadata, units, nucleus, referencing, processing history, and links to the original vendor data. Confirm whether the current Spectra API interface accepts a vendor export, JCAMP-DX, another normalized representation, or a combination; do not rename or flatten files until that contract is known.
 
   ## Define the job state machine before batching
 
@@ -74,9 +74,9 @@ markdown_content: |-
   | Schema mismatch | Preserve response; block write-back | API version, schema version, validation errors | Integration owner investigates contract change |
   | Low-confidence or conflicting candidates | Route to scientific review | Full ranked output and warnings | Chemist chooses follow-up evidence |
 
-  Idempotency is essential. Generate a durable key—often from acquisition ID, input checksum, requested workflow, and integration version—and reuse it when retrying. Whether Spectra API exposes an idempotency mechanism or lookup route is a product-contract question. Otherwise, the orchestrator must prevent duplicate sends locally and reconcile uncertain outcomes rather than guessing.
+  Idempotency is essential. Generate a durable key—often from acquisition ID, input checksum, requested workflow, and integration version—and reuse it when retrying. Whether the Spectra API interface exposes an idempotency mechanism or lookup route is a product-contract question. Otherwise, the orchestrator must prevent duplicate sends locally and reconcile uncertain outcomes rather than guessing.
 
-  Error bodies should also be machine-readable. [RFC 9457](https://www.rfc-editor.org/rfc/rfc9457.html) defines a standard “problem details” model for HTTP APIs, including a problem type, status, title, detail, and occurrence identifier. Spectra API may use a different documented format; the integration should still normalize errors into stable internal categories instead of parsing human prose.
+  Error bodies should also be machine-readable. [RFC 9457](https://www.rfc-editor.org/rfc/rfc9457.html) defines a standard “problem details” model for HTTP APIs, including a problem type, status, title, detail, and occurrence identifier. The Spectra API interface may use a different documented format; the integration should still normalize errors into stable internal categories instead of parsing human prose.
 
   ## Map results into LIMS without overstating certainty
 
@@ -131,17 +131,17 @@ markdown_content: |-
 
   That architectural promise does not eliminate validation. Cross-instrument generalization must be measured on the actual Bruker, JEOL, Agilent/Varian, Oxford Instruments, or other fleet in scope; brand names indicate acquisition sources, not preconfirmed connectors. The pipeline therefore needs instrument and method metadata in every job and stratified monitoring after release.
 
-  Spectra API is the programmatic compound-identification product, distinct from Rombo AI’s general NMR platform. Its role in this architecture is the analysis boundary between governed spectral evidence and reviewable structural candidates. The LIMS remains the laboratory system of record, and chemists remain accountable for the final assignment.
+  Spectra is Rombo AI’s AI agent for NMR analysis, distinct from Rombo AI Platform; its API is a programmatic interface rather than a separate product. Its role in this architecture is the analysis boundary between governed spectral evidence and reviewable structural candidates. The LIMS remains the laboratory system of record, and chemists remain accountable for the final assignment.
 
   If you are designing this integration, [contact the Spectra team](https://spectra.rombo.ai) with a representative set of files, the source systems, intended throughput, and required review level. Ask for the current API contract before implementing the adapters and state mappings described here.
 
   ## FAQs
 
-  ### Does Spectra API already connect directly to our LIMS?
+  ### Does the Spectra API interface already connect directly to our LIMS?
 
   Do not assume so without current product documentation. A practical architecture usually places an orchestrator between the LIMS and analysis service, mapping each system’s identifiers, states, authentication, and result schema.
 
-  ### Which NMR file formats does Spectra API accept?
+  ### Which NMR file formats does the Spectra API interface accept?
 
   Confirm the current supported-format list and required metadata with Rombo. JCAMP-DX is an established exchange family, but that does not establish that a particular API accepts it or that conversion preserves every vendor-specific field.
 

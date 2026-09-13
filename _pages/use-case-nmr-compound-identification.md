@@ -3,13 +3,13 @@ layout: use-cases
 title: "AI-Powered NMR Compound Identification"
 permalink: /use-cases/nmr-compound-identification/
 seo_title: "NMR Compound Identification | Rombo AI"
-description: "Identify NMR compounds in minutes. Upload a spectrum on Spectra, get ranked candidates with confidence scores, and keep chemists in control of the final call."
+description: "Identify NMR compounds with the Spectra AI agent, get ranked candidates with confidence scores, and keep chemists in control of the final call."
 lang: en
 og_image: /img/molecule-technology.png
 og_image_alt: "AI-assisted NMR compound identification for pharma R&D"
 
 hero_title: "Identify NMR compounds in minutes, not weeks"
-hero_subtitle: "Upload a spectrum on Spectra. Rombo AI ranks candidate structures so your chemists review a shortlist instead of starting from a blank plot."
+hero_subtitle: "Upload a spectrum with the Spectra AI agent. Rombo AI ranks candidate structures so your chemists review a shortlist instead of starting from a blank plot."
 hero_cta_label: "Analyze a spectrum"
 hero_cta_link: "https://spectra.rombo.ai"
 hero_cta_location: "use_case_nmr_compound_hero"
@@ -22,7 +22,7 @@ hero_cta_location: "use_case_nmr_compound_hero"
         <p class="fw-bold text-uppercase mb-2" style="font-size: 14px; color:#FE900F; letter-spacing:.06em;">Use case — Pharma R&amp;D</p>
         <h2 class="fw-bold text-dark" style="font-size: 34px; line-height: 1.15;">From unknown peaks to a ranked shortlist</h2>
         <p class="text-dark mt-3">
-          NMR compound identification still stalls discovery, impurity work, and metabolite studies because a specialist has to interpret each spectrum by hand. Spectra turns that first pass into a ranked list of candidates, with confidence scores, so experts spend time on the decision rather than on hunting peaks.
+          NMR compound identification still stalls discovery, impurity work, and metabolite studies because a specialist has to interpret each spectrum by hand. The <a href="{{ '/spectra/' | relative_url }}">Spectra agent</a> turns that first pass into a ranked list of candidates, with confidence scores, so experts spend time on the decision rather than on hunting peaks.
         </p>
         <div class="mt-4">
           {% include ui/button.html href="https://spectra.rombo.ai" label="Open Spectra" class="button-lg" location="use_case_nmr_compound_intro" %}
@@ -72,7 +72,7 @@ hero_cta_location: "use_case_nmr_compound_hero"
   <div class="container custom_container">
     <div class="row g-4 align-items-start">
       <div class="col-12 col-lg-5">
-        <h2 class="fw-bold text-dark" style="font-size: 30px;">What Spectra does with your spectrum</h2>
+        <h2 class="fw-bold text-dark" style="font-size: 30px;">What the Spectra agent does with your spectrum</h2>
         <p class="text-dark mt-3">
           Upload an NMR spectrum to <a href="https://spectra.rombo.ai" rel="noopener noreferrer" target="_blank">spectra.rombo.ai</a>. The model highlights patterns, proposes structures, and ranks them. Your chemists keep the final call, with a shortlist instead of a blank page.
         </p>
@@ -160,7 +160,7 @@ hero_cta_location: "use_case_nmr_compound_hero"
 
 <section class="container-fluid text-center text-white py-5" style="background: linear-gradient(135deg, #303767, #3d4580);">
   <div class="container custom_container">
-    <h2 class="fw-bold text-white" style="font-size: 32px;">Analyze a spectrum on Spectra</h2>
+    <h2 class="fw-bold text-white" style="font-size: 32px;">Analyze a spectrum with the Spectra agent</h2>
     <p class="text-white mt-2 mx-auto" style="max-width: 75ch; opacity: .85;">
       Open Spectra, upload an NMR file, and get ranked candidates with confidence scores. Keep your chemists on the final assignment.
     </p>

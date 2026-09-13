@@ -3,8 +3,11 @@ title: 'Generalization Across NMR Instruments: A Foundation Model Pre-Trained on
 date: 2026-08-28T09:00:00.000Z
 permalink: /blog/rose_foundation_model_NMR_spectral_data
 layout: article
-image: /img/Screenshot 2026-08-14 at 11.30.52.png
-image_alt: AI-generated Image
+image: /img/blog/rose-nmr-embeddings-730.webp
+image_srcset: "/img/blog/rose-nmr-embeddings-600.webp 600w, /img/blog/rose-nmr-embeddings-730.webp 730w"
+image_width: 730
+image_height: 482
+image_alt: "ROSE NMR embeddings grouping matching molecules across magnetic field strengths"
 author: 'Martina [Marketing Specialist, Rombo AI]'
 excerpt: 'Most NMR deep learning models train an encoder and task head together for a particular endpoint, field strength, or instrument regime. Performance can decline when spectra come from hardware outside that training distribution. Powered by a single 9.9M-parameter Vision Transformer, ROSE instantly captures instrument-agnostic chemical identity, delivering match-grade accuracy across classification and structure retrieval with little-to-no fine-tuning.'
 markdown_content: |-

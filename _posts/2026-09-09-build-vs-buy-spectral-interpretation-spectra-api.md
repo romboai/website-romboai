@@ -1,6 +1,6 @@
 ---
-title: 'Build vs Buy: Spectral Interpretation with Spectra API'
-seo_title: 'Build vs Buy: Spectral Interpretation with Spectra API | Rombo AI'
+title: 'Build vs Buy: Spectral Interpretation with Spectra'
+seo_title: 'Build vs Buy: Spectral Interpretation with Spectra | Rombo AI'
 date: 2026-09-09T01:00:00.000Z
 permalink: /blog/build-vs-buy-spectral-interpretation-spectra-api
 layout: article
@@ -114,13 +114,13 @@ markdown_content: |-
 
   Set exit criteria before the pilot. Examples include failure on a critical sample class, unresolvable data-governance terms, insufficient traceability, an unsustainable review burden, or no measurable improvement over the current workflow. A stop rule turns a demonstration into an evaluation.
 
-  ## Where Spectra API changes the equation
+  ## Where Spectra changes the equation
 
   Foundation-model reuse creates a third option between training everything internally and buying a fixed, instrument-specific application. A broadly pretrained representation can be adapted or exposed for several downstream tasks while the laboratory keeps its evidence, orchestration, and review controls.
 
   Rombo’s open-weight [ROSE ¹H NMR foundation model](https://github.com/romboai/rose-1h-nmr) provides a concrete technical reference: its published repository describes pretraining on 3.2 million spectra, identity-disjoint evaluation, and shared representations used for denoising, peak detection, spectrum-pair similarity, structure-to-spectrum prediction, and spectrum-to-structure retrieval. The same results also show weaker low-field performance on structure-linked tasks. That limitation illustrates the correct buying question: not “Was the model trained on many spectra?” but “Does the delivered system pass our held-out instruments, chemistry, and intended use?”
 
-  Spectra API is a distinct product line for programmatic compound identification and structure elucidation, separate from Rombo AI’s broader NMR platform for material and mixture analysis. It should be evaluated as one bounded component inside the laboratory’s governed workflow. This article does not claim a specific endpoint, file format, authentication method, service limit, connector, retention policy, or deployment model; confirm each item against the current product contract.
+  Spectra is Rombo AI’s AI agent for NMR analysis, distinct from Rombo AI Platform. API access is an interface to Spectra, not a separate product, and should be evaluated as one bounded component inside the laboratory’s governed workflow. This article does not claim a specific endpoint, file format, authentication method, service limit, connector, retention policy, or deployment model; confirm each item against the current product contract.
 
   If your team is comparing an internal spectral model with a managed compound-identification service, [contact Spectra](https://spectra.rombo.ai) to define a representative evaluation set and request the current technical and governance documentation.
 

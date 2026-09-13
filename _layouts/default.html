@@ -37,22 +37,19 @@
               <h1 class="text-white text-responsive m-0">
                   <span class="text-highlight">{{ page.hero_home_title | default: page.title | default: site.title }}</span>
               </h1>
-
-              {% if page.hero_cta_link %}
-              <a href="{{ site.baseurl }}{{ page.hero_cta_link }}" class="text-decoration-none d-inline-block mt-4" data-cta-location="hero" aria-label="{{ page.hero_cta_label_left | default: 'Contact' }} {{ page.hero_cta_label_right | default: 'now' }}">
-                  <div class="d-flex justify-content-start align-items-center gap-0">
-                      <button class="btn rounded-pill"
-                              style="background:#FE900F; color: white; padding:15px 25px 15px 25px; margin-right:-8px;">
-                          {{ page.hero_cta_label_left | default: "Contact" }}
-                      </button>
-                      <img class="d-inline-block" src="{{ site.baseurl }}/img/group-2-2.png" alt="Decorative call-to-action arrow" aria-hidden="true" style="width: 35px; height: 41px;">
-                      <button class="btn rounded-pill"
-                              style="background:#FE900F; color: white; padding:15px;margin-left:-8px;">
-                          {{ page.hero_cta_label_right | default: "now" }}
-                      </button>
-                  </div>
-              </a>
+              {% if page.hero_home_subtitle %}
+              <p class="text-white mt-3 mb-0" style="font-size:18px; line-height:1.55; max-width:720px;">{{ page.hero_home_subtitle }}</p>
               {% endif %}
+              <div class="d-flex flex-wrap gap-3 mt-4">
+                <a href="{{ page.hero_primary_cta_link | relative_url }}" class="btn rounded-pill"
+                   style="background:#FE900F; color:#fff; padding:15px 25px;"
+                   data-cta-location="hero_primary">{{ page.hero_primary_cta_label }}</a>
+                {%- if page.hero_secondary_cta_label and page.hero_secondary_cta_link %}
+                <a href="{{ page.hero_secondary_cta_link | relative_url }}" class="btn rounded-pill"
+                   style="background:transparent; color:#fff; border:1px solid #fff; padding:15px 25px;"
+                   data-cta-location="hero_secondary">{{ page.hero_secondary_cta_label }}</a>
+                {%- endif %}
+              </div>
           </div>
       </div>
   </div>
@@ -167,10 +164,10 @@
           <div class="col-12  technology-body">
               <div class="col-12 position-absolute text-center" style="top:0; left: 0; right: 0;bottom: 0">
                   <img class="img-fluid h-100 w-100" src="{{ site.baseurl }}/img/livello-1-4.svg"
-                       alt="Background Level">
+                       alt="" aria-hidden="true">
                   <img class="img-fluid mx-0 d-none d-md-block position-absolute" style="left: 47%;bottom: 4%;"
                        src="{{ site.baseurl }}/img/livello-1-8.svg"
-                       alt="Foreground Level">
+                       alt="" aria-hidden="true">
               </div>
               <div class="row d-flex flex-wrap flex-md-nowrap text-left  justify-content-center"
               >
@@ -194,6 +191,16 @@
                                           {{page.technology_message_part_eight}}
                                       </span>
                           </p>
+                          <div class="px-2 px-md-5 pb-4">
+                            <a class="github-cta" href="https://github.com/romboai/rose-1h-nmr"
+                               rel="noopener noreferrer" target="_blank"
+                               data-cta-location="technology_github">
+                              <svg class="github-cta-mark" viewBox="0 0 16 16" width="22" height="22" aria-hidden="true" focusable="false">
+                                <path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/>
+                              </svg>
+                              <span>View the foundation model on GitHub</span>
+                            </a>
+                          </div>
                       </div>
                   </div>
 

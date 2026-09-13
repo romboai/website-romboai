@@ -111,9 +111,9 @@ markdown_content: |-
 
   Rombo AI describes its NMR foundation model as pre-trained on millions of spectra and designed to generalise across instruments and sample types rather than requiring traditional chemometric recalibration for each instrument. Natural products remain a demanding validation case because novel scaffolds, low sample amounts, mixtures, and unusual acquisition conditions can differ from the model’s training evidence.
 
-  Spectra AI is the distinct Rombo product line for compound identification and full structure elucidation, separate from the broader NMR material-analysis platform. Its role in a natural-product project should be evaluated as one interpretation layer after provenance, dereplication, and purity review—not as a claim of automated extraction, chromatography, MS integration, stereochemical proof, or biological validation.
+  Spectra is Rombo AI’s AI agent for NMR analysis, distinct from Rombo AI Platform. Its role in a natural-product project should be evaluated as one interpretation layer after provenance, dereplication, and purity review—not as a claim of automated extraction, chromatography, MS integration, stereochemical proof, or biological validation.
 
-  If NMR interpretation or candidate ranking is the bottleneck after isolation, [evaluate Spectra AI with a representative natural-product spectrum](https://spectra.rombo.ai/). Compare its candidates against the complete correlation map and preserve chemist review and orthogonal confirmation.
+  If NMR interpretation or candidate ranking is the bottleneck after isolation, [evaluate Spectra with a representative natural-product spectrum](https://spectra.rombo.ai/). Compare its candidates against the complete correlation map and preserve chemist review and orthogonal confirmation.
 
   ## FAQs
 

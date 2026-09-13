@@ -108,9 +108,9 @@ markdown_content: |-
 
   AI can shorten spectral review and candidate ranking after the quality team has verified the peak, preserved sample lineage, and acquired suitable data. Rombo AI’s foundation-model approach is described as pre-trained on millions of NMR spectra and designed to generalise across instrument brands and sample types rather than requiring a traditional chemometric recalibration for every instrument. Cross-instrument performance still needs to be evaluated with held-out spectra representative of the laboratory’s own methods and impurity chemistry.
 
-  Spectra AI is a distinct product line for compound identification and full structure elucidation, separate from Rombo AI’s broader NMR material-analysis platform. It should be positioned as an interpretation layer, not as a validated release method, safety assessment, LIMS integration, or replacement for accountable review unless those capabilities are separately documented and qualified.
+  Spectra is Rombo AI’s AI agent for NMR analysis, distinct from Rombo AI Platform. It should be positioned as an interpretation layer, not as a validated release method, safety assessment, LIMS integration, or replacement for accountable review unless those capabilities are separately documented and qualified.
 
-  For a low-level impurity, the practical test is whether the workflow can preserve alternative structures, expose supporting spectral regions, abstain on insufficient data, and export evidence into the laboratory’s review process. If NMR interpretation is the bottleneck after enrichment or isolation, [evaluate Spectra AI with a representative impurity spectrum](https://spectra.rombo.ai/), then confirm the result to the level required by the quality decision.
+  For a low-level impurity, the practical test is whether the workflow can preserve alternative structures, expose supporting spectral regions, abstain on insufficient data, and export evidence into the laboratory’s review process. If NMR interpretation is the bottleneck after enrichment or isolation, [evaluate Spectra with a representative impurity spectrum](https://spectra.rombo.ai/), then confirm the result to the level required by the quality decision.
 
   ## FAQs
 

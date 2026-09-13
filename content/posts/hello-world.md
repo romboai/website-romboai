@@ -1,5 +1,7 @@
 ---
 title: Hello, World!
+published: false
+sitemap: false
 ---
 
 ## Hello World!

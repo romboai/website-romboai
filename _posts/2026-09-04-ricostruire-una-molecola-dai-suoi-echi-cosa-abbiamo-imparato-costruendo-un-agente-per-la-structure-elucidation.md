@@ -4,7 +4,7 @@ date: 2026-09-04T00:00:00.000Z
 permalink: /blog/agent_structure_elucidation
 layout: article
 image: /img/Gemini_Generated_Image_9oipl29oipl29oip.jpeg
-image_alt: Image generated with AI
+image_alt: "Molecular structure emerging from spectral signals during NMR structure elucidation"
 author: Carmine Mattia
 excerpt: |
   Cosa abbiamo imparato costruendo un agente AI per la structure elucidation tramite NMR? Una riflessione su autonomia, overthinking e su come l'IA stia trasformando la risoluzione di problemi specialistici e la formulazione delle domande scientifiche.

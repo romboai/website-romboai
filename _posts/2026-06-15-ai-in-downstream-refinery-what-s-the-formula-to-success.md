@@ -5,7 +5,7 @@ date: 2026-06-14T22:00:00.000Z
 permalink: /blog/article-AI-in-downstream-strategy
 layout: article
 image: /img/blog/ai-downstream-refinery-2026-06-15.jpg
-image_alt: AI-generated Image
+image_alt: "Refinery process units representing downstream operations monitored through analytical data"
 author: 'Silvia Bongiovanni [BD Representative, Rombo AI]'
 description: "Where should refiners start with AI? Explore how downstream teams can adopt AI with clear operational value and practical impact."
 excerpt: |-

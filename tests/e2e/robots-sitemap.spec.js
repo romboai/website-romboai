@@ -16,6 +16,8 @@ test("sitemap.xml is served and includes key URLs", async ({ page }) => {
   expect(xml).toMatch(/<loc>(https:\/\/rombo\.ai|http:\/\/localhost:4000)\/<\/loc>/);
   expect(xml).toMatch(/<loc>(https:\/\/rombo\.ai|http:\/\/localhost:4000)\/about\/<\/loc>/);
   expect(xml).toMatch(/<loc>(https:\/\/rombo\.ai|http:\/\/localhost:4000)\/product\/<\/loc>/);
+  expect(xml).not.toContain("/platform/");
+  expect(xml).not.toContain("<priority>");
   expect(xml).toMatch(/<loc>(https:\/\/rombo\.ai|http:\/\/localhost:4000)\/contact\/<\/loc>/);
   expect(xml).toContain('xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"');
   expect(xml).not.toContain("sitemap-image/0.9");

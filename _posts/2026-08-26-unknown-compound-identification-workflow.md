@@ -126,11 +126,11 @@ markdown_content: |-
 
   ## Where AI-assisted NMR ranking fits
 
-  Automation is most valuable between acquisition and expert confirmation: the point where a chemist must compare many candidate structures against a spectrum. Spectra AI is a distinct Rombo product for compound identification, separate from Rombo’s broader NMR AI platform. Its foundation-model approach is designed to take an NMR spectrum, identify discriminating patterns, propose structures, and return a ranked shortlist with confidence scores. The chemist remains responsible for sample integrity, orthogonal evidence, reference-standard work, and the final assignment.
+  Automation is most valuable between acquisition and expert confirmation: the point where a chemist must compare many candidate structures against a spectrum. Spectra is Rombo AI’s agent for NMR analysis, distinct from Rombo AI Platform. Its foundation-model approach is designed to take an NMR spectrum, identify discriminating patterns, propose structures, and return a ranked shortlist with confidence scores. The chemist remains responsible for sample integrity, orthogonal evidence, reference-standard work, and the final assignment.
 
   This changes one stage, not the scientific standard. A faster shortlist can help the team decide which candidate to test and which experiment to run next; it cannot repair a degraded sample, prove that co-eluting signals belong together, or convert a database candidate into a confirmed identity by itself.
 
-  For an unknown-compound workflow based on NMR candidate ranking, [analyze a spectrum with Spectra AI](https://spectra.rombo.ai). Treat the output as prioritized hypotheses to review against the complete evidence chain.
+  For an unknown-compound workflow based on NMR candidate ranking, [analyze a spectrum with Spectra](https://spectra.rombo.ai). Treat the output as prioritized hypotheses to review against the complete evidence chain.
 
   ## FAQs
 

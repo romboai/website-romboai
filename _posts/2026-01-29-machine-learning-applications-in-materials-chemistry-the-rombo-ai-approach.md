@@ -5,7 +5,7 @@ date: 2026-01-29T01:00:00.000Z
 permalink: /blog/usecase-material-intelligence-platform
 layout: article
 image: /img/blog/material-intelligence-platform-2026-01-29.jpg
-image_alt: crude assay refinery
+image_alt: "Laser-based material analysis on an industrial metal surface"
 author: Silvia Bongiovanni
 description: "How machine learning turns NMR into a predictive engine for industrial materials chemistry and faster decision-ready insights."
 excerpt: 'Machine learning is turning NMR into a predictive tool for industrial analytics. By applying AI directly to raw NMR spectra, complex mixtures can be analyzed faster and more reliably, overcoming signal overlap and shift variability. Platforms like Rombo AI enable automated, decision-ready material insights at industrial scale.'
@@ -30,11 +30,11 @@ markdown_content: |
 
   In production environments, ML is routinely applied to predict material properties such as viscosity, density, or boiling behavior, to support quality control and classification, to detect anomalies or contamination, and to monitor and optimize processes. Still, what matters most is obtaining reliable, decision-ready information quickly and consistently.  
 
-  ## The ROMBO AI Material Intelligence Platform 
+  ## Rombo AI Platform
 
   Translating these advances into industry requires more than accurate models. It requires platforms that integrate acquisition, preprocessing, model governance, and validation around specific material families. Only in this way can ML-driven spectral analysis deliver outputs that are robust, comparable, and usable in production environments. 
 
-  The **Rombo AI Material Intelligence Platform** combines low-field NMR instrumentation with material-specific AI models. At its core, the platform automates the extraction of physico-chemical properties, along other tailor-made properties, directly from NMR spectra. ML models learn the relationship between spectral patterns and material properties -- such as viscosity and density (or for crude oil, distillation yields). These models are trained and validated on experimental datasets agreed upon with the customer, ensuring industrial relevance. 
+  **Rombo AI Platform** combines NMR instrumentation with material-specific AI models. At its core, the platform automates the extraction of physico-chemical properties, along other tailor-made properties, directly from NMR spectra. ML models learn the relationship between spectral patterns and material properties -- such as viscosity and density (or for crude oil, distillation yields). These models are trained and validated on experimental datasets agreed upon with the customer, ensuring industrial relevance.
 
   The platform supports: 
 

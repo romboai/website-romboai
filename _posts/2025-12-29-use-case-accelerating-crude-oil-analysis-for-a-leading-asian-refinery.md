@@ -5,7 +5,7 @@ date: 2025-12-29T01:00:00.000Z
 permalink: /blog/usecase-crudeoil-refinery
 layout: article
 image: /img/1764170441294.jpeg
-image_alt: crude assay refinery
+image_alt: "Refinery operator reviewing process data above an industrial pipeline"
 author: Silvia Bongiovanni
 description: "How Rombo AI helped a leading Asian refinery accelerate crude oil analysis with NMR and AI for faster purchasing and blending decisions."
 excerpt: >-

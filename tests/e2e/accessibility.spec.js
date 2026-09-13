@@ -30,10 +30,11 @@ test("a11y smoke: skip link exists and keyboard focus is visible", async ({ page
 test("a11y smoke: Products dropdown is usable and navigates", async ({ page }) => {
   await page.goto("/");
   await page.locator("#productsDropdown").click();
-  await expect(page.getByRole("link", { name: /AutoML Framework/i })).toBeVisible();
-  await page.getByRole("link", { name: /AutoML Framework/i }).click();
-  await expect(page).toHaveURL(/\/product\/#automl-materials$/);
-  await expect(page.locator("#automl-materials")).toHaveCount(1);
+  const platformLink = page.getByRole("link", { name: "Rombo AI Platform", exact: true });
+  await expect(platformLink).toBeVisible();
+  await expect(page.getByRole("link", { name: "Spectra Agent", exact: true })).toBeVisible();
+  await platformLink.click();
+  await expect(page).toHaveURL(/\/product\/?$/);
 });
 
 

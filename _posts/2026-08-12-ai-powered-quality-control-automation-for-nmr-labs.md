@@ -3,8 +3,11 @@ title: AI-Powered Quality Control Automation for NMR Labs
 date: 2026-08-11T22:00:00.000Z
 permalink: /blog/AI_spectroscopu_automation_quality_control
 layout: article
-image: /img/Screenshot 2026-08-14 at 11.22.50.png
-image_alt: AI-generated Image
+image: /img/blog/nmr-quality-control-850.webp
+image_srcset: "/img/blog/nmr-quality-control-600.webp 600w, /img/blog/nmr-quality-control-850.webp 850w"
+image_width: 850
+image_height: 550
+image_alt: "Automated NMR quality-control workflow connecting spectra, analysis, and laboratory review"
 author: 'Silvia Bongiovanni [BD Representative, Rombo AI]'
 excerpt: Manual NMR interpretation can delay quality control decisions for weeks because trained specialists must review complex spectra. Rombo AI uses a foundation model pre-trained on millions of spectra to produce decision-ready results in as little as 15 minutes.
 markdown_content: |-
@@ -24,7 +27,7 @@ markdown_content: |-
 
   Traditional chemometric models usually learn from reference samples collected under defined conditions on a specific instrument. Changes in the spectrometer, acquisition settings, or sample matrix can shift the data enough to require another calibration and validation cycle. Rombo AI starts with broad spectral knowledge, so a smaller local dataset can adapt the model to a lab’s QC target.
 
-  The [Material Intelligence Platform](https://rombo.ai) provides the automation layer that applies this model within the lab’s analytical workflow. Its NMR AI Analyzer processes an incoming spectrum and generates the requested material assessment without requiring a specialist to interpret every peak manually. The same underlying model can work with spectra produced by Bruker, JEOL, Agilent/Varian, and Oxford Instruments systems without rebuilding a separate model for each instrument.
+  [Rombo AI Platform](https://rombo.ai/product/) provides the automation layer that applies this model within the lab’s analytical workflow. Its NMR AI Analyzer processes an incoming spectrum and generates the requested material assessment without requiring a specialist to interpret every peak manually. The same underlying model can work with spectra produced by Bruker, JEOL, Agilent/Varian, and Oxford Instruments systems without rebuilding a separate model for each instrument.
 
   Pre-training removes much of the repetitive model development and expert review that lengthen conventional NMR projects. Rombo AI reports analysis in as little as 15 minutes for workflows where manual interpretation and reporting can take weeks. Actual deployment still requires lab-specific validation, but the foundation model reduces the amount of historical data and calibration work needed to reach that stage.
 

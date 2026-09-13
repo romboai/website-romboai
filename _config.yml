@@ -7,7 +7,7 @@ description: "AI-driven spectral and chemical analysis with Low Field NMR and ma
 lang: en
 locale: en_US
 timezone: Europe/Rome
-og_image: /img/og/rombo-ai.png
+og_image: /img/og/rombo-ai.jpg
 # Company contact info (single source of truth)
 contact_email: "contact@rombo.ai"
 contact_phone: "+39 352 064 8081"
@@ -92,3 +92,15 @@ sass:
 # Include admin folder for CMS
 include:
   - admin
+
+# Tooling and local artifacts must never become public/indexable routes.
+exclude:
+  - node_modules
+  - vendor
+  - playwright-report
+  - test-results
+  - package.json
+  - package-lock.json
+  - pnpm-lock.yaml
+  - scripts
+  - tests

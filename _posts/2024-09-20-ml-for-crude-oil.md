@@ -5,6 +5,7 @@ title: "Low-Field NMR for Crude Oil Analysis: Harnessing Machine Learning for Pr
 seo_title: "Low-Field NMR for Crude Oil Analysis | Rombo AI"
 date: "2024-09-20"
 image: "img/blog/ml-for-crude.webp"
+image_alt: "Crude oil samples analyzed with low-field NMR and machine learning"
 markdown_content: |
 
     In the oil industry, understanding the properties of crude oil is essential for refining, quality control, and maximizing production efficiency. Traditionally, this has involved complex and time-consuming laboratory methods.

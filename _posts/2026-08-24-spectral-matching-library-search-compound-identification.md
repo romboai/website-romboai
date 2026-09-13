@@ -141,9 +141,9 @@ markdown_content: |-
 
   Computational models can extend the workflow by learning relationships between spectral patterns and chemical structure rather than requiring an exact stored spectrum. The hard parts are generalization to unfamiliar chemistry, differences across instruments and sample types, scarce high-quality labeled data, and calibrated uncertainty. A model-generated or ranked structure must still survive the same analytical checks as a library hit.
 
-  Spectra AI is a distinct compound-identification product line, separate from Rombo AI’s broader NMR material-analysis platform. Its current public workflow accepts an NMR spectrum, highlights discriminating patterns, and returns ranked candidate structures with confidence scores while leaving final assignment and validation to the chemist ([Rombo compound-identification workflow](https://rombo.ai/use-cases/nmr-compound-identification/)). That makes it a next step when the analytical problem has moved beyond exact library retrieval.
+  Spectra is Rombo AI’s agent for NMR analysis, distinct from Rombo AI Platform. Its current public workflow accepts an NMR spectrum, highlights discriminating patterns, and returns ranked candidate structures with confidence scores while leaving final assignment and validation to the chemist ([Rombo compound-identification workflow](https://rombo.ai/use-cases/nmr-compound-identification/)). That makes it a next step when the analytical problem has moved beyond exact library retrieval.
 
-  If library coverage is the bottleneck in an NMR compound-identification workflow, [explore Spectra AI](https://spectra.rombo.ai) and evaluate its ranked output against the orthogonal evidence required by your laboratory.
+  If library coverage is the bottleneck in an NMR compound-identification workflow, [explore Spectra](https://spectra.rombo.ai) and evaluate its ranked output against the orthogonal evidence required by your laboratory.
 
   ## FAQs
 

@@ -3,8 +3,11 @@ title: 'Scalable NMR Deployment Across Multi-Site Laboratories: Architectural Tr
 date: 2026-08-13T22:00:00.000Z
 permalink: /blog/NMR_deployment_multisite_scalability
 layout: article
-image: /img/Screenshot 2026-08-14 at 10.52.20.png
-image_alt: AI-generated Image
+image: /img/blog/multisite-nmr-deployment-980.webp
+image_srcset: "/img/blog/multisite-nmr-deployment-600.webp 600w, /img/blog/multisite-nmr-deployment-980.webp 980w"
+image_width: 980
+image_height: 536
+image_alt: "Connected laboratory sites sharing standardized NMR analysis workflows"
 author: 'Silvia Bongiovanni [BD Representative, Rombo AI]'
 excerpt: 'Rombo AI supports NMR fleets that combine Bruker, Varian/Agilent, and JEOL instruments. Its foundation model, pre-trained on millions of spectra, minimizes the instrument-specific calibration data required at each facility.'
 markdown_content: |-

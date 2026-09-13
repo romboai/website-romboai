@@ -3,8 +3,11 @@ title: The Missing Layer in NMR Machine Learning
 date: 2026-08-02T22:00:00.000Z
 permalink: /blog/article-NMR-Machine-Learning
 layout: article
-image: /img/Screenshot%202026-07-31%20at%2009.38.53.png
-image_alt: AI-generated Image
+image: /img/blog/nmr-machine-learning-layer-1046.webp
+image_srcset: "/img/blog/nmr-machine-learning-layer-600.webp 600w, /img/blog/nmr-machine-learning-layer-1046.webp 1046w"
+image_width: 1046
+image_height: 648
+image_alt: "Workflow layer connecting raw NMR spectra to reusable machine-learning models"
 author: 'Mattia di Iorio [Data Scientist, Rombo AI]'
 excerpt: 'Task-specific deep learning, low-field constraints, and the case for reusable spectrum representations.'
 markdown_content: |-

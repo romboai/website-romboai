@@ -133,9 +133,9 @@ markdown_content: |-
 
   Rombo’s direction is an auditable reasoning layer for NMR: specialised models and analytical tools can contribute observations, while the workflow keeps hypotheses, evidence, conflicts, and review decisions visible. ROSE, Rombo’s open-weight ¹H NMR foundation model, provides reusable spectral representations for several downstream tasks; its [code, paper links, and model-weight references are public](https://github.com/romboai/rose-1h-nmr). A foundation model is one possible component of an agent, not the entire agentic system.
 
-  Spectra AI and Spectra API are a distinct product line focused on compound identification and structure elucidation, separate from Rombo AI’s broader NMR platform for material and mixture analysis. This article does not assert particular endpoints, instrument integrations, file formats, autonomous acquisition capabilities, or performance levels. Those must be confirmed against current product documentation and validated for the laboratory’s intended use.
+  Spectra is Rombo AI’s AI agent for NMR analysis, distinct from Rombo AI Platform. Any API access is an interface to Spectra, not a separate product. This article does not assert particular endpoints, instrument integrations, file formats, autonomous acquisition capabilities, or performance levels. Those must be confirmed against current product documentation and validated for the laboratory’s intended use.
 
-  **Evaluating an unknown-compound workflow? [Explore Spectra AI](https://spectra.rombo.ai) and discuss the evidence, review gates, and deployment boundaries required for your use case.**
+  **Evaluating an unknown-compound workflow? [Explore Spectra](https://spectra.rombo.ai) and discuss the evidence, review gates, and deployment boundaries required for your use case.**
 
   ## Frequently asked questions
 

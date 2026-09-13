@@ -224,7 +224,7 @@ export default defineConfig({
               "about",
               "contact",
               "privacy",
-              "product",
+              "products",
               "voucher",
               "smart-start",
               "blog",
@@ -234,9 +234,11 @@ export default defineConfig({
 
           // Home / Landing common fields
           { type: "string", name: "hero_home_title", label: "Hero title", required: false },
-          { type: "string", name: "hero_cta_label_left", label: "Hero CTA left label", required: false },
-          { type: "string", name: "hero_cta_label_right", label: "Hero CTA right label", required: false },
-          { type: "string", name: "hero_cta_link", label: "Hero CTA link (path)", required: false },
+          { type: "string", name: "hero_home_subtitle", label: "Hero subtitle", required: false },
+          { type: "string", name: "hero_primary_cta_label", label: "Primary CTA label", required: false },
+          { type: "string", name: "hero_primary_cta_link", label: "Primary CTA path", required: false },
+          { type: "string", name: "hero_secondary_cta_label", label: "Secondary CTA label", required: false },
+          { type: "string", name: "hero_secondary_cta_link", label: "Secondary CTA path", required: false },
           { type: "string", name: "intro_main_title", label: "Intro main title", required: false },
           { type: "string", name: "intro_sub_title", label: "Intro sub title", required: false },
 

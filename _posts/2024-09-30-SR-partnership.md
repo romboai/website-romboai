@@ -8,7 +8,8 @@ date: 2024-09-30T00:00:00.000Z
 permalink: /blog/sardegna-ricerche-partnership/
 layout: article
 image: /img/blog/partnership.jpg
-author: Andrea
+image_alt: "Sardegna Ricerche and Rombo AI partnership exploring NMR applications in renewable energy"
+author: Andrea Zanda
 excerpt: >-
   Partnerhip con il cluster delle energie rinnovabili per l'esplorazione delle
   Potenzialità della Spettroscopia...

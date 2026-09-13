@@ -3,7 +3,10 @@ title: 'What Is Quantitative NMR (qNMR)? Purity, Calibration Methods, and Accura
 date: 2026-08-18T08:00:00.000Z
 permalink: /blog/quantitative-nmr-qnmr-purity-calibration-accuracy
 layout: article
-image: /img/Screenshot 2026-08-14 at 11.30.52.png
+image: /img/blog/rose-nmr-embeddings-730.webp
+image_srcset: "/img/blog/rose-nmr-embeddings-600.webp 600w, /img/blog/rose-nmr-embeddings-730.webp 730w"
+image_width: 730
+image_height: 482
 image_alt: Analyst reviewing an NMR spectrum with integrated peaks on a laboratory workstation
 author: 'Silvia Bongiovanni [BD Representative, Rombo AI]'
 excerpt: Quantitative NMR determines concentration or purity from the integrated area of an NMR signal, so a reference of known purity can quantify a chemically different analyte without a compound-specific calibration curve. Accuracy depends on complete relaxation and controlled acquisition rather than on collecting more scans.

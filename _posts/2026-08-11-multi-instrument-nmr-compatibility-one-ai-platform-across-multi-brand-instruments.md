@@ -3,8 +3,11 @@ title: 'Multi-Instrument NMR Compatibility: One AI Platform Across Multi-Brand I
 date: 2026-08-10T22:00:00.000Z
 permalink: /blog/NMR_instrument_compatibility
 layout: article
-image: /img/Screenshot 2026-08-14 at 11.27.51.png
-image_alt: AI-generated Image
+image: /img/blog/multi-instrument-nmr-776.webp
+image_srcset: "/img/blog/multi-instrument-nmr-600.webp 600w, /img/blog/multi-instrument-nmr-776.webp 776w"
+image_width: 776
+image_height: 514
+image_alt: "NMR instruments from multiple laboratory sites connected to one analysis platform"
 author: 'Silvia Bongiovanni [BD Representative, Rombo AI]'
 excerpt: 'Rombo AI provides one vendor-neutral foundation model layer across Bruker, JEOL, Agilent/Varian, and Oxford Instruments without per-instrument recalibration. The foundation model comes pre-trained on millions of spectra.'
 markdown_content: |-

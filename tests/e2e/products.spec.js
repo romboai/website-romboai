@@ -1,8 +1,8 @@
 const { test, expect } = require("@playwright/test");
 
-test("products: page loads and module anchors render", async ({ page }) => {
+test("platform: page loads and module anchors render", async ({ page }) => {
   await page.goto("/product/");
-  await expect(page.locator("body")).toContainText(/Products/i);
+  await expect(page.locator("body")).toContainText(/Rombo AI Platform/i);
 
   // Key sections (avoid brittle checks on promotional cards/CTAs)
   await expect(page.locator("#nmr-ai-analysis-tool")).toHaveCount(1);

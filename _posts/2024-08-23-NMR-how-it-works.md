@@ -5,6 +5,7 @@ title: "How Low-Field NMR Works and How Machine Learning Enhances Sample Charact
 seo_title: "How Low-Field NMR Works | Rombo AI"
 date: "2023-08-23"
 image: "img/blog/nmr-how-it-works.webp"
+image_alt: "Low-field NMR spectrum illustrating how molecular signals characterize a sample"
 markdown_content: |
   ## Understanding Low-Field NMR
 

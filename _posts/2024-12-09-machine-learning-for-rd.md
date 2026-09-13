@@ -7,6 +7,8 @@ date: "2024-12-09"
 image: "img/blog/spectraml-rd-teams.jpg"
 image_alt: "SpectraML: a framework designed for R&D teams"
 markdown_content: |
+  > **Naming note:** SpectraML is the historical name used in this article. This capability is now presented as **AutoML Framework**, a module of **Rombo AI Platform**. It is distinct from **Spectra**, Rombo AI’s AI agent for NMR analysis.
+
   ## SpectraML: A framework designed for R&D teams 
 
   Machine Learning is increasingly present in the world of research and development, changing the way data is analyzed and new ideas are developed. Yet, many companies struggle to leverage it.

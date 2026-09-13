@@ -1,6 +1,6 @@
 ---
-title: 'Spectra AI: Automated Compound Identification from NMR Spectra'
-seo_title: 'Spectra AI: Automated Compound Identification from NMR Spectra | Rombo AI'
+title: 'Spectra: Automated Compound Identification from NMR Spectra'
+seo_title: 'Spectra: Automated Compound Identification from NMR Spectra | Rombo AI'
 date: 2026-09-07T07:31:00.000Z
 permalink: /blog/spectra-ai-automated-compound-identification
 layout: article
@@ -8,11 +8,11 @@ image: /img/blog/spectra-ai-automated-compound-identification.jpg
 image_alt: Hand-drawn NMR spectrum showing resonance peaks after a Fourier transform
 image_caption: 'A generic NMR spectrum after Fourier transformation. Image: <a href="https://commons.wikimedia.org/wiki/File:NMR_spectrum_generic.jpg" rel="noopener noreferrer" target="_blank">Mgianino, via Wikimedia Commons</a>, <a href="https://creativecommons.org/publicdomain/zero/1.0/" rel="license noopener noreferrer" target="_blank">CC0 1.0</a>. Cropped by Rombo AI.'
 author: 'Martina [Marketing Specialist, Rombo AI]'
-excerpt: A practical guide to what Spectra AI takes in, what it returns, how chemists review its ranked candidates, and how to evaluate it on representative NMR cases.
+excerpt: A practical guide to what Spectra takes in, what it returns, how chemists review its ranked candidates, and how to evaluate it on representative NMR cases.
 markdown_content: |-
   ## TL;DR
 
-  - **Spectra AI is a dedicated NMR compound-identification product.** It is separate from Rombo AI’s broader platform for material and mixture analysis.
+  - **Spectra is Rombo AI’s AI agent for NMR analysis.** It is separate from Rombo AI Platform.
   - **The product turns a spectrum into a reviewable shortlist.** Its public workflow accepts NMR data and sample context, highlights discriminating patterns, proposes candidate structures, and ranks them with confidence scores.
   - **A rank is not a confirmation.** The chemist remains responsible for checking whether a candidate explains the spectrum, fits the sample context, and survives orthogonal tests.
   - **The value is a better first pass.** Instead of beginning with an unannotated plot, the analyst begins with prioritised hypotheses and can focus experiments on separating plausible alternatives.
@@ -21,11 +21,11 @@ markdown_content: |-
 
   “Automated compound identification” can suggest a black box that returns chemical truth. The better model is an evidence-building process: software accelerates hypothesis ranking, while the laboratory decides what supports a tentative, probable, or confirmed identity.
 
-  This guide explains where Spectra AI fits in that process, what its current public workflow does, and how a laboratory can test it without confusing a promising candidate with a validated result.
+  This guide explains where Spectra fits in that process, what its current public workflow does, and how a laboratory can test it without confusing a promising candidate with a validated result.
 
-  ## What Spectra AI is—and what it is not
+  ## What Spectra is—and what it is not
 
-  Spectra AI is Rombo’s product line for NMR compound identification. It is not a generic name for every Rombo model, and it is distinct from the company’s wider NMR platform for materials, quality, and mixture-level decisions.
+  Spectra is Rombo AI’s agent for NMR analysis. It is not a generic name for every Rombo model, and it is distinct from Rombo AI Platform and its industrial modules.
 
   The current [Rombo compound-identification workflow](https://rombo.ai/use-cases/nmr-compound-identification/) describes four product actions: upload an NMR spectrum, bring the spectrum and sample context into a review workspace, identify patterns that discriminate among candidates, and return a scored shortlist of plausible structures. The chemist keeps the final call.
 
@@ -68,7 +68,7 @@ markdown_content: |-
 
   A confidence score is not automatically the probability that a structure is correct. Its meaning depends on how it is constructed, calibrated, and tested. Before setting an operational threshold, measure error rates on an independent set representing the lab’s instruments, chemistry, and sample preparation.
 
-  ## How to evaluate Spectra AI on your own NMR work
+  ## How to evaluate Spectra on your own NMR work
 
   A product demonstration answers “can the workflow run?” A defensible evaluation asks “under what conditions does it help, fail, or require escalation?” The latter needs a predeclared test set and acceptance criteria.
 
@@ -116,13 +116,13 @@ markdown_content: |-
 
   Rombo’s open research model [ROSE](https://github.com/romboai/rose-1h-nmr) illustrates the principle for one-dimensional proton NMR. Its published repository describes pretraining on 3.2 million spectra and task heads for denoising, peak detection, spectrum-pair similarity, spectrum prediction, and spectrum-to-structure retrieval. It also reports weaker results for some structure-linked tasks on low-field data. That limitation is exactly why a product evaluation must be stratified by acquisition regime rather than relying on a global average.
 
-  Spectra AI is a distinct commercial product line for compound identification, not another name for ROSE or for Rombo’s general NMR platform. The product goal is to reuse learned spectral relationships to move from an NMR spectrum toward ranked structural hypotheses across heterogeneous laboratory settings. The appropriate proof is performance on held-out spectra from the customer’s own instruments and sample types, followed by expert review under an agreed acceptance protocol.
+  Spectra is Rombo AI’s AI agent for NMR analysis, not another name for ROSE or Rombo AI Platform. Its goal is to reuse learned spectral relationships to move from an NMR spectrum toward ranked structural hypotheses across heterogeneous laboratory settings. The appropriate proof is performance on held-out spectra from the customer’s own instruments and sample types, followed by expert review under an agreed acceptance protocol.
 
-  If your team has representative unknown-compound cases and known final identities, [evaluate them with Spectra AI](https://spectra.rombo.ai). Define the intended claim, success metrics, and escalation rules first; then test whether the shortlist improves the complete analytical decision.
+  If your team has representative unknown-compound cases and known final identities, [evaluate them with Spectra](https://spectra.rombo.ai). Define the intended claim, success metrics, and escalation rules first; then test whether the shortlist improves the complete analytical decision.
 
   ## FAQs
 
-  ### Does Spectra AI confirm a compound automatically?
+  ### Does Spectra confirm a compound automatically?
 
   No. Its public workflow proposes and ranks candidate structures and highlights discriminating patterns. The chemist remains accountable for the final assignment, validation, and decision, using orthogonal evidence when the intended confidence level requires it.
 

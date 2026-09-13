@@ -3,13 +3,14 @@ layout: default
 title: "Rombo AI"
 permalink: /
 seo_title: "Rombo AI | AI for Spectral & Chemical Analysis (NMR)"
-description: "Automate spectral and chemical analysis with AI and Low Field NMR: faster insights, proprietary models, and end-to-end workflows for R&D and industry."
+description: "Rombo AI Platform automates traceable NMR analysis across instruments, sample types, and industrial laboratory sites."
 lang: en
+last_modified_at: 2026-09-13
 
-hero_home_title: "Building the First AI Foundation Model for NMR"
-hero_cta_label_left: "Talk to"
-hero_cta_label_right: "us"
-hero_cta_link: "/contact"
+hero_home_title: "AI-powered NMR analysis for industrial laboratories"
+hero_home_subtitle: "Connect NMR data to automated, traceable analysis across instruments, sample types, and laboratory sites. Rombo AI helps QC and R&D teams move from spectra to reviewable decisions faster."
+hero_primary_cta_label: "Explore the platform"
+hero_primary_cta_link: "/product/"
 
 intro_main_title: "TURNING COMPLEX ANALYSIS INTO DECISION-READY INSIGHT"
 intro_sub_title: "From laboratory data to faster business and operational decisions"

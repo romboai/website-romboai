@@ -102,9 +102,9 @@ markdown_content: |-
 
   A reusable NMR representation can make one layer of multimodal structure elucidation more scalable. Rombo AI describes its foundation-model approach as pre-trained on millions of spectra and designed to generalize across instruments and sample types, including mixed NMR fleets, without traditional per-instrument chemometric recalibration. Those cross-instrument claims should be evaluated on each laboratory’s held-out spectra and operating conditions.
 
-  Spectra AI is Rombo AI’s distinct product line for compound identification and full structure elucidation, separate from the broader NMR material-analysis platform. Its role should be described precisely: an NMR identification layer can consume constraints supplied by the surrounding analytical workflow without implying that MS ingestion or an integrated multimodal product capability already exists. Rombo reports reducing an analysis that can take weeks to approximately 15 minutes; laboratories should verify the comparison on representative samples, file formats, review requirements, and confirmation standards.
+  Spectra is Rombo AI’s AI agent for NMR analysis, distinct from Rombo AI Platform. Its role should be described precisely: an NMR identification layer can consume constraints supplied by the surrounding analytical workflow without implying that MS ingestion or an integrated multimodal product capability already exists. Rombo reports reducing an analysis that can take weeks to approximately 15 minutes; laboratories should verify the comparison on representative samples, file formats, review requirements, and confirmation standards.
 
-  If NMR interpretation is the bottleneck in your compound-identification workflow, [evaluate Spectra AI on a representative spectrum](https://spectra.rombo.ai/). Keep the original files, MS constraints, alternative structures, and chemist review in the validation package.
+  If NMR interpretation is the bottleneck in your compound-identification workflow, [evaluate Spectra on a representative spectrum](https://spectra.rombo.ai/). Keep the original files, MS constraints, alternative structures, and chemist review in the validation package.
 
   ## FAQs
 

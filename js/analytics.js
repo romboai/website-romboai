@@ -227,7 +227,7 @@
     var pageType = null;
 
     if (path === "/contact" || path.endsWith("/contact")) pageType = "contact";
-    else if (path === "/product" || path.indexOf("/product/") === 0) pageType = "product";
+    else if (path === "/product" || path.indexOf("/product/") === 0) pageType = "platform";
     else if (path === "/use-cases" || path.indexOf("/use-cases/") === 0) pageType = "use_cases";
     else if (path === "/about" || path.indexOf("/about/") === 0) pageType = "about";
 

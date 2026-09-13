@@ -109,7 +109,7 @@ markdown_content: |-
 
   Rombo AI’s approach uses a foundation model pre-trained on millions of spectra rather than a traditional chemometric model rebuilt for every instrument. The intended advantage is reusable representation across instruments and sample types, but any petroleum deployment still requires validation on the actual matrices, sample preparation, instruments, and decisions in scope. It must not convert class evidence into unjustified individual structures.
 
-  For structure-level questions, [Spectra AI](https://spectra.rombo.ai) is a distinct product line for NMR compound identification. It can propose and rank candidate structures from a spectrum so that chemists review a shortlist. In crude-oil work, that role is most appropriate after the relevant component has been isolated or the spectrum is sufficiently resolved—not as a claim to enumerate every molecule in an untreated crude sample.
+  For structure-level questions, [Spectra](https://spectra.rombo.ai) is Rombo AI’s agent for NMR analysis. It can propose and rank candidate structures from a spectrum so that chemists review a shortlist. In crude-oil work, that role is most appropriate after the relevant component has been isolated or the spectrum is sufficiently resolved—not as a claim to enumerate every molecule in an untreated crude sample.
 
   ## FAQs
 
