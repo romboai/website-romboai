@@ -8,6 +8,7 @@ lang: en
 og_image: /img/molecule-technology.png
 og_image_alt: "AI-assisted NMR compound identification for pharma R&D"
 
+hero_eyebrow: "NMR R&D"
 hero_title: "Identify NMR compounds in minutes, not weeks"
 hero_subtitle: "Upload a spectrum with the Spectra AI agent. Rombo AI ranks candidate structures so your chemists review a shortlist instead of starting from a blank plot."
 hero_cta_label: "Analyze a spectrum"

@@ -2,13 +2,33 @@
 layout: products
 title: "Rombo AI Platform"
 permalink: /product/
-seo_title: "Rombo AI Platform for Industrial NMR Analysis"
-description: "Standardize industrial NMR analysis across laboratories with traceable workflows, instrument-native acquisition, local validation, and expert review."
+seo_title: "Rombo AI Platform | AI for Industrial NMR Analysis"
+description: "Patented NMR AI models and in-house spectroscopy expertise to predict multiple physico-chemical properties from one benchtop scan. Start with a free feasibility analysis."
+og_image: /img/og/rombo-ai.jpg
+og_image_alt: "Rombo AI Platform | AI for Industrial NMR Analysis"
 lang: en
 last_modified_at: 2026-09-13
 
-hero_product_title: "One AI platform for industrial NMR workflows"
-hero_product_sub_title: "Standardize how spectra are analyzed across laboratories while preserving instrument-native acquisition, local validation, and expert review."
+hero_eyebrow: "Rombo AI Platform"
+hero_product_title: "From benchtop NMR to validated quality data"
+hero_product_sub_title: "Rombo AI Platform combines patented NMR AI models with in-house spectroscopy expertise to turn a single benchtop scan into multiple physico-chemical properties — traceable, comparable across instruments and sites, and validated against your reference methods."
+hero_cta_label: "Request a feasibility analysis"
+hero_cta_link: "/contact/"
+hero_cta_location: "product_hero"
+
+engage_eyebrow: "How we work"
+engage_title: "Start with a free feasibility analysis."
+engage_text: "We first assess the analytical problem, available data or samples, and target decision. If there is a strong fit, we define a focused pilot with clear objectives, success metrics, and a roadmap to scale."
+engage_cta_location: "product_how_we_work"
+engage_steps:
+  - title: "Share the challenge"
+    text: "What sample type, workflow, and decision do you need to improve?"
+  - title: "Assess feasibility"
+    text: "We review technical fit, data quality, sample requirements, and validation constraints."
+  - title: "Define the pilot"
+    text: "If the fit is strong, we propose objectives, metrics, timeline, and expected outputs."
+  - title: "Plan scale-up"
+    text: "After validation, we support integration and production-readiness."
 
 
 products:
@@ -32,13 +52,13 @@ products:
           Rombo AI Platform for Industrial NMR Analysis
         </h2>
         <p class="text-dark mt-3" style="max-width: 85ch;">
-          Industries working with complex materials, such as Oil &amp; Gas, Petrochemical, Chemical, Manufacturing, and Energy, material analysis is the most important aspect to understand how the product will perform. However, accurate material characterization remains challenging:
+          In oil &amp; gas, petrochemicals, chemicals and energy, material quality determines how a product will perform. Yet accurate characterization is still slow and hard to scale:
         </p>
         <ul class="text-dark mt-3" style="max-width: 70ch;">
-          <li>Lab analysis takes weeks/months to complete</li>
-          <li>Specialized personnel &amp; expensive instruments are required</li>
-          <li>Repetitive and prone to human errors</li>
-          <li>Reports are used as isolated snapshots</li>
+          <li>A full characterization often requires several reference methods, instruments and specialists</li>
+          <li>Results can take days, while operational decisions can't wait</li>
+          <li>Manual, repetitive workflows introduce variability between analysts and sites</li>
+          <li>Reports remain isolated snapshots instead of a comparable history</li>
         </ul>
         <p class="text-dark mt-3" style="max-width: 85ch;">
           In industrial contexts, while process indicators may look stable to QC operators, the chemical change and material shift may already be happening. The problem is not the measurement — it's the lack of early signals, with critical deviations leading to significant production loss.
@@ -88,8 +108,8 @@ products:
       </div>
       <div class="col-12 col-md-4">
         <div class="p-3 border rounded-4 h-100 text-center">
-          <div class="fw-bold" style="color: #FE900F;">Laboratory-Grade Accuracy</div>
-          <div class="text-dark" style="font-size: 14px;">ASTM / ISO compliant.</div>
+          <div class="fw-bold" style="color: #FE900F;">Validated Against Reference Methods</div>
+          <div class="text-dark" style="font-size: 14px;">Benchmarked against your ASTM or IEC reference methods before go-live.</div>
         </div>
       </div>
     </div>
@@ -136,7 +156,7 @@ products:
   <div class="container custom_container">
     {% include ui/section_heading_center.html
       kicker=""
-      title="One platform, two industrial modules"
+      title="One platform, two modules"
       text="NMR AI Analyzer and AutoML Framework are modules of Rombo AI Platform. Each production workflow is validated on relevant instruments, samples, and operating conditions."
       max_width="85ch"
     %}
@@ -163,8 +183,8 @@ products:
           </div>
           <div class="col-12 col-md-6">
             <div class="p-3 border rounded-4 h-100">
-              <div class="fw-bold" style="color: #FE900F;">Full Physio-Chemical Property Analysis</div>
-              <div class="text-muted" style="font-size: 14px;">100% customizable physical and chemical properties delivered simultaneously.</div>
+              <div class="fw-bold" style="color: #FE900F;">Multi-Property Prediction</div>
+              <div class="text-muted" style="font-size: 14px;">Configure the physico-chemical properties you need and get them from a single scan.</div>
             </div>
           </div>
           <div class="col-12 col-md-6">
@@ -176,7 +196,7 @@ products:
           <div class="col-12 col-md-6">
             <div class="p-3 border rounded-4 h-100">
               <div class="fw-bold" style="color: #FE900F;">15-Minute Full Report Generation</div>
-              <div class="text-muted" style="font-size: 14px;">Perform full physio-chemical characterization in just 15 minutes, remove bottlenecks, and accelerate industrial decisions.</div>
+              <div class="text-muted" style="font-size: 14px;">Go from sample to multi-property report in about 15 minutes, removing lab bottlenecks and accelerating industrial decisions.</div>
             </div>
           </div>
         </div>
@@ -216,9 +236,9 @@ products:
           <li>Support for adapting to new datasets (data quality + validation criteria)</li>
         </ul>
         <div class="p-3 border rounded-4 mt-3" style="max-width: 75ch; background: linear-gradient(135deg, #FFF7ED, #FFF);">
-          <div class="fw-bold" style="color: #FE900F;">Built on a Foundation Model for qNMR</div>
+          <div class="fw-bold" style="color: #FE900F;">Built on an NMR foundation model</div>
           <div class="text-dark" style="font-size: 14px;">
-            Every AutoML pipeline benefits from our foundation model, pre-trained on millions of quantitative NMR spectra. This means your custom models start from a rich, domain-specific representation of material chemistry — requiring less data, converging faster, and generalizing better across batches, conditions, and sites.
+            Every AutoML pipeline starts from ROSE, our openly published foundation model pre-trained on 3.2 million ¹H NMR spectra, and can build on our proprietary models trained on internal industrial datasets. Your custom models start from a rich spectral representation instead of from scratch, so they need less calibration data.
           </div>
         </div>
         <div class="p-3 bg-white border rounded-4 mt-3" style="max-width: 75ch;">
@@ -305,55 +325,3 @@ products:
   </div>
 </section>
 
-<section class="container-fluid justify-content-center text-center text-white py-5 h-100" style="background:#303767;">
-  <div class="container custom_container d-flex flex-column justify-content-center align-items-center text-center">
-    <p class="fw-bold pt-2 text-uppercase" style="font-size: 14px; color:#FE900F; letter-spacing:.06em;">How we work</p>
-    <h2 class="fw-bold py-3 text-white secondary-headline" style="font-size: 42px;">Start with a free feasibility analysis.</h2>
-    <p class="px-3 text-white" style="font-size: 16px; max-width: 900px;">
-      We first assess the analytical problem, available data or samples, and target decision. If there is a strong fit, we define a focused pilot with clear objectives, success metrics, and a roadmap to scale.
-    </p>
-
-    <div class="row g-3 w-100 mt-4" style="max-width: 1000px;">
-      <div class="col-12 col-md-6">
-        <div class="p-3 rounded-4 h-100" style="background: rgba(255,255,255,0.10); border: 1px solid rgba(255,255,255,0.16); text-align:left;">
-          <div class="fw-bold text-white">Share the challenge</div>
-          <div class="text-white-50" style="font-size: 14px;">What sample type, workflow, and decision do you need to improve?</div>
-        </div>
-      </div>
-      <div class="col-12 col-md-6">
-        <div class="p-3 rounded-4 h-100" style="background: rgba(255,255,255,0.10); border: 1px solid rgba(255,255,255,0.16); text-align:left;">
-          <div class="fw-bold text-white">Assess feasibility</div>
-          <div class="text-white-50" style="font-size: 14px;">We review technical fit, data quality, sample requirements, and validation constraints.</div>
-        </div>
-      </div>
-      <div class="col-12 col-md-6">
-        <div class="p-3 rounded-4 h-100" style="background: rgba(255,255,255,0.10); border: 1px solid rgba(255,255,255,0.16); text-align:left;">
-          <div class="fw-bold text-white">Define the pilot</div>
-          <div class="text-white-50" style="font-size: 14px;">If the fit is strong, we propose objectives, metrics, timeline, and expected outputs.</div>
-        </div>
-      </div>
-      <div class="col-12 col-md-6">
-        <div class="p-3 rounded-4 h-100" style="background: rgba(255,255,255,0.10); border: 1px solid rgba(255,255,255,0.16); text-align:left;">
-          <div class="fw-bold text-white">Plan scale-up</div>
-          <div class="text-white-50" style="font-size: 14px;">After validation, we support integration and production-readiness.</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="text-white-50 mt-3" style="font-size: 14px; max-width: 1000px;">
-      <strong class="text-white">What you get first:</strong> A practical feasibility view: fit, data or sample needs, validation criteria, and a clear recommendation for the next step.
-    </div>
-
-    <a href="{{ '/contact/' | relative_url }}" class="text-decoration-none pt-4" data-cta-location="product_how_we_work" aria-label="Request a free feasibility analysis">
-      <div class="d-flex justify-content-center align-items-center gap-0">
-        <button class="btn rounded-pill" style="background:#FE900F; color: white; padding:15px 25px; margin-right:-8px;">
-          Free feasibility
-        </button>
-        <img class="d-inline-block" src="{{ '/img/group-2-2.png' | relative_url }}" alt="" aria-hidden="true" style="width: 35px; height: 41px;">
-        <button class="btn rounded-pill" style="background:#FE900F; color: white; padding:15px; margin-left:-8px;">
-          analysis
-        </button>
-      </div>
-    </a>
-  </div>
-</section>

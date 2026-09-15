@@ -1,0 +1,70 @@
+{%- assign hero_title = page.hero_title | default: page.hero_home_title | default: page.hero_product_title | default: page.title -%}
+{%- assign hero_sub = page.hero_subtitle | default: page.hero_home_subtitle | default: page.hero_product_sub_title -%}
+{%- assign hero_cta_label = page.hero_cta_label | default: page.hero_primary_cta_label -%}
+{%- assign hero_cta_link = page.hero_cta_link | default: page.hero_primary_cta_link -%}
+{%- assign hero_cta_location = page.hero_cta_location | default: "hero_primary" -%}
+
+<div class="container-fluid hero-section">
+  <video class="hero-video" autoplay muted loop playsinline controlslist="nodownload" data-desktop-only="true" preload="none" aria-hidden="true">
+    <source data-src="{{ site.baseurl }}/img/hero_back_play.mp4" type="video/mp4"/>
+    <track kind="captions" label="No dialogue" default>
+    Your browser does not support the video tag.
+  </video>
+  <div class="mask"></div>
+  <div class="container custom-container w-100 h-100">
+    <div class="row m-0 w-100 h-100">
+      <div class="z-1 col-12 col-lg-7 hero-copy">
+        {% if page.hero_eyebrow %}
+        <p class="hero-eyebrow fw-bold text-uppercase mb-2">{{ page.hero_eyebrow }}</p>
+        {% endif %}
+        <h1 class="text-white m-0"><span class="text-highlight">{{ hero_title }}</span></h1>
+        {% if hero_sub %}
+        <p class="hero-sub text-white mb-0">{{ hero_sub }}</p>
+        {% endif %}
+        {%- if hero_cta_label and hero_cta_link or page.hero_secondary_cta_label %}
+        <div class="hero-actions d-flex flex-wrap gap-3 mt-4">
+          {%- if hero_cta_label and hero_cta_link %}
+          {%- assign cta_href = hero_cta_link -%}
+          {%- assign cta_external = false -%}
+          {%- if cta_href contains "://" -%}
+            {%- assign cta_external = true -%}
+          {%- else -%}
+            {%- assign cta_href = cta_href | relative_url -%}
+          {%- endif %}
+          <a href="{{ cta_href }}" class="btn rounded-pill"{% if cta_external %} target="_blank" rel="noopener noreferrer"{% endif %}
+             style="background:#FE900F; color:#fff; padding:15px 25px;"
+             data-cta-location="{{ hero_cta_location }}">{{ hero_cta_label }}</a>
+          {%- endif %}
+          {%- if page.hero_secondary_cta_label and page.hero_secondary_cta_link %}
+          {%- assign secondary_href = page.hero_secondary_cta_link -%}
+          {%- assign secondary_prefix = secondary_href | slice: 0, 1 -%}
+          {%- unless secondary_prefix == "#" or secondary_href contains "://" -%}
+            {%- assign secondary_href = secondary_href | relative_url -%}
+          {%- endunless %}
+          <a href="{{ secondary_href }}" class="btn rounded-pill sliding-link"
+             style="background:transparent; color:#fff; border:1px solid #fff; padding:15px 25px;"
+             data-cta-location="hero_secondary">{{ page.hero_secondary_cta_label }}</a>
+          {%- endif %}
+        </div>
+        {%- endif %}
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  (function () {
+    var isDesktop = window.matchMedia && window.matchMedia("(min-width: 992px)").matches;
+    var video = document.querySelector(".hero-section .hero-video[data-desktop-only='true']");
+    if (!video) return;
+    if (!isDesktop) {
+      video.remove();
+      return;
+    }
+    var source = video.querySelector("source[data-src]");
+    if (!source) return;
+    source.src = source.getAttribute("data-src");
+    video.load();
+    var p = video.play();
+    if (p && typeof p.catch === "function") p.catch(function () {});
+  })();
+</script>

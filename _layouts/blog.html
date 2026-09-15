@@ -4,7 +4,7 @@
 <body>
 
 <button id="UpBtn" class="up-btn d-none" aria-label="Back to top"><span>
-		<svg xmlns="http://www.w3.org/2000/svg" width="23.721" height="28.513" viewBox="0 0 28.513 23.721">
+		<svg xmlns="http://www.w3.org/2000/svg" width="23.721" height="28.513" viewBox="0 0 28.513 23.721" aria-hidden="true" focusable="false">
 			<g id="right-arrow" transform="translate(0 0)">
 			<g id="Group_22" data-name="Group 22" transform="translate(0 0) rotate(-90)">
 				<path id="Path_1869" data-name="Path 1869"
@@ -20,30 +20,7 @@
 
 <main id="main-content" tabindex="-1">
 
-<!--Hero Section-->
-<div class="container-fluid hero-blog-section px-0">
-  <div class="hero_contact_mask1" style="z-index: 1;"></div>
-  <div class="hero_contact_mask" style="z-index: 1;"></div>
-  <img src="{{ site.baseurl }}/img/imageHero.jpg" alt="Decorative blog header background" aria-hidden="true" class="img-fluid position-absolute"
-       width="1440" height="737" fetchpriority="high" decoding="async"
-       style=" height: 100%; width: 100%; object-fit: cover; left: 0;right:0; z-index: 1; mix-blend-mode: soft-light;">
-
-
-  <div class="container h-100 custom-container">
-      <div class="row mx-0 w-100 h-100 justify-content-center align-content-center text-center">
-          <div class="z-1 col-12 h-100 px-md-4 align-content-center align-items-center titolo-1">
-              <h1 class="titolo-1-span m-0">
-                  Welcome to Rombo AI Blog
-              </h1>
-              <p class="span2 py-4">
-                Perspectives on AI, NMR Spectral Data, and the Future of Materials Analysis.
-              </p>
-          </div>
-      </div>
-  </div>
-</div>
-<!--Hero Section-->
-
+{% include hero.html %}
 {% include hero_divider.html %}
 {% include blog_articles.html %}
 {% include engage.html %}

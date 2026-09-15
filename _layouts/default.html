@@ -4,7 +4,7 @@
 <body>
 
 <button id="UpBtn" class="up-btn d-none" aria-label="Back to top"><span>
-		<svg xmlns="http://www.w3.org/2000/svg" width="23.721" height="28.513" viewBox="0 0 28.513 23.721">
+		<svg xmlns="http://www.w3.org/2000/svg" width="23.721" height="28.513" viewBox="0 0 28.513 23.721" aria-hidden="true" focusable="false">
 			<g id="right-arrow" transform="translate(0 0)">
 			<g id="Group_22" data-name="Group 22" transform="translate(0 0) rotate(-90)">
 				<path id="Path_1869" data-name="Path 1869"
@@ -18,63 +18,10 @@
 
 {% include menu.html %}
 
-<main id="main-content" tabindex="-1">
+<main id="main-content" tabindex="-1" class="page-home">
 {{ content }}
 
-<!--Hero Section-->
-<div class="container-fluid  hero-section">
-  <video class="hero-video" autoplay muted loop playsinline controlslist="nodownload" data-desktop-only="true" preload="none">
-      <source data-src="{{ site.baseurl }}/img/hero_back_play.mp4" type="video/mp4"/>
-      <track kind="captions" label="No dialogue" default>
-      Your browser does not support the video tag.
-  </video>
-
-  <!-- Mask Overlay -->
-  <div class="mask"></div>
-  <div class="container custom-container w-100  h-100">
-      <div class="row m-0 w-100  h-100  hero-content-message">
-          <div class="z-1 col-md-6 align-self-center" style="text-align: left">
-              <h1 class="text-white text-responsive m-0">
-                  <span class="text-highlight">{{ page.hero_home_title | default: page.title | default: site.title }}</span>
-              </h1>
-              {% if page.hero_home_subtitle %}
-              <p class="text-white mt-3 mb-0" style="font-size:18px; line-height:1.55; max-width:720px;">{{ page.hero_home_subtitle }}</p>
-              {% endif %}
-              <div class="d-flex flex-wrap gap-3 mt-4">
-                <a href="{{ page.hero_primary_cta_link | relative_url }}" class="btn rounded-pill"
-                   style="background:#FE900F; color:#fff; padding:15px 25px;"
-                   data-cta-location="hero_primary">{{ page.hero_primary_cta_label }}</a>
-                {%- if page.hero_secondary_cta_label and page.hero_secondary_cta_link %}
-                <a href="{{ page.hero_secondary_cta_link | relative_url }}" class="btn rounded-pill"
-                   style="background:transparent; color:#fff; border:1px solid #fff; padding:15px 25px;"
-                   data-cta-location="hero_secondary">{{ page.hero_secondary_cta_label }}</a>
-                {%- endif %}
-              </div>
-          </div>
-      </div>
-  </div>
-</div>
-<!--Hero Section-->
-
-<script>
-  (function () {
-    var isDesktop = window.matchMedia && window.matchMedia("(min-width: 992px)").matches;
-    if (!isDesktop) {
-      var v = document.querySelector(".hero-section .hero-video[data-desktop-only='true']");
-      if (v) v.remove();
-      return;
-    }
-    var video = document.querySelector(".hero-section .hero-video[data-desktop-only='true']");
-    if (!video) return;
-    var source = video.querySelector("source[data-src]");
-    if (!source) return;
-    source.src = source.getAttribute("data-src");
-    video.load();
-    var p = video.play();
-    if (p && typeof p.catch === "function") p.catch(function () {});
-  })();
-</script>
-
+{% include hero.html %}
 {% include hero_divider.html %}
 
 <!--Intro Section-->
@@ -82,8 +29,8 @@
   <div class="row justify-content-center intro-header">
       <div class="col-12">
           <div class="top text-center">
-              <h2 id="intro-heading" class="text-wrapper5">{{ page.intro_main_title }}</h2>
-              <p class="text-wrapper6">{{ page.intro_sub_title }}</p>
+              <p class="text-wrapper5 text-uppercase mb-2">{{ page.intro_main_title }}</p>
+              <h2 id="intro-heading" class="text-wrapper6 m-0">{{ page.intro_sub_title }}</h2>
           </div>
       </div>
   </div>
@@ -91,66 +38,94 @@
       <!-- Left Image (Hidden on Mobile) -->
       <div class="col-md-1 d-none d-md-block text-start px-0">
           <img class="img-fluid intro-left" style="padding-right: 21px;" src="{{ site.baseurl }}/img/livello-1-7.svg"
-               alt="Decorative intro background shape" aria-hidden="true">
+               alt="" aria-hidden="true">
       </div>
 
       <!-- Main Content with Background Image -->
       <div class="col-md-10 px-0 intro-body">
-          <!-- <img class="img-fluid d-none d-sm-block background-image" src="{{ site.baseurl }}/img/livello-1-5.svg" alt="Background Level"> -->
-          <div class="row text-center w-100">
-              <div class="col-lg-3 col-sm-6 p-5 p-md-2">
-                  <img src="{{ site.baseurl }}/img/modalit-isolamento-8.svg" alt="Precision Icon">
+          <div class="row text-center w-100 justify-content-center">
+              {% for card in page.intro_cards %}
+              <div class="col-lg-4 col-sm-6 px-4 py-4 py-md-3">
+                  <img src="{{ card.icon | relative_url }}" alt="" aria-hidden="true">
                   <p style=" padding-top: 20px">
-                      <span class="text-wrapper28">{{page.intro_message_part_one}}</span><br>
-                      <span class="text-wrapper29">{{page.intro_message_part_two}} </span>
-                      <span class="text-wrapper30">{{page.intro_message_part_three}}</span>
-                      <span class="text-wrapper29"> {{page.intro_message_part_four}}</span>
+                      <span class="text-wrapper28">{{ card.title }}</span><br>
+                      <span class="text-wrapper29">{{ card.text }}</span>
                   </p>
               </div>
-              <div class="col-lg-3 col-sm-6 p-5 p-md-2">
-                  <img src="{{ site.baseurl }}/img/modalit-isolamento-9.svg" alt="Efficiency Icon">
-                  <p style=" padding-top: 20px">
-                      <span class="text-wrapper28">{{page.intro_message_part_five}}</span><br>
-                      <span class="text-wrapper29">{{page.intro_message_part_six}}</span>
-                      <span class="text-wrapper21"> {{page.intro_message_part_seven}}</span>
-                      <span class="text-wrapper29"> {{page.intro_message_part_eight}}</span>
-                  </p>
-              </div>
-              <div class="col-lg-3 col-sm-6 p-5 p-md-2">
-                  <img src="{{ site.baseurl }}/img/modalit-isolamento-10.svg"
-                       alt="Understanding Icon">
-                  <p style=" padding-top: 20px">
-                      <span class="text-wrapper28">{{page.intro_message_part_nine}}</span><br>
-                      <span class="text-wrapper29">{{page.intro_message_part_ten}}</span>
-                  </p>
-              </div>
-              <div class="col-lg-3 col-sm-6 p-5 p-md-2">
-                  <img src="{{ site.baseurl }}/img/modalit-isolamento-11.svg" alt="Cost Effective Icon">
-                  <p style=" padding-top: 20px">
-                      <span class="text-wrapper28">{{page.intro_message_part_eleven}}</span><br>
-                      <span class="text-wrapper29">{{page.intro_message_part_twelve}}</span>
-                  </p>
-              </div>
+              {% endfor %}
           </div>
       </div>
 
       <!-- Right Image (Hidden on Mobile) -->
       <div class="col-md-1 d-none d-md-block text-end px-0">
           <img class="img-fluid intro-right" style="padding-left: 21px;" src="{{ site.baseurl }}/img/livello-1-6.svg"
-               alt="Decorative intro background shape" aria-hidden="true">
+               alt="" aria-hidden="true">
       </div>
   </div>
 </section>
 
 <!--Intro Section-->
 
+<section id="how-it-works" class="container-fluid justify-content-center text-center text-white py-5" style="background:#303767;" aria-labelledby="how-it-works-heading">
+  <div class="container custom_container d-flex flex-column justify-content-center align-items-center text-center">
+    <p class="fw-bold pt-2 text-uppercase" style="font-size: 14px; color:#FE900F; letter-spacing:.06em;">{{ page.how_it_works_eyebrow }}</p>
+    <h2 id="how-it-works-heading" class="fw-bold py-3 text-white secondary-headline">{{ page.how_it_works_title }}</h2>
+    <div class="how-it-works-flow w-100 mt-2">
+      {% for step in page.how_it_works_steps %}
+      <article class="how-it-works-step p-4 rounded-4 h-100">
+        <div class="how-it-works-step__visual mb-3" aria-hidden="true">
+          <span class="how-it-works-step__num">{{ forloop.index }}</span>
+          {% include home_process_icon.html name=step.icon %}
+        </div>
+        <p class="fw-bold mb-1 how-it-works-step__title">{{ step.title }}</p>
+        <p class="text-white-50 mb-0 how-it-works-step__text">{{ step.text }}</p>
+      </article>
+      {% unless forloop.last %}
+      <div class="how-it-works-arrow" aria-hidden="true">
+        <svg viewBox="0 0 48 24" width="40" height="20" fill="none" focusable="false">
+          <path d="M2 12h36M30 4l14 8-14 8" stroke="#FE900F" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      {% endunless %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section id="why-rombo" class="container-fluid py-5" aria-labelledby="why-rombo-heading">
+  <div class="row justify-content-center intro-header">
+      <div class="col-12">
+          <div class="top text-center">
+              <p class="text-wrapper5 text-uppercase mb-2">{{ page.why_rombo_eyebrow }}</p>
+              <h2 id="why-rombo-heading" class="text-wrapper6 m-0 mx-auto px-3" style="max-width: 20em; text-wrap: balance;">{{ page.why_rombo_title }}</h2>
+          </div>
+      </div>
+  </div>
+  <div class="container custom_container">
+      <div class="row text-center justify-content-center intro-body g-4">
+          {% for card in page.why_rombo_cards %}
+          <div class="col-lg-4 col-sm-6">
+              <div class="p-4 border rounded-4 h-100">
+                  {% if card.icon %}
+                  <img src="{{ card.icon | relative_url }}" class="why-rombo-icon mb-3" alt="" aria-hidden="true" width="56" height="48">
+                  {% endif %}
+                  <p class="mb-0">
+                      <span class="text-wrapper28">{{ card.title }}</span><br>
+                      <span class="text-wrapper29">{{ card.text }}</span>
+                  </p>
+              </div>
+          </div>
+          {% endfor %}
+      </div>
+  </div>
+</section>
 
 <!--Technology Section-->
 <section class="container-fluid" style="background: #303767;" aria-labelledby="technology-heading">
   <div class="row">
       <div class="col-12 px-0">
           <img class="w-100 m-0 p-0 technology-divider-container" style="bottom:-10px; object-fit: cover"
-               src="{{ site.baseurl }}/img/Separator_Technology.svg" alt="Decorative section divider" aria-hidden="true"/>
+               src="{{ site.baseurl }}/img/Separator_Technology.svg" alt="" aria-hidden="true"/>
       </div>
   </div>
   <div class="container custom_container">
@@ -195,10 +170,10 @@
                             <a class="github-cta" href="https://github.com/romboai/rose-1h-nmr"
                                rel="noopener noreferrer" target="_blank"
                                data-cta-location="technology_github">
+                              <span>View the foundation model on GitHub</span>
                               <svg class="github-cta-mark" viewBox="0 0 16 16" width="22" height="22" aria-hidden="true" focusable="false">
                                 <path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/>
                               </svg>
-                              <span>View the foundation model on GitHub</span>
                             </a>
                           </div>
                       </div>
@@ -218,7 +193,7 @@
 <!--SupportBy-->
 {% include supportby.html %}
 <!--Engage-->
-{% include engage.html %}
+{% include home_engage.html %}
 <!--Footer-->
 {% include footer.html %}
  </main>

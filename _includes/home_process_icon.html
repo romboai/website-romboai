@@ -1,0 +1,25 @@
+{%- comment -%}Stroke icons for homepage how-it-works (measure / predict / decide).{%- endcomment -%}
+{%- case include.name -%}
+{%- when "measure" -%}
+<svg class="how-it-works-step__icon" viewBox="0 0 64 64" width="72" height="72" fill="none" aria-hidden="true" focusable="false">
+  <rect x="27" y="6" width="10" height="34" rx="5" stroke="#FE900F" stroke-width="2.2"/>
+  <path d="M27 16h10M27 22h10" stroke="#FE900F" stroke-width="1.7" stroke-linecap="round"/>
+  <ellipse cx="32" cy="26" rx="15" ry="7" stroke="#FE900F" stroke-width="2"/>
+  <path d="M18 48h28M24 54h16" stroke="#FE900F" stroke-width="2.2" stroke-linecap="round"/>
+</svg>
+{%- when "predict" -%}
+<svg class="how-it-works-step__icon" viewBox="0 0 64 64" width="72" height="72" fill="none" aria-hidden="true" focusable="false">
+  <path d="M8 30 18 18l7 10L36 10l8 12 10-16" stroke="#FE900F" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="32" cy="46" r="7" stroke="#FE900F" stroke-width="2"/>
+  <circle cx="16" cy="50" r="4" stroke="#FE900F" stroke-width="2"/>
+  <circle cx="48" cy="50" r="4" stroke="#FE900F" stroke-width="2"/>
+  <path d="M20 50h5.2M38.8 50H44M32 39v-4" stroke="#FE900F" stroke-width="1.8" stroke-linecap="round"/>
+</svg>
+{%- when "decide" -%}
+<svg class="how-it-works-step__icon" viewBox="0 0 64 64" width="72" height="72" fill="none" aria-hidden="true" focusable="false">
+  <rect x="14" y="8" width="36" height="48" rx="4" stroke="#FE900F" stroke-width="2.2"/>
+  <path d="M22 20h20M22 28h20M22 36h10" stroke="#FE900F" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="44" cy="44" r="11" fill="#303767" stroke="#FE900F" stroke-width="2"/>
+  <path d="m39 44 3.4 3.4 7-7.2" stroke="#FE900F" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+{%- endcase -%}

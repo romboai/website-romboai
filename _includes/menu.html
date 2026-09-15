@@ -1,11 +1,21 @@
 <!-- Menu -->
+{%- assign current_path = page.url | default: "/" -%}
+{%- if current_path == "/index.html" -%}{%- assign current_path = "/" -%}{%- endif -%}
+{%- assign products_open = false -%}
+{%- if current_path == "/product/" or current_path == "/spectra/" -%}
+  {%- assign products_open = true -%}
+{%- endif -%}
+{%- assign use_cases_open = false -%}
+{%- if current_path == "/use-cases/" or current_path contains "/use-cases/" -%}
+  {%- assign use_cases_open = true -%}
+{%- endif -%}
 
 <a class="skip-link" href="#main-content">Skip to content</a>
 
 <nav class="container-fluid navbar fixed-top navbar-expand-md navbar-light custom-shadow" style="max-height: 58px; background:#090C2333;">
     <div class="container custom-container">
         <!-- Logo -->
-        <a class="navbar-brand" style="padding-left: 10px; padding-bottom: 5px" href="{{ site.baseurl }}/#">
+        <a class="navbar-brand" style="padding-left: 10px; padding-bottom: 5px" href="{{ site.baseurl }}/"{% if current_path == "/" %} aria-current="page"{% endif %}>
             <img src="{{ site.baseurl }}/img/logo-1.svg" alt="Rombo AI Logo" class="img-fluid" >
         </a>
         <!-- Toggler/collapsible Button -->
@@ -16,69 +26,63 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto nev-mobile">
                 <li class="nav-item">
-                    <a class="nav-link menu-item text-white" href="{{ site.baseurl }}/about/">About Us</a>
+                    <a class="nav-link menu-item text-white{% if current_path == '/about/' %} active{% endif %}" href="{{ site.baseurl }}/about/"{% if current_path == '/about/' %} aria-current="page"{% endif %}>About Us</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link menu-item text-white dropdown-toggle"
+                    <a class="nav-link menu-item text-white dropdown-toggle{% if products_open %} active{% endif %}"
                        href="#"
                        id="productsDropdown"
                        role="button"
                        data-bs-toggle="dropdown"
-                       aria-expanded="false">
+                       aria-expanded="false"{% if products_open %} aria-current="true"{% endif %}>
                         Products
                     </a>
                     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="productsDropdown">
                         <li>
-                            <a class="dropdown-item" href="{{ site.baseurl }}/product/">
+                            <a class="dropdown-item{% if current_path == '/product/' %} active{% endif %}" href="{{ site.baseurl }}/product/"{% if current_path == '/product/' %} aria-current="page"{% endif %}>
                                 Rombo AI Platform
                             </a>
                         </li>
                         <li>
-                            <a class="dropdown-item" href="{{ site.baseurl }}/spectra/">
-                                Spectra Agent
+                            <a class="dropdown-item{% if current_path == '/spectra/' %} active{% endif %}" href="{{ site.baseurl }}/spectra/"{% if current_path == '/spectra/' %} aria-current="page"{% endif %}>
+                                Spectra
                             </a>
                         </li>
                     </ul>
                 </li>
 
                 <li class="nav-item dropdown">
-                    <a class="nav-link menu-item text-white dropdown-toggle"
+                    <a class="nav-link menu-item text-white dropdown-toggle{% if use_cases_open %} active{% endif %}"
                        href="#"
                        id="useCasesDropdown"
                        role="button"
                        data-bs-toggle="dropdown"
-                       aria-expanded="false">
+                       aria-expanded="false"{% if use_cases_open %} aria-current="true"{% endif %}>
                         Use Cases
                     </a>
                     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="useCasesDropdown">
                         <li>
-                            <a class="dropdown-item" href="{{ site.baseurl }}/use-cases/">
+                            <a class="dropdown-item{% if current_path == '/use-cases/' %} active{% endif %}" href="{{ site.baseurl }}/use-cases/"{% if current_path == '/use-cases/' %} aria-current="page"{% endif %}>
                                 All use cases
                             </a>
                         </li>
                         <li>
-                            <a class="dropdown-item" href="{{ site.baseurl }}/use-cases/nmr-compound-identification/">
-                                NMR Compound Identification
-                            </a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="{{ site.baseurl }}/use-cases/crude-oil-monitoring/">
+                            <a class="dropdown-item{% if current_path == '/use-cases/crude-oil-monitoring/' %} active{% endif %}" href="{{ site.baseurl }}/use-cases/crude-oil-monitoring/"{% if current_path == '/use-cases/crude-oil-monitoring/' %} aria-current="page"{% endif %}>
                                 Crude Oil Monitoring
                             </a>
                         </li>
                         <li>
-                            <a class="dropdown-item" href="{{ site.baseurl }}/use-cases/transformer-oil-monitoring/">
+                            <a class="dropdown-item{% if current_path == '/use-cases/transformer-oil-monitoring/' %} active{% endif %}" href="{{ site.baseurl }}/use-cases/transformer-oil-monitoring/"{% if current_path == '/use-cases/transformer-oil-monitoring/' %} aria-current="page"{% endif %}>
                                 Transformer Oil Monitoring
                             </a>
                         </li>
                     </ul>
                 </li>
                 <li class="nav-item d-flex align-items-center">
-                    <a class="nav-link nav-cta" href="{{ site.baseurl }}/contact/" data-cta-location="navigation">Contact us</a>
+                    <a class="nav-link nav-cta" href="{{ site.baseurl }}/contact/" data-cta-location="navigation"{% if current_path == '/contact/' %} aria-current="page"{% endif %}>Contact us</a>
                 </li>
             </ul>
         </div>
     </div>
 </nav>
 <!-- Menu -->
-

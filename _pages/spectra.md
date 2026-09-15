@@ -5,10 +5,11 @@ permalink: /spectra/
 seo_title: "Spectra Agent — AI Agent for NMR Analysis | Rombo AI"
 description: "Spectra is Rombo AI's agent for NMR analysis. Upload a spectrum, get ranked candidate structures with confidence scores, and keep chemists in control of the final call."
 lang: en
-last_modified_at: 2026-09-13
+last_modified_at: 2026-09-15
 og_image: /img/molecule-technology.png
 og_image_alt: "Spectra, the Rombo AI agent for NMR analysis"
 
+hero_eyebrow: "Spectra"
 hero_title: "Meet Spectra, the AI agent for NMR analysis"
 hero_subtitle: "Upload a spectrum and Spectra ranks candidate structures, so your chemists review a shortlist instead of starting from a blank plot."
 hero_cta_label: "Open Spectra"
@@ -137,42 +138,6 @@ hero_cta_location: "spectra_hero"
           <li><strong>Impurity teams</strong> move from an unknown signal to a candidate explanation without waiting in the expert queue.</li>
           <li><strong>R&amp;D leads</strong> get a repeatable workflow for high-value assignments.</li>
         </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="container-fluid py-4 py-lg-5" style="background:#FAFAFA;">
-  <div class="container custom_container text-center">
-    <h2 class="fw-bold text-dark" style="font-size: 30px;">Where teams use it</h2>
-    <div class="row g-3 mt-3 justify-content-center">
-      <div class="col-12 col-md-6 col-lg-3">
-        <div class="p-3 border rounded-4 h-100" style="background:#fff;">Unknown compound ID</div>
-      </div>
-      <div class="col-12 col-md-6 col-lg-3">
-        <div class="p-3 border rounded-4 h-100" style="background:#fff;">Impurity analysis</div>
-      </div>
-      <div class="col-12 col-md-6 col-lg-3">
-        <div class="p-3 border rounded-4 h-100" style="background:#fff;">Metabolite characterization</div>
-      </div>
-      <div class="col-12 col-md-6 col-lg-3">
-        <div class="p-3 border rounded-4 h-100" style="background:#fff;">Natural extracts</div>
-      </div>
-    </div>
-    <p class="text-dark mt-4 mb-0">
-      For a detailed walkthrough, read the
-      <a href="{{ '/use-cases/nmr-compound-identification/' | relative_url }}">NMR compound identification use case</a>.
-    </p>
-  </div>
-</section>
-
-<section class="container-fluid py-4 py-lg-5" style="background:#fff;">
-  <div class="container custom_container">
-    <div class="row justify-content-center">
-      <div class="col-12 col-lg-9">
-        <h2 class="fw-bold text-dark" style="font-size: 30px;">Looking for validated industrial workflows?</h2>
-        <p class="text-dark mt-3">Rombo AI Platform standardizes automated, traceable NMR workflows across laboratories, instruments, sample types, and sites.</p>
-        <a href="{{ '/product/' | relative_url }}" class="fw-bold">Explore Rombo AI Platform</a>
       </div>
     </div>
   </div>

@@ -32,7 +32,7 @@ test("a11y smoke: Products dropdown is usable and navigates", async ({ page }) =
   await page.locator("#productsDropdown").click();
   const platformLink = page.getByRole("link", { name: "Rombo AI Platform", exact: true });
   await expect(platformLink).toBeVisible();
-  await expect(page.getByRole("link", { name: "Spectra Agent", exact: true })).toBeVisible();
+  await expect(page.getByRole("link", { name: "Spectra", exact: true })).toBeVisible();
   await platformLink.click();
   await expect(page).toHaveURL(/\/product\/?$/);
 });

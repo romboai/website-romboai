@@ -2,34 +2,73 @@
 layout: default
 title: "Rombo AI"
 permalink: /
-seo_title: "Rombo AI | AI for Spectral & Chemical Analysis (NMR)"
-description: "Rombo AI Platform automates traceable NMR analysis across instruments, sample types, and industrial laboratory sites."
+seo_title: "Rombo AI | AI Platform for Industrial NMR Analysis"
+description: "Rombo AI Platform turns benchtop NMR into validated physico-chemical data and decision-ready insight, traceable across instruments and sites."
+og_image: /img/og/rombo-ai.jpg
+og_image_alt: "Rombo AI | AI Platform for Industrial NMR Analysis"
 lang: en
-last_modified_at: 2026-09-13
+last_modified_at: 2026-09-15
 
-hero_home_title: "AI-powered NMR analysis for industrial laboratories"
-hero_home_subtitle: "Connect NMR data to automated, traceable analysis across instruments, sample types, and laboratory sites. Rombo AI helps QC and R&D teams move from spectra to reviewable decisions faster."
-hero_primary_cta_label: "Explore the platform"
-hero_primary_cta_link: "/product/"
+hero_eyebrow: "THE AI PLATFORM FOR INDUSTRIAL NMR"
+hero_home_title: "From one NMR scan to validated insight in minutes."
+hero_home_subtitle: "Patented NMR AI models and in-house spectroscopy expertise turn one scan into physico-chemical properties and decision-ready insight — validated against your reference methods, comparable across instruments and sites."
+hero_primary_cta_label: "Request a feasibility analysis"
+hero_primary_cta_link: "/contact/"
+hero_secondary_cta_label: "See how it works"
+hero_secondary_cta_link: "#how-it-works"
 
-intro_main_title: "TURNING COMPLEX ANALYSIS INTO DECISION-READY INSIGHT"
-intro_sub_title: "From laboratory data to faster business and operational decisions"
+intro_main_title: "THE PROBLEM"
+intro_sub_title: "Quality decisions shouldn't wait for the lab."
+intro_cards:
+  - title: "Variable inputs"
+    text: "Every crude cargo, oil sample or spent solvent stream is different, and yesterday's analysis doesn't describe today's material."
+    icon: "/img/modalit-isolamento-8.svg"
+  - title: "One sample, many methods"
+    text: "A full quality profile can mean GC, distillation, Karl Fischer and more — each with its own instrument, operator and queue."
+    icon: "/img/modalit-isolamento-9.svg"
+  - title: "Calibrations that don't travel"
+    text: "Classic chemometric models often have to be rebuilt for every matrix, instrument and site."
+    icon: "/img/modalit-isolamento-10.svg"
 
-intro_message_part_one: "Precision Redefined"
-intro_message_part_two: "We combine patented AI models with"
-intro_message_part_three: "low-field NMR"
-intro_message_part_four: "to provide real industrial materials insights beyond traditional methods."
+how_it_works_eyebrow: "HOW IT WORKS"
+how_it_works_title: "From one scan to a decision"
+how_it_works_steps:
+  - title: "Measure"
+    text: "Run a benchtop NMR scan of your sample, with minimal preparation."
+    icon: measure
+  - title: "Predict"
+    text: "Our proprietary models, adapted to your matrix, return multiple physico-chemical properties and insight at once."
+    icon: predict
+  - title: "Decide"
+    text: "Get a traceable report, track drift over time and share results with your enterprise systems."
+    icon: decide
 
-intro_message_part_five: "Efficiency and Speed"
-intro_message_part_six: "Say goodbye to time-consuming analysis processes. Our solution ensures quicker decision-making and faster time-to-market for your products."
-intro_message_part_seven: "15 minutes"
-intro_message_part_eight: "compared to weeks of traditional laboratory analysis."
+why_rombo_eyebrow: "WHY ROMBO AI"
+why_rombo_title: "Built by NMR scientists and AI researchers."
+why_rombo_cards:
+  - title: "Patented, NMR-native models"
+    text: "We start from our openly published NMR foundation model and build patented, proprietary models on internal industrial datasets — so projects need less calibration data to get started."
+    icon: "/img/modalit-isolamento-1.svg"
+  - title: "Spectroscopy expertise in the loop"
+    text: "PhDs in machine learning, physics and mathematics with hands-on spectroscopy experience design each model with your analytical team, from sample preparation to acceptance criteria."
+    icon: "/img/modalit-isolamento-2.svg"
+  - title: "Validated on your methods"
+    text: "Every deployment is benchmarked against your ASTM or IEC reference methods, with metrics agreed before go-live."
+    icon: "/img/modalit-isolamento-6.svg"
 
-intro_message_part_nine: "In-depth Understanding"
-intro_message_part_ten: "Build a consistent material fingerprint over time, empowering data-driven decisions that fuel innovation and enhance QC."
-
-intro_message_part_eleven: "Cost-Effective Solutions"
-intro_message_part_twelve: "Optimize costs by streamlining analysis processes, reducing manual labor, and eliminating potential errors associated with conventional methods."
+engage_eyebrow: "How we work"
+engage_title: "Start with a free feasibility analysis."
+engage_text: "We first assess the analytical problem, available data or samples, and target decision. If there is a strong fit, we define a focused pilot with clear objectives, success metrics, and a roadmap to scale."
+engage_cta_location: "engage"
+engage_steps:
+  - title: "Share the challenge"
+    text: "What sample type, workflow, and decision do you need to improve?"
+  - title: "Assess feasibility"
+    text: "We review technical fit, data quality, sample requirements, and validation constraints."
+  - title: "Define the pilot"
+    text: "If the fit is strong, we propose objectives, metrics, timeline, and expected outputs."
+  - title: "Plan scale-up"
+    text: "After validation, we support integration and production-readiness."
 
 technology_main_title: "FOUNDATION MODEL FOR NMR"
 technology_sub_title: "Pre-trained on Millions of Spectra. Built for Industry."

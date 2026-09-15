@@ -29,7 +29,7 @@
     }
     .footer-logo{
         text-align: left;
-        padding-left: 50px;
+        padding-left: 0;
     }
 
 
@@ -118,7 +118,7 @@
     }
     .footer-logo{
         text-align: left;
-        padding-left: 50px;
+        padding-left: 0;
     }
 
 
@@ -189,7 +189,7 @@
     }
     .footer-logo{
         text-align: left;
-        padding-left: 50px;
+        padding-left: 0;
     }
 
     .footer-text{
@@ -442,10 +442,41 @@
         margin-top: -90px;
     }
 
+    .navbar.fixed-top:has(.navbar-collapse.show),
+    .navbar.fixed-top:has(.navbar-collapse.collapsing) {
+        max-height: none !important;
+        background: linear-gradient(
+            180deg,
+            rgba(9, 12, 35, 0.98) 0%,
+            rgba(9, 12, 35, 0.94) 72%,
+            rgba(9, 12, 35, 0.55) 100%
+        ) !important;
+        -webkit-backdrop-filter: blur(12px) brightness(100%);
+        backdrop-filter: blur(12px) brightness(100%);
+    }
+
+    .navbar .navbar-collapse.show,
+    .navbar .navbar-collapse.collapsing {
+        padding-bottom: 20px;
+    }
+
     .nev-mobile {
-        background: #090C2333;
-        padding: 10px;
+        background: transparent;
+        padding: 8px 10px 16px;
         margin: 0px;
+    }
+
+    .navbar .dropdown-menu {
+        background: rgba(9, 12, 35, 0.96) !important;
+    }
+
+    .footer-bar {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        text-align: center;
+        min-height: 0;
+        padding: 16px 12px;
+        gap: 12px;
     }
 
     .footer-logo{
@@ -455,6 +486,9 @@
     .footer-text{
         padding-left: 0px;
         text-align: center;
+    }
+    .footer-linkedin {
+        justify-content: center;
     }
 
     .post_header{

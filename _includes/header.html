@@ -119,8 +119,11 @@
     <link rel="stylesheet" href="{{ site.baseurl }}/css/custom/scrollbar.css">
 
     {%- assign seo_title = page.seo_title | default: page.title | default: site.title -%}
-    {%- assign meta_description = page.description | default: page.excerpt | default: site.description -%}
-    {%- assign meta_description = meta_description | strip_html | strip_newlines | replace: '  ', ' ' | truncate: 160 -%}
+    {%- if page.description -%}
+      {%- assign meta_description = page.description | strip_html | strip_newlines | replace: '  ', ' ' -%}
+    {%- else -%}
+      {%- assign meta_description = page.excerpt | default: site.description | strip_html | strip_newlines | replace: '  ', ' ' | truncate: 160 -%}
+    {%- endif -%}
     {%- assign canonical_url = page.url | absolute_url -%}
     {%- assign og_image = page.og_image | default: page.image | default: site.og_image -%}
     {%- assign og_image = og_image | absolute_url -%}

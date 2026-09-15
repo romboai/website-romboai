@@ -21,7 +21,7 @@ markdown_content: >-
   persistent operational bottleneck. 
 
 
-  A full crude assay - covering physio-chemical properties and multiple
+  A full crude assay - covering physico-chemical properties and multiple
   distillation fractions – still required **several weeks to months to
   complete**, as per the current industry standards. 
 

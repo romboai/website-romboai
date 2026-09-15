@@ -8,7 +8,9 @@ robots: "noindex,follow"
 sitemap: false
 lang: en
 
+hero_eyebrow: "Rombo AI"
 hero_home_title: "NMR Spectroscopy Powered by AI"
+hero_home_subtitle: "Unlock faster, more accurate NMR analysis with AI-powered workflows for chemical optimization."
 
 intro_main_title: "Unlocking the Power of NMR with Artificial Intelligence"
 intro_sub_title: "Revolutionizing Chemical Analysis for the Chemical Industry"

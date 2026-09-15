@@ -16,17 +16,18 @@
         <p class="px-3" style="font-size: 20px; max-width: 800px;">
             {{ site.engage_message_part_one }}
         </p>
-        <a href="{{ site.baseurl }}{{ cta_link }}" class="text-decoration-none pt-5" data-cta-location="engage" aria-label="{{ cta_left }} {{ cta_right }}">
-            <div class="d-flex justify-content-center align-items-center  gap-0">
-                <button class="btn rounded-pill"
+        <a href="{{ site.baseurl }}{{ cta_link }}" class="text-decoration-none pt-5" data-cta-location="engage">
+            <span class="visually-hidden">Request a free feasibility analysis</span>
+            <div class="d-flex justify-content-center align-items-center  gap-0" aria-hidden="true">
+                <span class="btn rounded-pill"
                         style="background:#FE900F; color: white; padding:15px 25px 15px 25px; margin-right:-8px;">
                     {{ cta_left }}
-                </button>
-                <img class="d-inline-block" src="{{ site.baseurl }}/img/group-2-2.png" alt="Decorative call-to-action arrow" aria-hidden="true" style="width: 35px; height: 41px;">
-                <button class="btn rounded-pill"
+                </span>
+                <img class="d-inline-block" src="{{ site.baseurl }}/img/group-2-2.png" alt="" aria-hidden="true" style="width: 35px; height: 41px;">
+                <span class="btn rounded-pill"
                         style="background:#FE900F; color: white; padding:15px;margin-left:-8px;">
                     {{ cta_right }}
-                </button>
+                </span>
             </div>
         </a>
     </div>

@@ -34,6 +34,16 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}
+
 /* Hero headline: fluid sizing instead of hard-coded breakpoints */
 .text-responsive {
     font-size: clamp(32px, 4.2vw, 64px);
@@ -97,6 +107,16 @@ button {
 .navbar .dropdown-item:focus {
     background: rgba(254, 144, 15, 0.18);
     color: #ffffff;
+}
+
+.navbar .nav-link.menu-item.active,
+.navbar .dropdown-item.active {
+    color: #FE900F !important;
+}
+
+.navbar .dropdown-item.active {
+    background: rgba(254, 144, 15, 0.18);
+    font-weight: 600;
 }
 
 button:focus, input:focus, input:focus, textarea, textarea:focus {
@@ -182,6 +202,7 @@ button:focus, input:focus, input:focus, textarea, textarea:focus {
 }
 .github-cta-mark{
     flex: 0 0 auto;
+    order: -1;
 }
 
 /* Platform page - "Built on an NMR foundation model" section */
@@ -191,6 +212,11 @@ button:focus, input:focus, input:focus, textarea, textarea:focus {
 }
 
 #foundation-model{
+    scroll-margin-top: 80px;
+}
+
+#how-it-works,
+#why-rombo {
     scroll-margin-top: 80px;
 }
 
@@ -1037,9 +1063,27 @@ label.ckb input:checked ~ span.checkmark::after {
 
 
 /* Contact-area css END and Footer-area START*/
+.footer-bar {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+    align-items: center;
+    gap: 16px 24px;
+    min-height: 80px;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
 .footer-logo{
     text-align: left;
-    padding-left: 50px;
+    padding-left: 0;
+    justify-self: start;
+}
+
+.footer-linkedin {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    justify-self: end;
 }
 
 .footer-area {
@@ -1078,7 +1122,8 @@ label.ckb input:checked ~ span.checkmark::after {
     font-size: 14px;
     font-weight: 400;
     line-height: 1.4;
-    padding-left: 100px;
+    padding-left: 0;
+    text-align: center;
 }
 .footer-text a {
     color: #007bff;
@@ -1151,10 +1196,199 @@ label.ckb input:checked ~ span.checkmark::after {
 /*Hero Section */
 .hero-section {
     position: relative;
-    text-align: center;
+    text-align: left;
     overflow: hidden;
-    height: 640px;
+    height: auto;
+    min-height: 560px;
     width: 100%;
+    background: #1c2354;
+}
+
+.hero-section > .container {
+    min-height: 560px;
+}
+
+.hero-section .hero-copy {
+    position: relative;
+    z-index: 2;
+    padding-top: 112px;
+    padding-bottom: 108px;
+    text-align: left;
+}
+
+.hero-section .hero-eyebrow,
+.hero-section .home-hero-eyebrow {
+    font-size: clamp(13px, 1.1vw, 16px);
+    letter-spacing: 0.12em;
+    color: #fe900f;
+    margin-bottom: 1rem !important;
+}
+
+.hero-section h1 {
+    text-wrap: balance;
+    font-size: clamp(28px, 3.4vw, 46px);
+    line-height: 1.26;
+    letter-spacing: -0.02em;
+    margin-bottom: 1.25rem !important;
+}
+
+.hero-section .hero-sub,
+.hero-section .home-hero-sub {
+    font-size: clamp(16px, 1.35vw, 20px);
+    line-height: 1.6;
+    max-width: 42em;
+    font-weight: 400;
+    margin-top: 0;
+}
+
+.hero-section .hero-actions {
+    margin-top: 2rem !important;
+}
+
+.hero-section.hero-contact-section,
+.hero-section.hero-contact-section > .container {
+    min-height: 0;
+}
+
+.hero-section.hero-contact-section .hero-copy {
+    padding-bottom: 24px;
+}
+
+.hero-section.hero-contact-section .hero-contact-form {
+    padding-top: 8px;
+    padding-bottom: 96px;
+}
+
+@media (min-width: 768px) {
+    .hero-section.hero-contact-section .hero-copy {
+        padding-bottom: 80px;
+    }
+
+    .hero-section.hero-contact-section .hero-contact-form {
+        padding-top: 96px;
+        padding-bottom: 80px;
+    }
+}
+
+@media (max-width: 390px) {
+    .hero-section h1 {
+        font-size: clamp(24px, 6.6vw, 28px);
+        line-height: 1.22;
+    }
+}
+
+.how-it-works-flow {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+.how-it-works-step {
+    background: rgba(255,255,255,0.10);
+    border: 1px solid rgba(255,255,255,0.16);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.how-it-works-step__visual {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    background: rgba(254,144,15,0.12);
+    border: 1px solid rgba(254,144,15,0.35);
+}
+
+.how-it-works-step__num {
+    position: absolute;
+    top: -6px;
+    left: -6px;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: #FE900F;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 26px;
+    text-align: center;
+}
+
+.how-it-works-step__icon {
+    width: 64px;
+    height: 64px;
+    display: block;
+}
+
+.how-it-works-step__title {
+    color: #FE900F;
+    font-size: 18px;
+}
+
+#how-we-work .how-it-works-step__title {
+    color: #FE900F;
+}
+
+#how-we-work .how-it-works-step__text {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.how-it-works-step__text {
+    font-size: 15px;
+    line-height: 1.45;
+    max-width: 28em;
+}
+
+.how-it-works-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 28px;
+}
+
+.how-it-works-arrow svg {
+    transform: rotate(90deg);
+}
+
+.why-rombo-icon {
+    width: 56px;
+    height: auto;
+    display: inline-block;
+}
+
+@media (min-width: 768px) {
+    .how-it-works-flow {
+        grid-template-columns: 1fr auto 1fr auto 1fr;
+        gap: 8px 12px;
+        align-items: stretch;
+    }
+
+    .how-it-works-arrow svg {
+        transform: none;
+    }
+
+    .how-it-works-step {
+        text-align: left;
+        align-items: flex-start;
+    }
+}
+
+.page-home .intro-header .text-wrapper6 {
+    font-size: clamp(28px, 3.2vw, 40px);
+    line-height: 1.2;
+}
+
+.page-home #how-it-works .secondary-headline,
+#engage-heading {
+    font-size: clamp(28px, 3.2vw, 40px) !important;
+    line-height: 1.2;
 }
 
 .hero-video {
@@ -1168,10 +1402,25 @@ label.ckb input:checked ~ span.checkmark::after {
     transform: rotate(0deg) scale(-1, 1);
 }
 
-/* Products: never show the hero video on mobile (JS also prevents mp4 download) */
+/* Hide hero video on mobile (JS also prevents mp4 download) */
 @media (max-width: 991.98px) {
-    .page-products .hero-video {
+    .hero-section .hero-video {
         display: none;
+    }
+
+    .hero-section,
+    .hero-section > .container {
+        min-height: 0;
+    }
+
+    .hero-section .hero-copy {
+        padding-top: 100px;
+        padding-bottom: 112px;
+    }
+
+    .hero-section .hero-actions > a {
+        width: 100%;
+        text-align: center;
     }
 }
 
@@ -1180,7 +1429,11 @@ label.ckb input:checked ~ span.checkmark::after {
     font-size: 69px;
     line-height: inherit;
     font-weight: 600;
+}
 
+.page-home .hero-section .hero-content-message {
+    position: relative;
+    z-index: 2;
 }
 
 .mask {
@@ -1746,17 +1999,18 @@ label.ckb input:checked ~ span.checkmark::after {
     /*background: linear-gradient(40deg, #242b5e 29.85%, #050533 93.79%);*/
     /*background: linear-gradient(79deg, #242b5e 29.85%, #050533 93.79%);*/
     background: #2F3666;
-    padding: 6px 8px;
+    padding: 8px 12px;
     box-decoration-break: clone;
     -webkit-box-decoration-break: clone;
 }
 
 .hero-contact-section {
     position: relative;
-    text-align: center;
+    text-align: left;
     overflow: hidden;
-    height: 100%;
+    height: auto;
     width: 100%;
+    background: #1c2354;
 }
 
 .label {
@@ -1779,8 +2033,8 @@ label.ckb input:checked ~ span.checkmark::after {
     color: #ffffff;
     text-align: left;
     font-family: "Roboto-Bold", sans-serif;
-    font-size: 54px;
-    line-height: 110%;
+    font-size: clamp(28px, 3.4vw, 46px);
+    line-height: 1.18;
     font-weight: 700;
     position: relative;
 }
@@ -1950,11 +2204,12 @@ label.ckb input:checked ~ span.checkmark::after {
 /*About*/
 .hero-about-section {
     position: relative;
-    text-align: center;
+    text-align: left;
     overflow: hidden;
-    height: 100%;
+    height: auto;
     width: 100%;
-    min-height: 640px;
+    min-height: 560px;
+    background: #1c2354;
 }
 
 .about_label,
@@ -2004,42 +2259,25 @@ label.ckb input:checked ~ span.checkmark::after {
 .titolo-1-span {
     color: #ffffff;
     font-family: "Roboto-Bold", sans-serif;
-    font-size: 54px;
-    line-height: 110%;
+    font-size: clamp(28px, 3.4vw, 46px);
+    line-height: 1.18;
     font-weight: 700;
 }
 
 .titolo-1-span2 {
     color: #ffffff;
     font-family: "Roboto-Regular", sans-serif;
-    font-size: 32px;
-    line-height: 110%;
+    font-size: clamp(16px, 1.35vw, 20px);
+    line-height: 1.5;
     font-weight: 400;
 }
 
 /* Products hero: better left rhythm + readable width (scoped) */
 .page-products .products-hero-copy {
-    /* Center the copy block inside the left half (col-lg-6) */
     width: 100%;
-    /* Wider so the hero title tends to break into ~2 lines instead of 3 */
     max-width: 70ch;
     margin-left: auto;
     margin-right: auto;
-}
-
-.page-products .titolo-1-span {
-    font-size: clamp(34px, 4vw, 48px);
-    line-height: 1.08;
-    /* Helps create nicer two-line wraps when supported */
-    text-wrap: balance;
-}
-
-.page-products .titolo-1-span2 {
-    display: block;
-    margin-top: 12px;
-    font-size: clamp(18px, 2vw, 26px);
-    line-height: 1.25;
-    max-width: 60ch;
 }
 
 .forma-5-1,
@@ -2060,10 +2298,12 @@ label.ckb input:checked ~ span.checkmark::after {
 /*Blog*/
 .hero-blog-section {
     position: relative;
-    text-align: center;
+    text-align: left;
     overflow: hidden;
-    height: 740px;
+    height: auto;
+    min-height: 560px;
     width: 100%;
+    background: #1c2354;
 }
 
 .hero_contact_mask {

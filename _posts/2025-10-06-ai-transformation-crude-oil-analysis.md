@@ -44,7 +44,7 @@ markdown_content: |
 
   While AI offers tremendous potential in analysing crude oil, it's important to acknowledge its limitations:
 
-  - **Data dependency**: AI models rely on high-quality, representative spectral and physio-chemical data. Incomplete, noisy, or unstandardized samples can lead to inaccurate predictions about crude composition or blending properties.
+  - **Data dependency**: AI models rely on high-quality, representative spectral and physico-chemical data. Incomplete, noisy, or unstandardized samples can lead to inaccurate predictions about crude composition or blending properties.
 
   - **Integration complexity**: Incorporating AI insights into existing refinery systems — such as process control, quality assurance, and production workflows — requires careful alignment and validation.
 

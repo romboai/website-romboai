@@ -4,7 +4,7 @@
 <body>
 
 <button id="UpBtn" class="up-btn d-none" aria-label="Back to top"><span>
-		<svg xmlns="http://www.w3.org/2000/svg" width="23.721" height="28.513" viewBox="0 0 28.513 23.721">
+		<svg xmlns="http://www.w3.org/2000/svg" width="23.721" height="28.513" viewBox="0 0 28.513 23.721" aria-hidden="true" focusable="false">
 			<g id="right-arrow" transform="translate(0 0)">
 			<g id="Group_22" data-name="Group 22" transform="translate(0 0) rotate(-90)">
 				<path id="Path_1869" data-name="Path 1869"
@@ -21,37 +21,14 @@
 <main id="main-content" tabindex="-1">
 
 
-<!--Hero Section-->
-<div class="container-fluid hero-about-section">
-  <!-- Video -->
-  <video class="hero-video" autoplay muted loop playsinline controlslist="nodownload" preload="none">
-      <source src="{{ site.baseurl }}/img/hero_back_play.mp4" type="video/mp4"/>
-      <track kind="captions" label="No dialogue" default>
-      Your browser does not support the video tag.
-  </video>
-
-  <!-- Mask Overlay -->
-  <div class="mask"></div>
-  <div class="container custom-container pt-5">
-      <div class="row m-0 py-5 hero-content-message">
-          <h1 class="z-1 col-12 align-self-center text-white text-responsive" style="text-align: left">
-              <span class="text-highlight">Our Mission and Expertise</span>
-          </h1>
-      </div>
-      <div class="row p-5 "></div>
-  </div>
-</div>
-
-
-<div class="container-fluid align-self-end" style="position: relative;">
-  <img class="img-fluid w-100 hero-divider-container" style="bottom:-3px; object-fit: cover; z-index: 1;" src="{{ site.baseurl }}/img/Separator_Hero.svg" alt="" aria-hidden="true"/>
-</div>
+{% include hero.html %}
+{% include hero_divider.html %}
 
 <!--About Section-->
 
 <div class="container-fluid h-100 py-5 my-0" style="position: relative;">
   <video class="z-n1 position-absolute top-0 start-0 w-100 h-100"
-         style="object-fit: cover;" autoPlay muted loop playsinline controlslist="nodownload" preload="none">
+         style="object-fit: cover;" autoplay muted loop playsinline controlslist="nodownload" preload="none" aria-hidden="true">
       <source src="{{ site.baseurl }}/img/hero_white_play.mp4" type="video/mp4"/>
       <track kind="captions" label="No dialogue" default>
       Your browser does not support the video tag.
@@ -101,7 +78,7 @@
               <h2 class="z-1 secondary-headline pt-2" style="color: #001d6c; font-size: 28px;">Our Mission</h2>
               <div class="hero-label pt-2">
                   <p style="text-align: left;">
-                      <span class="span2" style="color: #21272a; z-index: 1">We empower medium and large enterprises – especially in energy, oil &amp; gas, biotech, and chemical industries – with fast, precise, and automated molecular characterization and quantification. By combining cutting-edge Low Field NMR spectroscopy with our patented Artificial Intelligence models, we deliver end-to-end automated solutions that reduce manual work, accelerate R&amp;D breakthroughs, and set new standards for efficiency.</span>
+                      <span class="span2" style="color: #21272a; z-index: 1">We empower medium and large enterprises – especially in energy, oil &amp; gas, electrical assets and chemicals, including circular chemistry – with fast, precise, and automated molecular characterization and quantification. By combining cutting-edge Low Field NMR spectroscopy with our patented Artificial Intelligence models, we deliver end-to-end automated solutions that reduce manual work, accelerate R&amp;D breakthroughs, and set new standards for efficiency.</span>
                   </p>
               </div>
           </div>

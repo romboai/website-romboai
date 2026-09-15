@@ -1,43 +1,36 @@
 <!-- Footer -->
 <footer>
     <div class="container-fluid border-bottom">
-        <div class="container custom-container">
-            <div class="row justify-content-md-center">
-                <div class="col-12 col-md-4 footer-logo">
-                    <img
-                            alt="Rombo AI"
-                            class="img-fluid"
-                            src="{{ site.baseurl }}/img/romboai-04-1-2.png"
-                            width="200" height="79"
-                            loading="lazy"
-                    />
-                </div>
-                <div class="col-12 col-md-8">
-                    <div class="row m-0 d-flex align-items-center h-100">
-                        <p class="footer-text col-10 col-md-10 m-0 text-md-left text-lg-left">
-                            ROMBO AI © 2026 |
-                            <a href="{{ site.baseurl }}/product/">Platform</a>
-                            |
-                            <a href="{{ site.baseurl }}/spectra/">Spectra</a>
-                            |
-                            <a href="{{ site.baseurl }}/blog/">Blog</a>
-                            |
-                            <a href="https://rombo-ai.breezy.hr/" target="_blank" rel="noopener noreferrer">Careers</a>
-                            |
-                            <a href="{{ site.baseurl }}/privacy/">Privacy Policy</a>
-                        </p>
-                        <a class="col-2 col-md-2 d-flex justify-content-start" href="https://www.linkedin.com/company/rombo-ai/"
-                           rel="noopener noreferrer" target="_blank" aria-label="Rombo AI on LinkedIn">
-                            <img alt="LinkedIn" class="img-fluid"
-                                 src="{{ site.baseurl }}/img/icon-jam-icons-outline-logos-linkedin-1.svg"
-                                 width="24" height="24" loading="lazy">
-                        </a>
-                    </div>
-                </div>
+        <div class="container custom-container footer-bar">
+            <div class="footer-logo">
+                <img
+                        alt="Rombo AI"
+                        class="img-fluid"
+                        src="{{ site.baseurl }}/img/romboai-04-1-2.png"
+                        width="200" height="79"
+                        loading="lazy"
+                />
             </div>
+            <p class="footer-text m-0">
+                ROMBO AI © {{ "now" | date: "%Y" }} |
+                <a href="{{ site.baseurl }}/product/">Platform</a>
+                |
+                <a href="{{ site.baseurl }}/use-cases/">Use Cases</a>
+                |
+                <a href="{{ site.baseurl }}/blog/">Blog</a>
+                |
+                <a href="https://rombo-ai.breezy.hr/" target="_blank" rel="noopener noreferrer">Careers</a>
+                |
+                <a href="{{ site.baseurl }}/privacy/">Privacy Policy</a>
+            </p>
+            <a class="footer-linkedin" href="https://www.linkedin.com/company/rombo-ai/"
+               rel="noopener noreferrer" target="_blank" aria-label="Rombo AI on LinkedIn">
+                <img alt="LinkedIn" class="img-fluid"
+                     src="{{ site.baseurl }}/img/icon-jam-icons-outline-logos-linkedin-1.svg"
+                     width="24" height="24" loading="lazy">
+            </a>
         </div>
     </div>
 </footer>
 <script defer src="{{ site.baseurl }}/js/analytics.js"></script>
 <!-- Footer -->
-

@@ -8,6 +8,7 @@ lang: en
 og_image: /img/usecase-crude-oil.png
 og_image_alt: "Crude oil monitoring for refineries"
 
+hero_eyebrow: "Oil & gas"
 hero_title: "Crude oil and blend insight for faster refinery decisions"
 hero_subtitle: "Rombo AI helps refinery, quality, and process teams obtain rapid, reliable insight into incoming crudes and blends, reducing analysis time, operational risk, and decisions based on incomplete data."
 ---
