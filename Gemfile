@@ -3,6 +3,8 @@
 source "https://rubygems.org"
 
 gem "jekyll", "~> 3.8"
+# CVE-2026-35611 (high): ReDoS in Addressable URI templates, fixed in 2.9.0.
+gem "addressable", ">= 2.9.0"
 # Keep Jekyll 3.x but upgrade kramdown to a patched 2.x line (Jekyll allows < 3).
 gem "kramdown", "~> 2.4"
 # Required for `kramdown` 2.x to support GFM input in Jekyll.
