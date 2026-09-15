@@ -1,16 +1,8 @@
 /**
- * Patch Tina CLI to be compatible with esbuild's `define` rules.
+ * Compatibility patches for Tina CLI's bundled Vite configuration.
  *
- * Tina CLI (as of @tinacms/cli@2.0.5) sets:
- *   define: { "process.env": `new Object(${JSON.stringify(publicEnv)})` }
- *
- * But esbuild only accepts an entity name or a JS literal for define values,
- * so `new Object(...)` fails CI with:
- *   Invalid define value ... new Object({...})
- *
- * Fix:
- * - Replace `process.env` with an array literal `[]` (safe at statement start: `[].FOO` parses)
- * - Add per-key defines for `process.env.<KEY>` so actual values are still inlined.
+ * Keep these patches local to Tina's generated admin application. They do not
+ * change the browser target or build settings of the public site.
  */
 
 const fs = require("fs");
@@ -31,24 +23,51 @@ if (!fs.existsSync(target)) {
   process.exit(0);
 }
 
-const src = fs.readFileSync(target, "utf8");
+let src = fs.readFileSync(target, "utf8");
+let changed = false;
 
-// Exact snippet in @tinacms/cli@2.0.5 (keep as a plain string; no template interpolation).
-const needle = '"process.env": `new Object(${JSON.stringify(publicEnv)})`,';
-
-if (!src.includes(needle)) {
-  // Already patched or upstream changed.
-  process.exit(0);
-}
-
-const replacement = [
+// Older Tina releases emitted an expression that newer esbuild versions reject
+// in `define`. Keep this patch for lockfiles that still resolve that bundle.
+const defineNeedle = '"process.env": `new Object(${JSON.stringify(publicEnv)})`,';
+const defineReplacement = [
   `"process.env": "[]",`,
   `      ...Object.fromEntries(Object.entries(publicEnv).map(([k, v]) => ([\`process.env.\${k}\`, JSON.stringify(v)]))),`,
 ].join("\n");
 
-const out = src.replace(needle, replacement);
+if (src.includes(defineNeedle)) {
+  src = src.replace(defineNeedle, defineReplacement);
+  changed = true;
+}
 
-fs.writeFileSync(target, out, "utf8");
-console.log(`[postinstall] Patched @tinacms/cli define(process.env) in ${path.relative(process.cwd(), target)}`);
+// esbuild 0.28 no longer lowers some syntax to Vite 6's legacy default target.
+// Tina's admin app is already modern-browser software, so avoid that unnecessary
+// lowering by setting the target on Tina's own internal Vite build.
+const buildNeedle = [
+  "    build: {",
+  "      sourcemap: false,",
+  "      outDir: configManager.outputFolderPath,",
+].join("\n");
+const buildReplacement = [
+  "    build: {",
+  '      target: "esnext",',
+  "      sourcemap: false,",
+  "      outDir: configManager.outputFolderPath,",
+].join("\n");
 
+if (src.includes(buildNeedle)) {
+  src = src.replace(buildNeedle, buildReplacement);
+  changed = true;
+} else if (!src.includes('      target: "esnext",\n      sourcemap: false,')) {
+  console.error(
+    "[postinstall] Tina CLI Vite config changed; unable to apply the esnext target patch."
+  );
+  process.exit(1);
+}
+
+if (changed) {
+  fs.writeFileSync(target, src, "utf8");
+  console.log(
+    `[postinstall] Patched @tinacms/cli compatibility in ${path.relative(process.cwd(), target)}`
+  );
+}
 
