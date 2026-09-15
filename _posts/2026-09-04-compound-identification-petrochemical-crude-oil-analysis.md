@@ -1,6 +1,6 @@
 ---
 title: 'Compound Identification in Petrochemical and Crude Oil Analysis'
-seo_title: 'Compound Identification in Petrochemical and Crude Oil Analysis | Rombo AI'
+seo_title: 'Compound ID in Petrochemical Analysis | Rombo AI'
 date: 2026-09-04T01:09:00.000Z
 permalink: /blog/compound-identification-petrochemical-crude-oil-analysis
 layout: article

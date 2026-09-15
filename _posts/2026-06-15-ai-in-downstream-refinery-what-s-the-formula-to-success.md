@@ -12,7 +12,7 @@ excerpt: |-
   Where should refiners start if they want AI to deliver real operational value? If AI isn't the answer to every challenge, where can it create the greatest impact?
   In this month's article, we want to explore these questions and discuss what it takes to successfully adopt AI in downstream refining.
 markdown_content: |
-  # AI in refinery downstream – What’s the formula to success? 
+  ## AI in refinery downstream – What’s the formula to success? 
 
   In refinery environments, the smallest improvements in timing, decision-making, and quality can make the biggest difference. The downstream industry has always operated within a highly interconnected framework, where decisions in one area can have a great impact and echo across the value chain. 
 

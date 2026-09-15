@@ -1,0 +1,15 @@
+{%- if include.post -%}
+<div class="scrollable-item" style="min-width: 300px; margin-right: 20px;">
+    <a href="{{ site.baseurl }}{{ include.post.url }}">
+        <img class="post-image"
+             src="{{ include.post.image | relative_url }}"
+             alt="{{ include.post.image_alt | default: include.post.title }}"
+             width="600" height="400" loading="lazy">
+        <div class="post-content">
+            <div class="date">{{ include.post.date | date: "%b %d, %Y" }}</div>
+            <div class="title">{{ include.post.title }}</div>
+            <p class="description">{{ include.post.excerpt | truncate: 100 }}</p>
+        </div>
+    </a>
+</div>
+{%- endif -%}

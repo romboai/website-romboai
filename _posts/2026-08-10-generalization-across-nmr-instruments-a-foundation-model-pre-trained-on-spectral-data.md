@@ -1,5 +1,6 @@
 ---
 title: 'Generalization Across NMR Instruments: A Foundation Model Pre-Trained on Spectral Data'
+seo_title: 'NMR Foundation Model Across Instruments | Rombo AI'
 date: 2026-08-28T09:00:00.000Z
 permalink: /blog/rose_foundation_model_NMR_spectral_data
 layout: article
@@ -17,7 +18,7 @@ markdown_content: |-
 
   **Paper, code, and weights**
 
-  - Preprint: [ROSE on ChemRxiv](https://chemrxiv.org/doi/full/10.26434/chemrxiv.15007823/v1)
+  - Preprint: [ROSE on ChemRxiv](https://doi.org/10.26434/chemrxiv.15007823/v1)
   - Code: [github.com/romboai/rose-1h-nmr](https://github.com/romboai/rose-1h-nmr)
   - Model weights: [huggingface.co/romboai/rose-1h-nmr](https://huggingface.co/romboai/rose-1h-nmr)
 
@@ -137,7 +138,7 @@ markdown_content: |-
   10. Hu, F., et al. “Structure Elucidation via Multitask Machine Learning.” *ACS Central Science*, 2024.
   11. Jin, W., et al. “NMR-Solver.” *arXiv*, 2025.
   12. Yang, et al. “UltraNMR.” *arXiv*, 2026.
-  13. Rombo AI. “ROSE: a Foundation Model for Reusable One-dimensional Spectrum Embeddings in ¹H NMR.” *ChemRxiv*. [doi:10.26434/chemrxiv.15007823](https://chemrxiv.org/doi/full/10.26434/chemrxiv.15007823/v1). Code: [GitHub](https://github.com/romboai/rose-1h-nmr). Weights: [Hugging Face](https://huggingface.co/romboai/rose-1h-nmr).
+  13. Rombo AI. “ROSE: a Foundation Model for Reusable One-dimensional Spectrum Embeddings in ¹H NMR.” *ChemRxiv*. [doi:10.26434/chemrxiv.15007823](https://doi.org/10.26434/chemrxiv.15007823/v1). Code: [GitHub](https://github.com/romboai/rose-1h-nmr). Weights: [Hugging Face](https://huggingface.co/romboai/rose-1h-nmr).
 
   ## FAQs
 

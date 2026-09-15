@@ -122,8 +122,9 @@
     {%- if page.description -%}
       {%- assign meta_description = page.description | strip_html | strip_newlines | replace: '  ', ' ' -%}
     {%- else -%}
-      {%- assign meta_description = page.excerpt | default: site.description | strip_html | strip_newlines | replace: '  ', ' ' | truncate: 160 -%}
+      {%- assign meta_description = page.excerpt | default: site.description | strip_html | strip_newlines | replace: '  ', ' ' -%}
     {%- endif -%}
+    {%- assign meta_description = meta_description | strip | truncate: 155, "..." -%}
     {%- assign canonical_url = page.url | absolute_url -%}
     {%- assign og_image = page.og_image | default: page.image | default: site.og_image -%}
     {%- assign og_image = og_image | absolute_url -%}
@@ -135,7 +136,18 @@
     {%- assign robots = page.robots | default: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" -%}
     {%- assign page_modified = page.last_modified_at | default: page.dateModified | default: page.date -%}
 
-    <title>{{ seo_title }}{% unless seo_title contains site.title %} | {{ site.title }}{% endunless %}</title>
+    {%- assign seo_title_display = seo_title -%}
+    {%- unless seo_title contains site.title -%}
+      {%- assign seo_title_display = seo_title | append: " | " | append: site.title -%}
+    {%- endunless -%}
+    <script>
+      (function () {
+        if (location.hostname === "www.rombo.ai") {
+          location.replace("https://rombo.ai" + location.pathname + location.search + location.hash);
+        }
+      })();
+    </script>
+    <title>{{ seo_title_display }}</title>
     <meta name="description" content="{{ meta_description }}">
     <meta name="robots" content="{{ robots }}">
     <meta name="googlebot" content="{{ robots }}">
@@ -150,7 +162,7 @@
     <meta property="og:site_name" content="{{ site.title }}">
     <meta property="og:locale" content="{{ site.locale | default: 'en_US' }}">
     <meta property="og:type" content="{% if page.layout == 'article' %}article{% elsif page.layout == 'author' %}profile{% else %}website{% endif %}">
-    <meta property="og:title" content="{{ seo_title }}">
+    <meta property="og:title" content="{{ seo_title_display }}">
     <meta property="og:description" content="{{ meta_description }}">
     <meta property="og:url" content="{{ canonical_url }}">
     <meta property="og:image" content="{{ og_image }}">
@@ -179,7 +191,7 @@
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="{{ seo_title }}">
+    <meta name="twitter:title" content="{{ seo_title_display }}">
     <meta name="twitter:description" content="{{ meta_description }}">
     <meta name="twitter:image" content="{{ og_image }}">
     <meta name="twitter:image:alt" content="{{ page.og_image_alt | default: seo_title }}">

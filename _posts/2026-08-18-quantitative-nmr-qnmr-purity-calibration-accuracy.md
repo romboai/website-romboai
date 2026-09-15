@@ -1,5 +1,6 @@
 ---
 title: 'What Is Quantitative NMR (qNMR)? Purity, Calibration Methods, and Accuracy'
+seo_title: 'Quantitative NMR: Purity and Accuracy | Rombo AI'
 date: 2026-08-18T08:00:00.000Z
 permalink: /blog/quantitative-nmr-qnmr-purity-calibration-accuracy
 layout: article

@@ -5,8 +5,6 @@ job_title: "CTO & Co-founder"
 short_role: "CTO"
 bio: "Carmine Mattia is co-founder and CTO of Rombo AI. He leads the engineering and AI architecture behind the NMR foundation model and Rombo AI Platform."
 linkedin: ""
-robots: "noindex, follow"
-sitemap: false
 expertise:
   - "AI architecture"
   - "Deep learning"

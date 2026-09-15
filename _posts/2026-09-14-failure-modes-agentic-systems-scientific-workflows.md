@@ -60,7 +60,7 @@ markdown_content: |-
   2. **Semantic validation:** Are units, dimensions, ranges, identifiers, and relationships meaningful for this task?
   3. **Scientific validation:** Do independent observations and domain invariants agree with the declared experiment?
 
-  Provenance is part of validation. The [NIST Research Data Framework](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/1500-18/NIST.SP.1500-18r2.html) highlights persistent instrument identifiers, metadata, standards, and data history. Every derived object should retain links to its source, transformation, parameters, and software version.
+  Provenance is part of validation. The [NIST Research Data Framework](https://www.nist.gov/programs-projects/research-data-framework-rdaf) highlights persistent instrument identifiers, metadata, standards, and data history. Every derived object should retain links to its source, transformation, parameters, and software version.
 
   Quarantine missing or contradictory inputs, never overwrite the acquisition, and distinguish “unknown” from a default. Silently replacing a missing field without recording the assumption fabricates evidence.
 
@@ -91,7 +91,7 @@ markdown_content: |-
 
   Candidate generation and candidate evaluation should be separable where practical. Independent algorithms, held-out measurements, orthogonal techniques, or a blinded expert can challenge the favoured result. Repeating the same prompt with the same evidence may create variation, but it is not independent verification.
 
-  The [NIST Generative AI Profile](https://doi.org/10.6028/NIST.AI.600-1) treats confabulation as a risk and recommends empirical testing, appropriate human review, provenance, and post-deployment monitoring. Scientific monitoring should include unsupported assertions, constraint violations, sensitivity to reasonable input changes, and missed abstentions.
+  The [NIST Generative AI Profile](https://www.nist.gov/itl/ai-risk-management-framework) treats confabulation as a risk and recommends empirical testing, appropriate human review, provenance, and post-deployment monitoring. Scientific monitoring should include unsupported assertions, constraint violations, sensitivity to reasonable input changes, and missed abstentions.
 
   An apparently successful completion can be more dangerous than a visible crash. A 2026 case study of astrophysical workflows, [“Plausible but Wrong”](https://arxiv.org/abs/2604.25345), reports syntactically valid computations that produced plausible but inaccurate results and physically inconsistent outputs without self-diagnosis. The domain differs from analytical chemistry and the study covers only eighteen tasks, so its numerical results should not be generalised. Its operational lesson transfers: scientific validity needs external checks.
 

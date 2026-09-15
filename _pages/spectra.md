@@ -3,7 +3,7 @@ layout: use-cases
 title: "Spectra Agent"
 permalink: /spectra/
 seo_title: "Spectra Agent — AI Agent for NMR Analysis | Rombo AI"
-description: "Spectra is Rombo AI's agent for NMR analysis. Upload a spectrum, get ranked candidate structures with confidence scores, and keep chemists in control of the final call."
+description: "Spectra is Rombo AI's NMR agent: upload a spectrum, get ranked candidate structures with confidence scores, and keep chemists in control."
 lang: en
 last_modified_at: 2026-09-15
 og_image: /img/molecule-technology.png

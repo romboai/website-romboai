@@ -1,6 +1,6 @@
 ---
 title: 'Combining NMR and Mass Spectrometry for AI Structure Elucidation'
-seo_title: 'Combining NMR and Mass Spectrometry for AI Structure Elucidation | Rombo AI'
+seo_title: 'NMR and Mass Spectrometry Elucidation | Rombo AI'
 date: 2026-08-31T07:00:00.000Z
 permalink: /blog/combine-nmr-mass-spectrometry-ai-structure-elucidation
 layout: article

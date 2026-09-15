@@ -1,6 +1,6 @@
 ---
 title: 'Spectra: Automated Compound Identification from NMR Spectra'
-seo_title: 'Spectra: Automated Compound Identification from NMR Spectra | Rombo AI'
+seo_title: 'Spectra: NMR Compound Identification | Rombo AI'
 date: 2026-09-07T07:31:00.000Z
 permalink: /blog/spectra-ai-automated-compound-identification
 layout: article

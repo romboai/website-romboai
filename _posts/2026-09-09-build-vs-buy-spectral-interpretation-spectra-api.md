@@ -37,7 +37,7 @@ markdown_content: |-
 
   Do not use “accuracy” as a universal requirement. Top-1 retrieval, top-k recall, peak-level F1, calibrated probability, structural similarity, and final expert disposition measure different things. A model can retrieve the correct candidate within its top ten while still being unsuitable for automatic confirmation. It can also perform well on common compounds and fail on the novel scaffolds that motivated the project.
 
-  Treat the surrounding data system as part of the capability. NIST’s [LIMS roadmap](https://doi.org/10.6028/NIST.TN.2216) identifies provenance, instrument configuration, data ingestion, transformations, software descriptions, logs, permissions, and long-term maintenance as laboratory infrastructure concerns. Whether you build or buy the interpretation engine, those responsibilities do not disappear.
+  Treat the surrounding data system as part of the capability. NIST’s [LIMS roadmap](https://nvlpubs.nist.gov/nistpubs/TechnicalNotes/NIST.TN.2216.pdf) identifies provenance, instrument configuration, data ingestion, transformations, software descriptions, logs, permissions, and long-term maintenance as laboratory infrastructure concerns. Whether you build or buy the interpretation engine, those responsibilities do not disappear.
 
   ## What building in-house actually requires
 
@@ -110,7 +110,7 @@ markdown_content: |-
 
   For a build, account for data curation, failed experiments, compute, serving capacity, dependency maintenance, monitoring, retraining, validation, documentation, and staff continuity. For a purchase, account for integration, vendor assessment, usage, local validation, change review, outage procedures, contract management, and migration. Do not invent precision before measuring your own workflow: use ranges and record the assumptions behind them.
 
-  Monitoring must cover more than uptime. Track input eligibility, instrument and sample mix, missing metadata, abstentions, candidate-rank behaviour, expert overrides, and performance on periodically refreshed reference cases. NIST’s [AI Risk Management Framework](https://doi.org/10.6028/NIST.AI.100-1) treats risk management as continuous across the system lifecycle and organises it around govern, map, measure, and manage. That lifecycle applies whether the model is owned or accessed as a service.
+  Monitoring must cover more than uptime. Track input eligibility, instrument and sample mix, missing metadata, abstentions, candidate-rank behaviour, expert overrides, and performance on periodically refreshed reference cases. NIST’s [AI Risk Management Framework](https://www.nist.gov/itl/ai-risk-management-framework) treats risk management as continuous across the system lifecycle and organises it around govern, map, measure, and manage. That lifecycle applies whether the model is owned or accessed as a service.
 
   Set exit criteria before the pilot. Examples include failure on a critical sample class, unresolvable data-governance terms, insufficient traceability, an unsustainable review burden, or no measurable improvement over the current workflow. A stop rule turns a demonstration into an evaluation.
 

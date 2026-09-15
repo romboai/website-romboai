@@ -38,7 +38,7 @@
       <!-- Left Image (Hidden on Mobile) -->
       <div class="col-md-1 d-none d-md-block text-start px-0">
           <img class="img-fluid intro-left" style="padding-right: 21px;" src="{{ site.baseurl }}/img/livello-1-7.svg"
-               alt="" aria-hidden="true">
+               alt="Decorative graphic" aria-hidden="true">
       </div>
 
       <!-- Main Content with Background Image -->
@@ -46,7 +46,7 @@
           <div class="row text-center w-100 justify-content-center">
               {% for card in page.intro_cards %}
               <div class="col-lg-4 col-sm-6 px-4 py-4 py-md-3">
-                  <img src="{{ card.icon | relative_url }}" alt="" aria-hidden="true">
+                  <img src="{{ card.icon | relative_url }}" alt="{{ card.title }}" aria-hidden="true">
                   <p style=" padding-top: 20px">
                       <span class="text-wrapper28">{{ card.title }}</span><br>
                       <span class="text-wrapper29">{{ card.text }}</span>
@@ -59,7 +59,7 @@
       <!-- Right Image (Hidden on Mobile) -->
       <div class="col-md-1 d-none d-md-block text-end px-0">
           <img class="img-fluid intro-right" style="padding-left: 21px;" src="{{ site.baseurl }}/img/livello-1-6.svg"
-               alt="" aria-hidden="true">
+               alt="Decorative graphic" aria-hidden="true">
       </div>
   </div>
 </section>
@@ -107,7 +107,7 @@
           <div class="col-lg-4 col-sm-6">
               <div class="p-4 border rounded-4 h-100">
                   {% if card.icon %}
-                  <img src="{{ card.icon | relative_url }}" class="why-rombo-icon mb-3" alt="" aria-hidden="true" width="56" height="48">
+                  <img src="{{ card.icon | relative_url }}" class="why-rombo-icon mb-3" alt="{{ card.title }}" aria-hidden="true" width="56" height="48">
                   {% endif %}
                   <p class="mb-0">
                       <span class="text-wrapper28">{{ card.title }}</span><br>
@@ -125,7 +125,7 @@
   <div class="row">
       <div class="col-12 px-0">
           <img class="w-100 m-0 p-0 technology-divider-container" style="bottom:-10px; object-fit: cover"
-               src="{{ site.baseurl }}/img/Separator_Technology.svg" alt="" aria-hidden="true"/>
+               src="{{ site.baseurl }}/img/Separator_Technology.svg" alt="Decorative section divider" aria-hidden="true"/>
       </div>
   </div>
   <div class="container custom_container">
@@ -139,10 +139,10 @@
           <div class="col-12  technology-body">
               <div class="col-12 position-absolute text-center" style="top:0; left: 0; right: 0;bottom: 0">
                   <img class="img-fluid h-100 w-100" src="{{ site.baseurl }}/img/livello-1-4.svg"
-                       alt="" aria-hidden="true">
+                       alt="Decorative background graphic" aria-hidden="true">
                   <img class="img-fluid mx-0 d-none d-md-block position-absolute" style="left: 47%;bottom: 4%;"
                        src="{{ site.baseurl }}/img/livello-1-8.svg"
-                       alt="" aria-hidden="true">
+                       alt="Decorative background graphic" aria-hidden="true">
               </div>
               <div class="row d-flex flex-wrap flex-md-nowrap text-left  justify-content-center"
               >

@@ -1,6 +1,6 @@
 ---
 title: 'How an AI Agent Interprets an NMR Spectrum: A Step-by-Step Pipeline'
-seo_title: 'AI Agent for NMR Compound Identification: Step-by-Step Pipeline | Rombo AI'
+seo_title: 'AI Agent NMR Identification Pipeline | Rombo AI'
 date: 2026-09-13T01:00:00.000Z
 permalink: /blog/ai-agent-interprets-nmr-spectrum-pipeline
 layout: article
@@ -45,7 +45,7 @@ markdown_content: |-
 
   The first tool calls should therefore be validators rather than predictors. They can check whether the declared nucleus matches the spectral axis, whether key metadata are present, and whether expected experiment pairs belong to the same sample. They should also flag truncated files, duplicated datasets, and missing reference information.
 
-  Open exchange specifications such as [JCAMP-DX](https://iupac.org/what-we-do/digital-standards/jcamp-dx/) exist to carry spectra and metadata, but using a standard container does not guarantee that every required field is populated correctly. Vendor conversion, normalisation, and metadata mapping remain transformations that must be recorded.
+  Open exchange specifications such as [JCAMP-DX](https://en.wikipedia.org/wiki/JCAMP-DX) exist to carry spectra and metadata, but using a standard container does not guarantee that every required field is populated correctly. Vendor conversion, normalisation, and metadata mapping remain transformations that must be recorded.
 
   A practical intake result is not “file accepted.” It is a structured inventory:
 
@@ -115,7 +115,7 @@ markdown_content: |-
 
   ## Review checkpoints and stopping rules
 
-  Human review should occur where a decision changes the evidential meaning of the case, not merely at the end. The [NIST AI Risk Management Framework](https://doi.org/10.6028/NIST.AI.100-1) is use-case agnostic, but its lifecycle approach is relevant: roles, monitoring, risk controls, and accountability need to be designed around the intended use.
+  Human review should occur where a decision changes the evidential meaning of the case, not merely at the end. The [NIST AI Risk Management Framework](https://www.nist.gov/itl/ai-risk-management-framework) is use-case agnostic, but its lifecycle approach is relevant: roles, monitoring, risk controls, and accountability need to be designed around the intended use.
 
   A compact checkpoint framework is:
 

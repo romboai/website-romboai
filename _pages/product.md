@@ -3,7 +3,7 @@ layout: products
 title: "Rombo AI Platform"
 permalink: /product/
 seo_title: "Rombo AI Platform | AI for Industrial NMR Analysis"
-description: "Patented NMR AI models and in-house spectroscopy expertise to predict multiple physico-chemical properties from one benchtop scan. Start with a free feasibility analysis."
+description: "Patented NMR AI models predict multiple physico-chemical properties from one benchtop scan. Request a free feasibility analysis."
 og_image: /img/og/rombo-ai.jpg
 og_image_alt: "Rombo AI Platform | AI for Industrial NMR Analysis"
 lang: en
@@ -69,7 +69,7 @@ products:
       </div>
       <div class="col-12 col-lg-5">
         <div class="products-visual products-visual--ball">
-          <img src="{{ '/img/forma51.png' | relative_url }}" class="img-fluid products-ball" alt="" aria-hidden="true" loading="lazy">
+          <img src="{{ '/img/forma51.png' | relative_url }}" class="img-fluid products-ball" alt="Decorative product graphic" aria-hidden="true" loading="lazy">
         </div>
       </div>
     </div>
@@ -277,7 +277,7 @@ products:
 
       <div class="row g-3 g-lg-4 mt-4">
         <div class="col-12 col-md-6 col-lg-3">
-          <a class="foundation-card" href="https://chemrxiv.org/doi/full/10.26434/chemrxiv.15007823/v1" rel="noopener noreferrer" target="_blank">
+          <a class="foundation-card" href="https://doi.org/10.26434/chemrxiv.15007823/v1" rel="noopener noreferrer" target="_blank">
             <span class="foundation-card__icon">
               <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
                 <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M8 13h8"/><path d="M8 17h5"/>

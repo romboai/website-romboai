@@ -1,6 +1,6 @@
 ---
 title: 'Impurity Identification in Pharmaceutical Quality Control'
-seo_title: 'Impurity Identification in Pharmaceutical Quality Control | Rombo AI'
+seo_title: 'Pharma Impurity Identification | Rombo AI'
 date: 2026-09-01T07:00:00.000Z
 permalink: /blog/impurity-identification-pharmaceutical-quality-control
 layout: article

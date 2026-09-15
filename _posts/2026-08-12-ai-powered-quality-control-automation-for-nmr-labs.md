@@ -13,7 +13,7 @@ excerpt: Manual NMR interpretation can delay quality control decisions for weeks
 markdown_content: |-
   ## Why manual spectral interpretation is the QC bottleneck
 
-  Manual interpretation slows QC because NMR spectra often require judgment that fixed rules cannot reproduce. Complex hydrocarbon mixtures produce overlapping resonances, while heavy oils and emulsions can distort the data further. <mark data-pe-id="5828b85f-52b4-4819-b31b-440afedde922" data-pe-kind="insert">Analysts may need [chemometric deconvolution or other specialized techniques](https://www.creative-biostructure.com/resource-nmr-in-petrochemical-industry.htm?srsltid=AfmBOoq0Bxi2floQJ77xtbiMp06s9frHanGm5UHPJL-tHQFf6ynxucAw) before they can identify compounds and approve a sample.</mark> or other specialized techniques before they can identify compounds and approve a sample ([NMR use-case research](https://www.creative-biostructure.com/resource-nmr-in-petrochemical-industry.htm?srsltid=AfmBOoq0Bxi2floQJ77xtbiMp06s9frHanGm5UHPJL-tHQFf6ynxucAw)).
+  Manual interpretation slows QC because NMR spectra often require judgment that fixed rules cannot reproduce. Complex hydrocarbon mixtures produce overlapping resonances, while heavy oils and emulsions can distort the data further. <mark data-pe-id="5828b85f-52b4-4819-b31b-440afedde922" data-pe-kind="insert">Analysts may need [chemometric deconvolution or other specialized techniques](https://www.creative-biostructure.com/resource-nmr-in-petrochemical-industry.htm) before they can identify compounds and approve a sample.</mark> or other specialized techniques before they can identify compounds and approve a sample ([NMR use-case research](https://www.creative-biostructure.com/resource-nmr-in-petrochemical-industry.htm)).
 
   Mixed instrument fleets add another layer of work. A method validated on one vendor’s instrument may respond differently to changes in field strength, sensitivity, acquisition settings, or file format. You must standardize results across instruments before you can apply one QC threshold with confidence. Instrument additions and method transfers can therefore trigger new validation work.
 
@@ -39,7 +39,7 @@ markdown_content: |-
 
   Mixed fleets still require controlled acquisition methods, sample preparation, and acceptance criteria. Rombo AI does not make unlike experiments directly comparable. Instead, it normalizes and interprets appropriate spectral inputs through a common layer, which helps you compare equivalent tests without maintaining separate analytical logic for each vendor.
 
-  Cross-vendor consistency carries particular value in regulated or standardized QC programs. [Industry NMR methods often require cross-vendor standardization](https://www.creative-biostructure.com/resource-nmr-in-petrochemical-industry.htm?srsltid=AfmBOoq0Bxi2floQJ77xtbiMp06s9frHanGm5UHPJL-tHQFf6ynxucAw), especially when results support ASTM-based parameters. Rombo AI reduces the instrument-specific calibration work around that requirement while your lab keeps its existing validation and governance controls.
+  Cross-vendor consistency carries particular value in regulated or standardized QC programs. [Industry NMR methods often require cross-vendor standardization](https://www.creative-biostructure.com/resource-nmr-in-petrochemical-industry.htm), especially when results support ASTM-based parameters. Rombo AI reduces the instrument-specific calibration work around that requirement while your lab keeps its existing validation and governance controls.
 
   ## Rombo AI vs. Mestrelab, Bruker, and ACD Labs
 
@@ -60,7 +60,7 @@ markdown_content: |-
 
   ## Petrochemical and energy lab use cases
 
-  Wax-content testing fits a high-volume automated workflow because TD-NMR requires little sample preparation. The measurement distinguishes rigid wax-crystal protons from mobile oil components through their different relaxation behavior, and acquisition typically takes [under two minutes per sample](https://www.creative-biostructure.com/resource-nmr-in-petrochemical-industry.htm?srsltid=AfmBOoq0Bxi2floQJ77xtbiMp06s9frHanGm5UHPJL-tHQFf6ynxucAw). Rombo AI can interpret the measurement against validated QC limits and send only unusual results for specialist review.
+  Wax-content testing fits a high-volume automated workflow because TD-NMR requires little sample preparation. The measurement distinguishes rigid wax-crystal protons from mobile oil components through their different relaxation behavior, and acquisition typically takes [under two minutes per sample](https://www.creative-biostructure.com/resource-nmr-in-petrochemical-industry.htm). Rombo AI can interpret the measurement against validated QC limits and send only unusual results for specialist review.
 
   Fuel-property prediction can replace several separate measurements with one NMR scan. Validated PLS models use spectral patterns to estimate cetane number, octane number, and flash point. The NMR AI Analyzer can process each spectrum, apply the approved prediction workflow, and return a result without waiting for an analyst to inspect every spectrum. Your lab still controls model validation and acceptance limits.
 

@@ -1,5 +1,6 @@
 ---
 title: 'Scalable NMR Deployment Across Multi-Site Laboratories: Architectural Trade-Offs'
+seo_title: 'Scalable NMR Across Laboratories | Rombo AI'
 date: 2026-08-13T22:00:00.000Z
 permalink: /blog/NMR_deployment_multisite_scalability
 layout: article

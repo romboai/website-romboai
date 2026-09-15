@@ -1,5 +1,6 @@
 ---
 title: 'Best NMR & Analytical Chemistry Software: Comparison Guide'
+seo_title: 'Best NMR Analytical Software Guide | Rombo AI'
 date: 2026-08-18T10:00:00.000Z
 permalink: /blog/best-nmr-analytical-chemistry-software-comparison
 layout: article
@@ -44,7 +45,7 @@ markdown_content: |-
 
   - [Rombo AI](https://rombo.ai) fits multi-site labs that need fast, AI-based interpretation across mixed NMR fleets.
   - [Mnova](https://www.york.ac.uk/it-services/tools/mestrenova/) fits research labs that process NMR, chromatography, mass spectrometry, and optical spectroscopy in one environment.
-  - [TopSpin](https://www.facebook.com/bruker.corp/posts/%F0%9D%97%A7%F0%9D%97%BC%F0%9D%97%BD%F0%9D%97%A6%F0%9D%97%BD%F0%9D%97%B6%F0%9D%97%BB-%F0%9D%9F%B1-%F0%9D%97%B6%F0%9D%98%80-%F0%9D%97%BB%F0%9D%97%BC%F0%9D%98%84-%F0%9D%97%AE%F0%9D%98%83%F0%9D%97%B6%F0%9D%97%B9%F0%9D%97%AE%F0%9D%97%AF%F0%9D%97%B9%F0%9D%97%B2-the-nmr-software-trusted-by-bruker-nmr-users-now-deli/1336687311834599/) fits Bruker-centered labs that want acquisition, processing, and routine automation in the same product family.
+  - [TopSpin](https://www.bruker.com/en/products-and-solutions/mr/nmr-software/topspin.html) fits Bruker-centered labs that want acquisition, processing, and routine automation in the same product family.
   - [ACD/Labs Spectrus](https://www.selectscience.net/company/advanced-chemistry-development-inc-acd-labs) fits enterprises that need shared analytical data management across instrument formats and techniques.
   - [JASON](https://www.jeoljason.com/2023/11/13/jason-3-1-expanding-capabilities-and-automation/) fits JEOL users who need structural analysis, DOSY, quantitative NMR, and Python-based workflow extensions.
 
@@ -72,7 +73,7 @@ markdown_content: |-
 
   Academic users can obtain a [free processing-only license](https://nmr.nd.edu/software/) for off-instrument work. That tier can process Bruker data as well as files produced by Agilent, Varian, and JEOL systems, but cross-format processing does not provide the same acquisition integration on third-party instruments.
 
-  Bruker presents SpinPilot in TopSpin 5 as a way to standardize routine acquisition steps and extend automation across a lab. The available support for [SpinPilot’s automation capabilities](https://www.facebook.com/bruker.corp/posts/%F0%9D%97%A7%F0%9D%97%BC%F0%9D%97%BD%F0%9D%97%A6%F0%9D%97%BD%F0%9D%97%B6%F0%9D%97%BB-%F0%9D%9F%B1-%F0%9D%97%B6%F0%9D%98%80-%F0%9D%97%BB%F0%9D%97%BC%F0%9D%98%84-%F0%9D%97%AE%F0%9D%98%83%F0%9D%97%AE%F0%9D%97%B6%F0%9D%97%BB%F0%9D%97%AE%F0%9D%97%AF%F0%9D%97%B9%F0%9D%97%B2-the-nmr-software-trusted-by-bruker-nmr-users-now-deli/1336687311834599/) comes from Bruker’s own promotional material, so buyers should confirm the supported experiments and deployment requirements directly. Commercial pricing remains non-public.
+  Bruker presents SpinPilot in TopSpin 5 as a way to standardize routine acquisition steps and extend automation across a lab. The available support for [SpinPilot’s automation capabilities](https://www.bruker.com/en/products-and-solutions/mr/nmr-software/topspin.html) comes from Bruker’s own promotional material, so buyers should confirm the supported experiments and deployment requirements directly. Commercial pricing remains non-public.
 
   ## ACD/Labs NMR Suite (Spectrus Processor): the format-agnostic integrator
 

@@ -1,6 +1,6 @@
 ---
 title: 'What Are Agentic Systems for NMR Data Analysis?'
-seo_title: 'AI Agent for NMR Data Analysis: How Agentic Systems Work | Rombo AI'
+seo_title: 'Agentic Systems for NMR Analysis | Rombo AI'
 date: 2026-09-12T01:05:00.000Z
 permalink: /blog/agentic-systems-nmr-data-analysis
 layout: article
@@ -99,7 +99,7 @@ markdown_content: |-
 
   Anthropic’s 2026 NMR evaluation is a useful caution. Its [reported inverse-prediction experiments](https://www.anthropic.com/research/making-claude-a-chemist) covered 15 problems, with additional starting-material context supplied for seven denser targets. The authors explicitly describe a failure mode in which the model could loop without committing on difficult cases and note that 2D NMR and stereochemistry were outside scope. Those limitations should not be generalised into a universal performance estimate; they show why scope, stopping rules, and decisive follow-up evidence belong in the system design.
 
-  NIST’s [AI Risk Management Framework](https://doi.org/10.6028/NIST.AI.100-1) calls for defined human-AI roles, ongoing monitoring, and risk management across the lifecycle. For an NMR agent, that means testing the complete trajectory—not only the final answer—and retaining a safe way to pause, override, or decline a conclusion.
+  NIST’s [AI Risk Management Framework](https://www.nist.gov/itl/ai-risk-management-framework) calls for defined human-AI roles, ongoing monitoring, and risk management across the lifecycle. For an NMR agent, that means testing the complete trajectory—not only the final answer—and retaining a safe way to pause, override, or decline a conclusion.
 
   ## Rombo AI’s next step: reusable NMR tools inside a governed agent
 

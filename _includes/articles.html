@@ -9,21 +9,26 @@
             <div class="horizontal-list-view-container text-center px-3 overflow-auto" id="scrollContainer">
                 <!-- Horizontal List View -->
                 <div class="horizontal-list-view d-inline-flex">
-                    <!-- Scrollable Item 1 -->
-                    {% for post in site.posts limit:3 %}
-                    <div class="scrollable-item" style="min-width: 300px; margin-right: 20px;">
-                        <a href="{{ site.baseurl }}{{ post.url }}">
-                            <img class="post-image"
-                                 src="{{ post.image | relative_url }}"
-                                 alt="{{ post.image_alt | default: post.title }}"
-                                 width="600" height="400" loading="lazy">
-                            <div class="post-content">
-                                <div class="date">{{ post.date | date: "%b %d, %Y" }}</div>
-                                <div class="title">{{ post.title }}</div>
-                                <p class="description">{{ post.excerpt | truncate: 100 }}</p>
-                            </div>
-                        </a>
-                    </div>
+                    {%- assign shown = 0 -%}
+                    {%- assign shown_urls = page.url | append: "|" -%}
+                    {%- if page.next -%}
+                      {% include related_post_card.html post=page.next %}
+                      {%- assign shown = shown | plus: 1 -%}
+                      {%- assign shown_urls = shown_urls | append: page.next.url | append: "|" -%}
+                    {%- endif -%}
+                    {%- if page.previous -%}
+                      {% include related_post_card.html post=page.previous %}
+                      {%- assign shown = shown | plus: 1 -%}
+                      {%- assign shown_urls = shown_urls | append: page.previous.url | append: "|" -%}
+                    {%- endif -%}
+                    {% for post in site.posts %}
+                      {%- if shown >= 3 -%}{%- break -%}{%- endif -%}
+                      {%- assign needle = post.url | append: "|" -%}
+                      {%- unless shown_urls contains needle -%}
+                        {% include related_post_card.html post=post %}
+                        {%- assign shown = shown | plus: 1 -%}
+                        {%- assign shown_urls = shown_urls | append: post.url | append: "|" -%}
+                      {%- endunless -%}
                     {% endfor %}
                 </div>
 

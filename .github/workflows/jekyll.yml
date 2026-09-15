@@ -83,10 +83,12 @@ jobs:
           done
       - name: Minify JS (production)
         run: |
-          # Minify rendered JS in the output folder (main.js is currently unminified).
-          if [ -f "_site/js/main.js" ]; then
-            npx --yes terser _site/js/main.js -c -m -o _site/js/main.js
-          fi
+          # Minify rendered JS in the output folder so production audits see compressed scripts.
+          for f in _site/js/main.js _site/js/analytics.js; do
+            if [ -f "$f" ]; then
+              npx --yes terser "$f" -c -m -o "$f"
+            fi
+          done
       - name: Upload artifact
         # Automatically uploads an artifact from the './_site' directory by default
         uses: actions/upload-pages-artifact@v3

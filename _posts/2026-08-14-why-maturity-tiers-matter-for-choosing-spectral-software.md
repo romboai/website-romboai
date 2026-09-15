@@ -1,5 +1,6 @@
 ---
 title: Why Maturity Tiers Matter for Choosing Spectral Software
+seo_title: 'Choosing Spectral Software Tiers | Rombo AI'
 date: 2026-08-12T22:00:00.000Z
 permalink: /blog/article-spectral-software-tiers
 layout: article

@@ -66,7 +66,7 @@ hero_subtitle: "See how Rombo AI helps quality and R&D teams in energy, electric
       <!-- TODO(card): attivare con il Prompt 21
       <div class="col-12 col-lg-4">
         <div class="p-4 border rounded-4 h-100 d-flex flex-column" style="background:#fff;">
-          <img src="{{ '/img/molecule-technology.png' | relative_url }}" class="img-fluid rounded-4 mb-4" alt="" aria-hidden="true" loading="lazy">
+          <img src="{{ '/img/molecule-technology.png' | relative_url }}" class="img-fluid rounded-4 mb-4" alt="Molecular visualization" aria-hidden="true" loading="lazy">
           <p class="fw-bold text-uppercase mb-2" style="font-size: 13px; color:#FE900F; letter-spacing:.06em;">Circular chemistry</p>
           <h2 class="fw-bold text-dark h4">Solvents &amp; Recycled Streams</h2>
           <p class="text-dark mt-2">

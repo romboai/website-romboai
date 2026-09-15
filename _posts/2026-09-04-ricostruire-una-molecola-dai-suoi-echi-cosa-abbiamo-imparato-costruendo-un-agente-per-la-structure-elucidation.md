@@ -1,5 +1,6 @@
 ---
 title: Cosa abbiamo imparato costruendo un agente per la structure elucidation
+seo_title: "Agente AI per la structure elucidation | Rombo AI"
 date: 2026-09-04T00:00:00.000Z
 permalink: /blog/agent_structure_elucidation
 layout: article
@@ -153,7 +154,7 @@ markdown_content: |
 
 
   ---
-  1. Anthropic, Making Claude a chemist, 5 giugno 2026, https://www.anthropic.com/research/makingclaude-a-chemist
+  1. Anthropic, Making Claude a chemist, 5 giugno 2026, https://www.anthropic.com/research/making-claude-a-chemist
   2. La coincidenza non è perfetta, ed è proprio qui che le due esperienze si differenziano. Nel test di
   inverse prediction Anthropic forniva a Claude la formula molecolare esatta e gli spettri ^1H e ^13C e
   gli chiedeva di proporre strutture candidate; per i target più complessi aggiungeva anche la struttura

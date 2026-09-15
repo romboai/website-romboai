@@ -27,7 +27,7 @@ markdown_content: |-
 
   The first design question is not “Which endpoint do we call?” It is “Which laboratory event creates an analysis, and what decision consumes the result?” A trigger could follow acquisition, data-quality approval, sample registration, or a manual request. Each choice changes which metadata is authoritative.
 
-  NIST’s [roadmap for LIMS in materials research](https://doi.org/10.6028/NIST.TN.2216) treats LIMS as workflow and data infrastructure rather than a passive database. It calls for storage of raw and derived data with metadata, software and logs; it also identifies provenance, instrument configuration, data ingestion, processing pipelines, permissions, and long-term sustainability as core concerns. That is the right boundary for a spectral-analysis integration.
+  NIST’s [roadmap for LIMS in materials research](https://nvlpubs.nist.gov/nistpubs/TechnicalNotes/NIST.TN.2216.pdf) treats LIMS as workflow and data infrastructure rather than a passive database. It calls for storage of raw and derived data with metadata, software and logs; it also identifies provenance, instrument configuration, data ingestion, processing pipelines, permissions, and long-term sustainability as core concerns. That is the right boundary for a spectral-analysis integration.
 
   Define five linked objects before writing code:
 
@@ -56,7 +56,7 @@ markdown_content: |-
 
   This design deliberately separates instrument acquisition from cloud communication. Instrument-control computers are often long-lived, change-controlled, or isolated. NIST’s roadmap notes both proprietary instrument formats and the need to protect instrument-control systems; it describes extraction and transformation services as part of the data “plumbing,” rather than assuming every instrument communicates directly with every analysis service.
 
-  Standard formats can reduce adapter work, but they do not make records self-explanatory. IUPAC describes [JCAMP-DX](https://iupac.org/what-we-do/digital-standards/jcamp-dx/) as a standard family for exchanging spectral data, including an NMR specification. A converted spectrum still needs acquisition metadata, units, nucleus, referencing, processing history, and links to the original vendor data. Confirm whether the current Spectra API interface accepts a vendor export, JCAMP-DX, another normalized representation, or a combination; do not rename or flatten files until that contract is known.
+  Standard formats can reduce adapter work, but they do not make records self-explanatory. IUPAC describes [JCAMP-DX](https://en.wikipedia.org/wiki/JCAMP-DX) as a standard family for exchanging spectral data, including an NMR specification. A converted spectrum still needs acquisition metadata, units, nucleus, referencing, processing history, and links to the original vendor data. Confirm whether the current Spectra API interface accepts a vendor export, JCAMP-DX, another normalized representation, or a combination; do not rename or flatten files until that contract is known.
 
   ## Define the job state machine before batching
 

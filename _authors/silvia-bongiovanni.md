@@ -5,8 +5,6 @@ job_title: "Marketing & Communications"
 short_role: "Marketing"
 bio: "Silvia Bongiovanni leads marketing and communications at Rombo AI, translating complex AI and spectroscopy topics into clear value propositions for industrial customers."
 linkedin: ""
-robots: "noindex, follow"
-sitemap: false
 expertise:
   - "B2B marketing"
   - "Technical communications"
