@@ -5,10 +5,12 @@ date: 2026-09-14T01:00:00.000Z
 permalink: /blog/failure-modes-agentic-systems-scientific-workflows
 layout: article
 image: /img/blog/failure-modes-agentic-scientific-workflows.jpg
+image_width: 1200
+image_height: 675
 image_alt: A line of dominoes falling, representing cascading failures in an agentic scientific workflow
 image_caption: 'Dominoes falling in a chain reaction. Image: <a href="https://commons.wikimedia.org/wiki/File:Dominoes_falling.jpg" rel="noopener noreferrer" target="_blank">Kurt:S, via Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by/2.0/" rel="license noopener noreferrer" target="_blank">CC BY 2.0</a>. Cropped by Rombo AI.'
 author: 'Martina [Marketing Specialist, Rombo AI]'
-excerpt: A practical taxonomy of how scientific AI agents fail through bad data, tool misuse, unsupported hypotheses, loops, and weak escalation—and how to contain them.
+excerpt: How scientific AI agents fail through bad data, tool misuse, unsupported hypotheses, loops, and weak escalation—and how to detect and contain them.
 markdown_content: |-
   ## TL;DR
 
@@ -60,7 +62,7 @@ markdown_content: |-
   2. **Semantic validation:** Are units, dimensions, ranges, identifiers, and relationships meaningful for this task?
   3. **Scientific validation:** Do independent observations and domain invariants agree with the declared experiment?
 
-  Provenance is part of validation. The [NIST Research Data Framework](https://www.nist.gov/programs-projects/research-data-framework-rdaf) highlights persistent instrument identifiers, metadata, standards, and data history. Every derived object should retain links to its source, transformation, parameters, and software version.
+  Provenance is part of validation. The [NIST Research Data Framework](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/1500-18/NIST.SP.1500-18r2.html) highlights persistent instrument identifiers, metadata, standards, and data history. Every derived object should retain links to its source, transformation, parameters, and software version.
 
   Quarantine missing or contradictory inputs, never overwrite the acquisition, and distinguish “unknown” from a default. Silently replacing a missing field without recording the assumption fabricates evidence.
 
@@ -91,7 +93,7 @@ markdown_content: |-
 
   Candidate generation and candidate evaluation should be separable where practical. Independent algorithms, held-out measurements, orthogonal techniques, or a blinded expert can challenge the favoured result. Repeating the same prompt with the same evidence may create variation, but it is not independent verification.
 
-  The [NIST Generative AI Profile](https://www.nist.gov/itl/ai-risk-management-framework) treats confabulation as a risk and recommends empirical testing, appropriate human review, provenance, and post-deployment monitoring. Scientific monitoring should include unsupported assertions, constraint violations, sensitivity to reasonable input changes, and missed abstentions.
+  The [NIST Generative AI Profile](https://doi.org/10.6028/NIST.AI.600-1) treats confabulation as a risk and recommends empirical testing, appropriate human review, provenance, and post-deployment monitoring. Scientific monitoring should include unsupported assertions, constraint violations, sensitivity to reasonable input changes, and missed abstentions.
 
   An apparently successful completion can be more dangerous than a visible crash. A 2026 case study of astrophysical workflows, [“Plausible but Wrong”](https://arxiv.org/abs/2604.25345), reports syntactically valid computations that produced plausible but inaccurate results and physically inconsistent outputs without self-diagnosis. The domain differs from analytical chemistry and the study covers only eighteen tasks, so its numerical results should not be generalised. Its operational lesson transfers: scientific validity needs external checks.
 

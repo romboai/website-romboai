@@ -296,8 +296,8 @@
       "image": {
         "@type": "ImageObject",
         "url": "{{ page.image | absolute_url }}",
-        "width": 1200,
-        "height": 630
+        "width": {{ page.image_width | default: 1200 }},
+        "height": {{ page.image_height | default: 630 }}
       }
       {%- endif -%}
       {%- if page.tags and page.tags.size > 0 -%}
