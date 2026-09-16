@@ -25,7 +25,8 @@ test("navigation smoke: main pages load and key headings render", async ({ page 
   if (await cookieDismiss.isVisible()) await cookieDismiss.click();
   await page.locator("footer").getByRole("link", { name: /^blog$/i }).click();
   await expect(page).toHaveURL(/\/blog\/?$/);
-  await expect(page.locator("body")).toContainText(/Rombo AI Blog/i);
+  await expect(
+    page.getByRole("heading", { name: "Insights on AI and NMR", exact: true })
+  ).toBeVisible();
 });
-
 
