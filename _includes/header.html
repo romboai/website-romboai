@@ -64,14 +64,6 @@
         'anonymize_ip': true,
         'cookie_flags': 'SameSite=None;Secure'
       });
-
-      // Reusable helper for custom GA4 events (contact funnel, etc.).
-      window.romboTrack = function (eventName, params) {
-        gtag('event', eventName, Object.assign({
-          page_location: location.href,
-          page_path: location.pathname
-        }, params || {}));
-      };
     </script>
     {% endif %}
 
@@ -90,12 +82,50 @@
     </script>
     {% endif %}
 
+    {%- assign rombo_url = page.url | default: "" -%}
+    {%- assign rombo_page_type = "other" -%}
+    {%- if rombo_url == "/" or rombo_url == "/index.html" -%}
+      {%- assign rombo_page_type = "home" -%}
+    {%- elsif page.layout == "article" or page.layout == "blog" or page.layout == "author" or rombo_url contains "/blog/" -%}
+      {%- assign rombo_page_type = "blog" -%}
+    {%- elsif rombo_url == "/spectra/" -%}
+      {%- assign rombo_page_type = "spectra" -%}
+    {%- elsif rombo_url == "/product/" or page.layout == "product" or page.layout == "products" -%}
+      {%- assign rombo_page_type = "platform" -%}
+    {%- elsif rombo_url contains "/use-cases" or page.layout == "use-cases" -%}
+      {%- assign rombo_page_type = "use_cases" -%}
+    {%- elsif page.layout == "about" or rombo_url == "/about/" -%}
+      {%- assign rombo_page_type = "about" -%}
+    {%- elsif page.layout == "contact" or rombo_url == "/contact/" -%}
+      {%- assign rombo_page_type = "contact" -%}
+    {%- elsif page.layout == "privacy" or rombo_url == "/privacy/" -%}
+      {%- assign rombo_page_type = "privacy" -%}
+    {%- endif -%}
+
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      window.__romboEvents = window.__romboEvents || [];
+      window.romboTrack = function (eventName, params) {
+        var payload = Object.assign({
+          page_location: location.href,
+          page_path: location.pathname
+        }, params || {});
+        window.__romboEvents.push({ event: eventName, params: payload });
+        if (typeof gtag === "function") {
+          gtag("event", eventName, payload);
+        } else {
+          window.dataLayer.push(Object.assign({ event: eventName }, payload));
+        }
+      };
+    </script>
+
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
     <meta name="referrer" content="strict-origin-when-cross-origin">
     <meta name="theme-color" content="#090C23">
+    <meta name="rombo-page-type" content="{{ rombo_page_type }}">
 
     <!-- Preconnect: only the 2 most critical origins -->
     <link rel="preconnect" href="https://fonts.googleapis.com">

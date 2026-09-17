@@ -78,8 +78,14 @@
                         </li>
                     </ul>
                 </li>
+                {%- assign nav_cta_location = "header" -%}
+                {%- if current_path == "/" -%}
+                  {%- assign nav_cta_location = "home_header" -%}
+                {%- elsif page.layout == "article" or page.layout == "blog" or page.layout == "author" or current_path contains "/blog/" -%}
+                  {%- assign nav_cta_location = "blog" -%}
+                {%- endif -%}
                 <li class="nav-item d-flex align-items-center">
-                    <a class="nav-link nav-cta" href="{{ site.baseurl }}/contact/" data-cta-location="navigation"{% if current_path == '/contact/' %} aria-current="page"{% endif %}>Contact us</a>
+                    <a class="nav-link nav-cta" href="{{ site.baseurl }}/contact/" data-cta-location="{{ nav_cta_location }}"{% if current_path == '/contact/' %} aria-current="page"{% endif %}>Contact us</a>
                 </li>
             </ul>
         </div>

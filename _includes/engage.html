@@ -16,7 +16,11 @@
         <p class="px-3" style="font-size: 20px; max-width: 800px;">
             {{ site.engage_message_part_one }}
         </p>
-        <a href="{{ site.baseurl }}{{ cta_link }}" class="text-decoration-none pt-5" data-cta-location="engage">
+        {%- assign engage_cta_location = "engage" -%}
+        {%- if page.layout == "article" or page.layout == "blog" or page.layout == "author" -%}
+          {%- assign engage_cta_location = "blog" -%}
+        {%- endif -%}
+        <a href="{{ site.baseurl }}{{ cta_link }}" class="text-decoration-none pt-5" data-cta-location="{{ engage_cta_location }}">
             <span class="visually-hidden">Request a free feasibility analysis</span>
             <div class="d-flex justify-content-center align-items-center  gap-0" aria-hidden="true">
                 <span class="btn rounded-pill"

@@ -2,7 +2,11 @@
 {%- assign hero_sub = page.hero_subtitle | default: page.hero_home_subtitle | default: page.hero_product_sub_title -%}
 {%- assign hero_cta_label = page.hero_cta_label | default: page.hero_primary_cta_label -%}
 {%- assign hero_cta_link = page.hero_cta_link | default: page.hero_primary_cta_link -%}
-{%- assign hero_cta_location = page.hero_cta_location | default: "hero_primary" -%}
+{%- if page.url == "/" or page.url == "/index.html" -%}
+  {%- assign hero_cta_location = page.hero_cta_location | default: "home_header" -%}
+{%- else -%}
+  {%- assign hero_cta_location = page.hero_cta_location | default: "hero_primary" -%}
+{%- endif -%}
 
 <div class="container-fluid hero-section">
   <video class="hero-video" autoplay muted loop playsinline controlslist="nodownload" data-desktop-only="true" preload="none" aria-hidden="true">
