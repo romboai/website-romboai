@@ -116,6 +116,6 @@ markdown_content: >-
   can support you in your daily analysis, we're ready to show you. 
 
 
-  **Request a free feasibility analysis via {{ site.contact_email }}. **
+  **Request a [free feasibility analysis](/contact/).**
 ---
 

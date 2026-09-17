@@ -155,6 +155,6 @@ markdown_content: >-
 
 
   If your company is facing similar challenges, request a free feasibility
-  analysis: **{{ site.contact_email }}**
+  analysis: [contact us](/contact/).
 ---
 

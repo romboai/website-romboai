@@ -55,5 +55,5 @@ markdown_content: |
 
   ---
 
-  Have questions or feedback? Reach out to contact@rombo.ai
+  Have questions or feedback? [Contact us](/contact/).
 ---

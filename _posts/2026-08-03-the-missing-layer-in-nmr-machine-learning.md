@@ -189,6 +189,6 @@ markdown_content: |-
 
   ---
 
-  [contact@rombo.ai]
+  [Contact us](/contact/)
 ---
 
