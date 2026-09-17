@@ -142,7 +142,7 @@ markdown_content: |-
 
   ## How Rombo AI approaches agent evaluation for NMR
 
-  In ai spectroscopy, final-answer accuracy is necessary but insufficient. An NMR agent should also be evaluated on data-quality decisions, tool applicability, evidence provenance, competing hypotheses, appropriate abstention, expert-review burden, and robustness across the instruments and sample types in the intended scope.
+  In AI spectroscopy, final-answer accuracy is necessary but insufficient. An NMR agent should also be evaluated on data-quality decisions, tool applicability, evidence provenance, competing hypotheses, appropriate abstention, expert-review burden, and robustness across the instruments and sample types in the intended scope.
 
   Rombo AI’s evaluation direction treats the agent as a governed analytical workflow. Reusable spectral representations and specialist tools can support individual steps, while benchmark cases test whether orchestration reaches a defensible result without hiding conflicts or exceeding authority. Cross-instrument robustness should be demonstrated with held-out instruments and sites, not inferred from a random split.
 
