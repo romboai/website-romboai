@@ -1,6 +1,17 @@
 const { test, expect } = require("@playwright/test");
 
-test("navigation smoke: main pages load and key headings render", async ({ page }) => {
+test("navigation smoke: main pages load and key headings render", async ({ page, context, baseURL }) => {
+  // This test exercises site navigation, not the cookie-consent widget. Seed the
+  // consent cookie before the first request so the asynchronously loaded banner
+  // cannot appear between the visibility check and a navigation click.
+  await context.addCookies([
+    {
+      name: "cookieconsent_status",
+      value: "dismiss",
+      url: new URL(baseURL).origin,
+    },
+  ]);
+
   await page.goto("/");
   await expect(page.locator("body")).toBeVisible();
 
@@ -21,12 +32,9 @@ test("navigation smoke: main pages load and key headings render", async ({ page 
   await expect(page.locator("#contact-form")).toHaveCount(1);
 
   // Blog lives in the footer, not the top nav
-  const cookieDismiss = page.locator(".cc-dismiss");
-  if (await cookieDismiss.isVisible()) await cookieDismiss.click();
   await page.locator("footer").getByRole("link", { name: /^blog$/i }).click();
   await expect(page).toHaveURL(/\/blog\/?$/);
   await expect(
     page.getByRole("heading", { name: "Insights on AI and NMR", exact: true })
   ).toBeVisible();
 });
-
