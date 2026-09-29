@@ -5,6 +5,11 @@ date: 2026-09-29T12:00:00.000Z
 permalink: /blog/crude-oil-analysis-refinery-process-economics
 layout: article
 author: Andrea Zanda
+image: /img/blog/refinery-pine-bend-tony-webster.jpg
+image_alt: Aerial view of processing units, pipework and storage tanks at Pine Bend Refinery in Rosemount, Minnesota.
+image_width: 1280
+image_height: 960
+image_caption: 'Pine Bend Refinery in Rosemount, Minnesota. Photo: Tony Webster, via <a href="https://commons.wikimedia.org/wiki/File:Pine_Bend_Refinery_-_Flint_Hills_Resources_(53839141496).jpg" target="_blank" rel="noopener noreferrer">Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by/2.0/" target="_blank" rel="license noopener noreferrer">CC BY 2.0</a>. Resized; no crop. Illustrative image; no affiliation or endorsement implied.'
 excerpt: Where refineries sample crude and products, what each analysis measures, and how faster NMR-based predictions can support blending, fouling management and yield planning.
 markdown_content: |-
   ## TL;DR
@@ -20,6 +25,13 @@ markdown_content: |-
   The familiar sequence—distillation, conversion, treating and blending—is therefore also a map of analytical decisions. Three checkpoints organize it: **incoming crude and storage; feed preparation and processing; fractions and finished products**. Actual refineries have recycle streams and parallel units, so sampling follows the site's process configuration.
 
   ## Where analysis enters the refinery process
+
+  <figure class="my-4">
+    <a href="/img/blog/refinery-analysis-process-flow.png" target="_blank" rel="noopener noreferrer" aria-label="Open the refinery process diagram at full resolution">
+      <img src="/img/blog/refinery-analysis-process-flow.png" alt="Refinery flow from tankers and storage through atmospheric and vacuum distillation, conversion, treating and final product blending, with three analytical checkpoints." width="2522" height="1518" loading="lazy" decoding="async" style="display:block;width:100%;height:auto;border:1px solid #566173;">
+    </a>
+    <figcaption style="font-size:14px;line-height:1.5;margin-top:0.75rem;">Refinery process overview from the Rombo AI presentation supplied for this article. Markers identify incoming crude and blending (1), feed and process monitoring (2), and fractions and final-product quality control (3). Simplified schematic; actual unit configurations vary. Click the image to inspect the labels at full resolution.</figcaption>
+  </figure>
 
   | Sampling point | Main analytical question | Decision supported |
   | --- | --- | --- |
