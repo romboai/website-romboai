@@ -4,7 +4,7 @@ seo_title: 'Crude Oil Analysis: Refinery Processes, Risks and Economics | Rombo 
 date: 2026-09-29T12:00:00.000Z
 permalink: /blog/crude-oil-analysis-refinery-process-economics
 layout: article
-author: 'Martina [Marketing Specialist, Rombo AI]'
+author: Andrea Zanda
 excerpt: Where refineries sample crude and products, what each analysis measures, and how faster NMR-based predictions can support blending, fouling management and yield planning.
 markdown_content: |-
   ## TL;DR
