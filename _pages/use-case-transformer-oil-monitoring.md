@@ -9,6 +9,9 @@ og_image: /img/usecase-transformer-oil.png
 og_image_alt: "Transformer oil monitoring for energy asset integrity"
 
 hero_eyebrow: "Energy"
+hero_cta_label: "Assess your oil monitoring workflow"
+hero_cta_link: "/contact/"
+hero_cta_location: "transformer_oil_hero"
 hero_title: "Transformer oil insight for asset integrity"
 hero_subtitle: "Rombo AI helps utilities, grid operators, and energy asset teams turn insulating oil analysis into faster decision support for asset health, maintenance planning, and downtime risk reduction."
 ---

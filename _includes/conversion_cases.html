@@ -1,0 +1,18 @@
+<section class="container py-5" aria-labelledby="application-heading">
+  <h2 id="application-heading">Choose your analytical challenge</h2>
+  <p>Start with your sample, the decision you need to make and the evidence required to validate it.</p>
+  <div class="row g-4 mt-2">
+    {% for case in site.data.conversion_cases %}
+    <article class="col-12 col-lg-4">
+      <div class="border rounded-4 p-4 h-100 d-flex flex-column">
+        <h3 class="h4">{{ case.title }}</h3>
+        <p><strong>Problem.</strong> {{ case.problem }}</p>
+        <p><strong>Data.</strong> {{ case.inputs }}</p>
+        <p><strong>Outcome to evaluate.</strong> {{ case.outcome }}</p>
+        <a class="mt-auto" href="{{ case.path | relative_url }}">Explore {{ case.title | downcase }} →</a>
+        <a class="mt-3" href="{{ '/contact/' | relative_url }}" data-cta-location="application_card">Discuss feasibility →</a>
+      </div>
+    </article>
+    {% endfor %}
+  </div>
+</section>

@@ -1,10 +1,21 @@
 (() => {
   "use strict";
 
+  // A tab-scoped journey expires after GA4's default 30-minute inactivity window.
+  var journey;
+  try { journey = JSON.parse(sessionStorage.getItem("rombo_journey") || "null"); } catch (e) {}
+  var now = Date.now();
+  var isNewJourney = !journey || !journey.updated || now - journey.updated > 30 * 60 * 1000;
+  if (isNewJourney) journey = { landing_path: location.pathname };
+  journey.updated = now;
+  try { sessionStorage.setItem("rombo_journey", JSON.stringify(journey)); } catch (e) {}
+
   function track(eventName, params) {
     var payload = Object.assign({
-      page_location: location.href,
-      page_path: location.pathname
+      page_location: location.origin + location.pathname,
+      page_path: location.pathname,
+      landing_path: journey.landing_path,
+      funnel_version: "2"
     }, params || {});
 
     if (typeof window.romboTrack === "function") {
@@ -203,21 +214,7 @@
     var form = document.getElementById("contact-form");
     if (!form) return;
 
-    var search = window.location.search || "";
-    var isStatusOk = search.indexOf("status=ok") !== -1;
     var pageType = getPageType();
-
-    if (isStatusOk) {
-      if (!sessionStorage.getItem("rombo_contact_success_tracked")) {
-        sessionStorage.setItem("rombo_contact_success_tracked", "1");
-        track("contact_form_success", {
-          form_name: "contact",
-          page_type: pageType,
-          funnel_step: "lead_confirmed"
-        });
-      }
-      return;
-    }
 
     var flags = { start: false, email: false, message: false, company: false };
 
@@ -277,21 +274,15 @@
       });
     }
 
-    form.addEventListener("submit", function () {
-      track("contact_form_submit", {
-        form_name: "contact",
-        message_length: messageField ? messageField.value.trim().length : 0,
-        page_type: pageType,
-        funnel_step: "form_submit"
-      });
+    // Only the successful HTTP response confirms a lead, never a submit attempt.
+    form.addEventListener("rombo:lead-confirmed", function () {
       track("generate_lead", {
         form_name: "contact",
         lead_type: "feasibility_analysis",
         page_type: pageType,
-        currency: "EUR",
-        value: 0
+        funnel_step: "lead_confirmed"
       });
-    });
+    }, { once: true });
   }
 
   function initScrollTracking() {
@@ -346,6 +337,7 @@
   }
 
   document.addEventListener("DOMContentLoaded", function () {
+    if (isNewJourney) track("landing", { page_type: getPageType(), funnel_step: "landing" });
     initCtaTracking();
     initContactFormTracking();
     initScrollTracking();
