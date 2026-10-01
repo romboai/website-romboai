@@ -1911,7 +1911,7 @@ label.ckb input:checked ~ span.checkmark::after {
 .hero-article-section .markdown-content table {
     width: min(960px, calc(100vw - 3rem));
     margin: 1.5rem 0;
-    border: 1px solid #8a909b;
+    border: 2px solid #566173;
     border-collapse: collapse;
     background: #ffffff;
     color: #232536;
@@ -1925,7 +1925,7 @@ label.ckb input:checked ~ span.checkmark::after {
 .hero-article-section .markdown-content th,
 .hero-article-section .markdown-content td {
     padding: 0.75rem 0.875rem;
-    border: 1px solid #8a909b;
+    border: 2px solid #566173;
     text-align: left;
     vertical-align: top;
     overflow-wrap: break-word;
