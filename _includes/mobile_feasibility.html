@@ -1,0 +1,16 @@
+<aside class="mobile-feasibility" aria-label="Request a feasibility analysis">
+  <a href="{{ '/contact/' | relative_url }}" data-cta-location="mobile_sticky">Free feasibility analysis →</a>
+</aside>
+<style>
+  .mobile-feasibility { display: none; }
+  @media (max-width: 767px) {
+    body { padding-bottom: calc(80px + env(safe-area-inset-bottom)); }
+    .mobile-feasibility { display: block; position: fixed; bottom: 0; left: 0; right: 0; z-index: 999;
+      background: #fff; border-top: 1px solid #ddd; padding: 10px 16px calc(10px + env(safe-area-inset-bottom)); }
+    .mobile-feasibility a { display: block; border-radius: 28px; background: #001d6c; color: #fff;
+      text-align: center; padding: 14px 12px; min-height: 48px; font-weight: 600; text-decoration: none; }
+    body:has(.cc-window:not(.cc-invisible)) .mobile-feasibility,
+    body:has(.navbar-collapse.show) .mobile-feasibility { visibility: hidden; }
+    .up-btn { bottom: 90px !important; }
+  }
+</style>

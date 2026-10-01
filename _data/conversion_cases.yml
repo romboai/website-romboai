@@ -1,0 +1,15 @@
+- title: Crude oil and blends
+  path: /use-cases/crude-oil-monitoring/
+  problem: Purchasing and blending decisions cannot always wait for a full crude assay.
+  inputs: Benchtop NMR measurements, representative crude samples and reference assay results.
+  outcome: Assess property prediction against your laboratory methods before a focused pilot.
+- title: Transformer oil
+  path: /use-cases/transformer-oil-monitoring/
+  problem: Asset teams need comparable evidence of oil condition across samples and time.
+  inputs: Oil spectra, sample history and reference measurements of condition.
+  outcome: Evaluate whether spectral changes can support your maintenance decisions.
+- title: NMR compound identification
+  path: /use-cases/nmr-compound-identification/
+  problem: Manual candidate review creates a bottleneck in research and impurity investigations.
+  inputs: NMR data and available sample context, with expert review of candidate structures.
+  outcome: Use Spectra to support candidate review; confirm assignments with your chemists.
