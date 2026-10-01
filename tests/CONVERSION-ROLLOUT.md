@@ -15,8 +15,8 @@ patch emits only generate_lead, once after HTTP success; a successful HTTP respo
 means the endpoint accepted the request, not that a salesperson qualified it.
 GA4's enhanced-measurement form_submit may still exist as a diagnostic event.
 
-This branch has not been published. Network restrictions prevented fetch/push,
-so rebase onto current origin/main and rerun checks before deployment.
+The branch improve-conversion-funnel has been pushed to GitHub and merged with
+the latest origin/main (1871af0) without conflicts. It is not deployed to main.
 No GA4 settings were changed: coordinate the following migration with deployment.
 
 ## GA4 migration at deployment
@@ -58,8 +58,11 @@ claims have been added; the evidence link uses the existing refinery case study.
 - Jekyll build and JavaScript syntax: passing locally.
 - New browser tests: tests/e2e/conversion-mobile.spec.js, covering 375, 390 and
   1280px, mocked submissions, mobile video requests and horizontal overflow.
-- Browser tests / visual mobile QA not executed locally: binding a preview server
-  is blocked by sandbox permissions. Run npm run test:e2e in CI before release.
+- Browser visual QA completed at 375px: product CTA visible, no horizontal overflow,
+  contact route opens, optional fields verified, input font size 16px, no hero video.
+  The approved Jekyll preview command runs successfully.
+- The automated browser suite has not been executed locally.
+  Run npm run test:e2e in CI before release.
 - Check sticky CTA against cookie banner, open navigation and safe-area inset on
   a real phone; verify keyboard, optional telephone/surname, failure and retry.
 - Do not test against the live Make webhook with invented contact details.
