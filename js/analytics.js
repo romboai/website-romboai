@@ -1,14 +1,53 @@
 (() => {
   "use strict";
 
+  var ACTIVE_EXPERIMENT_KEY = "rombo_active_cta_experiment";
+
+  function storageGet(key) {
+    try {
+      return window.sessionStorage.getItem(key);
+    } catch (e) {
+      return null;
+    }
+  }
+
+  function storageSet(key, value) {
+    try {
+      window.sessionStorage.setItem(key, value);
+    } catch (e) {
+      // The in-memory fallback still keeps attribution for the current page.
+    }
+  }
+
   // A tab-scoped journey expires after GA4's default 30-minute inactivity window.
   var journey;
-  try { journey = JSON.parse(sessionStorage.getItem("rombo_journey") || "null"); } catch (e) {}
+  try { journey = JSON.parse(storageGet("rombo_journey") || "null"); } catch (e) {}
   var now = Date.now();
   var isNewJourney = !journey || !journey.updated || now - journey.updated > 30 * 60 * 1000;
   if (isNewJourney) journey = { landing_path: location.pathname };
   journey.updated = now;
-  try { sessionStorage.setItem("rombo_journey", JSON.stringify(journey)); } catch (e) {}
+  storageSet("rombo_journey", JSON.stringify(journey));
+
+  function getActiveExperiment() {
+    if (window.__romboActiveExperiment) return window.__romboActiveExperiment;
+
+    var stored = storageGet(ACTIVE_EXPERIMENT_KEY);
+    if (!stored) return {};
+
+    try {
+      var experiment = JSON.parse(stored);
+      if (!experiment.experiment_id || !experiment.experiment_variant) return {};
+      window.__romboActiveExperiment = experiment;
+      return experiment;
+    } catch (e) {
+      return {};
+    }
+  }
+
+  function setActiveExperiment(experiment) {
+    window.__romboActiveExperiment = experiment;
+    storageSet(ACTIVE_EXPERIMENT_KEY, JSON.stringify(experiment));
+  }
 
   function track(eventName, params) {
     var payload = Object.assign({
@@ -16,7 +55,7 @@
       page_path: location.pathname,
       landing_path: journey.landing_path,
       funnel_version: "2"
-    }, params || {});
+    }, getActiveExperiment(), params || {});
 
     if (typeof window.romboTrack === "function") {
       window.romboTrack(eventName, payload);
@@ -27,6 +66,60 @@
     window.__romboEvents.push({ event: eventName, params: payload });
     window.dataLayer = window.dataLayer || [];
     window.dataLayer.push(Object.assign({ event: eventName }, payload));
+  }
+
+  function initExperiments() {
+    if (typeof document.querySelectorAll !== "function") return;
+
+    var elements = document.querySelectorAll("[data-experiment-id][data-experiment-a][data-experiment-b]");
+
+    Array.prototype.forEach.call(elements, function (element) {
+      var experimentId = element.dataset.experimentId;
+      var variants = [
+        { id: "a", label: element.dataset.experimentA },
+        { id: "b", label: element.dataset.experimentB },
+        { id: "c", label: element.dataset.experimentC }
+      ].filter(function (variant) {
+        return Boolean(variant.label);
+      });
+
+      if (!experimentId || variants.length < 2) return;
+
+      var assignmentKey = "rombo_experiment_variant_" + experimentId;
+      var assignedId = storageGet(assignmentKey);
+      var assigned = variants.find(function (variant) {
+        return variant.id === assignedId;
+      });
+
+      if (!assigned) {
+        assigned = variants[Math.floor(Math.random() * variants.length)];
+        storageSet(assignmentKey, assigned.id);
+      }
+
+      element.textContent = assigned.label;
+      element.dataset.experimentVariant = assigned.id;
+      element.dataset.experimentLabel = assigned.label;
+
+      var experiment = {
+        experiment_id: experimentId,
+        experiment_variant: assigned.id,
+        experiment_label: assigned.label
+      };
+      setActiveExperiment(experiment);
+
+      var viewKey = "rombo_experiment_view_" + experimentId;
+      if (storageGet(viewKey)) return;
+
+      storageSet(viewKey, "1");
+      track("experiment_view", {
+        experiment_id: experimentId,
+        experiment_variant: assigned.id,
+        experiment_label: assigned.label,
+        experiment_location: element.dataset.ctaLocation || "unknown",
+        page_type: getPageType(),
+        funnel_step: "experiment_exposure"
+      });
+    });
   }
 
   function normalizePath(href) {
@@ -276,6 +369,11 @@
 
     // Only the successful HTTP response confirms a lead, never a submit attempt.
     form.addEventListener("rombo:lead-confirmed", function () {
+      track("contact_form_success", {
+        form_name: "contact",
+        page_type: pageType,
+        funnel_step: "lead_confirmed"
+      });
       track("generate_lead", {
         form_name: "contact",
         lead_type: "feasibility_analysis",
@@ -335,6 +433,8 @@
       funnel_step: "intent_page"
     });
   }
+
+  initExperiments();
 
   document.addEventListener("DOMContentLoaded", function () {
     if (isNewJourney) track("landing", { page_type: getPageType(), funnel_step: "landing" });

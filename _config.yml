@@ -49,8 +49,8 @@ organization:
     - "Industrial Analytics"
 
 # Default CTA (fallback). Engage CTAs will reuse the Home hero CTA when available.
-cta_label_left: "Free feasibility"
-cta_label_right: "analysis"
+cta_label_left: "Book a"
+cta_label_right: "demo"
 cta_link: "/contact"
 markdown: kramdown
 
@@ -60,7 +60,7 @@ kramdown:
   auto_ids: true
   toc_levels: 2..4
 # Engage Section
-engage_main_title: "REQUEST A FREE FEASIBILITY ANALYSIS"
+engage_main_title: "BOOK A DEMO"
 engage_sub_title: "Start with fit, then define the pilot"
 engage_message_part_one: "Share your analytical challenge with our team. We will assess technical fit, data or sample requirements, and the fastest path to a focused pilot."
 

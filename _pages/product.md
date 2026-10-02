@@ -3,7 +3,7 @@ layout: products
 title: "Rombo AI Platform"
 permalink: /product/
 seo_title: "Rombo AI Platform | AI for Industrial NMR Analysis"
-description: "Patented NMR AI models predict multiple physico-chemical properties from one benchtop scan. Request a free feasibility analysis."
+description: "Patented NMR AI models predict multiple physico-chemical properties from one benchtop scan. Book a demo with the Rombo AI team."
 og_image: /img/og/rombo-ai.jpg
 og_image_alt: "Rombo AI Platform | AI for Industrial NMR Analysis"
 lang: en
@@ -19,13 +19,13 @@ hero_secondary_cta_label: "See applications"
 hero_secondary_cta_link: "#application-heading"
 
 engage_eyebrow: "How we work"
-engage_title: "Start with a free feasibility analysis."
+engage_title: "Talk through your analytical challenge."
 engage_text: "We first assess the analytical problem, available data or samples, and target decision. If there is a strong fit, we define a focused pilot with clear objectives, success metrics, and a roadmap to scale."
 engage_cta_location: "product_how_we_work"
 engage_steps:
   - title: "Share the challenge"
     text: "What sample type, workflow, and decision do you need to improve?"
-  - title: "Assess feasibility"
+  - title: "Review the fit"
     text: "We review technical fit, data quality, sample requirements, and validation constraints."
   - title: "Define the pilot"
     text: "If the fit is strong, we propose objectives, metrics, timeline, and expected outputs."
@@ -73,7 +73,7 @@ products:
           In industrial contexts, while process indicators may look stable to QC operators, the chemical change and material shift may already be happening. The problem is not the measurement — it's the lack of early signals, with critical deviations leading to significant production loss.
         </p>
         <div class="mt-4 d-flex flex-wrap gap-3">
-          {% include ui/button.html href="/contact/" label="Request a free feasibility analysis" location="product_intro" %}
+          {% include ui/button.html href="/contact/" label="Book a demo" location="product_intro" %}
         </div>
       </div>
       <div class="col-12 col-lg-5">
@@ -253,7 +253,7 @@ products:
         <div class="p-3 bg-white border rounded-4 mt-3" style="max-width: 75ch;">
           <div class="fw-bold">How it's delivered</div>
           <div class="text-muted" style="font-size: 14px;">
-            Best for technical and R&amp;D teams. We start with a <strong>free feasibility analysis</strong> to assess fit, data or sample requirements,
+            Best for technical and R&amp;D teams. We start with a short conversation to assess fit, data or sample requirements,
             and validation criteria before defining a structured pilot.
           </div>
         </div>

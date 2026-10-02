@@ -2,6 +2,10 @@
 {%- assign hero_sub = page.hero_subtitle | default: page.hero_home_subtitle | default: page.hero_product_sub_title -%}
 {%- assign hero_cta_label = page.hero_cta_label | default: page.hero_primary_cta_label -%}
 {%- assign hero_cta_link = page.hero_cta_link | default: page.hero_primary_cta_link -%}
+{%- assign hero_cta_experiment_id = page.hero_cta_experiment_id -%}
+{%- assign hero_cta_variant_a = page.hero_cta_variant_a | default: hero_cta_label -%}
+{%- assign hero_cta_variant_b = page.hero_cta_variant_b -%}
+{%- assign hero_cta_variant_c = page.hero_cta_variant_c -%}
 {%- if page.url == "/" or page.url == "/index.html" -%}
   {%- assign hero_cta_location = page.hero_cta_location | default: "home_header" -%}
 {%- else -%}
@@ -37,7 +41,11 @@
           {%- endif %}
           <a href="{{ cta_href }}" class="btn rounded-pill"{% if cta_external %} target="_blank" rel="noopener noreferrer"{% endif %}
              style="background:#FE900F; color:#fff; padding:15px 25px;"
-             data-cta-location="{{ hero_cta_location }}">{{ hero_cta_label }}</a>
+             data-cta-location="{{ hero_cta_location }}"{% if hero_cta_experiment_id and hero_cta_variant_b %}
+             data-experiment-id="{{ hero_cta_experiment_id | escape }}"
+             data-experiment-a="{{ hero_cta_variant_a | escape }}"
+             data-experiment-b="{{ hero_cta_variant_b | escape }}"{% if hero_cta_variant_c %}
+             data-experiment-c="{{ hero_cta_variant_c | escape }}"{% endif %}{% endif %}>{{ hero_cta_label }}</a>
           {%- endif %}
           {%- if page.hero_secondary_cta_label and page.hero_secondary_cta_link %}
           {%- assign secondary_href = page.hero_secondary_cta_link -%}

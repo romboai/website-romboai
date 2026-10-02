@@ -158,12 +158,12 @@ hero_subtitle: "Rombo AI helps refinery, quality, and process teams obtain rapid
 
 <section class="container-fluid text-center text-white py-5" style="background: linear-gradient(135deg, #303767, #3d4580);">
   <div class="container custom_container">
-    <h2 class="fw-bold text-white" style="font-size: 28px;">Request a free feasibility analysis</h2>
+    <h2 class="fw-bold text-white" style="font-size: 28px;">Talk through your crude workflow</h2>
     <p class="text-white mt-2 mx-auto" style="max-width: 75ch; opacity: .85;">
       Share your crude or blend decision challenge. We will assess sample requirements, data availability, and the fastest path to a focused refinery pilot.
     </p>
     <div class="mt-4">
-      {% include ui/button.html href="/contact/" label="Request analysis" location="use_case_crude_oil" %}
+      {% include ui/button.html href="/contact/" label="Book a demo" location="use_case_crude_oil" %}
     </div>
   </div>
 </section>
