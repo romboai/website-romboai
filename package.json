@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "tinacms dev -c \"bundle exec jekyll serve --host 127.0.0.1 --port 4000 --livereload --livereload-port 35730\"",
-    "build": "tinacms build && bundle exec jekyll build",
+    "predev": "node scripts/patch-tinacms-cli.js",
+    "dev": "tinacms dev -c \"bundle exec ruby scripts/jekyll-dev.rb serve --host 127.0.0.1 --port 4000 --livereload --livereload-port 35730\"",
+    "build": "node scripts/build.js",
     "tina-dev": "tinacms dev",
     "tina-build": "tinacms build",
     "postinstall": "node scripts/patch-tinacms-cli.js",

@@ -64,6 +64,28 @@ if (src.includes(buildNeedle)) {
   process.exit(1);
 }
 
+// Vite's dev dependency optimizer has a separate esbuild target. The build
+// target above does not apply to this pre-bundling step.
+const optimizeNeedle = [
+  "    optimizeDeps: {",
+  "      force: true,",
+].join("\n");
+const optimizeReplacement = [
+  "    optimizeDeps: {",
+  '      esbuildOptions: { target: "esnext" },',
+  "      force: true,",
+].join("\n");
+
+if (src.includes(optimizeNeedle)) {
+  src = src.replace(optimizeNeedle, optimizeReplacement);
+  changed = true;
+} else if (!src.includes(optimizeReplacement)) {
+  console.error(
+    "[postinstall] Tina CLI Vite config changed; unable to apply the dev optimizer target patch."
+  );
+  process.exit(1);
+}
+
 if (changed) {
   fs.writeFileSync(target, src, "utf8");
   console.log(
