@@ -25,7 +25,7 @@ for (const width of [375, 390, 1280]) {
     await page.locator('#query').fill('Evaluate NMR feasibility');
     await page.locator('#terms').check();
     await page.getByRole('button', { name: 'Request analysis', exact: true }).click();
-    await expect(page.getByRole('status')).toContainText('received successfully');
+    await expect(page.locator('.hero-contact-form').getByRole('status')).toContainText('received successfully');
     const leads = await page.evaluate(() => window.__romboEvents.filter(e => e.event === 'generate_lead'));
     expect(leads).toHaveLength(1);
     expect(leads[0].params.landing_path).toBe('/product/');

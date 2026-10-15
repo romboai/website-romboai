@@ -31,9 +31,10 @@
                     </div>
                     <form id="contact-form" data-toggle="validator" action="https://hook.eu2.make.com/xlhmjh1moriuwsf2ky8pqvwgeh4agfgw"
                           method="POST">
+                        <input type="hidden" name="form_type" value="contact">
                         <div class="form-group row mb-3">
                             <div class="col-sm-6">
-                                <label for="firstName" class="label">First Name</label>
+                                <label for="firstName" class="label">First Name <span aria-hidden="true">*</span></label>
                                 <input required type="text" name="name" id="firstName"
                                        class="form-control bg-light border-0 border-secondary rounded-1"
                                        placeholder="First Name" autocomplete="given-name">
@@ -46,13 +47,13 @@
                             </div>
                         </div>
                         <div class="form-group mb-3">
-                            <label for="company" class="label">Company</label>
+                            <label for="company" class="label">Company <span aria-hidden="true">*</span></label>
                             <input required type="text" name="company" id="company"
                                    class="form-control bg-light border-0 border-secondary rounded-1"
                                    placeholder="Company" autocomplete="organization">
                         </div>
                         <div class="form-group mb-3">
-                            <label for="email" class="label">Email</label>
+                            <label for="email" class="label">Email <span aria-hidden="true">*</span></label>
                             <input required type="email" name="email" id="email"
                                    class="form-control bg-light border-0 border-secondary rounded-1"
                                    placeholder="Email" autocomplete="email">
@@ -80,17 +81,20 @@
                             </div>
                         </div>
                         <div class="form-group mb-3">
-                            <label for="query" class="label">Analytical challenge</label>
+                            <label for="query" class="label">Analytical challenge <span aria-hidden="true">*</span></label>
                             <textarea required name="query" id="query"
                                       class="form-control bg-light border-0 border-secondary rounded-1"
                                       placeholder="Tell us about your sample type, current workflow, target decision, and validation needs."></textarea>
+                        </div>
+                        <div class="mb-3">
+                            {% include newsletter_consent.html id="contact-newsletter-opt-in" %}
                         </div>
                         <div class="row justify-content-center align-items-center">
                             <div class="col-md-8">
                                 <div class="form-group d-flex align-items-start mb-3">
                                     <input required type="checkbox" id="terms" name="terms" class="me-2" style="width: 20px; height: 20px;">
-                                    <label for="terms" class="label fw-bold">
-                                        I agree to the processing of my personal data as described in the
+                                    <label for="terms" class="label">
+                                        <span aria-hidden="true">*</span> I agree to the processing of my personal data as described in the
                                         <a href="{{ '/privacy/' | relative_url }}">Privacy Statement</a>.
                                     </label>
                                 </div>
@@ -237,6 +241,18 @@ document.addEventListener('DOMContentLoaded', function() {
         return;
       }
 
+      var payload = new FormData(form);
+      var newsletterOptIn = document.getElementById('contact-newsletter-opt-in');
+      var newsletterAccepted = Boolean(newsletterOptIn && newsletterOptIn.checked);
+      payload.set('newsletter_opt_in', newsletterAccepted ? 'true' : 'false');
+      if (newsletterAccepted) {
+        payload.set('newsletter_source', 'contact');
+        payload.set('newsletter_page_path', window.location.pathname);
+        payload.set('newsletter_consent_at', new Date().toISOString());
+        payload.set('newsletter_consent_version', newsletterOptIn.dataset.consentVersion);
+        payload.set('newsletter_consent_text', form.querySelector('[data-newsletter-consent-text]').textContent.trim());
+      }
+
       var submitBtn = form.querySelector('button[type="submit"]');
       sending = true;
       form.setAttribute('aria-busy', 'true');
@@ -245,7 +261,7 @@ document.addEventListener('DOMContentLoaded', function() {
       fetch(form.getAttribute('action'), {
         method: 'POST',
         headers: { 'x-make-apikey': 'geTba5-bicxej-wacsep' },
-        body: new FormData(form)
+        body: payload
       })
         .then(function(response) {
           if (!response.ok) throw new Error('Request failed with status ' + response.status);

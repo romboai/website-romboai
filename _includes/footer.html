@@ -1,5 +1,12 @@
 <!-- Footer -->
 <footer>
+    {%- assign footer_newsletter_location = 'footer' -%}
+    {%- if page.layout == 'default' -%}
+        {%- assign footer_newsletter_location = 'home' -%}
+    {%- elsif page.layout == 'blog' or page.layout == 'article' -%}
+        {%- assign footer_newsletter_location = page.layout -%}
+    {%- endif -%}
+    {% include newsletter.html location=footer_newsletter_location %}
     <div class="container-fluid border-bottom">
         <div class="container custom-container footer-bar">
             <div class="footer-logo">
@@ -29,4 +36,5 @@
     </div>
 </footer>
 <script defer src="{{ site.baseurl }}/js/analytics.js"></script>
+<script defer src="{{ site.baseurl }}/js/newsletter.js"></script>
 <!-- Footer -->

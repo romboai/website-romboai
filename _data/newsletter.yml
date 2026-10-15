@@ -1,0 +1,7 @@
+# Public newsletter settings; Jekyll reloads data changes during local preview.
+# An empty webhook_url disables standalone signup. Never put API keys here.
+webhook_url: "https://hook.eu2.make.com/gd23cysjnvg1zok3chyq6qx3nwl3co01"
+consent_version: "newsletter-v1"
+consent_text: "I agree to receive Rombo AI emails about NMR, AI, articles and product news. I can unsubscribe at any time."
+signup_consent_version: "newsletter-signup-v2"
+signup_consent_text: "By subscribing, you agree to Rombo AI emails. Unsubscribe at any time."

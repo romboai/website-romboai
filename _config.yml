@@ -12,6 +12,7 @@ og_image: /img/og/rombo-ai.jpg
 contact_phone: "+39 352 064 8081"
 contact_phone_raw: "+393520648081"
 
+
 # Organization (single source of truth for JSON-LD + footer + meta)
 organization:
   legal_name: "Rombo AI S.r.l."

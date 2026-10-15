@@ -1,0 +1,7 @@
+<div class="newsletter-consent">
+  <input class="newsletter-consent-input" name="newsletter_opt_in" type="checkbox" value="true" id="{{ include.id | escape }}" data-newsletter-opt-in data-consent-version="{{ site.data.newsletter.consent_version | escape }}"{% if include.required == true %} required{% endif %}>
+  <div class="newsletter-consent-copy">
+    <label class="label newsletter-consent-label" for="{{ include.id | escape }}"><span data-newsletter-consent-text>{{ site.data.newsletter.consent_text | escape }}</span></label>
+
+  </div>
+</div>

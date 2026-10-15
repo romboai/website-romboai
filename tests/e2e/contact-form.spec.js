@@ -23,6 +23,24 @@ test("home hero assigns and tracks a configured CTA variant", async ({ page }) =
   });
 });
 
+test("contact form marks only mandatory fields and keeps consent text regular", async ({ page }) => {
+  await page.goto("/contact/");
+  const form = page.locator("#contact-form");
+  await expect(form.getByText("Stay in the loop (optional)", { exact: true })).toHaveCount(0);
+  for (const id of ["firstName", "company", "email", "query", "terms"]) {
+    await expect(form.locator(`#${id}`)).toHaveJSProperty("required", true);
+    await expect(form.locator(`label[for="${id}"] [aria-hidden="true"]`)).toHaveText("*");
+  }
+  for (const id of ["lastName", "telephone", "role", "contact-newsletter-opt-in"]) {
+    await expect(form.locator(`#${id}`)).toHaveJSProperty("required", false);
+    await expect(form.locator(`label[for="${id}"]`)).not.toContainText("*");
+  }
+  const privacyConsent = form.locator('label[for="terms"]');
+  await expect(privacyConsent).toHaveText(/^\s*\* I agree to the processing of my personal data/);
+  await expect(privacyConsent).toHaveCSS("font-weight", "400");
+  await expect(privacyConsent.getByRole("link", { name: "Privacy Statement", exact: true })).toHaveAttribute("href", "/privacy/");
+});
+
 test("home -> contact form submit -> confirmation", async ({ page }) => {
   // Prevent the post-confirmation Calendly redirect from navigating away during the test.
   await page.route("https://calendly.com/**", (route) => route.abort());
@@ -56,7 +74,7 @@ test("home -> contact form submit -> confirmation", async ({ page }) => {
   await page.getByRole("button", { name: /book a demo/i }).click();
 
   // The success message is injected client-side once the webhook responds OK.
-  const status = page.getByRole("status");
+  const status = page.locator(".hero-contact-form").getByRole("status");
   await expect(status).toBeVisible();
   await expect(status).toContainText(/thank you for getting in touch/i);
   await expect(status).toContainText(/your request has been received successfully/i);

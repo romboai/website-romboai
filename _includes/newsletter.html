@@ -1,0 +1,28 @@
+{%- assign newsletter_location = include.location | default: 'home' -%}
+
+<section class="newsletter-section" data-newsletter-section aria-labelledby="newsletter-heading-{{ newsletter_location | escape }}">
+  <div class="container newsletter-container">
+    <div class="newsletter-panel">
+      <div class="newsletter-copy">
+        <h2 id="newsletter-heading-{{ newsletter_location | escape }}" class="newsletter-heading">Rombo AI newsletter</h2>
+        <p class="newsletter-description">NMR, AI and product updates.</p>
+      </div>
+      <form class="newsletter-form" data-newsletter-form data-newsletter-location="{{ newsletter_location | escape }}" data-consent-version="{{ site.data.newsletter.signup_consent_version | escape }}" data-consent-text="{{ site.data.newsletter.signup_consent_text | escape }}" action="{{ site.data.newsletter.webhook_url | escape }}" method="POST" aria-describedby="newsletter-privacy-{{ newsletter_location | escape }}">
+
+        <label class="newsletter-email-label" for="newsletter-email-{{ newsletter_location | escape }}">Email address</label>
+        <div class="newsletter-fields">
+          <input class="newsletter-email" name="email" type="email" id="newsletter-email-{{ newsletter_location | escape }}" required autocomplete="email" placeholder="Your email address" aria-describedby="newsletter-privacy-{{ newsletter_location | escape }}">
+          <button class="newsletter-submit" type="submit" disabled>Subscribe</button>
+        </div>
+
+        <div class="newsletter-honeypot" aria-hidden="true">
+          <label for="newsletter-website-{{ newsletter_location | escape }}">Leave this field empty</label>
+          <input type="text" name="website" id="newsletter-website-{{ newsletter_location | escape }}" tabindex="-1" autocomplete="off">
+        </div>
+        <p class="newsletter-status" data-newsletter-status role="status" aria-live="polite" aria-atomic="true"></p>
+        <p class="newsletter-privacy" id="newsletter-privacy-{{ newsletter_location | escape }}"><span>{{ site.data.newsletter.signup_consent_text | escape }}</span></p>
+        <noscript><p class="newsletter-noscript">JavaScript is required to sign up and see confirmation. Please enable it and try again.</p></noscript>
+      </form>
+    </div>
+  </div>
+</section>

@@ -434,6 +434,17 @@
     });
   }
 
+  document.addEventListener("rombo:newsletter-requested", function (event) {
+    var location = event.detail && event.detail.newsletter_location;
+    if (["home", "blog", "article", "footer"].indexOf(location) === -1) return;
+
+    track("newsletter_signup_request", {
+      newsletter_location: location,
+      page_type: getPageType(),
+      funnel_step: "newsletter_request"
+    });
+  });
+
   initExperiments();
 
   document.addEventListener("DOMContentLoaded", function () {
