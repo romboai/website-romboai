@@ -122,7 +122,7 @@ markdown_content: |-
 
   Large-gallery structure retrieval requires full encoder fine-tuning because the model must distinguish many closely related candidates within a specific chemical domain. The NMR-Solver, NMRGym, and NMRBank benchmarks demonstrated this tier. Their matched controls also showed that fine-tuning a randomly initialized encoder did not reproduce the benefit of pretraining.
 
-  Instrument onboarding therefore depends on the task, not solely on the hardware change. Routine interpretation can begin with validation or a small task head. Specialized retrieval requires curated domain data and a short fine-tuning cycle, but the lab still starts from a reusable spectral representation rather than rebuilding an endpoint model.
+  Instrument onboarding therefore depends on the task, not solely on the hardware change. Routine interpretation can begin with validation or a small task head. Specialized retrieval requires curated domain data and a short fine-tuning cycle, but the lab still starts from a reusable spectral representation rather than rebuilding an endpoint model. For how this applies to routine industrial work, see the [crude oil monitoring](/use-cases/crude-oil-monitoring/) and [transformer oil monitoring](/use-cases/transformer-oil-monitoring/) use cases.
 
   ## References
 

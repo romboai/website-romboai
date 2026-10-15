@@ -4,17 +4,20 @@ permalink: /blog/ml-for-crude-oil/
 title: "Low-Field NMR for Crude Oil Analysis: Harnessing Machine Learning for Predicting Properties"
 seo_title: "Low-Field NMR for Crude Oil Analysis | Rombo AI"
 date: "2024-09-20"
+last_modified_at: 2026-10-15
 image: "img/blog/ml-for-crude.webp"
 image_alt: "Crude oil samples analyzed with low-field NMR and machine learning"
 markdown_content: |
 
-    In the oil industry, understanding the properties of crude oil is essential for refining, quality control, and maximizing production efficiency. Traditionally, this has involved complex and time-consuming laboratory methods.
+    > **Update, October 2026:** This article was first published in September 2024 and describes our approach at that time. Our current property models build on an [NMR foundation model](/blog/rose_foundation_model_NMR_spectral_data) pre-trained on spectral data, and each property is validated against the customer's reference method. See the [crude oil monitoring use case](/use-cases/crude-oil-monitoring/).
+
+    In the oil industry, understanding the properties of crude oil is essential for refining, quality control, and maximizing production efficiency. Traditionally, this has involved [complex and time-consuming laboratory methods](/blog/crude-oil-analysis-refinery-process-economics).
 
     However, recent advancements in low-field Nuclear Magnetic Resonance (NMR) spectroscopy, combined with Machine Learning, offer a fast, non-destructive, and cost-effective alternative for analyzing crude oil. At our company, we leverage this innovative approach to predict a wide range of physical and chemical properties, including the critical distillation yields, transforming how crude oil characterization is performed.
 
     ## The Role of Low-Field NMR in Crude Oil Analysis
 
-    Low-field NMR spectroscopy measures the magnetic properties of atomic nuclei, providing information about the molecular environment in crude oil. Unlike high-field NMR instruments, which are used for detailed molecular structure analysis, low-field NMR is simpler, more affordable, and ideal for routine analysis.
+    Low-field NMR spectroscopy measures the magnetic properties of atomic nuclei, providing information about the molecular environment in crude oil. Unlike [high-field NMR instruments](/blog/ai-crude-oil-analysis-lab-vs-nir-vs-high-field-nmr), which are used for detailed molecular structure analysis, low-field NMR is simpler, more affordable, and ideal for routine analysis.
 
     It provides a rich dataset that reflects the chemical composition and physical characteristics of crude oil.
 
@@ -67,6 +70,8 @@ markdown_content: |
     The combination of low-field NMR and Machine Learning is transforming crude oil analysis. Our rapid, non-destructive approach allows for a broad range of property predictions that streamline refining operations and enhance resource management.
 
     As we continue to advance this technology, we expect even greater precision and utility in predicting crude oil characteristics, from viscosity to distillation yields. By embracing low-field NMR and Machine Learning, we are not only improving our operational efficiency but also setting new standards for crude oil analysis in the industry.
+
+    To test property prediction on your own crudes and reference methods, start with a [feasibility review](/nmr-feasibility/).
 
 author: "Carmine Mattia, CTO"  
 description: "Low-field NMR and machine learning enable faster, non-destructive prediction of crude oil properties and distillation yields."
