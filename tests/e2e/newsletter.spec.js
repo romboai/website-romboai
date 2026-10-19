@@ -81,16 +81,12 @@ test("an unconfigured signup stays disabled without an unavailable notice", asyn
   expect(submissions).toBe(0);
 });
 
-test("blog, article and author pages each contain one newsletter in the shared footer", async ({ page }) => {
+test("blog and article pages each contain one newsletter in the shared footer", async ({ page }) => {
   await page.goto("/blog/");
   await expectStandaloneSection(page, "blog");
   const article = page.locator('main .card a[href^="/blog/"]:not([href="/blog/"])').first();
   await article.click();
   await expectStandaloneSection(page, "article");
-  const author = page.locator('main a[rel="author"]').first();
-  await expect(author).toBeVisible();
-  await author.click();
-  await expectStandaloneSection(page, "footer");
 });
 
 for (const path of [
@@ -107,6 +103,7 @@ for (const path of [
   "/campaigns/terrapinn/",
   "/404.html",
   "/use-cases/crude-oil-monitoring/",
+  "/author/andrea-zanda/",
 ]) {
   test(`${path} contains one shared-footer newsletter with footer location`, async ({ page }) => {
     await page.goto(path);
