@@ -24,7 +24,7 @@ for (const width of [375, 390, 1280]) {
     await page.locator('#email').fill('qa@example.test');
     await page.locator('#query').fill('Evaluate NMR feasibility');
     await page.locator('#terms').check();
-    await page.getByRole('button', { name: 'Request analysis', exact: true }).click();
+    await page.getByRole('button', { name: /book a demo/i }).click();
     await expect(page.locator('.hero-contact-form').getByRole('status')).toContainText('received successfully');
     const leads = await page.evaluate(() => window.__romboEvents.filter(e => e.event === 'generate_lead'));
     expect(leads).toHaveLength(1);

@@ -4,16 +4,19 @@ permalink: /blog/how-low-field-NMR-works/
 title: "How Low-Field NMR Works and How Machine Learning Enhances Sample Characterization"
 seo_title: "How Low-Field NMR Works | Rombo AI"
 date: "2023-08-23"
+last_modified_at: 2026-10-15
 image: "img/blog/nmr-how-it-works.webp"
 image_alt: "Low-field NMR spectrum illustrating how molecular signals characterize a sample"
 markdown_content: |
+  > **Update, October 2026:** This introduction was first published in 2023. For how we apply low-field NMR and machine learning to crude oil today, with each property validated against your reference method, see the [crude oil monitoring use case](/use-cases/crude-oil-monitoring/).
+
   ## Understanding Low-Field NMR
 
   Nuclear Magnetic Resonance (NMR) is a powerful analytical technique used to determine the molecular structure and composition of various substances. Low-field NMR refers to systems operating at lower magnetic field strengths, typically 60 MHz or less, compared to high-field NMR used in research laboratories.
 
   Low-field NMR is less costly, compact, and easier to maintain, making it more suitable for industrial applications. The fundamental principle behind NMR involves the interaction between the nuclei of atoms, specifically those with non-zero magnetic moments (like hydrogen), and an external magnetic field.
 
-  When a sample is placed inside the magnetic field, the nuclei align either with or against the field. A radiofrequency pulse then perturbs this alignment, causing the nuclei to emit electromagnetic signals as they relax back to their original states. These signals are recorded and processed to generate an NMR spectrum, which provides information about the molecular environment of the sample.
+  When a sample is placed inside the magnetic field, the nuclei align either with or against the field. A radiofrequency pulse then perturbs this alignment, causing the nuclei to emit electromagnetic signals as they relax back to their original states. These signals are recorded and processed to generate an NMR spectrum, which provides information about the molecular environment of the sample. Under quantitative acquisition conditions, a signal's integrated area is proportional to the number of nuclei that produced it, which is the basis of [quantitative NMR (qNMR)](/blog/what-is-quantitative-nmr-qnmr).
 
   For hydrocarbons, such as crude oil or refined products, NMR is highly valuable because it can non-destructively measure properties such as molecular composition and the relative abundance of different chemical species.
   ## Benefits of Low-Field NMR
@@ -31,7 +34,7 @@ markdown_content: |
 
   ### Data Processing
 
-  Machine Learning models, such as Partial Least Squares (PLS) and convolutional neural networks (CNN), can be trained on NMR spectral data to recognize patterns and make predictions. For example, in the case of crude oil, these models can infer physical and chemical properties like density, viscosity, sulfur content, and the presence of heavy metal.
+  Machine Learning models, such as Partial Least Squares (PLS) and convolutional neural networks (CNN), can be trained on NMR spectral data to recognize patterns and make predictions. For example, in the case of [crude oil](/blog/ml-for-crude-oil/), these models can infer physical and chemical properties like density, viscosity, sulfur content, and the presence of heavy metal.
 
   ### Real-Time Monitoring
 
@@ -44,6 +47,8 @@ markdown_content: |
   ### Predictive Maintenance and Cost Reduction
 
   AI models can predict equipment failures or process inefficiencies before they escalate, reducing downtime and operational costs.
+
+  To check whether your samples and properties are a good fit for NMR-based prediction, start with a [feasibility review](/nmr-feasibility/).
 
 
 author: "Andrea Zanda"  
