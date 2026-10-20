@@ -171,7 +171,7 @@ for (const [path, location, pageType] of [
     await expect(form).toHaveAttribute("data-consent-version", SIGNUP_CONSENT_VERSION);
     expect(data.get("newsletter_consent_text")).toBe(visibleConsent);
     expect(data.get("newsletter_consent_at")).toMatch(/^\d{4}-\d{2}-\d{2}T/);
-    expect(request.headers()["x-make-apikey"]).toBeUndefined();
+    expect(request.headers()["x-make-apikey"]).toBe("geTba5-bicxej-wacsep");
     await expect(form.getByRole("button", { name: "Subscribe", exact: true })).toBeDisabled();
     const events = await page.evaluate(() => window.__romboEvents);
     const signupEvents = events.filter((entry) => entry.event === "newsletter_signup_request");
