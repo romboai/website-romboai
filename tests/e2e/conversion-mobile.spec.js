@@ -6,6 +6,8 @@ for (const width of [375, 390, 1280]) {
     await page.route('https://hook.eu2.make.com/**', route =>
       route.fulfill({ status: 200, contentType: 'text/plain', body: 'Accepted' }));
     await page.route('https://calendly.com/**', route => route.abort());
+    await page.route('https://calendar.app.google/**', route => route.abort());
+    await page.route('https://calendar.google.com/**', route => route.abort());
     const media = [];
     page.on('request', request => { if (/\.mp4(?:\?|$)/.test(request.url())) media.push(request.url()); });
     await page.goto('/product/');

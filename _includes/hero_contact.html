@@ -7,6 +7,26 @@
     #contact-form textarea { min-height: 120px; }
     #contact-form button[type="submit"] { width: 100%; min-height: 48px; }
   }
+  #contact-form input#terms {
+    width: 24px;
+    min-width: 24px;
+    height: 24px;
+    min-height: 24px;
+    flex: 0 0 24px;
+    margin: 2px 12px 0 0;
+    padding: 0;
+    border-radius: 4px;
+    accent-color: #303767;
+    cursor: pointer;
+  }
+  #contact-form input#terms:focus-visible {
+    outline: 3px solid #303767;
+    outline-offset: 3px;
+  }
+  #contact-form label[for="terms"] {
+    cursor: pointer;
+    margin: 0;
+  }
 </style>
 <div class="container-fluid hero-section hero-contact-section">
     <video class="hero-video" autoplay muted loop playsinline controlslist="nodownload" data-desktop-only="true" preload="none" aria-hidden="true">
@@ -92,7 +112,7 @@
                         <div class="row justify-content-center align-items-center">
                             <div class="col-md-8">
                                 <div class="form-group d-flex align-items-start mb-3">
-                                    <input required type="checkbox" id="terms" name="terms" class="me-2" style="width: 20px; height: 20px;">
+                                    <input required type="checkbox" id="terms" name="terms">
                                     <label for="terms" class="label">
                                         <span aria-hidden="true">*</span> I agree to the processing of my personal data as described in the
                                         <a href="{{ '/privacy/' | relative_url }}">Privacy Statement</a>.
@@ -143,7 +163,7 @@ document.addEventListener('DOMContentLoaded', function() {
   var search = window.location.search;
   var pathname = window.location.pathname;
   var referrer = document.referrer;
-  var calendlyUrl = 'https://calendly.com/zanda-andrea/45min';
+  var bookingUrl = '{{ site.booking_url | default: "https://calendar.app.google/BV5MtDST8ijYLzi68" }}';
   var redirectDelay = 3000;
   var isStatusOk = (search && search.includes('status=ok')) || (pathname && pathname.includes('status=ok'));
   var isFromContact = referrer && referrer.indexOf('/contact') !== -1;
@@ -187,7 +207,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
             <div class="border-top pt-3">
             <p class="small text-muted mb-2">If you are not redirected automatically:</p>
-            <a id="calendly-link" href="${calendlyUrl}" target="_blank" rel="noopener" class="btn btn-outline-primary btn-sm d-inline-flex align-items-center">
+            <a id="booking-link" href="${bookingUrl}" target="_blank" rel="noopener" class="btn btn-outline-primary btn-sm d-inline-flex align-items-center">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true" class="me-2">
                 <path d="M8 12H16M12 8V16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
@@ -198,7 +218,7 @@ document.addEventListener('DOMContentLoaded', function() {
     `;
     parent.insertBefore(msgDiv, form.nextSibling);
     setTimeout(function() {
-      window.location.href = calendlyUrl;
+      window.location.href = bookingUrl;
     }, redirectDelay);
 
     // Countdown logic
