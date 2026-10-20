@@ -4,41 +4,44 @@ permalink: /blog/ai-transformation-crude-oil-analysis/
 title: "The AI Transformation of Crude Oil Analysis: From Laboratory Bottlenecks to Real-Time Intelligence"
 seo_title: "AI Transformation of Crude Oil Analysis | Rombo AI"
 date: "2025-10-06"
+last_modified_at: 2026-10-20
 image: "img/blog/ai-transformation-crude-oil-analysis.jpg"
 image_alt: "Crude oil analysis: AI transformation"
 markdown_content: |
+  > **Update, October 2026:** We revised this article to remove precision and cost figures we could not source and to describe turnaround times more precisely. For a side-by-side view of the methods, see [crude oil analysis: lab vs NIR vs high-field NMR](/blog/ai-crude-oil-analysis-lab-vs-nir-vs-high-field-nmr).
+
   The Oil & Gas industry is undergoing a pivotal shift toward Artificial Intelligence applications. Automated analytics and machine learning have become essential for Smart Oilfields to staying competitive, compliant, and efficient.
 
   Beyond upstream and midstream, AI is increasingly being used downstream, where crude oil spectral analysis opens new opportunities. By applying advanced algorithms, refineries can achieve smarter and faster decisions in crude oil analysis, securing a distinct competitive advantage.
 
-  At Rombo AI, we are at the forefront of this shift. We combine Nuclear Magnetic Resonance (NMR) spectroscopy with machine learning to deliver real-time, precise, and scalable oil sample analysis using our Crude Oil Analyser solution.
+  At Rombo AI, we are at the forefront of this shift. We combine benchtop Nuclear Magnetic Resonance (NMR) spectroscopy with machine learning to report several crude properties from one scan, with each property validated against the refinery's own reference method. See the [crude oil monitoring use case](/use-cases/crude-oil-monitoring/).
 
   ## Challenges of Traditional Crude Oil Analysis Solutions
 
-  Crude oil assays still rely on traditional methods that come with major trade-offs:
+  [Crude oil analysis supports decisions from cargo receipt to product release](/blog/crude-oil-analysis-refinery-process-economics), yet full assays still rely on traditional methods that come with major trade-offs:
 
-  **Laboratory testing** remains the gold standard for accuracy: it can deliver a full crude assay with around 2% precision. But the drawbacks are substantial.
+  **Laboratory testing** remains the reference: each primary test method has its own published precision, and a full assay is the authoritative characterization of a crude. But the drawbacks are substantial.
 
-  Firstly, a full assay can take up to two months, requires highly skilled lab personnel, and costs can climb to $50,000 per crude type. Also, as the results are static, the lab approach provides refiners with only a snapshot in time, rather than a continuous view. The process is also vulnerable to sampling errors or contamination, which can lead to unreliable results and additional disposal costs.
+  Firstly, a full assay combines whole-crude tests, distillation into cuts and analyses of each cut, and may take several weeks from start to finish, according to the testing company [AmSpec](https://www.amspecgroup.com/resources/inside-the-crude-oil-assay-laboratory-science-behind-the-samples/). It requires highly skilled lab personnel, and its cost grows with the number of cuts and properties requested, so it is usually run for new crudes rather than for every cargo. Also, as the results are static, the lab approach provides refiners with only a snapshot in time, rather than a continuous view. The process is also vulnerable to sampling errors or contamination, which can lead to unreliable results and additional disposal costs.
 
-  To overcome this, **Near Infrared (NIR) analysis** was introduced. It is relatively cheaper and faster, generating results in minutes. However, the chemometric models require a large and representative database covering many types of crude oils, and a specific calibration is needed for each crude oil.
+  To overcome this, **Near Infrared (NIR) analysis** was introduced. It is relatively cheaper and faster, generating results in minutes. However, the chemometric models require a large and representative database covering many types of crude oils, and they often need extending or recalibrating when new crude types arrive. Once a model covers a stable crude family, NIR is a fast and economical screening tool.
 
   Additionally, measurements and results can be sensitive to temperature and chemical compound variations. For this reason, refineries have adopted it with certain limitations.
 
   **High-Field NMR** offers high precision and can deliver an assay within hours, but it comes with serious limitations: acquisition and maintenance costs are high, the instruments are highly sensitive to environmental conditions (such as magnetic fields and temperature), and additional specialised staff is required to operate them.
 
-  Refineries need something different: a method that combines laboratory-grade accuracy with real-time speed, cost-efficiency, and ease of use.
+  Between full assays, refineries need a faster, repeatable way to monitor several properties of the crudes they actually run, with accuracy demonstrated against their own reference methods rather than assumed.
 
-  ## Reinventing Oil Analysis with the ROMBO AI Crude Oil Analyser
+  ## How Rombo AI Approaches Crude Oil Analysis
 
-  We are proud to lead a transformation toward intelligent, automated analysis, equipping laboratories and R&D teams with the tools they need to innovate faster, work smarter, and shape the future of energy and chemical research.
+  [Rombo AI](/product/) pairs benchtop (low-field) NMR with a [foundation model](/blog/rose_foundation_model_NMR_spectral_data) pre-trained on NMR spectra, so each property model starts from general spectral knowledge instead of from zero. Rombo describes reports in about 15 minutes for supported workflows; prediction error has to be demonstrated per property against your own reference methods, with acceptance metrics agreed before a pilot.
 
-  At Rombo AI, we combine NMR spectroscopy with machine learning to unlock real-time, precise, and scalable analysis. Our proprietary solution empowers R&D teams in laboratories and refineries to:
+  The approach is designed to help laboratory and R&D teams in refineries to:
 
-  - **Lower costs** compared to conventional lab testing
-  - **Faster decision-making** thanks to real-time, actionable results  
-  - **Consistency and scalability** with repeatable accuracy across samples
-  - **Operational efficiency** from repetitive tasks to higher-value activities
+  - **Lower the cost of each additional property**, compared with sending more samples for full laboratory panels
+  - **Decide sooner**, with results available between scheduled assays
+  - **Stay consistent** across properties and instruments, with predictions monitored for drift
+  - **Free specialist time** from repetitive tasks for higher-value analysis
 
   ## Limitations Of Artificial Intelligence In Crude Oil Analysis
 
@@ -56,13 +59,13 @@ markdown_content: |
 
   ## In Conclusion
 
-  Machine learning is transforming crude oil analysis by reducing costs, increasing speed, and enabling predictive insights. Yet, its success depends on careful implementation, continuous improvement, and collaboration between AI and human expertise.
+  Machine learning can make crude oil analysis faster and more frequent, provided each predicted property is validated against the laboratory method it complements. Its success depends on careful implementation, continuous improvement, and collaboration between AI and human expertise.
 
   With our solution, we are bridging this gap — helping refineries turn crude oil analysis from a reactive laboratory analysis procedure into a proactive competitive advantage.
 
-  **Request a free feasibility analysis to understand whether Rombo AI fits your crude oil workflow: [start here](/contact/){: .button}**
+  **Request a free feasibility analysis to understand whether Rombo AI fits your crude oil workflow: [start here](/nmr-feasibility/){: .button}**
 
 author: "Silvia Bongiovanni"
-description: "How Rombo AI combines NMR and machine learning to turn crude oil analysis from lab bottlenecks into real-time intelligence."
-excerpt: "The Oil & Gas industry is embracing AI for crude oil analysis. Discover how Rombo AI combines NMR spectroscopy with machine learning to deliver real-time, precise analysis that transforms traditional laboratory bottlenecks into competitive advantages."
+description: "How Rombo AI combines benchtop NMR and machine learning to monitor several crude oil properties between full laboratory assays."
+excerpt: "The Oil & Gas industry is embracing AI for crude oil analysis. See how Rombo AI combines benchtop NMR with machine learning to report several crude properties from one scan, validated against your own reference methods."
 ---
