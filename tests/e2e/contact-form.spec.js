@@ -42,8 +42,10 @@ test("contact form marks only mandatory fields and keeps consent text regular", 
 });
 
 test("home -> contact form submit -> confirmation", async ({ page }) => {
-  // Prevent the post-confirmation Calendly redirect from navigating away during the test.
+  // Prevent the post-confirmation booking redirect from navigating away during the test.
   await page.route("https://calendly.com/**", (route) => route.abort());
+  await page.route("https://calendar.app.google/**", (route) => route.abort());
+  await page.route("https://calendar.google.com/**", (route) => route.abort());
 
   // Intercept the Make.com webhook so the test never hits the live scenario.
   let webhookRequest = null;

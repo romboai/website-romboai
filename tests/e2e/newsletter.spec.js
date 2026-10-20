@@ -262,6 +262,8 @@ for (const optedIn of [false, true]) {
       await route.fulfill({ status: 200, headers: responseHeaders, body: "Accepted" });
     });
     await page.route("https://calendly.com/**", (route) => route.abort());
+    await page.route("https://calendar.app.google/**", (route) => route.abort());
+    await page.route("https://calendar.google.com/**", (route) => route.abort());
     await page.goto("/contact/");
     const optIn = page.locator("#contact-newsletter-opt-in");
     await expect(optIn).toHaveAttribute("type", "checkbox");

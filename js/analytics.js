@@ -280,7 +280,7 @@
         return;
       }
 
-      if (href.indexOf("calendly.com") !== -1) {
+      if (href.indexOf("calendly.com") !== -1 || href.indexOf("calendar.app.google") !== -1 || href.indexOf("calendar.google.com") !== -1) {
         var callCtx = ctaContext(link, href);
         track("book_call_click", {
           link_url: href,
