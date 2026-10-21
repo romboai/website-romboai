@@ -9,7 +9,7 @@ image_width: 850
 image_height: 550
 image_alt: "Automated NMR quality-control workflow connecting spectra, analysis, and laboratory review"
 author: 'Silvia Bongiovanni [BD Representative, Rombo AI]'
-excerpt: Manual NMR interpretation can delay quality control decisions for weeks because trained specialists must review complex spectra. Rombo AI uses a foundation model pre-trained on millions of spectra to produce decision-ready results in as little as 15 minutes.
+excerpt: Manual NMR interpretation can delay quality control decisions for weeks because trained specialists must review complex spectra. Rombo AI uses a foundation model, which the company states is pre-trained on millions of spectra, and reports analysis in as little as 15 minutes for supported workflows, after lab-specific validation.
 markdown_content: |-
   ## Why manual spectral interpretation is the QC bottleneck
 
@@ -50,7 +50,7 @@ markdown_content: |-
   | Buyer criterion | Rombo AI | Mestrelab | Bruker | ACD Labs |
   | --- | --- | --- | --- | --- |
   | Interpretation approach | A foundation model pre-trained on millions of spectra interprets QC results through the NMR AI Analyzer. | Processing and analysis tools support configurable workflows that may require specialist training. | ACP 2.0 combines configured workflows with deep learning for interpretation, noise reduction, and baseline correction. | Spectrus centers on vendor-neutral data processing, organization, and access rather than autonomous NMR QC interpretation. |
-  | Mixed-instrument operation | Supports Bruker, JEOL, Agilent/Varian, and Oxford Instruments data without per-instrument recalibration. | Instrument and format support depends on the selected product and workflow configuration. | ACP 2.0 runs [natively within TopSpin](https://www.azom.com/article.aspx?ArticleID=25291), which favors Bruker infrastructure rather than a vendor-independent interpretation layer. | The [Spectrus Platform handles vendor-neutral, multi-technique data](https://www.americanpharmaceuticalreview.com/343165-ACD-Labs/), but its stated focus is analytical knowledge management. |
+  | Mixed-instrument operation | Supports Bruker, JEOL, Agilent/Varian, and Oxford Instruments data; the foundation model is designed to reduce per-instrument recalibration, with validation on each lab's instruments. | Instrument and format support depends on the selected product and workflow configuration. | ACP 2.0 runs [natively within TopSpin](https://www.azom.com/article.aspx?ArticleID=25291), which favors Bruker infrastructure rather than a vendor-independent interpretation layer. | The [Spectrus Platform handles vendor-neutral, multi-technique data](https://www.americanpharmaceuticalreview.com/343165-ACD-Labs/), but its stated focus is analytical knowledge management. |
   | Turnaround time | Rombo targets automated interpretation in minutes rather than manual review cycles lasting days or weeks. | Turnaround depends on workflow design and analyst involvement. No benchmark appears in the supplied research. | Bruker describes automated acquisition, processing, interpretation, and reporting. No specific turnaround benchmark appears in the supplied research. | Centralized data access can reduce handling time, but ACD Labs does not publish an autonomous NMR interpretation benchmark in the supplied research. |
   | Human involvement | Routine samples can pass through automated interpretation, while analysts review exceptions and approval decisions. | Analysts configure workflows and use the suite’s processing and interpretation tools. | Bruker keeps the NMR expert responsible for method development and workflow monitoring. | Scientists retain responsibility for interpretation while Spectrus organizes data and supports processing. |
 
@@ -96,7 +96,7 @@ markdown_content: |-
 
   **Does Rombo AI require recalibration when we add a new instrument brand?**
 
-  Instrument calibration adapts an analysis model to the output characteristics of a specific instrument. Rombo AI uses a foundation model built to interpret spectra across Bruker, JEOL, Agilent/Varian, and Oxford Instruments systems without per-instrument recalibration. You can add or replace instruments without rebuilding a separate model for each vendor.
+  Instrument calibration adapts an analysis model to the output characteristics of a specific instrument. Rombo AI uses a foundation model built to interpret spectra across Bruker, JEOL, Agilent/Varian, and Oxford Instruments systems and designed to reduce per-instrument recalibration. Adding or replacing an instrument then calls for a validation check on paired samples rather than a separate model built from scratch for each vendor.
 
   **How does Rombo AI support regulated workflows and audit trails?**
 

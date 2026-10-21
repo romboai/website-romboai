@@ -120,7 +120,7 @@ markdown_content: |-
 
   [Rombo](https://rombo.ai) says it trained its foundation model on millions of spectra to reduce manual qNMR review. The platform proposes phase corrections and integration boundaries, then evaluates whether acquisition settings such as relaxation delay support quantitative analysis. An experienced spectroscopist often inspects each spectrum and revises its phase corrections or integration boundaries.
 
-  The model speeds up review by applying learned spectral patterns to new measurements. Its training allows it to interpret spectra across different instruments and sample types without requiring a separate model for every configuration. Rombo reports results in as little as 15 minutes for analyses that can otherwise involve weeks of expert review.
+  The model speeds up review by applying learned spectral patterns to new measurements. Its training allows it to interpret spectra across different instruments and sample types without requiring a separate model for every configuration. Rombo reports results in as little as 15 minutes for supported workflows, for analyses that can otherwise involve weeks of expert review; each property is still validated against the lab's reference method.
 
   Faster analysis cannot compensate for an inadequate qNMR acquisition. If a short relaxation delay suppresses an analyte signal, software cannot reconstruct the missing quantitative response. Rombo can identify questionable conditions and direct the spectrum toward review or reacquisition instead of treating every output as valid.
 

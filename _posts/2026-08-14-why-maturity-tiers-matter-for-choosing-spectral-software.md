@@ -120,7 +120,7 @@ markdown_content: |
 
   [Rombo AI](https://rombo.ai) leads tier 4 through a foundation model pre-trained on millions of spectra. The model uses patterns learned during pretraining to interpret unknown spectra across instrument brands and sample types.
 
-  Pretraining reduces the need for instrument-specific chemometric models. Traditional chemometric methods require representative calibration data for each instrument and sample class, which can make deployment take weeks. Rombo AI reports analysis in about 15 minutes without per-instrument recalibration.
+  Pretraining reduces the need for instrument-specific chemometric models. Traditional chemometric methods require representative calibration data for each instrument and sample class, which can make deployment take weeks. Rombo AI reports analysis in about 15 minutes for supported workflows and designs its foundation model to reduce per-instrument recalibration; each deployment is still validated against the lab's reference methods.
 
   The pre-trained model also maintains higher accuracy when a lab has a small dataset. It begins with knowledge learned across millions of spectra, while a conventional chemometric model must infer relationships mainly from the lab’s available calibration samples.
 

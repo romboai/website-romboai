@@ -10,7 +10,7 @@ image_width: 776
 image_height: 514
 image_alt: "NMR instruments from multiple laboratory sites connected to one analysis platform"
 author: 'Silvia Bongiovanni [BD Representative, Rombo AI]'
-excerpt: 'Rombo AI provides one vendor-neutral foundation model layer across Bruker, JEOL, Agilent/Varian, and Oxford Instruments without per-instrument recalibration. The foundation model comes pre-trained on millions of spectra.'
+excerpt: 'Rombo AI provides one vendor-neutral foundation model layer across Bruker, JEOL, Agilent/Varian, and Oxford Instruments data, designed to reduce per-instrument recalibration. The company states the model is pre-trained on millions of spectra; each deployment is still validated on site.'
 markdown_content: |-
   ## The mixed-fleet problem multi-site labs actually have
 
