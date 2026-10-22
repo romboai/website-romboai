@@ -20,7 +20,7 @@ markdown_content: |-
   - **Faster methods answer different questions.** Online capacitive sensors report relative saturation continuously; dielectric response tests estimate water in the paper. Neither is a drop-in replacement for Karl Fischer.
   - **Any new or model-based method should be validated against IEC 60814 results** on paired samples, with the acceptance criteria agreed in advance.
 
-  Water is one of the transformer oil properties that utility labs track most routinely. The titration itself is mature and sensitive. The difficulty is everything around it: getting a representative sample to the lab, choosing the right Karl Fischer variant, and interpreting a number that depends on temperature and on the age of the oil.
+  Water is one of the transformer oil properties that utility labs track most routinely. The titration itself is mature and sensitive. The difficulty is everything around it: getting a representative sample to the lab, choosing the right Karl Fischer variant, and interpreting a number that depends on temperature and on the age of the oil. Water is one test in a wider panel: our [transformer oil testing guide](/blog/transformer-oil-testing-properties-methods-nmr) maps the other routine properties, the methods behind them and the decisions they support.
 
   ## Why water in transformer oil matters
 
