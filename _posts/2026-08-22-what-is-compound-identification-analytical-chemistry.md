@@ -1,6 +1,6 @@
 ---
 title: 'What Is Compound Identification in Analytical Chemistry?'
-seo_title: 'Compound Identification in Analytical Chemistry | Rombo AI'
+seo_title: "Compound Identification: How to Identify an Unknown | Rombo AI"
 date: 2026-08-22T07:30:00.000Z
 permalink: /blog/what-is-compound-identification-analytical-chemistry
 layout: article
@@ -9,6 +9,7 @@ image_alt: Nuclear magnetic resonance laboratory with spectrometers used to iden
 image_caption: 'An NMR laboratory used to study the arrangement of hydrogen and carbon atoms in organic compounds. Photo: <a href="https://commons.wikimedia.org/wiki/File:Nuclear_Magnetic_Resonance_Laboratory.jpg" rel="noopener noreferrer" target="_blank">Shandchem</a>, via Wikimedia Commons, <a href="https://creativecommons.org/licenses/by/2.0/" rel="license noopener noreferrer" target="_blank">CC BY 2.0</a>.'
 author: 'Martina [Marketing Specialist, Rombo AI]'
 excerpt: Compound identification determines which substance produced an analytical signal. Learn how NMR, MS, IR, and GC-MS contribute and how laboratories establish confidence.
+description: "What compound identification means, what NMR, MS, IR and GC-MS each contribute, a worked example, and how labs report confidence in an identity."
 markdown_content: |-
   ## TL;DR
 

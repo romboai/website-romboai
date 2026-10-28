@@ -1,6 +1,6 @@
 ---
 title: 'Impurity Identification in Pharmaceutical Quality Control'
-seo_title: 'Pharma Impurity Identification | Rombo AI'
+seo_title: "Impurity Identification in Pharma: Workflow and Report | Rombo AI"
 date: 2026-09-01T07:00:00.000Z
 permalink: /blog/impurity-identification-pharmaceutical-quality-control
 layout: article
@@ -9,6 +9,7 @@ image_alt: High-performance liquid chromatography system used to separate pharma
 image_caption: 'A high-performance liquid chromatography system, commonly used to separate and measure pharmaceutical impurities. Photo: <a href="https://commons.wikimedia.org/wiki/File:High-performance_liquid_chromatography.jpg" rel="noopener noreferrer" target="_blank">Dqwyy, via Wikimedia Commons</a>, <a href="https://creativecommons.org/publicdomain/zero/1.0/" rel="license noopener noreferrer" target="_blank">CC0 1.0</a>. Cropped and resized by Rombo AI.'
 author: 'Martina [Marketing Specialist, Rombo AI]'
 excerpt: A practical guide to classifying, isolating, identifying, and documenting pharmaceutical impurities with chromatography, mass spectrometry, and NMR.
+description: "How pharma QC labs go from an unknown chromatographic peak to a defensible impurity structure with LC-MS and NMR, and what the report must document."
 markdown_content: |-
   ## TL;DR
 
