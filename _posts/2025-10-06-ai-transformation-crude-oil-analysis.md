@@ -2,7 +2,7 @@
 layout: article
 permalink: /blog/ai-transformation-crude-oil-analysis/
 title: "The AI Transformation of Crude Oil Analysis: From Laboratory Bottlenecks to Real-Time Intelligence"
-seo_title: "AI Transformation of Crude Oil Analysis | Rombo AI"
+seo_title: "AI for Crude Oil Analysis: Benefits and Limits | Rombo AI"
 date: "2025-10-06"
 last_modified_at: 2026-10-20
 image: "img/blog/ai-transformation-crude-oil-analysis.jpg"
@@ -66,6 +66,6 @@ markdown_content: |
   **Request a free feasibility analysis to understand whether Rombo AI fits your crude oil workflow: [start here](/nmr-feasibility/){: .button}**
 
 author: "Silvia Bongiovanni"
-description: "How Rombo AI combines benchtop NMR and machine learning to monitor several crude oil properties between full laboratory assays."
+description: "How AI models read benchtop NMR spectra to estimate several crude oil properties between full assays, and what labs must validate before relying on them."
 excerpt: "The Oil & Gas industry is embracing AI for crude oil analysis. See how Rombo AI combines benchtop NMR with machine learning to report several crude properties from one scan, validated against your own reference methods."
 ---

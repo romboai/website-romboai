@@ -1,6 +1,6 @@
 ---
 title: 'Why Crude Oil Analysis Matters at Every Stage of the Refinery'
-seo_title: 'Crude Oil Analysis: Refinery Processes, Risks and Economics | Rombo AI'
+seo_title: "Crude Oil Analysis Methods: What Refineries Test and Why | Rombo AI"
 date: 2026-09-29T12:00:00.000Z
 permalink: /blog/crude-oil-analysis-refinery-process-economics
 layout: article
@@ -11,6 +11,7 @@ image_width: 1280
 image_height: 960
 image_caption: 'Pine Bend Refinery in Rosemount, Minnesota. Photo: Tony Webster, via <a href="https://commons.wikimedia.org/wiki/File:Pine_Bend_Refinery_-_Flint_Hills_Resources_(53839141496).jpg" target="_blank" rel="noopener noreferrer">Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by/2.0/" target="_blank" rel="license noopener noreferrer">CC BY 2.0</a>. Resized; no crop. Illustrative image; no affiliation or endorsement implied.'
 excerpt: Where refineries sample crude and products, what each analysis measures, and how faster NMR-based predictions can support blending, fouling management and yield planning.
+description: "Which tests refineries run on crude oil, where samples are taken, what each result decides, and where faster NMR-based property estimates can help."
 markdown_content: |-
   ## TL;DR
 
