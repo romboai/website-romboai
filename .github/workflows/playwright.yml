@@ -31,7 +31,7 @@ jobs:
         uses: actions/cache@v4
         with:
           path: /home/runner/.cache/ms-playwright
-          key: ${{ runner.os }}-playwright-1.57.0-${{ hashFiles('package-lock.json') }}
+          key: ${{ runner.os }}-playwright-1.57.0-v3-${{ hashFiles('package-lock.json') }}
 
       - name: Tune npm network retries
         run: |
@@ -45,13 +45,33 @@ jobs:
 
       - name: Install Playwright browsers
         run: |
-          # `socket hang up` can happen when the CDN flakes. Retry.
           npx playwright install-deps chromium
-          for i in 1 2 3; do
-            npx playwright install chromium && break
-            echo "Playwright browser download failed (attempt $i). Retrying in 10s..."
-            sleep 10
+          for i in 1 2; do
+            if ls /home/runner/.cache/ms-playwright/chromium_headless_shell-*/chrome-headless-shell-linux64/chrome-headless-shell >/dev/null 2>&1 && ls /home/runner/.cache/ms-playwright/ffmpeg-*/ffmpeg-linux >/dev/null 2>&1; then
+              echo "Playwright binaries verified."
+              break
+            fi
+            echo "Installing Playwright chromium, headless-shell, and ffmpeg (attempt $i)..."
+            PLAYWRIGHT_DOWNLOAD_CONNECTION_TIMEOUT=30000 npx playwright install chromium chromium-headless-shell ffmpeg || true
+            if ls /home/runner/.cache/ms-playwright/chromium_headless_shell-*/chrome-headless-shell-linux64/chrome-headless-shell >/dev/null 2>&1 && ls /home/runner/.cache/ms-playwright/ffmpeg-*/ffmpeg-linux >/dev/null 2>&1; then
+              echo "Playwright binaries verified."
+              break
+            fi
+            sleep 5
           done
+          if ! ls /home/runner/.cache/ms-playwright/chromium_headless_shell-*/chrome-headless-shell-linux64/chrome-headless-shell >/dev/null 2>&1; then
+            if command -v google-chrome >/dev/null 2>&1; then
+              echo "Falling back to system google-chrome binary."
+              echo "PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH=$(command -v google-chrome)" >> "$GITHUB_ENV"
+            fi
+          fi
+          if ! ls /home/runner/.cache/ms-playwright/ffmpeg-*/ffmpeg-linux >/dev/null 2>&1; then
+            echo "PLAYWRIGHT_DISABLE_VIDEO=1" >> "$GITHUB_ENV"
+            if command -v ffmpeg >/dev/null 2>&1; then
+              mkdir -p /home/runner/.cache/ms-playwright/ffmpeg-1011
+              ln -sf "$(command -v ffmpeg)" /home/runner/.cache/ms-playwright/ffmpeg-1011/ffmpeg-linux
+            fi
+          fi
 
       - name: Run E2E tests
         run: npm run test:e2e
@@ -66,4 +86,3 @@ jobs:
           name: playwright-report
           path: playwright-report
           if-no-files-found: ignore
-

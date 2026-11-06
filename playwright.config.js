@@ -11,7 +11,10 @@ module.exports = defineConfig({
     baseURL: process.env.PLAYWRIGHT_BASE_URL || "http://127.0.0.1:4000",
     trace: "retain-on-failure",
     screenshot: "only-on-failure",
-    video: "retain-on-failure",
+    video: process.env.PLAYWRIGHT_DISABLE_VIDEO ? "off" : "retain-on-failure",
+    launchOptions: process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH
+      ? { executablePath: process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH }
+      : undefined,
   },
   webServer: {
     command:
@@ -30,5 +33,3 @@ module.exports = defineConfig({
     },
   ],
 });
-
-
