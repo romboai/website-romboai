@@ -31,7 +31,7 @@ jobs:
         uses: actions/cache@v4
         with:
           path: /home/runner/.cache/ms-playwright
-          key: ${{ runner.os }}-playwright-1.57.0-${{ hashFiles('package-lock.json') }}
+          key: ${{ runner.os }}-playwright-1.57.0-v2-${{ hashFiles('package-lock.json') }}
 
       - name: Tune npm network retries
         run: |
@@ -45,13 +45,31 @@ jobs:
 
       - name: Install Playwright browsers
         run: |
-          # `socket hang up` can happen when the CDN flakes. Retry.
           npx playwright install-deps chromium
-          for i in 1 2 3; do
-            npx playwright install chromium && break
-            echo "Playwright browser download failed (attempt $i). Retrying in 10s..."
+          for i in 1 2 3 4 5; do
+            if ls /home/runner/.cache/ms-playwright/chromium_headless_shell-*/chrome-headless-shell-linux64/chrome-headless-shell >/dev/null 2>&1; then
+              echo "Playwright chromium-headless-shell binary verified."
+              break
+            fi
+            echo "Installing Playwright chromium + headless shell (attempt $i)..."
+            rm -rf /home/runner/.cache/ms-playwright/chromium*
+            PLAYWRIGHT_DOWNLOAD_CONNECTION_TIMEOUT=120000 npx playwright install --force chromium chromium-headless-shell || true
+            if ls /home/runner/.cache/ms-playwright/chromium_headless_shell-*/chrome-headless-shell-linux64/chrome-headless-shell >/dev/null 2>&1; then
+              echo "Playwright chromium-headless-shell binary verified."
+              break
+            fi
+            echo "Playwright browser download incomplete (attempt $i). Retrying in 10s..."
             sleep 10
           done
+          if ! ls /home/runner/.cache/ms-playwright/chromium_headless_shell-*/chrome-headless-shell-linux64/chrome-headless-shell >/dev/null 2>&1; then
+            if command -v google-chrome >/dev/null 2>&1; then
+              echo "Falling back to system google-chrome binary."
+              echo "PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH=/usr/bin/google-chrome" >> "$GITHUB_ENV"
+            else
+              echo "Chromium headless shell binary missing after retries." >&2
+              exit 1
+            fi
+          fi
 
       - name: Run E2E tests
         run: npm run test:e2e
@@ -66,4 +84,3 @@ jobs:
           name: playwright-report
           path: playwright-report
           if-no-files-found: ignore
-
