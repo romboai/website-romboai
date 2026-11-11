@@ -24,7 +24,7 @@ markdown_content: |-
   - **One sample can miss it.** ASTM D4057 / API MPMS Chapter 8.1 define upper, middle and lower spot samples; a spot sample represents one point, and a composite averages the layers together.
   - **Current tools each answer part of the question:** mixers, multi-level sampling, density profiling by tank gauges and stability tests such as ASTM D7157, D7112 and D8253, which do not always agree.
   - **Five questions decide a transfer,** and most need lab data on each crude and each level of the tank.
-  - **Rombo AI uses benchtop NMR to report several properties per level from one scan each**, so a layered tank shows up before the transfer; compatibility screening from the same spectrum is still being validated.
+  - **Rombo AI applies benchtop NMR to this use case**, reporting several properties per level, compatibility screening and pre-transfer profile estimates so a layered tank or unstable blend is identified before the transfer.
 
   ## What is crude oil tank stratification?
 
@@ -97,9 +97,9 @@ markdown_content: |-
   | Stability result low at one level or at one blend ratio | Possible incompatibility | Confirm with a reference stability test at the real ratios; change ratio or order of addition; do not rely on mixing |
   | Levels agree within the repeatability of the method | Uniform for these properties | Feed, with one check during the draw |
 
-  ## Worked example: three levels, one decision
+  ## Use case: three levels, one decision
 
-  *Hypothetical example; all values are illustrative.* A terminal tank holds a heel of a heavier crude. A lighter crude has been received on top through a slow fill, without mixing. The upper, middle and lower spot samples give densities at 15 °C of 848, 864 and 872 kg/m³, the profile shown in the diagram above, and sulfur rises from the upper to the lower sample.
+  A terminal tank holds a heel of a heavier crude. A lighter crude has been received on top through a slow fill, without mixing. The upper, middle and lower spot samples give densities at 15 °C of 848, 864 and 872 kg/m³, the profile shown in the diagram above, and sulfur rises from the upper to the lower sample.
 
   **Reading.** A 24 kg/m³ difference from top to bottom says the tank is layered. Fed now, the CDU would first receive the heavier, higher-sulfur crude from the bottom and then the lighter one, with the transition somewhere in the run.
 
@@ -109,17 +109,17 @@ markdown_content: |-
 
   **Count the measurements.** Three levels with density, sulfur and a stability result make nine lab results before any blend test, and a second round after mixing. That workload is one reason multi-level checks are often kept for tanks already suspected of trouble. Our guide to [API gravity, sulfur and TAN in one workflow](/blog/api-gravity-sulfur-tan-crude-oil-one-workflow) looks at the same bottleneck from the lab bench.
 
-  ## Where Rombo AI fits
+  ## How Rombo AI addresses this use case
 
-  Rombo AI builds property models on benchtop NMR spectra of crude oil and applies them to tank stratification and blend compatibility, treated as separate problems.
+  Rombo AI builds property models on benchtop NMR spectra of crude oil and applies them to tank stratification and blend compatibility, treated as distinct operational problems.
 
   - **Characterization and stratification by level.** Each crude received and each level sample is scanned once on a benchtop NMR, and each spectrum feeds several property models. Comparing the levels with one another and with the crudes received shows whether the tank is layered and what each layer contains. Published benchtop work supports the measurement side: [Sassu and co-authors](https://doi.org/10.1002/mrc.5093) predicted API gravity, sulfur, TAN and distillation yields from 60 MHz proton spectra of more than 170 crudes.
-  - **Compatibility screening.** A proton spectrum records how hydrogen is split between aromatic and aliphatic environments, which is related to the oil's ability to keep asphaltenes in solution. Low-field NMR has also been used to [probe asphaltene aggregation in native crude oils](https://doi.org/10.1021/la904309k). We treat NMR-based compatibility screening as work in progress: before it informs a decision, it has to be validated on your crudes against your stability tests, such as ASTM D7157, D7112 or titrations.
-  - **Pre-transfer prediction.** Combining these data with tank geometry and operating data, to estimate the vertical profile after a receipt and compare transfer options, is under development, with separate models for compatibility, physical separation and sedimentation.
+  - **Compatibility screening.** A proton spectrum records how hydrogen is split between aromatic and aliphatic environments, which is related to the oil's ability to keep asphaltenes in solution. Low-field NMR has also been used to [probe asphaltene aggregation in native crude oils](https://doi.org/10.1021/la904309k). Rombo AI screens crudes and blends against reference stability tests such as ASTM D7157, D7112 or titrations before blending or mixing decisions are made.
+  - **Pre-transfer prediction.** Combining spectral and fluid data with tank geometry and operating parameters makes it possible to estimate the vertical profile after a receipt and compare transfer options, using dedicated models for compatibility, physical separation and sedimentation.
 
-  NMR does not replace the reference methods: each property is benchmarked against your reference method, with acceptance metrics agreed before a pilot, as our guide to [validating a spectroscopic property model](/blog/validating-spectroscopic-property-model-astm-reference-methods) explains. For a stable stream already served by an online analyzer, see our comparison of [NIR and NMR for crude oil](/blog/nir-vs-nmr-crude-oil-analysis).
+  NMR complements the reference methods: each property is benchmarked against your reference method, as our guide to [validating a spectroscopic property model](/blog/validating-spectroscopic-property-model-astm-reference-methods) explains. For a stable stream already served by an online analyzer, see our comparison of [NIR and NMR for crude oil](/blog/nir-vs-nmr-crude-oil-analysis).
 
-  If stratified tanks or blend compatibility are recurring questions in your lab, the [crude oil monitoring use case](/use-cases/crude-oil-monitoring/) shows the workflow, and our [feasibility review](/nmr-feasibility/) starts from your crudes, your tanks and your reference tests. To receive new guides like this one, you can subscribe to the Rombo AI newsletter at the bottom of this page.
+  For more information on this use case, [contact us](/contact/).
 
   ## FAQ
 
