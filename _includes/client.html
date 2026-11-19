@@ -40,6 +40,10 @@
             </div>
         </div>
     </div>
+
+    {% if include.with_supportby %}
+    {% include supportby.html %}
+    {% endif %}
 </div>
 
 <style>
