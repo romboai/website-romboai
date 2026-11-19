@@ -2,6 +2,7 @@
 title: 'Why Crude Oil Analysis Matters at Every Stage of the Refinery'
 seo_title: "Crude Oil Analysis Methods: What Refineries Test and Why | Rombo AI"
 date: 2026-09-29T12:00:00.000Z
+last_modified_at: 2026-11-19
 permalink: /blog/crude-oil-analysis-refinery-process-economics
 layout: article
 author: Andrea Zanda
@@ -20,6 +21,8 @@ markdown_content: |-
   - **Some important investigations are too resource-intensive to repeat for every operating change.** Full assays, compatibility matrices, deposit studies and tank profiling may be periodic even where routine monitoring is continuous.
   - **NMR accesses molecular environments; models translate fingerprints into property estimates.** Published research supports prediction of crude properties and distillation yields, with accuracy dependent on the property and validation domain.
   - **Economic value comes from acting sooner.** Better decisions can reduce fuel consumption, off-spec rework and avoidable feed variability. Rombo AI's approach to rapid characterization appears in the comparison near the end.
+
+  *Last reviewed: 19 November 2026. Added links to the dedicated guides on tank stratification, crude compatibility, NIR vs NMR and model validation.*
 
   A refinery buys a complex mixture whose value depends on what the plant can make from it and what processing demands it creates. Two cargoes with similar density can differ in sulfur, acidity, boiling distribution and blend stability. Those differences affect equipment loading, energy demand and saleable product output.
 
@@ -46,7 +49,7 @@ markdown_content: |-
   | Treating outlets | Has treatment achieved the required quality? | Treatment adjustment and further testing |
   | Product tanks | Does the final blend meet its specification? | Reblending, release and shipment |
 
-  A receipt sample answers a commercial question. A blend-header sample represents what is actually entering the plant. Neither automatically represents every layer of a storage tank. Manual petroleum sampling has its own [ASTM practice, D4057](https://www.astm.org/standards-and-solutions/ASTM-Energy-Standards-and-Solutions); sampling location, timing, handling and sample identity belong beside every result.
+  A receipt sample answers a commercial question. A blend-header sample represents what is actually entering the plant. Neither automatically represents every layer of a storage tank; [why crude tanks stratify and how refineries detect it](/blog/crude-oil-tank-stratification) is covered in a separate guide. Manual petroleum sampling has its own [ASTM practice, D4057](https://www.astm.org/standards-and-solutions/ASTM-Energy-Standards-and-Solutions); sampling location, timing, handling and sample identity belong beside every result.
 
   ## Incoming crude: what the principal tests measure
 
@@ -64,7 +67,7 @@ markdown_content: |-
 
   **Metals, nitrogen and carbon residue.** Elemental spectroscopy measures metals such as nickel and vanadium after suitable preparation; combustion-based methods quantify nitrogen. These results inform catalyst and treatment constraints. Carbon-residue testing heats material under prescribed conditions and weighs the residue as an indicator of coke-forming tendency. It is not a direct measurement of future furnace deposits. The [ASTM petroleum-method collection](https://regional.astm.org/industry/petroleum-collection) identifies relevant methods for these properties.
 
-  An inspection panel selects tests for immediate decisions. A comprehensive assay combines broader whole-crude testing with fractionation and analyses of individual cuts. Its turnaround includes separation, multiple instruments, queues and review; individual laboratory tests can still be fast.
+  An inspection panel selects tests for immediate decisions. A comprehensive assay combines broader whole-crude testing with fractionation and analyses of individual cuts. Its turnaround includes separation, multiple instruments, queues and review; individual laboratory tests can still be fast. What changes when density, sulfur and acidity come from one routine measurement, and what stays with the reference methods, is set out in [API gravity, sulfur and TAN in one workflow](/blog/api-gravity-sulfur-tan-crude-oil-one-workflow).
 
   ## Distillation, conversion and final-product analysis
 
@@ -86,9 +89,9 @@ markdown_content: |-
 
   **Fouling propensity and deposit chemistry.** Process monitoring tracks exchanger temperatures, pressure drop and inferred heat-transfer performance. Detailed investigation can require heated-surface experiments, deposit collection and chemical analysis. Such work cannot necessarily be repeated for every blend. The [CROF research programme](https://researchportal.bath.ac.uk/en/publications/fouling-in-crude-oil-preheat-trains-a-systematic-solution-to-an-o/) shows why deposition mechanisms and operating conditions need joint treatment. Asphaltene content is one possible input, not a universal fouling index.
 
-  **Blend compatibility.** Mixing two individually stable crudes can change the solvency of the mixture and precipitate asphaltenes. Laboratories can assess instability using solvent-induced separation with optical detection, as in [ASTM D7157](https://store.astm.org/d7157-23.html). Testing multiple ratios across many candidate cargoes expands the experimental workload. Rapid screening can identify which blends deserve confirmation, but compatibility is not guaranteed by averaging component properties.
+  **Blend compatibility.** Mixing two individually stable crudes can change the solvency of the mixture and precipitate asphaltenes. Laboratories can assess instability using solvent-induced separation with optical detection, as in [ASTM D7157](https://store.astm.org/d7157-23.html). Testing multiple ratios across many candidate cargoes expands the experimental workload. Rapid screening can identify which blends deserve confirmation, but compatibility is not guaranteed by averaging component properties. The order in which crudes enter a tank can matter as well, and the standard stability tests do not always agree with one another. Our [guide to crude oil compatibility and asphaltene stability](/blog/crude-oil-compatibility-asphaltene-stability) explains the oil compatibility model, compares ASTM D7157, D7112 and D8253, and works through a published two-crude example.
 
-  **Tank stratification and mixing.** Different receipts can remain incompletely mixed; water and solids may settle, and temperature differences can affect density and circulation. This does not mean every crude spontaneously separates into light and heavy molecular layers. Detecting nonuniformity requires samples at different depths or suitable spatial monitoring. [Dakhel and Rahimi's refinery-tank study](https://doi.org/10.1016/j.petrol.2004.01.003) compared modeled homogenization with density measurements at three sampling locations. A single outlet fingerprint cannot reconstruct the entire tank.
+  **Tank stratification and mixing.** Different receipts can remain incompletely mixed; water and solids may settle, and temperature differences can affect density and circulation. This does not mean every crude spontaneously separates into light and heavy molecular layers. Detecting nonuniformity requires samples at different depths or suitable spatial monitoring. [Dakhel and Rahimi's refinery-tank study](https://doi.org/10.1016/j.petrol.2004.01.003) compared modeled homogenization with density measurements at three sampling locations. A single outlet fingerprint cannot reconstruct the entire tank. Causes, detection methods and the questions to ask before a transfer are covered in [crude oil tank stratification: why it happens and what it means for the CDU](/blog/crude-oil-tank-stratification).
 
   **Other intermittent investigations** include detailed crude assays, emulsion-separation studies, wax behavior and corrosion-product analysis. Specialist procedures, sample conditioning and test matrices consume time and resources. Their frequency varies by site; it would be inaccurate to say that refineries never perform them.
 
@@ -98,7 +101,7 @@ markdown_content: |-
 
   High-field NMR separates resonances more effectively and supports detailed structural investigations. Benchtop NMR offers a more compact measurement platform. Neither directly measures every refinery property: sulfur, TAN, viscosity and boiling yields can be inferred from spectral correlations only within a validated model's scope.
 
-  There is direct experimental support. A [2020 benchtop NMR study](https://pubmed.ncbi.nlm.nih.gov/32869885/) used 60 MHz proton spectra and partial least-squares models on more than 170 crude samples to estimate API gravity, sulfur, TAN and distillation yields. The authors report external validation and predictions within minutes. That result supports the analytical approach for the investigated population; it does not validate every commercial model or unfamiliar feedstock.
+  There is direct experimental support. A [2020 benchtop NMR study](https://pubmed.ncbi.nlm.nih.gov/32869885/) used 60 MHz proton spectra and partial least-squares models on more than 170 crude samples to estimate API gravity, sulfur, TAN and distillation yields. The authors report external validation and predictions within minutes. That result supports the analytical approach for the investigated population; it does not validate every commercial model or unfamiliar feedstock. How to test a property model against the laboratory's own reference method before relying on it is described in [validating a spectroscopic property model against ASTM reference methods](/blog/validating-spectroscopic-property-model-astm-reference-methods).
 
   For **distillation yields**, the model learns the relationship between spectral features and reference boiling curves. If the predicted cumulative mass recovery is 20% at one cut temperature and 45% at another, the interval contains an estimated 25 mass%. Those numbers are illustrative. A [separate NMR study](https://doi.org/10.1016/j.talanta.2015.04.046) predicted temperatures at selected distilled-volume fractions and estimated prediction intervals.
 
@@ -131,17 +134,19 @@ markdown_content: |-
   | High-field NMR | Detailed molecular-environment information and structural research | Experiment-dependent acquisition plus preparation and interpretation | Specialist operation and infrastructure; property predictions still require validation |
   | Rombo AI + benchtop NMR | Rapid fingerprint-based property and yield reporting | Company materials describe approximately 15-minute reports for supported workflows | Property coverage and prediction error must be demonstrated on the intended crude slate |
 
-  NIR measures vibrational overtone and combination bands and has credible refinery applications. [IFP researchers](https://doi.org/10.2516/ogst:1999040) demonstrated multivariate predictions for middle-distillate properties; [Metrohm](https://refining.metrohmusa.com/diesel-gasoline-blending-monitoring) markets fuel-blending applications. Calling NIR intrinsically unreliable would ignore this evidence. [Bruker's petroleum NMR applications](https://www.bruker.com/en/products-and-solutions/mr/chemistry/petroleum-chemistry.html) illustrate the structural information available from high-resolution measurements.
+  NIR measures vibrational overtone and combination bands and has credible refinery applications. [IFP researchers](https://doi.org/10.2516/ogst:1999040) demonstrated multivariate predictions for middle-distillate properties; [Metrohm](https://refining.metrohmusa.com/diesel-gasoline-blending-monitoring) markets fuel-blending applications. Calling NIR intrinsically unreliable would ignore this evidence. A fuller comparison for crude, including where NIR remains the better choice, is in [NIR vs NMR for crude oil analysis: where each method fits](/blog/nir-vs-nmr-crude-oil-analysis). [Bruker's petroleum NMR applications](https://www.bruker.com/en/products-and-solutions/mr/chemistry/petroleum-chemistry.html) illustrate the structural information available from high-resolution measurements.
 
-  Rombo AI combines benchtop spectra with learned representations and property models. Its refinery presentation describes a 60 MHz workflow and approximately 15-minute reports including property estimates and distillation yields. These are company-reported capabilities. Its foundation-model approach, pretrained on millions of spectra, aims to make spectral representations reusable; individual property models still need suitable reference labels and validation.
+  Rombo AI combines benchtop spectra with learned representations and property models. Its refinery presentation describes a 60 MHz workflow and approximately 15-minute reports including property estimates and distillation yields. These are company-reported capabilities. Its foundation-model approach, pretrained on millions of spectra, aims to make spectral representations reusable; individual property models still need suitable reference labels and validation, and moving a model to another instrument is a step that needs its own checks ([calibration transfer](/blog/calibration-transfer-spectroscopy-models-break-instruments-change)).
 
   A useful pilot would profile tank depths and the feed header, compare predictions against reference methods, and test whether operators receive actionable information before the next decision. Require property-specific error, uncertainty and out-of-domain handling. This refinery material-analysis application belongs to the broader Rombo AI platform.
 
-  **Want to assess faster characterization for your crude slate? [Discuss a refinery feasibility study with Rombo AI](https://rombo.ai/use-cases/crude-oil-monitoring/).**
+  **Want to assess faster characterization for your crude slate?** The [crude oil monitoring use case](/use-cases/crude-oil-monitoring/) shows the workflow, and a [feasibility review](/nmr-feasibility/) starts from your crudes and your reference methods. To receive new guides like this one, subscribe to the Rombo AI newsletter at the bottom of this page.
 
   ## Frequently asked questions
 
-  **Can rapid NMR detect tank stratification?** It can compare samples from different depths and times. It requires a representative sampling plan and cannot infer unsampled layers reliably from one measurement.
+  **Can rapid NMR detect tank stratification?** It can compare samples from different depths and times. It requires a representative sampling plan and cannot infer unsampled layers reliably from one measurement. See the [tank stratification guide](/blog/crude-oil-tank-stratification) for sampling options.
+
+  **Can NMR predict whether two crudes are compatible?** Published studies have related proton NMR spectra to the stability parameters of the oil compatibility model using multivariate models. Such predictions are screening estimates for the crude population they were built on; borderline blends still go to the laboratory's chosen compatibility test. The [compatibility guide](/blog/crude-oil-compatibility-asphaltene-stability#predictive-approaches) summarizes the published approaches.
 
   **Can it predict fouling or corrosion directly?** Spectral models may estimate relevant properties or risk proxies. Equipment risk also requires operating history, surface conditions and process measurements; site-specific validation is essential.
 
