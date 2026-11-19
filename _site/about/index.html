@@ -3,7 +3,22 @@
 <head>
     
 
-    
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      window.__romboEvents = window.__romboEvents || [];
+      window.romboTrack = function (eventName, params) {
+        var payload = Object.assign({
+          page_location: location.href,
+          page_path: location.pathname
+        }, params || {});
+        window.__romboEvents.push({ event: eventName, params: payload });
+        if (typeof gtag === "function") {
+          gtag("event", eventName, payload);
+        } else {
+          window.dataLayer.push(Object.assign({ event: eventName }, payload));
+        }
+      };
+    </script>
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
@@ -11,6 +26,7 @@
     <meta charset="utf-8">
     <meta name="referrer" content="strict-origin-when-cross-origin">
     <meta name="theme-color" content="#090C23">
+    <meta name="rombo-page-type" content="about">
 
     <!-- Preconnect: only the 2 most critical origins -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -28,7 +44,15 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/css/custom/style.css">
     <link rel="stylesheet" href="/css/custom/responsive.css">
-    <link rel="stylesheet" href="/css/custom/scrollbar.css"><title>About Rombo AI | Team & Mission in Spectral AI</title>
+    <link rel="stylesheet" href="/css/custom/scrollbar.css">
+    <link rel="stylesheet" href="/css/custom/newsletter.css"><script>
+      (function () {
+        if (location.hostname === "www.rombo.ai") {
+          location.replace("https://rombo.ai" + location.pathname + location.search + location.hash);
+        }
+      })();
+    </script>
+    <title>About Rombo AI | Team & Mission in Spectral AI</title>
     <meta name="description" content="Meet Rombo AI and our mission: bringing AI into spectroscopy to deliver faster, more accurate, and scalable decisions across R&D and industry.">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
@@ -42,7 +66,7 @@
     <meta property="og:title" content="About Rombo AI | Team & Mission in Spectral AI">
     <meta property="og:description" content="Meet Rombo AI and our mission: bringing AI into spectroscopy to deliver faster, more accurate, and scalable decisions across R&D and industry.">
     <meta property="og:url" content="https://rombo.ai/about/">
-    <meta property="og:image" content="https://rombo.ai/img/og/rombo-ai.png">
+    <meta property="og:image" content="https://rombo.ai/img/og/rombo-ai.jpg">
     <meta property="og:image:alt" content="About Rombo AI | Team & Mission in Spectral AI">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
@@ -51,12 +75,12 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="About Rombo AI | Team & Mission in Spectral AI">
     <meta name="twitter:description" content="Meet Rombo AI and our mission: bringing AI into spectroscopy to deliver faster, more accurate, and scalable decisions across R&D and industry.">
-    <meta name="twitter:image" content="https://rombo.ai/img/og/rombo-ai.png">
+    <meta name="twitter:image" content="https://rombo.ai/img/og/rombo-ai.jpg">
     <meta name="twitter:image:alt" content="About Rombo AI | Team & Mission in Spectral AI">
 
     <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
-    <link rel="icon" type="image/svg" sizes="32x32" href="/img/favicon-32x32.png">
-    <link rel="icon" type="image/svg" sizes="16x16" href="/img/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
     <link rel="manifest" href="/img/site.webmanifest">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css"
           media="print" onload="this.media='all'">
@@ -100,7 +124,6 @@
         {
           "@type": "ContactPoint",
           "contactType": "sales",
-          "email": "contact@rombo.ai",
           "telephone": "+39 352 064 8081",
           "availableLanguage": ["English", "Italian"],
           "areaServed": ["EU","Worldwide"]
@@ -144,9 +167,10 @@
       "isPartOf": { "@id": "https://rombo.ai/#website" },
       "inLanguage": "en",
       "description": "Meet Rombo AI and our mission: bringing AI into spectroscopy to deliver faster, more accurate, and scalable decisions across R&D and industry.",
+      "dateModified": "2026-09-15T17:13:30+02:00",
       "primaryImageOfPage": {
         "@type": "ImageObject",
-        "url": "https://rombo.ai/img/og/rombo-ai.png"
+        "url": "https://rombo.ai/img/og/rombo-ai.jpg"
       },
       "breadcrumb": { "@id": "https://rombo.ai/about/#breadcrumb" }
     },
@@ -172,11 +196,10 @@
 
 </head>
 
-
 <body>
 
 <button id="UpBtn" class="up-btn d-none" aria-label="Back to top"><span>
-		<svg xmlns="http://www.w3.org/2000/svg" width="23.721" height="28.513" viewBox="0 0 28.513 23.721">
+		<svg xmlns="http://www.w3.org/2000/svg" width="23.721" height="28.513" viewBox="0 0 28.513 23.721" aria-hidden="true" focusable="false">
 			<g id="right-arrow" transform="translate(0 0)">
 			<g id="Group_22" data-name="Group 22" transform="translate(0 0) rotate(-90)">
 				<path id="Path_1869" data-name="Path 1869"
@@ -188,14 +211,12 @@
 		</span>
 </button>
 
-<!-- Menu -->
-
-<a class="skip-link" href="#main-content">Skip to content</a>
+<!-- Menu --><a class="skip-link" href="#main-content">Skip to content</a>
 
 <nav class="container-fluid navbar fixed-top navbar-expand-md navbar-light custom-shadow" style="max-height: 58px; background:#090C2333;">
     <div class="container custom-container">
         <!-- Logo -->
-        <a class="navbar-brand" style="padding-left: 10px; padding-bottom: 5px" href="/#">
+        <a class="navbar-brand" style="padding-left: 10px; padding-bottom: 5px" href="/">
             <img src="/img/logo-1.svg" alt="Rombo AI Logo" class="img-fluid" >
         </a>
         <!-- Toggler/collapsible Button -->
@@ -206,7 +227,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto nev-mobile">
                 <li class="nav-item">
-                    <a class="nav-link menu-item text-white" href="/about/">About Us</a>
+                    <a class="nav-link menu-item text-white active" href="/about/" aria-current="page">About Us</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link menu-item text-white dropdown-toggle"
@@ -220,17 +241,12 @@
                     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="productsDropdown">
                         <li>
                             <a class="dropdown-item" href="/product/">
-                                Material Intelligence Platform
+                                Rombo AI Platform
                             </a>
                         </li>
                         <li>
-                            <a class="dropdown-item" href="/product/#nmr-ai-analysis-tool">
-                                NMR AI Analyzer
-                            </a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="/product/#automl-materials">
-                                AutoML Framework
+                            <a class="dropdown-item" href="/spectra/">
+                                Spectra
                             </a>
                         </li>
                     </ul>
@@ -261,23 +277,10 @@
                                 Transformer Oil Monitoring
                             </a>
                         </li>
-                        <li>
-                            <a class="dropdown-item" href="/use-cases/nmr-compound-identification/">
-                                NMR Compound Identification
-                            </a>
-                        </li>
                     </ul>
+                </li><li class="nav-item d-flex align-items-center">
+                    <a class="nav-link nav-cta" href="/contact/" data-cta-location="header">Contact us</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link menu-item text-white" href="/blog/">Blog</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link menu-item text-white" href="https://rombo-ai.breezy.hr/" target="_blank" rel="noopener noreferrer">Careers</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link menu-item text-white" href="/contact/" data-cta-location="navigation">Contact us</a>
-                </li>
-             
             </ul>
         </div>
     </div>
@@ -285,41 +288,57 @@
 <!-- Menu -->
 
 
-
 <main id="main-content" tabindex="-1">
 
 
-<!--Hero Section-->
-<div class="container-fluid hero-about-section">
-  <!-- Video -->
-  <video class="hero-video" autoplay muted loop playsinline controlslist="nodownload" preload="none">
-      <source src="/img/hero_back_play.mp4" type="video/mp4"/>
-      <track kind="captions" label="No dialogue" default>
-      Your browser does not support the video tag.
+<div class="container-fluid hero-section">
+  <video class="hero-video" autoplay muted loop playsinline controlslist="nodownload" data-desktop-only="true" preload="none" aria-hidden="true">
+    <source data-src="/img/hero_back_play.mp4" type="video/mp4"/>
+    <track kind="captions" label="No dialogue" default>
+    Your browser does not support the video tag.
   </video>
-
-  <!-- Mask Overlay -->
   <div class="mask"></div>
-  <div class="container custom-container pt-5">
-      <div class="row m-0 py-5 hero-content-message">
-          <h1 class="z-1 col-12 align-self-center text-white text-responsive" style="text-align: left">
-              <span class="text-highlight">Our Mission and Expertise</span>
-          </h1>
+  <div class="container custom-container w-100 h-100">
+    <div class="row m-0 w-100 h-100">
+      <div class="z-1 col-12 col-lg-7 hero-copy">
+        
+        <p class="hero-eyebrow fw-bold text-uppercase mb-2">About us</p>
+        
+        <h1 class="text-white m-0"><span class="text-highlight">Our mission and expertise</span></h1>
+        
+        <p class="hero-sub text-white mb-0">We bring AI into spectroscopy so R&D and industry can make faster, more accurate, and scalable decisions.</p>
+        
       </div>
-      <div class="row p-5 "></div>
+    </div>
   </div>
 </div>
+<script>
+  (function () {
+    var isDesktop = window.matchMedia && window.matchMedia("(min-width: 992px)").matches;
+    var video = document.querySelector(".hero-section .hero-video[data-desktop-only='true']");
+    if (!video) return;
+    if (!isDesktop) {
+      video.remove();
+      return;
+    }
+    var source = video.querySelector("source[data-src]");
+    if (!source) return;
+    source.src = source.getAttribute("data-src");
+    video.load();
+    var p = video.play();
+    if (p && typeof p.catch === "function") p.catch(function () {});
+  })();
+</script>
 
-
-<div class="container-fluid align-self-end" style="position: relative;">
-  <img class="img-fluid w-100 hero-divider-container" style="bottom:-3px; object-fit: cover; z-index: 1;" src="/img/Separator_Hero.svg" alt="Vector"/>
+<div class="container-fluid align-self-end mx-0" style="position: relative;">
+  <img class="img-fluid w-100 hero-divider-container" style="bottom:-10px; object-fit: cover; z-index: 1;" src="/img/Separator_Hero.svg" alt="Decorative section divider" aria-hidden="true"/>
 </div>
 
 <!--About Section-->
 
 <div class="container-fluid h-100 py-5 my-0" style="position: relative;">
   <video class="z-n1 position-absolute top-0 start-0 w-100 h-100"
-         style="object-fit: cover;" autoPlay muted loop playsinline controlslist="nodownload" preload="none">
+         style="object-fit: cover;" autoplay muted loop playsinline controlslist="nodownload" preload="none" aria-hidden="true">
       <source src="/img/hero_white_play.mp4" type="video/mp4"/>
       <track kind="captions" label="No dialogue" default>
       Your browser does not support the video tag.
@@ -369,7 +388,7 @@
               <h2 class="z-1 secondary-headline pt-2" style="color: #001d6c; font-size: 28px;">Our Mission</h2>
               <div class="hero-label pt-2">
                   <p style="text-align: left;">
-                      <span class="span2" style="color: #21272a; z-index: 1">We empower medium and large enterprises – especially in energy, oil &amp; gas, biotech, and chemical industries – with fast, precise, and automated molecular characterization and quantification. By combining cutting-edge Low Field NMR spectroscopy with our patented Artificial Intelligence models, we deliver end-to-end automated solutions that reduce manual work, accelerate R&amp;D breakthroughs, and set new standards for efficiency.</span>
+                      <span class="span2" style="color: #21272a; z-index: 1">We empower medium and large enterprises – especially in energy, oil &amp; gas, electrical assets and chemicals, including circular chemistry – with fast, precise, and automated molecular characterization and quantification. By combining cutting-edge Low Field NMR spectroscopy with our patented Artificial Intelligence models, we deliver end-to-end automated solutions that reduce manual work, accelerate R&amp;D breakthroughs, and set new standards for efficiency. Rombo AI is also supported by <a href="/smart-start/">Smart&amp;Start Italia</a>.</span>
                   </p>
               </div>
           </div>
@@ -454,120 +473,234 @@
                                 <br/>
                                 09123 Cagliari - Italy
                                 <br/><br/>
-                                <a href="mailto:contact@rombo.ai" style="color: #FE900F; text-decoration: none;">contact@rombo.ai</a>
-                                <br/>
                                 <a href="tel:+393520648081" style="color: #FE900F; text-decoration: none;">+39 352 064 8081</a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <img src="/img/livello6.svg" alt="Background" class="position-absolute z-1"
+                <img src="/img/livello6.svg" alt="Decorative map graphic" aria-hidden="true" class="position-absolute z-1"
                      style="top: 40px; right: 0; width: 234px; height: 238px; gap: 0px;">
             </div>
 
         </div>
     </div>
 </div>
-<div class="container-fluid  h-100 py-5 pb-0 my-0" style="position: relative; ">
+<div class="container-fluid h-100 py-5 pb-0 my-0" style="position: relative; overflow: hidden;">
     <video class="z-n1 position-absolute top-0 start-0 w-100 h-100"
-           style="object-fit: cover;" autoPlay muted loop playsinline controlslist="nodownload">
+           style="object-fit: cover;" autoplay muted loop playsinline controlslist="nodownload" aria-hidden="true">
         <source src="/img/hero_white_play.mp4" type="video/mp4"/>
         Your browser does not support the video tag.
     </video>
     <div class="z-1 position-absolute top-0 start-0 w-100 h-100"
          style="mix-blend-mode: screen; background: #fcd8b8;"></div>
-    <div class="container custom_container">
+    <div class="container custom_container position-relative z-1">
         <div class="row">
-            <div class="z-1 col-12  text-center">
-                <p class="z-1  fw-bold text-wrapper5" style="font-size: 20px; letter-spacing: 1px; line-height: 20px;">
+            <div class="z-1 col-12 text-center">
+                <p class="z-1 fw-bold text-wrapper5" style="font-size: 20px; letter-spacing: 1px; line-height: 20px;">
                     PROVEN
                     IMPACT,
                     TRUSTED BY INDUSTRY LEADERS</p>
-                <h2 class="z-1  fw-bold text-dark" style="font-size: 42px; line-height: 46.2px;">Clients and Partners</h2>
+                <h2 class="z-1 fw-bold text-dark" style="font-size: 42px; line-height: 46.2px;">Clients and Partners</h2>
             </div>
         </div>
-        <div class="row justify-content-center align-items-center text-center py-5">
-            <div class="z-1 col-6 col-md-4 col-lg-2 mb-3">
-                <img src="/img/clients/gs.png" alt="GreenShare Logo" class="py-2 img-fluid" loading="lazy" decoding="async">
-            </div>
-            <div class="z-1 col-6 col-md-4 col-lg-2 mb-3">
-                <img src="/img/clients/abinsula.png" alt="Abisnula Logo" class="py-2 img-fluid" loading="lazy" decoding="async">
-            </div>
-            <div class="z-1 col-6 col-md-4 col-lg-2 mb-3">
-                <img src="/img/clients/Nanalysis.png" alt="Nanalysis Logo" class="py-2 img-fluid" loading="lazy" decoding="async">
-            </div>
-            <div class="z-1 col-6 col-md-6 col-lg-2 mb-3">
-                <img src="/img/clients/oc.webp" alt="Open Campus Logo" class="py-2 img-fluid" loading="lazy" decoding="async">
-            </div>
-            <div class="z-1 col-8 col-md-6 col-lg-2 mb-3">
-                <img src="/img/clients/nsgroup.png" alt="Net Service Logo" class="py-2 img-fluid" loading="lazy" decoding="async">
-            </div>
-            <div class="z-1 col-8 col-md-6 col-lg-2 mb-3">
-                <img src="/img/clients/nvidia-inception.png" alt="Nvidia Logo" class="py-2 img-fluid" loading="lazy" decoding="async">
-            </div>
+    </div><div class="client-marquee position-relative z-1 py-5" aria-label="Clients and Partners">
+        <div class="client-marquee__track">
+            <div class="client-marquee__group"><div class="client-marquee__item">
+                    <img src="/img/clients/Nanalysis.png" alt="Nanalysis Logo" class="client-marquee__logo" loading="lazy" decoding="async">
+                </div><div class="client-marquee__item">
+                    <img src="/img/clients/porto-conte-ricerche.png" alt="Porto Conte Ricerche Logo" class="client-marquee__logo" loading="lazy" decoding="async">
+                </div><div class="client-marquee__item">
+                    <img src="/img/clients/eni.png" alt="Eni Logo" class="client-marquee__logo" loading="lazy" decoding="async">
+                </div><div class="client-marquee__item">
+                    <img src="/img/clients/claude-for-startups.png" alt="Claude for Startups Logo" class="client-marquee__logo" loading="lazy" decoding="async">
+                </div><div class="client-marquee__item">
+                    <img src="/img/clients/nvidia-inception.png" alt="Nvidia Inception Logo" class="client-marquee__logo" loading="lazy" decoding="async">
+                </div><div class="client-marquee__item">
+                    <img src="/img/clients/perani-partners.png" alt="Perani & Partners Logo" class="client-marquee__logo" loading="lazy" decoding="async">
+                </div><div class="client-marquee__item">
+                    <img src="/img/clients/gs.png" alt="GreenShare Logo" class="client-marquee__logo" loading="lazy" decoding="async">
+                </div><div class="client-marquee__item">
+                    <img src="/img/clients/abinsula.png" alt="Abinsula Logo" class="client-marquee__logo" loading="lazy" decoding="async">
+                </div><div class="client-marquee__item">
+                    <img src="/img/clients/oc.webp" alt="Open Campus Logo" class="client-marquee__logo" loading="lazy" decoding="async">
+                </div></div>
+            <div class="client-marquee__group" aria-hidden="true"><div class="client-marquee__item">
+                    <img src="/img/clients/Nanalysis.png" alt="" class="client-marquee__logo" loading="lazy" decoding="async">
+                </div><div class="client-marquee__item">
+                    <img src="/img/clients/porto-conte-ricerche.png" alt="" class="client-marquee__logo" loading="lazy" decoding="async">
+                </div><div class="client-marquee__item">
+                    <img src="/img/clients/eni.png" alt="" class="client-marquee__logo" loading="lazy" decoding="async">
+                </div><div class="client-marquee__item">
+                    <img src="/img/clients/claude-for-startups.png" alt="" class="client-marquee__logo" loading="lazy" decoding="async">
+                </div><div class="client-marquee__item">
+                    <img src="/img/clients/nvidia-inception.png" alt="" class="client-marquee__logo" loading="lazy" decoding="async">
+                </div><div class="client-marquee__item">
+                    <img src="/img/clients/perani-partners.png" alt="" class="client-marquee__logo" loading="lazy" decoding="async">
+                </div><div class="client-marquee__item">
+                    <img src="/img/clients/gs.png" alt="" class="client-marquee__logo" loading="lazy" decoding="async">
+                </div><div class="client-marquee__item">
+                    <img src="/img/clients/abinsula.png" alt="" class="client-marquee__logo" loading="lazy" decoding="async">
+                </div><div class="client-marquee__item">
+                    <img src="/img/clients/oc.webp" alt="" class="client-marquee__logo" loading="lazy" decoding="async">
+                </div></div>
         </div>
     </div>
-
 </div>
+
+<style>
+  .client-marquee {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    overflow: hidden;
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 8%, #000 92%, transparent 100%);
+    mask-image: linear-gradient(to right, transparent 0%, #000 8%, #000 92%, transparent 100%);
+  }
+
+  .client-marquee__track {
+    display: flex;
+    width: max-content;
+    animation: client-marquee-scroll 30s linear infinite;
+  }
+
+  .client-marquee:hover .client-marquee__track,
+  .client-marquee:focus-within .client-marquee__track {
+    animation-play-state: paused;
+  }
+
+  .client-marquee__group {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: clamp(2.25rem, 4.5vw, 4.5rem);
+    padding-right: clamp(2.25rem, 4.5vw, 4.5rem);
+    flex-shrink: 0;
+  }
+
+  .client-marquee__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    padding: 0.5rem 0.75rem;
+  }
+
+  .client-marquee__logo {
+    height: clamp(42px, 4.5vw, 58px);
+    width: auto;
+    max-width: 190px;
+    object-fit: contain;
+    display: block;
+  }
+
+  @keyframes client-marquee-scroll {
+    0% {
+      transform: translate3d(0, 0, 0);
+    }
+    100% {
+      transform: translate3d(-50%, 0, 0);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .client-marquee__track {
+      animation: none;
+      width: 100%;
+      justify-content: center;
+    }
+    .client-marquee__group {
+      flex-wrap: wrap;
+      justify-content: center;
+      padding-right: 0;
+    }
+    .client-marquee__group[aria-hidden="true"] {
+      display: none;
+    }
+  }
+</style>
 <section class="container-fluid  justify-content-center text-center text-white py-5 h-100"
          style=" background: #303767" data-cta-section="engage"><div class="container custom-container d-flex flex-column  justify-content-center align-items-center text-center">
-        <p class="fw-bold pt-5 text-uppercase" style="font-size: 20px; color:#FE900F">REQUEST A FREE FEASIBILITY ANALYSIS</p>
+        <p class="fw-bold pt-5 text-uppercase" style="font-size: 20px; color:#FE900F">BOOK A DEMO</p>
         <h2 class="fw-bold py-5 text-white secondary-headline" style="font-size: 42px;">Start with fit, then define the pilot</h2>
 
         <p class="px-3" style="font-size: 20px; max-width: 800px;">
             Share your analytical challenge with our team. We will assess technical fit, data or sample requirements, and the fastest path to a focused pilot.
-        </p>
-        <a href="/contact" class="text-decoration-none pt-5" data-cta-location="engage" aria-label="Free feasibility analysis">
-            <div class="d-flex justify-content-center align-items-center  gap-0">
-                <button class="btn rounded-pill"
+        </p><a href="/contact" class="text-decoration-none pt-5" data-cta-location="engage">
+            <span class="visually-hidden">Book a demo</span>
+            <div class="d-flex justify-content-center align-items-center  gap-0" aria-hidden="true">
+                <span class="btn rounded-pill"
                         style="background:#FE900F; color: white; padding:15px 25px 15px 25px; margin-right:-8px;">
-                    Free feasibility
-                </button>
-                <img class="d-inline-block" src="/img/group-2-2.png" alt="Decorative call-to-action arrow" aria-hidden="true" style="width: 35px; height: 41px;">
-                <button class="btn rounded-pill"
+                    Book a
+                </span>
+                <img class="d-inline-block" src="/img/group-2-2.png" alt="Decorative connector" aria-hidden="true" style="width: 35px; height: 41px;">
+                <span class="btn rounded-pill"
                         style="background:#FE900F; color: white; padding:15px;margin-left:-8px;">
-                    analysis
-                </button>
+                    demo
+                </span>
             </div>
         </a>
     </div>
 </section>
 <!--Footer-->
 <!-- Footer -->
-<footer>
+<footer><section class="newsletter-section" data-newsletter-section aria-labelledby="newsletter-heading-footer">
+  <div class="container newsletter-container">
+    <div class="newsletter-panel">
+      <div class="newsletter-copy">
+        <h2 id="newsletter-heading-footer" class="newsletter-heading">Rombo AI newsletter</h2>
+        <p class="newsletter-description">NMR, AI and product updates.</p>
+      </div>
+      <form class="newsletter-form" data-newsletter-form data-newsletter-location="footer" data-consent-version="newsletter-signup-v2" data-consent-text="By subscribing, you agree to Rombo AI emails. Unsubscribe at any time." action="https://hook.eu2.make.com/gd23cysjnvg1zok3chyq6qx3nwl3co01" method="POST" aria-describedby="newsletter-privacy-footer">
+
+        <label class="newsletter-email-label" for="newsletter-email-footer">Email address</label>
+        <div class="newsletter-fields">
+          <input class="newsletter-email" name="email" type="email" id="newsletter-email-footer" required autocomplete="email" placeholder="Your email address" aria-describedby="newsletter-privacy-footer">
+          <button class="newsletter-submit" type="submit" disabled>Subscribe</button>
+        </div>
+
+        <div class="newsletter-honeypot" aria-hidden="true">
+          <label for="newsletter-website-footer">Leave this field empty</label>
+          <input type="text" name="website" id="newsletter-website-footer" tabindex="-1" autocomplete="off">
+        </div>
+        <p class="newsletter-status" data-newsletter-status role="status" aria-live="polite" aria-atomic="true"></p>
+        <p class="newsletter-privacy" id="newsletter-privacy-footer"><span>By subscribing, you agree to Rombo AI emails. Unsubscribe at any time.</span></p>
+        <noscript><p class="newsletter-noscript">JavaScript is required to sign up and see confirmation. Please enable it and try again.</p></noscript>
+      </form>
+    </div>
+  </div>
+</section>
+
     <div class="container-fluid border-bottom">
-        <div class="container custom-container">
-            <div class="row justify-content-md-center">
-                <div class="col-12 col-md-4 footer-logo">
-                    <img
-                            alt="Rombo AI"
-                            class="img-fluid"
-                            src="/img/romboai-04-1-2.png"
-                            width="200" height="79"
-                            loading="lazy"
-                    />
-                </div>
-                <div class="col-12 col-md-8">
-                    <div class="row m-0 d-flex align-items-center h-100">
-                        <p class="footer-text col-10 col-md-10 m-0 text-md-left text-lg-left">
-                            ROMBO AI © 2026 |
-                            <a href="/privacy/" style="color:#007bff;">Privacy Policy</a>
-                        </p>
-                        <a class="col-2 col-md-2 d-flex justify-content-start" href="https://www.linkedin.com/company/rombo-ai/"
-                           rel="noopener noreferrer" target="_blank" aria-label="Rombo AI on LinkedIn">
-                            <img alt="LinkedIn" class="img-fluid"
-                                 src="/img/icon-jam-icons-outline-logos-linkedin-1.svg"
-                                 width="24" height="24" loading="lazy">
-                        </a>
-                    </div>
-                </div>
+        <div class="container custom-container footer-bar">
+            <div class="footer-logo">
+                <img
+                        alt="Rombo AI"
+                        class="img-fluid"
+                        src="/img/romboai-04-1-2.png"
+                        width="200" height="79"
+                        loading="lazy"
+                />
             </div>
+            <p class="footer-text m-0">
+                ROMBO AI © 2026 |
+                <a href="/blog/">Blog</a>
+                |
+                <a href="https://rombo-ai.breezy.hr/" target="_blank" rel="noopener noreferrer">Careers</a>
+                |
+                <a href="/privacy/">Privacy Policy</a>
+            </p>
+            <a class="footer-linkedin" href="https://www.linkedin.com/company/rombo-ai/"
+               rel="noopener noreferrer" target="_blank" aria-label="Rombo AI on LinkedIn">
+                <img alt="LinkedIn" class="img-fluid"
+                     src="/img/icon-jam-icons-outline-logos-linkedin-1.svg"
+                     width="24" height="24" loading="lazy">
+            </a>
         </div>
     </div>
 </footer>
 <script defer src="/js/analytics.js"></script>
+<script defer src="/js/newsletter.js"></script>
 <!-- Footer -->
-
 
 
 </main>

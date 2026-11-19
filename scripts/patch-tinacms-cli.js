@@ -93,3 +93,17 @@ if (changed) {
   );
 }
 
+// TinaCMS packages depend on Zod v3 APIs (e.g. `z.function().args()`), while
+// security overrides pin `zod` to patched 4.6.x (which still ships `./v3/*`).
+// Re-point the root entrypoints of `zod` v4 to its bundled `./v3/external` module.
+for (const rel of ["index.js", "index.cjs"]) {
+  const zodEntry = path.join(__dirname, "..", "node_modules", "zod", rel);
+  if (fs.existsSync(zodEntry)) {
+    const zodSrc = fs.readFileSync(zodEntry, "utf8");
+    const patchedZod = zodSrc.replace(/\.\/v4\/classic\/external/g, "./v3/external");
+    if (patchedZod !== zodSrc) {
+      fs.writeFileSync(zodEntry, patchedZod, "utf8");
+    }
+  }
+}
+

@@ -15,8 +15,9 @@ hero_secondary_cta_label: "Compare applications"
 hero_secondary_cta_link: "#application-heading"
 ---
 {% include conversion_cases.html %}
+
 <section class="container pb-5">
   <h2>Not sure which application fits?</h2>
-  <p>Share your material, current measurement method and target decision. Our <a href="{{ '/nmr-feasibility/' | relative_url }}">feasibility review</a> identifies the data and validation work needed to assess fit.</p>
-  {% include ui/button.html href="/contact/" label="Request a free feasibility analysis" location="use_cases_footer" %}
+  <p>Share your material, current measurement method and target decision. Contact our team to discuss your application.</p>
+  {% include ui/button.html href="/contact/" label="Contact us" location="use_cases_footer" %}
 </section>

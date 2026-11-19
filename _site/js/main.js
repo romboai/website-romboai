@@ -53,11 +53,12 @@
       const el = document.getElementById(anchor);
       if (!el) return;
 
-      // Keep default behavior if you want, but smooth-scroll instead.
       e.preventDefault();
-      el.scrollIntoView({ behavior: "smooth", block: "start" });
-      // Apply the previous offset (~80px) by nudging after scroll.
-      window.setTimeout(() => window.scrollBy({ top: -80, left: 0, behavior: "instant" }), 0);
+      const top = Math.max(0, el.getBoundingClientRect().top + window.pageYOffset - 80);
+      window.scrollTo({ top: top, behavior: "smooth" });
+      if (history.replaceState) {
+        history.replaceState(null, "", "#" + anchor);
+      }
     });
   });
 

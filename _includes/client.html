@@ -1,4 +1,4 @@
-<div class="container-fluid  h-100 py-5 pb-0 my-0" style="position: relative; ">
+<div class="container-fluid h-100 py-5 pb-0 my-0" style="position: relative; overflow: hidden;">
     <video class="z-n1 position-absolute top-0 start-0 w-100 h-100"
            style="object-fit: cover;" autoplay muted loop playsinline controlslist="nodownload" aria-hidden="true">
         <source src="{{ site.baseurl }}/img/hero_white_play.mp4" type="video/mp4"/>
@@ -6,36 +6,110 @@
     </video>
     <div class="z-1 position-absolute top-0 start-0 w-100 h-100"
          style="mix-blend-mode: screen; background: #fcd8b8;"></div>
-    <div class="container custom_container">
+    <div class="container custom_container position-relative z-1">
         <div class="row">
-            <div class="z-1 col-12  text-center">
-                <p class="z-1  fw-bold text-wrapper5" style="font-size: 20px; letter-spacing: 1px; line-height: 20px;">
+            <div class="z-1 col-12 text-center">
+                <p class="z-1 fw-bold text-wrapper5" style="font-size: 20px; letter-spacing: 1px; line-height: 20px;">
                     PROVEN
                     IMPACT,
                     TRUSTED BY INDUSTRY LEADERS</p>
-                <h2 class="z-1  fw-bold text-dark" style="font-size: 42px; line-height: 46.2px;">Clients and Partners</h2>
-            </div>
-        </div>
-        <div class="row justify-content-center align-items-center text-center py-5">
-            <div class="z-1 col-6 col-md-4 col-lg-2 mb-3">
-                <img src="{{ site.baseurl }}/img/clients/gs.png" alt="GreenShare Logo" class="py-2 img-fluid" loading="lazy" decoding="async">
-            </div>
-            <div class="z-1 col-6 col-md-4 col-lg-2 mb-3">
-                <img src="{{ site.baseurl }}/img/clients/abinsula.png" alt="Abinsula logo" class="py-2 img-fluid" loading="lazy" decoding="async">
-            </div>
-            <div class="z-1 col-6 col-md-4 col-lg-2 mb-3">
-                <img src="{{ site.baseurl }}/img/clients/Nanalysis.png" alt="Nanalysis Logo" class="py-2 img-fluid" loading="lazy" decoding="async">
-            </div>
-            <div class="z-1 col-6 col-md-6 col-lg-2 mb-3">
-                <img src="{{ site.baseurl }}/img/clients/oc.webp" alt="Open Campus Logo" class="py-2 img-fluid" loading="lazy" decoding="async">
-            </div>
-            <div class="z-1 col-8 col-md-6 col-lg-2 mb-3">
-                <img src="{{ site.baseurl }}/img/clients/nsgroup.png" alt="Net Service Logo" class="py-2 img-fluid" loading="lazy" decoding="async">
-            </div>
-            <div class="z-1 col-8 col-md-6 col-lg-2 mb-3">
-                <img src="{{ site.baseurl }}/img/clients/nvidia-inception.png" alt="Nvidia Logo" class="py-2 img-fluid" loading="lazy" decoding="async">
+                <h2 class="z-1 fw-bold text-dark" style="font-size: 42px; line-height: 46.2px;">Clients and Partners</h2>
             </div>
         </div>
     </div>
 
+    {%- assign client_logos = "Nanalysis.png:Nanalysis Logo|porto-conte-ricerche.png:Porto Conte Ricerche Logo|eni.png:Eni Logo|claude-for-startups.png:Claude for Startups Logo|nvidia-inception.png:Nvidia Inception Logo|perani-partners.png:Perani & Partners Logo|gs.png:GreenShare Logo|abinsula.png:Abinsula Logo|oc.webp:Open Campus Logo" | split: "|" -%}
+
+    <div class="client-marquee position-relative z-1 py-5" aria-label="Clients and Partners">
+        <div class="client-marquee__track">
+            <div class="client-marquee__group">
+                {%- for item in client_logos -%}
+                {%- assign parts = item | split: ":" -%}
+                <div class="client-marquee__item">
+                    <img src="{{ site.baseurl }}/img/clients/{{ parts[0] }}" alt="{{ parts[1] }}" class="client-marquee__logo" loading="lazy" decoding="async">
+                </div>
+                {%- endfor -%}
+            </div>
+            <div class="client-marquee__group" aria-hidden="true">
+                {%- for item in client_logos -%}
+                {%- assign parts = item | split: ":" -%}
+                <div class="client-marquee__item">
+                    <img src="{{ site.baseurl }}/img/clients/{{ parts[0] }}" alt="" class="client-marquee__logo" loading="lazy" decoding="async">
+                </div>
+                {%- endfor -%}
+            </div>
+        </div>
+    </div>
 </div>
+
+<style>
+  .client-marquee {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    overflow: hidden;
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 8%, #000 92%, transparent 100%);
+    mask-image: linear-gradient(to right, transparent 0%, #000 8%, #000 92%, transparent 100%);
+  }
+
+  .client-marquee__track {
+    display: flex;
+    width: max-content;
+    animation: client-marquee-scroll 30s linear infinite;
+  }
+
+  .client-marquee:hover .client-marquee__track,
+  .client-marquee:focus-within .client-marquee__track {
+    animation-play-state: paused;
+  }
+
+  .client-marquee__group {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: clamp(2.25rem, 4.5vw, 4.5rem);
+    padding-right: clamp(2.25rem, 4.5vw, 4.5rem);
+    flex-shrink: 0;
+  }
+
+  .client-marquee__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    padding: 0.5rem 0.75rem;
+  }
+
+  .client-marquee__logo {
+    height: clamp(42px, 4.5vw, 58px);
+    width: auto;
+    max-width: 190px;
+    object-fit: contain;
+    display: block;
+  }
+
+  @keyframes client-marquee-scroll {
+    0% {
+      transform: translate3d(0, 0, 0);
+    }
+    100% {
+      transform: translate3d(-50%, 0, 0);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .client-marquee__track {
+      animation: none;
+      width: 100%;
+      justify-content: center;
+    }
+    .client-marquee__group {
+      flex-wrap: wrap;
+      justify-content: center;
+      padding-right: 0;
+    }
+    .client-marquee__group[aria-hidden="true"] {
+      display: none;
+    }
+  }
+</style>

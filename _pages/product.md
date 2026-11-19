@@ -16,7 +16,7 @@ hero_cta_label: "Get a free feasibility analysis"
 hero_cta_link: "/contact/"
 hero_cta_location: "product_hero"
 hero_secondary_cta_label: "See applications"
-hero_secondary_cta_link: "#application-heading"
+hero_secondary_cta_link: "/use-cases/"
 
 engage_eyebrow: "How we work"
 engage_title: "Talk through your analytical challenge."
@@ -45,13 +45,6 @@ products:
     link: "/product/#automl-materials"
     image: "/img/framework.png"
 ---
-
-<section class="container py-4">
-  <h2 class="h4">From research to an industrial evaluation</h2>
-  <p>Read our <a href="{{ '/blog/usecase-crudeoil-refinery' | relative_url }}">published refinery case study</a> to see the analytical challenge and evaluation approach. Results depend on sample coverage, reference data and validation conditions.</p>
-  <p>Planning a model evaluation? <a href="{{ '/nmr-feasibility/' | relative_url }}">See what to prepare for an NMR AI feasibility review</a>.</p>
-</section>
-{% include conversion_cases.html %}
 
 <section class="container-fluid py-4 py-lg-5" style="background:#FAFAFA; border-bottom: 1px solid #E6E6E6;">
   <div class="container custom_container">

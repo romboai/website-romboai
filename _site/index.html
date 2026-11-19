@@ -3,7 +3,22 @@
 <head>
     
 
-    
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      window.__romboEvents = window.__romboEvents || [];
+      window.romboTrack = function (eventName, params) {
+        var payload = Object.assign({
+          page_location: location.href,
+          page_path: location.pathname
+        }, params || {});
+        window.__romboEvents.push({ event: eventName, params: payload });
+        if (typeof gtag === "function") {
+          gtag("event", eventName, payload);
+        } else {
+          window.dataLayer.push(Object.assign({ event: eventName }, payload));
+        }
+      };
+    </script>
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
@@ -11,6 +26,7 @@
     <meta charset="utf-8">
     <meta name="referrer" content="strict-origin-when-cross-origin">
     <meta name="theme-color" content="#090C23">
+    <meta name="rombo-page-type" content="home">
 
     <!-- Preconnect: only the 2 most critical origins -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -28,8 +44,16 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/css/custom/style.css">
     <link rel="stylesheet" href="/css/custom/responsive.css">
-    <link rel="stylesheet" href="/css/custom/scrollbar.css"><title>Rombo AI | AI for Spectral & Chemical Analysis (NMR)</title>
-    <meta name="description" content="Automate spectral and chemical analysis with AI and Low Field NMR: faster insights, proprietary models, and end-to-end workflows for R&D and industry.">
+    <link rel="stylesheet" href="/css/custom/scrollbar.css">
+    <link rel="stylesheet" href="/css/custom/newsletter.css"><script>
+      (function () {
+        if (location.hostname === "www.rombo.ai") {
+          location.replace("https://rombo.ai" + location.pathname + location.search + location.hash);
+        }
+      })();
+    </script>
+    <title>Rombo AI | AI Platform for Industrial NMR Analysis</title>
+    <meta name="description" content="Rombo AI Platform turns benchtop NMR into validated physico-chemical data and decision-ready insight, traceable across instruments and sites.">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <meta name="bingbot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
@@ -39,24 +63,24 @@
     <meta property="og:site_name" content="Rombo AI">
     <meta property="og:locale" content="en_US">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Rombo AI | AI for Spectral & Chemical Analysis (NMR)">
-    <meta property="og:description" content="Automate spectral and chemical analysis with AI and Low Field NMR: faster insights, proprietary models, and end-to-end workflows for R&D and industry.">
+    <meta property="og:title" content="Rombo AI | AI Platform for Industrial NMR Analysis">
+    <meta property="og:description" content="Rombo AI Platform turns benchtop NMR into validated physico-chemical data and decision-ready insight, traceable across instruments and sites.">
     <meta property="og:url" content="https://rombo.ai/">
-    <meta property="og:image" content="https://rombo.ai/img/og/rombo-ai.png">
-    <meta property="og:image:alt" content="Rombo AI | AI for Spectral & Chemical Analysis (NMR)">
+    <meta property="og:image" content="https://rombo.ai/img/og/rombo-ai.jpg">
+    <meta property="og:image:alt" content="Rombo AI | AI Platform for Industrial NMR Analysis">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Rombo AI | AI for Spectral & Chemical Analysis (NMR)">
-    <meta name="twitter:description" content="Automate spectral and chemical analysis with AI and Low Field NMR: faster insights, proprietary models, and end-to-end workflows for R&D and industry.">
-    <meta name="twitter:image" content="https://rombo.ai/img/og/rombo-ai.png">
-    <meta name="twitter:image:alt" content="Rombo AI | AI for Spectral & Chemical Analysis (NMR)">
+    <meta name="twitter:title" content="Rombo AI | AI Platform for Industrial NMR Analysis">
+    <meta name="twitter:description" content="Rombo AI Platform turns benchtop NMR into validated physico-chemical data and decision-ready insight, traceable across instruments and sites.">
+    <meta name="twitter:image" content="https://rombo.ai/img/og/rombo-ai.jpg">
+    <meta name="twitter:image:alt" content="Rombo AI | AI Platform for Industrial NMR Analysis">
 
     <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
-    <link rel="icon" type="image/svg" sizes="32x32" href="/img/favicon-32x32.png">
-    <link rel="icon" type="image/svg" sizes="16x16" href="/img/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
     <link rel="manifest" href="/img/site.webmanifest">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css"
           media="print" onload="this.media='all'">
@@ -100,7 +124,6 @@
         {
           "@type": "ContactPoint",
           "contactType": "sales",
-          "email": "contact@rombo.ai",
           "telephone": "+39 352 064 8081",
           "availableLanguage": ["English", "Italian"],
           "areaServed": ["EU","Worldwide"]
@@ -140,13 +163,14 @@
       "@type": "WebPage",
       "@id": "https://rombo.ai/#webpage",
       "url": "https://rombo.ai/",
-      "name": "Rombo AI | AI for Spectral & Chemical Analysis (NMR)",
+      "name": "Rombo AI | AI Platform for Industrial NMR Analysis",
       "isPartOf": { "@id": "https://rombo.ai/#website" },
       "inLanguage": "en",
-      "description": "Automate spectral and chemical analysis with AI and Low Field NMR: faster insights, proprietary models, and end-to-end workflows for R&D and industry.",
+      "description": "Rombo AI Platform turns benchtop NMR into validated physico-chemical data and decision-ready insight, traceable across instruments and sites.",
+      "dateModified": "2026-09-15T00:00:00+02:00",
       "primaryImageOfPage": {
         "@type": "ImageObject",
-        "url": "https://rombo.ai/img/og/rombo-ai.png"
+        "url": "https://rombo.ai/img/og/rombo-ai.jpg"
       },
       "breadcrumb": { "@id": "https://rombo.ai/#breadcrumb" }
     },
@@ -167,11 +191,10 @@
 
 </head>
 
-
 <body>
 
 <button id="UpBtn" class="up-btn d-none" aria-label="Back to top"><span>
-		<svg xmlns="http://www.w3.org/2000/svg" width="23.721" height="28.513" viewBox="0 0 28.513 23.721">
+		<svg xmlns="http://www.w3.org/2000/svg" width="23.721" height="28.513" viewBox="0 0 28.513 23.721" aria-hidden="true" focusable="false">
 			<g id="right-arrow" transform="translate(0 0)">
 			<g id="Group_22" data-name="Group 22" transform="translate(0 0) rotate(-90)">
 				<path id="Path_1869" data-name="Path 1869"
@@ -183,14 +206,12 @@
 		</span>
 </button>
 
-<!-- Menu -->
-
-<a class="skip-link" href="#main-content">Skip to content</a>
+<!-- Menu --><a class="skip-link" href="#main-content">Skip to content</a>
 
 <nav class="container-fluid navbar fixed-top navbar-expand-md navbar-light custom-shadow" style="max-height: 58px; background:#090C2333;">
     <div class="container custom-container">
         <!-- Logo -->
-        <a class="navbar-brand" style="padding-left: 10px; padding-bottom: 5px" href="/#">
+        <a class="navbar-brand" style="padding-left: 10px; padding-bottom: 5px" href="/" aria-current="page">
             <img src="/img/logo-1.svg" alt="Rombo AI Logo" class="img-fluid" >
         </a>
         <!-- Toggler/collapsible Button -->
@@ -215,17 +236,12 @@
                     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="productsDropdown">
                         <li>
                             <a class="dropdown-item" href="/product/">
-                                Material Intelligence Platform
+                                Rombo AI Platform
                             </a>
                         </li>
                         <li>
-                            <a class="dropdown-item" href="/product/#nmr-ai-analysis-tool">
-                                NMR AI Analyzer
-                            </a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="/product/#automl-materials">
-                                AutoML Framework
+                            <a class="dropdown-item" href="/spectra/">
+                                Spectra
                             </a>
                         </li>
                     </ul>
@@ -256,23 +272,10 @@
                                 Transformer Oil Monitoring
                             </a>
                         </li>
-                        <li>
-                            <a class="dropdown-item" href="/use-cases/nmr-compound-identification/">
-                                NMR Compound Identification
-                            </a>
-                        </li>
                     </ul>
+                </li><li class="nav-item d-flex align-items-center">
+                    <a class="nav-link nav-cta" href="/contact/" data-cta-location="home_header">Contact us</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link menu-item text-white" href="/blog/">Blog</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link menu-item text-white" href="https://rombo-ai.breezy.hr/" target="_blank" rel="noopener noreferrer">Careers</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link menu-item text-white" href="/contact/" data-cta-location="navigation">Contact us</a>
-                </li>
-             
             </ul>
         </div>
     </div>
@@ -280,59 +283,52 @@
 <!-- Menu -->
 
 
-
-<main id="main-content" tabindex="-1">
-
+<main id="main-content" tabindex="-1" class="page-home">
 
 
-<!--Hero Section-->
-<div class="container-fluid  hero-section">
-  <video class="hero-video" autoplay muted loop playsinline controlslist="nodownload" data-desktop-only="true" preload="none">
-      <source data-src="/img/hero_back_play.mp4" type="video/mp4"/>
-      <track kind="captions" label="No dialogue" default>
-      Your browser does not support the video tag.
+
+<div class="container-fluid hero-section">
+  <video class="hero-video" autoplay muted loop playsinline controlslist="nodownload" data-desktop-only="true" preload="none" aria-hidden="true">
+    <source data-src="/img/hero_back_play.mp4" type="video/mp4"/>
+    <track kind="captions" label="No dialogue" default>
+    Your browser does not support the video tag.
   </video>
-
-  <!-- Mask Overlay -->
   <div class="mask"></div>
-  <div class="container custom-container w-100  h-100">
-      <div class="row m-0 w-100  h-100  hero-content-message">
-          <div class="z-1 col-md-6 align-self-center" style="text-align: left">
-              <h1 class="text-white text-responsive m-0">
-                  <span class="text-highlight">Building the First AI Foundation Model for NMR</span>
-              </h1>
-
-              
-              <a href="/contact" class="text-decoration-none d-inline-block mt-4" data-cta-location="hero" aria-label="Talk to us">
-                  <div class="d-flex justify-content-start align-items-center gap-0">
-                      <button class="btn rounded-pill"
-                              style="background:#FE900F; color: white; padding:15px 25px 15px 25px; margin-right:-8px;">
-                          Talk to
-                      </button>
-                      <img class="d-inline-block" src="/img/group-2-2.png" alt="Decorative call-to-action arrow" aria-hidden="true" style="width: 35px; height: 41px;">
-                      <button class="btn rounded-pill"
-                              style="background:#FE900F; color: white; padding:15px;margin-left:-8px;">
-                          us
-                      </button>
-                  </div>
-              </a>
-              
-          </div>
+  <div class="container custom-container w-100 h-100">
+    <div class="row m-0 w-100 h-100">
+      <div class="z-1 col-12 col-lg-7 hero-copy">
+        
+        <p class="hero-eyebrow fw-bold text-uppercase mb-2">THE AI PLATFORM FOR INDUSTRIAL NMR</p>
+        
+        <h1 class="text-white m-0"><span class="text-highlight">From one NMR scan to validated insight in minutes.</span></h1>
+        
+        <p class="hero-sub text-white mb-0">Patented NMR AI models and in-house spectroscopy expertise turn one scan into physico-chemical properties and decision-ready insight — validated against your reference methods, comparable across instruments and sites.</p>
+        
+        <div class="hero-actions d-flex flex-wrap gap-3 mt-4">
+          <a href="/contact/" class="btn rounded-pill"
+             style="background:#FE900F; color:#fff; padding:15px 25px;"
+             data-cta-location="home_header"
+             data-experiment-id="home_hero_cta_copy_v1"
+             data-experiment-a="Book a demo"
+             data-experiment-b="Discuss your use case"
+             data-experiment-c="Talk to an NMR expert">Book a demo</a>
+          <a href="#how-it-works" class="btn rounded-pill sliding-link"
+             style="background:transparent; color:#fff; border:1px solid #fff; padding:15px 25px;"
+             data-cta-location="hero_secondary">See how it works</a>
+        </div>
       </div>
+    </div>
   </div>
 </div>
-<!--Hero Section-->
-
 <script>
   (function () {
     var isDesktop = window.matchMedia && window.matchMedia("(min-width: 992px)").matches;
-    if (!isDesktop) {
-      var v = document.querySelector(".hero-section .hero-video[data-desktop-only='true']");
-      if (v) v.remove();
-      return;
-    }
     var video = document.querySelector(".hero-section .hero-video[data-desktop-only='true']");
     if (!video) return;
+    if (!isDesktop) {
+      video.remove();
+      return;
+    }
     var source = video.querySelector("source[data-src]");
     if (!source) return;
     source.src = source.getAttribute("data-src");
@@ -343,7 +339,7 @@
 </script>
 
 <div class="container-fluid align-self-end mx-0" style="position: relative;">
-  <img class="img-fluid w-100 hero-divider-container" style="bottom:-10px; object-fit: cover; z-index: 1;" src="/img/Separator_Hero.svg" alt="Decorative hero section divider" aria-hidden="true"/>
+  <img class="img-fluid w-100 hero-divider-container" style="bottom:-10px; object-fit: cover; z-index: 1;" src="/img/Separator_Hero.svg" alt="Decorative section divider" aria-hidden="true"/>
 </div>
 
 <!--Intro Section-->
@@ -351,8 +347,8 @@
   <div class="row justify-content-center intro-header">
       <div class="col-12">
           <div class="top text-center">
-              <h2 id="intro-heading" class="text-wrapper5">TURNING COMPLEX ANALYSIS INTO DECISION-READY INSIGHT</h2>
-              <p class="text-wrapper6">From laboratory data to faster business and operational decisions</p>
+              <p class="text-wrapper5 text-uppercase mb-2">THE PROBLEM</p>
+              <h2 id="intro-heading" class="text-wrapper6 m-0">Quality decisions shouldn't wait for the lab.</h2>
           </div>
       </div>
   </div>
@@ -360,59 +356,169 @@
       <!-- Left Image (Hidden on Mobile) -->
       <div class="col-md-1 d-none d-md-block text-start px-0">
           <img class="img-fluid intro-left" style="padding-right: 21px;" src="/img/livello-1-7.svg"
-               alt="Decorative intro background shape" aria-hidden="true">
+               alt="Decorative graphic" aria-hidden="true">
       </div>
 
       <!-- Main Content with Background Image -->
       <div class="col-md-10 px-0 intro-body">
-          <!-- <img class="img-fluid d-none d-sm-block background-image" src="/img/livello-1-5.svg" alt="Background Level"> -->
-          <div class="row text-center w-100">
-              <div class="col-lg-3 col-sm-6 p-5 p-md-2">
-                  <img src="/img/modalit-isolamento-8.svg" alt="Precision Icon">
+          <div class="row text-center w-100 justify-content-center">
+              
+              <div class="col-lg-4 col-sm-6 px-4 py-4 py-md-3">
+                  <img src="/img/modalit-isolamento-8.svg" alt="Variable inputs" aria-hidden="true">
                   <p style=" padding-top: 20px">
-                      <span class="text-wrapper28">Precision Redefined</span><br>
-                      <span class="text-wrapper29">We combine patented AI models with </span>
-                      <span class="text-wrapper30">low-field NMR</span>
-                      <span class="text-wrapper29"> to provide real industrial materials insights beyond traditional methods.</span>
+                      <span class="text-wrapper28">Variable inputs</span><br>
+                      <span class="text-wrapper29">Every crude cargo, oil sample or spent solvent stream is different, and yesterday's analysis doesn't describe today's material.</span>
                   </p>
               </div>
-              <div class="col-lg-3 col-sm-6 p-5 p-md-2">
-                  <img src="/img/modalit-isolamento-9.svg" alt="Efficiency Icon">
+              
+              <div class="col-lg-4 col-sm-6 px-4 py-4 py-md-3">
+                  <img src="/img/modalit-isolamento-9.svg" alt="One sample, many methods" aria-hidden="true">
                   <p style=" padding-top: 20px">
-                      <span class="text-wrapper28">Efficiency and Speed</span><br>
-                      <span class="text-wrapper29">Say goodbye to time-consuming analysis processes. Our solution ensures quicker decision-making and faster time-to-market for your products.</span>
-                      <span class="text-wrapper21"> 15 minutes</span>
-                      <span class="text-wrapper29"> compared to weeks of traditional laboratory analysis.</span>
+                      <span class="text-wrapper28">One sample, many methods</span><br>
+                      <span class="text-wrapper29">A full quality profile can mean GC, distillation, Karl Fischer and more — each with its own instrument, operator and queue.</span>
                   </p>
               </div>
-              <div class="col-lg-3 col-sm-6 p-5 p-md-2">
-                  <img src="/img/modalit-isolamento-10.svg"
-                       alt="Understanding Icon">
+              
+              <div class="col-lg-4 col-sm-6 px-4 py-4 py-md-3">
+                  <img src="/img/modalit-isolamento-10.svg" alt="Calibrations that don't travel" aria-hidden="true">
                   <p style=" padding-top: 20px">
-                      <span class="text-wrapper28">In-depth Understanding</span><br>
-                      <span class="text-wrapper29">Build a consistent material fingerprint over time, empowering data-driven decisions that fuel innovation and enhance QC.</span>
+                      <span class="text-wrapper28">Calibrations that don't travel</span><br>
+                      <span class="text-wrapper29">Classic chemometric models often have to be rebuilt for every matrix, instrument and site.</span>
                   </p>
               </div>
-              <div class="col-lg-3 col-sm-6 p-5 p-md-2">
-                  <img src="/img/modalit-isolamento-11.svg" alt="Cost Effective Icon">
-                  <p style=" padding-top: 20px">
-                      <span class="text-wrapper28">Cost-Effective Solutions</span><br>
-                      <span class="text-wrapper29">Optimize costs by streamlining analysis processes, reducing manual labor, and eliminating potential errors associated with conventional methods.</span>
-                  </p>
-              </div>
+              
           </div>
       </div>
 
       <!-- Right Image (Hidden on Mobile) -->
       <div class="col-md-1 d-none d-md-block text-end px-0">
           <img class="img-fluid intro-right" style="padding-left: 21px;" src="/img/livello-1-6.svg"
-               alt="Decorative intro background shape" aria-hidden="true">
+               alt="Decorative graphic" aria-hidden="true">
       </div>
   </div>
 </section>
 
 <!--Intro Section-->
 
+<section id="how-it-works" class="container-fluid justify-content-center text-center text-white py-5" style="background:#303767;" aria-labelledby="how-it-works-heading">
+  <div class="container custom_container d-flex flex-column justify-content-center align-items-center text-center">
+    <p class="fw-bold pt-2 text-uppercase" style="font-size: 14px; color:#FE900F; letter-spacing:.06em;">HOW IT WORKS</p>
+    <h2 id="how-it-works-heading" class="fw-bold py-3 text-white secondary-headline">From one scan to a decision</h2>
+    <div class="how-it-works-flow w-100 mt-2">
+      
+      <article class="how-it-works-step p-4 rounded-4 h-100">
+        <div class="how-it-works-step__visual mb-3" aria-hidden="true">
+          <span class="how-it-works-step__num">1</span>
+          <svg class="how-it-works-step__icon" viewBox="0 0 64 64" width="72" height="72" fill="none" aria-hidden="true" focusable="false">
+  <rect x="27" y="6" width="10" height="34" rx="5" stroke="#FE900F" stroke-width="2.2"/>
+  <path d="M27 16h10M27 22h10" stroke="#FE900F" stroke-width="1.7" stroke-linecap="round"/>
+  <ellipse cx="32" cy="26" rx="15" ry="7" stroke="#FE900F" stroke-width="2"/>
+  <path d="M18 48h28M24 54h16" stroke="#FE900F" stroke-width="2.2" stroke-linecap="round"/>
+</svg>
+        </div>
+        <p class="fw-bold mb-1 how-it-works-step__title">Measure</p>
+        <p class="text-white-50 mb-0 how-it-works-step__text">Run a benchtop NMR scan of your sample, with minimal preparation.</p>
+      </article>
+      
+      <div class="how-it-works-arrow" aria-hidden="true">
+        <svg viewBox="0 0 48 24" width="40" height="20" fill="none" focusable="false">
+          <path d="M2 12h36M30 4l14 8-14 8" stroke="#FE900F" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      
+      
+      <article class="how-it-works-step p-4 rounded-4 h-100">
+        <div class="how-it-works-step__visual mb-3" aria-hidden="true">
+          <span class="how-it-works-step__num">2</span>
+          <svg class="how-it-works-step__icon" viewBox="0 0 64 64" width="72" height="72" fill="none" aria-hidden="true" focusable="false">
+  <path d="M8 30 18 18l7 10L36 10l8 12 10-16" stroke="#FE900F" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="32" cy="46" r="7" stroke="#FE900F" stroke-width="2"/>
+  <circle cx="16" cy="50" r="4" stroke="#FE900F" stroke-width="2"/>
+  <circle cx="48" cy="50" r="4" stroke="#FE900F" stroke-width="2"/>
+  <path d="M20 50h5.2M38.8 50H44M32 39v-4" stroke="#FE900F" stroke-width="1.8" stroke-linecap="round"/>
+</svg>
+        </div>
+        <p class="fw-bold mb-1 how-it-works-step__title">Predict</p>
+        <p class="text-white-50 mb-0 how-it-works-step__text">Our proprietary models, adapted to your matrix, return multiple physico-chemical properties and insight at once.</p>
+      </article>
+      
+      <div class="how-it-works-arrow" aria-hidden="true">
+        <svg viewBox="0 0 48 24" width="40" height="20" fill="none" focusable="false">
+          <path d="M2 12h36M30 4l14 8-14 8" stroke="#FE900F" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      
+      
+      <article class="how-it-works-step p-4 rounded-4 h-100">
+        <div class="how-it-works-step__visual mb-3" aria-hidden="true">
+          <span class="how-it-works-step__num">3</span>
+          <svg class="how-it-works-step__icon" viewBox="0 0 64 64" width="72" height="72" fill="none" aria-hidden="true" focusable="false">
+  <rect x="14" y="8" width="36" height="48" rx="4" stroke="#FE900F" stroke-width="2.2"/>
+  <path d="M22 20h20M22 28h20M22 36h10" stroke="#FE900F" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="44" cy="44" r="11" fill="#303767" stroke="#FE900F" stroke-width="2"/>
+  <path d="m39 44 3.4 3.4 7-7.2" stroke="#FE900F" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+        </div>
+        <p class="fw-bold mb-1 how-it-works-step__title">Decide</p>
+        <p class="text-white-50 mb-0 how-it-works-step__text">Get a traceable report, track drift over time and share results with your enterprise systems.</p>
+      </article>
+      
+      
+    </div>
+  </div>
+</section>
+
+<section id="why-rombo" class="container-fluid py-5" aria-labelledby="why-rombo-heading">
+  <div class="row justify-content-center intro-header">
+      <div class="col-12">
+          <div class="top text-center">
+              <p class="text-wrapper5 text-uppercase mb-2">WHY ROMBO AI</p>
+              <h2 id="why-rombo-heading" class="text-wrapper6 m-0 mx-auto px-3" style="max-width: 20em; text-wrap: balance;">Built by NMR scientists and AI researchers.</h2>
+          </div>
+      </div>
+  </div>
+  <div class="container custom_container">
+      <div class="row text-center justify-content-center intro-body g-4">
+          
+          <div class="col-lg-4 col-sm-6">
+              <div class="p-4 border rounded-4 h-100">
+                  
+                  <img src="/img/modalit-isolamento-1.svg" class="why-rombo-icon mb-3" alt="Patented, NMR-native models" aria-hidden="true" width="56" height="48">
+                  
+                  <p class="mb-0">
+                      <span class="text-wrapper28">Patented, NMR-native models</span><br>
+                      <span class="text-wrapper29">We start from our openly published NMR foundation model and build patented, proprietary models on internal industrial datasets — so projects need less calibration data to get started.</span>
+                  </p>
+              </div>
+          </div>
+          
+          <div class="col-lg-4 col-sm-6">
+              <div class="p-4 border rounded-4 h-100">
+                  
+                  <img src="/img/modalit-isolamento-2.svg" class="why-rombo-icon mb-3" alt="Spectroscopy expertise in the loop" aria-hidden="true" width="56" height="48">
+                  
+                  <p class="mb-0">
+                      <span class="text-wrapper28">Spectroscopy expertise in the loop</span><br>
+                      <span class="text-wrapper29">PhDs in machine learning, physics and mathematics with hands-on spectroscopy experience design each model with your analytical team, from sample preparation to acceptance criteria.</span>
+                  </p>
+              </div>
+          </div>
+          
+          <div class="col-lg-4 col-sm-6">
+              <div class="p-4 border rounded-4 h-100">
+                  
+                  <img src="/img/modalit-isolamento-6.svg" class="why-rombo-icon mb-3" alt="Validated on your methods" aria-hidden="true" width="56" height="48">
+                  
+                  <p class="mb-0">
+                      <span class="text-wrapper28">Validated on your methods</span><br>
+                      <span class="text-wrapper29">Every deployment is benchmarked against your ASTM or IEC reference methods, with metrics agreed before go-live.</span>
+                  </p>
+              </div>
+          </div>
+          
+      </div>
+  </div>
+</section>
 
 <!--Technology Section-->
 <section class="container-fluid" style="background: #303767;" aria-labelledby="technology-heading">
@@ -433,10 +539,10 @@
           <div class="col-12  technology-body">
               <div class="col-12 position-absolute text-center" style="top:0; left: 0; right: 0;bottom: 0">
                   <img class="img-fluid h-100 w-100" src="/img/livello-1-4.svg"
-                       alt="Background Level">
+                       alt="Decorative background graphic" aria-hidden="true">
                   <img class="img-fluid mx-0 d-none d-md-block position-absolute" style="left: 47%;bottom: 4%;"
                        src="/img/livello-1-8.svg"
-                       alt="Foreground Level">
+                       alt="Decorative background graphic" aria-hidden="true">
               </div>
               <div class="row d-flex flex-wrap flex-md-nowrap text-left  justify-content-center"
               >
@@ -460,6 +566,16 @@
                                           our foundation model transforms low-field NMR from a laboratory tool into a continuous source of material intelligence for industrial operations.
                                       </span>
                           </p>
+                          <div class="px-2 px-md-5 pb-4">
+                            <a class="github-cta" href="https://github.com/romboai/rose-1h-nmr"
+                               rel="noopener noreferrer" target="_blank"
+                               data-cta-location="technology_github">
+                              <span>View the foundation model on GitHub</span>
+                              <svg class="github-cta-mark" viewBox="0 0 16 16" width="22" height="22" aria-hidden="true" focusable="false">
+                                <path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/>
+                              </svg>
+                            </a>
+                          </div>
                       </div>
                   </div>
 
@@ -472,47 +588,139 @@
 
 
 <!--Client-->
-<div class="container-fluid  h-100 py-5 pb-0 my-0" style="position: relative; ">
+<div class="container-fluid h-100 py-5 pb-0 my-0" style="position: relative; overflow: hidden;">
     <video class="z-n1 position-absolute top-0 start-0 w-100 h-100"
-           style="object-fit: cover;" autoPlay muted loop playsinline controlslist="nodownload">
+           style="object-fit: cover;" autoplay muted loop playsinline controlslist="nodownload" aria-hidden="true">
         <source src="/img/hero_white_play.mp4" type="video/mp4"/>
         Your browser does not support the video tag.
     </video>
     <div class="z-1 position-absolute top-0 start-0 w-100 h-100"
          style="mix-blend-mode: screen; background: #fcd8b8;"></div>
-    <div class="container custom_container">
+    <div class="container custom_container position-relative z-1">
         <div class="row">
-            <div class="z-1 col-12  text-center">
-                <p class="z-1  fw-bold text-wrapper5" style="font-size: 20px; letter-spacing: 1px; line-height: 20px;">
+            <div class="z-1 col-12 text-center">
+                <p class="z-1 fw-bold text-wrapper5" style="font-size: 20px; letter-spacing: 1px; line-height: 20px;">
                     PROVEN
                     IMPACT,
                     TRUSTED BY INDUSTRY LEADERS</p>
-                <h2 class="z-1  fw-bold text-dark" style="font-size: 42px; line-height: 46.2px;">Clients and Partners</h2>
+                <h2 class="z-1 fw-bold text-dark" style="font-size: 42px; line-height: 46.2px;">Clients and Partners</h2>
             </div>
         </div>
-        <div class="row justify-content-center align-items-center text-center py-5">
-            <div class="z-1 col-6 col-md-4 col-lg-2 mb-3">
-                <img src="/img/clients/gs.png" alt="GreenShare Logo" class="py-2 img-fluid" loading="lazy" decoding="async">
-            </div>
-            <div class="z-1 col-6 col-md-4 col-lg-2 mb-3">
-                <img src="/img/clients/abinsula.png" alt="Abisnula Logo" class="py-2 img-fluid" loading="lazy" decoding="async">
-            </div>
-            <div class="z-1 col-6 col-md-4 col-lg-2 mb-3">
-                <img src="/img/clients/Nanalysis.png" alt="Nanalysis Logo" class="py-2 img-fluid" loading="lazy" decoding="async">
-            </div>
-            <div class="z-1 col-6 col-md-6 col-lg-2 mb-3">
-                <img src="/img/clients/oc.webp" alt="Open Campus Logo" class="py-2 img-fluid" loading="lazy" decoding="async">
-            </div>
-            <div class="z-1 col-8 col-md-6 col-lg-2 mb-3">
-                <img src="/img/clients/nsgroup.png" alt="Net Service Logo" class="py-2 img-fluid" loading="lazy" decoding="async">
-            </div>
-            <div class="z-1 col-8 col-md-6 col-lg-2 mb-3">
-                <img src="/img/clients/nvidia-inception.png" alt="Nvidia Logo" class="py-2 img-fluid" loading="lazy" decoding="async">
-            </div>
+    </div><div class="client-marquee position-relative z-1 py-5" aria-label="Clients and Partners">
+        <div class="client-marquee__track">
+            <div class="client-marquee__group"><div class="client-marquee__item">
+                    <img src="/img/clients/Nanalysis.png" alt="Nanalysis Logo" class="client-marquee__logo" loading="lazy" decoding="async">
+                </div><div class="client-marquee__item">
+                    <img src="/img/clients/porto-conte-ricerche.png" alt="Porto Conte Ricerche Logo" class="client-marquee__logo" loading="lazy" decoding="async">
+                </div><div class="client-marquee__item">
+                    <img src="/img/clients/eni.png" alt="Eni Logo" class="client-marquee__logo" loading="lazy" decoding="async">
+                </div><div class="client-marquee__item">
+                    <img src="/img/clients/claude-for-startups.png" alt="Claude for Startups Logo" class="client-marquee__logo" loading="lazy" decoding="async">
+                </div><div class="client-marquee__item">
+                    <img src="/img/clients/nvidia-inception.png" alt="Nvidia Inception Logo" class="client-marquee__logo" loading="lazy" decoding="async">
+                </div><div class="client-marquee__item">
+                    <img src="/img/clients/perani-partners.png" alt="Perani & Partners Logo" class="client-marquee__logo" loading="lazy" decoding="async">
+                </div><div class="client-marquee__item">
+                    <img src="/img/clients/gs.png" alt="GreenShare Logo" class="client-marquee__logo" loading="lazy" decoding="async">
+                </div><div class="client-marquee__item">
+                    <img src="/img/clients/abinsula.png" alt="Abinsula Logo" class="client-marquee__logo" loading="lazy" decoding="async">
+                </div><div class="client-marquee__item">
+                    <img src="/img/clients/oc.webp" alt="Open Campus Logo" class="client-marquee__logo" loading="lazy" decoding="async">
+                </div></div>
+            <div class="client-marquee__group" aria-hidden="true"><div class="client-marquee__item">
+                    <img src="/img/clients/Nanalysis.png" alt="" class="client-marquee__logo" loading="lazy" decoding="async">
+                </div><div class="client-marquee__item">
+                    <img src="/img/clients/porto-conte-ricerche.png" alt="" class="client-marquee__logo" loading="lazy" decoding="async">
+                </div><div class="client-marquee__item">
+                    <img src="/img/clients/eni.png" alt="" class="client-marquee__logo" loading="lazy" decoding="async">
+                </div><div class="client-marquee__item">
+                    <img src="/img/clients/claude-for-startups.png" alt="" class="client-marquee__logo" loading="lazy" decoding="async">
+                </div><div class="client-marquee__item">
+                    <img src="/img/clients/nvidia-inception.png" alt="" class="client-marquee__logo" loading="lazy" decoding="async">
+                </div><div class="client-marquee__item">
+                    <img src="/img/clients/perani-partners.png" alt="" class="client-marquee__logo" loading="lazy" decoding="async">
+                </div><div class="client-marquee__item">
+                    <img src="/img/clients/gs.png" alt="" class="client-marquee__logo" loading="lazy" decoding="async">
+                </div><div class="client-marquee__item">
+                    <img src="/img/clients/abinsula.png" alt="" class="client-marquee__logo" loading="lazy" decoding="async">
+                </div><div class="client-marquee__item">
+                    <img src="/img/clients/oc.webp" alt="" class="client-marquee__logo" loading="lazy" decoding="async">
+                </div></div>
         </div>
     </div>
-
 </div>
+
+<style>
+  .client-marquee {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    overflow: hidden;
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 8%, #000 92%, transparent 100%);
+    mask-image: linear-gradient(to right, transparent 0%, #000 8%, #000 92%, transparent 100%);
+  }
+
+  .client-marquee__track {
+    display: flex;
+    width: max-content;
+    animation: client-marquee-scroll 30s linear infinite;
+  }
+
+  .client-marquee:hover .client-marquee__track,
+  .client-marquee:focus-within .client-marquee__track {
+    animation-play-state: paused;
+  }
+
+  .client-marquee__group {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: clamp(2.25rem, 4.5vw, 4.5rem);
+    padding-right: clamp(2.25rem, 4.5vw, 4.5rem);
+    flex-shrink: 0;
+  }
+
+  .client-marquee__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    padding: 0.5rem 0.75rem;
+  }
+
+  .client-marquee__logo {
+    height: clamp(42px, 4.5vw, 58px);
+    width: auto;
+    max-width: 190px;
+    object-fit: contain;
+    display: block;
+  }
+
+  @keyframes client-marquee-scroll {
+    0% {
+      transform: translate3d(0, 0, 0);
+    }
+    100% {
+      transform: translate3d(-50%, 0, 0);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .client-marquee__track {
+      animation: none;
+      width: 100%;
+      justify-content: center;
+    }
+    .client-marquee__group {
+      flex-wrap: wrap;
+      justify-content: center;
+      padding-right: 0;
+    }
+    .client-marquee__group[aria-hidden="true"] {
+      display: none;
+    }
+  }
+</style>
 <!--Articles (removed from home page)-->
 <!--SupportBy-->
 <!-- Supported By Section -->
@@ -520,107 +728,156 @@
         class="container-fluid position-relative w-100 justify-content-around align-items-center text-center bg-white">
 
     <div class="container custom-container">
-        <div class="row px-2 py-4 w-100">
-            <div class="col-md-4 p-3 p-lg-0">
-                <div class="fw-bold" style="font-size: 20px; letter-spacing: 1px; color: #FE900F;"><a
-                        href="/voucher/"> ROMBO.AI</a></div>
-                <div class="text-dark fw-bold" style="font-size: 42px; letter-spacing: 0;"><a
-                        href="/voucher/">Supported by</a></div>
+        <div class="d-flex flex-column flex-md-row align-items-center justify-content-center gap-3 gap-lg-5 px-2 py-4">
+            <div class="text-dark fw-bold" style="font-size: clamp(28px, 3vw, 42px); letter-spacing: 0; white-space: nowrap;">
+                <a href="/voucher/">Supported by</a>
             </div>
-            <div class="z-1 col-md-8 p-3 p-lg-0 text-center">
-                <div class="row justify-content-center align-items-center">
-                    <div class="col-6 col-sm-6 col-md-2 mb-3 mb-md-0">
-                        <a
-                        href="/voucher/"><img src="/img/coesione.png" alt="Coesione" class="img-fluid" loading="lazy" decoding="async"
-                             style="max-width: 100%; height: auto; object-fit: contain;"></a>
-                    </div>
-                    <div class="col-6 col-sm-6 col-md-2 mb-3 mb-md-0">
-                        <a
-                        href="/voucher/"><img src="/img/ue.png" alt="UE" class="img-fluid" loading="lazy" decoding="async"
-                             style="max-width: 100%; height: auto; object-fit: contain;"></a>
-                    </div>
-                    <div class="col-6 col-sm-6 col-md-2 mb-3 mb-md-0">
-                        <a
-                        href="/voucher/"><img src="/img/repubblica.png" alt="Repubblica" class="img-fluid" loading="lazy" decoding="async"
-                             style="max-width: 100%; height: auto; object-fit: contain;"></a>
-                    </div>
-                    <div class="col-6 col-sm-6 col-md-2 mb-3 mb-md-0">
-                        <a
-                        href="/voucher/"><img src="/img/regione.png" alt="Regione" class="img-fluid" loading="lazy" decoding="async"
-                             style="max-width: 100%; height: auto; object-fit: contain;"></a>
-                    </div>
-                    <div class="col-6 col-sm-6 col-md-2 mb-3 mb-md-0">
-                        <a
-                        href="/blog/sardegna-ricerche-partnership/"><img src="/img/logo-sr-quadrato.png" alt="Sardegna Ricerche logo" class="img-fluid" loading="lazy" decoding="async"
-                             style="max-width: 100%; height: auto; object-fit: contain;"></a>
-                    </div>
-                </div>
+            <div class="z-1 d-flex flex-wrap flex-md-nowrap justify-content-center align-items-center gap-3 gap-lg-4">
+                <a href="/voucher/">
+                    <img src="/img/coesione.png" alt="Coesione Italia 2021–2027 Sardegna" loading="lazy" decoding="async"
+                         style="height: clamp(36px, 3.6vw, 52px); width: auto; max-width: 100%; object-fit: contain;">
+                </a>
+                <a href="/voucher/">
+                    <img src="/img/repubblica.png" alt="Repubblica Italiana" loading="lazy" decoding="async"
+                         style="height: clamp(36px, 3.6vw, 52px); width: auto; max-width: 100%; object-fit: contain;">
+                </a>
+                <a href="/voucher/">
+                    <img src="/img/regione.png" alt="Regione Autonoma della Sardegna" loading="lazy" decoding="async"
+                         style="height: clamp(36px, 3.6vw, 52px); width: auto; max-width: 100%; object-fit: contain;">
+                </a>
+                <a href="/blog/sardegna-ricerche-partnership/">
+                    <img src="/img/logo-sr-quadrato.png" alt="Sardegna Ricerche logo" loading="lazy" decoding="async"
+                         style="height: clamp(36px, 3.6vw, 52px); width: auto; max-width: 100%; object-fit: contain;">
+                </a>
+                <a href="/smart-start/">
+                    <img src="/img/coesione-italia-pn-ric.svg"
+                         alt="Coesione Italia e Programma Nazionale Ricerca, Innovazione e Competitività"
+                         loading="lazy" decoding="async"
+                         style="height: clamp(36px, 3.6vw, 52px); width: auto; max-width: 100%; object-fit: contain;">
+                </a>
             </div>
         </div>
     </div>
     <div class="row py-4 w-100"></div>
 </div>
 <!-- Supported By Section -->
-<!--Engage-->
-<section class="container-fluid  justify-content-center text-center text-white py-5 h-100"
-         style=" background: #303767" data-cta-section="engage"><div class="container custom-container d-flex flex-column  justify-content-center align-items-center text-center">
-        <p class="fw-bold pt-5 text-uppercase" style="font-size: 20px; color:#FE900F">REQUEST A FREE FEASIBILITY ANALYSIS</p>
-        <h2 class="fw-bold py-5 text-white secondary-headline" style="font-size: 42px;">Start with fit, then define the pilot</h2>
 
-        <p class="px-3" style="font-size: 20px; max-width: 800px;">
-            Share your analytical challenge with our team. We will assess technical fit, data or sample requirements, and the fastest path to a focused pilot.
+<!--Engage-->
+<section id="how-we-work" class="container-fluid justify-content-center text-center text-white py-5" style="background:#303767;" data-cta-section="engage" aria-labelledby="engage-heading">
+    <div class="container custom-container d-flex flex-column justify-content-center align-items-center text-center">
+        <p class="fw-bold pt-2 text-uppercase" style="font-size: 14px; color:#FE900F; letter-spacing:.06em;">How we work</p>
+        <h2 id="engage-heading" class="fw-bold py-3 text-white secondary-headline">Talk through your analytical challenge.</h2>
+        <p class="px-3 text-white" style="font-size: 16px; max-width: 900px;">
+            We first assess the analytical problem, available data or samples, and target decision. If there is a strong fit, we define a focused pilot with clear objectives, success metrics, and a roadmap to scale.
         </p>
-        <a href="/contact" class="text-decoration-none pt-5" data-cta-location="engage" aria-label="Free feasibility analysis">
-            <div class="d-flex justify-content-center align-items-center  gap-0">
-                <button class="btn rounded-pill"
-                        style="background:#FE900F; color: white; padding:15px 25px 15px 25px; margin-right:-8px;">
-                    Free feasibility
-                </button>
-                <img class="d-inline-block" src="/img/group-2-2.png" alt="Decorative call-to-action arrow" aria-hidden="true" style="width: 35px; height: 41px;">
-                <button class="btn rounded-pill"
-                        style="background:#FE900F; color: white; padding:15px;margin-left:-8px;">
-                    analysis
-                </button>
+
+        <div class="row g-3 w-100 mt-4" style="max-width: 1000px;">
+            
+            <div class="col-12 col-md-6">
+                <div class="how-it-works-step p-4 rounded-4 h-100" style="text-align:left; align-items:flex-start;">
+                    <p class="fw-bold mb-1 how-it-works-step__title">1. Share the challenge</p>
+                    <p class="text-white-50 mb-0 how-it-works-step__text">What sample type, workflow, and decision do you need to improve?</p>
+                </div>
             </div>
-        </a>
+            
+            <div class="col-12 col-md-6">
+                <div class="how-it-works-step p-4 rounded-4 h-100" style="text-align:left; align-items:flex-start;">
+                    <p class="fw-bold mb-1 how-it-works-step__title">2. Review the fit</p>
+                    <p class="text-white-50 mb-0 how-it-works-step__text">We review technical fit, data quality, sample requirements, and validation constraints.</p>
+                </div>
+            </div>
+            
+            <div class="col-12 col-md-6">
+                <div class="how-it-works-step p-4 rounded-4 h-100" style="text-align:left; align-items:flex-start;">
+                    <p class="fw-bold mb-1 how-it-works-step__title">3. Define the pilot</p>
+                    <p class="text-white-50 mb-0 how-it-works-step__text">If the fit is strong, we propose objectives, metrics, timeline, and expected outputs.</p>
+                </div>
+            </div>
+            
+            <div class="col-12 col-md-6">
+                <div class="how-it-works-step p-4 rounded-4 h-100" style="text-align:left; align-items:flex-start;">
+                    <p class="fw-bold mb-1 how-it-works-step__title">4. Plan scale-up</p>
+                    <p class="text-white-50 mb-0 how-it-works-step__text">After validation, we support integration and production-readiness.</p>
+                </div>
+            </div>
+            
+        </div>
+
+        <p class="text-white-50 mt-4 mb-0 px-3" style="font-size: 14px; max-width: 1000px;">
+            <strong class="text-white">What you get first:</strong> a clear view of fit, sample needs, validation criteria, and a recommendation for the next step.
+        </p>
+
+        <div class="pt-4"><a class="button text-decoration-none button-lg" href="/contact/" style="width:auto; display:inline-flex;" data-cta-location="engage">
+  <span class="text-container"><span class="button-text">Book a demo</span></span>
+</a>
+
+
+
+        </div>
     </div>
 </section>
+
+
 <!--Footer-->
 <!-- Footer -->
-<footer>
+<footer><section class="newsletter-section" data-newsletter-section aria-labelledby="newsletter-heading-home">
+  <div class="container newsletter-container">
+    <div class="newsletter-panel">
+      <div class="newsletter-copy">
+        <h2 id="newsletter-heading-home" class="newsletter-heading">Rombo AI newsletter</h2>
+        <p class="newsletter-description">NMR, AI and product updates.</p>
+      </div>
+      <form class="newsletter-form" data-newsletter-form data-newsletter-location="home" data-consent-version="newsletter-signup-v2" data-consent-text="By subscribing, you agree to Rombo AI emails. Unsubscribe at any time." action="https://hook.eu2.make.com/gd23cysjnvg1zok3chyq6qx3nwl3co01" method="POST" aria-describedby="newsletter-privacy-home">
+
+        <label class="newsletter-email-label" for="newsletter-email-home">Email address</label>
+        <div class="newsletter-fields">
+          <input class="newsletter-email" name="email" type="email" id="newsletter-email-home" required autocomplete="email" placeholder="Your email address" aria-describedby="newsletter-privacy-home">
+          <button class="newsletter-submit" type="submit" disabled>Subscribe</button>
+        </div>
+
+        <div class="newsletter-honeypot" aria-hidden="true">
+          <label for="newsletter-website-home">Leave this field empty</label>
+          <input type="text" name="website" id="newsletter-website-home" tabindex="-1" autocomplete="off">
+        </div>
+        <p class="newsletter-status" data-newsletter-status role="status" aria-live="polite" aria-atomic="true"></p>
+        <p class="newsletter-privacy" id="newsletter-privacy-home"><span>By subscribing, you agree to Rombo AI emails. Unsubscribe at any time.</span></p>
+        <noscript><p class="newsletter-noscript">JavaScript is required to sign up and see confirmation. Please enable it and try again.</p></noscript>
+      </form>
+    </div>
+  </div>
+</section>
+
     <div class="container-fluid border-bottom">
-        <div class="container custom-container">
-            <div class="row justify-content-md-center">
-                <div class="col-12 col-md-4 footer-logo">
-                    <img
-                            alt="Rombo AI"
-                            class="img-fluid"
-                            src="/img/romboai-04-1-2.png"
-                            width="200" height="79"
-                            loading="lazy"
-                    />
-                </div>
-                <div class="col-12 col-md-8">
-                    <div class="row m-0 d-flex align-items-center h-100">
-                        <p class="footer-text col-10 col-md-10 m-0 text-md-left text-lg-left">
-                            ROMBO AI © 2026 |
-                            <a href="/privacy/" style="color:#007bff;">Privacy Policy</a>
-                        </p>
-                        <a class="col-2 col-md-2 d-flex justify-content-start" href="https://www.linkedin.com/company/rombo-ai/"
-                           rel="noopener noreferrer" target="_blank" aria-label="Rombo AI on LinkedIn">
-                            <img alt="LinkedIn" class="img-fluid"
-                                 src="/img/icon-jam-icons-outline-logos-linkedin-1.svg"
-                                 width="24" height="24" loading="lazy">
-                        </a>
-                    </div>
-                </div>
+        <div class="container custom-container footer-bar">
+            <div class="footer-logo">
+                <img
+                        alt="Rombo AI"
+                        class="img-fluid"
+                        src="/img/romboai-04-1-2.png"
+                        width="200" height="79"
+                        loading="lazy"
+                />
             </div>
+            <p class="footer-text m-0">
+                ROMBO AI © 2026 |
+                <a href="/blog/">Blog</a>
+                |
+                <a href="https://rombo-ai.breezy.hr/" target="_blank" rel="noopener noreferrer">Careers</a>
+                |
+                <a href="/privacy/">Privacy Policy</a>
+            </p>
+            <a class="footer-linkedin" href="https://www.linkedin.com/company/rombo-ai/"
+               rel="noopener noreferrer" target="_blank" aria-label="Rombo AI on LinkedIn">
+                <img alt="LinkedIn" class="img-fluid"
+                     src="/img/icon-jam-icons-outline-logos-linkedin-1.svg"
+                     width="24" height="24" loading="lazy">
+            </a>
         </div>
     </div>
 </footer>
 <script defer src="/js/analytics.js"></script>
+<script defer src="/js/newsletter.js"></script>
 <!-- Footer -->
-
 
  </main>
 

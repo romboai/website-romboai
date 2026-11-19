@@ -3,7 +3,22 @@
 <head>
     
 
-    
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      window.__romboEvents = window.__romboEvents || [];
+      window.romboTrack = function (eventName, params) {
+        var payload = Object.assign({
+          page_location: location.href,
+          page_path: location.pathname
+        }, params || {});
+        window.__romboEvents.push({ event: eventName, params: payload });
+        if (typeof gtag === "function") {
+          gtag("event", eventName, payload);
+        } else {
+          window.dataLayer.push(Object.assign({ event: eventName }, payload));
+        }
+      };
+    </script>
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
@@ -11,6 +26,7 @@
     <meta charset="utf-8">
     <meta name="referrer" content="strict-origin-when-cross-origin">
     <meta name="theme-color" content="#090C23">
+    <meta name="rombo-page-type" content="privacy">
 
     <!-- Preconnect: only the 2 most critical origins -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -28,11 +44,19 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/css/custom/style.css">
     <link rel="stylesheet" href="/css/custom/responsive.css">
-    <link rel="stylesheet" href="/css/custom/scrollbar.css"><title>Privacy Policy | Rombo AI</title>
+    <link rel="stylesheet" href="/css/custom/scrollbar.css">
+    <link rel="stylesheet" href="/css/custom/newsletter.css"><script>
+      (function () {
+        if (location.hostname === "www.rombo.ai") {
+          location.replace("https://rombo.ai" + location.pathname + location.search + location.hash);
+        }
+      })();
+    </script>
+    <title>Privacy Policy | Rombo AI</title>
     <meta name="description" content="Rombo AI privacy policy: data collected, purposes, retention, user rights, and contact information.">
-    <meta name="robots" content="noindex,follow">
-    <meta name="googlebot" content="noindex,follow">
-    <meta name="bingbot" content="noindex,follow">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="bingbot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <link rel="canonical" href="https://rombo.ai/privacy/">
 
     <!-- Open Graph -->
@@ -42,7 +66,7 @@
     <meta property="og:title" content="Privacy Policy | Rombo AI">
     <meta property="og:description" content="Rombo AI privacy policy: data collected, purposes, retention, user rights, and contact information.">
     <meta property="og:url" content="https://rombo.ai/privacy/">
-    <meta property="og:image" content="https://rombo.ai/img/og/rombo-ai.png">
+    <meta property="og:image" content="https://rombo.ai/img/og/rombo-ai.jpg">
     <meta property="og:image:alt" content="Privacy Policy | Rombo AI">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
@@ -51,12 +75,12 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Privacy Policy | Rombo AI">
     <meta name="twitter:description" content="Rombo AI privacy policy: data collected, purposes, retention, user rights, and contact information.">
-    <meta name="twitter:image" content="https://rombo.ai/img/og/rombo-ai.png">
+    <meta name="twitter:image" content="https://rombo.ai/img/og/rombo-ai.jpg">
     <meta name="twitter:image:alt" content="Privacy Policy | Rombo AI">
 
     <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
-    <link rel="icon" type="image/svg" sizes="32x32" href="/img/favicon-32x32.png">
-    <link rel="icon" type="image/svg" sizes="16x16" href="/img/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
     <link rel="manifest" href="/img/site.webmanifest">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css"
           media="print" onload="this.media='all'">
@@ -100,7 +124,6 @@
         {
           "@type": "ContactPoint",
           "contactType": "sales",
-          "email": "contact@rombo.ai",
           "telephone": "+39 352 064 8081",
           "availableLanguage": ["English", "Italian"],
           "areaServed": ["EU","Worldwide"]
@@ -144,9 +167,10 @@
       "isPartOf": { "@id": "https://rombo.ai/#website" },
       "inLanguage": "en",
       "description": "Rombo AI privacy policy: data collected, purposes, retention, user rights, and contact information.",
+      "dateModified": "2026-09-15T18:04:51+02:00",
       "primaryImageOfPage": {
         "@type": "ImageObject",
-        "url": "https://rombo.ai/img/og/rombo-ai.png"
+        "url": "https://rombo.ai/img/og/rombo-ai.jpg"
       },
       "breadcrumb": { "@id": "https://rombo.ai/privacy/#breadcrumb" }
     },
@@ -172,11 +196,10 @@
 
 </head>
 
-
 <body>
 
 <button id="UpBtn" class="up-btn d-none" aria-label="Back to top"><span>
-		<svg xmlns="http://www.w3.org/2000/svg" width="23.721" height="28.513" viewBox="0 0 28.513 23.721">
+		<svg xmlns="http://www.w3.org/2000/svg" width="23.721" height="28.513" viewBox="0 0 28.513 23.721" aria-hidden="true" focusable="false">
 			<g id="right-arrow" transform="translate(0 0)">
 			<g id="Group_22" data-name="Group 22" transform="translate(0 0) rotate(-90)">
 				<path id="Path_1869" data-name="Path 1869"
@@ -188,26 +211,21 @@
 		</span>
 </button>
 
-<!-- Menu -->
+<!-- Menu --><a class="skip-link" href="#main-content">Skip to content</a>
 
-<a class="skip-link" href="#main-content">Skip to content</a>
-
-<nav class="container-fluid navbar fixed-top navbar-expand-md navbar-light custom-shadow" style="max-height: 58px; background: #090C2333;
-">
+<nav class="container-fluid navbar fixed-top navbar-expand-md navbar-light custom-shadow" style="max-height: 58px; background:#090C2333;">
     <div class="container custom-container">
         <!-- Logo -->
-        <a class="navbar-brand" style="padding-left: 10px; padding-bottom: 5px" href="/#">
-            <img src="/img/logo-1.svg" alt="Rombo AI Logo" class="img-fluid">
+        <a class="navbar-brand" style="padding-left: 10px; padding-bottom: 5px" href="/">
+            <img src="/img/logo-1.svg" alt="Rombo AI Logo" class="img-fluid" >
         </a>
         <!-- Toggler/collapsible Button -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <!-- Navbar links -->
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto nev-mobile">
-
                 <li class="nav-item">
                     <a class="nav-link menu-item text-white" href="/about/">About Us</a>
                 </li>
@@ -223,21 +241,17 @@
                     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="productsDropdown">
                         <li>
                             <a class="dropdown-item" href="/product/">
-                                Material Intelligence Platform
+                                Rombo AI Platform
                             </a>
                         </li>
                         <li>
-                            <a class="dropdown-item" href="/product/#nmr-ai-analysis-tool">
-                                NMR AI Analyzer
-                            </a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="/product/#automl-materials">
-                                AutoML Framework
+                            <a class="dropdown-item" href="/spectra/">
+                                Spectra
                             </a>
                         </li>
                     </ul>
                 </li>
+
                 <li class="nav-item dropdown">
                     <a class="nav-link menu-item text-white dropdown-toggle"
                        href="#"
@@ -263,21 +277,9 @@
                                 Transformer Oil Monitoring
                             </a>
                         </li>
-                        <li>
-                            <a class="dropdown-item" href="/use-cases/nmr-compound-identification/">
-                                NMR Compound Identification
-                            </a>
-                        </li>
                     </ul>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link menu-item text-white" href="/blog/">Blog</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link menu-item text-white" href="https://rombo-ai.breezy.hr/" target="_blank" rel="noopener noreferrer">Careers</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link menu-item text-white" href="/contact/" data-cta-location="navigation">Contact us</a>
+                </li><li class="nav-item d-flex align-items-center">
+                    <a class="nav-link nav-cta" href="/contact/" data-cta-location="header">Contact us</a>
                 </li>
             </ul>
         </div>
@@ -285,7 +287,7 @@
 </nav>
 <!-- Menu -->
 
-      
+
 <main id="main-content" tabindex="-1">
 <div class="container-fluid hero-article-section px-0" style="text-align: left">
     <div class="container custom-container py-5">
@@ -378,6 +380,20 @@
                 informazioni sulla gestione dei cookie con browser web specifico possono essere trovati nei rispettivi
                 siti web dei browser</p>
         </div>
+        <section id="newsletter" class="py-4" aria-labelledby="newsletter-privacy-heading">
+            <h2 id="newsletter-privacy-heading" class="h3">Newsletter Rombo AI</h2>
+            <p class="span2 text-dark">La newsletter contiene articoli, aggiornamenti su NMR e intelligenza artificiale e novità sui prodotti Rombo AI.
+                L'iscrizione è facoltativa e richiede un consenso specifico, ai sensi dell'art. 6, par. 1, lett. a) del GDPR.
+                Nel modulo newsletter il consenso si esprime inserendo l'email e premendo «Subscribe», come indicato nella nota accanto al modulo.
+                Nel modulo di contatto il consenso si esprime invece selezionando la casella facoltativa dedicata, non preselezionata: puoi richiedere informazioni o una demo senza iscriverti.</p>
+            <p class="span2 text-dark">Per gestire la richiesta vengono trasmessi a Make l'indirizzo email, la scelta di iscrizione,
+                il testo e la versione del consenso, la data della richiesta e la pagina di provenienza.
+                Queste informazioni consentono di gestire l'iscrizione e documentare il consenso. Non inviamo l'indirizzo email agli strumenti di analytics tramite gli eventi newsletter.</p>
+            <p class="span2 text-dark">I dati necessari all'invio vengono conservati fino alla revoca del consenso o alla cessazione del servizio,
+                fatte salve le informazioni che è necessario conservare per documentare la gestione del consenso.
+                Puoi revocare il consenso in qualsiasi momento, tramite il link di disiscrizione nelle email oppure attraverso il
+                <a href="/contact/">modulo di contatto</a>. La revoca non condiziona la possibilità di utilizzare gli altri servizi del sito.</p>
+        </section>
         <h3>Finalità del trattamento</h3>
         <p class="span2 text-dark">I dati possono essere raccolti per una o più delle seguenti finalità:</p>
 
@@ -398,7 +414,8 @@
             materia di misure minime di sicurezza, Allegato B del Codice della Privacy. </p>
 
         <h3>Natura obbligatoria</h3>
-        <p class="span2 text-dark">Tutti i dati richiesti sono obbligatori.</p>
+        <p class="span2 text-dark">Sono obbligatori soltanto i campi contrassegnati come tali nel singolo modulo.
+            Nel modulo di contatto il consenso alla newsletter è sempre facoltativo e non è preselezionato.</p>
         <div id="trattamento" style="display: none;">
             <h3>Soggetti a cui dati potranno essere comunicati i dati personali</h3>
             <p class="span2 text-dark">I dati raccolti potranno essere comunicati a:</p>
@@ -436,8 +453,8 @@
         <p class="span2 text-dark">P. IVA <span id="iva">03533390922</span></p>
         <p class="span2 text-dark"><span id="indirizzo">Open Campus - Strada Statale 195 Sulcitana</span></p>
         <p class="span2 text-dark"><span id="cap">09123</span> - <span id="citta">Cagliari</span> (<span id="provincia">CA</span>)</p>
-        <p class="span2 text-dark">Tel/Fax: <span id="telefono"></span></p>
-        <p class="span2 text-dark">E-mail: <span id="email">hellorombo@gmail.com</span></p>
+        <p class="span2 text-dark">Tel: <a href="tel:+393520648081"><span id="telefono">+39 352 064 8081</span></a></p>
+        <p class="span2 text-dark">Contatto: <a href="/contact/" data-cta-location="privacy">modulo di contatto</a></p>
 
         <p class="span2 text-dark">Per esercitare i diritti previsti all'art. 7 del Codice della Privacy ovvero per la cancellazione dei vostri
             dati dall'archivio, è sufficiente contattarci attraverso uno dei canali messi a disposizione.</p>
@@ -447,52 +464,75 @@
             tutori a trascorrere del tempo online con i loro figli per osservare, partecipare e/o monitorare e guidare
             la loro attività online. Noi non raccogliamo dati personali di minori. Se un genitore o un tutore crede che
             il nostro sito abbia nel suo database le informazioni personali di un bambino, vi preghiamo di contattarci
-            immediatamente (utilizzando la mail fornita) e faremo di tutto per rimuovere tali informazioni il più presto
+            immediatamente attraverso il <a href="/contact/" data-cta-location="privacy">modulo di contatto</a> e faremo di tutto per rimuovere tali informazioni il più presto
             possibile.</p>
         <p class="span2 text-dark">Questa politica sulla privacy si applica solo alle nostre attività online ed è valida per i visitatori del
             nostro sito web e per quanto riguarda le informazioni condivise e/o raccolte. Questa politica non si applica
             a qualsiasi informazione raccolta in modalità offline o tramite canali diversi da questo sito web.</p>
         <h3>Consenso</h3>
-        <p class="span2 text-dark">Usando il nostro sito web, acconsenti alla nostra politica sulla privacy e accetti i suoi termini. Se
-            desideri ulteriori informazioni o hai domande sulla nostra politica sulla privacy non esitare a
-            contattarci.</p>
+        <p class="span2 text-dark">La semplice navigazione del sito non costituisce consenso all'iscrizione alla newsletter.
+            Il consenso viene richiesto separatamente nei moduli dedicati. Se desideri ulteriori informazioni o hai domande sulla nostra politica sulla privacy, puoi contattarci.</p>
     </div>
 </div>
 <!-- Footer -->
-<footer>
+<footer><section class="newsletter-section" data-newsletter-section aria-labelledby="newsletter-heading-footer">
+  <div class="container newsletter-container">
+    <div class="newsletter-panel">
+      <div class="newsletter-copy">
+        <h2 id="newsletter-heading-footer" class="newsletter-heading">Rombo AI newsletter</h2>
+        <p class="newsletter-description">NMR, AI and product updates.</p>
+      </div>
+      <form class="newsletter-form" data-newsletter-form data-newsletter-location="footer" data-consent-version="newsletter-signup-v2" data-consent-text="By subscribing, you agree to Rombo AI emails. Unsubscribe at any time." action="https://hook.eu2.make.com/gd23cysjnvg1zok3chyq6qx3nwl3co01" method="POST" aria-describedby="newsletter-privacy-footer">
+
+        <label class="newsletter-email-label" for="newsletter-email-footer">Email address</label>
+        <div class="newsletter-fields">
+          <input class="newsletter-email" name="email" type="email" id="newsletter-email-footer" required autocomplete="email" placeholder="Your email address" aria-describedby="newsletter-privacy-footer">
+          <button class="newsletter-submit" type="submit" disabled>Subscribe</button>
+        </div>
+
+        <div class="newsletter-honeypot" aria-hidden="true">
+          <label for="newsletter-website-footer">Leave this field empty</label>
+          <input type="text" name="website" id="newsletter-website-footer" tabindex="-1" autocomplete="off">
+        </div>
+        <p class="newsletter-status" data-newsletter-status role="status" aria-live="polite" aria-atomic="true"></p>
+        <p class="newsletter-privacy" id="newsletter-privacy-footer"><span>By subscribing, you agree to Rombo AI emails. Unsubscribe at any time.</span></p>
+        <noscript><p class="newsletter-noscript">JavaScript is required to sign up and see confirmation. Please enable it and try again.</p></noscript>
+      </form>
+    </div>
+  </div>
+</section>
+
     <div class="container-fluid border-bottom">
-        <div class="container custom-container">
-            <div class="row justify-content-md-center">
-                <div class="col-12 col-md-4 footer-logo">
-                    <img
-                            alt="Rombo AI"
-                            class="img-fluid"
-                            src="/img/romboai-04-1-2.png"
-                            width="200" height="79"
-                            loading="lazy"
-                    />
-                </div>
-                <div class="col-12 col-md-8">
-                    <div class="row m-0 d-flex align-items-center h-100">
-                        <p class="footer-text col-10 col-md-10 m-0 text-md-left text-lg-left">
-                            ROMBO AI © 2026 |
-                            <a href="/privacy/" style="color:#007bff;">Privacy Policy</a>
-                        </p>
-                        <a class="col-2 col-md-2 d-flex justify-content-start" href="https://www.linkedin.com/company/rombo-ai/"
-                           rel="noopener noreferrer" target="_blank" aria-label="Rombo AI on LinkedIn">
-                            <img alt="LinkedIn" class="img-fluid"
-                                 src="/img/icon-jam-icons-outline-logos-linkedin-1.svg"
-                                 width="24" height="24" loading="lazy">
-                        </a>
-                    </div>
-                </div>
+        <div class="container custom-container footer-bar">
+            <div class="footer-logo">
+                <img
+                        alt="Rombo AI"
+                        class="img-fluid"
+                        src="/img/romboai-04-1-2.png"
+                        width="200" height="79"
+                        loading="lazy"
+                />
             </div>
+            <p class="footer-text m-0">
+                ROMBO AI © 2026 |
+                <a href="/blog/">Blog</a>
+                |
+                <a href="https://rombo-ai.breezy.hr/" target="_blank" rel="noopener noreferrer">Careers</a>
+                |
+                <a href="/privacy/">Privacy Policy</a>
+            </p>
+            <a class="footer-linkedin" href="https://www.linkedin.com/company/rombo-ai/"
+               rel="noopener noreferrer" target="_blank" aria-label="Rombo AI on LinkedIn">
+                <img alt="LinkedIn" class="img-fluid"
+                     src="/img/icon-jam-icons-outline-logos-linkedin-1.svg"
+                     width="24" height="24" loading="lazy">
+            </a>
         </div>
     </div>
 </footer>
 <script defer src="/js/analytics.js"></script>
+<script defer src="/js/newsletter.js"></script>
 <!-- Footer -->
-
 
 </main>
 

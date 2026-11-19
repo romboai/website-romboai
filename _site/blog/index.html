@@ -3,7 +3,22 @@
 <head>
     
 
-    
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      window.__romboEvents = window.__romboEvents || [];
+      window.romboTrack = function (eventName, params) {
+        var payload = Object.assign({
+          page_location: location.href,
+          page_path: location.pathname
+        }, params || {});
+        window.__romboEvents.push({ event: eventName, params: payload });
+        if (typeof gtag === "function") {
+          gtag("event", eventName, payload);
+        } else {
+          window.dataLayer.push(Object.assign({ event: eventName }, payload));
+        }
+      };
+    </script>
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
@@ -11,6 +26,7 @@
     <meta charset="utf-8">
     <meta name="referrer" content="strict-origin-when-cross-origin">
     <meta name="theme-color" content="#090C23">
+    <meta name="rombo-page-type" content="blog">
 
     <!-- Preconnect: only the 2 most critical origins -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -28,7 +44,15 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/css/custom/style.css">
     <link rel="stylesheet" href="/css/custom/responsive.css">
-    <link rel="stylesheet" href="/css/custom/scrollbar.css"><title>Blog | AI, Spectroscopy & NMR Insights | Rombo AI</title>
+    <link rel="stylesheet" href="/css/custom/scrollbar.css">
+    <link rel="stylesheet" href="/css/custom/newsletter.css"><script>
+      (function () {
+        if (location.hostname === "www.rombo.ai") {
+          location.replace("https://rombo.ai" + location.pathname + location.search + location.hash);
+        }
+      })();
+    </script>
+    <title>Blog | AI, Spectroscopy & NMR Insights | Rombo AI</title>
     <meta name="description" content="Insights on AI for spectroscopy and NMR: use cases, partnerships, methods, and best practices to turn spectral data into decisions.">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
@@ -42,7 +66,7 @@
     <meta property="og:title" content="Blog | AI, Spectroscopy & NMR Insights | Rombo AI">
     <meta property="og:description" content="Insights on AI for spectroscopy and NMR: use cases, partnerships, methods, and best practices to turn spectral data into decisions.">
     <meta property="og:url" content="https://rombo.ai/blog/">
-    <meta property="og:image" content="https://rombo.ai/img/og/rombo-ai.png">
+    <meta property="og:image" content="https://rombo.ai/img/og/rombo-ai.jpg">
     <meta property="og:image:alt" content="Blog | AI, Spectroscopy & NMR Insights | Rombo AI">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
@@ -51,12 +75,12 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Blog | AI, Spectroscopy & NMR Insights | Rombo AI">
     <meta name="twitter:description" content="Insights on AI for spectroscopy and NMR: use cases, partnerships, methods, and best practices to turn spectral data into decisions.">
-    <meta name="twitter:image" content="https://rombo.ai/img/og/rombo-ai.png">
+    <meta name="twitter:image" content="https://rombo.ai/img/og/rombo-ai.jpg">
     <meta name="twitter:image:alt" content="Blog | AI, Spectroscopy & NMR Insights | Rombo AI">
 
     <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
-    <link rel="icon" type="image/svg" sizes="32x32" href="/img/favicon-32x32.png">
-    <link rel="icon" type="image/svg" sizes="16x16" href="/img/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
     <link rel="manifest" href="/img/site.webmanifest">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css"
           media="print" onload="this.media='all'">
@@ -100,7 +124,6 @@
         {
           "@type": "ContactPoint",
           "contactType": "sales",
-          "email": "contact@rombo.ai",
           "telephone": "+39 352 064 8081",
           "availableLanguage": ["English", "Italian"],
           "areaServed": ["EU","Worldwide"]
@@ -144,9 +167,10 @@
       "isPartOf": { "@id": "https://rombo.ai/#website" },
       "inLanguage": "en",
       "description": "Insights on AI for spectroscopy and NMR: use cases, partnerships, methods, and best practices to turn spectral data into decisions.",
+      "dateModified": "2026-09-15T17:13:30+02:00",
       "primaryImageOfPage": {
         "@type": "ImageObject",
-        "url": "https://rombo.ai/img/og/rombo-ai.png"
+        "url": "https://rombo.ai/img/og/rombo-ai.jpg"
       },
       "breadcrumb": { "@id": "https://rombo.ai/blog/#breadcrumb" }
     },
@@ -177,100 +201,304 @@
       "inLanguage": "en",
       "blogPost": [{
           "@type": "BlogPosting",
+          "@id": "https://rombo.ai/blog/transformer-oil-breakdown-voltage#blogposting",
+          "url": "https://rombo.ai/blog/transformer-oil-breakdown-voltage",
+          "headline": "Transformer Oil Breakdown Voltage: What IEC 60156 and ASTM D1816 Tell You, and What They Don't",
+          "datePublished": "2026-11-18T07:00:00+01:00"
+        },{
+          "@type": "BlogPosting",
+          "@id": "https://rombo.ai/blog/crude-oil-compatibility-asphaltene-stability#blogposting",
+          "url": "https://rombo.ai/blog/crude-oil-compatibility-asphaltene-stability",
+          "headline": "Crude Oil Compatibility and Asphaltene Stability: Tests, Limits and Predictive Approaches",
+          "datePublished": "2026-11-16T07:00:00+01:00"
+        },{
+          "@type": "BlogPosting",
+          "@id": "https://rombo.ai/blog/crude-oil-tank-stratification#blogposting",
+          "url": "https://rombo.ai/blog/crude-oil-tank-stratification",
+          "headline": "Crude Oil Tank Stratification: Why It Happens, How to Detect It and What It Means for the CDU",
+          "datePublished": "2026-11-11T07:00:00+01:00"
+        },{
+          "@type": "BlogPosting",
+          "@id": "https://rombo.ai/blog/nir-vs-nmr-crude-oil-analysis#blogposting",
+          "url": "https://rombo.ai/blog/nir-vs-nmr-crude-oil-analysis",
+          "headline": "NIR vs NMR for Crude Oil Analysis: Where Each Method Fits",
+          "datePublished": "2026-11-09T07:00:00+01:00"
+        },{
+          "@type": "BlogPosting",
+          "@id": "https://rombo.ai/blog/validating-spectroscopic-property-model-astm-reference-methods#blogposting",
+          "url": "https://rombo.ai/blog/validating-spectroscopic-property-model-astm-reference-methods",
+          "headline": "Validating a Spectroscopic Property Model Against ASTM Reference Methods",
+          "datePublished": "2026-11-02T07:00:00+01:00"
+        },{
+          "@type": "BlogPosting",
+          "@id": "https://rombo.ai/blog/calibration-transfer-spectroscopy-models-break-instruments-change#blogposting",
+          "url": "https://rombo.ai/blog/calibration-transfer-spectroscopy-models-break-instruments-change",
+          "headline": "Calibration Transfer in Spectroscopy: Why Models Break When Instruments Change",
+          "datePublished": "2026-10-26T07:00:00+01:00"
+        },{
+          "@type": "BlogPosting",
+          "@id": "https://rombo.ai/blog/api-gravity-sulfur-tan-crude-oil-one-workflow#blogposting",
+          "url": "https://rombo.ai/blog/api-gravity-sulfur-tan-crude-oil-one-workflow",
+          "headline": "API Gravity, Sulfur and TAN in One Workflow: What Changes for the Crude Lab",
+          "datePublished": "2026-10-21T08:00:00+02:00"
+        },{
+          "@type": "BlogPosting",
+          "@id": "https://rombo.ai/blog/transformer-oil-testing-properties-methods-nmr#blogposting",
+          "url": "https://rombo.ai/blog/transformer-oil-testing-properties-methods-nmr",
+          "headline": "Transformer Oil Testing: Which Properties Matter, How They Are Measured, and Where NMR Fits",
+          "datePublished": "2026-10-19T08:00:00+02:00"
+        },{
+          "@type": "BlogPosting",
+          "@id": "https://rombo.ai/blog/water-content-transformer-oil-karl-fischer#blogposting",
+          "url": "https://rombo.ai/blog/water-content-transformer-oil-karl-fischer",
+          "headline": "How to Measure Water Content in Transformer Oil: Karl Fischer (IEC 60814) and Faster Alternatives",
+          "datePublished": "2026-10-14T08:00:00+02:00"
+        },{
+          "@type": "BlogPosting",
+          "@id": "https://rombo.ai/blog/crude-oil-analysis-refinery-process-economics#blogposting",
+          "url": "https://rombo.ai/blog/crude-oil-analysis-refinery-process-economics",
+          "headline": "Why Crude Oil Analysis Matters at Every Stage of the Refinery",
+          "datePublished": "2026-09-29T14:00:00+02:00"
+        },{
+          "@type": "BlogPosting",
+          "@id": "https://rombo.ai/blog/future-agentic-ai-analytical-chemistry#blogposting",
+          "url": "https://rombo.ai/blog/future-agentic-ai-analytical-chemistry",
+          "headline": "The Future of Agentic AI in Analytical Chemistry",
+          "datePublished": "2026-09-19T03:00:00+02:00"
+        },{
+          "@type": "BlogPosting",
+          "@id": "https://rombo.ai/blog/automating-nmr-structure-elucidation-confidence-scores#blogposting",
+          "url": "https://rombo.ai/blog/automating-nmr-structure-elucidation-confidence-scores",
+          "headline": "Automating NMR Structure Elucidation with Confidence Scores",
+          "datePublished": "2026-09-18T03:00:00+02:00"
+        },{
+          "@type": "BlogPosting",
+          "@id": "https://rombo.ai/blog/human-in-the-loop-ai-laboratory-decision-making#blogposting",
+          "url": "https://rombo.ai/blog/human-in-the-loop-ai-laboratory-decision-making",
+          "headline": "Human-in-the-Loop AI for Laboratory Decision Making",
+          "datePublished": "2026-09-17T03:00:00+02:00"
+        },{
+          "@type": "BlogPosting",
+          "@id": "https://rombo.ai/blog/benchmark-ai-agent-scientific-data-analysis#blogposting",
+          "url": "https://rombo.ai/blog/benchmark-ai-agent-scientific-data-analysis",
+          "headline": "How to Benchmark an AI Agent for Scientific Data Analysis",
+          "datePublished": "2026-09-15T03:10:00+02:00"
+        },{
+          "@type": "BlogPosting",
+          "@id": "https://rombo.ai/blog/failure-modes-agentic-systems-scientific-workflows#blogposting",
+          "url": "https://rombo.ai/blog/failure-modes-agentic-systems-scientific-workflows",
+          "headline": "Failure Modes of Agentic Systems in Scientific Workflows",
+          "datePublished": "2026-09-14T03:00:00+02:00"
+        },{
+          "@type": "BlogPosting",
+          "@id": "https://rombo.ai/blog/ai-agent-interprets-nmr-spectrum-pipeline#blogposting",
+          "url": "https://rombo.ai/blog/ai-agent-interprets-nmr-spectrum-pipeline",
+          "headline": "How an AI Agent Interprets an NMR Spectrum: A Step-by-Step Pipeline",
+          "datePublished": "2026-09-13T03:00:00+02:00"
+        },{
+          "@type": "BlogPosting",
+          "@id": "https://rombo.ai/blog/agentic-systems-nmr-data-analysis#blogposting",
+          "url": "https://rombo.ai/blog/agentic-systems-nmr-data-analysis",
+          "headline": "What Are Agentic Systems for NMR Data Analysis?",
+          "datePublished": "2026-09-12T03:05:00+02:00"
+        },{
+          "@type": "BlogPosting",
+          "@id": "https://rombo.ai/blog/build-vs-buy-spectral-interpretation-spectra-api#blogposting",
+          "url": "https://rombo.ai/blog/build-vs-buy-spectral-interpretation-spectra-api",
+          "headline": "Build vs Buy: Spectral Interpretation with Spectra",
+          "datePublished": "2026-09-09T03:00:00+02:00"
+        },{
+          "@type": "BlogPosting",
+          "@id": "https://rombo.ai/blog/spectra-api-laboratory-data-pipeline-integration#blogposting",
+          "url": "https://rombo.ai/blog/spectra-api-laboratory-data-pipeline-integration",
+          "headline": "Integrating Spectra into Laboratory Data Pipelines",
+          "datePublished": "2026-09-08T03:10:00+02:00"
+        },{
+          "@type": "BlogPosting",
+          "@id": "https://rombo.ai/blog/spectra-ai-automated-compound-identification#blogposting",
+          "url": "https://rombo.ai/blog/spectra-ai-automated-compound-identification",
+          "headline": "Spectra: Automated Compound Identification from NMR Spectra",
+          "datePublished": "2026-09-07T09:31:00+02:00"
+        },{
+          "@type": "BlogPosting",
+          "@id": "https://rombo.ai/blog/compound-identification-petrochemical-crude-oil-analysis#blogposting",
+          "url": "https://rombo.ai/blog/compound-identification-petrochemical-crude-oil-analysis",
+          "headline": "Compound Identification in Petrochemical and Crude Oil Analysis",
+          "datePublished": "2026-09-04T03:09:00+02:00"
+        },{
+          "@type": "BlogPosting",
+          "@id": "https://rombo.ai/blog/agent_structure_elucidation#blogposting",
+          "url": "https://rombo.ai/blog/agent_structure_elucidation",
+          "headline": "Cosa abbiamo imparato costruendo un agente per la structure elucidation",
+          "datePublished": "2026-09-04T02:00:00+02:00"
+        },{
+          "@type": "BlogPosting",
+          "@id": "https://rombo.ai/blog/structure-elucidation-natural-products-workflow#blogposting",
+          "url": "https://rombo.ai/blog/structure-elucidation-natural-products-workflow",
+          "headline": "Structure Elucidation Workflows for Natural Products",
+          "datePublished": "2026-09-02T09:00:00+02:00"
+        },{
+          "@type": "BlogPosting",
+          "@id": "https://rombo.ai/blog/impurity-identification-pharmaceutical-quality-control#blogposting",
+          "url": "https://rombo.ai/blog/impurity-identification-pharmaceutical-quality-control",
+          "headline": "Impurity Identification in Pharmaceutical Quality Control",
+          "datePublished": "2026-09-01T09:00:00+02:00"
+        },{
+          "@type": "BlogPosting",
+          "@id": "https://rombo.ai/blog/combine-nmr-mass-spectrometry-ai-structure-elucidation#blogposting",
+          "url": "https://rombo.ai/blog/combine-nmr-mass-spectrometry-ai-structure-elucidation",
+          "headline": "Combining NMR and Mass Spectrometry for AI Structure Elucidation",
+          "datePublished": "2026-08-31T09:00:00+02:00"
+        },{
+          "@type": "BlogPosting",
+          "@id": "https://rombo.ai/blog/how-ai-identifies-unknown-compounds-raw-spectra#blogposting",
+          "url": "https://rombo.ai/blog/how-ai-identifies-unknown-compounds-raw-spectra",
+          "headline": "How AI Identifies Unknown Compounds from Raw Spectra",
+          "datePublished": "2026-08-30T11:57:00+02:00"
+        },{
+          "@type": "BlogPosting",
+          "@id": "https://rombo.ai/blog/rose_foundation_model_NMR_spectral_data#blogposting",
+          "url": "https://rombo.ai/blog/rose_foundation_model_NMR_spectral_data",
+          "headline": "Generalization Across NMR Instruments: A Foundation Model Pre-Trained on Spectral Data",
+          "datePublished": "2026-08-28T11:00:00+02:00"
+        },{
+          "@type": "BlogPosting",
+          "@id": "https://rombo.ai/blog/confidence-scoring-compound-identification#blogposting",
+          "url": "https://rombo.ai/blog/confidence-scoring-compound-identification",
+          "headline": "Confidence Scoring in Compound Identification",
+          "datePublished": "2026-08-27T09:00:00+02:00"
+        },{
+          "@type": "BlogPosting",
+          "@id": "https://rombo.ai/blog/unknown-compound-identification-workflow#blogposting",
+          "url": "https://rombo.ai/blog/unknown-compound-identification-workflow",
+          "headline": "Unknown Compound Identification: An End-to-End Workflow",
+          "datePublished": "2026-08-26T09:00:00+02:00"
+        },{
+          "@type": "BlogPosting",
+          "@id": "https://rombo.ai/blog/spectral-deconvolution-methods-pitfalls-ai#blogposting",
+          "url": "https://rombo.ai/blog/spectral-deconvolution-methods-pitfalls-ai",
+          "headline": "Spectral Deconvolution: Methods, Pitfalls, and AI",
+          "datePublished": "2026-08-25T09:00:00+02:00"
+        },{
+          "@type": "BlogPosting",
+          "@id": "https://rombo.ai/blog/spectral-matching-library-search-compound-identification#blogposting",
+          "url": "https://rombo.ai/blog/spectral-matching-library-search-compound-identification",
+          "headline": "How Spectral Matching and Library Search Work",
+          "datePublished": "2026-08-24T09:00:00+02:00"
+        },{
+          "@type": "BlogPosting",
+          "@id": "https://rombo.ai/blog/nmr-vs-mass-spectrometry-compound-identification#blogposting",
+          "url": "https://rombo.ai/blog/nmr-vs-mass-spectrometry-compound-identification",
+          "headline": "NMR vs Mass Spectrometry for Compound Identification",
+          "datePublished": "2026-08-23T09:00:00+02:00"
+        },{
+          "@type": "BlogPosting",
+          "@id": "https://rombo.ai/blog/what-is-compound-identification-analytical-chemistry#blogposting",
+          "url": "https://rombo.ai/blog/what-is-compound-identification-analytical-chemistry",
+          "headline": "What Is Compound Identification in Analytical Chemistry?",
+          "datePublished": "2026-08-22T09:30:00+02:00"
+        },{
+          "@type": "BlogPosting",
+          "@id": "https://rombo.ai/blog/ai-crude-oil-analysis-lab-vs-nir-vs-high-field-nmr#blogposting",
+          "url": "https://rombo.ai/blog/ai-crude-oil-analysis-lab-vs-nir-vs-high-field-nmr",
+          "headline": "AI Crude Oil Analysis: Lab Testing vs NIR vs High-Field NMR vs Rombo AI",
+          "datePublished": "2026-08-18T14:00:00+02:00"
+        },{
+          "@type": "BlogPosting",
           "@id": "https://rombo.ai/blog/best-nmr-analytical-chemistry-software-comparison#blogposting",
           "url": "https://rombo.ai/blog/best-nmr-analytical-chemistry-software-comparison",
           "headline": "Best NMR & Analytical Chemistry Software: Comparison Guide",
-          "datePublished": "2026-08-18T10:00:00+00:00"
+          "datePublished": "2026-08-18T12:00:00+02:00"
         },{
           "@type": "BlogPosting",
           "@id": "https://rombo.ai/blog/what-is-quantitative-nmr-qnmr#blogposting",
           "url": "https://rombo.ai/blog/what-is-quantitative-nmr-qnmr",
+          "headline": "What Is Quantitative NMR (qNMR) and How Does It Work?",
+          "datePublished": "2026-08-18T11:00:00+02:00"
+        },{
+          "@type": "BlogPosting",
+          "@id": "https://rombo.ai/blog/quantitative-nmr-qnmr-purity-calibration-accuracy#blogposting",
+          "url": "https://rombo.ai/blog/quantitative-nmr-qnmr-purity-calibration-accuracy",
           "headline": "What Is Quantitative NMR (qNMR)? Purity, Calibration Methods, and Accuracy",
-          "datePublished": "2026-08-18T09:00:00+00:00"
+          "datePublished": "2026-08-18T10:00:00+02:00"
         },{
           "@type": "BlogPosting",
           "@id": "https://rombo.ai/blog/NMR_deployment_multisite_scalability#blogposting",
           "url": "https://rombo.ai/blog/NMR_deployment_multisite_scalability",
           "headline": "Scalable NMR Deployment Across Multi-Site Laboratories: Architectural Trade-Offs",
-          "datePublished": "2026-08-13T22:00:00+00:00"
+          "datePublished": "2026-08-14T00:00:00+02:00"
         },{
           "@type": "BlogPosting",
           "@id": "https://rombo.ai/blog/article-spectral-software-tiers#blogposting",
           "url": "https://rombo.ai/blog/article-spectral-software-tiers",
           "headline": "Why Maturity Tiers Matter for Choosing Spectral Software",
-          "datePublished": "2026-08-12T22:00:00+00:00"
+          "datePublished": "2026-08-13T00:00:00+02:00"
         },{
           "@type": "BlogPosting",
           "@id": "https://rombo.ai/blog/AI_spectroscopu_automation_quality_control#blogposting",
           "url": "https://rombo.ai/blog/AI_spectroscopu_automation_quality_control",
           "headline": "AI-Powered Quality Control Automation for NMR Labs",
-          "datePublished": "2026-08-11T22:00:00+00:00"
+          "datePublished": "2026-08-12T00:00:00+02:00"
         },{
           "@type": "BlogPosting",
           "@id": "https://rombo.ai/blog/NMR_instrument_compatibility#blogposting",
           "url": "https://rombo.ai/blog/NMR_instrument_compatibility",
           "headline": "Multi-Instrument NMR Compatibility: One AI Platform Across Multi-Brand Instruments",
-          "datePublished": "2026-08-10T22:00:00+00:00"
+          "datePublished": "2026-08-11T00:00:00+02:00"
         },{
           "@type": "BlogPosting",
           "@id": "https://rombo.ai/blog/article-NMR-Machine-Learning#blogposting",
           "url": "https://rombo.ai/blog/article-NMR-Machine-Learning",
           "headline": "The Missing Layer in NMR Machine Learning",
-          "datePublished": "2026-08-02T22:00:00+00:00"
+          "datePublished": "2026-08-03T00:00:00+02:00"
         },{
           "@type": "BlogPosting",
           "@id": "https://rombo.ai/blog/article-AI-in-downstream-strategy#blogposting",
           "url": "https://rombo.ai/blog/article-AI-in-downstream-strategy",
           "headline": "AI in Downstream Refinery: What’s the Formula to Success? ",
-          "datePublished": "2026-06-14T22:00:00+00:00"
+          "datePublished": "2026-06-15T00:00:00+02:00"
         },{
           "@type": "BlogPosting",
           "@id": "https://rombo.ai/blog/usecase-material-intelligence-platform#blogposting",
           "url": "https://rombo.ai/blog/usecase-material-intelligence-platform",
           "headline": "Machine Learning Applications in Materials Chemistry: The Rombo AI Approach ",
-          "datePublished": "2026-01-29T01:00:00+00:00"
+          "datePublished": "2026-01-29T02:00:00+01:00"
         },{
           "@type": "BlogPosting",
           "@id": "https://rombo.ai/blog/usecase-crudeoil-refinery#blogposting",
           "url": "https://rombo.ai/blog/usecase-crudeoil-refinery",
           "headline": "Use Case: Accelerating Crude Oil Analysis for a Leading Asian Refinery",
-          "datePublished": "2025-12-29T01:00:00+00:00"
+          "datePublished": "2025-12-29T02:00:00+01:00"
         },{
           "@type": "BlogPosting",
           "@id": "https://rombo.ai/blog/the-future-is-agentic/#blogposting",
           "url": "https://rombo.ai/blog/the-future-is-agentic/",
           "headline": "The Future Is Agentic: How AI Agents Bring Back Calm Technology",
-          "datePublished": "2025-10-28T01:00:00+00:00"
+          "datePublished": "2025-10-28T02:00:00+01:00"
         },{
           "@type": "BlogPosting",
           "@id": "https://rombo.ai/blog/ai-transformation-crude-oil-analysis/#blogposting",
           "url": "https://rombo.ai/blog/ai-transformation-crude-oil-analysis/",
           "headline": "The AI Transformation of Crude Oil Analysis: From Laboratory Bottlenecks to Real-Time Intelligence",
-          "datePublished": "2025-10-06T00:00:00+00:00"
+          "datePublished": "2025-10-06T00:00:00+02:00"
         },{
           "@type": "BlogPosting",
           "@id": "https://rombo.ai/blog/SpectraML-a-framework-designerd-for-rd-teams/#blogposting",
           "url": "https://rombo.ai/blog/SpectraML-a-framework-designerd-for-rd-teams/",
           "headline": "SpectraML: A framework designed for R&D teams",
-          "datePublished": "2024-12-09T00:00:00+00:00"
+          "datePublished": "2024-12-09T00:00:00+01:00"
         },{
           "@type": "BlogPosting",
           "@id": "https://rombo.ai/blog/sardegna-ricerche-partnership/#blogposting",
           "url": "https://rombo.ai/blog/sardegna-ricerche-partnership/",
           "headline": "Esplorazione delle Potenzialità della Spettroscopia NMR nel Settore delle Energie Rinnovabili",
-          "datePublished": "2024-09-30T00:00:00+00:00"
+          "datePublished": "2024-09-30T02:00:00+02:00"
         },{
           "@type": "BlogPosting",
           "@id": "https://rombo.ai/blog/ml-for-crude-oil/#blogposting",
           "url": "https://rombo.ai/blog/ml-for-crude-oil/",
           "headline": "Low-Field NMR for Crude Oil Analysis: Harnessing Machine Learning for Predicting Properties",
-          "datePublished": "2024-09-20T00:00:00+00:00"
-        },{
-          "@type": "BlogPosting",
-          "@id": "https://rombo.ai/blog/how-low-field-NMR-works/#blogposting",
-          "url": "https://rombo.ai/blog/how-low-field-NMR-works/",
-          "headline": "How Low-Field NMR Works and How Machine Learning Enhances Sample Characterization",
-          "datePublished": "2023-08-23T00:00:00+00:00"
+          "datePublished": "2024-09-20T00:00:00+02:00"
         }
       ]
     }]
@@ -279,11 +507,10 @@
 
 </head>
 
-
 <body>
 
 <button id="UpBtn" class="up-btn d-none" aria-label="Back to top"><span>
-		<svg xmlns="http://www.w3.org/2000/svg" width="23.721" height="28.513" viewBox="0 0 28.513 23.721">
+		<svg xmlns="http://www.w3.org/2000/svg" width="23.721" height="28.513" viewBox="0 0 28.513 23.721" aria-hidden="true" focusable="false">
 			<g id="right-arrow" transform="translate(0 0)">
 			<g id="Group_22" data-name="Group 22" transform="translate(0 0) rotate(-90)">
 				<path id="Path_1869" data-name="Path 1869"
@@ -295,14 +522,12 @@
 		</span>
 </button>
 
-<!-- Menu -->
-
-<a class="skip-link" href="#main-content">Skip to content</a>
+<!-- Menu --><a class="skip-link" href="#main-content">Skip to content</a>
 
 <nav class="container-fluid navbar fixed-top navbar-expand-md navbar-light custom-shadow" style="max-height: 58px; background:#090C2333;">
     <div class="container custom-container">
         <!-- Logo -->
-        <a class="navbar-brand" style="padding-left: 10px; padding-bottom: 5px" href="/#">
+        <a class="navbar-brand" style="padding-left: 10px; padding-bottom: 5px" href="/">
             <img src="/img/logo-1.svg" alt="Rombo AI Logo" class="img-fluid" >
         </a>
         <!-- Toggler/collapsible Button -->
@@ -327,17 +552,12 @@
                     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="productsDropdown">
                         <li>
                             <a class="dropdown-item" href="/product/">
-                                Material Intelligence Platform
+                                Rombo AI Platform
                             </a>
                         </li>
                         <li>
-                            <a class="dropdown-item" href="/product/#nmr-ai-analysis-tool">
-                                NMR AI Analyzer
-                            </a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="/product/#automl-materials">
-                                AutoML Framework
+                            <a class="dropdown-item" href="/spectra/">
+                                Spectra
                             </a>
                         </li>
                     </ul>
@@ -368,23 +588,10 @@
                                 Transformer Oil Monitoring
                             </a>
                         </li>
-                        <li>
-                            <a class="dropdown-item" href="/use-cases/nmr-compound-identification/">
-                                NMR Compound Identification
-                            </a>
-                        </li>
                     </ul>
+                </li><li class="nav-item d-flex align-items-center">
+                    <a class="nav-link nav-cta" href="/contact/" data-cta-location="blog">Contact us</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link menu-item text-white" href="/blog/">Blog</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link menu-item text-white" href="https://rombo-ai.breezy.hr/" target="_blank" rel="noopener noreferrer">Careers</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link menu-item text-white" href="/contact/" data-cta-location="navigation">Contact us</a>
-                </li>
-             
             </ul>
         </div>
     </div>
@@ -392,34 +599,49 @@
 <!-- Menu -->
 
 
-
 <main id="main-content" tabindex="-1">
 
-<!--Hero Section-->
-<div class="container-fluid hero-blog-section px-0">
-  <div class="hero_contact_mask1" style="z-index: 1;"></div>
-  <div class="hero_contact_mask" style="z-index: 1;"></div>
-  <img src="/img/imageHero.jpg" alt="Decorative blog header background" aria-hidden="true" class="img-fluid position-absolute"
-       style=" height: 100%; width: 100%; object-fit: cover; left: 0;right:0; z-index: 1; mix-blend-mode: soft-light;">
-
-
-  <div class="container h-100 custom-container">
-      <div class="row mx-0 w-100 h-100 justify-content-center align-content-center text-center">
-          <div class="z-1 col-12 h-100 px-md-4 align-content-center align-items-center titolo-1">
-              <h1 class="titolo-1-span m-0">
-                  Welcome to Rombo AI Blog
-              </h1>
-              <p class="span2 py-4">
-                Perspectives on AI, NMR Spectral Data, and the Future of Materials Analysis.
-              </p>
-          </div>
+<div class="container-fluid hero-section">
+  <video class="hero-video" autoplay muted loop playsinline controlslist="nodownload" data-desktop-only="true" preload="none" aria-hidden="true">
+    <source data-src="/img/hero_back_play.mp4" type="video/mp4"/>
+    <track kind="captions" label="No dialogue" default>
+    Your browser does not support the video tag.
+  </video>
+  <div class="mask"></div>
+  <div class="container custom-container w-100 h-100">
+    <div class="row m-0 w-100 h-100">
+      <div class="z-1 col-12 col-lg-7 hero-copy">
+        
+        <p class="hero-eyebrow fw-bold text-uppercase mb-2">Blog</p>
+        
+        <h1 class="text-white m-0"><span class="text-highlight">Insights on AI and NMR</span></h1>
+        
+        <p class="hero-sub text-white mb-0">Perspectives on AI, NMR spectral data, and the future of materials analysis.</p>
+        
       </div>
+    </div>
   </div>
 </div>
-<!--Hero Section-->
+<script>
+  (function () {
+    var isDesktop = window.matchMedia && window.matchMedia("(min-width: 992px)").matches;
+    var video = document.querySelector(".hero-section .hero-video[data-desktop-only='true']");
+    if (!video) return;
+    if (!isDesktop) {
+      video.remove();
+      return;
+    }
+    var source = video.querySelector("source[data-src]");
+    if (!source) return;
+    source.src = source.getAttribute("data-src");
+    video.load();
+    var p = video.play();
+    if (p && typeof p.catch === "function") p.catch(function () {});
+  })();
+</script>
 
 <div class="container-fluid align-self-end mx-0" style="position: relative;">
-  <img class="img-fluid w-100 hero-divider-container" style="bottom:-10px; object-fit: cover; z-index: 1;" src="/img/Separator_Hero.svg" alt="Decorative hero section divider" aria-hidden="true"/>
+  <img class="img-fluid w-100 hero-divider-container" style="bottom:-10px; object-fit: cover; z-index: 1;" src="/img/Separator_Hero.svg" alt="Decorative section divider" aria-hidden="true"/>
 </div>
 <!-- Articles Section -->
 <section class="container-fluid bg-white" aria-labelledby="blog-list-heading">
@@ -435,13 +657,557 @@
                     
                     <li class="col mb-4 " style="min-width: 300px;">
                         <article class="card h-100">
+                            <a href="/blog/transformer-oil-breakdown-voltage">
+                                <img class="post-image"
+                                     src="/img/blog/transformer-oil-breakdown-voltage-methods.jpg"
+                                     alt="Schematic comparison of three breakdown voltage test cells for insulating oil. IEC 60156: spherical or spherical-segment electrodes, 2.5 mm gap, voltage rising at 2 kV per second, stirring recommended, mean of six breakdowns. ASTM D1816: VDE electrodes, 1 or 2 mm gap, 0.5 kV per second, stirred cell. ASTM D877: flat disk electrodes, 2.54 mm gap, 3 kV per second, no stirring."
+                                     width="600" height="400" loading="lazy" decoding="async">
+                                <div class="post-content">
+                                    <time class="date" datetime="2026-11-18T07:00:00+01:00">Nov 18, 2026</time>
+                                    <h3 class="title" style="font-size:18px;">Transformer Oil Breakdown Voltage: What IEC 60156 and ASTM D1816 Tell You, and What They Don't</h3>
+                                    <p class="description">What the transformer oil breakdown voltage test measures, how IEC 60156, ASTM D1816 and ASTM D877 differ, what moves the result, and why ...</p>
+                                </div>
+                            </a>
+                        </article>
+                    </li>
+                    
+                    <li class="col mb-4 " style="min-width: 300px;">
+                        <article class="card h-100">
+                            <a href="/blog/crude-oil-compatibility-asphaltene-stability">
+                                <img class="post-image"
+                                     src="/img/blog/crude-oil-compatibility-oil-compatibility-model.jpg"
+                                     alt="Line chart from the oil compatibility model for blends of Forties and Souedie crude. The blend solubility blending number falls from 62 with pure Souedie to 27 with pure Forties. It crosses 1.4 times the Souedie insolubility number at about 23 percent Forties and the insolubility number of 38.5 at about 67 percent Forties, dividing the chart into compatible with margin, nearly incompatible with fouling risk, and incompatible."
+                                     width="600" height="400" loading="lazy" decoding="async">
+                                <div class="post-content">
+                                    <time class="date" datetime="2026-11-16T07:00:00+01:00">Nov 16, 2026</time>
+                                    <h3 class="title" style="font-size:18px;">Crude Oil Compatibility and Asphaltene Stability: Tests, Limits and Predictive Approaches</h3>
+                                    <p class="description">How the oil compatibility model turns two titrations into a blending rule, what ASTM D7157, D7112 and D8253 report, why methods disagree ...</p>
+                                </div>
+                            </a>
+                        </article>
+                    </li>
+                    
+                    <li class="col mb-4 " style="min-width: 300px;">
+                        <article class="card h-100">
+                            <a href="/blog/crude-oil-tank-stratification">
+                                <img class="post-image"
+                                     src="/img/blog/crude-oil-tank-stratification-levels.jpg"
+                                     alt="Left: a crude oil storage tank shaded from light crude at the top to heavier crude at the bottom, with settled sediment and water on the floor and three spot-sampling points at the upper, middle and lower levels. Right: illustrative density profiles by height. After receipt, density changes sharply with height; after partial mixing the change is smaller; a mixed tank has the same density at every level."
+                                     width="600" height="400" loading="lazy" decoding="async">
+                                <div class="post-content">
+                                    <time class="date" datetime="2026-11-11T07:00:00+01:00">Nov 11, 2026</time>
+                                    <h3 class="title" style="font-size:18px;">Crude Oil Tank Stratification: Why It Happens, How to Detect It and What It Means for the CDU</h3>
+                                    <p class="description">Why a crude tank can stop being one sample, how stratification differs from incompatibility and sediment, the tools refineries use to fin...</p>
+                                </div>
+                            </a>
+                        </article>
+                    </li>
+                    
+                    <li class="col mb-4 " style="min-width: 300px;">
+                        <article class="card h-100">
+                            <a href="/blog/nir-vs-nmr-crude-oil-analysis">
+                                <img class="post-image"
+                                     src="/img/blog/nir-vs-nmr-crude-oil-decision-guide.jpg"
+                                     alt="Decision diagram. The question "what must the result drive, and where is the sample?" branches three ways. Continuous control of one stream, in line, leads to NIR in line. A decision per sample or cargo on several properties, with a changing crude slate, leads to benchtop NMR in the lab or at-line. Certification, custody transfer, disputes or a new grade's assay lead to primary ASTM methods."
+                                     width="600" height="400" loading="lazy" decoding="async">
+                                <div class="post-content">
+                                    <time class="date" datetime="2026-11-09T07:00:00+01:00">Nov 09, 2026</time>
+                                    <h3 class="title" style="font-size:18px;">NIR vs NMR for Crude Oil Analysis: Where Each Method Fits</h3>
+                                    <p class="description">NIR and NMR both predict crude oil properties from a spectrum: what each measures, what studies show, and where each fits, in line or in ...</p>
+                                </div>
+                            </a>
+                        </article>
+                    </li>
+                    
+                    <li class="col mb-4 " style="min-width: 300px;">
+                        <article class="card h-100">
+                            <a href="/blog/validating-spectroscopic-property-model-astm-reference-methods">
+                                <img class="post-image"
+                                     src="/img/blog/validating-property-model-astm-differences.jpg"
+                                     alt="Scatter plot of predicted minus reference sulfur for 40 synthetic crude samples. Points between 0.2 and 2.8 wt% sit inside a shaded band of plus or minus 0.10 wt% around zero. Eight orange points between 2.8 and 3.5 wt% sit below zero, with a mean difference of about minus 0.08 wt%, and two fall outside the band."
+                                     width="600" height="400" loading="lazy" decoding="async">
+                                <div class="post-content">
+                                    <time class="date" datetime="2026-11-02T07:00:00+01:00">Nov 02, 2026</time>
+                                    <h3 class="title" style="font-size:18px;">Validating a Spectroscopic Property Model Against ASTM Reference Methods</h3>
+                                    <p class="description">How to validate a spectroscopic property model against your ASTM reference method: the practices, the acceptance criteria and a worked ex...</p>
+                                </div>
+                            </a>
+                        </article>
+                    </li>
+                    
+                    <li class="col mb-4 " style="min-width: 300px;">
+                        <article class="card h-100">
+                            <a href="/blog/calibration-transfer-spectroscopy-models-break-instruments-change">
+                                <img class="post-image"
+                                     src="/img/blog/calibration-transfer-two-instruments.jpg"
+                                     alt="Two overlaid synthetic proton NMR spectra of the same sample. Instrument A has narrow lines. Instrument B, in orange, shows peaks shifted by 0.02 ppm, wider lines, lower gain and a tilted baseline. Three zoomed panels show the aromatic, benzylic and aliphatic regions."
+                                     width="600" height="400" loading="lazy" decoding="async">
+                                <div class="post-content">
+                                    <time class="date" datetime="2026-10-26T07:00:00+01:00">Oct 26, 2026</time>
+                                    <h3 class="title" style="font-size:18px;">Calibration Transfer in Spectroscopy: Why Models Break When Instruments Change</h3>
+                                    <p class="description">Why a calibration built on one spectrometer fails on the next, what each transfer method corrects, and a simulated example that shows how...</p>
+                                </div>
+                            </a>
+                        </article>
+                    </li>
+                    
+                    <li class="col mb-4 " style="min-width: 300px;">
+                        <article class="card h-100">
+                            <a href="/blog/api-gravity-sulfur-tan-crude-oil-one-workflow">
+                                <img class="post-image"
+                                     src="/img/blog/crude-api-sulfur-tan-one-workflow.jpg"
+                                     alt="Schematic comparing two crude oil lab workflows. Top: one sample split across a digital density analyzer for API gravity, an X-ray fluorescence analyzer for total sulfur and a titrator for total acid number. Bottom: one benchtop proton NMR scan feeding three property models, each validated on paired samples against its reference method."
+                                     width="600" height="400" loading="lazy" decoding="async">
+                                <div class="post-content">
+                                    <time class="date" datetime="2026-10-21T08:00:00+02:00">Oct 21, 2026</time>
+                                    <h3 class="title" style="font-size:18px;">API Gravity, Sulfur and TAN in One Workflow: What Changes for the Crude Lab</h3>
+                                    <p class="description">How crude labs measure API gravity, sulfur and total acid number today, what each result decides, and what changes, and what does not, wh...</p>
+                                </div>
+                            </a>
+                        </article>
+                    </li>
+                    
+                    <li class="col mb-4 " style="min-width: 300px;">
+                        <article class="card h-100">
+                            <a href="/blog/transformer-oil-testing-properties-methods-nmr">
+                                <img class="post-image"
+                                     src="/img/blog/transformer-oil-testing-map.jpg"
+                                     alt="Overview of routine transformer oil tests grouped into four questions: dielectric condition (breakdown voltage, dissipation factor, water), oxidation indicators (acidity, interfacial tension, colour, inhibitor), fault and paper markers (dissolved gases, furanic compounds) and contaminants (corrosive sulphur, PCB, particles), with the standard method for each and a note on where benchtop NMR may play a role."
+                                     width="600" height="400" loading="lazy" decoding="async">
+                                <div class="post-content">
+                                    <time class="date" datetime="2026-10-19T08:00:00+02:00">Oct 19, 2026</time>
+                                    <h3 class="title" style="font-size:18px;">Transformer Oil Testing: Which Properties Matter, How They Are Measured, and Where NMR Fits</h3>
+                                    <p class="description">Which insulating oil properties utility labs test, which IEC and ASTM methods measure them, what decision each result supports, and what ...</p>
+                                </div>
+                            </a>
+                        </article>
+                    </li>
+                    
+                    <li class="col mb-4 " style="min-width: 300px;">
+                        <article class="card h-100">
+                            <a href="/blog/water-content-transformer-oil-karl-fischer">
+                                <img class="post-image"
+                                     src="/img/blog/water-content-transformer-oil-methods.jpg"
+                                     alt="Schematic of a transformer with three measurement points: an oil sample for coulometric Karl Fischer titration, a capacitive probe in the oil reporting relative saturation, and a dielectric response test estimating water in paper and pressboard."
+                                     width="600" height="400" loading="lazy" decoding="async">
+                                <div class="post-content">
+                                    <time class="date" datetime="2026-10-14T08:00:00+02:00">Oct 14, 2026</time>
+                                    <h3 class="title" style="font-size:18px;">How to Measure Water Content in Transformer Oil: Karl Fischer (IEC 60814) and Faster Alternatives</h3>
+                                    <p class="description">How coulometric Karl Fischer titration (IEC 60814, ASTM D1533) measures water in transformer oil, why results scatter, and what online mo...</p>
+                                </div>
+                            </a>
+                        </article>
+                    </li>
+                    
+                    <li class="col mb-4 " style="min-width: 300px;">
+                        <article class="card h-100">
+                            <a href="/blog/crude-oil-analysis-refinery-process-economics">
+                                <img class="post-image"
+                                     src="/img/blog/refinery-pine-bend-tony-webster.jpg"
+                                     alt="Aerial view of processing units, pipework and storage tanks at Pine Bend Refinery in Rosemount, Minnesota."
+                                     width="600" height="400" loading="lazy" decoding="async">
+                                <div class="post-content">
+                                    <time class="date" datetime="2026-09-29T14:00:00+02:00">Sep 29, 2026</time>
+                                    <h3 class="title" style="font-size:18px;">Why Crude Oil Analysis Matters at Every Stage of the Refinery</h3>
+                                    <p class="description">Where refineries sample crude and products, what each analysis measures, and how faster NMR-based predictions can support blending, fouli...</p>
+                                </div>
+                            </a>
+                        </article>
+                    </li>
+                    
+                    <li class="col mb-4 " style="min-width: 300px;">
+                        <article class="card h-100">
+                            <a href="/blog/future-agentic-ai-analytical-chemistry">
+                                <img class="post-image"
+                                     src="/img/blog/future-agentic-ai-analytical-chemistry.jpg"
+                                     alt="A laboratory robot preparing chemical samples for analysis"
+                                     width="600" height="400" loading="lazy" decoding="async">
+                                <div class="post-content">
+                                    <time class="date" datetime="2026-09-19T03:00:00+02:00">Sep 19, 2026</time>
+                                    <h3 class="title" style="font-size:18px;">The Future of Agentic AI in Analytical Chemistry</h3>
+                                    <p class="description">A practical capability horizon for agentic AI in analytical chemistry, from bounded software orchestration to governed closed-loop experi...</p>
+                                </div>
+                            </a>
+                        </article>
+                    </li>
+                    
+                    <li class="col mb-4 " style="min-width: 300px;">
+                        <article class="card h-100">
+                            <a href="/blog/automating-nmr-structure-elucidation-confidence-scores">
+                                <img class="post-image"
+                                     src="/img/blog/automating-nmr-structure-elucidation-confidence-scores.png"
+                                     alt="Two-dimensional HSQC NMR spectrum with annotated cross-peaks used as structural evidence"
+                                     width="600" height="400" loading="lazy" decoding="async">
+                                <div class="post-content">
+                                    <time class="date" datetime="2026-09-18T03:00:00+02:00">Sep 18, 2026</time>
+                                    <h3 class="title" style="font-size:18px;">Automating NMR Structure Elucidation with Confidence Scores</h3>
+                                    <p class="description">Learn what confidence scores mean in automated NMR structure elucidation, how to calibrate them, and when an agent should rank, abstain, ...</p>
+                                </div>
+                            </a>
+                        </article>
+                    </li>
+                    
+                    <li class="col mb-4 " style="min-width: 300px;">
+                        <article class="card h-100">
+                            <a href="/blog/human-in-the-loop-ai-laboratory-decision-making">
+                                <img class="post-image"
+                                     src="/img/blog/human-in-the-loop-ai-laboratory-decision-making.jpg"
+                                     alt="Scientists supervising analytical instruments and computer systems in a modern laboratory"
+                                     width="600" height="400" loading="lazy" decoding="async">
+                                <div class="post-content">
+                                    <time class="date" datetime="2026-09-17T03:00:00+02:00">Sep 17, 2026</time>
+                                    <h3 class="title" style="font-size:18px;">Human-in-the-Loop AI for Laboratory Decision Making</h3>
+                                    <p class="description">A practical governance framework for assigning ownership, review gates, feedback, and escalation in human-in-the-loop laboratory AI workf...</p>
+                                </div>
+                            </a>
+                        </article>
+                    </li>
+                    
+                    <li class="col mb-4 " style="min-width: 300px;">
+                        <article class="card h-100">
+                            <a href="/blog/benchmark-ai-agent-scientific-data-analysis">
+                                <img class="post-image"
+                                     src="/img/blog/benchmark-ai-agent-scientific-data-analysis.jpg"
+                                     alt="Laboratory specialist calibrating a precision micrometer against reference equipment"
+                                     width="600" height="400" loading="lazy" decoding="async">
+                                <div class="post-content">
+                                    <time class="date" datetime="2026-09-15T03:10:00+02:00">Sep 15, 2026</time>
+                                    <h3 class="title" style="font-size:18px;">How to Benchmark an AI Agent for Scientific Data Analysis</h3>
+                                    <p class="description">A practical framework for benchmarking complete scientific AI agents across outcomes, trajectories, evidence, abstention, cost, latency, ...</p>
+                                </div>
+                            </a>
+                        </article>
+                    </li>
+                    
+                    <li class="col mb-4 " style="min-width: 300px;">
+                        <article class="card h-100">
+                            <a href="/blog/failure-modes-agentic-systems-scientific-workflows">
+                                <img class="post-image"
+                                     src="/img/blog/failure-modes-agentic-scientific-workflows.jpg"
+                                     alt="A line of dominoes falling, representing cascading failures in an agentic scientific workflow"
+                                     width="600" height="400" loading="lazy" decoding="async">
+                                <div class="post-content">
+                                    <time class="date" datetime="2026-09-14T03:00:00+02:00">Sep 14, 2026</time>
+                                    <h3 class="title" style="font-size:18px;">Failure Modes of Agentic Systems in Scientific Workflows</h3>
+                                    <p class="description">How scientific AI agents fail through bad data, tool misuse, unsupported hypotheses, loops, and weak escalation—and how to detect and con...</p>
+                                </div>
+                            </a>
+                        </article>
+                    </li>
+                    
+                    <li class="col mb-4 " style="min-width: 300px;">
+                        <article class="card h-100">
+                            <a href="/blog/ai-agent-interprets-nmr-spectrum-pipeline">
+                                <img class="post-image"
+                                     src="/img/blog/ai-agent-nmr-spectrum-pipeline.jpg"
+                                     alt="NMR laboratory with spectrometers and computer workstations used for spectral analysis"
+                                     width="600" height="400" loading="lazy" decoding="async">
+                                <div class="post-content">
+                                    <time class="date" datetime="2026-09-13T03:00:00+02:00">Sep 13, 2026</time>
+                                    <h3 class="title" style="font-size:18px;">How an AI Agent Interprets an NMR Spectrum: A Step-by-Step Pipeline</h3>
+                                    <p class="description">Follow an auditable AI-agent pipeline for NMR compound identification, from data-quality checks and preprocessing to candidate ranking, c...</p>
+                                </div>
+                            </a>
+                        </article>
+                    </li>
+                    
+                    <li class="col mb-4 " style="min-width: 300px;">
+                        <article class="card h-100">
+                            <a href="/blog/agentic-systems-nmr-data-analysis">
+                                <img class="post-image"
+                                     src="/img/blog/agentic-systems-nmr-data-analysis.jpg"
+                                     alt="Hand-drawn diagram of an NMR spectrometer connected to a spectrum display"
+                                     width="600" height="400" loading="lazy" decoding="async">
+                                <div class="post-content">
+                                    <time class="date" datetime="2026-09-12T03:05:00+02:00">Sep 12, 2026</time>
+                                    <h3 class="title" style="font-size:18px;">What Are Agentic Systems for NMR Data Analysis?</h3>
+                                    <p class="description">Learn what makes an AI agent for NMR data analysis different from a model or fixed pipeline, which tools it can coordinate, and where che...</p>
+                                </div>
+                            </a>
+                        </article>
+                    </li>
+                    
+                    <li class="col mb-4 " style="min-width: 300px;">
+                        <article class="card h-100">
+                            <a href="/blog/build-vs-buy-spectral-interpretation-spectra-api">
+                                <img class="post-image"
+                                     src="/img/blog/build-vs-buy-spectral-interpretation-spectra-api.jpg"
+                                     alt="Automated laboratory equipment illustrating the operational infrastructure behind spectral interpretation"
+                                     width="600" height="400" loading="lazy" decoding="async">
+                                <div class="post-content">
+                                    <time class="date" datetime="2026-09-09T03:00:00+02:00">Sep 09, 2026</time>
+                                    <h3 class="title" style="font-size:18px;">Build vs Buy: Spectral Interpretation with Spectra</h3>
+                                    <p class="description">A practical build-versus-buy framework for spectral interpretation, covering data, validation, maintenance, cross-instrument generalisati...</p>
+                                </div>
+                            </a>
+                        </article>
+                    </li>
+                    
+                    <li class="col mb-4 " style="min-width: 300px;">
+                        <article class="card h-100">
+                            <a href="/blog/spectra-api-laboratory-data-pipeline-integration">
+                                <img class="post-image"
+                                     src="/img/blog/spectra-api-laboratory-data-pipeline-integration.jpg"
+                                     alt="Robotic arms transferring samples in an autonomous chemistry laboratory"
+                                     width="600" height="400" loading="lazy" decoding="async">
+                                <div class="post-content">
+                                    <time class="date" datetime="2026-09-08T03:10:00+02:00">Sep 08, 2026</time>
+                                    <h3 class="title" style="font-size:18px;">Integrating Spectra into Laboratory Data Pipelines</h3>
+                                    <p class="description">A practical architecture for connecting Spectra to instrument exports, batch queues, LIMS records, review steps, and traceable compound-i...</p>
+                                </div>
+                            </a>
+                        </article>
+                    </li>
+                    
+                    <li class="col mb-4 " style="min-width: 300px;">
+                        <article class="card h-100">
+                            <a href="/blog/spectra-ai-automated-compound-identification">
+                                <img class="post-image"
+                                     src="/img/blog/spectra-ai-automated-compound-identification.jpg"
+                                     alt="Hand-drawn NMR spectrum showing resonance peaks after a Fourier transform"
+                                     width="600" height="400" loading="lazy" decoding="async">
+                                <div class="post-content">
+                                    <time class="date" datetime="2026-09-07T09:31:00+02:00">Sep 07, 2026</time>
+                                    <h3 class="title" style="font-size:18px;">Spectra: Automated Compound Identification from NMR Spectra</h3>
+                                    <p class="description">A practical guide to what Spectra takes in, what it returns, how chemists review its ranked candidates, and how to evaluate it on represe...</p>
+                                </div>
+                            </a>
+                        </article>
+                    </li>
+                    
+                    <li class="col mb-4 " style="min-width: 300px;">
+                        <article class="card h-100">
+                            <a href="/blog/compound-identification-petrochemical-crude-oil-analysis">
+                                <img class="post-image"
+                                     src="/img/blog/petrochemical-compound-identification-2026-09-04.jpg"
+                                     alt="Scientist separating petroleum samples with liquid chromatography columns in a laboratory"
+                                     width="600" height="400" loading="lazy" decoding="async">
+                                <div class="post-content">
+                                    <time class="date" datetime="2026-09-04T03:09:00+02:00">Sep 04, 2026</time>
+                                    <h3 class="title" style="font-size:18px;">Compound Identification in Petrochemical and Crude Oil Analysis</h3>
+                                    <p class="description">A practical framework for identifying hydrocarbons, heteroatom species, contaminants, and additives across crude oil and petrochemical wo...</p>
+                                </div>
+                            </a>
+                        </article>
+                    </li>
+                    
+                    <li class="col mb-4 " style="min-width: 300px;">
+                        <article class="card h-100">
+                            <a href="/blog/agent_structure_elucidation">
+                                <img class="post-image"
+                                     src="/img/Gemini_Generated_Image_9oipl29oipl29oip.jpeg"
+                                     alt="Molecular structure emerging from spectral signals during NMR structure elucidation"
+                                     width="600" height="400" loading="lazy" decoding="async">
+                                <div class="post-content">
+                                    <time class="date" datetime="2026-09-04T02:00:00+02:00">Sep 04, 2026</time>
+                                    <h3 class="title" style="font-size:18px;">Cosa abbiamo imparato costruendo un agente per la structure elucidation</h3>
+                                    <p class="description">Cosa abbiamo imparato costruendo un agente AI per la structure elucidation tramite NMR? Una riflessione su autonomia, overthinking e su c...</p>
+                                </div>
+                            </a>
+                        </article>
+                    </li>
+                    
+                    <li class="col mb-4 " style="min-width: 300px;">
+                        <article class="card h-100">
+                            <a href="/blog/structure-elucidation-natural-products-workflow">
+                                <img class="post-image"
+                                     src="/img/blog/natural-products-column-chromatography-2026-09-02.jpg"
+                                     alt="Test-tube fractions collected during column chromatography of a fungal extract"
+                                     width="600" height="400" loading="lazy" decoding="async">
+                                <div class="post-content">
+                                    <time class="date" datetime="2026-09-02T09:00:00+02:00">Sep 02, 2026</time>
+                                    <h3 class="title" style="font-size:18px;">Structure Elucidation Workflows for Natural Products</h3>
+                                    <p class="description">A practical structure elucidation workflow for natural products—from extract provenance and dereplication to isolation, NMR connectivity,...</p>
+                                </div>
+                            </a>
+                        </article>
+                    </li>
+                    
+                    <li class="col mb-4 " style="min-width: 300px;">
+                        <article class="card h-100">
+                            <a href="/blog/impurity-identification-pharmaceutical-quality-control">
+                                <img class="post-image"
+                                     src="/img/blog/pharmaceutical-impurity-hplc-2026-09-01.jpg"
+                                     alt="High-performance liquid chromatography system used to separate pharmaceutical components and impurities"
+                                     width="600" height="400" loading="lazy" decoding="async">
+                                <div class="post-content">
+                                    <time class="date" datetime="2026-09-01T09:00:00+02:00">Sep 01, 2026</time>
+                                    <h3 class="title" style="font-size:18px;">Impurity Identification in Pharmaceutical Quality Control</h3>
+                                    <p class="description">A practical guide to classifying, isolating, identifying, and documenting pharmaceutical impurities with chromatography, mass spectrometr...</p>
+                                </div>
+                            </a>
+                        </article>
+                    </li>
+                    
+                    <li class="col mb-4 " style="min-width: 300px;">
+                        <article class="card h-100">
+                            <a href="/blog/combine-nmr-mass-spectrometry-ai-structure-elucidation">
+                                <img class="post-image"
+                                     src="/img/blog/nmr-ms-data-fusion-2026-08-31.jpg"
+                                     alt="Nuclear magnetic resonance spectrometer used to acquire structural evidence from chemical samples"
+                                     width="600" height="400" loading="lazy" decoding="async">
+                                <div class="post-content">
+                                    <time class="date" datetime="2026-08-31T09:00:00+02:00">Aug 31, 2026</time>
+                                    <h3 class="title" style="font-size:18px;">Combining NMR and Mass Spectrometry for AI Structure Elucidation</h3>
+                                    <p class="description">Learn how NMR and mass spectrometry can be fused as constraints, features, or ranked decisions—and how to keep multimodal AI structure el...</p>
+                                </div>
+                            </a>
+                        </article>
+                    </li>
+                    
+                    <li class="col mb-4 " style="min-width: 300px;">
+                        <article class="card h-100">
+                            <a href="/blog/how-ai-identifies-unknown-compounds-raw-spectra">
+                                <img class="post-image"
+                                     src="/img/blog/ai-unknown-compounds-neural-network-2026-08-30.svg"
+                                     alt="Diagram of a neural network transforming input measurements through hidden representations into an output"
+                                     width="600" height="400" loading="lazy" decoding="async">
+                                <div class="post-content">
+                                    <time class="date" datetime="2026-08-30T11:57:00+02:00">Aug 30, 2026</time>
+                                    <h3 class="title" style="font-size:18px;">How AI Identifies Unknown Compounds from Raw Spectra</h3>
+                                    <p class="description">AI spectroscopy turns instrument data into learned representations, candidate structures, and evidence for review. See what happens at ea...</p>
+                                </div>
+                            </a>
+                        </article>
+                    </li>
+                    
+                    <li class="col mb-4 " style="min-width: 300px;">
+                        <article class="card h-100">
+                            <a href="/blog/rose_foundation_model_NMR_spectral_data">
+                                <img class="post-image"
+                                     src="/img/blog/rose-nmr-embeddings-730.webp"
+                                     alt="ROSE NMR embeddings grouping matching molecules across magnetic field strengths"
+                                     width="600" height="400" loading="lazy" decoding="async">
+                                <div class="post-content">
+                                    <time class="date" datetime="2026-08-28T11:00:00+02:00">Aug 28, 2026</time>
+                                    <h3 class="title" style="font-size:18px;">Generalization Across NMR Instruments: A Foundation Model Pre-Trained on Spectral Data</h3>
+                                    <p class="description">Most NMR deep learning models train an encoder and task head together for a particular endpoint, field strength, or instrument regime. Pe...</p>
+                                </div>
+                            </a>
+                        </article>
+                    </li>
+                    
+                    <li class="col mb-4 " style="min-width: 300px;">
+                        <article class="card h-100">
+                            <a href="/blog/confidence-scoring-compound-identification">
+                                <img class="post-image"
+                                     src="/img/blog/confidence-scoring-compound-identification-2026-08-27.jpg"
+                                     alt="Analytical technician reviewing data beside a mass spectrometer in a laboratory"
+                                     width="600" height="400" loading="lazy" decoding="async">
+                                <div class="post-content">
+                                    <time class="date" datetime="2026-08-27T09:00:00+02:00">Aug 27, 2026</time>
+                                    <h3 class="title" style="font-size:18px;">Confidence Scoring in Compound Identification</h3>
+                                    <p class="description">A match score measures spectral similarity, not automatically the probability that an identification is correct. Learn how to interpret, ...</p>
+                                </div>
+                            </a>
+                        </article>
+                    </li>
+                    
+                    <li class="col mb-4 " style="min-width: 300px;">
+                        <article class="card h-100">
+                            <a href="/blog/unknown-compound-identification-workflow">
+                                <img class="post-image"
+                                     src="/img/blog/unknown-compound-identification-sample-vials-2026-08-26.jpg"
+                                     alt="Rows of clear laboratory sample vials used to preserve and track analytical samples during unknown compound identification"
+                                     width="600" height="400" loading="lazy" decoding="async">
+                                <div class="post-content">
+                                    <time class="date" datetime="2026-08-26T09:00:00+02:00">Aug 26, 2026</time>
+                                    <h3 class="title" style="font-size:18px;">Unknown Compound Identification: An End-to-End Workflow</h3>
+                                    <p class="description">A practical unknown compound identification workflow, from representative sampling and complementary spectra to candidate falsification, ...</p>
+                                </div>
+                            </a>
+                        </article>
+                    </li>
+                    
+                    <li class="col mb-4 " style="min-width: 300px;">
+                        <article class="card h-100">
+                            <a href="/blog/spectral-deconvolution-methods-pitfalls-ai">
+                                <img class="post-image"
+                                     src="/img/blog/spectral-deconvolution-overlapping-nmr-peaks-2026-08-25.png"
+                                     alt="Proton NMR spectrum with crowded multiplet regions where overlapping signals may require spectral deconvolution"
+                                     width="600" height="400" loading="lazy" decoding="async">
+                                <div class="post-content">
+                                    <time class="date" datetime="2026-08-25T09:00:00+02:00">Aug 25, 2026</time>
+                                    <h3 class="title" style="font-size:18px;">Spectral Deconvolution: Methods, Pitfalls, and AI</h3>
+                                    <p class="description">Spectral deconvolution separates overlapping signals into interpretable components. Learn how curve fitting, multivariate resolution, GC-...</p>
+                                </div>
+                            </a>
+                        </article>
+                    </li>
+                    
+                    <li class="col mb-4 " style="min-width: 300px;">
+                        <article class="card h-100">
+                            <a href="/blog/spectral-matching-library-search-compound-identification">
+                                <img class="post-image"
+                                     src="/img/blog/spectral-matching-library-search-2026-08-24.png"
+                                     alt="Reference mass spectrum showing ion intensity across mass-to-charge values for spectral library matching"
+                                     width="600" height="400" loading="lazy" decoding="async">
+                                <div class="post-content">
+                                    <time class="date" datetime="2026-08-24T09:00:00+02:00">Aug 24, 2026</time>
+                                    <h3 class="title" style="font-size:18px;">How Spectral Matching and Library Search Work</h3>
+                                    <p class="description">Spectral matching turns an unknown spectrum into a ranked hit list—but a high score is not automatically an identification. Learn how pre...</p>
+                                </div>
+                            </a>
+                        </article>
+                    </li>
+                    
+                    <li class="col mb-4 " style="min-width: 300px;">
+                        <article class="card h-100">
+                            <a href="/blog/nmr-vs-mass-spectrometry-compound-identification">
+                                <img class="post-image"
+                                     src="/img/blog/nmr-mass-spectrometry-compound-identification-2026-08-23.jpg"
+                                     alt="Analytical chemist working beside a mass spectrometer in a laboratory used for compound identification"
+                                     width="600" height="400" loading="lazy" decoding="async">
+                                <div class="post-content">
+                                    <time class="date" datetime="2026-08-23T09:00:00+02:00">Aug 23, 2026</time>
+                                    <h3 class="title" style="font-size:18px;">NMR vs Mass Spectrometry for Compound Identification</h3>
+                                    <p class="description">NMR reveals chemical environments and atomic connectivity, while mass spectrometry constrains mass, formula, and fragmentation. Learn whi...</p>
+                                </div>
+                            </a>
+                        </article>
+                    </li>
+                    
+                    <li class="col mb-4 " style="min-width: 300px;">
+                        <article class="card h-100">
+                            <a href="/blog/what-is-compound-identification-analytical-chemistry">
+                                <img class="post-image"
+                                     src="/img/blog/compound-identification-nmr-laboratory-2026-08-22.jpg"
+                                     alt="Nuclear magnetic resonance laboratory with spectrometers used to identify organic compounds"
+                                     width="600" height="400" loading="lazy" decoding="async">
+                                <div class="post-content">
+                                    <time class="date" datetime="2026-08-22T09:30:00+02:00">Aug 22, 2026</time>
+                                    <h3 class="title" style="font-size:18px;">What Is Compound Identification in Analytical Chemistry?</h3>
+                                    <p class="description">Compound identification determines which substance produced an analytical signal. Learn how NMR, MS, IR, and GC-MS contribute and how lab...</p>
+                                </div>
+                            </a>
+                        </article>
+                    </li>
+                    
+                    <li class="col mb-4 " style="min-width: 300px;">
+                        <article class="card h-100">
+                            <a href="/blog/ai-crude-oil-analysis-lab-vs-nir-vs-high-field-nmr">
+                                <img class="post-image"
+                                     src="/img/blog/ai-downstream-refinery-2026-06-15.jpg"
+                                     alt="Refinery operations with AI-assisted crude oil analysis across laboratory, NIR, and NMR methods"
+                                     width="600" height="400" loading="lazy" decoding="async">
+                                <div class="post-content">
+                                    <time class="date" datetime="2026-08-18T14:00:00+02:00">Aug 18, 2026</time>
+                                    <h3 class="title" style="font-size:18px;">AI Crude Oil Analysis: Lab Testing vs NIR vs High-Field NMR vs Rombo AI</h3>
+                                    <p class="description">Laboratory testing, NIR, high-field NMR and AI-assisted benchtop NMR each fit a different crude oil analysis job. Compare cost drivers, t...</p>
+                                </div>
+                            </a>
+                        </article>
+                    </li>
+                    
+                    <li class="col mb-4 " style="min-width: 300px;">
+                        <article class="card h-100">
                             <a href="/blog/best-nmr-analytical-chemistry-software-comparison">
                                 <img class="post-image"
                                      src="/img/blog/spectroscopy-software-analysis-2026-08-18.jpg"
                                      alt="Scientist in a lab coat reviewing overlaid infrared spectra in spectroscopy analysis software on a monitor next to a microscope-coupled spectrometer"
                                      width="600" height="400" loading="lazy" decoding="async">
                                 <div class="post-content">
-                                    <time class="date" datetime="2026-08-18T10:00:00+00:00">Aug 18, 2026</time>
+                                    <time class="date" datetime="2026-08-18T12:00:00+02:00">Aug 18, 2026</time>
                                     <h3 class="title" style="font-size:18px;">Best NMR & Analytical Chemistry Software: Comparison Guide</h3>
                                     <p class="description">Analytical chemistry software now splits into instrument-native tools, vendor-neutral suites, and AI-native platforms. This guide compare...</p>
                                 </div>
@@ -457,7 +1223,23 @@
                                      alt="Rack of NMR tubes holding coloured solutions of organic compounds prepared for NMR acquisition"
                                      width="600" height="400" loading="lazy" decoding="async">
                                 <div class="post-content">
-                                    <time class="date" datetime="2026-08-18T09:00:00+00:00">Aug 18, 2026</time>
+                                    <time class="date" datetime="2026-08-18T11:00:00+02:00">Aug 18, 2026</time>
+                                    <h3 class="title" style="font-size:18px;">What Is Quantitative NMR (qNMR) and How Does It Work?</h3>
+                                    <p class="description">Quantitative NMR determines the amount or purity of a compound from integrated NMR signals, so a certified internal standard can quantify...</p>
+                                </div>
+                            </a>
+                        </article>
+                    </li>
+                    
+                    <li class="col mb-4 " style="min-width: 300px;">
+                        <article class="card h-100">
+                            <a href="/blog/quantitative-nmr-qnmr-purity-calibration-accuracy">
+                                <img class="post-image"
+                                     src="/img/blog/rose-nmr-embeddings-730.webp"
+                                     alt="Analyst reviewing an NMR spectrum with integrated peaks on a laboratory workstation"
+                                     width="600" height="400" loading="lazy" decoding="async">
+                                <div class="post-content">
+                                    <time class="date" datetime="2026-08-18T10:00:00+02:00">Aug 18, 2026</time>
                                     <h3 class="title" style="font-size:18px;">What Is Quantitative NMR (qNMR)? Purity, Calibration Methods, and Accuracy</h3>
                                     <p class="description">Quantitative NMR determines concentration or purity from the integrated area of an NMR signal, so a reference of known purity can quantif...</p>
                                 </div>
@@ -469,13 +1251,13 @@
                         <article class="card h-100">
                             <a href="/blog/NMR_deployment_multisite_scalability">
                                 <img class="post-image"
-                                     src="/img/Screenshot%202026-08-14%20at%2010.52.20.png"
-                                     alt="AI-generated Image"
+                                     src="/img/blog/multisite-nmr-deployment-980.webp"
+                                     alt="Connected laboratory sites sharing standardized NMR analysis workflows"
                                      width="600" height="400" loading="lazy" decoding="async">
                                 <div class="post-content">
-                                    <time class="date" datetime="2026-08-13T22:00:00+00:00">Aug 13, 2026</time>
+                                    <time class="date" datetime="2026-08-14T00:00:00+02:00">Aug 14, 2026</time>
                                     <h3 class="title" style="font-size:18px;">Scalable NMR Deployment Across Multi-Site Laboratories: Architectural Trade-Offs</h3>
-                                    <p class="description">Rombo AI supports NMR fleets that combine Bruker, Varian/Agilent, and JEOL instruments. Its foundation model, pre-trained on millions of ...</p>
+                                    <p class="description">Each new NMR site adds calibration and validation work. Rombo AI is designed as one vendor-neutral model layer for mixed fleets, pre-trai...</p>
                                 </div>
                             </a>
                         </article>
@@ -485,11 +1267,11 @@
                         <article class="card h-100">
                             <a href="/blog/article-spectral-software-tiers">
                                 <img class="post-image"
-                                     src="/img/Screenshot%202026-08-14%20at%2010.41.25.png"
-                                     alt="AI-generated Image"
+                                     src="/img/blog/spectral-software-maturity-784.webp"
+                                     alt="Progression from basic spectral processing to AI-assisted analytical decisions"
                                      width="600" height="400" loading="lazy" decoding="async">
                                 <div class="post-content">
-                                    <time class="date" datetime="2026-08-12T22:00:00+00:00">Aug 12, 2026</time>
+                                    <time class="date" datetime="2026-08-13T00:00:00+02:00">Aug 13, 2026</time>
                                     <h3 class="title" style="font-size:18px;">Why Maturity Tiers Matter for Choosing Spectral Software</h3>
                                     <p class="description">Choosing software for Nuclear Magnetic Resonance (NMR) and spectroscopy analysis requires evaluating how much manual interpretation the s...</p>
                                 </div>
@@ -501,11 +1283,11 @@
                         <article class="card h-100">
                             <a href="/blog/AI_spectroscopu_automation_quality_control">
                                 <img class="post-image"
-                                     src="/img/Screenshot%202026-08-14%20at%2011.22.50.png"
-                                     alt="AI-generated Image"
+                                     src="/img/blog/nmr-quality-control-850.webp"
+                                     alt="Automated NMR quality-control workflow connecting spectra, analysis, and laboratory review"
                                      width="600" height="400" loading="lazy" decoding="async">
                                 <div class="post-content">
-                                    <time class="date" datetime="2026-08-11T22:00:00+00:00">Aug 11, 2026</time>
+                                    <time class="date" datetime="2026-08-12T00:00:00+02:00">Aug 12, 2026</time>
                                     <h3 class="title" style="font-size:18px;">AI-Powered Quality Control Automation for NMR Labs</h3>
                                     <p class="description">Manual NMR interpretation can delay quality control decisions for weeks because trained specialists must review complex spectra. Rombo AI...</p>
                                 </div>
@@ -517,13 +1299,13 @@
                         <article class="card h-100">
                             <a href="/blog/NMR_instrument_compatibility">
                                 <img class="post-image"
-                                     src="/img/Screenshot%202026-08-14%20at%2011.27.51.png"
-                                     alt="AI-generated Image"
+                                     src="/img/blog/multi-instrument-nmr-776.webp"
+                                     alt="NMR instruments from multiple laboratory sites connected to one analysis platform"
                                      width="600" height="400" loading="lazy" decoding="async">
                                 <div class="post-content">
-                                    <time class="date" datetime="2026-08-10T22:00:00+00:00">Aug 10, 2026</time>
+                                    <time class="date" datetime="2026-08-11T00:00:00+02:00">Aug 11, 2026</time>
                                     <h3 class="title" style="font-size:18px;">Multi-Instrument NMR Compatibility: One AI Platform Across Multi-Brand Instruments</h3>
-                                    <p class="description">Rombo AI provides one vendor-neutral foundation model layer across Bruker, JEOL, Agilent/Varian, and Oxford Instruments without per-instr...</p>
+                                    <p class="description">Rombo AI is designed as one vendor-neutral model layer for mixed NMR fleets: it works on exported spectra and aims to reduce per-instrume...</p>
                                 </div>
                             </a>
                         </article>
@@ -533,11 +1315,11 @@
                         <article class="card h-100">
                             <a href="/blog/article-NMR-Machine-Learning">
                                 <img class="post-image"
-                                     src="/img/Screenshot%202026-07-31%20at%2009.38.53.png"
-                                     alt="AI-generated Image"
+                                     src="/img/blog/nmr-machine-learning-layer-1046.webp"
+                                     alt="Workflow layer connecting raw NMR spectra to reusable machine-learning models"
                                      width="600" height="400" loading="lazy" decoding="async">
                                 <div class="post-content">
-                                    <time class="date" datetime="2026-08-02T22:00:00+00:00">Aug 02, 2026</time>
+                                    <time class="date" datetime="2026-08-03T00:00:00+02:00">Aug 03, 2026</time>
                                     <h3 class="title" style="font-size:18px;">The Missing Layer in NMR Machine Learning</h3>
                                     <p class="description">Task-specific deep learning, low-field constraints, and the case for reusable spectrum representations.</p>
                                 </div>
@@ -550,10 +1332,10 @@
                             <a href="/blog/article-AI-in-downstream-strategy">
                                 <img class="post-image"
                                      src="/img/blog/ai-downstream-refinery-2026-06-15.jpg"
-                                     alt="AI-generated Image"
+                                     alt="Refinery process units representing downstream operations monitored through analytical data"
                                      width="600" height="400" loading="lazy" decoding="async">
                                 <div class="post-content">
-                                    <time class="date" datetime="2026-06-14T22:00:00+00:00">Jun 14, 2026</time>
+                                    <time class="date" datetime="2026-06-15T00:00:00+02:00">Jun 15, 2026</time>
                                     <h3 class="title" style="font-size:18px;">AI in Downstream Refinery: What’s the Formula to Success? </h3>
                                     <p class="description">Where should refiners start if they want AI to deliver real operational value? If AI isn't the answer to every challenge, where can it cr...</p>
                                 </div>
@@ -566,10 +1348,10 @@
                             <a href="/blog/usecase-material-intelligence-platform">
                                 <img class="post-image"
                                      src="/img/blog/material-intelligence-platform-2026-01-29.jpg"
-                                     alt="crude assay refinery"
+                                     alt="Laser-based material analysis on an industrial metal surface"
                                      width="600" height="400" loading="lazy" decoding="async">
                                 <div class="post-content">
-                                    <time class="date" datetime="2026-01-29T01:00:00+00:00">Jan 29, 2026</time>
+                                    <time class="date" datetime="2026-01-29T02:00:00+01:00">Jan 29, 2026</time>
                                     <h3 class="title" style="font-size:18px;">Machine Learning Applications in Materials Chemistry: The Rombo AI Approach </h3>
                                     <p class="description">Machine learning is turning NMR into a predictive tool for industrial analytics. By applying AI directly to raw NMR spectra, complex mixt...</p>
                                 </div>
@@ -582,10 +1364,10 @@
                             <a href="/blog/usecase-crudeoil-refinery">
                                 <img class="post-image"
                                      src="/img/1764170441294.jpeg"
-                                     alt="crude assay refinery"
+                                     alt="Refinery operator reviewing process data above an industrial pipeline"
                                      width="600" height="400" loading="lazy" decoding="async">
                                 <div class="post-content">
-                                    <time class="date" datetime="2025-12-29T01:00:00+00:00">Dec 29, 2025</time>
+                                    <time class="date" datetime="2025-12-29T02:00:00+01:00">Dec 29, 2025</time>
                                     <h3 class="title" style="font-size:18px;">Use Case: Accelerating Crude Oil Analysis for a Leading Asian Refinery</h3>
                                     <p class="description">At one of Asia’s largest integrated energy companies, refinery R&D teams evaluate hundreds of crude oil feedstocks every day to support p...</p>
                                 </div>
@@ -598,10 +1380,10 @@
                             <a href="/blog/the-future-is-agentic/">
                                 <img class="post-image"
                                      src="/img/1761645962162.jpeg"
-                                     alt="Image generated with AI"
+                                     alt="AI agent coordinating background tasks through a calm, human-centered interface"
                                      width="600" height="400" loading="lazy" decoding="async">
                                 <div class="post-content">
-                                    <time class="date" datetime="2025-10-28T01:00:00+00:00">Oct 28, 2025</time>
+                                    <time class="date" datetime="2025-10-28T02:00:00+01:00">Oct 28, 2025</time>
                                     <h3 class="title" style="font-size:18px;">The Future Is Agentic: How AI Agents Bring Back Calm Technology</h3>
                                     <p class="description">Tracing a personal and technological journey from Mark Weiser’s vision of ubiquitous, calm computing to today’s emergence of generative A...</p>
                                 </div>
@@ -617,9 +1399,9 @@
                                      alt="Crude oil analysis: AI transformation"
                                      width="600" height="400" loading="lazy" decoding="async">
                                 <div class="post-content">
-                                    <time class="date" datetime="2025-10-06T00:00:00+00:00">Oct 06, 2025</time>
+                                    <time class="date" datetime="2025-10-06T00:00:00+02:00">Oct 06, 2025</time>
                                     <h3 class="title" style="font-size:18px;">The AI Transformation of Crude Oil Analysis: From Laboratory Bottlenecks to Real-Time Intelligence</h3>
-                                    <p class="description">The Oil & Gas industry is embracing AI for crude oil analysis. Discover how Rombo AI combines NMR spectroscopy with machine learning to d...</p>
+                                    <p class="description">The Oil & Gas industry is embracing AI for crude oil analysis. See how Rombo AI combines benchtop NMR with machine learning to report sev...</p>
                                 </div>
                             </a>
                         </article>
@@ -633,7 +1415,7 @@
                                      alt="SpectraML: a framework designed for R&D teams"
                                      width="600" height="400" loading="lazy" decoding="async">
                                 <div class="post-content">
-                                    <time class="date" datetime="2024-12-09T00:00:00+00:00">Dec 09, 2024</time>
+                                    <time class="date" datetime="2024-12-09T00:00:00+01:00">Dec 09, 2024</time>
                                     <h3 class="title" style="font-size:18px;">SpectraML: A framework designed for R&D teams</h3>
                                     <p class="description">SpectraML breaks down barriers to Machine Learning adoption with its low-code/no-code approach. Designed for R&D teams, it simplifies dat...</p>
                                 </div>
@@ -646,10 +1428,10 @@
                             <a href="/blog/sardegna-ricerche-partnership/">
                                 <img class="post-image"
                                      src="/img/blog/partnership.jpg"
-                                     alt="Esplorazione delle Potenzialità della Spettroscopia NMR nel Settore delle Energie Rinnovabili"
+                                     alt="Sardegna Ricerche and Rombo AI partnership exploring NMR applications in renewable energy"
                                      width="600" height="400" loading="lazy" decoding="async">
                                 <div class="post-content">
-                                    <time class="date" datetime="2024-09-30T00:00:00+00:00">Sep 30, 2024</time>
+                                    <time class="date" datetime="2024-09-30T02:00:00+02:00">Sep 30, 2024</time>
                                     <h3 class="title" style="font-size:18px;">Esplorazione delle Potenzialità della Spettroscopia NMR nel Settore delle Energie Rinnovabili</h3>
                                     <p class="description">Partnerhip con il cluster delle energie rinnovabili per l'esplorazione delle Potenzialità della Spettroscopia...</p>
                                 </div>
@@ -662,12 +1444,12 @@
                             <a href="/blog/ml-for-crude-oil/">
                                 <img class="post-image"
                                      src="/img/blog/ml-for-crude.webp"
-                                     alt="Low-Field NMR for Crude Oil Analysis: Harnessing Machine Learning for Predicting Properties"
+                                     alt="Crude oil samples analyzed with low-field NMR and machine learning"
                                      width="600" height="400" loading="lazy" decoding="async">
                                 <div class="post-content">
-                                    <time class="date" datetime="2024-09-20T00:00:00+00:00">Sep 20, 2024</time>
+                                    <time class="date" datetime="2024-09-20T00:00:00+02:00">Sep 20, 2024</time>
                                     <h3 class="title" style="font-size:18px;">Low-Field NMR for Crude Oil Analysis: Harnessing Machine Learning for Predicting Properties</h3>
-                                    <p class="description">In the oil industry, understanding the properties of crude oil is essential for refining, quality control, and maximizing production effi...</p>
+                                    <p class="description">Low-field NMR and machine learning can predict several crude oil properties, including distillation yields, from one spectrum. What each ...</p>
                                 </div>
                             </a>
                         </article>
@@ -678,12 +1460,12 @@
                             <a href="/blog/how-low-field-NMR-works/">
                                 <img class="post-image"
                                      src="/img/blog/nmr-how-it-works.webp"
-                                     alt="How Low-Field NMR Works and How Machine Learning Enhances Sample Characterization"
+                                     alt="Low-field NMR spectrum illustrating how molecular signals characterize a sample"
                                      width="600" height="400" loading="lazy" decoding="async">
                                 <div class="post-content">
-                                    <time class="date" datetime="2023-08-23T00:00:00+00:00">Aug 23, 2023</time>
+                                    <time class="date" datetime="2023-08-23T00:00:00+02:00">Aug 23, 2023</time>
                                     <h3 class="title" style="font-size:18px;">How Low-Field NMR Works and How Machine Learning Enhances Sample Characterization</h3>
-                                    <p class="description">Nuclear Magnetic Resonance (NMR) is a powerful analytical technique used to determine the molecular structure and composition of various ...</p>
+                                    <p class="description">How low-field benchtop NMR works, where its limits are, and how machine learning turns a spectrum into property estimates that must be va...</p>
                                 </div>
                             </a>
                         </article>
@@ -706,64 +1488,89 @@
 <!-- Articles Section -->
 <section class="container-fluid  justify-content-center text-center text-white py-5 h-100"
          style=" background: #303767" data-cta-section="engage"><div class="container custom-container d-flex flex-column  justify-content-center align-items-center text-center">
-        <p class="fw-bold pt-5 text-uppercase" style="font-size: 20px; color:#FE900F">REQUEST A FREE FEASIBILITY ANALYSIS</p>
+        <p class="fw-bold pt-5 text-uppercase" style="font-size: 20px; color:#FE900F">BOOK A DEMO</p>
         <h2 class="fw-bold py-5 text-white secondary-headline" style="font-size: 42px;">Start with fit, then define the pilot</h2>
 
         <p class="px-3" style="font-size: 20px; max-width: 800px;">
             Share your analytical challenge with our team. We will assess technical fit, data or sample requirements, and the fastest path to a focused pilot.
-        </p>
-        <a href="/contact" class="text-decoration-none pt-5" data-cta-location="engage" aria-label="Free feasibility analysis">
-            <div class="d-flex justify-content-center align-items-center  gap-0">
-                <button class="btn rounded-pill"
+        </p><a href="/contact" class="text-decoration-none pt-5" data-cta-location="blog">
+            <span class="visually-hidden">Book a demo</span>
+            <div class="d-flex justify-content-center align-items-center  gap-0" aria-hidden="true">
+                <span class="btn rounded-pill"
                         style="background:#FE900F; color: white; padding:15px 25px 15px 25px; margin-right:-8px;">
-                    Free feasibility
-                </button>
-                <img class="d-inline-block" src="/img/group-2-2.png" alt="Decorative call-to-action arrow" aria-hidden="true" style="width: 35px; height: 41px;">
-                <button class="btn rounded-pill"
+                    Book a
+                </span>
+                <img class="d-inline-block" src="/img/group-2-2.png" alt="Decorative connector" aria-hidden="true" style="width: 35px; height: 41px;">
+                <span class="btn rounded-pill"
                         style="background:#FE900F; color: white; padding:15px;margin-left:-8px;">
-                    analysis
-                </button>
+                    demo
+                </span>
             </div>
         </a>
     </div>
 </section>
 
+
 <!--Footer-->
 <!-- Footer -->
-<footer>
+<footer><section class="newsletter-section" data-newsletter-section aria-labelledby="newsletter-heading-blog">
+  <div class="container newsletter-container">
+    <div class="newsletter-panel">
+      <div class="newsletter-copy">
+        <h2 id="newsletter-heading-blog" class="newsletter-heading">Rombo AI newsletter</h2>
+        <p class="newsletter-description">NMR, AI and product updates.</p>
+      </div>
+      <form class="newsletter-form" data-newsletter-form data-newsletter-location="blog" data-consent-version="newsletter-signup-v2" data-consent-text="By subscribing, you agree to Rombo AI emails. Unsubscribe at any time." action="https://hook.eu2.make.com/gd23cysjnvg1zok3chyq6qx3nwl3co01" method="POST" aria-describedby="newsletter-privacy-blog">
+
+        <label class="newsletter-email-label" for="newsletter-email-blog">Email address</label>
+        <div class="newsletter-fields">
+          <input class="newsletter-email" name="email" type="email" id="newsletter-email-blog" required autocomplete="email" placeholder="Your email address" aria-describedby="newsletter-privacy-blog">
+          <button class="newsletter-submit" type="submit" disabled>Subscribe</button>
+        </div>
+
+        <div class="newsletter-honeypot" aria-hidden="true">
+          <label for="newsletter-website-blog">Leave this field empty</label>
+          <input type="text" name="website" id="newsletter-website-blog" tabindex="-1" autocomplete="off">
+        </div>
+        <p class="newsletter-status" data-newsletter-status role="status" aria-live="polite" aria-atomic="true"></p>
+        <p class="newsletter-privacy" id="newsletter-privacy-blog"><span>By subscribing, you agree to Rombo AI emails. Unsubscribe at any time.</span></p>
+        <noscript><p class="newsletter-noscript">JavaScript is required to sign up and see confirmation. Please enable it and try again.</p></noscript>
+      </form>
+    </div>
+  </div>
+</section>
+
     <div class="container-fluid border-bottom">
-        <div class="container custom-container">
-            <div class="row justify-content-md-center">
-                <div class="col-12 col-md-4 footer-logo">
-                    <img
-                            alt="Rombo AI"
-                            class="img-fluid"
-                            src="/img/romboai-04-1-2.png"
-                            width="200" height="79"
-                            loading="lazy"
-                    />
-                </div>
-                <div class="col-12 col-md-8">
-                    <div class="row m-0 d-flex align-items-center h-100">
-                        <p class="footer-text col-10 col-md-10 m-0 text-md-left text-lg-left">
-                            ROMBO AI © 2026 |
-                            <a href="/privacy/" style="color:#007bff;">Privacy Policy</a>
-                        </p>
-                        <a class="col-2 col-md-2 d-flex justify-content-start" href="https://www.linkedin.com/company/rombo-ai/"
-                           rel="noopener noreferrer" target="_blank" aria-label="Rombo AI on LinkedIn">
-                            <img alt="LinkedIn" class="img-fluid"
-                                 src="/img/icon-jam-icons-outline-logos-linkedin-1.svg"
-                                 width="24" height="24" loading="lazy">
-                        </a>
-                    </div>
-                </div>
+        <div class="container custom-container footer-bar">
+            <div class="footer-logo">
+                <img
+                        alt="Rombo AI"
+                        class="img-fluid"
+                        src="/img/romboai-04-1-2.png"
+                        width="200" height="79"
+                        loading="lazy"
+                />
             </div>
+            <p class="footer-text m-0">
+                ROMBO AI © 2026 |
+                <a href="/blog/">Blog</a>
+                |
+                <a href="https://rombo-ai.breezy.hr/" target="_blank" rel="noopener noreferrer">Careers</a>
+                |
+                <a href="/privacy/">Privacy Policy</a>
+            </p>
+            <a class="footer-linkedin" href="https://www.linkedin.com/company/rombo-ai/"
+               rel="noopener noreferrer" target="_blank" aria-label="Rombo AI on LinkedIn">
+                <img alt="LinkedIn" class="img-fluid"
+                     src="/img/icon-jam-icons-outline-logos-linkedin-1.svg"
+                     width="24" height="24" loading="lazy">
+            </a>
         </div>
     </div>
 </footer>
 <script defer src="/js/analytics.js"></script>
+<script defer src="/js/newsletter.js"></script>
 <!-- Footer -->
-
 
  </main>
 

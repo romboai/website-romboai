@@ -34,6 +34,16 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}
+
 /* Hero headline: fluid sizing instead of hard-coded breakpoints */
 .text-responsive {
     font-size: clamp(32px, 4.2vw, 64px);
@@ -99,6 +109,16 @@ button {
     color: #ffffff;
 }
 
+.navbar .nav-link.menu-item.active,
+.navbar .dropdown-item.active {
+    color: #FE900F !important;
+}
+
+.navbar .dropdown-item.active {
+    background: rgba(254, 144, 15, 0.18);
+    font-weight: 600;
+}
+
 button:focus, input:focus, input:focus, textarea, textarea:focus {
     /* keep focus styles handled via :focus-visible */
 }
@@ -155,6 +175,145 @@ button:focus, input:focus, input:focus, textarea, textarea:focus {
     font-size: 16px;
     font-weight: 600;
     line-height: 1;
+}
+
+/* Highlighted GitHub link in the Technology / foundation model section */
+.github-cta{
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 20px;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    background: rgba(255, 255, 255, 0.08);
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1;
+    transition: background .2s ease, border-color .2s ease, transform .2s ease;
+}
+.github-cta:hover,
+.github-cta:focus-visible{
+    background: #FE900F;
+    border-color: #FE900F;
+    color: #fff;
+    transform: translateY(-1px);
+}
+.github-cta-mark{
+    flex: 0 0 auto;
+    order: -1;
+}
+
+/* Platform page - "Built on an NMR foundation model" section */
+.foundation-section{
+    background: #F7F7F7;
+    scroll-margin-top: 80px;
+}
+
+#foundation-model{
+    scroll-margin-top: 80px;
+}
+
+#how-it-works,
+#why-rombo {
+    scroll-margin-top: 80px;
+}
+
+.foundation-panel{
+    padding: 36px 32px;
+    border-radius: 28px;
+    background:
+        radial-gradient(90% 80% at 8% 12%, rgba(254, 144, 15, 0.16) 0%, rgba(254, 144, 15, 0) 55%),
+        #ffffff;
+    border: 1px solid #EDEDED;
+    box-shadow: 0 16px 40px rgba(9, 12, 35, 0.06);
+}
+
+.foundation-visual{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 240px;
+    padding: 18px;
+    border-radius: 22px;
+    background: linear-gradient(180deg, #FFF7ED 0%, #FFFFFF 100%);
+    border: 1px solid #F3E4D2;
+}
+
+.foundation-visual img{
+    max-height: 260px;
+    width: auto;
+    object-fit: contain;
+}
+
+.foundation-card{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    height: 100%;
+    padding: 22px 20px;
+    border-radius: 18px;
+    background: #FAFAFA;
+    border: 1px solid #EDEDED;
+    color: #21272A;
+    text-decoration: none;
+    transition: border-color .2s ease, box-shadow .2s ease, transform .2s ease, background .2s ease;
+}
+
+.foundation-card,
+.foundation-card:hover span,
+.foundation-card span{
+    text-decoration: none;
+}
+
+.foundation-card:hover,
+.foundation-card:focus-visible{
+    background: #fff;
+    border-color: #FE900F;
+    box-shadow: 0 12px 28px rgba(9, 12, 35, 0.10);
+    transform: translateY(-3px);
+    color: #21272A;
+}
+
+.foundation-card__icon{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    background: rgba(254, 144, 15, 0.10);
+    color: #FE900F;
+}
+
+.foundation-card__title{
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.foundation-card__meta{
+    font-family: 'Roboto', sans-serif;
+    font-size: 13px;
+    color: #6B7280;
+    line-height: 1.3;
+}
+
+@media (max-width: 767.98px){
+    .foundation-panel{
+        padding: 24px 18px;
+        border-radius: 22px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce){
+    .foundation-card,
+    .foundation-card:hover,
+    .foundation-card:focus-visible{
+        transform: none;
+    }
 }
 
 /* Reduce motion: avoid autoplay background videos for users who request it */
@@ -582,7 +741,7 @@ li {
 
 
 .use-cases-area {
-    background: url(/img/solu-back.png);
+    background: url(/img/solu-back.webp);
     background-size: 100% 100%;
     background-position: top;
     margin-bottom: 40px;
@@ -627,7 +786,7 @@ li {
 
 .onboard-area {
     padding: 300px 0;
-    background: url(/img/onboard.png);
+    background: url(/img/onboard.webp);
     background-size: 100% 100%;
     background-position: top;
 }
@@ -904,9 +1063,27 @@ label.ckb input:checked ~ span.checkmark::after {
 
 
 /* Contact-area css END and Footer-area START*/
+.footer-bar {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+    align-items: center;
+    gap: 16px 24px;
+    min-height: 80px;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
 .footer-logo{
     text-align: left;
-    padding-left: 50px;
+    padding-left: 0;
+    justify-self: start;
+}
+
+.footer-linkedin {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    justify-self: end;
 }
 
 .footer-area {
@@ -945,7 +1122,15 @@ label.ckb input:checked ~ span.checkmark::after {
     font-size: 14px;
     font-weight: 400;
     line-height: 1.4;
-    padding-left: 100px;
+    padding-left: 0;
+    text-align: center;
+}
+.footer-text a {
+    color: #007bff;
+    text-decoration: none;
+}
+.footer-text a:hover {
+    text-decoration: underline;
 }
 
 /* Menu*/
@@ -955,6 +1140,24 @@ label.ckb input:checked ~ span.checkmark::after {
     font-weight: 500;
     line-height: 1; /* 16px line height / 16px font size = 1 */
     text-align: left;
+}
+
+.nav-cta {
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    color: #ffffff !important;
+    background: #fe900f;
+    border-radius: 50px;
+    padding: 8px 18px !important;
+    margin-left: 8px;
+    line-height: 1;
+}
+.nav-cta:hover,
+.nav-cta:focus {
+    background: #e67e00;
+    color: #ffffff !important;
 }
 
 .custom-shadow {
@@ -993,10 +1196,199 @@ label.ckb input:checked ~ span.checkmark::after {
 /*Hero Section */
 .hero-section {
     position: relative;
-    text-align: center;
+    text-align: left;
     overflow: hidden;
-    height: 640px;
+    height: auto;
+    min-height: 560px;
     width: 100%;
+    background: #1c2354;
+}
+
+.hero-section > .container {
+    min-height: 560px;
+}
+
+.hero-section .hero-copy {
+    position: relative;
+    z-index: 2;
+    padding-top: 112px;
+    padding-bottom: 108px;
+    text-align: left;
+}
+
+.hero-section .hero-eyebrow,
+.hero-section .home-hero-eyebrow {
+    font-size: clamp(13px, 1.1vw, 16px);
+    letter-spacing: 0.12em;
+    color: #fe900f;
+    margin-bottom: 1rem !important;
+}
+
+.hero-section h1 {
+    text-wrap: balance;
+    font-size: clamp(28px, 3.4vw, 46px);
+    line-height: 1.26;
+    letter-spacing: -0.02em;
+    margin-bottom: 1.25rem !important;
+}
+
+.hero-section .hero-sub,
+.hero-section .home-hero-sub {
+    font-size: clamp(16px, 1.35vw, 20px);
+    line-height: 1.6;
+    max-width: 42em;
+    font-weight: 400;
+    margin-top: 0;
+}
+
+.hero-section .hero-actions {
+    margin-top: 2rem !important;
+}
+
+.hero-section.hero-contact-section,
+.hero-section.hero-contact-section > .container {
+    min-height: 0;
+}
+
+.hero-section.hero-contact-section .hero-copy {
+    padding-bottom: 24px;
+}
+
+.hero-section.hero-contact-section .hero-contact-form {
+    padding-top: 8px;
+    padding-bottom: 96px;
+}
+
+@media (min-width: 768px) {
+    .hero-section.hero-contact-section .hero-copy {
+        padding-bottom: 80px;
+    }
+
+    .hero-section.hero-contact-section .hero-contact-form {
+        padding-top: 96px;
+        padding-bottom: 80px;
+    }
+}
+
+@media (max-width: 390px) {
+    .hero-section h1 {
+        font-size: clamp(24px, 6.6vw, 28px);
+        line-height: 1.22;
+    }
+}
+
+.how-it-works-flow {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+.how-it-works-step {
+    background: rgba(255,255,255,0.10);
+    border: 1px solid rgba(255,255,255,0.16);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.how-it-works-step__visual {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    background: rgba(254,144,15,0.12);
+    border: 1px solid rgba(254,144,15,0.35);
+}
+
+.how-it-works-step__num {
+    position: absolute;
+    top: -6px;
+    left: -6px;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: #FE900F;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 26px;
+    text-align: center;
+}
+
+.how-it-works-step__icon {
+    width: 64px;
+    height: 64px;
+    display: block;
+}
+
+.how-it-works-step__title {
+    color: #FE900F;
+    font-size: 18px;
+}
+
+#how-we-work .how-it-works-step__title {
+    color: #FE900F;
+}
+
+#how-we-work .how-it-works-step__text {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.how-it-works-step__text {
+    font-size: 15px;
+    line-height: 1.45;
+    max-width: 28em;
+}
+
+.how-it-works-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 28px;
+}
+
+.how-it-works-arrow svg {
+    transform: rotate(90deg);
+}
+
+.why-rombo-icon {
+    width: 56px;
+    height: auto;
+    display: inline-block;
+}
+
+@media (min-width: 768px) {
+    .how-it-works-flow {
+        grid-template-columns: 1fr auto 1fr auto 1fr;
+        gap: 8px 12px;
+        align-items: stretch;
+    }
+
+    .how-it-works-arrow svg {
+        transform: none;
+    }
+
+    .how-it-works-step {
+        text-align: left;
+        align-items: flex-start;
+    }
+}
+
+.page-home .intro-header .text-wrapper6 {
+    font-size: clamp(28px, 3.2vw, 40px);
+    line-height: 1.2;
+}
+
+.page-home #how-it-works .secondary-headline,
+#engage-heading {
+    font-size: clamp(28px, 3.2vw, 40px) !important;
+    line-height: 1.2;
 }
 
 .hero-video {
@@ -1010,10 +1402,25 @@ label.ckb input:checked ~ span.checkmark::after {
     transform: rotate(0deg) scale(-1, 1);
 }
 
-/* Products: never show the hero video on mobile (JS also prevents mp4 download) */
+/* Hide hero video on mobile (JS also prevents mp4 download) */
 @media (max-width: 991.98px) {
-    .page-products .hero-video {
+    .hero-section .hero-video {
         display: none;
+    }
+
+    .hero-section,
+    .hero-section > .container {
+        min-height: 0;
+    }
+
+    .hero-section .hero-copy {
+        padding-top: 100px;
+        padding-bottom: 112px;
+    }
+
+    .hero-section .hero-actions > a {
+        width: 100%;
+        text-align: center;
     }
 }
 
@@ -1022,7 +1429,11 @@ label.ckb input:checked ~ span.checkmark::after {
     font-size: 69px;
     line-height: inherit;
     font-weight: 600;
+}
 
+.page-home .hero-section .hero-content-message {
+    position: relative;
+    z-index: 2;
 }
 
 .mask {
@@ -1485,15 +1896,57 @@ label.ckb input:checked ~ span.checkmark::after {
     border-radius: 6px;
 }
 
-.markdown-content a:not(.button){
+.markdown-content a:not(.button):not(.foundation-card){
     color: #0B243B;
     text-decoration: underline;
     text-underline-offset: 0.18em;
     text-decoration-thickness: 1px;
 }
-.markdown-content a:not(.button):hover{
+.markdown-content a:not(.button):not(.foundation-card):hover{
     color: #DD6731;
     text-decoration-thickness: 2px;
+}
+
+/* Blog article tables: make dense technical comparisons easier to scan. */
+.hero-article-section .markdown-content table {
+    width: min(960px, calc(100vw - 3rem));
+    margin: 1.5rem 0;
+    border: 2px solid #566173;
+    border-collapse: collapse;
+    background: #ffffff;
+    color: #232536;
+    font-size: 16px;
+    line-height: 1.5;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.hero-article-section .markdown-content th,
+.hero-article-section .markdown-content td {
+    padding: 0.75rem 0.875rem;
+    border: 2px solid #566173;
+    text-align: left;
+    vertical-align: top;
+    overflow-wrap: break-word;
+    word-break: normal;
+}
+
+.hero-article-section .markdown-content th:first-child,
+.hero-article-section .markdown-content td:first-child {
+    width: 15rem;
+    min-width: 15rem;
+}
+
+.hero-article-section .markdown-content thead th {
+    background: #eef0f3;
+    color: #232536;
+    font-family: "Inter-Bold", "Inter-Regular", sans-serif;
+    font-weight: 700;
+}
+
+.hero-article-section .markdown-content tbody tr:nth-child(even) {
+    background: #f8f9fa;
 }
 
 /* Mobile typography tweaks */
@@ -1501,6 +1954,20 @@ label.ckb input:checked ~ span.checkmark::after {
     body { font-size: 16px; }
     .markdown-content { font-size: 16px; }
     .markdown-content p, .markdown-content li { font-size: 16px; }
+    .hero-article-section .markdown-content table {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        margin-left: 0;
+        overflow-x: auto;
+        left: auto;
+        transform: none;
+        -webkit-overflow-scrolling: touch;
+    }
+    .hero-article-section .markdown-content th,
+    .hero-article-section .markdown-content td {
+        min-width: 14rem;
+    }
 }
 
 
@@ -1532,17 +1999,18 @@ label.ckb input:checked ~ span.checkmark::after {
     /*background: linear-gradient(40deg, #242b5e 29.85%, #050533 93.79%);*/
     /*background: linear-gradient(79deg, #242b5e 29.85%, #050533 93.79%);*/
     background: #2F3666;
-    padding: 6px 8px;
+    padding: 8px 12px;
     box-decoration-break: clone;
     -webkit-box-decoration-break: clone;
 }
 
 .hero-contact-section {
     position: relative;
-    text-align: center;
+    text-align: left;
     overflow: hidden;
-    height: 100%;
+    height: auto;
     width: 100%;
+    background: #1c2354;
 }
 
 .label {
@@ -1565,8 +2033,8 @@ label.ckb input:checked ~ span.checkmark::after {
     color: #ffffff;
     text-align: left;
     font-family: "Roboto-Bold", sans-serif;
-    font-size: 54px;
-    line-height: 110%;
+    font-size: clamp(28px, 3.4vw, 46px);
+    line-height: 1.18;
     font-weight: 700;
     position: relative;
 }
@@ -1736,11 +2204,12 @@ label.ckb input:checked ~ span.checkmark::after {
 /*About*/
 .hero-about-section {
     position: relative;
-    text-align: center;
+    text-align: left;
     overflow: hidden;
-    height: 100%;
+    height: auto;
     width: 100%;
-    min-height: 640px;
+    min-height: 560px;
+    background: #1c2354;
 }
 
 .about_label,
@@ -1790,42 +2259,25 @@ label.ckb input:checked ~ span.checkmark::after {
 .titolo-1-span {
     color: #ffffff;
     font-family: "Roboto-Bold", sans-serif;
-    font-size: 54px;
-    line-height: 110%;
+    font-size: clamp(28px, 3.4vw, 46px);
+    line-height: 1.18;
     font-weight: 700;
 }
 
 .titolo-1-span2 {
     color: #ffffff;
     font-family: "Roboto-Regular", sans-serif;
-    font-size: 32px;
-    line-height: 110%;
+    font-size: clamp(16px, 1.35vw, 20px);
+    line-height: 1.5;
     font-weight: 400;
 }
 
 /* Products hero: better left rhythm + readable width (scoped) */
 .page-products .products-hero-copy {
-    /* Center the copy block inside the left half (col-lg-6) */
     width: 100%;
-    /* Wider so the hero title tends to break into ~2 lines instead of 3 */
     max-width: 70ch;
     margin-left: auto;
     margin-right: auto;
-}
-
-.page-products .titolo-1-span {
-    font-size: clamp(34px, 4vw, 48px);
-    line-height: 1.08;
-    /* Helps create nicer two-line wraps when supported */
-    text-wrap: balance;
-}
-
-.page-products .titolo-1-span2 {
-    display: block;
-    margin-top: 12px;
-    font-size: clamp(18px, 2vw, 26px);
-    line-height: 1.25;
-    max-width: 60ch;
 }
 
 .forma-5-1,
@@ -1846,10 +2298,12 @@ label.ckb input:checked ~ span.checkmark::after {
 /*Blog*/
 .hero-blog-section {
     position: relative;
-    text-align: center;
+    text-align: left;
     overflow: hidden;
-    height: 740px;
+    height: auto;
+    min-height: 560px;
     width: 100%;
+    background: #1c2354;
 }
 
 .hero_contact_mask {
@@ -1936,6 +2390,17 @@ label.ckb input:checked ~ span.checkmark::after {
     position: relative;
 }
 
+.button.button-lg {
+    height: auto;
+    min-height: 64px;
+    width: auto;
+    padding: 18px 36px;
+}
+.button.button-lg .button-text {
+    font-size: 18px;
+    letter-spacing: 0.4px;
+}
+
 /*Article*/
 .hero-article-section {
     position: relative;
@@ -1973,6 +2438,33 @@ label.ckb input:checked ~ span.checkmark::after {
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(254, 144, 15, 0.3);
 }
+/* Article hero sits on a light background. `.titolo-1 *` forces white text,
+   which made the breadcrumb invisible. Override that for this trail only. */
+.hero-article-section .article-breadcrumb {
+    background: transparent;
+    padding: 0;
+    margin-bottom: 0;
+    font-size: 13px;
+    text-align: left;
+}
+.hero-article-section .article-breadcrumb .breadcrumb-item,
+.hero-article-section .article-breadcrumb .breadcrumb-item a,
+.hero-article-section .article-breadcrumb .breadcrumb-item.active {
+    color: #6d6e76;
+}
+.hero-article-section .article-breadcrumb .breadcrumb-item a {
+    text-decoration: none;
+}
+.hero-article-section .article-breadcrumb .breadcrumb-item a:hover {
+    color: #fe900f;
+}
+.hero-article-section .article-breadcrumb .breadcrumb-item.active {
+    color: #232536;
+}
+.hero-article-section .article-breadcrumb .breadcrumb-item + .breadcrumb-item::before {
+    color: #c4c4c8;
+}
+
 .posted_label,
 .posted_label * {
     box-sizing: border-box;

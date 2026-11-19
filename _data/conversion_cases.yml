@@ -1,15 +1,21 @@
-- title: Crude oil and blends
+- title: Crude oil & refinery operations
   path: /use-cases/crude-oil-monitoring/
-  problem: Purchasing and blending decisions cannot always wait for a full crude assay.
-  inputs: Benchtop NMR measurements, representative crude samples and reference assay results.
-  outcome: Assess property prediction against your laboratory methods before a focused pilot.
+  image: /img/usecase-crude-oil.png
+  image_alt: "Crude oil and refinery operations analyzed with benchtop NMR and AI"
+  problem: Full assays take days to 2+ months, leaving cargo selection, tank storage, blending and CDU operations to run on outdated snapshots.
+  inputs: A 60 MHz benchtop NMR scan on-premise, starting from ~10 calibration samples for crudes close to our 24-crude library (or a custom dataset).
+  outcome: Full assay and distillation curves (IBP–FBP), compatibility & tank stratification checks, blend optimization, fouling/corrosion risk and product QC in 15 minutes.
 - title: Transformer oil
   path: /use-cases/transformer-oil-monitoring/
+  image: /img/usecase-transformer-oil.png
+  image_alt: "Transformer oil condition monitoring with benchtop NMR"
   problem: Asset teams need comparable evidence of oil condition across samples and time.
   inputs: Oil spectra, sample history and reference measurements of condition.
   outcome: Evaluate whether spectral changes can support your maintenance decisions.
 - title: NMR compound identification
   path: /use-cases/nmr-compound-identification/
+  image: /img/blog/spectra-ai-automated-compound-identification.jpg
+  image_alt: "Automated NMR compound identification with Spectra AI"
   problem: Manual candidate review creates a bottleneck in research and impurity investigations.
   inputs: NMR data and available sample context, with expert review of candidate structures.
   outcome: Use Spectra to support candidate review; confirm assignments with your chemists.

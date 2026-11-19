@@ -2,33 +2,33 @@
 layout: use-cases
 title: "Crude Oil Monitoring"
 permalink: /use-cases/crude-oil-monitoring/
-seo_title: "NMR Crude Oil Analysis for Refineries | Rombo AI"
-description: "One benchtop NMR scan, several crude and blend properties, each validated against your ASTM methods. Rombo AI for refinery and terminal laboratories."
+seo_title: "NMR Crude Oil Analysis & Refinery Use Cases | Rombo AI"
+description: "Full crude oil assays, compatibility and tank stratification, blend optimization, asset integrity, distillation cuts, product QC and fingerprinting in 15 minutes with benchtop NMR and AI."
 lang: en
 og_image: /img/usecase-crude-oil.png
-og_image_alt: "Crude oil analysis with benchtop NMR and validated property models"
+og_image_alt: "Crude oil analysis with benchtop NMR and AI models for refineries"
 
-hero_eyebrow: "Energy · Crude oil"
-hero_cta_label: "Request a free feasibility review"
+hero_eyebrow: "Oil & Gas · Upstream to Downstream"
+hero_cta_label: "Book a demo"
 hero_cta_link: "/contact/"
 hero_cta_location: "crude_oil_hero"
-hero_secondary_cta_label: "How it works"
-hero_secondary_cta_link: "/nmr-feasibility/"
-hero_title: "Crude oil properties from one NMR scan, validated against your methods"
-hero_subtitle: "For refinery, terminal and blending laboratories. Rombo AI Platform turns a benchtop NMR scan of a crude or blend into several property estimates, each benchmarked against your ASTM reference method with metrics agreed before a pilot. Your methods stay the reference, and your team keeps the decision."
+hero_secondary_cta_label: "Explore use cases"
+hero_secondary_cta_link: "#refinery-use-cases"
+hero_title: "Full crude oil analysis in under 15 minutes, from well to final product"
+hero_subtitle: "For upstream operators, terminals, blending teams and refinery laboratories. Rombo AI turns a 60 MHz benchtop NMR scan into physicochemical properties, distillation yields (IBP to FBP), compatibility indicators and operational risk insights — running fully on-premise."
 ---
 
 <section class="container-fluid py-4 py-lg-5" style="background:#FAFAFA;">
   <div class="container custom_container">
     <div class="row g-4 align-items-center">
       <div class="col-12 col-lg-7">
-        <p class="fw-bold text-uppercase mb-2" style="font-size: 14px; color:#FE900F; letter-spacing:.06em;">Use case — Oil &amp; Gas</p>
-        <h2 class="fw-bold text-dark" style="font-size: 34px; line-height: 1.15;">A faster read on crudes and blends between full assays</h2>
+        <p class="fw-bold text-uppercase mb-2" style="font-size: 14px; color:#FE900F; letter-spacing:.06em;">Use cases — Oil &amp; Gas</p>
+        <h2 class="fw-bold text-dark" style="font-size: 34px; line-height: 1.15;">Real-time crude intelligence across the value chain</h2>
         <p class="text-dark mt-3">
-          Crude quality decisions rest on a chain of tests: density and API gravity, sulfur, acidity, distillation, and compatibility checks when cargoes are blended. Each test has its own method and instrument. Rombo AI Platform is designed to add a fast screening layer to that chain: one NMR scan of the sample, several property estimates, and a flag when a crude or blend moves away from what you expected.
+          From extraction, storage and export blending upstream to feedstock blending, desalting, the crude distillation unit (CDU) and final product QC downstream, refinery and field decisions depend on knowing what is in the crude right now.
         </p>
         <p class="text-dark mt-2">
-          Samples that look different can go to the full method sooner. Which properties qualify is decided by validation on your crudes, not by a datasheet. Our guide to <a href="{{ '/blog/crude-oil-analysis-refinery-process-economics' | relative_url }}">crude oil analysis methods</a> maps what refineries test, where samples are taken and what each result decides.
+          Traditional full assays can take from days to over two months, leaving operations to run on static snapshots. <strong>Rombo AI Material Intelligence Platform</strong> pairs a compact 60 MHz benchtop NMR spectrometer with patented AI models trained on millions of spectra and hundreds of full crude assays to deliver laboratory-grade assays, distillation curves and operational risk indicators in under 15 minutes.
         </p>
       </div>
       <div class="col-12 col-lg-5">
@@ -42,70 +42,162 @@ hero_subtitle: "For refinery, terminal and blending laboratories. Rombo AI Platf
   <div class="container custom_container">
     <div class="row g-4 justify-content-center text-center">
       <div class="col-12 col-lg-9">
-        <h2 class="fw-bold text-dark" style="font-size: 30px;">The customer problem</h2>
+        <h2 class="fw-bold text-dark" style="font-size: 30px;">Why traditional labs cannot keep up with variability</h2>
         <p class="text-dark mt-3">
-          Refineries and terminals handle crude slates that change by supplier, cargo and field. The reference tests are well established. The difficulty is time and coverage: many properties, many methods, and the most complete studies are too costly to repeat for every cargo.
+          Crude oil analysis is mission-critical to refinery performance and requires both speed and laboratory-grade precision.
         </p>
       </div>
     </div>
     <div class="row g-3 mt-3 justify-content-center">
-      <div class="col-12 col-md-6 col-lg-4">
+      <div class="col-12 col-md-6 col-lg-3">
         <div class="p-4 border rounded-4 h-100" style="background:#FAFAFA;">
-          <h3 class="fw-bold h5 text-dark">One property, one method</h3>
-          <p class="text-dark mb-0" style="font-size: 14px;">Density, sulfur, acidity and distillation each need their own instrument, procedure and trained analyst, so a broad panel on every cargo takes laboratory time.</p>
+          <h3 class="fw-bold h5 text-dark">Slow turnaround time</h3>
+          <p class="text-dark mb-0" style="font-size: 14px;">Full crude assays take from days to 2+ months, providing outdated data for daily purchasing, storage and CDU operations.</p>
         </div>
       </div>
-      <div class="col-12 col-md-6 col-lg-4">
+      <div class="col-12 col-md-6 col-lg-3">
         <div class="p-4 border rounded-4 h-100" style="background:#FAFAFA;">
-          <h3 class="fw-bold h5 text-dark">Full assays stay periodic</h3>
-          <p class="text-dark mb-0" style="font-size: 14px;">Full assays, compatibility studies and tank profiling are too resource-intensive to repeat for every operating change, so some decisions rest on older or partial data.</p>
+          <h3 class="fw-bold h5 text-dark">High OpEx &amp; CapEx</h3>
+          <p class="text-dark mb-0" style="font-size: 14px;">Conventional testing requires multiple complex laboratory instruments, costly maintenance and specialized personnel.</p>
         </div>
       </div>
-      <div class="col-12 col-md-6 col-lg-4">
+      <div class="col-12 col-md-6 col-lg-3">
         <div class="p-4 border rounded-4 h-100" style="background:#FAFAFA;">
-          <h3 class="fw-bold h5 text-dark">Models that do not travel</h3>
-          <p class="text-dark mb-0" style="font-size: 14px;">Property models built for one feedstock or one analyzer often need new reference data when an unfamiliar crude arrives or the instrument changes. See <a href="{{ '/blog/calibration-transfer-spectroscopy-models-break-instruments-change' | relative_url }}">why models break when instruments change</a>.</p>
+          <h3 class="fw-bold h5 text-dark">Static "snapshot" reports</h3>
+          <p class="text-dark mb-0" style="font-size: 14px;">Infrequent offline measurements fail to capture real-time feedstock fluctuations, tank layering or blend shifts.</p>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="p-4 border rounded-4 h-100" style="background:#FAFAFA;">
+          <h3 class="fw-bold h5 text-dark">Limits of rapid alternatives</h3>
+          <p class="text-dark mb-0" style="font-size: 14px;">NIR lacks molecular specificity and precision on dark crudes and heteroatoms, while high-field NMR is expensive and complex to maintain. See our <a href="{{ '/blog/ai-crude-oil-analysis-lab-vs-nir-vs-high-field-nmr' | relative_url }}">method comparison</a>.</p>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<section class="container-fluid py-4 py-lg-5" style="background:#FAFAFA;">
+<section id="refinery-use-cases" class="container-fluid py-4 py-lg-5" style="background:#FAFAFA;">
   <div class="container custom_container">
-    <div class="row g-4 align-items-start">
-      <div class="col-12 col-lg-5">
-        <h2 class="fw-bold text-dark" style="font-size: 30px;">The Rombo AI solution</h2>
-        <p class="text-dark mt-3">
-          Rombo AI delivers validated properties, not another model to build and maintain. Rombo AI Platform starts from an <a href="{{ '/blog/rose_foundation_model_NMR_spectral_data' | relative_url }}">NMR foundation model</a> pre-trained on a large library of spectra, then calibrates it on your crudes and reference results. It is designed to need fewer reference samples per property than a model trained from scratch, and to transfer across instruments and sites; both are checked during the pilot.
+    <div class="row g-4 justify-content-center text-center">
+      <div class="col-12 col-lg-9">
+        <p class="fw-bold text-uppercase mb-2" style="font-size: 14px; color:#FE900F; letter-spacing:.06em;">Supported Applications</p>
+        <h2 class="fw-bold text-dark" style="font-size: 32px;">Seven use cases across upstream and refining</h2>
+        <p class="text-dark mt-2">
+          One benchtop NMR workstation supports multiple operational decisions across the crude value chain.
         </p>
       </div>
-      <div class="col-12 col-lg-7">
-        <div class="row g-3">
-          <div class="col-12 col-md-6">
-            <div class="p-4 border rounded-4 h-100 text-start" style="background:#fff;">
-              <h3 class="fw-bold h5" style="color:#FE900F;">Several properties from one scan</h3>
-              <p class="text-dark mb-0" style="font-size: 14px;">NMR AI Analyzer acquires the benchtop NMR spectrum and returns estimates for the properties that passed validation in your pilot. API gravity, sulfur and TAN are typical candidates: see <a href="{{ '/blog/api-gravity-sulfur-tan-crude-oil-one-workflow' | relative_url }}">what changes for the crude lab</a>.</p>
-            </div>
-          </div>
-          <div class="col-12 col-md-6">
-            <div class="p-4 border rounded-4 h-100 text-start" style="background:#fff;">
-              <h3 class="fw-bold h5" style="color:#FE900F;">Validated against your methods</h3>
-              <p class="text-dark mb-0" style="font-size: 14px;">Each estimate is benchmarked on paired samples against your ASTM reference method, with acceptance metrics agreed before the pilot starts.</p>
-            </div>
-          </div>
-          <div class="col-12 col-md-6">
-            <div class="p-4 border rounded-4 h-100 text-start" style="background:#fff;">
-              <h3 class="fw-bold h5" style="color:#FE900F;">A fingerprint for every crude</h3>
-              <p class="text-dark mb-0" style="font-size: 14px;">Compare each cargo or blend with its expected quality and with earlier deliveries, and flag samples that move away from their history. Drift monitoring is configured during the pilot.</p>
-            </div>
-          </div>
-          <div class="col-12 col-md-6">
-            <div class="p-4 border rounded-4 h-100 text-start" style="background:#fff;">
-              <h3 class="fw-bold h5" style="color:#FE900F;">Traceable results</h3>
-              <p class="text-dark mb-0" style="font-size: 14px;">Model versions and audit logs record which model produced each result, so every number can be traced back and re-checked against the reference method.</p>
-            </div>
-          </div>
+    </div>
+
+    <div class="row g-4 mt-2">
+      <!-- 01 Crude Assay -->
+      <div class="col-12 col-lg-6">
+        <div class="p-4 border rounded-4 h-100" style="background:#fff;">
+          <img src="{{ '/img/blog/crude-api-sulfur-tan-one-workflow.jpg' | relative_url }}" alt="Crude oil assay workflow with benchtop NMR" class="img-fluid rounded-3 mb-3" style="height: 200px; width: 100%; object-fit: cover;" loading="lazy" decoding="async">
+          <span class="badge rounded-pill mb-2" style="background:#FFF3E0; color:#FE900F; font-weight:700;">01 · Crude Assay</span>
+          <h3 class="fw-bold h4 text-dark">A full crude assay in 15 minutes instead of days or months</h3>
+          <p class="text-dark mt-2" style="font-size: 14px;">
+            <strong>The challenge:</strong> Full assays take weeks to months, leaving cargo selection and blend planning to run on outdated data while refinery labs face heavy characterization backlogs and upstream production outpaces lab cycles.
+          </p>
+          <ul class="text-dark mb-2" style="font-size: 14px;">
+            <li>API gravity, sulfur, salt, water, viscosity, TAN and more from a single 60 MHz NMR spectrum</li>
+            <li>Distillation yields and cut properties from IBP to FBP closely matching laboratory distillation curves</li>
+            <li>Plug &amp; play calibration (~10 samples) for crudes close to our 24-crude reference library</li>
+          </ul>
+          <p class="text-muted mb-0" style="font-size: 13px;"><strong>Best for:</strong> Incoming cargo QC, crude selection and supply planning. <a href="{{ '/blog/usecase-crudeoil-refinery' | relative_url }}">Read the Asian refinery case study →</a></p>
+        </div>
+      </div>
+
+      <!-- 02 Crude Oil Compatibility & Stratification -->
+      <div class="col-12 col-lg-6">
+        <div class="p-4 border rounded-4 h-100" style="background:#fff;">
+          <img src="{{ '/img/blog/crude-oil-tank-stratification-levels.jpg' | relative_url }}" alt="Crude oil tank stratification and density profile across levels" class="img-fluid rounded-3 mb-3" style="height: 200px; width: 100%; object-fit: cover;" loading="lazy" decoding="async">
+          <span class="badge rounded-pill mb-2" style="background:#FFF3E0; color:#FE900F; font-weight:700;">02 · Crude Oil Compatibility &amp; Stratification</span>
+          <h3 class="fw-bold h4 text-dark">Spot incompatible crudes before they share a tank or reach the CDU</h3>
+          <p class="text-dark mt-2" style="font-size: 14px;">
+            <strong>The challenge:</strong> Mixing incompatible crudes precipitates asphaltenes, causing tank sludge, desalter upsets, exchanger fouling and corrosion. When different crudes are stored together, tanks stratify, making drawing-point decisions and CDU feed prediction difficult.
+          </p>
+          <ul class="text-dark mb-2" style="font-size: 14px;">
+            <li>Compatibility and asphaltene-risk indicators before crudes are mixed or transferred</li>
+            <li>NMR fingerprint of each crude and tank level to detect stratification and prevent slugs</li>
+            <li>Prediction of real feed quality entering the CDU to maximize crude stability in pipelines and units</li>
+          </ul>
+          <p class="text-muted mb-0" style="font-size: 13px;"><strong>Best for:</strong> Tank farms receiving multiple crude grades and sites with recurring compatibility issues. <a href="{{ '/blog/crude-oil-tank-stratification' | relative_url }}">Explore the tank stratification use case →</a></p>
+        </div>
+      </div>
+
+      <!-- 03 Blend Analysis & Optimization -->
+      <div class="col-12 col-lg-6">
+        <div class="p-4 border rounded-4 h-100" style="background:#fff;">
+          <img src="{{ '/img/1764170441294.jpeg' | relative_url }}" alt="Refinery operator monitoring crude oil blending pipeline and process parameters" class="img-fluid rounded-3 mb-3" style="height: 200px; width: 100%; object-fit: cover;" loading="lazy" decoding="async">
+          <span class="badge rounded-pill mb-2" style="background:#FFF3E0; color:#FE900F; font-weight:700;">03 · Blend Analysis &amp; Optimization</span>
+          <h3 class="fw-bold h4 text-dark">Check every blend against quality and process limits in 15 minutes</h3>
+          <p class="text-dark mt-2" style="font-size: 14px;">
+            <strong>The challenge:</strong> Upstream operators blend variable field streams for export where off-spec cargoes face rejection, while downstream refineries blend crudes before the CDU using recipes based on assay data that can be weeks old.
+          </p>
+          <ul class="text-dark mb-2" style="font-size: 14px;">
+            <li>Characterize each blend component before mixing and verify the final blend immediately after</li>
+            <li>Automated 15-minute report checking blend quality against process constraints</li>
+            <li>Custom models for site-specific KPIs, including blend fouling tendency and opportunity-crude margins</li>
+          </ul>
+          <p class="text-muted mb-0" style="font-size: 13px;"><strong>Best for:</strong> Export terminal blending and refinery CDU feed blend optimization.</p>
+        </div>
+      </div>
+
+      <!-- 04 Asset Integrity -->
+      <div class="col-12 col-lg-6">
+        <div class="p-4 border rounded-4 h-100" style="background:#fff;">
+          <img src="{{ '/img/blog/heat-exchanger-tube-bundle-cc.jpg' | relative_url }}" alt="Shell and tube heat exchanger tube bundle protected from fouling and corrosion" class="img-fluid rounded-3 mb-3" style="height: 200px; width: 100%; object-fit: cover;" loading="lazy" decoding="async">
+          <span class="badge rounded-pill mb-2" style="background:#FFF3E0; color:#FE900F; font-weight:700;">04 · Asset Integrity</span>
+          <h3 class="fw-bold h4 text-dark">Predict fouling, asphaltene and corrosion risk before it reaches the units</h3>
+          <p class="text-dark mt-2" style="font-size: 14px;">
+            <strong>The challenge:</strong> Fouling and corrosion reduce throughput and trigger unplanned shutdowns, yet risk is usually discovered after the fact from deposits and inspections because feed quality changes faster than lab cycles.
+          </p>
+          <ul class="text-dark mb-2" style="font-size: 14px;">
+            <li>Early-warning fouling and asphaltene indicators directly from NMR spectral patterns on every crude and blend</li>
+            <li>Characterization of organic deposits and trending of salt, water and sulfur over time</li>
+            <li>Dedicated corrosion and fouling index for each crude charge before it enters the preheat train</li>
+          </ul>
+          <p class="text-muted mb-0" style="font-size: 13px;"><strong>Best for:</strong> Preheat train protection, desalter stability and corrosion control.</p>
+        </div>
+      </div>
+
+      <!-- 05 Distillation Fractions -->
+      <div class="col-12 col-lg-4">
+        <div class="p-4 border rounded-4 h-100" style="background:#fff;">
+          <img src="{{ '/img/blog/refinery-pine-bend-tony-webster.jpg' | relative_url }}" alt="Atmospheric distillation units in a crude oil refinery" class="img-fluid rounded-3 mb-3" style="height: 175px; width: 100%; object-fit: cover;" loading="lazy" decoding="async">
+          <span class="badge rounded-pill mb-2" style="background:#FFF3E0; color:#FE900F; font-weight:700;">05 · Distillation Fractions</span>
+          <h3 class="fw-bold h5 text-dark">Properties of every atmospheric cut in near real time</h3>
+          <p class="text-dark mt-2" style="font-size: 14px;">
+            Predict yields and key properties per atmospheric distillation cut, from IBP to FBP and across individual fractions, working alongside existing process analyzers.
+          </p>
+          <p class="text-muted mb-0" style="font-size: 13px;"><strong>Validated on:</strong> Full distillation curves matching laboratory data (e.g. Arab Light and DAS Blend).</p>
+        </div>
+      </div>
+
+      <!-- 06 Final Product QC -->
+      <div class="col-12 col-lg-4">
+        <div class="p-4 border rounded-4 h-100" style="background:#fff;">
+          <img src="{{ '/img/blog/nmr-quality-control-850.webp' | relative_url }}" alt="Automated NMR quality control workflow" class="img-fluid rounded-3 mb-3" style="height: 175px; width: 100%; object-fit: cover;" loading="lazy" decoding="async">
+          <span class="badge rounded-pill mb-2" style="background:#FFF3E0; color:#FE900F; font-weight:700;">06 · Final Product QC</span>
+          <h3 class="fw-bold h5 text-dark">Catch off-spec batches in minutes, before release testing</h3>
+          <p class="text-dark mt-2" style="font-size: 14px;">
+            Deliver quality reports in minutes on gasoline, diesel, gasoil and regenerated oils to flag off-spec batches early and trace anomalies back to their upstream cause.
+          </p>
+          <p class="text-muted mb-0" style="font-size: 13px;"><strong>Role:</strong> Fast pre-release screening ahead of certified ASTM/EN release tests.</p>
+        </div>
+      </div>
+
+      <!-- 07 Crude Fingerprinting & Allocation -->
+      <div class="col-12 col-lg-4">
+        <div class="p-4 border rounded-4 h-100" style="background:#fff;">
+          <img src="{{ '/img/blog/petrochemical-compound-identification-2026-09-04.jpg' | relative_url }}" alt="Crude fingerprinting and reservoir allocation" class="img-fluid rounded-3 mb-3" style="height: 175px; width: 100%; object-fit: cover;" loading="lazy" decoding="async">
+          <span class="badge rounded-pill mb-2" style="background:#FFF3E0; color:#FE900F; font-weight:700;">07 · Crude Fingerprinting &amp; Allocation</span>
+          <h3 class="fw-bold h5 text-dark">Trace every crude back to its field or reservoir</h3>
+          <p class="text-dark mt-2" style="font-size: 14px;">
+            Generate a unique NMR spectral fingerprint for every crude, cargo and commingled stream to support hydrocarbon accounting, reservoir-origin verification and allocation models between lab cycles.
+          </p>
+          <p class="text-muted mb-0" style="font-size: 13px;"><strong>Best for:</strong> Upstream commingled streams and regulatory reservoir traceability.</p>
         </div>
       </div>
     </div>
@@ -113,56 +205,45 @@ hero_subtitle: "For refinery, terminal and blending laboratories. Rombo AI Platf
 </section>
 
 <section class="container-fluid py-4 py-lg-5" style="background:#fff;">
-  <div class="container custom_container text-center">
-    <h2 class="fw-bold text-dark" style="font-size: 30px;">Main applications</h2>
-    <div class="row g-3 mt-3 justify-content-center">
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="p-3 border rounded-4 h-100" style="background:#FAFAFA;">Screening incoming crudes against their expected quality</div>
-      </div>
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="p-3 border rounded-4 h-100" style="background:#FAFAFA;">Deciding which samples go to the full assay first</div>
-      </div>
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="p-3 border rounded-4 h-100" style="background:#FAFAFA;">Comparing candidate blends before committing to a plan</div>
-      </div>
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="p-3 border rounded-4 h-100" style="background:#FAFAFA;">Tracking crude and blend fingerprints across cargoes and tanks</div>
-      </div>
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="p-3 border rounded-4 h-100" style="background:#FAFAFA;">More frequent property data between full assays</div>
-      </div>
-    </div>
-    <div class="row justify-content-center mt-4">
-      <div class="col-12 col-lg-9 text-start">
-        <h3 class="fw-bold h5 text-dark">What NMR does not replace</h3>
-        <p class="text-dark mb-0">
-          Yields and cuts still come from physical distillation such as ASTM D2892, and product release follows the methods in the specification. Blend stability is confirmed with dedicated tests such as ASTM D7157; we treat NMR-based compatibility screening as work in progress, to be validated on your crudes. A validated estimate supports routine decisions between reference tests; it does not certify a cargo. For a single, well-characterized stream monitored in line, an installed NIR analyzer can be the better fit: our comparison of <a href="{{ '/blog/ai-crude-oil-analysis-lab-vs-nir-vs-high-field-nmr' | relative_url }}">lab testing, NIR and high-field NMR</a> sets the options side by side.
+  <div class="container custom_container">
+    <div class="row g-4 align-items-start">
+      <div class="col-12 col-lg-5">
+        <p class="fw-bold text-uppercase mb-2" style="font-size: 14px; color:#FE900F; letter-spacing:.06em;">Material Intelligence Platform</p>
+        <h2 class="fw-bold text-dark" style="font-size: 30px;">NMR reads the chemistry, AI turns it into properties</h2>
+        <p class="text-dark mt-3">
+          Radiofrequency pulses in a 60 MHz magnetic field make ¹H nuclei resonate, producing a quantitative chemical fingerprint of the crude. Rombo AI's patented neural-network models map spectral patterns to physicochemical properties and distillation curves in under 15 minutes.
+        </p>
+        <p class="text-dark mt-2">
+          <strong>Fully on-premise, no cloud required:</strong> the system runs on a dedicated local workstation connected to the benchtop NMR spectrometer. Your data never leaves the plant, with signed releases, LIMS integration and full IP protection.
         </p>
       </div>
-    </div>
-  </div>
-</section>
-
-<section class="container-fluid py-4 py-lg-5" style="background:#FAFAFA;">
-  <div class="container custom_container">
-    <div class="row g-4">
-      <div class="col-12 col-lg-6">
-        <h2 class="fw-bold text-dark" style="font-size: 30px;">From feasibility to production</h2>
-        <ul class="text-dark mt-3">
-          <li><strong>Feasibility review, free:</strong> we look at your crudes, reference data, sampling points and the decision you want to improve, and tell you whether a pilot makes sense.</li>
-          <li><strong>Pilot:</strong> a model calibrated on your crudes and reference results, with a validation report against your ASTM methods and the metrics agreed at the start. A limited set of paired samples is enough to test the first properties.</li>
-          <li><strong>Production:</strong> deployment on your instruments, with model versioning and audit logs. Integration with LIMS or plant systems is scoped after the pilot.</li>
-        </ul>
-        <p class="text-dark mt-2 mb-0" style="font-size: 14px;">Only the properties that meet the agreed metrics move to production.</p>
-      </div>
-      <div class="col-12 col-lg-6">
-        <h2 class="fw-bold text-dark" style="font-size: 30px;">How it helps your team</h2>
-        <ul class="text-dark mt-3">
-          <li><strong>Crude and QC laboratory managers</strong> screen more cargoes and blends with one scan and send the ones that changed to the full method first.</li>
-          <li><strong>Process and planning engineers</strong> get more frequent property data on feeds and blends to compare options before execution. The decision stays with them.</li>
-          <li><strong>Analytical chemists and chemometricians</strong> keep the reference methods as the reference: the model is benchmarked against them, and transfer between instruments is tested, not assumed.</li>
-          <li><strong>Refinery leadership</strong> sees a measured pilot with acceptance criteria agreed up front, before any scale-up.</li>
-        </ul>
+      <div class="col-12 col-lg-7">
+        <div class="row g-3">
+          <div class="col-12 col-md-6">
+            <div class="p-4 border rounded-4 h-100 text-start" style="background:#FAFAFA;">
+              <h3 class="fw-bold h5" style="color:#FE900F;">01 · Foundation Model (ROSE)</h3>
+              <p class="text-dark mb-0" style="font-size: 14px;">Built on our <a href="{{ '/blog/rose_foundation_model_NMR_spectral_data' | relative_url }}">openly published NMR foundation model</a> trained on millions of spectra, enabling high accuracy with minimal calibration samples.</p>
+            </div>
+          </div>
+          <div class="col-12 col-md-6">
+            <div class="p-4 border rounded-4 h-100 text-start" style="background:#FAFAFA;">
+              <h3 class="fw-bold h5" style="color:#FE900F;">02 · 500+ Assays &amp; 24-Crude Library</h3>
+              <p class="text-dark mb-0" style="font-size: 14px;">Fine-tuned on 500+ proprietary full crude oil assays, with 24 pre-trained reference crudes across 6 global regions (North &amp; West Africa, North Sea, Caspian &amp; Middle East, Asia-Pacific, Americas).</p>
+            </div>
+          </div>
+          <div class="col-12 col-md-6">
+            <div class="p-4 border rounded-4 h-100 text-start" style="background:#FAFAFA;">
+              <h3 class="fw-bold h5" style="color:#FE900F;">03 · Patented NMR Know-How</h3>
+              <p class="text-dark mb-0" style="font-size: 14px;">Backed by 3 patents covering proprietary neural-network spectral processing, custom preprocessing, acquisition protocols and multi-instrument calibration.</p>
+            </div>
+          </div>
+          <div class="col-12 col-md-6">
+            <div class="p-4 border rounded-4 h-100 text-start" style="background:#FAFAFA;">
+              <h3 class="fw-bold h5" style="color:#FE900F;">04 · AutoML &amp; LIMS Integration</h3>
+              <p class="text-dark mb-0" style="font-size: 14px;">Run routine predictions in three steps, or use the optional AutoML module to build custom internal models while retaining 100% IP.</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -172,10 +253,10 @@ hero_subtitle: "For refinery, terminal and blending laboratories. Rombo AI Platf
   <div class="container custom_container">
     <h2 class="fw-bold text-white" style="font-size: 28px;">Test it on your own crude samples</h2>
     <p class="text-white mt-2 mx-auto" style="max-width: 75ch; opacity: .85;">
-      Tell us which crude and blend properties you test, which ASTM methods you use and where you sample. We will review technical fit, the samples and reference data a pilot would need, and the acceptance criteria to agree before it starts.
+      Tell us which crude and blend properties you monitor and where you sample across your operations. Contact our team for more information.
     </p>
     <div class="mt-4">
-      {% include ui/button.html href="/contact/" label="Request a feasibility review" location="use_case_crude_oil" %}
+      {% include ui/button.html href="/contact/" label="Contact us" location="use_case_crude_oil" %}
     </div>
   </div>
 </section>
