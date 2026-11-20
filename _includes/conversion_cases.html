@@ -6,7 +6,7 @@
     <article class="col-12 col-lg-4">
       <a href="{{ case.path | relative_url }}" class="use-case-card border rounded-4 p-4 h-100 d-flex flex-column text-decoration-none text-dark">
         {% if case.image %}
-        <img src="{{ case.image | relative_url }}" alt="{{ case.image_alt | default: case.title }}" class="img-fluid rounded-3 mb-3" style="height: 190px; width: 100%; object-fit: cover;" loading="lazy" decoding="async">
+        <img src="{{ case.image | relative_url }}" alt="{{ case.image_alt | default: case.title }}" class="img-fluid rounded-3 mb-3" width="600" height="190" style="height: 190px; width: 100%; object-fit: cover;" loading="lazy" decoding="async">
         {% endif %}
         <h3 class="h4 text-dark">{{ case.title }}</h3>
         <p class="text-dark"><strong>Problem.</strong> {{ case.problem }}</p>

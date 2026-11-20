@@ -35,7 +35,7 @@
     
 
     <!-- Fonts: load only needed weights, swap for fast render -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bitter:wght@400;500;600;700;800;900&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bitter:wght@400;600;700&display=swap">
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -82,9 +82,11 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
     <link rel="manifest" href="/img/site.webmanifest">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css"
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"
+          integrity="sha384-nA7usz4cMKo7RylsCZnpe0V9qx5X7sa011o0OrDzrKUE7Ero1gB48Fjaw6SFxVZe" crossorigin="anonymous"
           media="print" onload="this.media='all'">
-    <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css"></noscript>
+    <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"
+          integrity="sha384-nA7usz4cMKo7RylsCZnpe0V9qx5X7sa011o0OrDzrKUE7Ero1gB48Fjaw6SFxVZe" crossorigin="anonymous"></noscript>
 
     <script type="application/ld+json">
 {
@@ -99,8 +101,8 @@
       "logo": {
         "@type": "ImageObject",
         "url": "https://rombo.ai/img/romboai-04-1-2.png",
-        "width": 512,
-        "height": 512
+        "width": 200,
+        "height": 79
       },
       "image": "https://rombo.ai/img/romboai-04-1-2.png",
       "description": "AI-driven spectral and chemical analysis with Low Field NMR and machine learning.",
@@ -111,8 +113,10 @@
       },
       "address": {
         "@type": "PostalAddress",
+        "streetAddress": "Open Campus, Strada Statale 195 Km 2.300",
         "addressLocality": "Cagliari",
         "addressRegion": "Sardinia",
+        "postalCode": "09123",
         "addressCountry": "IT"
       },
       "geo": {
@@ -144,7 +148,7 @@
           "jobTitle": "CTO & Co-founder",
           "url": "https://rombo.ai/author/carmine-mattia/"}
       ],
-      "sameAs": ["https://www.linkedin.com/company/rombo-ai/"]
+      "sameAs": ["https://www.linkedin.com/company/rombo-ai/","https://github.com/romboai/rose-1h-nmr","https://huggingface.co/romboai/rose-1h-nmr"]
     },
     {
       "@type": "WebSite",
@@ -152,12 +156,7 @@
       "name": "Rombo AI",
       "url": "https://rombo.ai/",
       "inLanguage": "en",
-      "publisher": { "@id": "https://rombo.ai/#organization" },
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": "https://rombo.ai/?q={search_term_string}",
-        "query-input": "required name=search_term_string"
-      }
+      "publisher": { "@id": "https://rombo.ai/#organization" }
     },
     {
       "@type": "WebPage",
@@ -199,7 +198,7 @@
       "url": "https://rombo.ai/product/",
       "applicationCategory": "BusinessApplication",
       "applicationSubCategory": "Industrial AI / Spectroscopy Analytics",
-      "operatingSystem": "Web",
+      "operatingSystem": "On-Premise Workstation (Windows, Linux)",
       "description": "Patented NMR AI models predict multiple physico-chemical properties from one benchtop scan. Book a demo with the Rombo AI team.",
       "brand": { "@id": "https://rombo.ai/#organization" },
       "manufacturer": { "@id": "https://rombo.ai/#organization" },
@@ -209,12 +208,13 @@
         "audienceType": "Industrial R&D, QC, Refining, Energy, Petrochemical"
       },
       "featureList": [
-        "Benchtop low-field NMR data acquisition and analysis",
-        "NMR foundation model supporting reusable spectral representations",
-        "Full physico-chemical property estimation in ~15 minutes",
-        "Regime change and drift detection",
-        "AutoML pipeline for custom industrial models",
-        "Validated against ASTM or IEC reference methods"
+        "On-premise 60 MHz benchtop NMR data acquisition and automated analysis",
+        "ROSE NMR foundation model pre-trained on millions of spectra and fine-tuned on 500+ full crude oil assays",
+        "Patented neural-network spectral processing and multi-instrument calibration (3 patents)",
+        "Full physico-chemical property and distillation curve (IBP-FBP) estimation in under 15 minutes",
+        "Crude oil compatibility, tank stratification, fouling and corrosion risk indicators",
+        "AutoML Framework for custom industrial models with 100% client IP retention",
+        "Validated against ASTM and IEC reference methods"
       ],
       "keywords": "quantitative NMR, low-field NMR, benchtop NMR, AI, machine learning, crude oil analysis, material intelligence, foundation model"
     },
@@ -315,6 +315,11 @@
                                 Transformer Oil Monitoring
                             </a>
                         </li>
+                        <li>
+                            <a class="dropdown-item" href="/use-cases/nmr-compound-identification/">
+                                NMR Compound Identification
+                            </a>
+                        </li>
                     </ul>
                 </li><li class="nav-item d-flex align-items-center">
                     <a class="nav-link nav-cta" href="/contact/" data-cta-location="header">Contact us</a>
@@ -343,7 +348,7 @@
         
         <h1 class="text-white m-0"><span class="text-highlight">AI for industrial NMR analysis</span></h1>
         
-        <p class="hero-sub text-white mb-0">Turn benchtop NMR data into material property predictions. Start with a free review of your samples, reference methods and validation goals.</p>
+        <p class="hero-sub text-white mb-0">Turn a 60 MHz benchtop NMR scan into physicochemical properties, distillation curves and operational risk indicators in under 15 minutes — running 100% on-premise.</p>
         
         <div class="hero-actions d-flex flex-wrap gap-3 mt-4">
           <a href="/contact/" class="btn rounded-pill"
@@ -445,14 +450,14 @@
       </div>
       <div class="col-12 col-md-4">
         <div class="p-3 border rounded-4 h-100 text-center">
-          <div class="fw-bold" style="color: #FE900F;">Traceable &amp; Comparable Results</div>
-          <div class="text-dark" style="font-size: 14px;">Standardizable across sites and campaigns.</div>
+          <div class="fw-bold" style="color: #FE900F;">100% On-Premise &amp; LIMS Ready</div>
+          <div class="text-dark" style="font-size: 14px;">Offline by design on a local workstation — your plant data never leaves the site.</div>
         </div>
       </div>
       <div class="col-12 col-md-4">
         <div class="p-3 border rounded-4 h-100 text-center">
           <div class="fw-bold" style="color: #FE900F;">Validated Against Reference Methods</div>
-          <div class="text-dark" style="font-size: 14px;">Benchmarked against your ASTM or IEC reference methods before go-live.</div>
+          <div class="text-dark" style="font-size: 14px;">Benchmarked against your ASTM, ISO or IEC reference methods before go-live.</div>
         </div>
       </div>
     </div>
@@ -601,9 +606,9 @@
           <li>Support for adapting to new datasets (data quality + validation criteria)</li>
         </ul>
         <div class="p-3 border rounded-4 mt-3" style="max-width: 75ch; background: linear-gradient(135deg, #FFF7ED, #FFF);">
-          <div class="fw-bold" style="color: #FE900F;">Built on an NMR foundation model</div>
+          <div class="fw-bold" style="color: #FE900F;">Built on ROSE, 500+ assays &amp; 3 patents</div>
           <div class="text-dark" style="font-size: 14px;">
-            Every AutoML pipeline starts from ROSE, our openly published foundation model pre-trained on 3.2 million ¹H NMR spectra, and can build on our proprietary models trained on internal industrial datasets. Your custom models start from a rich spectral representation instead of from scratch, so they need less calibration data.
+            Every AutoML pipeline starts from ROSE, our openly published NMR foundation model pre-trained on millions of ¹H NMR spectra, combined with 3 patents on neural-network spectral processing and proprietary models fine-tuned on 500+ full crude oil assays (including a 24-crude reference library across 6 global regions). Your custom models start from a rich spectral representation instead of from scratch, needing as few as ~10 calibration samples.
           </div>
         </div>
         <div class="p-3 bg-white border rounded-4 mt-3" style="max-width: 75ch;">
@@ -634,9 +639,9 @@
 
 
 
-          <h2 class="fw-bold text-dark" style="font-size:38px; line-height:1.15;">Built on an NMR foundation model</h2>
+          <h2 class="fw-bold text-dark" style="font-size:38px; line-height:1.15;">Built on an NMR foundation model &amp; 3 patents</h2>
           <p class="text-dark mt-3 mb-0" style="max-width:70ch;">
-            Rombo AI Platform is powered by a spectral foundation model trained to learn reusable representations from NMR data. This shared foundation supports faster adaptation across analytical tasks while each production use remains subject to validation on the relevant instruments, samples, and operating conditions.
+            Rombo AI Platform is powered by ROSE, our spectral foundation model trained on millions of NMR spectra, fine-tuned on 500+ proprietary full crude oil assays, and backed by 3 patents covering neural-network spectral processing, acquisition protocols, and calibration transfer. The entire platform runs on-premise on a local workstation so your data never leaves the plant.
           </p>
         </div>
       </div>
@@ -834,30 +839,13 @@
 
 <!-- CSS here -->
 <!-- JS here -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous" defer></script>
+<script defer src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js"
+        integrity="sha384-xLPjH6nqG4p/2mu1KJ1t+4KqcvkyXVwBucQtyGK65lDNfKzECxGY/QEYWR+Wompr"
+        crossorigin="anonymous" data-cfasync="false"></script>
 <script defer src="/js/main.js"></script>
-
-<script defer src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
-<script>
-  (function() {
-    function initCookieConsent() {
-      if (window.cookieconsent) {
-        window.cookieconsent.initialise({
-          "palette": {
-            "popup": { "background": "#FFFFFF", "text": "#fe900f" },
-            "button": { "background": "#fe900f", "text": "#FFFFFF" }
-          },
-          "content": { "href": "/privacy/" }
-        });
-      } else {
-        setTimeout(initCookieConsent, 100);
-      }
-    }
-    initCookieConsent();
-  })();
-</script>
 </body>
 </html>
 

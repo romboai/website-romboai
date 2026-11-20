@@ -11,7 +11,7 @@ last_modified_at: 2026-09-13
 
 hero_eyebrow: "Rombo AI Platform"
 hero_product_title: "AI for industrial NMR analysis"
-hero_product_sub_title: "Turn benchtop NMR data into material property predictions. Start with a free review of your samples, reference methods and validation goals."
+hero_product_sub_title: "Turn a 60 MHz benchtop NMR scan into physicochemical properties, distillation curves and operational risk indicators in under 15 minutes — running 100% on-premise."
 hero_cta_label: "Get a free feasibility analysis"
 hero_cta_link: "/contact/"
 hero_cta_location: "product_hero"
@@ -104,14 +104,14 @@ products:
       </div>
       <div class="col-12 col-md-4">
         <div class="p-3 border rounded-4 h-100 text-center">
-          <div class="fw-bold" style="color: #FE900F;">Traceable &amp; Comparable Results</div>
-          <div class="text-dark" style="font-size: 14px;">Standardizable across sites and campaigns.</div>
+          <div class="fw-bold" style="color: #FE900F;">100% On-Premise &amp; LIMS Ready</div>
+          <div class="text-dark" style="font-size: 14px;">Offline by design on a local workstation — your plant data never leaves the site.</div>
         </div>
       </div>
       <div class="col-12 col-md-4">
         <div class="p-3 border rounded-4 h-100 text-center">
           <div class="fw-bold" style="color: #FE900F;">Validated Against Reference Methods</div>
-          <div class="text-dark" style="font-size: 14px;">Benchmarked against your ASTM or IEC reference methods before go-live.</div>
+          <div class="text-dark" style="font-size: 14px;">Benchmarked against your ASTM, ISO or IEC reference methods before go-live.</div>
         </div>
       </div>
     </div>
@@ -238,9 +238,9 @@ products:
           <li>Support for adapting to new datasets (data quality + validation criteria)</li>
         </ul>
         <div class="p-3 border rounded-4 mt-3" style="max-width: 75ch; background: linear-gradient(135deg, #FFF7ED, #FFF);">
-          <div class="fw-bold" style="color: #FE900F;">Built on an NMR foundation model</div>
+          <div class="fw-bold" style="color: #FE900F;">Built on ROSE, 500+ assays &amp; 3 patents</div>
           <div class="text-dark" style="font-size: 14px;">
-            Every AutoML pipeline starts from ROSE, our openly published foundation model pre-trained on 3.2 million ¹H NMR spectra, and can build on our proprietary models trained on internal industrial datasets. Your custom models start from a rich spectral representation instead of from scratch, so they need less calibration data.
+            Every AutoML pipeline starts from ROSE, our openly published NMR foundation model pre-trained on millions of ¹H NMR spectra, combined with 3 patents on neural-network spectral processing and proprietary models fine-tuned on 500+ full crude oil assays (including a 24-crude reference library across 6 global regions). Your custom models start from a rich spectral representation instead of from scratch, needing as few as ~10 calibration samples.
           </div>
         </div>
         <div class="p-3 bg-white border rounded-4 mt-3" style="max-width: 75ch;">
@@ -270,9 +270,9 @@ products:
         </div>
         <div class="col-12 col-lg-7">
           {% include ui/kicker.html text="Technology" class="mb-2" %}
-          <h2 class="fw-bold text-dark" style="font-size:38px; line-height:1.15;">Built on an NMR foundation model</h2>
+          <h2 class="fw-bold text-dark" style="font-size:38px; line-height:1.15;">Built on an NMR foundation model &amp; 3 patents</h2>
           <p class="text-dark mt-3 mb-0" style="max-width:70ch;">
-            Rombo AI Platform is powered by a spectral foundation model trained to learn reusable representations from NMR data. This shared foundation supports faster adaptation across analytical tasks while each production use remains subject to validation on the relevant instruments, samples, and operating conditions.
+            Rombo AI Platform is powered by ROSE, our spectral foundation model trained on millions of NMR spectra, fine-tuned on 500+ proprietary full crude oil assays, and backed by 3 patents covering neural-network spectral processing, acquisition protocols, and calibration transfer. The entire platform runs on-premise on a local workstation so your data never leaves the plant.
           </p>
         </div>
       </div>

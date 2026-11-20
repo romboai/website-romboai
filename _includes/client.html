@@ -1,7 +1,7 @@
-<div class="container-fluid h-100 py-5 pb-0 my-0" style="position: relative; overflow: hidden;">
-    <video class="z-n1 position-absolute top-0 start-0 w-100 h-100"
-           style="object-fit: cover;" autoplay muted loop playsinline controlslist="nodownload" aria-hidden="true">
-        <source src="{{ site.baseurl }}/img/hero_white_play.mp4" type="video/mp4"/>
+<div class="container-fluid h-100 py-5 pb-0 my-0 client-section" style="position: relative; overflow: hidden;">
+    <video class="z-n1 position-absolute top-0 start-0 w-100 h-100 client-bg-video"
+           style="object-fit: cover;" autoplay muted loop playsinline controlslist="nodownload" data-desktop-only="true" preload="none" aria-hidden="true">
+        <source data-src="{{ site.baseurl }}/img/hero_white_play.mp4" type="video/mp4"/>
         Your browser does not support the video tag.
     </video>
     <div class="z-1 position-absolute top-0 start-0 w-100 h-100"
@@ -26,7 +26,7 @@
                 {%- for item in client_logos -%}
                 {%- assign parts = item | split: ":" -%}
                 <div class="client-marquee__item">
-                    <img src="{{ site.baseurl }}/img/clients/{{ parts[0] }}" alt="{{ parts[1] }}" class="client-marquee__logo" loading="lazy" decoding="async">
+                    <img src="{{ site.baseurl }}/img/clients/{{ parts[0] }}" alt="{{ parts[1] }}" class="client-marquee__logo" width="160" height="52" loading="lazy" decoding="async">
                 </div>
                 {%- endfor -%}
             </div>
@@ -34,7 +34,7 @@
                 {%- for item in client_logos -%}
                 {%- assign parts = item | split: ":" -%}
                 <div class="client-marquee__item">
-                    <img src="{{ site.baseurl }}/img/clients/{{ parts[0] }}" alt="" class="client-marquee__logo" loading="lazy" decoding="async">
+                    <img src="{{ site.baseurl }}/img/clients/{{ parts[0] }}" alt="" class="client-marquee__logo" width="160" height="52" loading="lazy" decoding="async">
                 </div>
                 {%- endfor -%}
             </div>
@@ -45,6 +45,23 @@
     {% include supportby.html %}
     {% endif %}
 </div>
+<script>
+  (function () {
+    var isDesktop = window.matchMedia && window.matchMedia("(min-width: 992px)").matches;
+    var video = document.querySelector(".client-section .client-bg-video[data-desktop-only='true']");
+    if (!video) return;
+    if (!isDesktop) {
+      video.remove();
+      return;
+    }
+    var source = video.querySelector("source[data-src]");
+    if (!source) return;
+    source.src = source.getAttribute("data-src");
+    video.load();
+    var p = video.play();
+    if (p && typeof p.catch === "function") p.catch(function () {});
+  })();
+</script>
 
 <style>
   .client-marquee {

@@ -20,10 +20,10 @@ organization:
   founding_date: "2023"
   founding_location: "Cagliari, Italy"
   address:
-    street: ""              # TODO: compile when available
+    street: "Open Campus, Strada Statale 195 Km 2.300"
     locality: "Cagliari"
     region: "Sardinia"
-    postal_code: ""         # TODO: compile when available
+    postal_code: "09123"
     country: "IT"
   geo:
     latitude: 39.2293491
@@ -45,6 +45,8 @@ organization:
     - "AutoML"
   same_as:
     - "https://www.linkedin.com/company/rombo-ai/"
+    - "https://github.com/romboai/rose-1h-nmr"
+    - "https://huggingface.co/romboai/rose-1h-nmr"
   industry:
     - "Artificial Intelligence"
     - "Spectroscopy"

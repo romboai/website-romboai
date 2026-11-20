@@ -52,8 +52,8 @@
       "logo": {
         "@type": "ImageObject",
         "url": "{{ org_logo }}",
-        "width": 512,
-        "height": 512
+        "width": 200,
+        "height": 79
       },
       "image": "{{ org_logo }}",
       "description": "{{ site.description | strip_html | strip_newlines | replace: '"','\"' }}",
@@ -139,12 +139,7 @@
       "name": "{{ site.title }}",
       "url": "{{ site.url }}/",
       "inLanguage": "{{ site.lang | default: 'en' }}",
-      "publisher": { "@id": "{{ org_id }}" },
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": "{{ site.url }}/?q={search_term_string}",
-        "query-input": "required name=search_term_string"
-      }
+      "publisher": { "@id": "{{ org_id }}" }
     },
     {
       "@type": "WebPage",
@@ -179,6 +174,19 @@
           "position": 2,
           "name": "Blog",
           "item": "{{ site.url }}/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "{{ page.title | replace: '"','\"' }}",
+          "item": "{{ canonical_url }}"
+        }
+        {%- elsif page.url contains "/use-cases/" and page.url != "/use-cases/" -%}
+        ,{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Use Cases",
+          "item": "{{ site.url }}/use-cases/"
         },
         {
           "@type": "ListItem",
@@ -224,7 +232,7 @@
       "url": "{{ canonical_url }}",
       "applicationCategory": "BusinessApplication",
       "applicationSubCategory": "Industrial AI / Spectroscopy Analytics",
-      "operatingSystem": "Web",
+      "operatingSystem": "On-Premise Workstation (Windows, Linux)",
       "description": "{{ page.description | default: page.hero_product_sub_title | default: site.description | strip_html | strip_newlines | truncate: 320 | replace: '"','\"' }}",
       "brand": { "@id": "{{ org_id }}" },
       "manufacturer": { "@id": "{{ org_id }}" },
@@ -234,12 +242,13 @@
         "audienceType": "Industrial R&D, QC, Refining, Energy, Petrochemical"
       },
       "featureList": [
-        "Benchtop low-field NMR data acquisition and analysis",
-        "NMR foundation model supporting reusable spectral representations",
-        "Full physico-chemical property estimation in ~15 minutes",
-        "Regime change and drift detection",
-        "AutoML pipeline for custom industrial models",
-        "Validated against ASTM or IEC reference methods"
+        "On-premise 60 MHz benchtop NMR data acquisition and automated analysis",
+        "ROSE NMR foundation model pre-trained on millions of spectra and fine-tuned on 500+ full crude oil assays",
+        "Patented neural-network spectral processing and multi-instrument calibration (3 patents)",
+        "Full physico-chemical property and distillation curve (IBP-FBP) estimation in under 15 minutes",
+        "Crude oil compatibility, tank stratification, fouling and corrosion risk indicators",
+        "AutoML Framework for custom industrial models with 100% client IP retention",
+        "Validated against ASTM and IEC reference methods"
       ],
       "keywords": "quantitative NMR, low-field NMR, benchtop NMR, AI, machine learning, crude oil analysis, material intelligence, foundation model"
     },

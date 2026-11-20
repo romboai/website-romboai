@@ -1,0 +1,47 @@
+# Rombo AI
+
+> Rombo AI builds the AI Platform for Spectral Data Analysis & Interpretation, pairing 60 MHz benchtop NMR spectroscopy with patented machine-learning models and an NMR foundation model (ROSE) to deliver laboratory-grade physicochemical properties, distillation curves, compatibility indicators, and compound identification in minutes.
+
+## Core Products
+
+- [Rombo AI Platform](https://rombo.ai/product/): On-premise industrial NMR analysis platform combining a 60 MHz benchtop NMR spectrometer, local workstation software, patented neural-network models (3 patents), and full LIMS integration. Includes two modules:
+  - **NMR AI Analyzer**: End-to-end benchtop NMR acquisition and automated multi-property prediction in under 15 minutes.
+  - **AutoML Framework**: Enables R&D teams to build custom machine-learning pipelines on top of the ROSE foundation model while retaining 100% Intellectual Property.
+- [Spectra Agent](https://rombo.ai/spectra/): AI agent for automated NMR compound identification and structure elucidation ([spectra.rombo.ai](https://spectra.rombo.ai)).
+
+## Technology & Scientific Foundation
+
+- **ROSE Foundation Model**: Openly published NMR foundation model pre-trained on millions of ¹H NMR spectra ([Paper on ChemRxiv](https://doi.org/10.26434/chemrxiv.15007823/v1), [GitHub](https://github.com/romboai/rose-1h-nmr), [Hugging Face](https://huggingface.co/romboai/rose-1h-nmr)).
+- **Proprietary Crude Assay Library**: Fine-tuned on 500+ full crude oil assays with 24 pre-trained reference crudes across 6 global regions (North Africa, West Africa, North Sea, Caspian & Middle East, Asia-Pacific, Americas).
+- **Patents & IP**: 3 patents covering proprietary neural-network spectral processing, acquisition protocols, and calibration transfer.
+- **Deployment**: 100% on-premise, offline by design (no cloud required; plant data never leaves the site).
+
+## Industrial Use Cases
+
+- [All Use Cases](https://rombo.ai/use-cases/)
+- [Crude Oil & Refinery Operations](https://rombo.ai/use-cases/crude-oil-monitoring/):
+  1. **Crude Assay**: Full crude assay (API gravity, sulfur, salt, water, viscosity, TAN, distillation yields IBP–FBP) in 15 minutes.
+  2. **Crude Oil Compatibility & Tank Stratification**: Compatibility and asphaltene-risk indicators before storage or mixing, multi-level tank stratification detection, and real CDU feed prediction ([Tank Stratification Use Case](https://rombo.ai/blog/crude-oil-tank-stratification)).
+  3. **Blend Analysis & Optimization**: Component characterization and 15-minute verification of export and CDU blends against process constraints.
+  4. **Asset Integrity**: Early-warning indicators for preheat-train fouling, asphaltene precipitation, and corrosion risk.
+  5. **Distillation Fractions**: Near real-time properties and yields for atmospheric distillation cuts.
+  6. **Final Product QC**: Rapid quality reports on gasoline, diesel, gasoil, and regenerated oils before certified ASTM/EN release testing.
+  7. **Crude Fingerprinting & Allocation**: Unique NMR spectral fingerprints to trace commingled streams back to their source field or reservoir.
+- [Transformer Oil Monitoring](https://rombo.ai/use-cases/transformer-oil-monitoring/): Multi-property insulating oil condition screening benchmarked against IEC and ASTM methods.
+- [AI-Powered NMR Compound Identification](https://rombo.ai/use-cases/nmr-compound-identification/): Ranked candidate structures with confidence scores for pharmaceutical, chemical, and natural-product R&D.
+
+## Selected Case Studies & Technical Guides
+
+- [Asian Refinery Case Study: Accelerating Crude Oil Analysis](https://rombo.ai/blog/usecase-crudeoil-refinery)
+- [Crude Oil Tank Stratification Use Case](https://rombo.ai/blog/crude-oil-tank-stratification)
+- [Generalization Across NMR Instruments: ROSE Foundation Model](https://rombo.ai/blog/rose_foundation_model_NMR_spectral_data)
+- [AI Crude Oil Analysis: Lab Testing vs NIR vs High-Field NMR vs Rombo AI](https://rombo.ai/blog/ai-crude-oil-analysis-lab-vs-nir-vs-high-field-nmr)
+- [Validating a Spectroscopic Property Model Against ASTM Reference Methods](https://rombo.ai/blog/validating-spectroscopic-property-model-astm-reference-methods)
+
+## Company & Contact
+
+- **Company**: Rombo AI S.r.l.
+- **Headquarters**: Open Campus, Strada Statale 195 Km 2.300, 09123 Cagliari, Italy
+- **Website**: [https://rombo.ai](https://rombo.ai)
+- **Contact & Demo**: [https://rombo.ai/contact/](https://rombo.ai/contact/)
+- **About Us**: [https://rombo.ai/about/](https://rombo.ai/about/)

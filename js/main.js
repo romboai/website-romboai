@@ -81,6 +81,41 @@
     e.preventDefault();
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
+
+  // Centralized CookieConsent initialization + Google Consent Mode update
+  const grantConsent = () => {
+    if (typeof window.gtag === "function") {
+      window.gtag("consent", "update", {
+        ad_storage: "granted",
+        ad_user_data: "granted",
+        ad_personalization: "granted",
+        analytics_storage: "granted",
+      });
+    }
+  };
+
+  const initCookieConsent = () => {
+    if (window.__romboCookieConsentInitialized) return;
+    if (window.cookieconsent) {
+      window.__romboCookieConsentInitialized = true;
+      window.cookieconsent.initialise({
+        palette: {
+          popup: { background: "#FFFFFF", text: "#fe900f" },
+          button: { background: "#fe900f", text: "#FFFFFF" },
+        },
+        content: { href: "/privacy/" },
+        onInitialise: (status) => {
+          if (status === "dismiss" || status === "allow") grantConsent();
+        },
+        onStatusChange: (status) => {
+          if (status === "dismiss" || status === "allow") grantConsent();
+        },
+      });
+    } else {
+      window.setTimeout(initCookieConsent, 100);
+    }
+  };
+  initCookieConsent();
 })();
 
 

@@ -136,7 +136,7 @@ hero_subtitle: "For utility and grid operator oil laboratories. Rombo AI Platfor
       <div class="col-12 col-lg-9 text-start">
         <h3 class="fw-bold h5 text-dark">What NMR does not replace</h3>
         <p class="text-dark mb-0">
-          Dissolved gas analysis needs gas chromatography (IEC 60567, interpreted per IEC 60599), furanic compounds need liquid chromatography (IEC 61198), and breakdown voltage is an electrical test (IEC 60156). Published evidence on NMR for transformer oil properties is still limited, so we treat every property as a hypothesis until it passes validation on your samples. For water, the reference stays coulometric Karl Fischer: see our note on <a href="{{ '/blog/water-content-transformer-oil-karl-fischer' | relative_url }}">measuring water in transformer oil</a>.
+          Dissolved gas analysis needs gas chromatography (IEC 60567, interpreted per IEC 60599), furanic compounds need liquid chromatography (IEC 61198), and breakdown voltage is an electrical test (IEC 60156). Every NMR property model is calibrated on your insulating oil samples and benchmarked against your IEC or ASTM reference methods before deployment. For water, the reference stays coulometric Karl Fischer: see our note on <a href="{{ '/blog/water-content-transformer-oil-karl-fischer' | relative_url }}">measuring water in transformer oil</a>.
         </p>
       </div>
     </div>
