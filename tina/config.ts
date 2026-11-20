@@ -225,6 +225,7 @@ export default defineConfig({
               "contact",
               "privacy",
               "products",
+              "use-cases",
               "voucher",
               "smart-start",
               "blog",
