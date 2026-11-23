@@ -69,6 +69,8 @@ test("home -> contact form submit -> confirmation", async ({ page }) => {
   await page.locator("#telephone").fill("+39000000000");
   await page.locator("#role").selectOption({ label: "CTO" });
   await page.locator("#query").fill("E2E test submission.");
+  const expectedBotAnswer = await page.locator("#botCheck").getAttribute("data-expected");
+  await page.locator("#botCheck").fill(expectedBotAnswer || "7");
   await page.locator("#terms").check();
 
   // Submit the form; it posts to the Make.com webhook via fetch and renders

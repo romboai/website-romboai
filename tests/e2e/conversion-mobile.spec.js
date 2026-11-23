@@ -25,6 +25,8 @@ for (const width of [375, 390, 1280]) {
     await page.locator('#company').fill('Test');
     await page.locator('#email').fill('qa@example.test');
     await page.locator('#query').fill('Evaluate NMR feasibility');
+    const expectedBotAnswer = await page.locator('#botCheck').getAttribute('data-expected');
+    await page.locator('#botCheck').fill(expectedBotAnswer || '7');
     await page.locator('#terms').check();
     await page.getByRole('button', { name: /book a demo/i }).click();
     await expect(page.locator('.hero-contact-form').getByRole('status')).toContainText('received successfully');

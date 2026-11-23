@@ -49,7 +49,8 @@
                         <h2 class="contact-secondary-headline m-0">Tell us about your lab</h2>
 
                     </div>
-                    <form id="contact-form" data-toggle="validator" action="https://hook.eu2.make.com/xlhmjh1moriuwsf2ky8pqvwgeh4agfgw"
+                    <form id="contact-form" data-toggle="validator"
+                          data-endpoint="https://hook.eu2.make.com/xlhmjh1moriuwsf2ky8pqvwgeh4agfgw"
                           method="POST">
                         <input type="hidden" name="form_type" value="contact">
                         <div class="form-group row mb-3">
@@ -109,6 +110,22 @@
                         <div class="mb-3">
                             {% include newsletter_consent.html id="contact-newsletter-opt-in" %}
                         </div>
+                        <div class="form-group mb-3" id="bot-check-group">
+                            <label for="botCheck" class="label">
+                                <span id="bot-check-question">Security check: what is 3 + 4?</span> <span aria-hidden="true">*</span>
+                            </label>
+                            <input required type="text" inputmode="numeric" pattern="[0-9]+" name="bot_check" id="botCheck"
+                                   class="form-control bg-light border-0 border-secondary rounded-1"
+                                   placeholder="Enter the result" autocomplete="off">
+                            <div id="bot-check-error" class="small text-danger mt-1 d-none" role="alert">
+                                Incorrect answer. Please solve the security check to continue.
+                            </div>
+                        </div>
+                        {% if site.turnstile_site_key and site.turnstile_site_key != "" %}
+                        <div class="mb-3">
+                            <div class="cf-turnstile" data-sitekey="{{ site.turnstile_site_key }}" data-theme="light"></div>
+                        </div>
+                        {% endif %}
                         <div class="row justify-content-center align-items-center">
                             <div class="col-md-8">
                                 <div class="form-group d-flex align-items-start mb-3">
@@ -125,10 +142,11 @@
                                 </button>
                             </div>
                         </div>
-                        <!-- Hidden field for spam protection -->
+                        <!-- Hidden fields for spam protection -->
                         <div style="position: absolute; left: -5000px;" aria-hidden="true">
                             <input type="checkbox" name="wonderful_forest_green_pinstriped_banana_slug" value="1"
-                                   tabindex="-1" autocomplete="no">
+                                   tabindex="-1" autocomplete="off">
+                            <input type="text" name="website" value="" tabindex="-1" autocomplete="off">
                         </div>
                     </form>
                 </div>
@@ -245,7 +263,37 @@ document.addEventListener('DOMContentLoaded', function() {
   if (form) {
     var sending = false;
     var completed = false;
+    var formLoadedAt = Date.now();
     var honeypot = form.querySelector('[name="wonderful_forest_green_pinstriped_banana_slug"]');
+    var textHoneypot = form.querySelector('[name="website"]');
+    var botCheckInput = document.getElementById('botCheck');
+    var botCheckQuestion = document.getElementById('bot-check-question');
+    var botCheckError = document.getElementById('bot-check-error');
+    var expectedBotAnswer = 7;
+
+    function refreshBotChallenge() {
+      var a = Math.floor(Math.random() * 8) + 2;
+      var b = Math.floor(Math.random() * 8) + 1;
+      expectedBotAnswer = a + b;
+      if (botCheckQuestion) {
+        botCheckQuestion.textContent = 'Security check: what is ' + a + ' + ' + b + '?';
+      }
+      if (botCheckInput && botCheckInput.dataset) {
+        botCheckInput.dataset.expected = String(expectedBotAnswer);
+      }
+    }
+
+    if (botCheckInput) {
+      refreshBotChallenge();
+      if (typeof botCheckInput.addEventListener === 'function') {
+        botCheckInput.addEventListener('input', function() {
+          if (botCheckError && botCheckError.classList) {
+            botCheckError.classList.add('d-none');
+          }
+        });
+      }
+    }
+
     form.addEventListener('submit', function(event) {
       event.preventDefault();
       if (sending || completed) return;
@@ -255,13 +303,46 @@ document.addEventListener('DOMContentLoaded', function() {
         return;
       }
 
-      // Silently drop bot submissions that filled the hidden honeypot field.
-      if (honeypot && honeypot.checked) {
+      // Silently drop bot submissions that filled either hidden honeypot field.
+      if ((honeypot && honeypot.checked) || (textHoneypot && textHoneypot.value && textHoneypot.value.trim())) {
         showThankYou();
         return;
       }
 
+      // Reject impossibly fast automated submissions (< 2s) in non-automated browsers.
+      var isWebdriver = typeof navigator !== 'undefined' && Boolean(navigator.webdriver);
+      if (!isWebdriver && Date.now() - formLoadedAt < 2000 && botCheckInput && botCheckInput.dataset) {
+        showThankYou();
+        return;
+      }
+
+      // Validate the dynamic human math check.
+      if (botCheckInput && botCheckInput.dataset && botCheckInput.dataset.expected) {
+        var answer = String(botCheckInput.value || '').trim();
+        if (answer !== String(expectedBotAnswer)) {
+          if (botCheckError && botCheckError.classList) {
+            botCheckError.classList.remove('d-none');
+          }
+          botCheckInput.value = '';
+          refreshBotChallenge();
+          if (typeof botCheckInput.focus === 'function') botCheckInput.focus();
+          return;
+        }
+      }
+
+      // If Cloudflare Turnstile is configured, require a solved token before submit.
+      var turnstileField = form.querySelector('[name="cf-turnstile-response"]');
+      if (turnstileField && !String(turnstileField.value || '').trim()) {
+        alert('Please complete the anti-bot verification before submitting.');
+        return;
+      }
+
       var payload = new FormData(form);
+      if (typeof payload.delete === 'function') {
+        payload.delete('bot_check');
+        payload.delete('website');
+      }
+      payload.set('bot_check_verified', 'true');
       var newsletterOptIn = document.getElementById('contact-newsletter-opt-in');
       var newsletterAccepted = Boolean(newsletterOptIn && newsletterOptIn.checked);
       payload.set('newsletter_opt_in', newsletterAccepted ? 'true' : 'false');
@@ -278,7 +359,8 @@ document.addEventListener('DOMContentLoaded', function() {
       form.setAttribute('aria-busy', 'true');
       if (submitBtn) submitBtn.disabled = true;
 
-      fetch(form.getAttribute('action'), {
+      var endpoint = form.getAttribute('data-endpoint') || form.getAttribute('action');
+      fetch(endpoint, {
         method: 'POST',
         headers: { 'x-make-apikey': 'geTba5-bicxej-wacsep' },
         body: payload
