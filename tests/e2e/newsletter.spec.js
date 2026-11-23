@@ -288,6 +288,8 @@ for (const optedIn of [false, true]) {
     await page.locator("#company").fill("Test company");
     await page.locator("#email").fill("reader@example.test");
     await page.locator("#query").fill("Evaluate my application");
+    const expectedBotAnswer = await page.locator("#botCheck").getAttribute("data-expected");
+    await page.locator("#botCheck").fill(expectedBotAnswer || "7");
     await page.locator("#terms").check();
     if (optedIn) await optIn.check();
     await page.getByRole("button", { name: "Book a demo", exact: true }).click();
