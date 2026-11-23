@@ -40,8 +40,8 @@ if (src.includes(defineNeedle)) {
 }
 
 // esbuild 0.28 no longer lowers some syntax to Vite 6's legacy default target.
-// Tina's admin app is already modern-browser software, so avoid that unnecessary
-// lowering by setting the target on Tina's own internal Vite build.
+// Use es2022 so Tina's admin bundle stays compatible with Safari 16+, Chrome 107+,
+// Firefox 104+ and Edge 107+ (avoiding un-transpiled esnext syntax on older browsers).
 const buildNeedle = [
   "    build: {",
   "      sourcemap: false,",
@@ -49,7 +49,7 @@ const buildNeedle = [
 ].join("\n");
 const buildReplacement = [
   "    build: {",
-  '      target: "esnext",',
+  '      target: "es2022",',
   "      sourcemap: false,",
   "      outDir: configManager.outputFolderPath,",
 ].join("\n");
@@ -57,11 +57,19 @@ const buildReplacement = [
 if (src.includes(buildNeedle)) {
   src = src.replace(buildNeedle, buildReplacement);
   changed = true;
-} else if (!src.includes('      target: "esnext",\n      sourcemap: false,')) {
-  console.error(
-    "[postinstall] Tina CLI Vite config changed; unable to apply the esnext target patch."
-  );
-  process.exit(1);
+} else if (!src.includes('      target: "es2022",\n      sourcemap: false,')) {
+  if (src.includes('      target: "esnext",\n      sourcemap: false,')) {
+    src = src.replace(
+      '      target: "esnext",\n      sourcemap: false,',
+      '      target: "es2022",\n      sourcemap: false,'
+    );
+    changed = true;
+  } else {
+    console.error(
+      "[postinstall] Tina CLI Vite config changed; unable to apply the es2022 target patch."
+    );
+    process.exit(1);
+  }
 }
 
 // Vite's dev dependency optimizer has a separate esbuild target. The build
@@ -72,7 +80,7 @@ const optimizeNeedle = [
 ].join("\n");
 const optimizeReplacement = [
   "    optimizeDeps: {",
-  '      esbuildOptions: { target: "esnext" },',
+  '      esbuildOptions: { target: "es2022" },',
   "      force: true,",
 ].join("\n");
 
@@ -80,10 +88,18 @@ if (src.includes(optimizeNeedle)) {
   src = src.replace(optimizeNeedle, optimizeReplacement);
   changed = true;
 } else if (!src.includes(optimizeReplacement)) {
-  console.error(
-    "[postinstall] Tina CLI Vite config changed; unable to apply the dev optimizer target patch."
-  );
-  process.exit(1);
+  if (src.includes('      esbuildOptions: { target: "esnext" },')) {
+    src = src.replace(
+      '      esbuildOptions: { target: "esnext" },',
+      '      esbuildOptions: { target: "es2022" },'
+    );
+    changed = true;
+  } else {
+    console.error(
+      "[postinstall] Tina CLI Vite config changed; unable to apply the dev optimizer target patch."
+    );
+    process.exit(1);
+  }
 }
 
 if (changed) {

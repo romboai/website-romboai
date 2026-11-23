@@ -38,8 +38,8 @@ function applyPatch(source) {
 
 test("Tina patch sets modern targets for both build and dev dependency optimization", () => {
   const patched = applyPatch(original);
-  assert.match(patched, /optimizeDeps: \{\n      esbuildOptions: \{ target: "esnext" \}/);
-  assert.match(patched, /build: \{\n      target: "esnext"/);
+  assert.match(patched, /optimizeDeps: \{\n      esbuildOptions: \{ target: "es2022" \}/);
+  assert.match(patched, /build: \{\n      target: "es2022"/);
   assert.doesNotThrow(() => new vm.Script(patched));
 });
 
