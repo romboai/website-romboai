@@ -23,6 +23,8 @@ markdown_content: |-
 
   This guide explains where Spectra fits in that process, what its current public workflow does, and how a laboratory can test it without confusing a promising candidate with a validated result.
 
+  *The evidence standards used here are explained in our [compound identification guide](/blog/what-is-compound-identification-analytical-chemistry): what NMR, MS, IR and GC-MS each contribute and what separates a tentative from a confirmed identity.*
+
   ## What Spectra is—and what it is not
 
   Spectra is Rombo AI’s agent for NMR analysis. It is not a generic name for every Rombo model, and it is distinct from Rombo AI Platform and its industrial modules.

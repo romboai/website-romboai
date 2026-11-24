@@ -20,6 +20,8 @@ markdown_content: |-
 
   Crude oil is not one analytical problem. Light ends, middle distillates, resids, process contaminants, and formulated products occupy different volatility, polarity, concentration, and molecular-mass ranges. The right compound-identification workflow begins by defining the decision and the permitted strength of the answer—not by sending the unchanged sample to every available instrument.
 
+  *The general method (what each technique contributes and how confidence is reported) is in our [compound identification guide](/blog/what-is-compound-identification-analytical-chemistry); this article applies it to petroleum samples.*
+
   ## Three levels of identification that should not be confused
 
   Petroleum reports often mix three different claims. **Group-type analysis** estimates families such as paraffins, naphthenes, aromatics, or asphaltenes. **Formula assignment** proposes an elemental composition for an ion, often organised by heteroatom class, carbon number, and double-bond equivalent. **Individual compound identification** assigns a specific molecular structure. Each can be valuable, but none automatically implies the next.

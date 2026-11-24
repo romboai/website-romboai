@@ -19,6 +19,8 @@ markdown_content: |-
   - **The hit list begins the identification decision.** Analysts must inspect spectral agreement, close alternatives, sample context, acquisition conditions, and orthogonal evidence before reporting an identity.
   - **When no exact reference exists, the next step is constrained structure reasoning—not forcing the top library hit to become the answer.**
 
+  *Library search is one step of a wider process. Our [compound identification guide](/blog/what-is-compound-identification-analytical-chemistry) explains how a library hit fits with NMR, MS, IR and GC-MS evidence and when it counts as a confirmed identity.*
+
   ## What a spectral library search actually does
 
   A spectral library is a collection of reference spectra linked to compounds and metadata. A search accepts a query spectrum from an unknown or partially known sample, compares it with eligible library records, assigns a similarity value to each comparison, and returns a ranked hit list.

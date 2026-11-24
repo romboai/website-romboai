@@ -19,6 +19,8 @@ markdown_content: |-
   - **Generalization must be tested across chemistry and acquisition conditions.** Instrument, field strength, solvent, concentration, processing, mixtures, and simulated-versus-experimental data can all shift the input distribution.
   - **The useful output is an auditable hypothesis.** Chemists still need raw-data review, alternative candidates, uncertainty, orthogonal measurements, and a decision-appropriate confirmation step.
 
+  *New to the topic? Our [compound identification guide](/blog/what-is-compound-identification-analytical-chemistry) covers what NMR, MS, IR and GC-MS each contribute before any AI model is involved.*
+
   ## What counts as a raw spectrum?
 
   AI spectroscopy begins before a neural network sees a number. The first question is which representation actually enters the model.
