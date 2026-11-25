@@ -18,6 +18,8 @@ markdown_content: |-
   - **Neither result is automatically a confirmed identity.** An exact mass, library score, or plausible NMR assignment must be evaluated against alternatives, acquisition conditions, sample context, and the required confidence level.
   - **The strongest workflow is often sequential:** use MS to constrain composition, then NMR to resolve connectivity, with automated candidate ranking supporting—not replacing—the chemist’s review.
 
+  *This comparison is part of our [compound identification guide](/blog/what-is-compound-identification-analytical-chemistry), which explains what NMR, MS, IR and GC-MS each contribute and how laboratories report confidence in an identity.*
+
   ## What NMR and mass spectrometry actually measure
 
   Nuclear magnetic resonance and mass spectrometry are often presented as competing identification methods. That framing is misleading because their signals arise from different molecular properties.

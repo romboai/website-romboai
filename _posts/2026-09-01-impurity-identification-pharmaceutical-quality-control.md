@@ -20,6 +20,8 @@ markdown_content: |-
   - **Preserve the chain of evidence.** Sample lineage, method version, peak tracking, isolation history, raw spectra, rejected candidates, reference-material characterization, and reviewer decisions all belong in the record.
   - **Automation can accelerate selected interpretation steps, but it does not qualify an impurity or release a batch.** Validated procedures, quality systems, and accountable scientific review remain essential.
 
+  *Impurity identification applies the general rules of [compound identification](/blog/what-is-compound-identification-analytical-chemistry) (orthogonal evidence, reporting levels, authentic standards) to the thresholds and documentation of pharmaceutical QC.*
+
   ## Begin with the regulatory question, not the instrument
 
   “Unknown peak” describes an observation, not a regulatory category. Before selecting an identification technique, establish what material is being tested, where the impurity could originate, and which guideline and regional requirements apply.

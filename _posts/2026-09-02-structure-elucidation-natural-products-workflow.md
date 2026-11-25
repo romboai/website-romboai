@@ -19,6 +19,8 @@ markdown_content: |-
   - **Plan stereochemical work separately from the planar structure.** Relative and absolute configuration may require NOE/ROE, coupling analysis, derivatisation, chiroptical methods, computation, crystallography, or synthesis.
   - **The most useful workflow preserves alternatives.** A ranked candidate, its violated constraints, the remaining ambiguity, and the next discriminating experiment are more defensible than one unexplained structure.
 
+  *For the difference between identifying a known compound and elucidating a new structure, see our [compound identification guide](/blog/what-is-compound-identification-analytical-chemistry).*
+
   ## Why natural products need a different workflow
 
   A synthetic reaction usually begins with known starting materials and a bounded set of transformations. A natural-product investigation begins with a biological matrix containing primary metabolites, secondary metabolites, salts, lipids, pigments, polymers, and compounds whose abundance can change during collection or extraction.

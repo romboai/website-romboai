@@ -19,6 +19,8 @@ markdown_content: |-
   - **A useful confidence output leads to an action.** It should tell the chemist whether to accept, review, reacquire, add another experiment, or obtain an authentic standard.
   - **Learned ranking systems still need calibration and out-of-domain checks.** A confident model can be wrong when the input differs from its validation population.
 
+  *Scores are one input to a confidence statement. Our [compound identification guide](/blog/what-is-compound-identification-analytical-chemistry) sets out the reporting levels, from tentative candidate to identity confirmed against an authentic standard.*
+
   ## What a confidence score does—and does not—measure
 
   Compound identification software often returns a number beside each candidate. The number may be called a match factor, similarity score, probability, confidence, fit, or rank. Those labels are not interchangeable.

@@ -1,8 +1,8 @@
 ---
 title: 'What Is Compound Identification in Analytical Chemistry?'
-seo_title: "Compound Identification: How to Identify an Unknown | Rombo AI"
+seo_title: "Compound Identification Methods: NMR, MS, IR, GC-MS | Rombo AI"
 date: 2026-08-22T07:30:00.000Z
-last_modified_at: 2026-11-10T06:00:00.000Z
+last_modified_at: 2026-11-24T06:00:00.000Z
 permalink: /blog/what-is-compound-identification-analytical-chemistry
 layout: article
 image: /img/blog/compound-identification-nmr-laboratory-2026-08-22.jpg
@@ -10,11 +10,11 @@ image_alt: Nuclear magnetic resonance laboratory with spectrometers used to iden
 image_caption: 'An NMR laboratory used to study the arrangement of hydrogen and carbon atoms in organic compounds. Photo: <a href="https://commons.wikimedia.org/wiki/File:Nuclear_Magnetic_Resonance_Laboratory.jpg" rel="noopener noreferrer" target="_blank">Shandchem</a>, via Wikimedia Commons, <a href="https://creativecommons.org/licenses/by/2.0/" rel="license noopener noreferrer" target="_blank">CC BY 2.0</a>.'
 author: 'Martina [Marketing Specialist, Rombo AI]'
 excerpt: Compound identification determines which substance produced an analytical signal. Learn how NMR, MS, IR, and GC-MS contribute and how laboratories establish confidence.
-description: "What compound identification means, what NMR, MS, IR and GC-MS each contribute, a worked example, and how labs report confidence in an identity."
+description: "How to identify an unknown compound step by step: what NMR, MS, IR and GC-MS each show, a worked example, and how labs report confidence."
 markdown_content: |-
   Compound identification is the analytical work of deciding which substance produced a signal: a peak in a chromatogram, a set of resonances in an NMR spectrum, an ion in a mass spectrum. This guide explains what NMR, MS, IR and GC-MS each contribute, works through an example, and shows how laboratories report how sure they are.
 
-  *Last reviewed: 10 November 2026.*
+  *Last reviewed: 24 November 2026.*
 
   ## TL;DR
 
@@ -135,6 +135,14 @@ markdown_content: |-
   **Ready to test an NMR spectrum? [Open Spectra and analyze it](https://spectra.rombo.ai).** To receive new guides on NMR interpretation and identification when they are published, you can subscribe to the Rombo AI newsletter at the bottom of this page.
 
   ## FAQs
+
+  ### How do you identify an unknown compound, step by step?
+
+  Define the answer the decision needs (class, formula, probable structure or confirmed identity), record the sample context, and check purity or separate the mixture. Then collect the cheapest discriminating evidence: usually mass spectrometry for mass and formula and NMR for connectivity, with IR for functional groups. Compare candidates against references, challenge the leading candidate with the closest alternative, and confirm with an authentic standard when the consequence of error requires it. The [unknown compound identification workflow](/blog/unknown-compound-identification-workflow) sets out each step in detail.
+
+  ### How do I choose between NMR, IR, Raman, UV-Vis and mass spectrometry?
+
+  Choose by the question that is still open. Mass spectrometry constrains molecular mass and formula and works on very small amounts; NMR maps the carbon-hydrogen framework and connectivity of a reasonably pure sample; IR and Raman show functional groups and are complementary, with Raman more sensitive to symmetric, non-polar bonds and easier to use through glass or in water. UV-Vis detects chromophores such as conjugated or aromatic systems and is useful for detection and quantitation, but it rarely identifies a structure on its own. The decision table above lists a starting technique for each type of uncertainty.
 
   ### What is the difference between compound identification and structure elucidation?
 

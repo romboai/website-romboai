@@ -19,6 +19,8 @@ markdown_content: |-
   - **Match confidence to evidence.** Report what was measured, which alternatives were excluded, what remains ambiguous, and whether an authentic standard was run under comparable conditions.
   - **Automated NMR ranking can shorten candidate review, but the chemist still controls sample quality, orthogonal confirmation, and the final claim.**
 
+  *For the basics behind this workflow (what identification means, what each technique contributes and how confidence is reported), start with our [compound identification guide](/blog/what-is-compound-identification-analytical-chemistry).*
+
   ## Start with the decision, not the instrument
 
   Unknown compound identification is not a single test. It is an evidence chain that begins with a decision: what must the laboratory be able to say when the work is finished?
