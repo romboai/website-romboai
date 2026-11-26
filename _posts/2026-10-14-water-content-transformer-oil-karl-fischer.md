@@ -62,6 +62,8 @@ markdown_content: |-
   1. **Compare Karl Fischer results like with like.** Trend the same transformer, at a recorded sampling temperature, rather than comparing ppm values across units with oils of very different age.
   2. **Do not expect a sensor's ppm output to match the lab exactly.** The difference may come from the solubility coefficients, not from either instrument being wrong.
 
+  The same logic applies to the electrical test: breakdown voltage follows relative saturation more closely than the ppm value, as our [application note on transformer oil breakdown voltage](/blog/transformer-oil-breakdown-voltage) describes with IEC 60156 and ASTM D1816.
+
   ## A short checklist for the oil lab
 
   - Sample in dry weather, into dry bottles, and record oil temperature and sampling point.
@@ -76,7 +78,7 @@ markdown_content: |-
 
   For water, the reference stays IEC 60814. Trace water in dry oil is a demanding target for any indirect method, so we treat it as a question to answer with your data, not as an assumption. The useful starting point is the same discipline described above: paired samples, a documented sampling temperature, duplicate Karl Fischer analyses, and acceptance metrics agreed before a pilot begins. NMR signals are quantitative when acquisition is controlled, as our guide to [qNMR purity, calibration and accuracy](/blog/quantitative-nmr-qnmr-purity-calibration-accuracy) explains. Predicting a property such as water from a spectrum is a further step, and that step is what a validation has to test.
 
-  The [transformer oil monitoring use case](/use-cases/transformer-oil-monitoring/) summarizes how an oil-condition workflow can be structured. To test it on your own samples and reference methods, start with a [feasibility review](/nmr-feasibility/).
+  The [transformer oil monitoring use case](/use-cases/transformer-oil-monitoring/) summarizes how an oil-condition workflow can be structured. To test it on your own samples and reference methods, start with a [feasibility review](/nmr-feasibility/). To receive new guides like this one, subscribe to the Rombo AI newsletter at the bottom of this page.
 
   ## FAQ
 

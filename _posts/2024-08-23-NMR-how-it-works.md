@@ -32,6 +32,8 @@ markdown_content: |
   - **Resolution:** At 60 MHz one ppm spans 60 Hz, against 400 Hz at 400 MHz. Coupling constants stay fixed in hertz, so multiplets cover more ppm at low field and overlap with their neighbours more often, as [Nanalysis explains](https://www.nanalysis.com/nmready-blog/what-you-should-know-about-signal-dispersion-in-benchtop-nmr).
   - **Sensitivity:** A 300 MHz system has around eleven times the intrinsic sensitivity of a 60 MHz benchtop, according to [Oxford Instruments](https://nmr.oxinst.com/blogs/high-field-to-benchtop-nmr-spectroscopy-part-3). The major components of an oil are easy to see; trace constituents are not.
 
+  For a property-by-property view of what a benchtop instrument measures directly, what it estimates through a model and what stays with the reference method, see our guide to [benchtop NMR for petroleum labs](/blog/benchtop-nmr-petroleum-labs).
+
   ## Machine Learning and Sample Characterization
 
   Machine learning turns a low-field spectrum into property estimates. A model learns, from samples measured both by NMR and by the reference method, which spectral patterns go with which property values. It works with the overlap described above rather than requiring every signal to be resolved.
@@ -54,7 +56,7 @@ markdown_content: |
 
   A property model is only as useful as its validation. Each property should be compared with the reference method on independent samples, with acceptance limits agreed in advance. When the model moves to another spectrometer, or after a service, line shape, referencing and gain can change, and the model needs to be checked again. Our guide to [calibration transfer](/blog/calibration-transfer-spectroscopy-models-break-instruments-change) explains the options and how to validate them. The same approach applies to insulating oil, covered in our [transformer oil testing guide](/blog/transformer-oil-testing-properties-methods-nmr).
 
-  To check whether your samples and properties are a good fit for NMR-based prediction, start with a [feasibility review](/nmr-feasibility/).
+  To check whether your samples and properties are a good fit for NMR-based prediction, start with a [feasibility review](/nmr-feasibility/). To receive new guides like this one, subscribe to the Rombo AI newsletter at the bottom of this page.
 
 
 author: "Andrea Zanda"  
