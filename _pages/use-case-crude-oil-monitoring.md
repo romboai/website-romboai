@@ -122,7 +122,7 @@ hero_subtitle: "For upstream operators, terminals, blending teams and refinery l
             <li>NMR fingerprint of each crude and tank level to detect stratification and prevent slugs</li>
             <li>Prediction of real feed quality entering the CDU to maximize crude stability in pipelines and units</li>
           </ul>
-          <p class="text-muted mb-0" style="font-size: 13px;"><strong>Best for:</strong> Tank farms receiving multiple crude grades and sites with recurring compatibility issues. <a href="{{ '/blog/crude-oil-tank-stratification' | relative_url }}">Explore the tank stratification use case →</a></p>
+          <p class="text-muted mb-0" style="font-size: 13px;"><strong>Best for:</strong> Tank farms receiving multiple crude grades and sites with recurring compatibility issues. <a href="{{ '/blog/crude-oil-tank-stratification' | relative_url }}">Explore the tank stratification use case →</a> · <a href="{{ '/blog/crude-oil-compatibility-asphaltene-stability' | relative_url }}">Compare crude compatibility tests →</a></p>
         </div>
       </div>
 

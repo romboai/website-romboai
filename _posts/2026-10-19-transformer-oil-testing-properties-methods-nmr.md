@@ -56,7 +56,7 @@ markdown_content: |-
   | Corrosive sulphur and DBDS | IEC 62535; IEC 62697-1 | Risk of copper sulphide formation | Mitigation per IEC 60422 guidance, which includes a clause on metal passivators |
   | PCB | IEC 61619 (capillary GC) | Regulatory status of the oil; no effect on transformer condition | Handling and disposal under local rules |
 
-  **Electrical tests react to many contaminants at once.** ASTM D1816 notes that a low breakdown voltage can indicate water, dirt, cellulosic fibres or conducting particles. It also states that a high breakdown voltage does not necessarily mean the oil is free of contaminants, only that not enough of them were between the electrodes to lower the average. Read breakdown voltage together with water and particles.
+  **Electrical tests react to many contaminants at once.** ASTM D1816 notes that a low breakdown voltage can indicate water, dirt, cellulosic fibres or conducting particles. It also states that a high breakdown voltage does not necessarily mean the oil is free of contaminants, only that not enough of them were between the electrodes to lower the average. Read breakdown voltage together with water and particles. Our [application note on breakdown voltage](/blog/transformer-oil-breakdown-voltage) compares IEC 60156, ASTM D1816 and ASTM D877 and explains what moves the result.
 
   **Ageing indicators move at different speeds.** The EA Technology guide notes that interfacial tension detects soluble polar contaminants and degradation products and levels off while deterioration is still moderate. It is most informative early. Acidity, sediment and sludge carry more of the signal later. Trends for the same unit are more useful than any single value.
 
@@ -123,7 +123,7 @@ markdown_content: |-
 
   For transformer oil, Rombo has not yet published validation results. A useful first step is to decide which properties in your panel are candidates, which reference data you already hold, and what accuracy would change a decision.
 
-  The [transformer oil monitoring use case](/use-cases/transformer-oil-monitoring/) describes how an oil-condition workflow can be structured. To test whether NMR-based estimates hold on your oils, request a free [NMR feasibility review](/nmr-feasibility/).
+  The [transformer oil monitoring use case](/use-cases/transformer-oil-monitoring/) describes how an oil-condition workflow can be structured. To test whether NMR-based estimates hold on your oils, request a free [NMR feasibility review](/nmr-feasibility/). To receive new guides like this one, subscribe to the Rombo AI newsletter at the bottom of this page.
 
   ## FAQ
 
@@ -134,7 +134,7 @@ markdown_content: |-
   The test clauses of IEC 60422 cover oil quality. Sampling of free gases and the analysis of dissolved gases are in IEC 60567, and their interpretation is in IEC 60599.
 
   ### Does a high breakdown voltage mean the oil is clean?
-  Not necessarily. ASTM D1816 states that a high value does not prove the absence of contaminants, so read breakdown voltage together with water content and particle count.
+  Not necessarily. ASTM D1816 states that a high value does not prove the absence of contaminants, so read breakdown voltage together with water content and particle count, as our [breakdown voltage application note](/blog/transformer-oil-breakdown-voltage) explains.
 
   ### Can benchtop NMR replace the routine oil panel?
   No. Gases, furans and PCBs need chromatography, and breakdown voltage is an electrical test. NMR may estimate some composition-related properties, but each one has to be validated on paired samples against the standard method.
